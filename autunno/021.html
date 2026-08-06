@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vellutata di Zucca e Fagioli Cannellini con Porcini | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Vellutata di Zucca e Fagioli Cannellini con Porcini">
+<meta property="og:title" content="Vellutata di Zucca e Fagioli Cannellini con Porcini | Leguminando">
+<meta property="og:description" content="Vellutata di Zucca e Fagioli Cannellini con Porcini">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="autunno/021.html" data-title="Vellutata di Zucca e Fagioli Cannellini con Porcini" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="021.jpg" alt="Vellutata di Zucca e Fagioli Cannellini con Porcini" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-10-12</p>
+<p><strong>Meta:</strong> 4 porzioni | Vegetariano</p>
+<p><strong>Descrizione:</strong> Vellutata cremosa di zucca con fagioli cannellini e porcini, profumata al rosmarino e alloro.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>500 g polpa di zucca già pulita e tagliata a cubetti</li>
+<li>200 g fagioli cannellini cotti</li>
+<li>50 g funghi porcini secchi (o 150 g freschi)</li>
+<li>1 cipolla media</li>
+<li>2 spicchi d'aglio</li>
+<li>1 rametto di rosmarino</li>
+<li>1 foglia di alloro</li>
+<li>600-700 ml brodo vegetale caldo</li>
+<li>3 cucchiai olio extravergine d'oliva</li>
+<li>Sale e pepe nero q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Se usi porcini secchi, mettili a bagno in acqua tiepida per 20 minuti. Scolali (conserva l'acqua di ammollo filtrata) e tagliali a listarelle.</p>
+<p>2. Trita finemente la cipolla e uno spicchio d'aglio. In una casseruola larga scalda l'olio, lascia imbiondire cipolla e aglio con il rametto di rosmarino e la foglia di alloro.</p>
+<p>3. Unisci la zucca a cubetti e i porcini, fai insaporire mescolando per 4-5 minuti; se occorre, sfuma con un mestolo dell'acqua di ammollo dei funghi.</p>
+<p>4. Versa il brodo caldo fino a coprire appena le verdure; aggiusta di sale e porta a leggero bollore. Copri con un coperchio e cuoci a fiamma dolce per 20 minuti, finché la zucca è tenera.</p>
+<p>5. Elimina rosmarino, aglio e alloro. Aggiungi i fagioli cannellini scolati e sciacquati, mescola e lascia insaporire 2 minuti.</p>
+<p>6. Frulla tutto con un mixer a immersione fino a ottenere una crema omogenea; se risulta troppo densa, aggiungi altro brodo o un filo d'acqua calda. Regola di sale e una macinata di pepe.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-10-12</p>
+<p><strong>Meta:</strong> 4 servings | Vegetarian</p>
+<p><strong>Description:</strong> Creamy pumpkin velouté with cannellini beans and porcini mushrooms, scented with rosemary and bay leaf.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>500 g pumpkin flesh, cleaned and diced</li>
+<li>200 g cooked cannellini beans</li>
+<li>50 g dried porcini mushrooms (or 150 g fresh)</li>
+<li>1 medium onion</li>
+<li>2 garlic cloves</li>
+<li>1 sprig of rosemary</li>
+<li>1 bay leaf</li>
+<li>600-700 ml hot vegetable broth</li>
+<li>3 tablespoons extra virgin olive oil</li>
+<li>Salt and black pepper to taste</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. If using dried porcini, soak in lukewarm water for 20 minutes. Drain (keep the soaking water filtered) and slice into strips.</p>
+<p>2. Finely chop onion and one garlic clove. In a wide casserole heat the oil, sauté onion and garlic with the rosemary sprig and bay leaf until golden.</p>
+<p>3. Add diced pumpkin and porcini, cook stirring for 4-5 minutes to develop flavour; if needed, deglaze with a ladle of the mushroom soaking water.</p>
+<p>4. Pour in hot broth to just cover the vegetables; season with salt and bring to a gentle boil. Cover and simmer for 20 minutes, until pumpkin is tender.</p>
+<p>5. Remove rosemary, garlic and bay leaf. Add drained and rinsed cannellini beans, stir and let absorb flavour for 2 minutes.</p>
+<p>6. Blend everything with an immersion blender until smooth; if too thick, add more broth or a splash of hot water. Adjust salt and a grind of pepper.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-10-12</p>
+<p><strong>Meta:</strong> 4 porciones | Vegetariano</p>
+<p><strong>Descripción:</strong> Crema tersa de calabaza con alubias cannellini y setas porcini, perfumada con romero y laurel.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>500 g pulpa de calabaza limpia y en cubos</li>
+<li>200 g alubias cannellini cocidas</li>
+<li>50 g setas porcini secas (o 150 g frescas)</li>
+<li>1 cebolla mediana</li>
+<li>2 dientes de ajo</li>
+<li>1 ramillete de romero</li>
+<li>1 hoja de laurel</li>
+<li>600-700 ml caldo vegetal caliente</li>
+<li>3 cucharadas aceite de oliva virgen extra</li>
+<li>Sal y pimienta negra c.s.</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. Si usas porcini secas, ponlas en remojo en agua templada 20 minutos. Escúrrelas (guarda el agua de remojo filtrada) y córtalas en tiras.</p>
+<p>2. Pica finamente la cebolla y un diente de ajo. En una cazuela amplia calienta el aceite, dora la cebolla y el ajo con el ramillete de romero y la hoja de laurel.</p>
+<p>3. Añade la calabaza en cubos y las porcini, rehoga removiendo 4-5 minutos; si es necesario, desglasa con un cucharón del agua de remojo de las setas.</p>
+<p>4. Vierte el caldo caliente hasta cubrir apenas las verduras; sala y lleva a ebullición suave. Tapa y cuece a fuego lento 20 minutos, hasta que la calabaza esté tierna.</p>
+<p>5. Retira el romero, el ajo y el laurel. Incorpora las alubias cannellini escurridas y enjuagadas, remueve y deja que tomen sabor 2 minutos.</p>
+<p>6. Tritura todo con una batidora de inmersión hasta obtener una crema homogénea; si queda muy densa, añade más caldo o un chorrito de agua caliente. Ajusta de sal y una molienda de pimienta.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-10-12</p>
+<p><strong>Meta:</strong> 4 porções | Vegetariano</p>
+<p><strong>Descrição:</strong> Creme de abóbora com feijão cannellini e cogumelos porcini, perfumado com alecrim e louro.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>500 g polpa de abóbora limpa e em cubos</li>
+<li>200 g feijão cannellini cozido</li>
+<li>50 g cogumelos porcini secos (ou 150 g frescos)</li>
+<li>1 cebola média</li>
+<li>2 dentes de alho</li>
+<li>1 ramo de alecrim</li>
+<li>1 folha de louro</li>
+<li>600-700 ml caldo de legumes quente</li>
+<li>3 colheres de sopa azeite extra virgem</li>
+<li>Sal e pimenta preta q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Se usares porcini secos, deixa-os de molho em água morna 20 minutos. Escorre (guarda a água de molho filtrada) e corta em tiras.</p>
+<p>2. Pica finamente a cebola e um dente de alho. Numa caçarola larga aquece o azeite, deixa dourar a cebola e o alho com o ramo de alecrim e a folha de louro.</p>
+<p>3. Junta a abóbora em cubos e os porcini, deixa apurar mexendo 4-5 minutos; se necessário, desglasa com uma concha da água de molho dos cogumelos.</p>
+<p>4. Deita o caldo quente até cobrir apenas os legumes; tempera com sal e leva a ligeira ebulição. Tapar e cozinhar em lume brando 20 minutos, até a abóbora ficar macia.</p>
+<p>5. Retira o alecrim, o alho e o louro. Adiciona o feijão cannellini escorrido e enxaguado, mexe e deixa apurar 2 minutos.</p>
+<p>6. Trita tudo com uma varinha mágica até obter um creme homogéneo; se ficar muito espesso, acrescenta mais caldo ou um fio de água quente. Ajusta o sal e uma moagem de pimenta.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-10-12</p>
+<p><strong>Meta:</strong> 4 Portionen | Vegetarisch</p>
+<p><strong>Beschreibung:</strong> Cremige Kürbis-Velouté mit Cannellini-Bohnen und Steinpilzen, duftend nach Rosmarin und Lorbeer.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>500 g Kürbisfleisch, geschält und gewürfelt</li>
+<li>200 g gekochte Cannellini-Bohnen</li>
+<li>50 g getrocknete Steinpilze (oder 150 g frische)</li>
+<li>1 mittlere Zwiebel</li>
+<li>2 Knoblauchzehen</li>
+<li>1 Rosmarinzweig</li>
+<li>1 Lorbeerblatt</li>
+<li>600-700 ml heiße Gemüsebrühe</li>
+<li>3 Esslöffel Olivenöl extra vergine</li>
+<li>Salz und schwarzer Pfeffer nach Geschmack</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. Getrocknete Steinpilze in lauwarmem Wasser 20 Minuten einweichen. Abtropfen lassen (Einweichwasser aufbewahren und filtern) und in Streifen schneiden.</p>
+<p>2. Zwiebel und eine Knoblauchzehe fein hacken. Öl in einer breiten Kasserolle erhitzen, Zwiebel und Knoblauch mit dem Rosmarinzweig und dem Lorbeerblatt goldgelb anschwitzen.</p>
+<p>3. Kürbiswürfel und Steinpilze zugeben, unter Rühren 4-5 Minuten anschwitzen; bei Bedarf mit einem Schöpflöffel Pilz-Einweichwasser ablöschen.</p>
+<p>4. Heiße Brühe zugießen, bis das Gemüse eben bedeckt ist; salzen und leicht aufkochen lassen. Zugedeckt bei milder Hitze 20 Minuten köcheln, bis der Kürbis weich ist.</p>
+<p>5. Rosmarin, Knoblauch und Lorbeerblatt entfernen. Abgetropfte und abgespülte Cannellini-Bohnen zugeben, umrühren und 2 Minuten ziehen lassen.</p>
+<p>6. Alles mit einem Stabmixer pürieren, bis eine glatte Creme entsteht; bei Bedarf mehr Brühe oder etwas heißes Wasser zugeben. Mit Salz und frisch gemahlenem Pfeffer abschmecken.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-10-12</p>
+<p><strong>Meta:</strong> 4 μερίδες | Χορτοφαγικό</p>
+<p><strong>Περιγραφή:</strong> Κρεμώδης βελουτέ κολοκύθας με φασόλια cannellini και μανιτάρια porcini, αρωματισμένη με δενδρολίβανο και δάφνη.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>500 γρ σάρκα κολοκύθας, καθαρισμένη και κομμένη σε κύβους</li>
+<li>200 γρ βρασμένα φασόλια cannellini</li>
+<li>50 γρ αποξηραμένα μανιτάρια porcini (ή 150 γρ φρέσκα)</li>
+<li>1 μεσαίο κρεμμύδι</li>
+<li>2 σκελίδες σκόρδο</li>
+<li>1 κλωνάρι δενδρολίβανου</li>
+<li>1 φύλλο δάφνης</li>
+<li>600-700 ml ζεστό ζωμό λαχανικών</li>
+<li>3 κουταλιές της σούπας ελαιόλαδο</li>
+<li>Αλάτι και μαύρο πιπέρι κατά βούληση</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. Αν χρησιμοποιείς αποξηραμένα porcini, μούλιασέ τα σε χλιαρό νερό για 20 λεπτά. Στράγγιξέ τα (κράτησε το νερό μουλιάσματος φιλτραρισμένο) και κόψέ τα σε λωρίδες.</p>
+<p>2. Ψιλοκόψε το κρεμμύδι και μια σκελίδα σκόρδο. Σε μια φαρδιά κατσαρόλα ζέστανε το λάδι, σοτάρε το κρεμμύδι και το σκόρδο με το κλωνάρι δενδρολίβανου και το φύλλο δάφνης μέχρι να ροδίσουν.</p>
+<p>3. Πρόσθεσε την κολοκύθα σε κύβους και τα porcini, σοτάρε ανακατεύοντας 4-5 λεπτά· αν χρειάζεται, απογλυκάνισε με μια κουτάλα από το νερό μουλιάσματος των μανιταριών.</p>
+<p>4. Ρίξε τον ζεστό ζωμό μέχρι να σκεπάσει ελαφρά τα λαχανικά· αλατοπίπερωσε και άφησέ τα να πάρουν μια βράση. Σκέπασε και μαγείρεψε σε χαμηλή φωτιά για 20 λεπτά, μέχρι η κολοκύθα να μαλακώσει.</p>
+<p>5. Αφαίρεσε το δενδρολίβανο, το σκόρδο και τη δάφνη. Πρόσθεσε τα φασόλια cannellini στραγγισμένα και ξεπλυμένα, ανακάτεψε και άφησέ τα να πάρουν γεύση 2 λεπτά.</p>
+<p>6. Χτύπησε τα πάντα με μίξερ χειρός μέχρι να γίνει μια λεία κρέμα· αν είναι πολύ πηχτή, πρόσθεσε άλλο ζωμό ή λίγο ζεστό νερό. Ρύθμισε το αλάτι και το πιπέρι.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

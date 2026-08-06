@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vellutata di Fave con Asparagi Croccanti e Ravanelli in Agrodolce | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Vellutata di Fave con Asparagi Croccanti e Ravanelli in Agrodolce">
+<meta property="og:title" content="Vellutata di Fave con Asparagi Croccanti e Ravanelli in Agrodolce | Leguminando">
+<meta property="og:description" content="Vellutata di Fave con Asparagi Croccanti e Ravanelli in Agrodolce">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="estate/021.html" data-title="Vellutata di Fave con Asparagi Croccanti e Ravanelli in Agrodolce" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="021.jpg" alt="Vellutata di Fave con Asparagi Croccanti e Ravanelli in Agrodolce" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2026-06-02</p>
+<p><strong>Meta:</strong> 4 persone | Vegetariano</p>
+<p><strong>Descrizione:</strong> Vellutata di fave con asparagi croccanti e ravanelli in agrodolce, un piatto fresco e colorato per l'estate.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>500 g fave (sgranate e pelate)</li>
+<li>300 g asparagi</li>
+<li>6-8 ravanelli</li>
+<li>1 scalogno medio</li>
+<li>600 ml brodo vegetale</li>
+<li>50 ml panna vegetale</li>
+<li>50 ml aceto di mele</li>
+<li>1 cucchiaino zucchero</li>
+<li>Olio extravergine d'oliva, sale, pepe, menta fresca q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Ravanelli in agrodolce:</strong> Affetta sottilmente i ravanelli. Mescola aceto, zucchero e un pizzico di sale in un barattolo. Immergi i ravanelli e lascia riposare in frigo per almeno 30 minuti.</p>
+<p>2. <strong>Base:</strong> Rosola lo scalogno tritato in una pentola con un filo d'olio. Aggiungi le fave e cuoci per 2 minuti.</p>
+<p>3. <strong>Cottura:</strong> Copri le fave con il brodo vegetale. Cuoci a fuoco medio per 15-20 minuti.</p>
+<p>4. <strong>Crema:</strong> Frulla il tutto con un mixer a immersione fino a ottenere una crema liscia. Aggiungi la panna vegetale e aggiusta di sale e pepe. Mantieni in caldo.</p>
+<p>5. <strong>Asparagi:</strong> Cuoci le punte degli asparagi in padella con un filo d'olio e sale per 4-5 minuti, finché non sono croccanti.</p>
+<p>6. <strong>Impiattamento:</strong> Versa la vellutata in una ciotola, adagia al centro gli asparagi e decora con i ravanelli in agrodolce e foglie di menta fresca.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2026-06-02</p>
+<p><strong>Meta:</strong> 4 servings | Vegetarian</p>
+<p><strong>Description:</strong> Broad bean velouté with crispy asparagus and sweet-and-sour radishes, a fresh and colourful summer dish.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>500 g broad beans (shelled and peeled)</li>
+<li>300 g asparagus</li>
+<li>6-8 radishes</li>
+<li>1 medium shallot</li>
+<li>600 ml vegetable broth</li>
+<li>50 ml plant-based cream</li>
+<li>50 ml apple cider vinegar</li>
+<li>1 teaspoon sugar</li>
+<li>Extra virgin olive oil, salt, pepper, fresh mint to taste</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Sweet-and-sour radishes:</strong> Slice radishes thinly. Mix vinegar, sugar and a pinch of salt in a jar. Submerge the radishes and refrigerate for at least 30 minutes.</p>
+<p>2. <strong>Base:</strong> Sauté chopped shallot in a pot with a drizzle of oil. Add broad beans and cook for 2 minutes.</p>
+<p>3. <strong>Cooking:</strong> Cover beans with vegetable broth. Cook over medium heat for 15-20 minutes.</p>
+<p>4. <strong>Cream:</strong> Blend everything with an immersion mixer until smooth. Add plant-based cream and adjust salt and pepper. Keep warm.</p>
+<p>5. <strong>Asparagus:</strong> Cook asparagus tips in a pan with a drizzle of oil and salt for 4-5 minutes until crispy.</p>
+<p>6. <strong>Plating:</strong> Pour velouté into a bowl, place asparagus in the centre and garnish with sweet-and-sour radishes and fresh mint leaves.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2026-06-02</p>
+<p><strong>Meta:</strong> 4 personas | Vegetariano</p>
+<p><strong>Descripción:</strong> Crema suave de habas con espárragos crujientes y rábanos agridulces, un plato fresco y colorido para el verano.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>500 g de habas (desgranadas y peladas)</li>
+<li>300 g de espárragos</li>
+<li>6-8 rábanos</li>
+<li>1 chalote mediano</li>
+<li>600 ml de caldo de verduras</li>
+<li>50 ml de crema vegetal</li>
+<li>50 ml de vinagre de manzana</li>
+<li>1 cucharadita de azúcar</li>
+<li>Aceite de oliva virgen extra, sal, pimienta, menta fresca c.s.</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Rábanos agridulces:</strong> Corta los rábanos en láminas finas. Mezcla vinagre, azúcar y una pizca de sal en un bote. Sumerge los rábanos y refrigera al menos 30 minutos.</p>
+<p>2. <strong>Base:</strong> Sofríe el chalote picado en una cacerola con un chorrito de aceite. Añade las habas y cocina 2 minutos.</p>
+<p>3. <strong>Cocción:</strong> Cubre las habas con el caldo de verduras. Cocina a fuego medio 15-20 minutos.</p>
+<p>4. <strong>Crema:</strong> Tritura todo con una batidora de inmersión hasta obtener una crema suave. Añade la crema vegetal y ajusta de sal y pimienta. Mantén caliente.</p>
+<p>5. <strong>Espárragos:</strong> Cocina las puntas de espárragos en sartén con un chorrito de aceite y sal durante 4-5 minutos hasta que estén crujientes.</p>
+<p>6. <strong>Emplatado:</strong> Vierte la crema en un bol, coloca los espárragos en el centro y decora con los rábanos agridulces y hojas de menta fresca.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2026-06-02</p>
+<p><strong>Meta:</strong> 4 pessoas | Vegetariano</p>
+<p><strong>Descrição:</strong> Creme de favas com espargos crocantes e rabanetes agridoces, um prato fresco e colorido para o verão.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>500 g de favas (descascadas e peladas)</li>
+<li>300 g de espargos</li>
+<li>6-8 rabanetes</li>
+<li>1 chalota média</li>
+<li>600 ml de caldo de legumes</li>
+<li>50 ml de natas vegetais</li>
+<li>50 ml de vinagre de maçã</li>
+<li>1 colher de chá de açúcar</li>
+<li>Azeite extra virgem, sal, pimenta, hortelã fresca q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Rabanetes agridoces:</strong> Corta os rabanetes em fatias finas. Mistura vinagre, açúcar e uma pitada de sal num frasco. Submerge os rabanetes e refrigera pelo menos 30 minutos.</p>
+<p>2. <strong>Base:</strong> Refoga a chalota picada numa panela com um fio de azeite. Junta as favas e cozinha 2 minutos.</p>
+<p>3. <strong>Cozedura:</strong> Cobre as favas com o caldo de legumes. Cozinha em lume médio 15-20 minutos.</p>
+<p>4. <strong>Creme:</strong> Tritura tudo com uma varinha mágica até obter um creme suave. Adiciona as natas vegetais e ajusta o sal e a pimenta. Mantém quente.</p>
+<p>5. <strong>Espargos:</strong> Cozinha as pontas dos espargos numa frigideira com um fio de azeite e sal durante 4-5 minutos até ficarem crocantes.</p>
+<p>6. <strong>Empratamento:</strong> Deita o creme numa tigela, coloca os espargos ao centro e decora com os rabanetes agridoces e folhas de hortelã fresca.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2026-06-02</p>
+<p><strong>Meta:</strong> 4 Portionen | Vegetarisch</p>
+<p><strong>Beschreibung:</strong> Saubohnen-Velouté mit knusprigem Spargel und süß-saueren Radieschen, ein frisches und farbenfrohes Sommergericht.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>500 g Saubohnen (geschält und geschält)</li>
+<li>300 g Spargel</li>
+<li>6-8 Radieschen</li>
+<li>1 mittlere Schalotte</li>
+<li>600 ml Gemüsebrühe</li>
+<li>50 ml pflanzliche Sahne</li>
+<li>50 ml Apfelessig</li>
+<li>1 Teelöffel Zucker</li>
+<li>Olivenöl extra vergine, Salz, Pfeffer, frische Minze nach Geschmack</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Süß-saure Radieschen:</strong> Radieschen in dünne Scheiben schneiden. Essig, Zucker und eine Prise Salz in einem Glas mischen. Radieschen hineingeben und mindestens 30 Minuten kühlen.</p>
+<p>2. <strong>Basis:</strong> Gehackte Schalotte in einem Topf mit Olivenöl anschwitzen. Saubohnen zugeben und 2 Minuten kochen.</p>
+<p>3. <strong>Kochen:</strong> Bohnen mit Gemüsebrühe bedecken. Bei mittlerer Hitze 15-20 Minuten köcheln lassen.</p>
+<p>4. <strong>Creme:</strong> Alles mit einem Stabmixer zu einer glatten Creme pürieren. Pflanzliche Sahne zugeben und mit Salz und Pfeffer abschmecken. Warm halten.</p>
+<p>5. <strong>Spargel:</strong> Spargelspitzen in einer Pfanne mit Olivenöl und Salz 4-5 Minuten braten, bis sie knusprig sind.</p>
+<p>6. <strong>Anrichten:</strong> Velouté in eine Schüssel geben, Spargel in die Mitte legen und mit süß-sauren Radieschen und frischen Minzblättern garnieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2026-06-02</p>
+<p><strong>Meta:</strong> 4 μερίδες | Χορτοφαγικό</p>
+<p><strong>Περιγραφή:</strong> Βελουτέ κουκιών με τραγανά σπαράγγια και γλυκόξινα ραπανάκια, ένα φρέσκο και πολύχρωμο καλοκαιρινό πιάτο.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>500 γρ κουκιά (καθαρισμένα και ξεφλουδισμένα)</li>
+<li>300 γρ σπαράγγια</li>
+<li>6-8 ραπανάκια</li>
+<li>1 μεσαίο κρεμμυδάκι</li>
+<li>600 ml ζωμός λαχανικών</li>
+<li>50 ml φυτική κρέμα γάλακτος</li>
+<li>50 ml μηλόξυδο</li>
+<li>1 κουταλάκι του γλυκού ζάχαρη</li>
+<li>Ελαιόλαδο, αλάτι, πιπέρι, φρέσκα φύλλα δυόσμου κατά βούληση</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Γλυκόξινα ραπανάκια:</strong> Κόψε τα ραπανάκια σε λεπτές φέτες. Ανάμειξε το ξύδι, τη ζάχαρη και μια πρέζα αλατιού σε ένα βάζο. Βύθισε τα ραπανάκια και άφησέ τα στο ψυγείο για τουλάχιστον 30 λεπτά.</p>
+<p>2. <strong>Βάση:</strong> Σοτάρε το ψιλοκομμένο κρεμμυδάκι σε μια κατσαρόλα με λίγο λάδι. Πρόσθεσε τα κουκιά και μαγείρεψέ τα για 2 λεπτά.</p>
+<p>3. <strong>Μαγείρεμα:</strong> Σκέπασε τα κουκιά με τον ζωμό λαχανικών. Μαγείρεψε σε μέτρια φωτιά για 15-20 λεπτά.</p>
+<p>4. <strong>Κρέμα:</strong> Πολτοποίησε τα πάντα με ράβδο μπλέντερ μέχρι να γίνουν λεία κρέμα. Πρόσθεσε τη φυτική κρέμα και αλατοπιπέρωσε. Κράτησέ τα ζεστά.</p>
+<p>5. <strong>Σπαράγγια:</strong> Μαγείρεψε τις κορυφές των σπαραγγιών σε τηγάνι με λίγο λάδι και αλάτι για 4-5 λεπτά μέχρι να γίνουν τραγανά.</p>
+<p>6. <strong>Σερβίρισμα:</strong> Ρίξε τη βελουτέ σε ένα μπολ, τοποθέτησε τα σπαράγγια στο κέντρο και γαρνίρισε με τα γλυκόξινα ραπανάκια και φρέσκα φύλλα δυόσμου.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

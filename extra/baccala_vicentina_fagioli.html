@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baccalà alla Vicentina con Crema di Fagioli | Leguminando</title>
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%); color: #333; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 30px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.header h1 { margin: 0; font-size: 2.2em; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+.header p { margin: 10px 0 0 0; font-size: 1.1em; opacity: 0.9; }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border: 2px solid #D2691E; background: white; color: #8B4513; border-radius: 20px; cursor: pointer; font-size: 0.85em; transition: all 0.3s; }
+.lang-tab:hover { background: #faf8f5; }
+.lang-tab.active { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; }
+.lang-content { display: none; }
+.lang-content.active { display: block; }
+.content { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.recipe-image { width: 100%; max-width: 700px; height: 400px; object-fit: cover; border-radius: 12px; margin: 0 auto 30px auto; display: block; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.section { margin-bottom: 30px; }
+.section h2 { color: #8B4513; border-bottom: 3px solid #D2691E; padding-bottom: 10px; margin-bottom: 20px; font-size: 1.5em; }
+.section h3 { color: #D2691E; margin: 20px 0 10px 0; font-size: 1.2em; }
+.ingredients-list { background: #faf8f5; padding: 20px; border-radius: 10px; border-left: 5px solid #D2691E; }
+.ingredients-list ul { list-style: none; padding: 0; }
+.ingredients-list li { padding: 8px 0; border-bottom: 1px dashed #e0d5c8; }
+.ingredients-list li:last-child { border-bottom: none; }
+.ingredients-list li:before { content: "🫘 "; margin-right: 8px; }
+.steps-list { counter-reset: step; }
+.steps-list li { counter-increment: step; padding: 15px 0 15px 50px; position: relative; border-bottom: 1px solid #eee; }
+.steps-list li:last-child { border-bottom: none; }
+.steps-list li::before { content: counter(step); position: absolute; left: 0; top: 10px; background: #8B4513; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em; }
+.footer { text-align: center; margin-top: 40px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 20px 0; padding: 12px 24px; background: linear-gradient(135deg, #8B4513, #D2691E); color: white; text-decoration: none; border-radius: 25px; font-size: 1em; transition: transform 0.2s; }
+.back-link:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+@media print {
+    .lang-tabs { display: none !important; }
+    .lang-content { display: block !important; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>🫘 Leguminando</h1>
+<p>Ricette a base di legumi</p>
+</div>
+
+<div class="content">
+<div style="text-align: center; margin: -20px 0 20px 0;">
+<span style="display: inline-block; padding: 8px 16px; background: linear-gradient(135deg, #D2691E, #8B4513); color: white; border-radius: 20px; font-size: 0.9em;">📅 Stagione: Autunno 🍂</span>
+</div>
+<img src="baccala_vicentina_fagioli.jpg" alt="Baccalà alla Vicentina con Crema di Fagioli" class="recipe-image">
+
+<div class="fav-bar" style="text-align:center;margin:5px 0;">
+<span class="fav-btn" data-path="extra/baccala_vicentina_fagioli.html" onclick="event.stopPropagation();toggleFav('extra/baccala_vicentina_fagioli.html', 'Baccalà alla Vicentina con Crema di Fagioli')">🤍</span> Aggiungi ai preferiti
+</div>
+
+<div class="lang-tabs">
+<span class="lang-tab active" data-lang="it" onclick="switchLang('it')">🇮🇹 IT</span>
+<span class="lang-tab" data-lang="en" onclick="switchLang('en')">🇬🇧 EN</span>
+<span class="lang-tab" data-lang="es" onclick="switchLang('es')">🇪🇸 ES</span>
+<span class="lang-tab" data-lang="pt" onclick="switchLang('pt')">🇵🇹 PT</span>
+<span class="lang-tab" data-lang="de" onclick="switchLang('de')">🇩🇪 DE</span>
+<span class="lang-tab" data-lang="el" onclick="switchLang('el')">🇬🇷 EL</span>
+</div>
+
+<div id="lang-it" class="lang-content active">
+<div class="section">
+<h2>🐟 Baccalà alla Vicentina con Crema di Fagioli</h2>
+<h3>Ingredienti:</h3>
+<div class="ingredients-list">
+<ul>
+<li>800g di baccalà già ammollato</li>
+<li>300g di fagioli dall'occhio</li>
+<li>1 cipolla grande</li>
+<li>2 spicchi d'aglio</li>
+<li>Latte q.b.</li>
+<li>Olio extravergine d'oliva q.b.</li>
+<li>Prezzemolo fresco</li>
+<li>Sale e pepe q.b.</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparazione</h2>
+<ol class="steps-list">
+<li>Taglia il baccalà a pezzi e cuocilo in padella con cipolla, aglio e olio per 20 minuti.</li>
+<li>Copri con latte caldo e prosegui la cottura a fuoco lento per 40 minuti.</li>
+<li>Nel frattempo, cuoci i fagioli dall'occhio in acqua salata fino a renderli morbidi.</li>
+<li>Frulla metà dei fagioli con un goccio di olio per ottenere una crema liscia.</li>
+<li>Servi il baccalà su un letto di crema di fagioli.</li>
+<li>Guarnisci con prezzemolo fresco e un filo d'olio a crudo.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Consigli</h2>
+<p>Il baccalà alla vicentina è un classico della tradizione veneta. La crema di fagioli dall'occhio aggiunge cremosità e valore nutrizionale al piatto. Per un risultato ottimale, lascia ammollare il baccalà per 48 ore cambiando l'acqua frequentemente.</p>
+</div>
+</div>
+
+<div id="lang-en" class="lang-content">
+<div class="section">
+<h2>🐟 Vicenza-style Cod with Bean Cream</h2>
+<h3>Ingredients:</h3>
+<div class="ingredients-list">
+<ul>
+<li>800g soaked cod</li>
+<li>300g borlotti (eye beans)</li>
+<li>1 large onion</li>
+<li>2 garlic cloves</li>
+<li>Milk to taste</li>
+<li>Extra virgin olive oil to taste</li>
+<li>Fresh parsley</li>
+<li>Salt and pepper to taste</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparation</h2>
+<ol class="steps-list">
+<li>Cut the cod into pieces and cook in a pan with onion, garlic and oil for 20 minutes.</li>
+<li>Cover with hot milk and continue cooking over low heat for 40 minutes.</li>
+<li>Meanwhile, cook the borlotti beans in salted water until tender.</li>
+<li>Blend half of the beans with a drizzle of oil to obtain a smooth cream.</li>
+<li>Serve the cod on a bed of bean cream.</li>
+<li>Garnish with fresh parsley and a drizzle of raw oil.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Tips</h2>
+<p>Vicenza-style cod is a classic of Venetian tradition. The bean cream adds creaminess and nutritional value to the dish. For best results, soak the cod for 48 hours, changing the water frequently.</p>
+</div>
+</div>
+
+<div id="lang-es" class="lang-content">
+<div class="section">
+<h2>🐟 Bacalao a la Vicentina con Crema de Alubias</h2>
+<h3>Ingredientes:</h3>
+<div class="ingredients-list">
+<ul>
+<li>800g de bacalao ya remojado</li>
+<li>300g de alubias pintas</li>
+<li>1 cebolla grande</li>
+<li>2 dientes de ajo</li>
+<li>Leche al gusto</li>
+<li>Aceite de oliva virgen extra al gusto</li>
+<li>Perejil fresco</li>
+<li>Sal y pimienta al gusto</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparacion</h2>
+<ol class="steps-list">
+<li>Corta el bacalao en trozos y cocinalo en una sarten con cebolla, ajo y aceite durante 20 minutos.</li>
+<li>Cubre con leche caliente y sigue cocinando a fuego lento durante 40 minutos.</li>
+<li>Mientras tanto, cuece las alubias pintas en agua salada hasta que esten tiernas.</li>
+<li>Tritura la mitad de las alubias con un chorrito de aceite para obtener una crema lisa.</li>
+<li>Sirve el bacalao sobre una cama de crema de alubias.</li>
+<li>Decora con perejil fresco y un chorrito de aceite crudo.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Consejos</h2>
+<p>El bacalao a la vicentina es un clasico de la tradicion veneciana. La crema de alubias anade cremosidad y valor nutricional al plato. Para un resultado optimo, deja en remojo el bacalao durante 48 horas cambiando el agua con frecuencia.</p>
+</div>
+</div>
+
+<div id="lang-pt" class="lang-content">
+<div class="section">
+<h2>🐟 Bacalhau à Vicentina com Creme de Feijão</h2>
+<h3>Ingredientes:</h3>
+<div class="ingredients-list">
+<ul>
+<li>800g de bacalhau ja demolhado</li>
+<li>300g de feijao carioca</li>
+<li>1 cebola grande</li>
+<li>2 dentes de alho</li>
+<li>Leite a gosto</li>
+<li>Azeite extra virgem a gosto</li>
+<li>Salsa fresca</li>
+<li>Sal e pimenta a gosto</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparacao</h2>
+<ol class="steps-list">
+<li>Corte o bacalhau em pedacos e cozinhe numa frigideira com cebola, alho e azeite durante 20 minutos.</li>
+<li>Cubra com leite quente e continue a cozinhar em lume brando durante 40 minutos.</li>
+<li>Entretanto, coza o feijao carioca em agua salgada ate ficar macio.</li>
+<li>Triture metade do feijao com um fio de azeite para obter um creme liso.</li>
+<li>Sirva o bacalhau sobre uma cama de creme de feijao.</li>
+<li>Decore com salsa fresca e um fio de azeite cru.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Dicas</h2>
+<p>O bacalhau à vicentina é um classico da tradicao veneziana. O creme de feijao acrescenta cremosidade e valor nutricional ao prato. Para um resultado optimo, deixe o bacalhau de molho durante 48 horas, mudando a agua frequentemente.</p>
+</div>
+</div>
+
+<div id="lang-de" class="lang-content">
+<div class="section">
+<h2>🐟 Stockfisch auf Vicentina-Art mit Bohnencreme</h2>
+<h3>Zutaten:</h3>
+<div class="ingredients-list">
+<ul>
+<li>800g eingeweichter Stockfisch</li>
+<li>300g Borlotti-Bohnen</li>
+<li>1 grosse Zwiebel</li>
+<li>2 Knoblauchzehen</li>
+<li>Milch nach Geschmack</li>
+<li>Natives Olivenoel extra nach Geschmack</li>
+<li>Frische Petersilie</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Zubereitung</h2>
+<ol class="steps-list">
+<li>Schneiden Sie den Stockfisch in Stuecke und braten Sie ihn in einer Pfanne mit Zwiebel, Knoblauch und Oel 20 Minuten.</li>
+<li>Mit heisser Milch abgiessen und bei milder Hitze weitere 40 Minuten koecheln lassen.</li>
+<li>Waehrenddessen die Borlotti-Bohnen in Salzwasser weich kochen.</li>
+<li>Die Haelfte der Bohnen mit einem Schuss Oel zu einer glatten Creme vermischen.</li>
+<li>Den Stockfisch auf einem Bett aus Bohnencreme servieren.</li>
+<li>Mit frischer Petersilie und einem Schuss rohem Oel garnieren.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Tipps</h2>
+<p>Stockfisch auf Vicentina-Art ist ein Klassiker der venezianischen Tradition. Die Bohnencreme verleiht dem Gericht Cremigkeit und Naehrwert. Fuer ein optimales Ergebnis legen Sie den Stockfisch 48 Stunden ein, dabei das Wasser haeufig wechseln.</p>
+</div>
+</div>
+
+<div id="lang-el" class="lang-content">
+<div class="section">
+<h2>🐟 Μπακαλιάρος Vicentina με Κρέμα Φασολιών</h2>
+<h3>Συστατικά:</h3>
+<div class="ingredients-list">
+<ul>
+<li>800g μπακαλιάρος μουσκεμένος</li>
+<li>300g φασόλια borlotti</li>
+<li>1 μεγάλο κρεμμύδι</li>
+<li>2 σκελίδες σκόρδου</li>
+<li>Γάλα κατά βούληση</li>
+<li>Έξτρα παρθένο ελαιόλαδο κατά βούληση</li>
+<li>Φρέσκο μαϊντανό</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Εκτέλεση</h2>
+<ol class="steps-list">
+<li>Κόψτε τον μπακαλιάρο σε κομμάτια και μαγειρέψτε τον στο τηγάνι με κρεμμύδι, σκόρδο και λάδι για 20 λεπτά.</li>
+<li>Σκεπάστε με ζεστό γάλα και συνεχίστε το μαγείρεμα σε χαμηλή φωτιά για 40 λεπτά.</li>
+<li>Στο μεταξύ, βράστε τα φασόλια borlotti σε αλατισμένο νερό μέχρι να μαλακώσουν.</li>
+<li>Χτυπήστε τα μισά φασόλια με μια σταλιά λάδι για να πάρετε μια λεία κρέμα.</li>
+<li>Σερβίρετε τον μπακαλιάρο πάνω σε ένα στρώμα κρέμας φασολιών.</li>
+<li>Γαρνίρετε με φρέσκο μαϊντανό και μια σταλιά ωμού λαδιού.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Συμβουλές</h2>
+<p>Ο μπακαλιάρος Vicentina είναι ένα κλασικό πιάτο της ενετικής παράδοσης. Η κρέμα φασολιών προσθέτει κρεμώδη υφή και διατροφική αξία στο πιάτο. Για το καλύτερο αποτέλεσμα, μουσκέψτε τον μπακαλιάρο για 48 ώρες αλλάζοντας συχνά το νερό.</p>
+</div>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette a base di legumi</p>
+<a href="../index.html" class="back-link">← Torna alla Home</a>
+</div>
+
+<script>
+function switchLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(c => c.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+    document.querySelector('.lang-tab[data-lang="' + lang + '"]').classList.add('active');
+    localStorage.setItem('preferredLang', lang);
+}
+</script>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

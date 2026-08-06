@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pasta Corta con Fagioli Neri | Leguminando</title>
+<meta name="description" content="Pasta Corta con Fagioli Neri">
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%); color: #333; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 30px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.header h1 { margin: 0; font-size: 2.2em; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+.header p { margin: 10px 0 0 0; font-size: 1.1em; opacity: 0.9; }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border: 2px solid #D2691E; background: white; color: #8B4513; border-radius: 20px; cursor: pointer; font-size: 0.85em; transition: all 0.3s; }
+.lang-tab:hover { background: #faf8f5; }
+.lang-tab.active { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; }
+.lang-content { display: none; }
+.lang-content.active { display: block; }
+.content { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.recipe-image { width: 100%; max-width: 700px; height: 400px; object-fit: cover; border-radius: 12px; margin: 0 auto 30px auto; display: block; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.section { margin-bottom: 30px; }
+.section h2 { color: #8B4513; border-bottom: 3px solid #D2691E; padding-bottom: 10px; margin-bottom: 20px; font-size: 1.5em; }
+.section h3 { color: #D2691E; margin: 20px 0 10px 0; font-size: 1.2em; }
+.ingredients-list { background: #faf8f5; padding: 20px; border-radius: 10px; border-left: 5px solid #D2691E; }
+.ingredients-list ul { list-style: none; padding: 0; }
+.ingredients-list li { padding: 8px 0; border-bottom: 1px dashed #e0d5c8; }
+.ingredients-list li:last-child { border-bottom: none; }
+.ingredients-list li:before { content: "🫘 "; margin-right: 8px; }
+.steps-list { counter-reset: step; }
+.steps-list li { counter-increment: step; padding: 15px 0 15px 50px; position: relative; border-bottom: 1px solid #eee; }
+.steps-list li:last-child { border-bottom: none; }
+.steps-list li::before { content: counter(step); position: absolute; left: 0; top: 10px; background: #8B4513; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em; }
+.footer { text-align: center; margin-top: 40px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 20px 0; padding: 12px 24px; background: linear-gradient(135deg, #8B4513, #D2691E); color: white; text-decoration: none; border-radius: 25px; font-size: 1em; transition: transform 0.2s; }
+.back-link:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+@media print {
+    .lang-tabs { display: none !important; }
+    .lang-content { display: block !important; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>🫘 Leguminando</h1>
+<p>Ricette a base di legumi</p>
+</div>
+
+<div class="content">
+<div style="text-align: center; margin: -20px 0 20px 0;">
+<span style="display: inline-block; padding: 8px 16px; background: linear-gradient(135deg, #D2691E, #8B4513); color: white; border-radius: 20px; font-size: 0.9em;">📅 Stagione: Primavera 🌸</span>
+</div>
+<img src="pasta_fagioli_neri.jpg" alt="Pasta Corta con Fagioli Neri" class="recipe-image">
+
+<div class="fav-bar" style="text-align:center;margin:5px 0;">
+<span class="fav-btn" data-path="extra/pasta_fagioli_neri.html" onclick="event.stopPropagation();toggleFav('extra/pasta_fagioli_neri.html', 'Pasta Corta con Fagioli Neri')">🤍</span> Aggiungi ai preferiti
+</div>
+
+<div class="lang-tabs">
+<span class="lang-tab active" data-lang="it" onclick="switchLang('it')">🇮🇹 IT</span>
+<span class="lang-tab" data-lang="en" onclick="switchLang('en')">🇬🇧 EN</span>
+<span class="lang-tab" data-lang="es" onclick="switchLang('es')">🇪🇸 ES</span>
+<span class="lang-tab" data-lang="pt" onclick="switchLang('pt')">🇵🇹 PT</span>
+<span class="lang-tab" data-lang="de" onclick="switchLang('de')">🇩🇪 DE</span>
+<span class="lang-tab" data-lang="el" onclick="switchLang('el')">🇬🇷 EL</span>
+</div>
+
+<div id="lang-it" class="lang-content active">
+<div class="section">
+<h2>🍝 Pasta Corta con Fagioli Neri</h2>
+<h3>Ingredienti:</h3>
+<div class="ingredients-list">
+<ul>
+<li>320g di pasta corta (ditalini, mezze maniche o tubetti)</li>
+<li>250g di fagioli neri lessati</li>
+<li>1 cipolla</li>
+<li>2 spicchi d'aglio</li>
+<li>300g di pomodori pelati</li>
+<li>Rosmarino fresco</li>
+<li>Olio extravergine d'oliva q.b.</li>
+<li>Sale e pepe q.b.</li>
+<li>Peperoncino (opzionale)</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparazione</h2>
+<ol class="steps-list">
+<li>Soffriggi la cipolla tritata e l'aglio in olio EVO per 3 minuti.</li>
+<li>Aggiungi i pomodori pelati e cuoci a fuoco medio per 15 minuti.</li>
+<li>Unisci i fagioli neri scolati e cuoci per altri 10 minuti.</li>
+<li>Nel frattempo, cuoci la pasta in abbondante acqua salata.</li>
+<li>Scola la pasta al dente e versala nella padella con il sugo.</li>
+<li>Saltala per 2 minuti, aggiungendo un mestolo di acqua di cottura.</li>
+<li>Servi con rosmarino fresco e un filo d'olio a crudo.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Consigli</h2>
+<p>I fagioli neri sono ricchi di antiossidanti e proteine. Per un sapore più intenso, lascia insaporire il sugo per più tempo. Se preferisci una consistenza più cremosa, frulla metà dei fagioli prima di aggiungere la pasta.</p>
+</div>
+</div>
+
+<div id="lang-en" class="lang-content">
+<div class="section">
+<h2>🍝 Short Pasta with Black Beans</h2>
+<h3>Ingredients:</h3>
+<div class="ingredients-list">
+<ul>
+<li>320g short pasta (ditalini, half-sleeves or tubetti)</li>
+<li>250g boiled black beans</li>
+<li>1 onion</li>
+<li>2 garlic cloves</li>
+<li>300g peeled tomatoes</li>
+<li>Fresh rosemary</li>
+<li>Extra virgin olive oil to taste</li>
+<li>Salt and pepper to taste</li>
+<li>Chili (optional)</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparation</h2>
+<ol class="steps-list">
+<li>Sauté the chopped onion and garlic in EVO oil for 3 minutes.</li>
+<li>Add the peeled tomatoes and cook over medium heat for 15 minutes.</li>
+<li>Add the drained black beans and cook for another 10 minutes.</li>
+<li>Meanwhile, cook the pasta in plenty of salted water.</li>
+<li>Drain the pasta al dente and pour it into the pan with the sauce.</li>
+<li>Toss for 2 minutes, adding a ladle of cooking water.</li>
+<li>Serve with fresh rosemary and a drizzle of raw oil.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Tips</h2>
+<p>Black beans are rich in antioxidants and protein. For a more intense flavor, let the sauce simmer longer. If you prefer a creamier consistency, blend half the beans before adding the pasta.</p>
+</div>
+</div>
+
+<div id="lang-es" class="lang-content">
+<div class="section">
+<h2>🍝 Pasta Corta con Frijoles Negros</h2>
+<h3>Ingredientes:</h3>
+<div class="ingredients-list">
+<ul>
+<li>320g de pasta corta (ditalini, mezze maniche o tubetti)</li>
+<li>250g de frijoles negros cocidos</li>
+<li>1 cebolla</li>
+<li>2 dientes de ajo</li>
+<li>300g de tomates pelados</li>
+<li>Romero fresco</li>
+<li>Aceite de oliva virgen extra al gusto</li>
+<li>Sal y pimienta al gusto</li>
+<li>Guindilla (opcional)</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparacion</h2>
+<ol class="steps-list">
+<li>Sofria la cebolla picada y el ajo en aceite EVO durante 3 minutos.</li>
+<li>Anada los tomates pelados y cocine a fuego medio durante 15 minutos.</li>
+<li>Una los frijoles negros escurridos y cocine otros 10 minutos.</li>
+<li>Mientras tanto, cueza la pasta en abundante agua salada.</li>
+<li>Escurra la pasta al dente y viertala en la sarten con la salsa.</li>
+<li>Saluee durante 2 minutos, anadiendo un cucharón de agua de coccion.</li>
+<li>Sirva con romero fresco y un chorrito de aceite crudo.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Consejos</h2>
+<p>Los frijoles negros son ricos en antioxidantes y proteinas. Para un sabor mas intenso, deje que la salsa hierva a fuego lento durante mas tiempo. Si prefiere una consistencia mas cremosa, triture la mitad de los frijoles antes de anadir la pasta.</p>
+</div>
+</div>
+
+<div id="lang-pt" class="lang-content">
+<div class="section">
+<h2>🍝 Massa Curta com Feijao Preto</h2>
+<h3>Ingredientes:</h3>
+<div class="ingredients-list">
+<ul>
+<li>320g de massa curta (ditalini, mezze maniche ou tubetti)</li>
+<li>250g de feijao preto cozido</li>
+<li>1 cebola</li>
+<li>2 dentes de alho</li>
+<li>300g de tomates pelados</li>
+<li>Alecrim fresco</li>
+<li>Azeite extra virgem a gosto</li>
+<li>Sal e pimenta a gosto</li>
+<li>Malagueta (opcional)</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparacao</h2>
+<ol class="steps-list">
+<li>Refogue a cebola picada e o alho em azeite EVO durante 3 minutos.</li>
+<li>Junte os tomates pelados e cozinhe em lume medio durante 15 minutos.</li>
+<li>Junte o feijao preto escorrido e cozinhe mais 10 minutos.</li>
+<li>Entretanto, coza a massa em abundante agua salgada.</li>
+<li>Escorra a massa al dente e deite-a na frigideira com o molho.</li>
+<li>Salteie durante 2 minutos, juntando uma concha de agua de cozedura.</li>
+<li>Sirva com alecrim fresco e um fio de azeite cru.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Dicas</h2>
+<p>O feijao preto é rico em antioxidantes e proteinas. Para um sabor mais intenso, deixe o molho apurar mais tempo. Se preferir uma consistencia mais cremosa, triture metade do feijao antes de juntar a massa.</p>
+</div>
+</div>
+
+<div id="lang-de" class="lang-content">
+<div class="section">
+<h2>🍝 Kurze Nudeln mit Schwarzen Bohnen</h2>
+<h3>Zutaten:</h3>
+<div class="ingredients-list">
+<ul>
+<li>320g kurze Nudeln (Ditalini, Mezze Maniche oder Tubetti)</li>
+<li>250g gekochte schwarze Bohnen</li>
+<li>1 Zwiebel</li>
+<li>2 Knoblauchzehen</li>
+<li>300g geschaelte Tomaten</li>
+<li>Frischer Rosmarin</li>
+<li>Natives Olivenoel extra nach Geschmack</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Chili (optional)</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Zubereitung</h2>
+<ol class="steps-list">
+<li>Die gehackte Zwiebel und den Knoblauch in Olivenoel 3 Minuten anschwitzen.</li>
+<li>Die geschaelten Tomaten hinzufuegen und bei mittlerer Hitze 15 Minuten kochen.</li>
+<li>Die abgetropften schwarzen Bohnen hinzufuegen und weitere 10 Minuten kochen.</li>
+<li>Waehrenddessen die Nudeln in reichlich Salzwasser kochen.</li>
+<li>Die Nudeln al dente abgiessen und in die Pfanne mit der Sauce geben.</li>
+<li>2 Minuten durchschwenken, dabei einen Schoepfloeffel Kochwasser hinzufuegen.</li>
+<li>Mit frischem Rosmarin und einem Schuss rohem Oel servieren.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Tipps</h2>
+<p>Schwarze Bohnen sind reich an Antioxidantien und Protein. Fuer einen intensiveren Geschmack die Sauce laenger koecheln lassen. Bei einer cremigeren Konsistenz die Haelfte der Bohnen vor dem Hinzufuegen der Nudeln puereeieren.</p>
+</div>
+</div>
+
+<div id="lang-el" class="lang-content">
+<div class="section">
+<h2>🍝 Κοντό Ζυμαρικό με Μαύρα Φασόλια</h2>
+<h3>Συστατικά:</h3>
+<div class="ingredients-list">
+<ul>
+<li>320g κοντό ζυμαρικό (ditalini, mezze maniche ή tubetti)</li>
+<li>250g βρασμένα μαύρα φασόλια</li>
+<li>1 κρεμμύδι</li>
+<li>2 σκελίδες σκόρδου</li>
+<li>300g ξεφλουδισμένες ντομάτες</li>
+<li>Φρέσκο δενδρολίβανο</li>
+<li>Έξτρα παρθένο ελαιόλαδο κατά βούληση</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>Τσίλι (προαιρετικά)</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Εκτέλεση</h2>
+<ol class="steps-list">
+<li>Σοτάρετε το ψιλοκομμένο κρεμμύδι και το σκόρδο σε ελαιόλαδο για 3 λεπτά.</li>
+<li>Προσθέστε τις ξεφλουδισμένες ντομάτες και μαγειρέψτε σε μέτρια φωτιά για 15 λεπτά.</li>
+<li>Προσθέστε τα στραγγισμένα μαύρα φασόλια και μαγειρέψτε για άλλα 10 λεπτά.</li>
+<li>Στο μεταξύ, βράστε το ζυμαρικό σε άφθονο αλατισμένο νερό.</li>
+<li>Στραγγίστε το ζυμαρικό al dente και ρίξτε το στο τηγάνι με τη σάλτσα.</li>
+<li>Σοτάρετε για 2 λεπτά, προσθέτοντας μια κουτάλα νερό μαγειρέματος.</li>
+<li>Σερβίρετε με φρέσκο δενδρολίβανο και μια σταλιά ωμού λαδιού.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Συμβουλές</h2>
+<p>Τα μαύρα φασόλια είναι πλούσια σε αντιοξειδωτικά και πρωτεΐνες. Για πιο έντονη γεύση, αφήστε τη σάλτσα να σιγοβράσει περισσότερο. Αν προτιμάτε πιο κρεμώδη υφή, πολτοποιήστε τα μισά φασόλια πριν προσθέσετε το ζυμαρικό.</p>
+</div>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette a base di legumi</p>
+<a href="../index.html" class="back-link">← Torna alla Home</a>
+</div>
+
+<script>
+function switchLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(c => c.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+    document.querySelector('.lang-tab[data-lang="' + lang + '"]').classList.add('active');
+    localStorage.setItem('preferredLang', lang);
+}
+</script>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

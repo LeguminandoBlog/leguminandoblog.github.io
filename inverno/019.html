@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trippa con Fagioli Cannellini | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Trippa con Fagioli Cannellini">
+<meta property="og:title" content="Trippa con Fagioli Cannellini | Leguminando">
+<meta property="og:description" content="Trippa con Fagioli Cannellini">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="inverno/019.html" data-title="Trippa con Fagioli Cannellini" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="019.jpg" alt="Trippa con Fagioli Cannellini" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-12-27</p>
+<p><strong>Meta:</strong> 4 porzioni | Carne</p>
+<p><strong>Descrizione:</strong> Piatto invernale tradizionale con trippa e fagioli cannellini, cotto lentamente con pomodoro e pecorino.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>500 g di trippa pulita</li>
+<li>150 g di fagioli cannellini secchi (ammollati per almeno 8 ore)</li>
+<li>1 piccola carota</li>
+<li>1/2 cipolla</li>
+<li>1 gambo di sedano</li>
+<li>1 foglia di alloro</li>
+<li>1 cucchiaio colmo di concentrato di pomodoro</li>
+<li>Circa 500 ml di brodo vegetale</li>
+<li>Olio extravergine d'oliva</li>
+<li>Sale e pepe nero</li>
+<li>Pecorino grattugiato q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparazione dei fagioli:</strong> Dopo aver ammollato i fagioli, scolali e sciacquali bene. Cuocili in acqua con una foglia di alloro fino a quando saranno teneri. Scolali e mettili da parte.</p>
+<p>2. <strong>Cottura della trippa:</strong> In una pentola capiente, scalda un filo di olio. Aggiungi la cipolla, la carota e il sedano tritati finemente e fai soffriggere fino a quando le verdure sono morbide.</p>
+<p>3. <strong>Unione degli ingredienti:</strong> Aggiungi la trippa tagliata a strisce e mescola bene. Unisci il concentrato di pomodoro e mescola per insaporire. Versa il brodo vegetale e porta a ebollizione.</p>
+<p>4. <strong>Cottura lenta:</strong> Aggiungi i fagioli cotti e mescola. Copri e lascia cuocere a fuoco lento per circa 1-1,5 ore, o fino a quando la trippa è tenera e il sugo si è addensato. Se necessario, aggiungi altro brodo durante la cottura. Servi con pecorino grattugiato.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-12-27</p>
+<p><strong>Meta:</strong> 4 servings | Meat</p>
+<p><strong>Description:</strong> Traditional winter dish with tripe and cannellini beans, slowly cooked with tomato and pecorino cheese.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>500 g cleaned tripe</li>
+<li>150 g dried cannellini beans (soaked at least 8 hours)</li>
+<li>1 small carrot</li>
+<li>1/2 onion</li>
+<li>1 celery stalk</li>
+<li>1 bay leaf</li>
+<li>1 heaped tablespoon tomato paste</li>
+<li>About 500 ml vegetable broth</li>
+<li>Extra virgin olive oil</li>
+<li>Salt and black pepper</li>
+<li>Grated pecorino to taste</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Prepare beans:</strong> After soaking, drain and rinse beans well. Cook in water with a bay leaf until tender. Drain and set aside.</p>
+<p>2. <strong>Cook tripe:</strong> In a large pot, heat a drizzle of oil. Add finely chopped onion, carrot and celery, and sauté until vegetables are soft.</p>
+<p>3. <strong>Combine ingredients:</strong> Add tripe cut into strips and mix well. Add tomato paste and stir to flavour. Pour in vegetable broth and bring to a boil.</p>
+<p>4. <strong>Slow cook:</strong> Add cooked beans and mix. Cover and simmer for about 1-1.5 hours, until tripe is tender and sauce has thickened. Add more broth if needed during cooking. Serve with grated pecorino.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-12-27</p>
+<p><strong>Meta:</strong> 4 porciones | Carne</p>
+<p><strong>Descripción:</strong> Plato tradicional de invierno con callos y judías cannellini, cocinado lentamente con tomate y queso pecorino.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>500 g de callos limpios</li>
+<li>150 g de judías cannellini secas (en remojo al menos 8 horas)</li>
+<li>1 zanahoria pequeña</li>
+<li>1/2 cebolla</li>
+<li>1 tallo de apio</li>
+<li>1 hoja de laurel</li>
+<li>1 cucharada colmada de concentrado de tomate</li>
+<li>Unos 500 ml de caldo de verduras</li>
+<li>Aceite de oliva virgen extra</li>
+<li>Sal y pimienta negra</li>
+<li>Pecorino rallado c.s.</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparar judías:</strong> Después del remojo, escurre y enjuaga bien las judías. Cuécelas en agua con una hoja de laurel hasta que estén tiernas. Escúrrelas y resérvalas.</p>
+<p>2. <strong>Cocinar callos:</strong> En una olla grande, calienta un chorrito de aceite. Añade la cebolla, zanahoria y apio picados finamente, y sofríe hasta que las verduras estén tiernas.</p>
+<p>3. <strong>Unir ingredientes:</strong> Agrega los callos cortados en tiras y mezcla bien. Incorpora el concentrado de tomate y remueve para sazonar. Vierte el caldo y lleva a ebullición.</p>
+<p>4. <strong>Cocción lenta:</strong> Añade las judías cocidas y mezcla. Tapa y cuece a fuego lento unas 1-1,5 horas, hasta que los callos estén tiernos y la salsa haya espesado. Agrega más caldo si es necesario. Sirve con pecorino rallado.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-12-27</p>
+<p><strong>Meta:</strong> 4 porções | Carne</p>
+<p><strong>Descrição:</strong> Prato tradicional de inverno com tripas e feijão cannellini, cozido lentamente com tomate e queijo pecorino.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>500 g de tripas limpas</li>
+<li>150 g de feijão cannellini seco (de molho pelo menos 8 horas)</li>
+<li>1 cenoura pequena</li>
+<li>1/2 cebola</li>
+<li>1 talo de aipo</li>
+<li>1 folha de louro</li>
+<li>1 colher de sopa cheia de concentrado de tomate</li>
+<li>Cerca de 500 ml de caldo de legumes</li>
+<li>Azeite extra virgem</li>
+<li>Sal e pimenta preta</li>
+<li>Pecorino ralado q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparar feijão:</strong> Depois do molho, escorre e enxágua bem o feijão. Cozinha em água com uma folha de louro até ficar macio. Escorre e reserva.</p>
+<p>2. <strong>Cozinhar tripas:</strong> Numa panela grande, aquece um fio de azeite. Adiciona a cebola, cenoura e aipo picados finamente, e refoga até as legumes ficarem macias.</p>
+<p>3. <strong>Juntar ingredientes:</strong> Adiciona as tripas cortadas em tiras e mistura bem. Junta o concentrado de tomate e mexe para temperar. Deita o caldo e leva a lume brando.</p>
+<p>4. <strong>Cozedura lenta:</strong> Adiciona o feijão cozido e mexe. Tapar e cozinhar em lume brando cerca de 1-1,5 horas, até as tripas ficarem macias e o molho engrossar. Adiciona mais caldo se necessário. Serve com pecorino ralado.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-12-27</p>
+<p><strong>Meta:</strong> 4 Portionen | Fleisch</p>
+<p><strong>Beschreibung:</strong> Traditionelles Wintergericht mit Kutteln und Cannellini-Bohnen, langsam gekocht mit Tomate und Pecorino-Käse.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>500 g gereinigte Kutteln</li>
+<li>150 g getrocknete Cannellini-Bohnen (mindestens 8 Stunden eingeweicht)</li>
+<li>1 kleine Karotte</li>
+<li>1/2 Zwiebel</li>
+<li>1 Selleriestange</li>
+<li>1 Lorbeerblatt</li>
+<li>1 gehäufter Esslöffel Tomatenmark</li>
+<li>Etwa 500 ml Gemüsebrühe</li>
+<li>Natives Olivenöl extra</li>
+<li>Salz und schwarzer Pfeffer</li>
+<li>Geriebener Pecorino nach Geschmack</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Bohnen vorbereiten:</strong> Nach dem Einweichen Bohnen abtropfen und gut abspülen. In Wasser mit einem Lorbeerblatt weich kochen. Abtropfen und beiseitestellen.</p>
+<p>2. <strong>Kutteln garen:</strong> In einem großen Topf einen Schuss Öl erhitzen. Fein gehackte Zwiebel, Karotte und Sellerie zugeben und anschwitzen, bis das Gemüse weich ist.</p>
+<p>3. <strong>Zutaten vermischen:</strong> In Streifen geschnittene Kutteln zugeben und gut umrühren. Tomatenmark zugeben und zur Geschmacksentwicklung umrühren. Gemüsebrühe eingießen und zum Kochen bringen.</p>
+<p>4. <strong>Langsam garen:</strong> Gekochte Bohnen zugeben und mischen. Zudecken und bei schwacher Hitze etwa 1-1,5 Stunden köcheln, bis die Kutteln zart und die Sauce eingedickt ist. Bei Bedarf mehr Brühe zugießen. Mit geriebenem Pecorino servieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-12-27</p>
+<p><strong>Meta:</strong> 4 μερίδες | Κρέας</p>
+<p><strong>Περιγραφή:</strong> Παραδοσιακό χειμερινό πιάτο με κοιλιά και φασόλια cannellini, μαγειρεμένο αργά με ντομάτα και τυρί pecorino.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>500 γρ καθαρισμένη κοιλιά</li>
+<li>150 γρ ξερά φασόλια cannellini (μουλιασμένα τουλάχιστον 8 ώρες)</li>
+<li>1 μικρό καρότο</li>
+<li>1/2 κρεμμύδι</li>
+<li>1 κοτσάνι σέλινου</li>
+<li>1 φύλλο δάφνης</li>
+<li>1 γεμάτη κουταλιά της σούπας πελτέ ντομάτας</li>
+<li>Περίπου 500 ml ζωμός λαχανικών</li>
+<li>Ελαιόλαδο</li>
+<li>Αλάτι και μαύρο πιπέρι</li>
+<li>Τριμμένο pecorino κατά βούληση</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία φασολιών:</strong> Μετά το μούλιασμα, στράγγισε και ξέπλυνε καλά τα φασόλια. Βράσε τα σε νερό με φύλλο δάφνης μέχρι να μαλακώσουν. Στράγγισε και κράτα στην άκρη.</p>
+<p>2. <strong>Μαγείρεμα κοιλιάς:</strong> Σε μια μεγάλη κατσαρόλα, ζέστανε λίγο λάδι. Πρόσθεσε ψιλοκομμένο κρεμμύδι, καρότο και σέλινο, και σοτάρε μέχρι να μαλακώσουν τα λαχανικά.</p>
+<p>3. <strong>Ένωση υλικών:</strong> Πρόσθεσε την κοιλιά κομμένη σε λωρίδες και ανακάτεψε καλά. Βάλε τον πελτέ ντομάτας και ανακάτεψε για να πάρει γεύση. Ρίξε τον ζωμό και φέρε σε βρασμό.</p>
+<p>4. <strong>Αργό μαγείρεμα:</strong> Πρόσθεσε τα μαγειρεμένα φασόλια και ανακάτεψε. Σκέπασε και σιγοβράσε περίπου 1-1,5 ώρες, μέχρι η κοιλιά να μαλακώσει και η σάλτσα να πήξει. Πρόσθεσε περισσότερο ζωμό αν χρειάζεται. Σέρβιρε με τριμμένο pecorino.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

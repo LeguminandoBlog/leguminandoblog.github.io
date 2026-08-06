@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Torta Salata con Crema di Verza, Fagioli e Porcini | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Torta Salata con Crema di Verza, Fagioli e Porcini">
+<meta property="og:title" content="Torta Salata con Crema di Verza, Fagioli e Porcini | Leguminando">
+<meta property="og:description" content="Torta Salata con Crema di Verza, Fagioli e Porcini">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="autunno/017.html" data-title="Torta Salata con Crema di Verza, Fagioli e Porcini" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="017.jpg" alt="Torta Salata con Crema di Verza, Fagioli e Porcini" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-10-24</p>
+<p><strong>Meta:</strong> 6 porzioni | Vegetariano</p>
+<p><strong>Descrizione:</strong> Torta salata autunnale con crema di verza, fagioli dall'occhio, parmigiano e porcini.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>1 rotolo di pasta brisée</li>
+<li>300 g di verza o cavolo</li>
+<li>100 ml di panna</li>
+<li>200 g di fagioli dall'occhio lessati (o ceci lessati)</li>
+<li>150 g di porcini affettati</li>
+<li>120 g di parmigiano (80 g + 40 g)</li>
+<li>1 spicchio d'aglio</li>
+<li>Olio extravergine d'oliva</li>
+<li>Sale e pepe q.b.</li>
+<li>Noce moscata q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Scalda un filo d'olio, saltare la verza con sale e pepe per 8 minuti; frullare con panna e noce moscata.</p>
+<p>2. Condire i fagioli con olio, sale e pepe.</p>
+<p>3. In padella con olio e aglio, cuocere i porcini 4-5 minuti, poi togliere l'aglio.</p>
+<p>4. Rivestire lo stampo con la brisée, bucherellare il fondo.</p>
+<p>5. Versare la crema di verza, distribuire i fagioli, spolverare 80 g di parmigiano e disporre i porcini.</p>
+<p>6. Cospargere gli ultimi 40 g di parmigiano e un filo d'olio.</p>
+<p>7. Cuocere in forno preriscaldato a 180°C per 30-35 minuti.</p>
+<p>8. Far intiepidire, sformare e servire a spicchi.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-10-24</p>
+<p><strong>Meta:</strong> 6 servings | Vegetarian</p>
+<p><strong>Description:</strong> Autumn savoury tart with savoy cabbage cream, eye beans, Parmesan and porcini mushrooms.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>1 roll of shortcrust pastry (brisée)</li>
+<li>300 g savoy cabbage or cabbage</li>
+<li>100 ml cream</li>
+<li>200 g boiled eye beans (or boiled chickpeas)</li>
+<li>150 g sliced porcini mushrooms</li>
+<li>120 g Parmesan (80 g + 40 g)</li>
+<li>1 garlic clove</li>
+<li>Extra virgin olive oil</li>
+<li>Salt and pepper to taste</li>
+<li>Nutmeg to taste</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. Heat a drizzle of oil, sauté savoy cabbage with salt and pepper for 8 minutes; blend with cream and nutmeg.</p>
+<p>2. Season beans with oil, salt and pepper.</p>
+<p>3. In a pan with oil and garlic, cook porcini for 4-5 minutes, then remove garlic.</p>
+<p>4. Line the tin with shortcrust pastry, prick the base.</p>
+<p>5. Pour savoy cabbage cream, distribute beans, sprinkle 80 g Parmesan and arrange porcini.</p>
+<p>6. Sprinkle remaining 40 g Parmesan and a drizzle of oil.</p>
+<p>7. Bake in preheated oven at 180°C for 30-35 minutes.</p>
+<p>8. Let cool slightly, unmould and serve in slices.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-10-24</p>
+<p><strong>Meta:</strong> 6 porciones | Vegetariano</p>
+<p><strong>Descripción:</strong> Tarta salada otoñal con crema de col rizada, judías, parmesano y setas porcini.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>1 rollo de masa brisa</li>
+<li>300 g de col rizada o repollo</li>
+<li>100 ml de nata</li>
+<li>200 g de judías de ojo cocidas (o garbanzos cocidos)</li>
+<li>150 g de setas porcini en láminas</li>
+<li>120 g de parmesano (80 g + 40 g)</li>
+<li>1 diente de ajo</li>
+<li>Aceite de oliva virgen extra</li>
+<li>Sal y pimienta c.s.</li>
+<li>Nuez moscada c.s.</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. Calienta un chorrito de aceite, saltea la col rizada con sal y pimienta 8 minutos; tritura con nata y nuez moscada.</p>
+<p>2. Sazona las judías con aceite, sal y pimienta.</p>
+<p>3. En sartén con aceite y ajo, cuece los porcini 4-5 minutos, luego retira el ajo.</p>
+<p>4. Forra el molde con la masa brisa, pincha el fondo.</p>
+<p>5. Vierte la crema de col, distribuye las judías, espolvorea 80 g de parmesano y dispón los porcini.</p>
+<p>6. Espolvorea los últimos 40 g de parmesano y un chorrito de aceite.</p>
+<p>7. Hornea en horno precalentado a 180°C 30-35 minutos.</p>
+<p>8. Deja entibiar, desmolda y sirve en porciones.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-10-24</p>
+<p><strong>Meta:</strong> 6 porções | Vegetariano</p>
+<p><strong>Descrição:</strong> Tarte salgada de outono com creme de couve-galega, feijões, parmesão e cogumelos porcini.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>1 rolo de massa brisa</li>
+<li>300 g de couve-galega ou couve</li>
+<li>100 ml de natas</li>
+<li>200 g de feijão de olho cozido (ou grão-de-bico cozido)</li>
+<li>150 g de cogumelos porcini fatiados</li>
+<li>120 g de parmesão (80 g + 40 g)</li>
+<li>1 dente de alho</li>
+<li>Azeite extra virgem</li>
+<li>Sal e pimenta q.b.</li>
+<li>Noz-moscada q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Aquece um fio de azeite, salta a couve-galega com sal e pimenta 8 minutos; reduz com natas e noz-moscada.</p>
+<p>2. Tempere os feijões com azeite, sal e pimenta.</p>
+<p>3. Na frigideira com azeite e alho, cozinha os porcini 4-5 minutos, depois retira o alho.</p>
+<p>4. Forra a forma com a massa brisa, fura o fundo.</p>
+<p>5. Deita o creme de couve, distribui os feijões, polvilha 80 g de parmesão e dispõe os porcini.</p>
+<p>6. Polvilha os últimos 40 g de parmesão e um fio de azeite.</p>
+<p>7. Cozinha no forno pré-aquecido a 180°C 30-35 minutos.</p>
+<p>8. Deixa arrefecer ligeiramente, desenforma e serve em fatias.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-10-24</p>
+<p><strong>Meta:</strong> 6 Portionen | Vegetarisch</p>
+<p><strong>Beschreibung:</strong> Herzhafte Herbstart mit Wirsingcreme, Augenbohnen, Parmesan und Steinpilzen.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>1 Rolle Mürbteig (Brisée)</li>
+<li>300 g Wirsing oder Kohl</li>
+<li>100 ml Sahne</li>
+<li>200 g gekochte Augenbohnen (oder gekochte Kichererbsen)</li>
+<li>150 g geschnittene Steinpilze</li>
+<li>120 g Parmesan (80 g + 40 g)</li>
+<li>1 Knoblauchzehe</li>
+<li>Natives Olivenöl extra</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Muskat nach Geschmack</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. Einen Schuss Öl erhitzen, Wirsing mit Salz und Pfeffer 8 Minuten anbraten; mit Sahne und Muskat pürieren.</p>
+<p>2. Bohnen mit Öl, Salz und Pfeffer würzen.</p>
+<p>3. Steinpilze in Pfanne mit Öl und Knoblauch 4-5 Minuten braten, dann Knoblauch entfernen.</p>
+<p>4. Form mit Mürbteig auslegen, Boden mehrmals einstechen.</p>
+<p>5. Wirsingcreme einfüllen, Bohnen verteilen, 80 g Parmesan bestreuen und Steinpilze darauf legen.</p>
+<p>6. Restliche 40 g Parmesan und einen Schuss Öl darüber streuen.</p>
+<p>7. Im vorgeheizten Ofen bei 180°C 30-35 Minuten backen.</p>
+<p>8. Etwas abkühlen lassen, aus der Form nehmen und in Stücke servieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-10-24</p>
+<p><strong>Meta:</strong> 6 μερίδες | Χορτοφαγικό</p>
+<p><strong>Περιγραφή:</strong> Φθινοπωρινή αλμυρή πίτα με κρέμα λάχανου, φασόλια, παρμεζάνα και μανιτάρια porcini.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>1 ρολό ζύμης μπριζέ</li>
+<li>300 γρ λάχανο savoy ή λάχανο</li>
+<li>100 ml κρέμα γάλακτος</li>
+<li>200 γρ βρασμένα φασόλια ματιών (ή βρασμένα ρεβίθια)</li>
+<li>150 γρ κομμένα μανιτάρια porcini</li>
+<li>120 γρ παρμεζάνα (80 γρ + 40 γρ)</li>
+<li>1 σκελίδα σκόρδο</li>
+<li>Ελαιόλαδο</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>Μοσχοκάρυδο κατά βούληση</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. Ζεστάνετε λίγο λάδι, σοτάρετε το λάχανο με αλάτι και πιπέρι για 8 λεπτά· λιώστε με κρέμα και μοσχοκάρυδο.</p>
+<p>2. Αλατοπιπερώστε τα φασόλια με λάδι, αλάτι και πιπέρι.</p>
+<p>3. Σε τηγάνι με λάδι και σκόρδο, μαγειρέψτε τα μανιτάρια porcini για 4-5 λεπτά, μετά αφαιρέστε το σκόρδο.</p>
+<p>4. Καλύψτε τη φόρμα με τη ζύμη μπριζέ, τρυπήστε τον πάτο.</p>
+<p>5. Ρίξτε την κρέμα λάχανου, κατανείμετε τα φασόλια, πασπαλίστε 80 γρ παρμεζάνα και τοποθετήστε τα μανιτάρια.</p>
+<p>6. Πασπαλίστε τα υπόλοιπα 40 γρ παρμεζάνα και λίγο λάδι.</p>
+<p>7. Ψήστε σε προθερμασμένο φούρνο στους 180°C για 30-35 λεπτά.</p>
+<p>8. Αφήστε να κρυώσει ελαφρά, βγάλτε από τη φόρμα και σερβίρετε σε κομμάτια.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

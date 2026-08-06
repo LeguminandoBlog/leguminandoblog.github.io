@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Filetti di Merluzzo con Ceci | Leguminando</title>
+<meta name="description" content="Filetti di Merluzzo con Ceci">
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%); color: #333; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 30px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.header h1 { margin: 0; font-size: 2.2em; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+.header p { margin: 10px 0 0 0; font-size: 1.1em; opacity: 0.9; }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border: 2px solid #D2691E; background: white; color: #8B4513; border-radius: 20px; cursor: pointer; font-size: 0.85em; transition: all 0.3s; }
+.lang-tab:hover { background: #faf8f5; }
+.lang-tab.active { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; }
+.lang-content { display: none; }
+.lang-content.active { display: block; }
+.content { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.recipe-image { width: 100%; max-width: 700px; height: 400px; object-fit: cover; border-radius: 12px; margin: 0 auto 30px auto; display: block; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.section { margin-bottom: 30px; }
+.section h2 { color: #8B4513; border-bottom: 3px solid #D2691E; padding-bottom: 10px; margin-bottom: 20px; font-size: 1.5em; }
+.section h3 { color: #D2691E; margin: 20px 0 10px 0; font-size: 1.2em; }
+.ingredients-list { background: #faf8f5; padding: 20px; border-radius: 10px; border-left: 5px solid #D2691E; }
+.ingredients-list ul { list-style: none; padding: 0; }
+.ingredients-list li { padding: 8px 0; border-bottom: 1px dashed #e0d5c8; }
+.ingredients-list li:last-child { border-bottom: none; }
+.ingredients-list li:before { content: "🫘 "; margin-right: 8px; }
+.steps-list { counter-reset: step; }
+.steps-list li { counter-increment: step; padding: 15px 0 15px 50px; position: relative; border-bottom: 1px solid #eee; }
+.steps-list li:last-child { border-bottom: none; }
+.steps-list li::before { content: counter(step); position: absolute; left: 0; top: 10px; background: #8B4513; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em; }
+.footer { text-align: center; margin-top: 40px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 20px 0; padding: 12px 24px; background: linear-gradient(135deg, #8B4513, #D2691E); color: white; text-decoration: none; border-radius: 25px; font-size: 1em; transition: transform 0.2s; }
+.back-link:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+@media print {
+    .lang-tabs { display: none !important; }
+    .lang-content { display: block !important; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>🫘 Leguminando</h1>
+<p>Ricette a base di legumi</p>
+</div>
+
+<div class="content">
+<div style="text-align: center; margin: -20px 0 20px 0;">
+<span style="display: inline-block; padding: 8px 16px; background: linear-gradient(135deg, #D2691E, #8B4513); color: white; border-radius: 20px; font-size: 0.9em;">📅 Stagione: Autunno 🍂</span>
+</div>
+<img src="filetti_merluzzo_ceci.jpg" alt="Filetti di Merluzzo con Ceci" class="recipe-image">
+
+<div class="fav-bar" style="text-align:center;margin:5px 0;">
+<span class="fav-btn" data-path="extra/filetti_merluzzo_ceci.html" onclick="event.stopPropagation();toggleFav('extra/filetti_merluzzo_ceci.html', 'Filetti di Merluzzo con Ceci')">🤍</span> Aggiungi ai preferiti
+</div>
+
+<div class="lang-tabs">
+<span class="lang-tab active" data-lang="it" onclick="switchLang('it')">🇮🇹 IT</span>
+<span class="lang-tab" data-lang="en" onclick="switchLang('en')">🇬🇧 EN</span>
+<span class="lang-tab" data-lang="es" onclick="switchLang('es')">🇪🇸 ES</span>
+<span class="lang-tab" data-lang="pt" onclick="switchLang('pt')">🇵🇹 PT</span>
+<span class="lang-tab" data-lang="de" onclick="switchLang('de')">🇩🇪 DE</span>
+<span class="lang-tab" data-lang="el" onclick="switchLang('el')">🇬🇷 EL</span>
+</div>
+
+<div id="lang-it" class="lang-content active">
+<div class="section">
+<h2>🐟 Filetti di Merluzzo con Ceci</h2>
+<h3>Ingredienti:</h3>
+<div class="ingredients-list">
+<ul>
+<li>600g di filetti di merluzzo</li>
+<li>200g di ceci già lessati</li>
+<li>1 cipolla</li>
+<li>1 pomodoro maturo</li>
+<li>Olio extravergine d'oliva q.b.</li>
+<li>Sale e pepe q.b.</li>
+<li>Prezzemolo fresco</li>
+<li>Succo di limone</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparazione</h2>
+<ol class="steps-list">
+<li>Scalda l'olio in padella e soffriggi la cipolla tritata per 2 minuti.</li>
+<li>Aggiungi il pomodoro tagliato a cubetti e cuoci per 5 minuti.</li>
+<li>Unisci i ceci e cuoci per altri 5 minuti, schiacciandoli leggermente.</li>
+<li>Disponi i filetti di merluzzo sulla base di ceci.</li>
+<li>Copri e cuoci a fuoco medio per 15 minuti.</li>
+<li>Aggiungi sale, pepe e un goccio di limone.</li>
+<li>Servi con prezzemolo fresco tritato.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Consigli</h2>
+<p>Questo piatto unisce il sapore delicato del merluzzo alla cremosità dei ceci. I ceci apportano fibre e proteine, rendendo il piatto completo e nutriente. Perfetto per una cena leggera ma sostanziosa.</p>
+</div>
+</div>
+
+<div id="lang-en" class="lang-content">
+<div class="section">
+<h2>🐟 Cod Fillets with Chickpeas</h2>
+<h3>Ingredients:</h3>
+<div class="ingredients-list">
+<ul>
+<li>600g cod fillets</li>
+<li>200g boiled chickpeas</li>
+<li>1 onion</li>
+<li>1 ripe tomato</li>
+<li>Extra virgin olive oil to taste</li>
+<li>Salt and pepper to taste</li>
+<li>Fresh parsley</li>
+<li>Lemon juice</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparation</h2>
+<ol class="steps-list">
+<li>Heat the oil in a pan and sauté the chopped onion for 2 minutes.</li>
+<li>Add the diced tomato and cook for 5 minutes.</li>
+<li>Add the chickpeas and cook for another 5 minutes, slightly mashing them.</li>
+<li>Place the cod fillets on the chickpea base.</li>
+<li>Cover and cook over medium heat for 15 minutes.</li>
+<li>Add salt, pepper and a splash of lemon.</li>
+<li>Serve with fresh chopped parsley.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Tips</h2>
+<p>This dish combines the delicate flavor of cod with the creaminess of chickpeas. Chickpeas add fiber and protein, making the dish complete and nutritious. Perfect for a light but substantial dinner.</p>
+</div>
+</div>
+
+<div id="lang-es" class="lang-content">
+<div class="section">
+<h2>🐟 Filetes de Merluza con Garbanzos</h2>
+<h3>Ingredientes:</h3>
+<div class="ingredients-list">
+<ul>
+<li>600g de filetes de merluza</li>
+<li>200g de garbanzos ya cocidos</li>
+<li>1 cebolla</li>
+<li>1 tomate maduro</li>
+<li>Aceite de oliva virgen extra al gusto</li>
+<li>Sal y pimienta al gusto</li>
+<li>Perejil fresco</li>
+<li>Zumo de limon</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparacion</h2>
+<ol class="steps-list">
+<li>Calienta el aceite en una sarten y sofrie la cebolla picada durante 2 minutos.</li>
+<li>Anade el tomate cortado en cubitos y cocine durante 5 minutos.</li>
+<li>Una los garbanzos y cocine otros 5 minutos, aplastandolos ligeramente.</li>
+<li>Coloca los filetes de merluza sobre la base de garbanzos.</li>
+<li>Cubra y cocine a fuego medio durante 15 minutos.</li>
+<li>Anada sal, pimienta y un chorrito de limon.</li>
+<li>Sirva con perejil fresco picado.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Consejos</h2>
+<p>Este plato une el sabor delicado de la merluza con la cremosidad de los garbanzos. Los garbanzos aportan fibra y proteinas, haciendo el plato completo y nutritivo. Perfecto para una cena ligera pero sustanciosa.</p>
+</div>
+</div>
+
+<div id="lang-pt" class="lang-content">
+<div class="section">
+<h2>🐟 Filetes de Pescada com Grao-de-Bico</h2>
+<h3>Ingredientes:</h3>
+<div class="ingredients-list">
+<ul>
+<li>600g de filetes de pescada</li>
+<li>200g de grao-de-bico ja cozido</li>
+<li>1 cebola</li>
+<li>1 tomate maduro</li>
+<li>Azeite extra virgem a gosto</li>
+<li>Sal e pimenta a gosto</li>
+<li>Salsa fresca</li>
+<li>Sumo de limao</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparacao</h2>
+<ol class="steps-list">
+<li>Aqueca o azeite numa frigideira e aloure a cebola picada durante 2 minutos.</li>
+<li>Junte o tomate cortado em cubinhos e cozinhe durante 5 minutos.</li>
+<li>Junte o grao-de-bico e cozinhe mais 5 minutos, esmagando ligeiramente.</li>
+<li>Disponha os filetes de pescada sobre a base de grao-de-bico.</li>
+<li>Tape e cozinhe em lume medio durante 15 minutos.</li>
+<li>Adicione sal, pimenta e um fio de limao.</li>
+<li>Sirva com salsa fresca picada.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Dicas</h2>
+<p>Este prato une o sabor delicado da pescada com a cremosidade do grao-de-bico. O grao-de-bico acrescenta fibras e proteinas, tornando o prato completo e nutritivo. Perfeito para um jantar leve mas sustancioso.</p>
+</div>
+</div>
+
+<div id="lang-de" class="lang-content">
+<div class="section">
+<h2>🐟 Schellfischfilets mit Kichererbsen</h2>
+<h3>Zutaten:</h3>
+<div class="ingredients-list">
+<ul>
+<li>600g Schellfischfilets</li>
+<li>200g gekochte Kichererbsen</li>
+<li>1 Zwiebel</li>
+<li>1 reife Tomate</li>
+<li>Natives Olivenoel extra nach Geschmack</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Frische Petersilie</li>
+<li>Zitronensaft</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Zubereitung</h2>
+<ol class="steps-list">
+<li>Erhitzen Sie das Oel in einer Pfanne und dünsten Sie die gehackte Zwiebel 2 Minuten an.</li>
+<li>Fügen Sie die gewuerfelte Tomate hinzu und kochen Sie 5 Minuten.</li>
+<li>Fügen Sie die Kichererbsen hinzu und kochen Sie weitere 5 Minuten, dabei leicht zerdrücken.</li>
+<li>Legen Sie die Schellfischfilets auf die Kichererbsenbasis.</li>
+<li>Decken Sie ab und kochen Sie bei mittlerer Hitze 15 Minuten.</li>
+<li>Fügen Sie Salz, Pfeffer und einen Spritzer Zitrone hinzu.</li>
+<li>Mit frisch gehackter Petersilie servieren.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Tipps</h2>
+<p>Dieses Gericht vereint den delikaten Geschmack des Schellfischs mit der Cremigkeit der Kichererbsen. Kichererbsen liefern Ballaststoffe und Proteine und machen das Gericht vollwertig und nahrhaft. Perfekt für ein leichtes, aber sättigendes Abendessen.</p>
+</div>
+</div>
+
+<div id="lang-el" class="lang-content">
+<div class="section">
+<h2>🐟 Φιλέτα Μπακαλιάρου με Ρεβίθια</h2>
+<h3>Συστατικά:</h3>
+<div class="ingredients-list">
+<ul>
+<li>600g φιλέτα μπακαλιάρου</li>
+<li>200g βρασμένα ρεβίθια</li>
+<li>1 κρεμμύδι</li>
+<li>1 ώριμη ντομάτα</li>
+<li>Έξτρα παρθένο ελαιόλαδο κατά βούληση</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>Φρέσκο μαϊντανό</li>
+<li>Χυμός λεμονιού</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Εκτέλεση</h2>
+<ol class="steps-list">
+<li>Ζεστάνετε το λάδι σε ένα τηγάνι και σοτάρετε το ψιλοκομμένο κρεμμύδι για 2 λεπτά.</li>
+<li>Προσθέστε την ντομάτα κομμένη σε κύβους και μαγειρέψτε για 5 λεπτά.</li>
+<li>Προσθέστε τα ρεβίθια και μαγειρέψτε για άλλα 5 λεπτά, λιώνοντάς τα ελαφρά.</li>
+<li>Τοποθετήστε τα φιλέτα μπακαλιάρου πάνω στη βάση από ρεβίθια.</li>
+<li>Σκεπάστε και μαγειρέψτε σε μέτρια φωτιά για 15 λεπτά.</li>
+<li>Προσθέστε αλάτι, πιπέρι και μια σταλιά λεμονιού.</li>
+<li>Σερβίρετε με φρέσκο ψιλοκομμένο μαϊντανό.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Συμβουλές</h2>
+<p>Αυτό το πιάτο ενώνει τη λεπτή γεύση του μπακαλιάρου με την κρεμώδη υφή των ρεβιθιών. Τα ρεβίθια προσθέτουν φυτικές ίνες και πρωτεΐνες, καθιστώντας το πιάτο πλήρες και θρεπτικό. Ιδανικό για ένα ελαφρύ αλλά χορταστικό δείπνο.</p>
+</div>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette a base di legumi</p>
+<a href="../index.html" class="back-link">← Torna alla Home</a>
+</div>
+
+<script>
+function switchLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(c => c.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+    document.querySelector('.lang-tab[data-lang="' + lang + '"]').classList.add('active');
+    localStorage.setItem('preferredLang', lang);
+}
+</script>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

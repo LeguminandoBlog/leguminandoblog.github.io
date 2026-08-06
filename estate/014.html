@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tartare di Fagioli con Sgombro Affumicato e Avocado | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Tartare di Fagioli con Sgombro Affumicato e Avocado">
+<meta property="og:title" content="Tartare di Fagioli con Sgombro Affumicato e Avocado | Leguminando">
+<meta property="og:description" content="Tartare di Fagioli con Sgombro Affumicato e Avocado">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="estate/014.html" data-title="Tartare di Fagioli con Sgombro Affumicato e Avocado" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="014.jpg" alt="Tartare di Fagioli con Sgombro e Avocado" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2026-06-15</p>
+<p><strong>Meta:</strong> 4 porzioni | Pesce</p>
+<p><strong>Descrizione:</strong> Tartare fresca di fagioli cannellini con sgombro affumicato, avocado ed erba cipollina.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>400 g di fagioli cannellini precotti, scolati</li>
+<li>2 cipollotti freschi (circa 30 g)</li>
+<li>3 cucchiai di olio extravergine d'oliva</li>
+<li>2 cucchiai di succo di limone</li>
+<li>1 cucchiaino di sale marino</li>
+<li>1/2 cucchiaino di pepe nero macinato</li>
+<li>150 g di sgombro affumicato a fette</li>
+<li>1 avocado maturo (circa 200 g di polpa)</li>
+<li>Erba cipollina fresca q.b.</li>
+<li>Scorza di limone grattugiata q.b.</li>
+<li>Filo di olio extravergine d'oliva a crudo</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Base di fagioli:</strong> Scolare e risciacquare i fagioli, poi schiacciarli grossolanamente. Affettare il cipollotto e unirlo ai fagioli. Condire con olio, succo di limone, sale e pepe, mescolare e lasciare insaporire.</p>
+<p>2. <strong>Guarnizione:</strong> Tagliare lo sgombro a listarelle. Tagliare l'avocado a cubetti e cospargere con succo di limone per evitare l'ossidazione.</p>
+<p>3. <strong>Assemblaggio elegante:</strong> Usare un anello da dessert per stratificare fagioli, avocado e sgombro. Rimuovere l'anello delicatamente.</p>
+<p>4. <strong>Assemblaggio rustico:</strong> Disporre i fagioli in una ciotola e guarnire con avocado e sgombro decorativamente.</p>
+<p>5. <strong>Finitura:</strong> Completare con erba cipollina fresca, scorza di limone grattugiata e un filo d'olio a crudo.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2026-06-15</p>
+<p><strong>Meta:</strong> 4 servings | Fish</p>
+<p><strong>Description:</strong> Fresh cannellini bean tartare with smoked mackerel, avocado and chives.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>400 g precooked cannellini beans, drained</li>
+<li>2 fresh spring onions (about 30 g)</li>
+<li>3 tablespoons extra virgin olive oil</li>
+<li>2 tablespoons lemon juice</li>
+<li>1 teaspoon sea salt</li>
+<li>1/2 teaspoon ground black pepper</li>
+<li>150 g sliced smoked mackerel</li>
+<li>1 ripe avocado (about 200 g flesh)</li>
+<li>Fresh chives to taste</li>
+<li>Grated lemon zest to taste</li>
+<li>Drizzle of raw extra virgin olive oil</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Bean base:</strong> Drain and rinse beans, then roughly mash. Slice spring onions and add to beans. Season with oil, lemon juice, salt and pepper, mix and let marinate.</p>
+<p>2. <strong>Garnish:</strong> Cut mackerel into strips. Dice avocado and sprinkle with lemon juice to prevent oxidation.</p>
+<p>3. <strong>Elegant assembly:</strong> Use a dessert ring to layer beans, avocado and mackerel. Remove the ring carefully.</p>
+<p>4. <strong>Rustic assembly:</strong> Arrange beans in a bowl and garnish decoratively with avocado and mackerel.</p>
+<p>5. <strong>Finishing:</strong> Top with fresh chives, grated lemon zest and a drizzle of raw olive oil.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2026-06-15</p>
+<p><strong>Meta:</strong> 4 porciones | Pescado</p>
+<p><strong>Descripción:</strong> Tartar fresco de alubias cannellini con caballa ahumada, aguacate y cebollino.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>400 g de alubias cannellini precocidas, escurridas</li>
+<li>2 cebolletas frescas (unos 30 g)</li>
+<li>3 cucharadas de aceite de oliva virgen extra</li>
+<li>2 cucharadas de zumo de limón</li>
+<li>1 cucharadita de sal marina</li>
+<li>1/2 cucharadita de pimienta negra molida</li>
+<li>150 g de caballa ahumada en lonchas</li>
+<li>1 aguacate maduro (unos 200 g de pulpa)</li>
+<li>Cebollino fresco c.s.</li>
+<li>Ralladura de limón c.s.</li>
+<li>Chorro de aceite de oliva virgen extra crudo</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Base de alubias:</strong> Escurre y enjuaga las alubias, luego aplástalas groseramente. Pica las cebolletas y añádelas. Aliña con aceite, zumo de limón, sal y pimienta, mezcla y deja que tomen sabor.</p>
+<p>2. <strong>Guarnición:</strong> Corta la caballa en tiras. Pica el aguacate en cubos y rocía con zumo de limón para evitar la oxidación.</p>
+<p>3. <strong>Montaje elegante:</strong> Usa un aro de emplatar para estratificar alubias, aguacate y caballa. Retira el aro con cuidado.</p>
+<p>4. <strong>Montaje rústico:</strong> Dispon las alubias en un bol y decora con aguacate y caballa.</p>
+<p>5. <strong>Finition:</strong> Termina con cebollino fresco, ralladura de limón y un chorrito de aceite crudo.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2026-06-15</p>
+<p><strong>Meta:</strong> 4 porções | Peixe</p>
+<p><strong>Descrição:</strong> Tartar fresco de feijão cannellini com cavala defumada, abacate e cebolinho.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>400 g de feijão cannellini pré-cozido, escorrido</li>
+<li>2 cebolinhas frescas (cerca de 30 g)</li>
+<li>3 colheres de sopa de azeite extra virgem</li>
+<li>2 colheres de sopa de sumo de limão</li>
+<li>1 colher de chá de sal marinho</li>
+<li>1/2 colher de chá de pimenta preta moída</li>
+<li>150 g de cavala defumada em fatias</li>
+<li>1 abacate maduro (cerca de 200 g de polpa)</li>
+<li>Cebolinho fresco q.b.</li>
+<li>Raspa de limão q.b.</li>
+<li>Fio de azeite extra virgem cru</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Base de feijão:</strong> Escorra e enxágue o feijão, depois esmague grosseiramente. Pique as cebolinhas e junte. Tempere com azeite, sumo de limão, sal e pimenta, misture e deixe apurar.</p>
+<p>2. <strong>Guarnição:</strong> Corte a cavala em tiras. Corte o abacate em cubos e regue com sumo de limão para evitar a oxidação.</p>
+<p>3. <strong>Montagem elegante:</strong> Use um aro de sobremesa para estratificar feijão, abacate e cavala. Retire o aro com cuidado.</p>
+<p>4. <strong>Montagem rústica:</strong> Disponha o feijão numa tigela e guarneça com abacate e cavala decorativamente.</p>
+<p>5. <strong>Finalização:</strong> Complete com cebolinho fresco, raspa de limão e um fio de azeite cru.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2026-06-15</p>
+<p><strong>Meta:</strong> 4 Portionen | Fisch</p>
+<p><strong>Beschreibung:</strong> Frischer Cannellini-Bohnen-Tartar mit geräucherter Makrele, Avocado und Schnittlauch.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>400 g vorgekochte Cannellini-Bohnen, abgetropft</li>
+<li>2 frische Frühlingszwiebeln (ca. 30 g)</li>
+<li>3 Esslöffel extra natives Olivenöl</li>
+<li>2 Esslöffel Zitronensaft</li>
+<li>1 Teelöffel Meersalz</li>
+<li>1/2 Teelöffel gemahlener schwarzer Pfeffer</li>
+<li>150 g geräucherte Makrele in Scheiben</li>
+<li>1 reife Avocado (ca. 200 g Fruchtfleisch)</li>
+<li>Frischer Schnittlauch nach Geschmack</li>
+<li>Geraspelte Zitronenschale nach Geschmack</li>
+<li>Spritzer rohes extra natives Olivenöl</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Bohnenbasis:</strong> Bohnen abgießen und spülen, dann grob zerdrücken. Frühlingszwiebeln schneiden und zugeben. Mit Öl, Zitronensaft, Salz und Pfeffer würzen, mischen und durchziehen lassen.</p>
+<p>2. <strong>Garnitur:</strong> Makrele in Streifen schneiden. Avocado würfeln und mit Zitronensaft beträufeln, um Bräunung zu verhindern.</p>
+<p>3. <strong>Elegantes Anrichten:</strong> Einen Dessert-Tortenring verwenden, um Bohnen, Avocado und Makrele zu schichten. Ring vorsichtig entfernen.</p>
+<p>4. <strong>Rustikales Anrichten:</strong> Bohnen in eine Schüssel geben und dekorativ mit Avocado und Makrele garnieren.</p>
+<p>5. <strong>Fertigstellen:</strong> Mit frischem Schnittlauch, geraspelter Zitronenschale und einem Spritzer rohem Olivenöl garnieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2026-06-15</p>
+<p><strong>Meta:</strong> 4 μερίδες | Ψάρι</p>
+<p><strong>Περιγραφή:</strong> Φρέσκο tartar φασολιών cannellini με καπνιστό σκουμπρί, αβοκάντο και σχοινόπρασο.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>400 γρ προμαγειρεμένα φασόλια cannellini, στραγγισμένα</li>
+<li>2 φρέσκα κρεμμυδάκια (περίπου 30 γρ)</li>
+<li>3 κουταλιές της σούπας ελαιόλαδο</li>
+<li>2 κουταλιές της σούπας χυμός λεμονιού</li>
+<li>1 κουταλάκι του γλυκού θαλασσινό αλάτι</li>
+<li>1/2 κουταλάκι του γλυκού τριμμένο μαύρο πιπέρι</li>
+<li>150 γρ καπνιστό σκουμπρί σε φέτες</li>
+<li>1 ώριμο αβοκάντο (περίπου 200 γρ σάρκα)</li>
+<li>Φρέσκο σχοινόπρασο κατά βούληση</li>
+<li>Τριμμένη φλούδα λεμονιού κατά βούληση</li>
+<li>Νήμα ωμού ελαιολάδου</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Βάση φασολιών:</strong> Στραγγίστε και ξεπλύνετε τα φασόλια, μετά πολτοποιήστε τα χοντρά. Κόψτε τα κρεμμυδάκια και προσθέστε τα. Αλατοπιπερώστε με λάδι, χυμό λεμονιού, αλάτι και πιπέρι, ανακατέψτε και αφήστε να πάρουν γεύση.</p>
+<p>2. <strong>Γαρνίρισμα:</strong> Κόψτε το σκουμπρί σε λωρίδες. Κόψτε το αβοκάντο σε κυβάκια και πασπαλίστε με χυμό λεμονιού για να αποφύγετε το μαύρισμα.</p>
+<p>3. <strong>Κομψή σύνθεση:</strong> Χρησιμοποιήστε ένα δαχτυλίδι σερβιρίσματος για να στρώσετε στρώσεις φασόλια, αβοκάντο και σκουμπρί. Αφαιρέστε το δαχτυλίδι προσεκτικά.</p>
+<p>4. <strong>Ρουστίκ σύνθεση:</strong> Τοποθετήστε τα φασόλια σε ένα μπολ και γαρνίρετε διακοσμητικά με αβοκάντο και σκουμπρί.</p>
+<p>5. <strong>Τελικό πιάσιμο:</strong> Ολοκληρώστε με φρέσκο σχοινόπρασο, τριμμένη φλούδα λεμονιού και ένα νήμα ωμού ελαιολάδου.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

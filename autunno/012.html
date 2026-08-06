@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pasta e Ceci alla Romana | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Pasta e Ceci alla Romana">
+<meta property="og:title" content="Pasta e Ceci alla Romana | Leguminando">
+<meta property="og:description" content="Pasta e Ceci alla Romana">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="autunno/012.html" data-title="Pasta e Ceci alla Romana" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="012.jpg" alt="Pasta e Ceci alla Romana" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-10-31</p>
+<p><strong>Meta:</strong> 4 porzioni | Tradizione romana</p>
+<p><strong>Descrizione:</strong> Pasta e ceci in brodo con soffritto di aglio e rosmarino, croste di parmigiano.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>300 g di ceci secchi (o 500 g precotti)</li>
+<li>300 g di pasta all'uovo (maltagliati o ditaloni)</li>
+<li>2 spicchi d'aglio</li>
+<li>1 rametto di rosmarino fresco</li>
+<li>2-3 foglie di salvia</li>
+<li>Olio extravergine d'oliva q.b.</li>
+<li>Pepe nero macinato al momento q.b.</li>
+<li>Peperoncino in fiocchi (opzionale)</li>
+<li>Croste di Parmigiano Reggiano</li>
+<li>Sale q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparare i ceci:</strong> Se usi quelli secchi, mettili in ammollo per 10-12 ore in abbondante acqua fredda. Scolali, sciacquali e trasferiscili in una casseruola o pentola a pressione con uno spicchio d'aglio in camicia, rosmarino e salvia legati insieme. Copri con acqua fredda e porta a ebollizione. Cuoci 30 min sotto pressione o circa 1 ora in pentola tradizionale, finché sono teneri. Sala solo a fine cottura.</p>
+<p>2. <strong>Frullare una parte:</strong> Preleva un mestolo di ceci con un po' del loro liquido e riducili in crema con un frullatore a immersione. Versa la crema nella pentola e mescola con i ceci interi.</p>
+<p>3. <strong>Soffritto profumato:</strong> Affetta finemente il secondo spicchio d'aglio e fallo dorare in padella con un filo d'olio e il rametto di rosmarino. Togli dal fuoco e conserva l'olio aromatizzato.</p>
+<p>4. <strong>Cuocere la pasta:</strong> Riporta a bollore il brodo di ceci e versaci la pasta. Se il liquido è insufficiente, aggiungi acqua calda. A metà cottura incorpora l'olio profumato con aglio e rosmarino, mescolando per distribuire gli aromi.</p>
+<p>5. <strong>Servire:</strong> Disponi nei piatti ancora caldi, aggiungi le croste di Parmigiano, un filo d'olio a crudo e una macinata di pepe nero (o una spolverata di peperoncino).</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-10-31</p>
+<p><strong>Meta:</strong> 4 servings | Roman tradition</p>
+<p><strong>Description:</strong> Pasta and chickpeas in broth with garlic and rosemary soffritto, Parmigiano rinds.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>300 g dried chickpeas (or 500 g precooked)</li>
+<li>300 g egg pasta (maltagliati or ditaloni)</li>
+<li>2 garlic cloves</li>
+<li>1 sprig fresh rosemary</li>
+<li>2-3 sage leaves</li>
+<li>Extra virgin olive oil to taste</li>
+<li>Freshly ground black pepper to taste</li>
+<li>Chili flakes (optional)</li>
+<li>Parmigiano Reggiano rinds</li>
+<li>Salt to taste</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Prepare chickpeas:</strong> If using dried, soak for 10-12 hours in plenty of cold water. Drain, rinse and transfer to a pot or pressure cooker with one garlic clove, rosemary and sage tied together. Cover with cold water and bring to a boil. Cook 30 min under pressure or about 1 hour traditionally, until tender. Salt only at the end.</p>
+<p>2. <strong>Blend a portion:</strong> Scoop a ladle of chickpeas with some cooking liquid and blend to a cream. Pour back into the pot and mix with whole chickpeas.</p>
+<p>3. <strong>Aromatic soffritto:</strong> Finely slice the second garlic clove and sauté in a pan with olive oil and rosemary until golden. Remove from heat and keep the flavored oil.</p>
+<p>4. <strong>Cook pasta:</strong> Bring chickpea broth back to a boil and add pasta. If liquid is insufficient, add hot water. Halfway through cooking, stir in the garlic and rosemary flavored oil.</p>
+<p>5. <strong>Serve:</strong> Plate while hot, add Parmigiano rinds, a drizzle of raw olive oil and freshly ground black pepper (or chili flakes).</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-10-31</p>
+<p><strong>Meta:</strong> 4 porciones | Tradición romana</p>
+<p><strong>Descripción:</strong> Pasta y garbanzos en caldo con sofrito de ajo y romero, corteza de Parmigiano.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>300 g de garbanzos secos (o 500 g precocidos)</li>
+<li>300 g de pasta con huevo (maltagliati o ditaloni)</li>
+<li>2 dientes de ajo</li>
+<li>1 ramita de romero fresco</li>
+<li>2-3 hojas de salvia</li>
+<li>Aceite de oliva virgen extra c.s.</li>
+<li>Pimienta negra molida al momento c.s.</li>
+<li>Guindilla en copos (opcional)</li>
+<li>Corteza de Parmigiano Reggiano</li>
+<li>Sal c.s.</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparar los garbanzos:</strong> Si usas secos, ponlos en remojo 10-12 horas en abundante agua fría. Escúrrelos, enjuágalos y transfiérelos a una olla o exprés con un diente de ajo, romero y salvia atados. Cúbrelos con agua fría y lleva a ebullición. Cuece 30 min en exprés o unas 1 h tradicionalmente, hasta que estén tiernos. Sólo sala al final.</p>
+<p>2. <strong>Triturar una parte:</strong> Saca un cucharón de garbanzos con un poco de caldo y tritúralos hasta obtener una crema. Vuelve a verter en la olla y mezcla con los garbanzos enteros.</p>
+<p>3. <strong>Sofrito aromático:</strong> Pica fino el segundo diente de ajo y dóralo en sartén con aceite y romero. Retira del fuego y reserva el aceite aromatizado.</p>
+<p>4. <strong>Cocer la pasta:</strong> Vuelve a hervir el caldo de garbanzos y echa la pasta. Si falta líquido, añade agua caliente. A mitad de cocción incorpora el aceite con ajo y romero.</p>
+<p>5. <strong>Servir:</strong> Emplata bien caliente, añade corteza de Parmigiano, un chorrito de aceite crudo y pimienta negra recién molida.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-10-31</p>
+<p><strong>Meta:</strong> 4 porções | Tradição romana</p>
+<p><strong>Descrição:</strong> Massa e grão-de-bico em caldo com refogado de alho e alecrim, crosta de Parmigiano.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>300 g de grão-de-bico seco (ou 500 g pré-cozido)</li>
+<li>300 g de massa com ovo (maltagliati ou ditaloni)</li>
+<li>2 dentes de alho</li>
+<li>1 ramo de alecrim fresco</li>
+<li>2-3 folhas de sálvia</li>
+<li>Azeite extra virgem q.b.</li>
+<li>Pimenta preta moída na hora q.b.</li>
+<li>Pimentão em flocos (opcional)</li>
+<li>Crosta de Parmigiano Reggiano</li>
+<li>Sal q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparar o grão-de-bico:</strong> Se usar seco, deixe de molho 10-12 horas em abundante água fria. Escorra, enxágue e transfira para uma panela ou panela de pressão com um dente de alho, alecrim e sálvia atados. Cubra com água fria e leve à fervura. Cozinhe 30 min na pressão ou cerca de 1 h tradicionalmente, até ficar macio. Só salgue no final.</p>
+<p>2. <strong>Triturar uma parte:</strong> Retire uma concha de grão-de-bico com um pouco do caldo e reduza a um creme com a varinha mágica. Volte a despejar na panela e misture com os grãos inteiros.</p>
+<p>3. <strong>Refogado aromático:</strong> Fati finamente o segundo dente de alho e deixe dourar numa frigideira com azeite e alecrim. Retire do lume e guarde o azeite aromatizado.</p>
+<p>4. <strong>Cozer a massa:</strong> Volte a ferver o caldo de grão-de-bico e junte a massa. Se faltar líquido, acrescente água quente. A meio da cozedura incorpore o azeite com alho e alecrim.</p>
+<p>5. <strong>Servir:</strong> Sirva bem quente, acrescente crosta de Parmigiano, um fio de azeite cru e pimenta preta moída na hora.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-10-31</p>
+<p><strong>Meta:</strong> 4 Portionen | Römische Tradition</p>
+<p><strong>Beschreibung:</strong> Pasta und Kichererbsen in Brühe mit Knoblauch-Rosmarin-Soffritto, Parmigiano-Rinden.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>300 g getrocknete Kichererbsen (oder 500 g vorgekocht)</li>
+<li>300 g Eiernudeln (Maltagliati oder Ditaloni)</li>
+<li>2 Knoblauchzehen</li>
+<li>1 Zweig frischer Rosmarin</li>
+<li>2-3 Salbeiblätter</li>
+<li>Extra natives Olivenöl nach Geschmack</li>
+<li>Frisch gemahlener schwarzer Pfeffer nach Geschmack</li>
+<li>Chiliflocken (optional)</li>
+<li>Parmigiano Reggiano Rinden</li>
+<li>Salz nach Geschmack</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Kichererbsen zubereiten:</strong> Bei getrockneten 10-12 Std. in reichlich kaltem Wasser einweichen. Abgießen, spülen und in einen Topf oder Schnellkochtopf mit einer Knoblauchzehe, Rosmarin und Salbeiblättern geben. Mit kaltem Wasser bedecken und zum Kochen bringen. Unter Druck 30 Min. oder traditionell ca. 1 Std. kochen, bis sie weich sind. Erst am Ende salzen.</p>
+<p>2. <strong>Teil pürieren:</strong> Einen Schöpflöffel Kichererbsen mit etwas Kochflüssigkeit nehmen und zu einem Creme pürieren. Zurück in den Topf geben und mit den ganzen Kichererbsen vermischen.</p>
+<p>3. <strong>Aromatisches Soffritto:</strong> Die zweite Knoblauchzehe fein schneiden und in einer Pfanne mit Olivenöl und Rosmarin goldbraun braten. Vom Herd nehmen und das aromatisierte Öl beiseitestellen.</p>
+<p>4. <strong>Nudeln kochen:</strong> Die Kichererbsenbrühe wieder zum Kochen bringen und die Nudeln hineingeben. Falls zu wenig Flüssigkeit, heißes Wasser zugeben. Zur Hälfte der Garzeit das Knoblauch-Rosmarin-Öl unterrühren.</p>
+<p>5. <strong>Anrichten:</strong> Heiß servieren, Parmigiano-Rinden hinzufügen, einen Schuss natives Olivenöl und frisch gemahlenen schwarzen Pfeffer darübergeben.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-10-31</p>
+<p><strong>Meta:</strong> 4 μερίδες | Ρωμαϊκή παράδοση</p>
+<p><strong>Περιγραφή:</strong> Ζυμαρικά και ρεβίθια σε ζωμό με σοφρίτο σκόρδου και δενδρολίβανου, φλοιός Parmigiano.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>300 γρ ξερά ρεβίθια (ή 500 γρ προμαγειρεμένα)</li>
+<li>300 γρ ζυμαρικά με αυγό (maltagliati ή ditaloni)</li>
+<li>2 σκελίδες σκόρδο</li>
+<li>1 κλαδάκι φρέσκο δενδρολίβανο</li>
+<li>2-3 φύλλα φασκόμηλου</li>
+<li>Ελαιόλαδο κατά βούληση</li>
+<li>Φρεσκοτριμμένο μαύρο πιπέρι κατά βούληση</li>
+<li>Καυτερή πιπεριά σε νιφάδες (προαιρετικά)</li>
+<li>Φλοιός Parmigiano Reggiano</li>
+<li>Αλάτι κατά βούληση</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία ρεβιθιών:</strong> Αν χρησιμοποιείτε ξερά, βάλτε τα σε νερό για 10-12 ώρες σε άφθονο κρύο νερό. Στραγγίστε, ξεπλύνετε και βάλτε τα σε κατσαρόλα ή χύτρα με μια σκελίδα σκόρδο, δενδρολίβανο και φασκόμηλο δεμένα μαζί. Καλύψτε με κρύο νερό και φέρτε σε βρασμό. Βράστε 30 λεπτά σε χύτρα ή περίπου 1 ώρα παραδοσιακά, μέχρι να μαλακώσουν. Αλατίστε μόνο στο τέλος.</p>
+<p>2. <strong>Λιώστε ένα μέρος:</strong> Πάρτε μια κουτάλα ρεβίθια με λίγο ζωμό και λιώστε τα με ραβδομπλέντερ μέχρι να γίνουν κρέμα. Ρίξτε ξανά στην κατσαρόλα και ανακατέψτε με τα ολόκληρα ρεβίθια.</p>
+<p>3. <strong>Αρωματικό σοφρίτο:</strong> Κόψτε λεπτές φέτες τη δεύτερη σκελίδα σκόρδο και σοτάρετε σε τηγάνι με ελαιόλαδο και δενδρολίβανο μέχρι να ροδίσει. Κατεβάστε από τη φωτιά και κρατήστε το αρωματισμένο λάδι.</p>
+<p>4. <strong>Μαγείρεμα ζυμαρικών:</strong> Φέρτε ξανά σε βρασμό τον ζωμό ρεβιθιών και ρίξτε τα ζυμαρικά. Αν λείπει υγρό, προσθέστε ζεστό νερό. Στο μέσο του μαγειρέματος προσθέστε το λάδι με σκόρδο και δενδρολίβανο.</p>
+<p>5. <strong>Σερβίρισμα:</strong> Σερβίρετε ζεστά, προσθέστε φλοιό Parmigiano, ένα νήμα ωμού ελαιολάδου και φρεσκοτριμμένο μαύρο πιπέρι.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

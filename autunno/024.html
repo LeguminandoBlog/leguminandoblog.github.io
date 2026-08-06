@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Torta di Farina di Carrube, Cachi e Melograno | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Torta di Farina di Carrube, Cachi e Melograno">
+<meta property="og:title" content="Torta di Farina di Carrube, Cachi e Melograno | Leguminando">
+<meta property="og:description" content="Torta di Farina di Carrube, Cachi e Melograno">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="autunno/024.html" data-title="Torta di Farina di Carrube, Cachi e Melograno" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="024.jpg" alt="Torta di Farina di Carrube, Cachi e Melograno" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-10-04</p>
+<p><strong>Meta:</strong> 6-8 porzioni | Dolce</p>
+<p><strong>Descrizione:</strong> Torta autunnale profumata con farina di carrube, cachi maturi e chicchi di melograno. Un dolce rustico e genuino.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>280 g farina di carrube</li>
+<li>80 g zucchero di canna integrale</li>
+<li>1 bustina lievito per dolci</li>
+<li>1 pizzico sale</li>
+<li>Scorza grattugiata di un'arancia non trattata</li>
+<li>3 cachi maturi (circa 300 g polpa)</li>
+<li>2 uova medie</li>
+<li>80 ml latte (vaccino o vegetale)</li>
+<li>80 ml olio di semi delicato</li>
+<li>1 melograno maturo (i chicchi)</li>
+</ul>
+<h3>Per guarnire</h3>
+<ul>
+<li>30 g pinoli tostati</li>
+<li>4-5 fichi neri freschi, a spicchi</li>
+<li>Qualche chicco di melograno</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Preriscalda il forno a 180 °C (statico). Rivesti uno stampo da 22-24 cm con carta da forno o ungilo leggermente.</p>
+<p>2. Sbuccia i cachi, raccogli la polpa in una ciotola e riducila a crema con una forchetta o un frullatore a immersione.</p>
+<p>3. In un'altra ciotola lavora le uova con lo zucchero fino a ottenere un composto spumoso. Aggiungi l'olio, il latte, la scorza d'arancia e mescola bene.</p>
+<p>4. Setaccia la farina di carrube con il lievito e il sale e incorporali al composto liquido. Aggiungi la crema di cachi e mescola fino a ottenere un impasto omogeneo.</p>
+<p>5. Versa l'impasto nello stampo preparato, livella la superficie e inforna per 35-40 minuti, fino a quando uno stecchino inserito al centro esce asciutto.</p>
+<p>6. Sforna e lascia raffreddare la torta su una gratella prima di toglierla dallo stampo.</p>
+<p>7. A piacere, guarnisci con pinoli tostati, spicchi di fico nero e qualche chicco di melograno.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-10-04</p>
+<p><strong>Meta:</strong> 6-8 servings | Dessert</p>
+<p><strong>Description:</strong> Autumnal fragrant cake with carob flour, ripe persimmons and pomegranate seeds. A rustic and wholesome dessert.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>280 g carob flour</li>
+<li>80 g whole cane sugar</li>
+<li>1 sachet baking powder</li>
+<li>1 pinch salt</li>
+<li>Grated zest of 1 untreated orange</li>
+<li>3 ripe persimmons (about 300 g pulp)</li>
+<li>2 medium eggs</li>
+<li>80 ml milk (dairy or plant-based)</li>
+<li>80 ml mild seed oil</li>
+<li>1 ripe pomegranate (the seeds)</li>
+</ul>
+<h3>For the garnish</h3>
+<ul>
+<li>30 g toasted pine nuts</li>
+<li>4-5 fresh black figs, in wedges</li>
+<li>A few pomegranate seeds</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. Preheat oven to 180 °C (static). Line a 22-24 cm tin with baking paper or grease lightly.</p>
+<p>2. Peel persimmons, place pulp in a bowl and mash into a cream with a fork or immersion blender.</p>
+<p>3. In another bowl whisk eggs with sugar until frothy. Add oil, milk, orange zest and mix well.</p>
+<p>4. Sift carob flour with baking powder and salt and fold into the liquid mixture. Add persimmon cream and stir until smooth.</p>
+<p>5. Pour batter into prepared tin, level surface and bake 35-40 minutes, until a skewer inserted in the centre comes out clean.</p>
+<p>6. Remove from oven and let cool on a rack before unmoulding.</p>
+<p>7. If desired, garnish with toasted pine nuts, black fig wedges and a few pomegranate seeds.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-10-04</p>
+<p><strong>Meta:</strong> 6-8 porciones | Postre</p>
+<p><strong>Descripción:</strong> Pastel otoñal aromático con harina de algarroba, caquis maduros y granada. Un postre rústico y natural.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>280 g harina de algarroba</li>
+<li>80 g azúcar de caña integral</li>
+<li>1 sobre levadura en polvo</li>
+<li>1 pizca de sal</li>
+<li>Ralladura de 1 naranja no tratada</li>
+<li>3 caquis maduros (unos 300 g de pulpa)</li>
+<li>2 huevos medianos</li>
+<li>80 ml leche (de vaca o vegetal)</li>
+<li>80 ml aceite de semillas suave</li>
+<li>1 granada madura (los granos)</li>
+</ul>
+<h3>Para decorar</h3>
+<ul>
+<li>30 g piñones tostados</li>
+<li>4-5 higos negros frescos, en gajos</li>
+<li>Algunos granos de granada</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. Precalienta el horno a 180 °C (estático). Forra un molde de 22-24 cm con papel de horno o engrásalo ligeramente.</p>
+<p>2. Pela los caquis, recoge la pulpa en un bol y redúcela a crema con un tenedor o una batidora de inmersión.</p>
+<p>3. En otro bol bate los huevos con el azúcar hasta obtener un compuesto espumoso. Añade el aceite, la leche, la ralladura de naranja y mezcla bien.</p>
+<p>4. Tamiza la harina de algarroba con la levadura y la sal e incorpóralas al compuesto líquido. Añade la crema de caqui y remueve hasta obtener una masa homogénea.</p>
+<p>5. Vierte la masa en el molde preparado, nivela la superficie y hornea 35-40 minutos, hasta que un palillo insertado en el centro salga limpio.</p>
+<p>6. Saca del horno y deja enfriar la tarta sobre una rejilla antes de desmoldar.</p>
+<p>7. Si lo deseas, decora con piñones tostados, gajos de higo negro y algunos granos de granada.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-10-04</p>
+<p><strong>Meta:</strong> 6-8 porções | Sobremesa</p>
+<p><strong>Descrição:</strong> Bolo outonal perfumado com farinha de alfarroba, diospiros maduros e romã. Uma sobremesa rústica e natural.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>280 g farinha de alfarroba</li>
+<li>80 g açúcar de cana integral</li>
+<li>1 saqueta fermento em pó</li>
+<li>1 pitada de sal</li>
+<li>Raspa de 1 laranja não tratada</li>
+<li>3 diospiros maduros (cerca de 300 g de polpa)</li>
+<li>2 ovos médios</li>
+<li>80 ml leite (de vaca ou vegetal)</li>
+<li>80 ml óleo de sementes suave</li>
+<li>1 romã madura (os grãos)</li>
+</ul>
+<h3>Para guarnecer</h3>
+<ul>
+<li>30 g pinhões tostados</li>
+<li>4-5 figos negros frescos, em gomos</li>
+<li>Alguns grãos de romã</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Pré-aquece o forno a 180 °C (estático). Forra uma forma de 22-24 cm com papel vegetal ou unta ligeiramente.</p>
+<p>2. Descasca os diospiros, recolhe a polpa numa taça e reduz a crema com um garfo ou varinha mágica.</p>
+<p>3. Noutra taça bate os ovos com o açúcar até obter um composto espumoso. Adiciona o óleo, o leite, a raspa de laranja e mistura bem.</p>
+<p>4. Peneira a farinha de alfarroba com o fermento e o sal e envolve no composto líquido. Adiciona a crema de diospiro e mistura até obter uma massa homogénea.</p>
+<p>5. Deita a massa na forma preparada, nivela a superfície e cozinha no forno 35-40 minutos, até um palito inserido no centro sair limpo.</p>
+<p>6. Retira do forno e deixa arrefecer o bolo numa grelha antes de desenformar.</p>
+<p>7. Se desejares, guarnece com pinhões tostados, gomos de figo negro e alguns grãos de romã.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-10-04</p>
+<p><strong>Meta:</strong> 6-8 Portionen | Dessert</p>
+<p><strong>Beschreibung:</strong> Herbstduftender Kuchen mit Johannisbrotmehl, reifen Kakis und Granatapfel. Ein rustikales und natürliches Dessert.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>280 g Johannisbrotmehl</li>
+<li>80 g Vollrohrzucker</li>
+<li>1 Päckchen Backpulver</li>
+<li>1 Prise Salz</li>
+<li>Abgeriebene Schale von 1 unbehandelter Orange</li>
+<li>3 reife Kakis (etwa 300 g Fruchtfleisch)</li>
+<li>2 mittlere Eier</li>
+<li>80 ml Milch (Kuhmilch oder pflanzlich)</li>
+<li>80 ml mildes Speiseöl</li>
+<li>1 reifer Granatapfel (die Kerne)</li>
+</ul>
+<h3>Zum Garnieren</h3>
+<ul>
+<li>30 g geröstete Pinienkerne</li>
+<li>4-5 frische schwarze Feigen, in Spalten</li>
+<li>Einige Granatapfelkerne</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. Backofen auf 180 °C (Ober-/Unterhitze) vorheizen. Eine 22-24 cm Form mit Backpapier auslegen oder leicht einfetten.</p>
+<p>2. Kakis schälen, Fruchtfleisch in eine Schüssel geben und mit einer Gabel oder einem Pürierstab zu einer Creme verarbeiten.</p>
+<p>3. In einer anderen Schüssel Eier mit Zucker schaumig schlagen. Öl, Milch, Orangenschale zugeben und gut verrühren.</p>
+<p>4. Johannisbrotmehl mit Backpulver und Salz sieben und unter die flüssige Masse heben. Kaki-Creme zugeben und zu einem glatten Teig verrühren.</p>
+<p>5. Teig in die vorbereitete Form gießen, Oberfläche glatt streichen und 35-40 Minuten backen, bis ein Holzstäbchen in der Mitte sauber herauskommt.</p>
+<p>6. Aus dem Ofen nehmen und den Kuchen auf einem Gitter abkühlen lassen, bevor man ihn aus der Form löst.</p>
+<p>7. Nach Belieben mit gerösteten Pinienkernen, Feigenspalten und einigen Granatapfelkernen garnieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-10-04</p>
+<p><strong>Meta:</strong> 6-8 μερίδες | Επιδόρπιο</p>
+<p><strong>Περιγραφή:</strong> Φθινοπωρινό αρωματικό κέικ με αλεύρι χαρουπιού, ώριμα λωτούς και ρόδι. Ένα ρουστίκ και φυσικό επιδόρπιο.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>280 γρ αλεύρι χαρουπιού</li>
+<li>80 γρ καστανή ζάχαρη</li>
+<li>1 φακελάκι μπέικιν πάουντερ</li>
+<li>1 πρέζα αλάτι</li>
+<li>Ξύσμα από 1 μη επεξεργασμένο πορτοκάλι</li>
+<li>3 ώριμοι λωτοί (περίπου 300 γρ σάρκα)</li>
+<li>2 μεσαία αυγά</li>
+<li>80 ml γάλα (αγελαδινό ή φυτικό)</li>
+<li>80 ml ήπιο σπορέλαιο</li>
+<li>1 ώριμο ρόδι (οι σπόροι)</li>
+</ul>
+<h3>Για το γαρνίρισμα</h3>
+<ul>
+<li>30 γρ ψημένα κουκουνάρια</li>
+<li>4-5 φρέσκα μαύρα σύκα, σε φέτες</li>
+<li>Μερικοί σπόροι ροδιού</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. Προθέρμανε το φούρνο στους 180 °C. Στρώσε μια φόρμα 22-24 εκ. με λαδόκολλα ή λάδωσέ την ελαφρά.</p>
+<p>2. Ξεφλούδισε τους λωτούς, μάζεψε τη σάρκα σε ένα μπολ και λιώσε τη σε κρέμα με ένα πιρούνι ή μίξερ χειρός.</p>
+<p>3. Σε άλλο μπολ χτύπα τα αυγά με τη ζάχαρη μέχρι να γίνουν αφράτα. Πρόσθεσε το λάδι, το γάλα, το ξύσμα πορτοκαλιού και ανακάτεψε καλά.</p>
+<p>4. Κόσκινσε το αλεύρι χαρουπιού με το μπέικιν πάουντερ και το αλάτι και ενσωμάτωσέ τα στο υγρό μείγμα. Πρόσθεσε την κρέμα λωτού και ανακάτεψε μέχρι να γίνει λείο το μείγμα.</p>
+<p>5. Ρίξε το μείγμα στη φόρμα, ίσιωσε την επιφάνεια και ψήσε για 35-40 λεπτά, μέχρι ένα καλαμάκι στο κέντρο να βγει καθαρό.</p>
+<p>6. Βγάλε από το φούρνο και άφησε το κέικ να κρυώσει σε σχάρα πριν το ξεφορμάρεις.</p>
+<p>7. Αν θέλεις, γαρνίρισε με ψημένα κουκουνάρια, φέτες μαύρου σύκου και μερικούς σπόρους ροδιού.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

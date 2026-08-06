@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farinata di Lenticchie Rosse con Cavolo Nero e Cappuccio Caramellato | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Farinata di Lenticchie Rosse con Cavolo Nero e Cappuccio Caramellato">
+<meta property="og:title" content="Farinata di Lenticchie Rosse con Cavolo Nero e Cappuccio Caramellato | Leguminando">
+<meta property="og:description" content="Farinata di Lenticchie Rosse con Cavolo Nero e Cappuccio Caramellato">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="autunno/022.html" data-title="Farinata di Lenticchie Rosse con Cavolo Nero e Cappuccio Caramellato" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="022.jpg" alt="Farinata di Lenticchie Rosse con Cavolo Nero e Cappuccio Caramellato" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-10-07</p>
+<p><strong>Meta:</strong> 4 porzioni | Vegetariano</p>
+<p><strong>Descrizione:</strong> Farinata di lenticchie rosse con cipolle caramellate, cavolo nero croccante e cavolo cappuccio saltato all'aceto di mele.</p>
+<h3>Ingredienti per la farinata</h3>
+<ul>
+<li>200 g lenticchie rosse</li>
+<li>500 ml acqua</li>
+<li>3 cucchiai olio extravergine d'oliva</li>
+<li>Sale q.b.</li>
+<li>Aghi di 2 rametti di rosmarino</li>
+</ul>
+<h3>Ingredienti per il contorno</h3>
+<ul>
+<li>2 cipolle bianche affettate</li>
+<li>1 cucchiaio zucchero di canna</li>
+<li>2 cucchiai olio extravergine d'oliva</li>
+<li>Sale</li>
+<li>200 g cavolo nero</li>
+<li>300 g cavolo cappuccio a listarelle</li>
+<li>1 spicchio d'aglio</li>
+<li>1 cucchiaio aceto di mele</li>
+<li>Sale, pepe</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Frulla lenticchie rosse, acqua, 3 cucchiai di olio, sale e metà del rosmarino fino a crema omogenea.</p>
+<p>2. Lascia riposare la pastella 30 minuti. Preriscalda il forno a 200 °C e ungi una teglia.</p>
+<p>3. In padella caramella le cipolle con olio, sale e zucchero di canna per 15-20 minuti a fuoco basso.</p>
+<p>4. Versa la pastella nella teglia calda, cospargi con rosmarino e cuoci in forno per 20-25 minuti.</p>
+<p>5. Aumenta la temperatura a 220 °C, condisci il cavolo nero con olio e sale e tostalo in forno per 8-10 minuti.</p>
+<p>6. In un'altra padella scalda olio e aglio, unisci il cavolo cappuccio, sfuma con l'aceto di mele, sala, pepa e cuoci 5-7 minuti.</p>
+<p>7. Impiatta la farinata, aggiungi le cipolle caramellate e affianca il cavolo nero croccante e il cappuccio saltato.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-10-07</p>
+<p><strong>Meta:</strong> 4 servings | Vegetarian</p>
+<p><strong>Description:</strong> Red lentil farinata with caramelised onions, crispy black cabbage and sautéed savoy cabbage with apple cider vinegar.</p>
+<h3>Ingredients for the farinata</h3>
+<ul>
+<li>200 g red lentils</li>
+<li>500 ml water</li>
+<li>3 tablespoons extra virgin olive oil</li>
+<li>Salt to taste</li>
+<li>Needles from 2 rosemary sprigs</li>
+</ul>
+<h3>Ingredients for the garnish</h3>
+<ul>
+<li>2 white onions sliced</li>
+<li>1 tablespoon cane sugar</li>
+<li>2 tablespoons extra virgin olive oil</li>
+<li>Salt</li>
+<li>200 g black cabbage</li>
+<li>300 g savoy cabbage in strips</li>
+<li>1 garlic clove</li>
+<li>1 tablespoon apple cider vinegar</li>
+<li>Salt, pepper</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. Blend red lentils, water, 3 tablespoons oil, salt and half the rosemary until smooth.</p>
+<p>2. Let the batter rest 30 minutes. Preheat oven to 200 °C and grease a baking tray.</p>
+<p>3. In a pan caramelise onions with oil, salt and cane sugar for 15-20 minutes over low heat.</p>
+<p>4. Pour batter into the hot tray, sprinkle with rosemary and bake 20-25 minutes.</p>
+<p>5. Increase temperature to 220 °C, dress black cabbage with oil and salt and toast in oven for 8-10 minutes.</p>
+<p>6. In another pan heat oil and garlic, add savoy cabbage, deglaze with apple cider vinegar, season and cook 5-7 minutes.</p>
+<p>7. Plate the farinata, add caramelised onions and serve alongside crispy black cabbage and sautéed savoy cabbage.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-10-07</p>
+<p><strong>Meta:</strong> 4 porciones | Vegetariano</p>
+<p><strong>Descripción:</strong> Farinata de lentejas rojas con cebollas caramelizadas, col negra crujiente y col de Milán salteada con vinagre de sidra de manzana.</p>
+<h3>Ingredientes para la farinata</h3>
+<ul>
+<li>200 g lentejas rojas</li>
+<li>500 ml agua</li>
+<li>3 cucharadas aceite de oliva virgen extra</li>
+<li>Sal c.s.</li>
+<li>Agujas de 2 ramilletes de romero</li>
+</ul>
+<h3>Ingredientes para la guarnición</h3>
+<ul>
+<li>2 cebollas blancas en rodajas</li>
+<li>1 cucharada azúcar de caña</li>
+<li>2 cucharadas aceite de oliva virgen extra</li>
+<li>Sal</li>
+<li>200 g col negra</li>
+<li>300 g col de Milán en tiras</li>
+<li>1 diente de ajo</li>
+<li>1 cucharada vinagre de sidra de manzana</li>
+<li>Sal, pimienta</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. Tritura lentejas rojas, agua, 3 cucharadas de aceite, sal y la mitad del romero hasta obtener una crema homogénea.</p>
+<p>2. Deja reposar la masa 30 minutos. Precalienta el horno a 200 °C y engrasa una bandeja.</p>
+<p>3. En sartén carameliza las cebollas con aceite, sal y azúcar de caña durante 15-20 minutos a fuego lento.</p>
+<p>4. Vierte la masa en la bandeja caliente, espolvorea con romero y hornea 20-25 minutos.</p>
+<p>5. Aumenta la temperatura a 220 °C, adereza la col negra con aceite y sal y tuesta en el horno 8-10 minutos.</p>
+<p>6. En otra sartén calienta aceite y ajo, añade la col de Milán, desglasa con vinagre de sidra, sala, pimienta y cuece 5-7 minutos.</p>
+<p>7. Emplata la farinata, añade las cebollas caramelizadas y sirve junto a la col negra crujiente y la col de Milán salteada.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-10-07</p>
+<p><strong>Meta:</strong> 4 porções | Vegetariano</p>
+<p><strong>Descrição:</strong> Farinata de lentilhas vermelhas com cebolas caramelizadas, couve preta crocante e couve de Milão salteada com vinagre de maçã.</p>
+<h3>Ingredientes para a farinata</h3>
+<ul>
+<li>200 g lentilhas vermelhas</li>
+<li>500 ml água</li>
+<li>3 colheres de sopa azeite extra virgem</li>
+<li>Sal q.b.</li>
+<li>Agulhas de 2 ramos de alecrim</li>
+</ul>
+<h3>Ingredientes para a guarnição</h3>
+<ul>
+<li>2 cebolas brancas em fatias</li>
+<li>1 colher de sopa açúcar de cana</li>
+<li>2 colheres de sopa azeite extra virgem</li>
+<li>Sal</li>
+<li>200 g couve preta</li>
+<li>300 g couve de Milão em tiras</li>
+<li>1 dente de alho</li>
+<li>1 colher de sopa vinagre de maçã</li>
+<li>Sal, pimenta</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Tritura lentilhas vermelhas, água, 3 colheres de azeite, sal e metade do alecrim até obter creme homogéneo.</p>
+<p>2. Deixa a massa repousar 30 minutos. Pré-aquece o forno a 200 °C e unta um tabuleiro.</p>
+<p>3. Numa frigideira carameliza as cebolas com azeite, sal e açúcar de cana durante 15-20 minutos em lume brando.</p>
+<p>4. Deita a massa no tabuleiro quente, polvilha com alecrim e cozinha no forno 20-25 minutos.</p>
+<p>5. Aumenta a temperatura para 220 °C, tempera a couve preta com azeite e sal e tosta no forno 8-10 minutos.</p>
+<p>6. Noutra frigideira aquece azeite e alho, junta a couve de Milão, desglasa com vinagre de maçã, tempera e cozinha 5-7 minutos.</p>
+<p>7. Emprata a farinata, adiciona as cebolas caramelizadas e serve com a couve preta crocante e a couve de Milão salteada.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-10-07</p>
+<p><strong>Meta:</strong> 4 Portionen | Vegetarisch</p>
+<p><strong>Beschreibung:</strong> Farinata aus roten Linsen mit karamellisierten Zwiebeln, knusprigem Schwarzkohl und geschmortem Wirsing mit Apfelessig.</p>
+<h3>Zutaten für die Farinata</h3>
+<ul>
+<li>200 g rote Linsen</li>
+<li>500 ml Wasser</li>
+<li>3 Esslöffel Olivenöl extra vergine</li>
+<li>Salz nach Geschmack</li>
+<li>Nadeln von 2 Rosmarinzweigen</li>
+</ul>
+<h3>Zutaten für die Beilage</h3>
+<ul>
+<li>2 weiße Zwiebeln in Scheiben</li>
+<li>1 Esslöffel Rohrzucker</li>
+<li>2 Esslöffel Olivenöl extra vergine</li>
+<li>Salz</li>
+<li>200 g Schwarzkohl</li>
+<li>300 g Wirsing in Streifen</li>
+<li>1 Knoblauchzehe</li>
+<li>1 Esslöffel Apfelessig</li>
+<li>Salz, Pfeffer</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. Rote Linsen, Wasser, 3 Esslöffel Öl, Salz und die Hälfte des Rosmarins pürieren, bis eine glatte Masse entsteht.</p>
+<p>2. Den Teig 30 Minuten ruhen lassen. Backofen auf 200 °C vorheizen und ein Backblech einfetten.</p>
+<p>3. Zwiebeln in einer Pfanne mit Öl, Salz und Rohrzucker bei niedriger Hitze 15-20 Minuten karamellisieren.</p>
+<p>4. Teig auf das heiße Blech gießen, mit Rosmarin bestreuen und 20-25 Minuten backen.</p>
+<p>5. Temperatur auf 220 °C erhöhen, Schwarzkohl mit Öl und Salz würzen und 8-10 Minuten rösten.</p>
+<p>6. In einer weiteren Pfanne Öl und Knoblauch erhitzen, Wirsing zugeben, mit Apfelessig ablöschen, würzen und 5-7 Minuten schmoren.</p>
+<p>7. Die Farinata anrichten, karamellisierte Zwiebeln daraufgeben und mit knusprigem Schwarzkohl und geschmortem Wirsing servieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-10-07</p>
+<p><strong>Meta:</strong> 4 μερίδες | Χορτοφαγικό</p>
+<p><strong>Περιγραφή:</strong> Φαρινάτα με κόκκινες φακές, καραμελωμένα κρεμμύδια, τραγανό μαύρο λάχανο και σωταρισμένο λάχανο Βρυξελλών με ξίδι μήλου.</p>
+<h3>Συστατικά για τη φαρινάτα</h3>
+<ul>
+<li>200 γρ κόκκινες φακές</li>
+<li>500 ml νερό</li>
+<li>3 κουταλιές της σούπας ελαιόλαδο</li>
+<li>Αλάτι κατά βούληση</li>
+<li>Φύλλα από 2 κλωνάρια δενδρολίβανου</li>
+</ul>
+<h3>Συστατικά για το συνοδευτικό</h3>
+<ul>
+<li>2 λευκά κρεμμύδια σε φέτες</li>
+<li>1 κουταλιά της σούπας καστανή ζάχαρη</li>
+<li>2 κουταλιές της σούπας ελαιόλαδο</li>
+<li>Αλάτι</li>
+<li>200 γρ μαύρο λάχανο</li>
+<li>300 γρ λάχανο Βρυξελλών σε λωρίδες</li>
+<li>1 σκελίδα σκόρδο</li>
+<li>1 κουταλιά της σούπας ξίδι μήλου</li>
+<li>Αλάτι, πιπέρι</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. Χτύπησε στο μπλέντερ κόκκινες φακές, νερό, 3 κουταλιές λάδι, αλάτι και τα μισά φύλλα δενδρολίβανου μέχρι να γίνει λεία κρέμα.</p>
+<p>2. Άφησε το μείγμα να ξεκουραστεί 30 λεπτά. Προθέρμανε το φούρνο στους 200 °C και λάδωσε ένα ταψί.</p>
+<p>3. Σε ένα τηγάνι καραμέλωσε τα κρεμμύδια με λάδι, αλάτι και καστανή ζάχαρη για 15-20 λεπτά σε χαμηλή φωτιά.</p>
+<p>4. Ρίξε το μείγμα στο ζεστό ταψί, πασπάλισε με δενδρολίβανο και ψήσε στο φούρνο για 20-25 λεπτά.</p>
+<p>5. Αύξησε τη θερμοκρασία στους 220 °C, πασπάλισε το μαύρο λάχανο με λάδι και αλάτι και ψήσε το 8-10 λεπτά.</p>
+<p>6. Σε άλλο τηγάνι ζέστανε λάδι και σκόρδο, πρόσθεσε το λάχανο Βρυξελλών, απογλυκάνισε με ξίδι μήλου, αλατοπίπερωσε και μαγείρεψε 5-7 λεπτά.</p>
+<p>7. Σέρβιρε τη φαρινάτα, πρόσθεσε τα καραμελωμένα κρεμμύδια και συνόδευσε με το τραγανό μαύρο λάχανο και το σωταρισμένο λάχανο Βρυξελλών.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

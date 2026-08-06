@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tartufini di Ceci con Pecorino, Noci e Salame | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Tartufini di Ceci con Pecorino, Noci e Salame">
+<meta property="og:title" content="Tartufini di Ceci con Pecorino, Noci e Salame | Leguminando">
+<meta property="og:description" content="Tartufini di Ceci con Pecorino, Noci e Salame">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="primavera/026.html" data-title="Tartufini di Ceci con Pecorino, Noci e Salame" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="026.jpg" alt="Tartufini di Ceci con Pecorino, Noci e Salame" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-05-30</p>
+<p><strong>Meta:</strong> 15-20 tartufini | Antipasto</p>
+<p><strong>Descrizione:</strong> Sfiziosi tartufini di ceci con pecorino, noci e salame, perfetti come antipasto o finger food.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>200 g di ceci lessati</li>
+<li>100 g di pecorino grattugiato</li>
+<li>50 g di noci tritate</li>
+<li>100 g di salame a cubetti</li>
+<li>1 spicchio d'aglio</li>
+<li>Olio extravergine d'oliva q.b.</li>
+<li>Pepe nero q.b.</li>
+<li>Prezzemolo fresco per guarnire</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparazione dei ceci:</strong> Se usi ceci secchi, mettili a bagno per almeno 8 ore, poi lessali fino a che non sono teneri. Se usi ceci in scatola, scolali e risciacquali bene.</p>
+<p>2. <strong>Frullare gli ingredienti:</strong> In un mixer, unisci i ceci lessati, il pecorino grattugiato, le noci tritate e il salame a cubetti. Aggiungi anche lo spicchio d'aglio, un filo d'olio e una generosa macinata di pepe nero. Frulla il tutto fino a ottenere un composto omogeneo ma non completamente liscio; deve rimanere un po' rustico.</p>
+<p>3. <strong>Formare i tartufini:</strong> Con le mani umide, prendi piccole porzioni di impasto e forma delle palline della dimensione di una nocciola. Se vuoi, puoi anche passarle in un po' di noci tritate per decorarle.</p>
+<p>4. <strong>Raffreddare:</strong> Disponi i tartufini su un piatto e mettili in frigorifero per almeno 30 minuti in modo che si solidifichino.</p>
+<p>5. <strong>Servire:</strong> Prima di servire, guarnisci con del prezzemolo fresco tritato. Puoi accompagnarli con fette di pane tostato o crostini.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-05-30</p>
+<p><strong>Meta:</strong> 15-20 truffles | Appetiser</p>
+<p><strong>Description:</strong> Tasty chickpea truffles with pecorino cheese, walnuts and salami, perfect as an appetiser or finger food.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>200 g boiled chickpeas</li>
+<li>100 g grated pecorino cheese</li>
+<li>50 g chopped walnuts</li>
+<li>100 g salami in cubes</li>
+<li>1 garlic clove</li>
+<li>Extra virgin olive oil to taste</li>
+<li>Black pepper to taste</li>
+<li>Fresh parsley for garnish</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Prepare chickpeas:</strong> If using dried chickpeas, soak for at least 8 hours, then boil until tender. If using canned chickpeas, drain and rinse well.</p>
+<p>2. <strong>Blend ingredients:</strong> In a food processor, combine boiled chickpeas, grated pecorino, chopped walnuts and cubed salami. Add the garlic clove, a drizzle of oil and a generous grind of black pepper. Blend until homogeneous but not completely smooth; it should remain slightly rustic.</p>
+<p>3. <strong>Form truffles:</strong> With damp hands, take small portions of mixture and form balls the size of a hazelnut. If desired, roll them in some chopped walnuts for decoration.</p>
+<p>4. <strong>Chill:</strong> Arrange the truffles on a plate and refrigerate for at least 30 minutes to firm up.</p>
+<p>5. <strong>Serve:</strong> Before serving, garnish with chopped fresh parsley. Serve with slices of toasted bread or crostini.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-05-30</p>
+<p><strong>Meta:</strong> 15-20 trufas | Aperitivo</p>
+<p><strong>Descripción:</strong> Sabrosas trufas de garbanzos con queso pecorino, nueces y salami, perfectas como aperitivo o para picar.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>200 g de garbanzos cocidos</li>
+<li>100 g de queso pecorino rallado</li>
+<li>50 g de nueces picadas</li>
+<li>100 g de salami en cubos</li>
+<li>1 diente de ajo</li>
+<li>Aceite de oliva virgen extra c.s.</li>
+<li>Pimienta negra c.s.</li>
+<li>Perejil fresco para decorar</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparar garbanzos:</strong> Si usas garbanzos secos, ponlos en remojo al menos 8 horas, luego cuécelos hasta que estén tiernos. Si usas garbanzos enlatados, escúrrelos y enjuágalos bien.</p>
+<p>2. <strong>Triturar ingredientes:</strong> En una procesadora, mezcla los garbanzos cocidos, el pecorino rallado, las nueces picadas y el salami en cubos. Añade el diente de ajo, un chorrito de aceite y una buena cantidad de pimienta negra. Tritura hasta obtener una masa homogénea pero no completamente lisa; debe quedar un poco rústica.</p>
+<p>3. <strong>Formar trufas:</strong> Con las manos húmedas, toma pequeñas porciones de masa y forma bolas del tamaño de una avellana. Si quieres, puedes rebozarlas en nueces picadas para decorar.</p>
+<p>4. <strong>Enfriar:</strong> Coloca las trufas en un plato y refrigera al menos 30 minutos para que se endurezcan.</p>
+<p>5. <strong>Servir:</strong> Antes de servir, decora con perejil fresco picado. Acompaña con rebanadas de pan tostado o crostini.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-05-30</p>
+<p><strong>Meta:</strong> 15-20 trufas | Aperitivo</p>
+<p><strong>Descrição:</strong> Deliciosas trufas de grão-de-bico com queijo pecorino, nozes e salame, perfeitas como aperitivo ou petisco.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>200 g de grão-de-bico cozido</li>
+<li>100 g de queijo pecorino ralado</li>
+<li>50 g de nozes picadas</li>
+<li>100 g de salame em cubos</li>
+<li>1 dente de alho</li>
+<li>Azeite extra virgem q.b.</li>
+<li>Pimenta preta q.b.</li>
+<li>Salsa fresca para guarnecer</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparar grão-de-bico:</strong> Se usar grão-de-bico seco, deixa de molho pelo menos 8 horas, depois cozinha até ficar macio. Se usar enlatado, escorre e enxágua bem.</p>
+<p>2. <strong>Triturar ingredientes:</strong> Numa processadora, junta o grão-de-bico cozido, o pecorino ralado, as nozes picadas e o salame em cubos. Adiciona o dente de alho, um fio de azeite e uma boa quantidade de pimenta preta. Tritura até obter uma massa homogénea mas não completamente lisa; deve ficar um pouco rústica.</p>
+<p>3. <strong>Formar trufas:</strong> Com as mãos húmidas, pega em pequenas porções de massa e forma bolas do tamanho de uma avelã. Se quiseres, podes enrolá-las em nozes picadas para decorar.</p>
+<p>4. <strong>Arrefecer:</strong> Coloca as trufas num prato e refrigera pelo menos 30 minutos para endurecerem.</p>
+<p>5. <strong>Servir:</strong> Antes de servir, guarnece com salsa fresca picada. Acompanha com fatias de pão tostado ou crostini.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-05-30</p>
+<p><strong>Meta:</strong> 15-20 Trüffel | Vorspeise</p>
+<p><strong>Beschreibung:</strong> Leckere Kichererbsen-Trüffel mit Pecorino-Käse, Walnüssen und Salami, perfekt als Vorspeise oder Fingerfood.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>200 g gekochte Kichererbsen</li>
+<li>100 g geriebener Pecorino-Käse</li>
+<li>50 g gehackte Walnüsse</li>
+<li>100 g Salami in Würfeln</li>
+<li>1 Knoblauchzehe</li>
+<li>Natives Olivenöl extra nach Geschmack</li>
+<li>Schwarzer Pfeffer nach Geschmack</li>
+<li>Frische Petersilie zum Garnieren</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Kichererbsen vorbereiten:</strong> Bei getrockneten Kichererbsen mindestens 8 Stunden einweichen, dann weich kochen. Bei Dosenkichererbsen abtropfen und gut abspülen.</p>
+<p>2. <strong>Zutaten mixen:</strong> In einem Mixer gekochte Kichererbsen, geriebenen Pecorino, gehackte Walnüsse und gewürfelte Salami vermischen. Knoblauchzehe, einen Schuss Öl und eine großzügige Menge schwarzen Pfeffers zugeben. Mixen, bis die Masse homogen aber nicht vollständig glatt ist; sie sollte etwas rustikal bleiben.</p>
+<p>3. <strong>Trüffel formen:</strong> Mit feuchten Händen kleine Portionen der Masse nehmen und Kugeln in Haselnussgröße formen. Nach Wunsch in gehackten Walnüssen wälzen.</p>
+<p>4. <strong>Kühlen:</strong> Die Trüffel auf einem Teller anrichten und mindestens 30 Minuten im Kühlschrank fest werden lassen.</p>
+<p>5. <strong>Servieren:</strong> Vor dem Servieren mit gehackter frischer Petersilie garnieren. Mit Scheiben gerösteten Brotes oder Crostini servieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-05-30</p>
+<p><strong>Meta:</strong> 15-20 τρούφες | Ορεκτικό</p>
+<p><strong>Περιγραφή:</strong> Νόστιμες τρούφες ρεβιθιών με τυρί πεκορίνο, καρύδια και σαλάμι, ιδανικές ως ορεκτικό ή μεζές.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>200 γρ βρασμένα ρεβίθια</li>
+<li>100 γρ τριμμένο τυρί πεκορίνο</li>
+<li>50 γρ ψιλοκομμένα καρύδια</li>
+<li>100 γρ σαλάμι σε κύβους</li>
+<li>1 σκελίδα σκόρδο</li>
+<li>Ελαιόλαδο κατά βούληση</li>
+<li>Μαύρο πιπέρι κατά βούληση</li>
+<li>Φρέσκο μαϊντανό για γαρνίρισμα</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία ρεβιθιών:</strong> Αν χρησιμοποιείς ξερά ρεβίθια, βάλε τα σε νερό για τουλάχιστον 8 ώρες, μετά βράσέ τα μέχρι να μαλακώσουν. Αν χρησιμοποιείς κονσέρβας, στράγγισέ τα και ξέπλυνέ τα καλά.</p>
+<p>2. <strong>Πολτοποίηση υλικών:</strong> Σε ένα μίξερ, ανακάτεψε τα βρασμένα ρεβίθια, το τριμμένο πεκορίνο, τα ψιλοκομμένα καρύδια και το σαλάμι σε κύβους. Πρόσθεσε τη σκελίδα σκόρδο, λίγο λάδι και γενναία ποσότητα μαύρου πιπεριού. Πολτοποίησε μέχρι να πάρεις ένα ομοιογενές μείγμα αλλά όχι εντελώς λείο· πρέπει να μείνει λίγο χωριάτικο.</p>
+<p>3. <strong>Πλάσιμο τρούφων:</strong> Με βρεγμένα χέρια, πάρε μικρές ποσότητες από το μείγμα και πλάσε μπαλάκια σε μέγεθος φουντουκιού. Αν θέλεις, μπορείς να τα περάσεις σε ψιλοκομμένα καρύδια για διακόσμηση.</p>
+<p>4. <strong>Ψύξη:</strong> Βάλε τις τρούφες σε ένα πιάτο και βάλε στο ψυγείο για τουλάχιστον 30 λεπτά να σταθεροποιηθούν.</p>
+<p>5. <strong>Σερβίρισμα:</strong> Πριν σερβίρεις, γαρνίρισε με ψιλοκομμένο φρέσκο μαϊντανό. Σέρβιρε με φέτες ψητού ψωμιού ή κροστίνι.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+<div data-legumi="ceci" style="display:none;"></div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

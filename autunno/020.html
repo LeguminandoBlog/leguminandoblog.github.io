@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minestra Rustica di Legumi, Cavolo Nero e Funghi | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Minestra Rustica di Legumi, Cavolo Nero e Funghi">
+<meta property="og:title" content="Minestra Rustica di Legumi, Cavolo Nero e Funghi | Leguminando">
+<meta property="og:description" content="Minestra Rustica di Legumi, Cavolo Nero e Funghi">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="autunno/020.html" data-title="Minestra Rustica di Legumi, Cavolo Nero e Funghi" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="020.jpg" alt="Minestra Rustica di Legumi, Cavolo Nero e Funghi" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-10-17</p>
+<p><strong>Meta:</strong> 4 porzioni | Vegetariano</p>
+<p><strong>Descrizione:</strong> Minestra rustica autunnale con legumi misti, cavolo nero, funghi, pane all'aglio e cialde di parmigiano.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>200 g di legumi misti secchi</li>
+<li>200 g di funghi (champignon o porcini)</li>
+<li>150 g di cavolo nero</li>
+<li>1 cipolla, 1 costa di sedano, 1 carota</li>
+<li>2 spicchi d'aglio</li>
+<li>1 L di brodo vegetale</li>
+<li>1 rametto di rosmarino, 2 foglie di alloro</li>
+<li>Olio extravergine d'oliva, sale, pepe</li>
+</ul>
+<h3>Pane Tostato all'Aglio</h3>
+<ul>
+<li>4 fette di pane</li>
+<li>1 spicchio d'aglio</li>
+<li>Olio extravergine d'oliva</li>
+</ul>
+<h3>Cialde di Parmigiano</h3>
+<ul>
+<li>100 g di parmigiano grattugiato</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Metti i legumi in ammollo in acqua fredda per 8 ore.</p>
+<p>2. Trita cipolla, sedano e carota; rosolali in 2 cucchiai d'olio. Aggiungi i funghi affettati, 1 aglio intero e il rosmarino, cuoci 5 minuti.</p>
+<p>3. Unisci i legumi scolati, il brodo e l'alloro; porta a ebollizione, poi cuoci 45 minuti a fuoco basso. A 10 minuti dalla fine aggiungi il cavolo nero a strisce; regola di sale e pepe.</p>
+<p>4. Tosta il pane; strofinalo con l'aglio e un filo d'olio.</p>
+<p>5. Preriscalda il forno a 200°C. Su carta forno, distribuisci il parmigiano in mucchietti (diametro 6 cm); cuoci 5-7 minuti finché dorato, stacca e raffredda.</p>
+<p>6. Servi la minestra calda, accompagnata da pane all'aglio e cialde di parmigiano.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-10-17</p>
+<p><strong>Meta:</strong> 4 servings | Vegetarian</p>
+<p><strong>Description:</strong> Rustic autumn soup with mixed legumes, kale, mushrooms, garlic bread and Parmesan crisps.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>200 g mixed dried legumes</li>
+<li>200 g mushrooms (champignon or porcini)</li>
+<li>150 g kale</li>
+<li>1 onion, 1 celery stalk, 1 carrot</li>
+<li>2 garlic cloves</li>
+<li>1 L vegetable broth</li>
+<li>1 rosemary sprig, 2 bay leaves</li>
+<li>Extra virgin olive oil, salt, pepper</li>
+</ul>
+<h3>Garlic Bread</h3>
+<ul>
+<li>4 bread slices</li>
+<li>1 garlic clove</li>
+<li>Extra virgin olive oil</li>
+</ul>
+<h3>Parmesan Crisps</h3>
+<ul>
+<li>100 g grated Parmesan</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. Soak legumes in cold water for 8 hours.</p>
+<p>2. Chop onion, celery and carrot; sauté in 2 tablespoons oil. Add sliced mushrooms, 1 whole garlic and rosemary, cook 5 minutes.</p>
+<p>3. Add drained legumes, broth and bay leaves; bring to a boil, then simmer 45 minutes over low heat. 10 minutes before the end add kale strips; season with salt and pepper.</p>
+<p>4. Toast bread; rub with garlic and a drizzle of oil.</p>
+<p>5. Preheat oven to 200°C. On parchment paper, arrange Parmesan in small piles (6 cm diameter); bake 5-7 minutes until golden, remove and cool.</p>
+<p>6. Serve soup hot, accompanied by garlic bread and Parmesan crisps.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-10-17</p>
+<p><strong>Meta:</strong> 4 porciones | Vegetariano</p>
+<p><strong>Descripción:</strong> Sopa rústica de otoño con legumbres mixtas, kale, setas, pan de ajo y crujientes de parmesano.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>200 g de legumbres mixtas secas</li>
+<li>200 g de setas (champiñón o porcini)</li>
+<li>150 g de kale</li>
+<li>1 cebolla, 1 tallo de apio, 1 zanahoria</li>
+<li>2 dientes de ajo</li>
+<li>1 L de caldo de verduras</li>
+<li>1 ramita de romero, 2 hojas de laurel</li>
+<li>Aceite de oliva virgen extra, sal, pimienta</li>
+</ul>
+<h3>Pan Tostado al Ajo</h3>
+<ul>
+<li>4 rebanadas de pan</li>
+<li>1 diente de ajo</li>
+<li>Aceite de oliva virgen extra</li>
+</ul>
+<h3>Crujientes de Parmesano</h3>
+<ul>
+<li>100 g de parmesano rallado</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. Pon las legumbres en remojo en agua fría 8 horas.</p>
+<p>2. Pica la cebolla, el apio y la zanahoria; sofríe en 2 cucharadas de aceite. Añade las setas en láminas, 1 ajo entero y el romero, cuece 5 minutos.</p>
+<p>3. Incorpora las legumbres escurridas, el caldo y el laurel; lleva a ebullición, luego cuece 45 minutos a fuego lento. A 10 minutos del final agrega el kale en tiras; sazona con sal y pimienta.</p>
+<p>4. Tuesta el pan; frotarlo con el ajo y un chorrito de aceite.</p>
+<p>5. Precalienta el horno a 200°C. Sobre papel de hornear, distribuye el parmesano en montoncitos (6 cm de diámetro); hornea 5-7 minutos hasta dorar, despega y deja enfriar.</p>
+<p>6. Sirve la sopa caliente, acompañada de pan de ajo y crujientes de parmesano.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-10-17</p>
+<p><strong>Meta:</strong> 4 porções | Vegetariano</p>
+<p><strong>Descrição:</strong> Sopa rústica de outono com leguminosas mistas, couve-crespa, cogumelos, pão de alho e crocantes de parmesão.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>200 g de leguminosas mistas secas</li>
+<li>200 g de cogumelos (champignon ou porcini)</li>
+<li>150 g de couve-crespa</li>
+<li>1 cebola, 1 talo de aipo, 1 cenoura</li>
+<li>2 dentes de alho</li>
+<li>1 L de caldo de legumes</li>
+<li>1 ramo de alecrim, 2 folhas de louro</li>
+<li>Azeite extra virgem, sal, pimenta</li>
+</ul>
+<h3>Pão Torrado com Alho</h3>
+<ul>
+<li>4 fatias de pão</li>
+<li>1 dente de alho</li>
+<li>Azeite extra virgem</li>
+</ul>
+<h3>Crocantes de Parmesão</h3>
+<ul>
+<li>100 g de parmesão ralado</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Deixa as leguminosas de molho em água fria 8 horas.</p>
+<p>2. Pica a cebola, o aipo e a cenoura; refoga em 2 colheres de sopa de azeite. Adiciona os cogumelos fatiados, 1 alho inteiro e o alecrim, cozinha 5 minutos.</p>
+<p>3. Junta as leguminosas escorridas, o caldo e as folhas de louro; leva a lume brando e cozinha 45 minutos. A 10 minutos do final acrescenta a couve-crespa em tiras; tempera com sal e pimenta.</p>
+<p>4. Tosta o pão; esfrega com o alho e um fio de azeite.</p>
+<p>5. Pré-aquece o forno a 200°C. Sobre papel vegetal, distribui o parmesão em montinhos (6 cm de diâmetro); leva ao forno 5-7 minutos até dourar, despega e deixa arrefecer.</p>
+<p>6. Serve a sopa quente, acompanhada de pão de alho e crocantes de parmesão.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-10-17</p>
+<p><strong>Meta:</strong> 4 Portionen | Vegetarisch</p>
+<p><strong>Beschreibung:</strong> Rustikale Herbsteintopf mit gemischten Hülsenfrüchten, Grünkohl, Pilzen, Knoblauchbrot und Parmesan-Chips.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>200 g gemischte getrocknete Hülsenfrüchte</li>
+<li>200 g Pilze (Champignons oder Steinpilze)</li>
+<li>150 g Grünkohl</li>
+<li>1 Zwiebel, 1 Selleriestange, 1 Karotte</li>
+<li>2 Knoblauchzehen</li>
+<li>1 L Gemüsebrühe</li>
+<li>1 Rosmarinzweig, 2 Lorbeerblätter</li>
+<li>Natives Olivenöl extra, Salz, Pfeffer</li>
+</ul>
+<h3>Knoblauchbrot</h3>
+<ul>
+<li>4 Brotscheiben</li>
+<li>1 Knoblauchzehe</li>
+<li>Natives Olivenöl extra</li>
+</ul>
+<h3>Parmesan-Chips</h3>
+<ul>
+<li>100 g geriebener Parmesan</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. Hülsenfrüchte in kaltem Wasser 8 Stunden einweichen.</p>
+<p>2. Zwiebel, Sellerie und Karotte würfeln; in 2 Esslöffel Öl anschwitzen. Pilze in Scheiben, 1 ganze Knoblauchzehe und Rosmarin zugeben, 5 Minuten garen.</p>
+<p>3. Abgetropfte Hülsenfrüchte, Brühe und Lorbeerblätter zugeben; zum Kochen bringen, dann 45 Minuten bei schwacher Hitze köcheln. 10 Minuten vor Ende Grünkohlstreifen zugeben; mit Salz und Pfeffer abschmecken.</p>
+<p>4. Brot rösten; mit Knoblauch einreiben und mit einem Schuss Öl beträufeln.</p>
+<p>5. Ofen auf 200°C vorheizen. Auf Backpapier Parmesan in kleinen Häufchen (6 cm Durchmesser) verteilen; 5-7 Minuten backen bis goldbraun, ablösen und abkühlen lassen.</p>
+<p>6. Suppe heiß mit Knoblauchbrot und Parmesan-Chips servieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-10-17</p>
+<p><strong>Meta:</strong> 4 μερίδες | Χορτοφαγικό</p>
+<p><strong>Περιγραφή:</strong> Χειμερινή χωριάτικη σούπα με ανάμικτα όσπρια, kale, μανιτάρια, ψωμί σκόρδου και τσιπς παρμεζάνας.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>200 γρ ανάμικτα ξερά όσπρια</li>
+<li>200 γρ μανιτάρια (champignon ή porcini)</li>
+<li>150 γρ kale</li>
+<li>1 κρεμμύδι, 1 σέλινο, 1 καρότο</li>
+<li>2 σκελίδες σκόρδο</li>
+<li>1 Λ ζωμός λαχανικών</li>
+<li>1 κλωνάρι δεντρολίβανου, 2 φύλλα δάφνης</li>
+<li>Ελαιόλαδο, αλάτι, πιπέρι</li>
+</ul>
+<h3>Ψωμί Σκόρδου</h3>
+<ul>
+<li>4 φέτες ψωμιού</li>
+<li>1 σκελίδα σκόρδο</li>
+<li>Ελαιόλαδο</li>
+</ul>
+<h3>Τσιπς Παρμεζάνας</h3>
+<ul>
+<li>100 γρ τριμμένη παρμεζάνα</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. Βάλε τα όσπρια σε νερό για 8 ώρες.</p>
+<p>2. Κόψε κρεμμύδι, σέλινο και καρότο· σοτάρε σε 2 κουταλιές λάδι. Πρόσθεσε τα μανιτάρια σε φέτες, 1 ολόκληρο σκόρδο και δεντρολίβανο, μαγείρεψε 5 λεπτά.</p>
+<p>3. Πρόσθεσε τα στραγγισμένα όσπρια, τον ζωμό και τη δάφνη· βράσε, μετά σιγοβράσε 45 λεπτά. 10 λεπτά πριν το τέλος πρόσθεσε το kale σε λωρίδες· αλατοπιπέρωσε.</p>
+<p>4. Ψήσε το ψωμί· τρίψε με σκόρδο και λίγο λάδι.</p>
+<p>5. Προθέρμανε τον φούρνο στους 200°C. Σε λαδόκολλα, βάλε την παρμεζάνα σε μικρούς σωρούς (6 εκ. διάμετρος)· ψήσε 5-7 λεπτά μέχρι να ροδίσει, ξεκόλλησε και άφησε να κρυώσει.</p>
+<p>6. Σέρβιρε τη σούπα ζεστή με ψωμί σκόρδου και τσιπς παρμεζάνας.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

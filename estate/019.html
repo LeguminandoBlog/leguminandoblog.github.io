@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drink Estivo e Schiacciate Croccanti di Lenticchie | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Drink Estivo e Schiacciate Croccanti di Lenticchie">
+<meta property="og:title" content="Drink Estivo e Schiacciate Croccanti di Lenticchie | Leguminando">
+<meta property="og:description" content="Drink Estivo e Schiacciate Croccanti di Lenticchie">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="estate/019.html" data-title="Drink Estivo e Schiacciate Croccanti di Lenticchie" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="019.jpg" alt="Drink Estivo e Schiacciate Croccanti di Lenticchie" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2026-06-02</p>
+<p><strong>Meta:</strong> 2 persone | Aperitivo</p>
+<p><strong>Descrizione:</strong> Un drink estivo rinfrescante con succo di arancia, ananas e lime, accompagnato da crema di cavolo cappuccio e schiacciate croccanti di lenticchie e avena.</p>
+<h3>Drink Estivo</h3>
+<ul>
+<li>200 ml di succo di arancia</li>
+<li>100 ml di succo di ananas</li>
+<li>30 ml di succo di lime</li>
+<li>20 ml di sciroppo di granatina</li>
+<li>Foglie di menta fresca q.b.</li>
+<li>Ghiaccio q.b.</li>
+<li>Fette di arancia e lime per decorare</li>
+</ul>
+<p>In un bicchiere, unisci i succhi di arancia, ananas e lime. Aggiungi il ghiaccio e mescola bene. Versa lentamente la granatina per creare un effetto sfumato. Decora con foglie di menta e fette di arancia e lime.</p>
+<h3>Crema di Cavolo Cappuccio</h3>
+<ul>
+<li>200 g di cavolo cappuccio</li>
+<li>100 g di yogurt greco</li>
+<li>1 cucchiaio di succo di limone</li>
+<li>1 cucchiaio di olio extravergine d'oliva</li>
+<li>Sale e pepe q.b.</li>
+</ul>
+<p>Taglia il cavolo cappuccio a pezzi e sbollentalo per 5 minuti. Frulla il cavolo con lo yogurt, il succo di limone e l'olio fino a ottenere una crema liscia. Aggiusta di sale e pepe.</p>
+<h3>Schiacciate Croccanti di Lenticchie e Avena</h3>
+<ul>
+<li>100 g di farina di lenticchie</li>
+<li>100 g di farina di avena</li>
+<li>150 ml di acqua</li>
+<li>2 cucchiai di olio extravergine d'oliva</li>
+<li>Sale q.b.</li>
+<li>Rosmarino tritato q.b.</li>
+</ul>
+<p>Mescola le farine con l'acqua, l'olio, il sale e il rosmarino fino a formare un impasto omogeneo. Stendi l'impasto sottile su una teglia rivestita di carta da forno. Cuoci in forno preriscaldato a 180°C per 15-20 minuti, finché non diventa croccante. Spezza in pezzi irregolari per servire.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2026-06-02</p>
+<p><strong>Meta:</strong> 2 people | Aperitif</p>
+<p><strong>Description:</strong> A refreshing summer drink with orange, pineapple and lime juice, accompanied by red cabbage cream and crispy lentil and oat crackers.</p>
+<h3>Summer Drink</h3>
+<ul>
+<li>200 ml orange juice</li>
+<li>100 ml pineapple juice</li>
+<li>30 ml lime juice</li>
+<li>20 ml grenadine syrup</li>
+<li>Fresh mint leaves to taste</li>
+<li>Ice to taste</li>
+<li>Orange and lime slices for decoration</li>
+</ul>
+<p>In a glass, combine orange, pineapple and lime juices. Add ice and mix well. Slowly pour in grenadine to create a shaded effect. Decorate with mint leaves and orange and lime slices.</p>
+<h3>Red Cabbage Cream</h3>
+<ul>
+<li>200 g red cabbage</li>
+<li>100 g Greek yogurt</li>
+<li>1 tablespoon lemon juice</li>
+<li>1 tablespoon extra virgin olive oil</li>
+<li>Salt and pepper to taste</li>
+</ul>
+<p>Cut red cabbage into pieces and blanch for 5 minutes. Blend cabbage with yogurt, lemon juice and oil until smooth. Season with salt and pepper.</p>
+<h3>Crispy Lentil and Oat Crackers</h3>
+<ul>
+<li>100 g lentil flour</li>
+<li>100 g oat flour</li>
+<li>150 ml water</li>
+<li>2 tablespoons extra virgin olive oil</li>
+<li>Salt to taste</li>
+<li>Chopped rosemary to taste</li>
+</ul>
+<p>Mix flours with water, oil, salt and rosemary to form a homogeneous dough. Roll out thinly on a baking tray lined with parchment paper. Bake in preheated oven at 180°C for 15-20 minutes until crispy. Break into irregular pieces to serve.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2026-06-02</p>
+<p><strong>Meta:</strong> 2 personas | Aperitivo</p>
+<p><strong>Descripción:</strong> Una bebida veraniega refrescante con zumo de naranja, piña y lima, acompañada de crema de lombarda y crackers crujientes de lentejas y avena.</p>
+<h3>Bebida de Verano</h3>
+<ul>
+<li>200 ml de zumo de naranja</li>
+<li>100 ml de zumo de piña</li>
+<li>30 ml de zumo de lima</li>
+<li>20 ml de jarabe de granadina</li>
+<li>Hojas de menta fresca c.s.</li>
+<li>Hielo c.s.</li>
+<li>Rodajas de naranja y lima para decorar</li>
+</ul>
+<p>En un vaso, mezcla los zumos de naranja, piña y lima. Añade hielo y mezcla bien. Vierte lentamente la granadina para crear un efecto degradado. Decora con hojas de menta y rodajas de naranja y lima.</p>
+<h3>Crema de Lombarda</h3>
+<ul>
+<li>200 g de lombarda</li>
+<li>100 g de yogur griego</li>
+<li>1 cucharada de zumo de limón</li>
+<li>1 cucharada de aceite de oliva virgen extra</li>
+<li>Sal y pimienta c.s.</li>
+</ul>
+<p>Corta la lombarda en trozos y escáldala 5 minutos. Tritura la lombarda con el yogur, el zumo de limón y el aceite hasta obtener una crema lisa. Sazona con sal y pimienta.</p>
+<h3>Crackers Crujientes de Lentejas y Avena</h3>
+<ul>
+<li>100 g de harina de lentejas</li>
+<li>100 g de harina de avena</li>
+<li>150 ml de agua</li>
+<li>2 cucharadas de aceite de oliva virgen extra</li>
+<li>Sal c.s.</li>
+<li>Romero picado c.s.</li>
+</ul>
+<p>Mezcla las harinas con agua, aceite, sal y romero hasta formar una masa homogénea. Extiende finamente sobre una bandeja forrada con papel de hornear. Hornea en horno precalentado a 180°C 15-20 minutos hasta que esté crujiente. Rompe en trozos irregulares para servir.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2026-06-02</p>
+<p><strong>Meta:</strong> 2 pessoas | Aperitivo</p>
+<p><strong>Descrição:</strong> Uma bebida de verão refrescante com sumo de laranja, ananás e lima, acompanhada de creme de couve-roxa e crackers crocantes de lentilhas e aveia.</p>
+<h3>Bebida de Verão</h3>
+<ul>
+<li>200 ml de sumo de laranja</li>
+<li>100 ml de sumo de ananás</li>
+<li>30 ml de sumo de lima</li>
+<li>20 ml de xarope de grenadina</li>
+<li>Folhas de hortelã fresca q.b.</li>
+<li>Gelo q.b.</li>
+<li>Rodelas de laranja e lima para decorar</li>
+</ul>
+<p>Num copo, misture os sumos de laranja, ananás e lima. Junte gelo e misture bem. Deite lentamente a grenadina para criar um efeito degradado. Decore com folhas de hortelã e rodelas de laranja e lima.</p>
+<h3>Creme de Couve-Roxa</h3>
+<ul>
+<li>200 g de couve-roxa</li>
+<li>100 g de iogurte grego</li>
+<li>1 colher de sopa de sumo de limão</li>
+<li>1 colher de sopa de azeite extra virgem</li>
+<li>Sal e pimenta q.b.</li>
+</ul>
+<p>Corte a couve-roxa em pedaços e escalde 5 minutos. Reduza a couve com o iogurte, o sumo de limão e o azeite até obter um creme liso. Tempere com sal e pimenta.</p>
+<h3>Crackers Crocantes de Lentilhas e Aveia</h3>
+<ul>
+<li>100 g de farinha de lentilhas</li>
+<li>100 g de farinha de aveia</li>
+<li>150 ml de água</li>
+<li>2 colheres de sopa de azeite extra virgem</li>
+<li>Sal q.b.</li>
+<li>Alecrim picado q.b.</li>
+</ul>
+<p>Misture as farinhas com água, azeite, sal e alecrim até formar uma massa homogénea. Estenda finamente num tabuleiro forrado com papel vegetal. Cozinhe no forno pré-aquecido a 180°C 15-20 minutos até ficar crocante. Parta em pedaços irregulares para servir.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2026-06-02</p>
+<p><strong>Meta:</strong> 2 Personen | Aperitif</p>
+<p><strong>Beschreibung:</strong> Ein erfrischendes Sommergetränk mit Orangen-, Ananas- und Limettensaft, begleitet von Rotkohlcreme und knusprigen Linsen-Hafer-Crackern.</p>
+<h3>Sommergetränk</h3>
+<ul>
+<li>200 ml Orangensaft</li>
+<li>100 ml Ananassaft</li>
+<li>30 ml Limettensaft</li>
+<li>20 ml Grenadinesirup</li>
+<li>Frische Minzblätter nach Geschmack</li>
+<li>Eis nach Geschmack</li>
+<li>Orangen- und Limettenscheiben zum Garnieren</li>
+</ul>
+<p>In einem Glas Orangen-, Ananas- und Limettensaft mischen. Eis zugeben und gut umrühren. Langsam Grenadinesirup eingießen, um einen Schattierungseffekt zu erzeugen. Mit Minzblättern und Orangen- und Limettenscheiben garnieren.</p>
+<h3>Rotkohlcreme</h3>
+<ul>
+<li>200 g Rotkohl</li>
+<li>100 g griechischer Joghurt</li>
+<li>1 Esslöffel Zitronensaft</li>
+<li>1 Esslöffel natives Olivenöl</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+</ul>
+<p>Rotkohl in Stücke schneiden und 5 Minuten blanchieren. Rotkohl mit Joghurt, Zitronensaft und Öl pürieren, bis eine glatte Creme entsteht. Mit Salz und Pfeffer abschmecken.</p>
+<h3>Knusprige Linsen-Hafer-Cracker</h3>
+<ul>
+<li>100 g Linsenmehl</li>
+<li>100 g Hafermehl</li>
+<li>150 ml Wasser</li>
+<li>2 Esslöffel natives Olivenöl</li>
+<li>Salz nach Geschmack</li>
+<li>Gehackter Rosmarin nach Geschmack</li>
+</ul>
+<p>Mehl mit Wasser, Öl, Salz und Rosmarin zu einem homogenen Teig vermischen. Dünn auf einem mit Backpapier belegten Backblech ausrollen. Im vorgeheizten Ofen bei 180°C 15-20 Minuten backen, bis knusprig. In unregelmäßige Stücke brechen und servieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2026-06-02</p>
+<p><strong>Meta:</strong> 2 άτομα | Απεριτίφ</p>
+<p><strong>Περιγραφή:</strong> Ένα δροσιστικό καλοκαιρινό ποτό με χυμό πορτοκαλιού, ανανά και lime, συνοδευόμενο από κρέμα κόκκινου λάχανου και τραγανά κράκερ από φακές και βρώμη.</p>
+<h3>Καλοκαιρινό Ποτό</h3>
+<ul>
+<li>200 ml χυμός πορτοκαλιού</li>
+<li>100 ml χυμός ανανά</li>
+<li>30 ml χυμός lime</li>
+<li>20 ml σιρόπι grenadine</li>
+<li>Φρέσκα φύλλα μέντας κατά βούληση</li>
+<li>Πάγος κατά βούληση</li>
+<li>Φέτες πορτοκαλιού και lime για γαρνίρισμα</li>
+</ul>
+<p>Σε ένα ποτήρι, ανακατέψτε τους χυμούς πορτοκαλιού, ανανά και lime. Προσθέστε πάγο και ανακατέψτε καλά. Ρίξτε αργά το σιρόπι grenadine για να δημιουργήσετε ένα εφέ ντεγκραντέ. Γαρνίρετε με φύλλα μέντας και φέτες πορτοκαλιού και lime.</p>
+<h3>Κρέμα Κόκκινου Λάχανου</h3>
+<ul>
+<li>200 γρ κόκκινο λάχανο</li>
+<li>100 γρ ελληνικό γιαούρτι</li>
+<li>1 κουταλιά της σούπας χυμός λεμονιού</li>
+<li>1 κουταλιά της σούπας ελαιόλαδο</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+</ul>
+<p>Κόψτε το κόκκινο λάχανο σε κομμάτια και βράστε το για 5 λεπτά. Λιώστε το λάχανο με το γιαούρτι, τον χυμό λεμονιού και το λάδι μέχρι να γίνει λεία κρέμα. Αλατοπιπερώστε.</p>
+<h3>Τραγανά Κράκερ Φακών και Βρώμης</h3>
+<ul>
+<li>100 γρ αλεύρι φακών</li>
+<li>100 γρ αλεύρι βρώμης</li>
+<li>150 ml νερό</li>
+<li>2 κουταλιές της σούπας ελαιόλαδο</li>
+<li>Αλάτι κατά βούληση</li>
+<li>Ψιλοκομμένο δεντρολίβανο κατά βούληση</li>
+</ul>
+<p>Ανακατέψτε τα αλεύρια με νερό, λάδι, αλάτι και δεντρολίβανο μέχρι να σχηματιστεί μια ομοιογενής ζύμη. Απλώστε λεπτά σε ταψί στρωμένο με λαδόκολλα. Ψήστε σε προθερμασμένο φούρνο στους 180°C για 15-20 λεπτά μέχρι να γίνουν τραγανά. Σπάστε σε ανώμαλα κομμάτια για σερβίρισμα.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insalata Estiva di Quinoa con Tonno e Uova Sode | Leguminando</title>
+<meta name="description" content="Insalata Estiva di Quinoa con Tonno e Uova Sode">
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%); color: #333; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 30px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.header h1 { margin: 0; font-size: 2.2em; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+.header p { margin: 10px 0 0 0; font-size: 1.1em; opacity: 0.9; }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border: 2px solid #D2691E; background: white; color: #8B4513; border-radius: 20px; cursor: pointer; font-size: 0.85em; transition: all 0.3s; }
+.lang-tab:hover { background: #faf8f5; }
+.lang-tab.active { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; }
+.lang-content { display: none; }
+.lang-content.active { display: block; }
+.content { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.recipe-image { width: 100%; max-width: 700px; height: 400px; object-fit: cover; border-radius: 12px; margin: 0 auto 30px auto; display: block; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.section { margin-bottom: 30px; }
+.section h2 { color: #8B4513; border-bottom: 3px solid #D2691E; padding-bottom: 10px; margin-bottom: 20px; font-size: 1.5em; }
+.section h3 { color: #D2691E; margin: 20px 0 10px 0; font-size: 1.2em; }
+.ingredients-list { background: #faf8f5; padding: 20px; border-radius: 10px; border-left: 5px solid #D2691E; }
+.ingredients-list ul { list-style: none; padding: 0; }
+.ingredients-list li { padding: 8px 0; border-bottom: 1px dashed #e0d5c8; }
+.ingredients-list li:last-child { border-bottom: none; }
+.ingredients-list li:before { content: "🫘 "; margin-right: 8px; }
+.steps-list { counter-reset: step; }
+.steps-list li { counter-increment: step; padding: 15px 0 15px 50px; position: relative; border-bottom: 1px solid #eee; }
+.steps-list li:last-child { border-bottom: none; }
+.steps-list li::before { content: counter(step); position: absolute; left: 0; top: 10px; background: #8B4513; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em; }
+.footer { text-align: center; margin-top: 40px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 20px 0; padding: 12px 24px; background: linear-gradient(135deg, #8B4513, #D2691E); color: white; text-decoration: none; border-radius: 25px; font-size: 1em; transition: transform 0.2s; }
+.back-link:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+@media print {
+    .lang-tabs { display: none !important; }
+    .lang-content { display: block !important; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>🫘 Leguminando</h1>
+<p>Ricette a base di legumi</p>
+</div>
+
+<div class="content">
+<div style="text-align: center; margin: -20px 0 20px 0;">
+<span style="display: inline-block; padding: 8px 16px; background: linear-gradient(135deg, #D2691E, #8B4513); color: white; border-radius: 20px; font-size: 0.9em;">📅 Stagione: Estate ☀️</span>
+</div>
+<img src="insalata_quinoa_tonno_uova.jpg" alt="Insalata Estiva di Quinoa con Tonno e Uova Sode" class="recipe-image">
+
+<div class="fav-bar" style="text-align:center;margin:5px 0;">
+<span class="fav-btn" data-path="extra/insalata_quinoa_tonno_uova.html" onclick="event.stopPropagation();toggleFav('extra/insalata_quinoa_tonno_uova.html', 'Insalata Estiva di Quinoa con Tonno e Uova Sode')">🤍</span> Aggiungi ai preferiti
+</div>
+
+<div class="lang-tabs">
+<span class="lang-tab active" data-lang="it" onclick="switchLang('it')">🇮🇹 IT</span>
+<span class="lang-tab" data-lang="en" onclick="switchLang('en')">🇬🇧 EN</span>
+<span class="lang-tab" data-lang="es" onclick="switchLang('es')">🇪🇸 ES</span>
+<span class="lang-tab" data-lang="pt" onclick="switchLang('pt')">🇵🇹 PT</span>
+<span class="lang-tab" data-lang="de" onclick="switchLang('de')">🇩🇪 DE</span>
+<span class="lang-tab" data-lang="el" onclick="switchLang('el')">🇬🇷 EL</span>
+</div>
+
+<div id="lang-it" class="lang-content active">
+<div class="section">
+<h2>🥗 Insalata Estiva di Quinoa con Tonno e Uova Sode</h2>
+<h3>Ingredienti:</h3>
+<div class="ingredients-list">
+<ul>
+<li>200g di quinoa</li>
+<li>2 uova sode</li>
+<li>1 scatoletta di tonno (80g)</li>
+<li>100g di pomodorini ciliegino</li>
+<li>1 cetriolo</li>
+<li>Olio extravergine d'oliva q.b.</li>
+<li>Sale e pepe q.b.</li>
+<li>Succo di limone</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparazione</h2>
+<ol class="steps-list">
+<li>Cuoci la quinoa in abbondante acqua salata per circa 15 minuti, poi scolala e lasciala raffreddare.</li>
+<li>Prepara le uova sode: cuocile in acqua bollente per 9-10 minuti, poi raffreddale in acqua fredda.</li>
+<li>Lava e taglia i pomodorini a metà, il cetriolo a rondelle.</li>
+<li>Sbriciola il tonno e taglia le uova a spicchi.</li>
+<li>In una ciotola capiente, mescola la quinoa con le verdure, il tonno e le uova.</li>
+<li>Condiscila con olio EVO, succo di limone, sale e pepe.</li>
+<li>Servi fredda, ideale per le giornate estive.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Consigli</h2>
+<p>Questa insalata è perfetta per un pranzo leggero e nutriente. Puoi prepararla in anticipo e conservarla in frigorifero per 2-3 giorni. Per una versione vegetariana, sostituisci il tonno con ceci o fagioli neri.</p>
+</div>
+</div>
+
+<div id="lang-en" class="lang-content">
+<div class="section">
+<h2>🥗 Summer Quinoa Salad with Tuna and Boiled Eggs</h2>
+<h3>Ingredients:</h3>
+<div class="ingredients-list">
+<ul>
+<li>200g quinoa</li>
+<li>2 boiled eggs</li>
+<li>1 can of tuna (80g)</li>
+<li>100g cherry tomatoes</li>
+<li>1 cucumber</li>
+<li>Extra virgin olive oil to taste</li>
+<li>Salt and pepper to taste</li>
+<li>Lemon juice</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparation</h2>
+<ol class="steps-list">
+<li>Cook the quinoa in plenty of salted water for about 15 minutes, then drain and let cool.</li>
+<li>Prepare the boiled eggs: cook them in boiling water for 9-10 minutes, then cool them in cold water.</li>
+<li>Wash and halve the cherry tomatoes, slice the cucumber into rounds.</li>
+<li>Crumble the tuna and cut the eggs into wedges.</li>
+<li>In a large bowl, mix the quinoa with vegetables, tuna and eggs.</li>
+<li>Season with EVO oil, lemon juice, salt and pepper.</li>
+<li>Serve cold, ideal for summer days.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Tips</h2>
+<p>This salad is perfect for a light and nutritious lunch. You can prepare it in advance and store it in the refrigerator for 2-3 days. For a vegetarian version, replace the tuna with chickpeas or black beans.</p>
+</div>
+</div>
+
+<div id="lang-es" class="lang-content">
+<div class="section">
+<h2>🥗 Ensalada de Verano de Quinoa con Atún y Huevos Duros</h2>
+<h3>Ingredientes:</h3>
+<div class="ingredients-list">
+<ul>
+<li>200g de quinoa</li>
+<li>2 huevos duros</li>
+<li>1 lata de atún (80g)</li>
+<li>100g de tomates cherry</li>
+<li>1 pepino</li>
+<li>Aceite de oliva virgen extra al gusto</li>
+<li>Sal y pimienta al gusto</li>
+<li>Zumo de limon</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparacion</h2>
+<ol class="steps-list">
+<li>Cocina la quinoa en abundante agua salada durante unos 15 minutos, luego escurrirla y dejarla enfriar.</li>
+<li>Prepara los huevos duros: cocinelos en agua hirviendo durante 9-10 minutos, luego enfrialos en agua fria.</li>
+<li>Lava y corta los tomates cherry por la mitad, el pepino en rodajas.</li>
+<li>Desmenuza el atun y corta los huevos en gajos.</li>
+<li>En un bol grande, mezcla la quinoa con las verduras, el atun y los huevos.</li>
+<li>Aliña con aceite EVO, zumo de limon, sal y pimienta.</li>
+<li>Sirve fria, ideal para los dias de verano.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Consejos</h2>
+<p>Esta ensalada es perfecta para un almuerzo ligero y nutritivo. Puedes prepararla con anticipacion y conservarla en el frigorifico durante 2-3 dias. Para una version vegetariana, sustituye el atun por garbanzos o frijoles negros.</p>
+</div>
+</div>
+
+<div id="lang-pt" class="lang-content">
+<div class="section">
+<h2>🥗 Salada de Verão de Quinoa com Atum e Ovos Cozidos</h2>
+<h3>Ingredientes:</h3>
+<div class="ingredients-list">
+<ul>
+<li>200g de quinoa</li>
+<li>2 ovos cozidos</li>
+<li>1 lata de atum (80g)</li>
+<li>100g de tomates cherry</li>
+<li>1 pepino</li>
+<li>Azeite extra virgem a gosto</li>
+<li>Sal e pimenta a gosto</li>
+<li>Sumo de limão</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparacao</h2>
+<ol class="steps-list">
+<li>Cozinhe a quinoa em abundante agua salgada durante cerca de 15 minutos, depois escorra e deixe arrefecer.</li>
+<li>Prepare os ovos cozidos: cozinhe-os em agua a ferver durante 9-10 minutos, depois arrefeca-os em agua fria.</li>
+<li>Lave e corte os tomates cherry ao meio, o pepino em rodadas.</li>
+<li>Esmague o atum e corte os ovos em gomos.</li>
+<li>Numa tigela grande, misture a quinoa com os legumes, o atum e os ovos.</li>
+<li>Tempere com azeite EVO, sumo de limão, sal e pimenta.</li>
+<li>Sirva fria, ideal para os dias de verão.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Dicas</h2>
+<p>Esta salada é perfeita para um almoço leve e nutritivo. Pode prepara-la antecipadamente e conserva-la no frigorifico durante 2-3 dias. Para uma versao vegetariana, substitua o atum por grao-de-bico ou feijao preto.</p>
+</div>
+</div>
+
+<div id="lang-de" class="lang-content">
+<div class="section">
+<h2>🥗 Sommerlicher Quinoa-Salat mit Thunfisch und hartgekochten Eiern</h2>
+<h3>Zutaten:</h3>
+<div class="ingredients-list">
+<ul>
+<li>200g Quinoa</li>
+<li>2 hartgekochte Eier</li>
+<li>1 Dose Thunfisch (80g)</li>
+<li>100g Kirschtomaten</li>
+<li>1 Gurke</li>
+<li>Natives Olivenoel extra nach Geschmack</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Zitronensaft</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Zubereitung</h2>
+<ol class="steps-list">
+<li>Kochen Sie die Quinoa in reichlich Salzwasser etwa 15 Minuten, dann abtropfen lassen und abkuehlen.</li>
+<li>Bereiten Sie die hartgekochten Eier zu: Kochen Sie sie in kochendem Wasser 9-10 Minuten, dann in kaltem Wasser abkuehlen.</li>
+<li>Waschen und halbieren Sie die Kirschtomaten, schneiden Sie die Gurke in Scheiben.</li>
+<li>Zerkleinern Sie den Thunfisch und schneiden Sie die Eier in Spalten.</li>
+<li>In einer grossen Schuessel die Quinoa mit Gemuese, Thunfisch und Eiern vermischen.</li>
+<li>Mit nativem Olivenoel, Zitronensaft, Salz und Pfeffer abschmecken.</li>
+<li>Kalt servieren, ideal für Sommertage.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Tipps</h2>
+<p>Dieser Salat ist perfekt für ein leichtes und nahrhaftes Mittagessen. Sie koennen ihn im Voraus zubereiten und 2-3 Tage im Kuehlschrank aufbewahren. Für eine vegetarische Version ersetzen Sie den Thunfisch durch Kichererbsen oder schwarze Bohnen.</p>
+</div>
+</div>
+
+<div id="lang-el" class="lang-content">
+<div class="section">
+<h2>🥗 Καλοκαιρινή Σαλάτα Κινόα με Τόνο και Βρασμένα Αυγά</h2>
+<h3>Συστατικά:</h3>
+<div class="ingredients-list">
+<ul>
+<li>200g κινόα</li>
+<li>2 βρασμένα αυγά</li>
+<li>1 κονσέρβα τόνου (80g)</li>
+<li>100g ντοματίνια</li>
+<li>1 αγγούρι</li>
+<li>Έξτρα παρθένο ελαιόλαδο κατά βούληση</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>Χυμός λεμονιού</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Εκτέλεση</h2>
+<ol class="steps-list">
+<li>Μαγειρέψτε την κινόα σε άφθονο αλατισμένο νερό για περίπου 15 λεπτά, μετά στραγγίστε την και αφήστε την να κρυώσει.</li>
+<li>Προετοιμάστε τα βρασμένα αυγά: βράστε τα σε νερό που κοχλάζει για 9-10 λεπτά, μετά κρυώστε τα σε κρύο νερό.</li>
+<li>Πλύντε και κόψτε τα ντοματίνια στη μέση, το αγγούρι σε ροδέλες.</li>
+<li>Θρυμματίστε τον τόνο και κόψτε τα αυγά σε φέτες.</li>
+<li>Σε ένα μεγάλο μπολ, αναμείξτε την κινόα με τα λαχανικά, τον τόνο και τα αυγά.</li>
+<li>Αλατοπιπερώστε με ελαιόλαδο, χυμό λεμονιού, αλάτι και πιπέρι.</li>
+<li>Σερβίρετε κρύα, ιδανική για καλοκαιρινές μέρες.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Συμβουλές</h2>
+<p>Αυτή η σαλάτα είναι τέλεια για ένα ελαφρύ και θρεπτικό μεσημεριανό. Μπορείτε να την προετοιμάσετε από πριν και να την διατηρήσετε στο ψυγείο για 2-3 ημέρες. Για μια χορτοφαγική εκδοχή, αντικαταστήστε τον τόνο με ρεβίθια ή μαύρα φασόλια.</p>
+</div>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette a base di legumi</p>
+<a href="../index.html" class="back-link">← Torna alla Home</a>
+</div>
+
+<script>
+function switchLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(c => c.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+    document.querySelector('.lang-tab[data-lang="' + lang + '"]').classList.add('active');
+    localStorage.setItem('preferredLang', lang);
+}
+</script>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

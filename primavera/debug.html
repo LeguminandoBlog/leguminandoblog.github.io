@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Debug Ricerca Index</title></head>
+<body>
+<h1>Debug Ricerca su Index</h1>
+<input type="text" id="searchInput" placeholder="digita qui">
+<div id="debug" style="margin-top:20px;font-family:monospace;white-space:pre-wrap;"></div>
+
+<script src="../fuse.min.js"></script>
+<script>
+document.getElementById('debug').textContent += 'Pagina caricata\n';
+
+fetch('../search-index.json')
+  .then(r => {
+    document.getElementById('debug').textContent += 'Fetch risposta: ' + r.status + '\n';
+    return r.json();
+  })
+  .then(data => {
+    document.getElementById('debug').textContent += 'JSON parse OK, totale: ' + data.length + '\n';
+    let season = document.location.pathname.split('/').filter(Boolean).pop();
+    document.getElementById('debug').textContent += 'Stagione rilevata: ' + season + '\n';
+    let recipes = data.filter(item => item.season === season);
+    document.getElementById('debug').textContent += 'Ricette per questa stagione: ' + recipes.length + '\n';
+    window.fuse = new Fuse(recipes, { keys: ['title', 'tags'], threshold: 0.4 });
+  })
+  .catch(err => {
+    document.getElementById('debug').textContent += 'ERRORE: ' + err.message + '\n';
+  });
+
+document.getElementById('searchInput').addEventListener('keyup', function(e) {
+  document.getElementById('debug').textContent += 'Keyup: "' + e.target.value + '" fuse=' + (window.fuse ? 'OK' : 'NULL') + '\n';
+  let q = e.target.value.trim();
+  if (!q || !window.fuse) return;
+  let results = window.fuse.search(q).slice(0, 5);
+  document.getElementById('debug').textContent += 'Risultati: ' + results.length + '\n';
+  results.forEach(r => {
+    document.getElementById('debug').textContent += ' - ' + r.item.title + '\n';
+  });
+});
+</script>
+</body>
+</html>

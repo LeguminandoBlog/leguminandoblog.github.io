@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Garmugia Toscana | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Garmugia Toscana">
+<meta property="og:title" content="Garmugia Toscana | Leguminando">
+<meta property="og:description" content="Garmugia Toscana">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="inverno/012.html" data-title="Garmugia Toscana" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="012.jpg" alt="Garmugia Toscana" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2026-01-16</p>
+<p><strong>Meta:</strong> 6 porzioni | Tradizione toscana</p>
+<p><strong>Descrizione:</strong> Zuppa rustica toscana con carne macinata, pancetta, piselli, fave, carciofi, zucchine e asparagi.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>400 g di carne macinata (preferibilmente manzo o vitello)</li>
+<li>100 g di pancetta a cubetti</li>
+<li>200 g di piselli freschi</li>
+<li>200 g di fave fresche</li>
+<li>2 carciofi</li>
+<li>2 zucchine</li>
+<li>2 cipollotti</li>
+<li>1 mazzo di asparagi</li>
+<li>Brodo vegetale q.b.</li>
+<li>Olio extravergine d'oliva q.b.</li>
+<li>Sale e pepe q.b.</li>
+<li>Pane toscano (opzionale, per accompagnare)</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparazione delle verdure:</strong> Sgranare i piselli e le fave. Pulire i carciofi eliminando le foglie esterne più dure e tagliarli a spicchi. Tagliare le zucchine a cubetti. Pulire gli asparagi e tagliarli a pezzi. Affettare finemente i cipollotti.</p>
+<p>2. <strong>Rosolare la pancetta:</strong> In una pentola capiente, scaldare un po' di olio extravergine d'oliva. Aggiungere la pancetta e farla rosolare finché diventa croccante.</p>
+<p>3. <strong>Cuocere la carne:</strong> Unire la carne macinata alla pancetta e cuocere finché non è ben rosolata. Aggiungere sale e pepe a piacere.</p>
+<p>4. <strong>Aggiungere le verdure:</strong> Unire i cipollotti e cuocere per qualche minuto. Aggiungere i carciofi, le zucchine, i piselli, le fave e gli asparagi. Mescolare bene e lasciare insaporire per circa 5 minuti.</p>
+<p>5. <strong>Cuocere la zuppa:</strong> Coprire il tutto con brodo vegetale caldo. Lasciare cuocere a fuoco medio-basso per circa 30-40 minuti, finché le verdure non sono tenere.</p>
+<p>6. <strong>Servire:</strong> Aggiustare di sale e pepe se necessario. Servire la Garmugia calda, accompagnata da fette di pane toscano.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2026-01-16</p>
+<p><strong>Meta:</strong> 6 servings | Tuscan tradition</p>
+<p><strong>Description:</strong> Rustic Tuscan soup with ground meat, bacon, peas, fava beans, artichokes, zucchini and asparagus.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>400 g ground meat (preferably beef or veal)</li>
+<li>100 g bacon diced</li>
+<li>200 g fresh peas</li>
+<li>200 g fresh fava beans</li>
+<li>2 artichokes</li>
+<li>2 zucchinis</li>
+<li>2 spring onions</li>
+<li>1 bunch of asparagus</li>
+<li>Vegetable broth to taste</li>
+<li>Extra virgin olive oil to taste</li>
+<li>Salt and pepper to taste</li>
+<li>Tuscan bread (optional, to serve)</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Prepare vegetables:</strong> Shell peas and fava beans. Clean artichokes removing tough outer leaves and cut into wedges. Dice zucchinis. Clean asparagus and cut into pieces. Finely slice spring onions.</p>
+<p>2. <strong>Sauté bacon:</strong> In a large pot, heat some extra virgin olive oil. Add bacon and sauté until crispy.</p>
+<p>3. <strong>Cook meat:</strong> Add ground meat to the bacon and cook until well browned. Season with salt and pepper to taste.</p>
+<p>4. <strong>Add vegetables:</strong> Add spring onions and cook for a few minutes. Add artichokes, zucchinis, peas, fava beans and asparagus. Stir well and let flavor for about 5 minutes.</p>
+<p>5. <strong>Cook soup:</strong> Cover everything with hot vegetable broth. Cook over medium-low heat for about 30-40 minutes, until vegetables are tender.</p>
+<p>6. <strong>Serve:</strong> Adjust salt and pepper if needed. Serve Garmugia hot, accompanied by slices of Tuscan bread.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2026-01-16</p>
+<p><strong>Meta:</strong> 6 porciones | Tradición toscana</p>
+<p><strong>Descripción:</strong> Sopa rústica toscana con carne picada, panceta, guisantes, habas, alcachofas, calabacines y espárragos.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>400 g de carne picada (preferiblemente ternera o vacuno)</li>
+<li>100 g de panceta en cubos</li>
+<li>200 g de guisantes frescos</li>
+<li>200 g de habas frescas</li>
+<li>2 alcachofas</li>
+<li>2 calabacines</li>
+<li>2 cebollinos</li>
+<li>1 manojo de espárragos</li>
+<li>Caldo de verduras c.s.</li>
+<li>Aceite de oliva virgen extra c.s.</li>
+<li>Sal y pimienta c.s.</li>
+<li>Pan toscano (opcional, para acompañar)</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparar las verduras:</strong> Desgranar guisantes y habas. Limpiar las alcachofas eliminando las hojas exteriores más duras y cortarlas en gajos. Cortar los calabacines en dados. Limpiar los espárragos y cortarlos en trozos. Cortar los cebollinos en láminas finas.</p>
+<p>2. <strong>Dorar la panceta:</strong> En una cazuela grande, calentar un poco de aceite de oliva virgen extra. Añadir la panceta y dorar hasta que esté crujiente.</p>
+<p>3. <strong>Cocer la carne:</strong> Añadir la carne picada a la panceta y cocinar hasta que esté bien dorada. Sazonar con sal y pimienta a gusto.</p>
+<p>4. <strong>Añadir las verduras:</strong> Añadir los cebollinos y cocinar unos minutos. Agregar las alcachofas, calabacines, guisantes, habas y espárragos. Remover bien y dejar que tomen sabor unos 5 minutos.</p>
+<p>5. <strong>Cocer la sopa:</strong> Cubrir todo con caldo de verduras caliente. Cocinar a fuego medio-bajo unos 30-40 minutos, hasta que las verduras estén tiernas.</p>
+<p>6. <strong>Servir:</strong> Ajustar de sal y pimienta si es necesario. Servir la Garmugia caliente, acompañada de rebanadas de pan toscano.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2026-01-16</p>
+<p><strong>Meta:</strong> 6 porções | Tradição toscana</p>
+<p><strong>Descrição:</strong> Sopa rústica toscana com carne moída, pancetta, ervilhas, favas, alcachofras, abobrinhas e espargos.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>400 g de carne moída (de preferência bovina ou vitela)</li>
+<li>100 g de pancetta em cubos</li>
+<li>200 g de ervilhas frescas</li>
+<li>200 g de favas frescas</li>
+<li>2 alcachofras</li>
+<li>2 abobrinhas</li>
+<li>2 cebolinhas</li>
+<li>1 molho de espargos</li>
+<li>Caldo de legumes q.b.</li>
+<li>Azeite extra virgem q.b.</li>
+<li>Sal e pimenta q.b.</li>
+<li>Pão toscano (opcional, para acompanhar)</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparar os legumes:</strong> Desgranar ervilhas e favas. Limpar as alcachofras eliminando as folhas exteriores mais duras e cortá-las em gomos. Cortar as abobrinhas em cubos. Limpar os espargos e cortá-los em pedaços. Cortar as cebolinhas em fatias finas.</p>
+<p>2. <strong>Dourar a pancetta:</strong> Numa panela grande, aquecer um pouco de azeite extra virgem. Juntar a pancetta e dourar até ficar crocante.</p>
+<p>3. <strong>Cozer a carne:</strong> Juntar a carne moída à pancetta e cozinhar até estar bem dourada. Temperar com sal e pimenta a gosto.</p>
+<p>4. <strong>Juntar os legumes:</strong> Adicionar as cebolinhas e cozinhar alguns minutos. Juntar as alcachofras, abobrinhas, ervilhas, favas e espargos. Mexer bem e deixar apurar o sabor cerca de 5 minutos.</p>
+<p>5. <strong>Cozer a sopa:</strong> Cobrir tudo com caldo de legumes quente. Cozinhar em lume médio-baixo cerca de 30-40 minutos, até os legumes ficarem macios.</p>
+<p>6. <strong>Servir:</strong> Ajustar o sal e a pimenta se necessário. Servir a Garmugia quente, acompanhada de fatias de pão toscano.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2026-01-16</p>
+<p><strong>Meta:</strong> 6 Portionen | Toskanische Tradition</p>
+<p><strong>Beschreibung:</strong> Rustikale toskanische Suppe mit Hackfleisch, Speck, Erbsen, Saubohnen, Artischocken, Zucchini und Spargel.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>400 g Hackfleisch (vorzugsweise Rind- oder Kalbfleisch)</li>
+<li>100 g Speck gewürfelt</li>
+<li>200 g frische Erbsen</li>
+<li>200 g frische Saubohnen</li>
+<li>2 Artischocken</li>
+<li>2 Zucchini</li>
+<li>2 Frühlingszwiebeln</li>
+<li>1 Bund Spargel</li>
+<li>Gemüsebrühe nach Geschmack</li>
+<li>Extra natives Olivenöl nach Geschmack</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Toskanisches Brot (optional, zum Servieren)</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Gemüse vorbereiten:</strong> Erbsen und Saubohnen schälen. Artischocken putzen, harte äußere Blätter entfernen und in Spalten schneiden. Zucchini würfeln. Spargel putzen und in Stücke schneiden. Frühlingszwiebeln in feine Ringe schneiden.</p>
+<p>2. <strong>Speck anbraten:</strong> In einem großen Topf etwas extra natives Olivenöl erhitzen. Speck zugeben und knusprig anbraten.</p>
+<p>3. <strong>Fleisch braten:</strong> Hackfleisch zum Speck zugeben und gut anbraten. Mit Salz und Pfeffer abschmecken.</p>
+<p>4. <strong>Gemüse zugeben:</strong> Frühlingszwiebeln zugeben und einige Minuten kochen. Artischocken, Zucchini, Erbsen, Saubohnen und Spargel hinzufügen. Gut umrühren und etwa 5 Minuten mitdünsten.</p>
+<p>5. <strong>Suppe kochen:</strong> Alles mit heißer Gemüsebrühe bedecken. Bei mittlerer bis schwacher Hitze etwa 30-40 Minuten köcheln lassen, bis das Gemüse weich ist.</p>
+<p>6. <strong>Servieren:</strong> Bei Bedarf nachsalzen und pfeffern. Die Garmugia heiß servieren, begleitet von Scheiben toskanischen Brotes.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2026-01-16</p>
+<p><strong>Meta:</strong> 6 μερίδες | Τοσκανική παράδοση</p>
+<p><strong>Περιγραφή:</strong> Ρουστίκ τοσκανική σούπα με κιμά, μπέικον, αρακά, κουκιά, αγκινάρες, κολοκυθάκια και σπαράγγια.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>400 γρ κιμάς (προτιμότερα μοσχάρι ή μοσχαρίσιο)</li>
+<li>100 γρ μπέικον σε κυβάκια</li>
+<li>200 γρ φρέσκος αρακάς</li>
+<li>200 γρ φρέσκα κουκιά</li>
+<li>2 αγκινάρες</li>
+<li>2 κολοκυθάκια</li>
+<li>2 φρέσκα κρεμμυδάκια</li>
+<li>1 ματσάκι σπαράγγια</li>
+<li>Ζωμός λαχανικών κατά βούληση</li>
+<li>Ελαιόλαδο κατά βούληση</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>Τοσκανικό ψωμί (προαιρετικά, για συνοδεία)</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία λαχανικών:</strong> Καθαρίστε τον αρακά και τα κουκιά. Καθαρίστε τις αγκινάρες αφαιρώντας τα σκληρά εξωτερικά φύλλα και κόψτε τες σε φέτες. Κόψτε τα κολοκυθάκια σε κυβάκια. Καθαρίστε τα σπαράγγια και κόψτε τα σε κομμάτια. Κόψτε τα φρέσκα κρεμμυδάκια σε λεπτές ροδέλες.</p>
+<p>2. <strong>Σοτάρισμα μπέικον:</strong> Σε μια μεγάλη κατσαρόλα, ζεστάνετε λίγο ελαιόλαδο. Προσθέστε το μπέικον και σοτάρετε μέχρι να γίνει τραγανό.</p>
+<p>3. <strong>Μαγείρεμα κιμά:</strong> Προσθέστε τον κιμά στο μπέικον και μαγειρέψτε μέχρι να ροδίσει καλά. Αλατοπιπερώστε κατά βούληση.</p>
+<p>4. <strong>Προσθήκη λαχανικών:</strong> Προσθέστε τα φρέσκα κρεμμυδάκια και μαγειρέψτε για λίγα λεπτά. Προσθέστε αγκινάρες, κολοκυθάκια, αρακά, κουκιά και σπαράγγια. Ανακατέψτε καλά και αφήστε να πάρουν γεύση για περίπου 5 λεπτά.</p>
+<p>5. <strong>Μαγείρεμα σούπας:</strong> Σκεπάστε τα πάντα με ζεστό ζωμό λαχανικών. Μαγειρέψτε σε μέτρια προς χαμηλή φωτιά για περίπου 30-40 λεπτά, μέχρι να μαλακώσουν τα λαχανικά.</p>
+<p>6. <strong>Σερβίρισμα:</strong> Αλατοπιπερώστε αν χρειάζεται. Σερβίρετε τη Garmugia ζεστή, συνοδευόμενη από φέτες τοσκανικού ψωμιού.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

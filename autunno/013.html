@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zuppa di Cavolfiore e Ceci con Curcuma e Zenzero | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Zuppa di Cavolfiore e Ceci con Curcuma e Zenzero">
+<meta property="og:title" content="Zuppa di Cavolfiore e Ceci con Curcuma e Zenzero | Leguminando">
+<meta property="og:description" content="Zuppa di Cavolfiore e Ceci con Curcuma e Zenzero">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="autunno/013.html" data-title="Zuppa di Cavolfiore e Ceci con Curcuma e Zenzero" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="013.jpg" alt="Zuppa di Cavolfiore e Ceci" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-10-30</p>
+<p><strong>Meta:</strong> 4 porzioni | Zuppa</p>
+<p><strong>Descrizione:</strong> Zuppa vellutata di cavolfiore e ceci aromatizzata con curcuma, cumino e zenzero fresco.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>1 testa di cavolfiore (circa 600 g), tagliata in cimette</li>
+<li>240 g di ceci cotti (una lattina da 400 g sgocciolata)</li>
+<li>1 cipolla media, tritata finemente</li>
+<li>2 spicchi d'aglio, schiacciati</li>
+<li>1 cucchiaio di olio extravergine d'oliva</li>
+<li>750 ml di brodo vegetale (o acqua + dado)</li>
+<li>1 cucchiaino raso di curcuma in polvere</li>
+<li>1/2 cucchiaino di cumino in polvere</li>
+<li>1 cm di radice di zenzero fresco (o 1/4 cucchiaino di zenzero secco), grattugiato</li>
+<li>Sale e pepe nero q.b.</li>
+<li>Succo di 1/2 limone</li>
+<li>Una manciata di prezzemolo o coriandolo fresco tritato</li>
+<li>(opzionale) 2 cucchiai di panna da cucina o latte di cocco per una consistenza più cremosa</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Scalda l'olio in una pentola dai bordi alti a fuoco medio. Aggiungi cipolla e aglio e fai soffriggere 4-5 minuti, finché diventano morbidi e traslucidi.</p>
+<p>2. Unisci curcuma, cumino e zenzero: mescola rapidamente per tostare le spezie (30 sec), poi versa un goccio di brodo per non farle attaccare.</p>
+<p>3. Aggiungi le cimette di cavolfiore e i ceci scolati, mescola bene per ricoprire con le spezie.</p>
+<p>4. Versa il brodo fino a coprire appena le verdure, porta a leggera ebollizione, poi abbassa la fiamma e lascia sobbollire 15-20 minuti, o finché il cavolfiore è tenero.</p>
+<p>5. Regola di sale e pepe, quindi frulla il 50-70 % della zuppa con un frullatore a immersione (oppure trasferisci una parte in un mixer). Se ti piace molto liscia, frulla tutto.</p>
+<p>6. Rimetti sul fuoco dolce: se vuoi una zuppa vellutata aggiungi la panna o il latte di cocco, mescola e scalda senza bollire.</p>
+<p>7. Spegni, incorpora il succo di limone e mescola. Lascia riposare un paio di minuti prima di servire.</p>
+<p><strong>Guarnizione e varianti:</strong> Decora con un filo d'olio a crudo, una spolverata extra di curcuma o cumino e il prezzemolo/coriandolo. Per un tocco piccante, aggiungi 1/4 di cucchiaino di peperoncino in polvere insieme agli altri aromi. Servi con crostini integrali o pane alle noci.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-10-30</p>
+<p><strong>Meta:</strong> 4 servings | Soup</p>
+<p><strong>Description:</strong> Velvety cauliflower and chickpea soup flavoured with turmeric, cumin and fresh ginger.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>1 head cauliflower (about 600 g), cut into florets</li>
+<li>240 g cooked chickpeas (one 400 g tin, drained)</li>
+<li>1 medium onion, finely chopped</li>
+<li>2 garlic cloves, crushed</li>
+<li>1 tablespoon extra virgin olive oil</li>
+<li>750 ml vegetable broth (or water + stock cube)</li>
+<li>1 level teaspoon turmeric powder</li>
+<li>1/2 teaspoon ground cumin</li>
+<li>1 cm fresh ginger root (or 1/4 teaspoon dried ginger), grated</li>
+<li>Salt and black pepper to taste</li>
+<li>Juice of 1/2 lemon</li>
+<li>A handful of chopped fresh parsley or coriander</li>
+<li>(optional) 2 tablespoons cooking cream or coconut milk for a creamier texture</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. Heat oil in a tall-sided pot over medium heat. Add onion and garlic and sauté 4-5 minutes until soft and translucent.</p>
+<p>2. Add turmeric, cumin and ginger: stir quickly to toast spices (30 sec), then pour in a splash of broth to prevent sticking.</p>
+<p>3. Add cauliflower florets and drained chickpeas, stir well to coat with spices.</p>
+<p>4. Pour in broth to just cover vegetables, bring to a gentle boil, then lower heat and simmer 15-20 minutes, until cauliflower is tender.</p>
+<p>5. Season with salt and pepper, then blend 50-70 % of the soup with an immersion blender (or transfer part to a mixer). If you prefer very smooth, blend all.</p>
+<p>6. Return to low heat: if you want a velvety soup add cream or coconut milk, stir and warm without boiling.</p>
+<p>7. Turn off, stir in lemon juice and mix. Let rest a couple of minutes before serving.</p>
+<p><strong>Garnish and variations:</strong> Decorate with a drizzle of raw olive oil, an extra sprinkle of turmeric or cumin and parsley/coriander. For a spicy touch, add 1/4 teaspoon chilli powder along with other aromatics. Serve with wholemeal crostini or walnut bread.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-10-30</p>
+<p><strong>Meta:</strong> 4 porciones | Sopa</p>
+<p><strong>Descripción:</strong> Sopa aterciopelada de coliflor y garbanzos aromatizada con cúrcuma, comino y jengibre fresco.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>1 cabeza de coliflor (unos 600 g), cortada en cimetes</li>
+<li>240 g de garbanzos cocidos (una lata de 400 g escurrida)</li>
+<li>1 cebolla mediana, picada finamente</li>
+<li>2 dientes de ajo, aplastados</li>
+<li>1 cucharada de aceite de oliva virgen extra</li>
+<li>750 ml de caldo de verduras (o agua + cubito)</li>
+<li>1 cucharadita rasa de cúrcuma en polvo</li>
+<li>1/2 cucharadita de comino en polvo</li>
+<li>1 cm de raíz de jengibre fresco (o 1/4 cucharadita de jengibre seco), rallado</li>
+<li>Sal y pimienta negra c.s.</li>
+<li>Zumo de 1/2 limón</li>
+<li>Un puñado de perejil o cilantro fresco picado</li>
+<li>(opcional) 2 cucharadas de nata de cocina o leche de coco para una textura más cremosa</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. Calienta aceite en una olla de paredes altas a fuego medio. Añade cebolla y ajo y sofríe 4-5 minutos, hasta que estén tiernos y traslúcidos.</p>
+<p>2. Añade cúrcuma, comino y jengibre: mezcla rápidamente para tostar las especias (30 seg), luego vierte un chorrito de caldo para que no se peguen.</p>
+<p>3. Agrega las cimetes de coliflor y los garbanzos escurridos, mezcla bien para cubrir con las especias.</p>
+<p>4. Vierte el caldo hasta cubrir apenas las verduras, lleva a ligera ebullición, luego baja el fuego y cuece a fuego lento 15-20 minutos, hasta que la coliflor esté tierna.</p>
+<p>5. Sazona con sal y pimienta, luego tritura el 50-70 % de la sopa con una batidora de inmersión (o transfiere parte a una batidora). Si te gusta muy lisa, tritura todo.</p>
+<p>6. Vuelve a fuego suave: si quieres una sopa aterciopelada añade nata o leche de coco, mezcla y calienta sin hervir.</p>
+<p>7. Apaga, incorpora el zumo de limón y mezcla. Deja reposar un par de minutos antes de servir.</p>
+<p><strong>Guarnición y variantes:</strong> Decora con un chorrito de aceite crudo, una espolvoreada extra de cúrcuma o comino y perejil/cilantro. Para un toque picante, añade 1/4 cucharadita de guindilla en polvo junto con los otros aromas. Sirve con crostini integrales o pan de nueces.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-10-30</p>
+<p><strong>Meta:</strong> 4 porções | Sopa</p>
+<p><strong>Descrição:</strong> Sopa aveludada de couve-flor e grão-de-bico aromatizada com cúrcuma, cominho e gengibre fresco.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>1 cabeça de couve-flor (cerca de 600 g), cortada em cimeiras</li>
+<li>240 g de grão-de-bico cozido (uma lata de 400 g escorrida)</li>
+<li>1 cebola média, picada finamente</li>
+<li>2 dentes de alho, esmagados</li>
+<li>1 colher de sopa de azeite extra virgem</li>
+<li>750 ml de caldo de legumes (ou água + cubo)</li>
+<li>1 colher de chá cheia de cúrcuma em pó</li>
+<li>1/2 colher de chá de cominho em pó</li>
+<li>1 cm de raiz de gengibre fresco (ou 1/4 colher de chá de gengibre seco), ralado</li>
+<li>Sal e pimenta preta q.b.</li>
+<li>Sumo de 1/2 limão</li>
+<li>Um punhado de salsa ou coentros frescos picados</li>
+<li>(opcional) 2 colheres de sopa de natas de culinária ou leite de coco para uma textura mais cremosa</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Aqueça o azeite numa panela de paredes altas em lume médio. Junte cebola e alho e refogue 4-5 minutos, até ficarem macios e translúcidos.</p>
+<p>2. Junte cúrcuma, cominho e gengibre: misture rapidamente para torrar as especiarias (30 seg), depois deite um fio de caldo para não deixar pegar.</p>
+<p>3. Adicione as cimeiras de couve-flor e o grão-de-bico escorrido, misture bem para cobrir com as especiarias.</p>
+<p>4. Deite o caldo até cobrir apenas os legumes, leve a ligeira ebulição, depois baixe o lume e deixe cozinhar em lume brando 15-20 minutos, até a couve-flor estar macia.</p>
+<p>5. Tempere com sal e pimenta, depois reduza a puré 50-70 % da sopa com uma varinha mágica (ou transfuira parte para uma liquidificadora). Se gostar muito lisa, reduza tudo.</p>
+<p>6. Volte a lume brando: se quiser uma sopa aveludada junte natas ou leite de coco, misture e aqueça sem ferver.</p>
+<p>7. Desligue, incorpore o sumo de limão e misture. Deixe repousar uns minutos antes de servir.</p>
+<p><strong>Guarnição e variantes:</strong> Decore com um fio de azeite cru, uma pitada extra de cúrcuma ou cominho e salsa/coentros. Para um toque picante, junte 1/4 colher de chá de piripíri em pó juntamente com os outros aromas. Sirva com crostini integrais ou pão de nozes.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-10-30</p>
+<p><strong>Meta:</strong> 4 Portionen | Suppe</p>
+<p><strong>Beschreibung:</strong> Samtige Blumenkohl- und Kichererbsensuppe aromatisiert mit Kurkuma, Kreuzkümmel und frischem Ingwer.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>1 Blumenkohlkopf (ca. 600 g), in Röschen geschnitten</li>
+<li>240 g gekochte Kichererbsen (eine 400 g Dose, abgetropft)</li>
+<li>1 mittelgroße Zwiebel, fein gehackt</li>
+<li>2 Knoblauchzehen, gepresst</li>
+<li>1 Esslöffel extra natives Olivenöl</li>
+<li>750 ml Gemüsebrühe (oder Wasser + Brühwürfel)</li>
+<li>1 gestrichener Teelöffel Kurkumapulver</li>
+<li>1/2 Teelöffel gemahlener Kreuzkümmel</li>
+<li>1 cm frische Ingwerwurzel (oder 1/4 Teelöffel getrockneter Ingwer), gerieben</li>
+<li>Salz und schwarzer Pfeffer nach Geschmack</li>
+<li>Saft von 1/2 Zitrone</li>
+<li>Eine Handvoll gehackte frische Petersilie oder Koriander</li>
+<li>(optional) 2 Esslöffel Kochsahne oder Kokosmilch für eine cremigere Konsistenz</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. Öl in einem hohen Topf bei mittlerer Hitze erhitzen. Zwiebel und Knoblauch zugeben und 4-5 Minuten anschwitzen, bis sie weich und glasig sind.</p>
+<p>2. Kurkuma, Kreuzkümmel und Ingwer zugeben: schnell umrühren, um die Gewürze anzurösten (30 Sek), dann einen Schuss Brühe zugießen, damit nichts anbrennt.</p>
+<p>3. Blumenkohlröschen und abgetropfte Kichererbsen zugeben, gut umrühren, um mit Gewürzen zu bedecken.</p>
+<p>4. Brühe zugießen, bis das Gemüse gerade bedeckt ist, leicht aufkochen lassen, dann Hitze reduzieren und 15-20 Minuten köcheln, bis der Blumenkohl weich ist.</p>
+<p>5. Mit Salz und Pfeffer würzen, dann 50-70 % der Suppe mit einem Stabmixer pürieren (oder einen Teil in einen Mixer geben). Wer sehr glatt mag, püriert alles.</p>
+<p>6. Bei niedriger Hitze zurückgeben: wer eine samtige Suppe möchte, Sahne oder Kokosmilch zugeben, umrühren und nur warm halten, nicht kochen.</p>
+<p>7. Herd ausstellen, Zitronensaft einrühren und mischen. Ein paar Minuten vor dem Servieren ruhen lassen.</p>
+<p><strong>Garnierung und Variationen:</strong> Mit einem Spritzer nativem Olivenöl, einer Extra-Prise Kurkuma oder Kreuzkümmel und Petersilie/Koriander garnieren. Für eine pikante Note 1/4 Teelöffel Chilipulver mit den anderen Aromen zugeben. Mit Vollkorn-Crostini oder Walnussbrot servieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-10-30</p>
+<p><strong>Meta:</strong> 4 μερίδες | Σούπα</p>
+<p><strong>Περιγραφή:</strong> Βελούδινη σούπα κουνουπιδιού και ρεβιθιών αρωματισμένη με κουρκουμά, κύμινο και φρέσκο τζίντζερ.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>1 κεφάλι κουνουπίδι (περίπου 600 γρ), κομμένο σε μικρά μπουκετάκια</li>
+<li>240 γρ μαγειρεμένα ρεβίθια (1 κονσέρβα 400 γρ, στραγγισμένα)</li>
+<li>1 μεσαίο κρεμμύδι, ψιλοκομμένο</li>
+<li>2 σκελίδες σκόρδο, πιεσμένες</li>
+<li>1 κουταλιά της σούπας ελαιόλαδο</li>
+<li>750 ml ζωμός λαχανικών (ή νερό + κύβος)</li>
+<li>1 κουταλάκι του γλυκού γεμάτο κουρκουμάς σε σκόνη</li>
+<li>1/2 κουταλάκι του γλυκού κύμινο σε σκόνη</li>
+<li>1 εκ φρέσκια ρίζα τζίντζερ (ή 1/4 κουταλάκι του γλυκού ξερό τζίντζερ), τριμμένη</li>
+<li>Αλάτι και μαύρο πιπέρι κατά βούληση</li>
+<li>Χυμός 1/2 λεμονιού</li>
+<li>1 χούφτα ψιλοκομμένος φρέσκος μαϊντανός ή κολίανδρος</li>
+<li>(προαιρετικά) 2 κουταλιές της σούπας κρέμα μαγειρικής ή γάλα καρύδας για πιο κρεμώδη υφή</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. Ζεστάνετε λάδι σε μια κατσαρόλα με ψηλά τοιχώματα σε μέτρια φωτιά. Προσθέστε κρεμμύδι και σκόρδο και σοτάρετε 4-5 λεπτά, μέχρι να μαλακώσουν και να γίνουν διάφανα.</p>
+<p>2. Προσθέστε κουρκουμά, κύμινο και τζίντζερ: ανακατέψτε γρήγορα για να καβουρδιστούν τα μπαχαρικά (30 δευτ.), μετά ρίξτε λίγο ζωμό για να μην κολλήσουν.</p>
+<p>3. Προσθέστε τα μπουκετάκια κουνουπιδιού και τα στραγγισμένα ρεβίθια, ανακατέψτε καλά για να καλυφθούν με τα μπαχαρικά.</p>
+<p>4. Ρίξτε ζωμό μέχρι να καλυφθούν μόλις τα λαχανικά, φέρτε σε ήπιο βρασμό, μετά χαμηλώστε τη φωτιά και σιγοβράστε 15-20 λεπτά, μέχρι να μαλακώσει το κουνουπίδι.</p>
+<p>5. Αλατοπιπερώστε, μετά λιώστε το 50-70 % της σούπας με ράβδο μπλέντερ (ή μεταφέρετε μέρος σε μπλέντερ). Αν σας αρέσει πολύ λεία, λιώστε τα πάντα.</p>
+<p>6. Επιστρέψτε σε χαμηλή φωτιά: αν θέλετε βελούδινη σούπα, προσθέστε κρέμα ή γάλα καρύδας, ανακατέψτε και ζεστάνετε χωρίς βράσιμο.</p>
+<p>7. Σβήστε τη φωτιά, προσθέστε χυμό λεμονιού και ανακατέψτε. Αφήστε να ξεκουραστεί μερικά λεπτά πριν σερβίρετε.</p>
+<p><strong>Γαρνίρισμα και παραλλαγές:</strong> Γαρνίρετε με νήμα ωμού ελαιολάδου, επιπλέον πασπάλισμα κουρκουμά ή κύμινου και μαϊντανό/κολίανδρο. Για πικάντικη νότα, προσθέστε 1/4 κουταλάκι του γλυκού καυτερή πιπεριά μαζί με τα άλλα αρώματα. Σερβίρετε με crostini ολικής ή ψωμί με καρύδια.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

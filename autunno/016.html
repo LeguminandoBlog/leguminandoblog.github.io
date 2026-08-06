@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lanterne Stregate di Zucca Ripiene | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Lanterne Stregate di Zucca Ripiene">
+<meta property="og:title" content="Lanterne Stregate di Zucca Ripiene | Leguminando">
+<meta property="og:description" content="Lanterne Stregate di Zucca Ripiene">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="autunno/016.html" data-title="Lanterne Stregate di Zucca Ripiene" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="016.jpg" alt="Lanterne Stregate di Zucca Ripiene" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-10-25</p>
+<p><strong>Meta:</strong> 4 porzioni | Vegetariano</p>
+<p><strong>Descrizione:</strong> Zucche intagliate a lanterna e ripiene di quinoa, lenticchie rosse e cavolo nero croccante.</p>
+<h3>Ingredienti (4 mini o 2 medie)</h3>
+<ul>
+<li>2-4 zucche piccole</li>
+<li>100 g di quinoa</li>
+<li>100 g di lenticchie rosse</li>
+<li>200 g di polpa di zucca</li>
+<li>4-5 foglie di cavolo nero</li>
+<li>1 scalogno</li>
+<li>1 spicchio d'aglio</li>
+<li>500 ml di brodo vegetale</li>
+<li>1 cucchiaino di cumino</li>
+<li>1/2 cucchiaino di paprika affumicata</li>
+<li>1 pizzico di cannella</li>
+<li>Olio extravergine d'oliva, sale, pepe q.b.</li>
+<li>Semi di melagrana (opzionali)</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Taglia la calotta delle zucche, svuotale e intaglia le facce a formare maschere da lanterna stregata. Tieni da parte i semi e la polpa.</p>
+<p>2. In una padella, soffriggi scalogno e aglio tritati con un filo d'olio. Aggiungi la polpa di zucca a dadini, il cumino, la paprika e la cannella. Fai rosolare per qualche minuto.</p>
+<p>3. Unisci le lenticchie rosse sciacquate e versa il brodo caldo. Cuoci per 10 minuti, poi aggiungi la quinoa e prosegui la cottura per altri 12-15 minuti fino a completo assorbimento. Regola di sale.</p>
+<p>4. Nel frattempo, condiscii fogli di cavolo nero con olio e sale. Disponi su una teglia e cuoci in forno a 160 °C per 8-10 minuti finché diventa croccante.</p>
+<p>5. Riempi le zucche svuotate con il composto caldo di quinoa e lenticchie. Decora con il cavolo nero croccante e i semi di melagrana. Servi immediatamente.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-10-25</p>
+<p><strong>Meta:</strong> 4 servings | Vegetarian</p>
+<p><strong>Description:</strong> Pumpkins carved into witch lanterns and stuffed with quinoa, red lentils and crispy black kale.</p>
+<h3>Ingredients (4 mini or 2 medium)</h3>
+<ul>
+<li>2-4 small pumpkins</li>
+<li>100 g quinoa</li>
+<li>100 g red lentils</li>
+<li>200 g pumpkin flesh</li>
+<li>4-5 black kale leaves</li>
+<li>1 shallot</li>
+<li>1 garlic clove</li>
+<li>500 ml vegetable broth</li>
+<li>1 teaspoon cumin</li>
+<li>1/2 teaspoon smoked paprika</li>
+<li>A pinch of cinnamon</li>
+<li>Extra virgin olive oil, salt, pepper to taste</li>
+<li>Pomegranate seeds (optional)</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. Cut the tops off the pumpkins, hollow them out and carve faces to form witch lantern masks. Set aside seeds and flesh.</p>
+<p>2. In a pan, sauté finely chopped shallot and garlic with a drizzle of oil. Add diced pumpkin flesh, cumin, paprika and cinnamon. Sauté for a few minutes.</p>
+<p>3. Add rinsed red lentils and pour in hot broth. Cook for 10 minutes, then add quinoa and continue cooking for another 12-15 minutes until fully absorbed. Season with salt.</p>
+<p>4. Meanwhile, season black kale leaves with oil and salt. Arrange on a baking sheet and bake at 160 °C for 8-10 minutes until crispy.</p>
+<p>5. Fill hollowed pumpkins with the hot quinoa and lentil mixture. Top with crispy black kale and pomegranate seeds. Serve immediately.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-10-25</p>
+<p><strong>Meta:</strong> 4 porciones | Vegetariano</p>
+<p><strong>Descripción:</strong> Calabazas talladas en farolillos de bruja y rellenas de quinoa, lentejas rojas y kale crujiente.</p>
+<h3>Ingredientes (4 mini o 2 medianas)</h3>
+<ul>
+<li>2-4 calabazas pequeñas</li>
+<li>100 g de quinoa</li>
+<li>100 g de lentejas rojas</li>
+<li>200 g de pulpa de calabaza</li>
+<li>4-5 hojas de kale negro</li>
+<li>1 chalota</li>
+<li>1 diente de ajo</li>
+<li>500 ml de caldo de verduras</li>
+<li>1 cucharadita de comino</li>
+<li>1/2 cucharadita de pimentón ahumado</li>
+<li>Una pizca de canela</li>
+<li>Aceite de oliva virgen extra, sal, pimienta c.s.</li>
+<li>Granada en grano (opcional)</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. Corta las tapas de las calabazas, vacíalas y talla caras para formar máscaras de farolillos de bruja. Reserva las semillas y la pulpa.</p>
+<p>2. En una sartén, sofríe chalota y ajo picados con un chorrito de aceite. Añade la pulpa de calabaza en dados, comino, pimentón y canela. Sofríe unos minutos.</p>
+<p>3. Agrega las lentejas rojas enjuagadas y vierte el caldo caliente. Cuece 10 minutos, luego añade la quinoa y continúa la cocción otros 12-15 minutos hasta absorción completa. Sazona.</p>
+<p>4. Mientras tanto, aliña las hojas de kale con aceite y sal. Dispon en una bandeja y hornea a 160 °C 8-10 minutos hasta que esté crujiente.</p>
+<p>5. Rellena las calabazas vaciadas con la mezcla caliente de quinoa y lentejas. Decora con kale crujiente y granada. Sirve inmediatamente.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-10-25</p>
+<p><strong>Meta:</strong> 4 porções | Vegetariano</p>
+<p><strong>Descrição:</strong> Abóboras esculpidas em lanternas de bruxa e recheadas com quinoa, lentilhas vermelhas e couve-preta crocante.</p>
+<h3>Ingredientes (4 mini ou 2 médias)</h3>
+<ul>
+<li>2-4 abóboras pequenas</li>
+<li>100 g de quinoa</li>
+<li>100 g de lentilhas vermelhas</li>
+<li>200 g de polpa de abóbora</li>
+<li>4-5 folhas de couve-preta</li>
+<li>1 chalota</li>
+<li>1 dente de alho</li>
+<li>500 ml de caldo de legumes</li>
+<li>1 colher de chá de cominho</li>
+<li>1/2 colher de chá de pimentão defumado</li>
+<li>Uma pitada de canela</li>
+<li>Azeite extra virgem, sal, pimenta q.b.</li>
+<li>Sementes de romã (opcional)</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Corte as tampas das abóboras, esvazie-as e esculpa caras para formar máscaras de lanternas de bruxa. Reserve as sementes e a polpa.</p>
+<p>2. Numa frigideira, refogue chalota e alho picados com um fio de azeite. Junte a polpa de abóbora em cubos, cominho, pimentão e canela. Refogue alguns minutos.</p>
+<p>3. Adicione as lentilhas vermelhas enxaguadas e deite o caldo quente. Cozinhe 10 minutos, depois junte a quinoa e prossiga a cozedura mais 12-15 minutos até completa absorção. Tempere.</p>
+<p>4. Entretanto, tempere as folhas de couve-preta com azeite e sal. Disponha num tabuleiro e cozinhe no forno a 160 °C 8-10 minutos até ficar crocante.</p>
+<p>5. Recheie as abóboras esvaziadas com a mistura quente de quinoa e lentilhas. Decore com couve-preta crocante e sementes de romã. Sirva imediatamente.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-10-25</p>
+<p><strong>Meta:</strong> 4 Portionen | Vegetarisch</p>
+<p><strong>Beschreibung:</strong> In Hexenlaternen geschnitzte Kürbisse, gefüllt mit Quinoa, roten Linsen und knusprigem Schwarzkohl.</p>
+<h3>Zutaten (4 Mini oder 2 mittlere)</h3>
+<ul>
+<li>2-4 kleine Kürbisse</li>
+<li>100 g Quinoa</li>
+<li>100 g rote Linsen</li>
+<li>200 g Kürbisfleisch</li>
+<li>4-5 Schwarzkohlblätter</li>
+<li>1 Schalotte</li>
+<li>1 Knoblauchzehe</li>
+<li>500 ml Gemüsebrühe</li>
+<li>1 Teelöffel Kreuzkümmel</li>
+<li>1/2 Teelöffel geräuchertes Paprikapulver</li>
+<li>Eine Prise Zimt</li>
+<li>Extra natives Olivenöl, Salz, Pfeffer nach Geschmack</li>
+<li>Granatapfelkerne (optional)</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. Deckel der Kürbisse abschneiden, aushöhlen und Gesichter für Hexenlaternen-Masken schnitzen. Kerne und Fleisch beiseitestellen.</p>
+<p>2. In einer Pfanne fein gehackte Schalotte und Knoblauch mit einem Ölspritzer anschwitzen. Gewürfeltes Kürbisfleisch, Kreuzkümmel, Paprika und Zimt zugeben. Einige Minuten anschwitzen.</p>
+<p>3. Gespülte rote Linsen zugeben und heiße Brühe angießen. 10 Minuten kochen, dann Quinoa zugeben und weitere 12-15 Minuten köcheln, bis vollständig aufgenommen. Mit Salz würzen.</p>
+<p>4. Inzwischen Schwarzkohlblätter mit Öl und Salz würzen. Auf ein Backblech legen und bei 160 °C 8-10 Minuten backen, bis knusprig.</p>
+<p>5. Ausgehöhlte Kürbisse mit der heißen Quinoa-Linsen-Mischung füllen. Mit knusprigem Schwarzkohl und Granatapfelkernen garnieren. Sofort servieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-10-25</p>
+<p><strong>Meta:</strong> 4 μερίδες | Χορτοφαγικό</p>
+<p><strong>Περιγραφή:</strong> Κολοκύθες σκαλισμένες σε φαναράκια μάγισσας και γεμισμένες με κινόα, κόκκινες φακές και τραγανό μαύρο λάχανο.</p>
+<h3>Συστατικά (4 μίνι ή 2 μεσαίες)</h3>
+<ul>
+<li>2-4 μικρές κολοκύθες</li>
+<li>100 γρ κινόα</li>
+<li>100 γρ κόκκινες φακές</li>
+<li>200 γρ σάρκα κολοκύθας</li>
+<li>4-5 φύλλα μαύρου λάχανου (kale)</li>
+<li>1 κρεμμυδάκι</li>
+<li>1 σκελίδα σκόρδο</li>
+<li>500 ml ζωμός λαχανικών</li>
+<li>1 κουταλάκι του γλυκού κύμινο</li>
+<li>1/2 κουταλάκι του γλυκού καπνιστή πάπρικα</li>
+<li>Μια πρέζα κανέλα</li>
+<li>Ελαιόλαδο, αλάτι, πιπέρι κατά βούληση</li>
+<li>Σπόροι ροδιού (προαιρετικά)</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. Κόψτε τα καπάκια των κολοκυθών, αδειάστε τις και σκαλίστε πρόσωπα για να φτιάξετε μάσκες φαναριών μάγισσας. Κρατήστε τους σπόρους και τη σάρκα.</p>
+<p>2. Σε ένα τηγάνι, σοτάρετε ψιλοκομμένο κρεμμυδάκι και σκόρδο με λίγο λάδι. Προσθέστε κυβάκια σάρκας κολοκύθας, κύμινο, πάπρικα και κανέλα. Σοτάρετε για λίγα λεπτά.</p>
+<p>3. Προσθέστε ξεπλυμένες κόκκινες φακές και ρίξτε ζεστό ζωμό. Μαγειρέψτε για 10 λεπτά, μετά προσθέστε κινόα και συνεχίστε το μαγείρεμα για άλλα 12-15 λεπτά μέχρι να απορροφηθεί εντελώς. Αλατοπιπερώστε.</p>
+<p>4. Εν τω μεταξύ, αλατοπιπερώστε τα φύλλα μαύρου λάχανου με λάδι και αλάτι. Τοποθετήστε σε ταψί και ψήστε στους 160 °C για 8-10 λεπτά μέχρι να γίνουν τραγανά.</p>
+<p>5. Γεμίστε τις αδειές κολοκύθες με το ζεστό μείγμα κινόα-φακών. Γαρνίρετε με τραγανό μαύρο λάχανο και σπόρους ροδιού. Σερβίρετε αμέσως.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

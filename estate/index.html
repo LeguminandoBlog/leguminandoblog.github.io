@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estate | Leguminando</title>
+<meta name="description" content="Ricette stagionali a base di legumi — Leguminando">
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8f5f0; margin: 0; padding: 0; color: #2c1810; }
+.header { background: linear-gradient(135deg, #8B4513 0%, #D2691E 50%, #F4A460 100%); color: white; padding: 30px 20px; text-align: center; }
+.header h1 { margin: 0; font-size: 2.5em; }
+.header p { margin: 10px 0 0; opacity: 0.9; font-style: italic; }
+.back-link { display: inline-block; margin: 20px; padding: 10px 20px; background: #8B4513; color: white; text-decoration: none; border-radius: 25px; }
+.back-link:hover { background: #D2691E; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+.recipe-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; text-decoration: none; color: inherit; display: block; }
+.recipe-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+.recipe-thumb { width: 100%; height: 200px; object-fit: cover; display: block; }
+.recipe-info { padding: 15px; text-align: center; }
+.recipe-date { margin: 0; color: #8B4513; font-weight: bold; font-size: 0.9em; }
+.recipe-title { margin: 5px 0 0 0; color: #8B4513; font-size: 0.9em; line-height: 1.3; font-weight: bold; }
+.footer { text-align: center; padding: 30px; color: #8B4513; margin-top: 40px; }
+
+@media print {
+    .lang-tabs, input[type="radio"], .back-link, .footer, .view-counter,
+    .season-badge, .legend, .top-bar .logo, .slideshow-container,
+    .lang-content:not(:first-of-type) { display: none !important; }
+    body { background: white !important; padding: 0 !important; }
+    .content, .card-content, .recipe-info { box-shadow: none !important; }
+    .recipe-image, .recipe-thumb, .card img { max-width: 300px !important; height: auto !important; }
+    a { text-decoration: none !important; color: black !important; }
+    .header { padding: 10px !important; border-radius: 0 !important; }
+    #content-it, #content-en, #content-es, #content-pt, #content-de, #content-el { display: block !important; }
+}
+
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; }
+.fav-bar { text-align: center; margin: 10px 0; }
+
+
+.filter-bar { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 20px 0; padding: 15px; }
+.filter-btn { padding: 8px 16px; border: 2px solid #8B4513; border-radius: 20px; background: white; color: #8B4513; cursor: pointer; font-size: 0.9em; transition: all 0.3s; }
+.filter-btn:hover, .filter-btn.active { background: #8B4513; color: white; }
+.filter-btn.reset { border-color: #666; color: #666; }
+.filter-btn.reset:hover, .filter-btn.reset.active { background: #666; color: white; }
+
+
+
+
+
+
+
+.search-results { position: relative; z-index: 1000; margin: 10px auto; max-width: 800px; background: white; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); padding: 15px; }
+.search-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
+.search-card { display: block; padding: 15px; background: #fff; border: 2px solid #e0d5c5; border-radius: 10px; text-decoration: none; color: #5a4a3a; text-align: center; transition: all 0.3s; }
+.search-card:hover { border-color: #8B4513; background: #faf8f5; }
+
+</style>
+<meta property="og:title" content="Estate | Leguminando">
+<meta property="og:description" content="Ricetta a base di legumi da Leguminando">
+<meta property="og:image" content="https://leguminandoblog.github.io/estate/001.jpg">
+<meta property="og:url" content="https://leguminandoblog.github.io/estate/index.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="Leguminando — RSS Feed" href="../feed.xml">
+
+</head>
+<body>
+<div class="header">
+    <h1>🫘 Leguminando</h1>
+    
+
+<div class="search-bar" style="text-align:center;margin:20px 0;">
+<input type="text" id="searchInput" placeholder="Cerca ricetta..." autocomplete="off"
+       style="padding:10px 15px;width:80%;max-width:400px;border:2px solid #8B4513;border-radius:25px;font-size:1em;outline:none;">
+</div>
+<div id="searchResults" class="search-results" style="display:none;"></div>
+
+<div class="filter-bar">
+<button class="filter-btn reset active" onclick="filterRecipes()">Tutte</button>
+<button class="filter-btn" onclick="filterRecipes('carrube')">Carrube</button>
+<button class="filter-btn" onclick="filterRecipes('ceci')">Ceci</button>
+<button class="filter-btn" onclick="filterRecipes('fagioli')">Fagioli</button>
+<button class="filter-btn" onclick="filterRecipes('fave')">Fave</button>
+<button class="filter-btn" onclick="filterRecipes('lenticchie')">Lenticchie</button>
+<button class="filter-btn" onclick="filterRecipes('piselli')">Piselli</button>
+</div>
+<p>Ricette di estate</p>
+</div>
+
+<a href="../index.html" class="back-link">← Torna alla Home</a>
+
+<div class="container">
+    <div class="grid">
+
+        <a href="est_04.html" class="recipe-card" data-legumi="carrube">
+            <img src="est_04.jpg" alt="Dolce estivo semifreddo yogurt, chia, carrube" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-08-02</p>
+                <p class="recipe-title">Dolce estivo semifreddo yogurt, chia, carrube</p>
+            </div>
+        </a>
+
+        <a href="est_05.html" class="recipe-card" data-legumi="ceci">
+            <img src="est_05.jpg" alt="Bowl cetrioli pomodori con hummus ceci neri" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-07-30</p>
+                <p class="recipe-title">Bowl cetrioli pomodori con hummus ceci neri</p>
+            </div>
+        </a>
+
+        <a href="est_06.html" class="recipe-card" data-legumi="ceci">
+            <img src="est_06.jpg" alt="Spumini di Ceci Neri al Rosmarino" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-07-24</p>
+                <p class="recipe-title">Spumini di Ceci Neri al Rosmarino</p>
+            </div>
+        </a>
+
+        <a href="est_07.html" class="recipe-card" data-legumi="ceci">
+            <img src="est_07.jpg" alt="Ceci neri pomodori gialli rossi feta bottarga" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-07-26</p>
+                <p class="recipe-title">Ceci neri, pomodori gialli/rossi, feta, bottarga</p>
+            </div>
+        </a>
+
+        <a href="est_14.html" class="recipe-card" data-legumi="ceci">
+            <img src="est_14.jpg" alt="Skillet di Ceci con Crema di Yogurt" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-07-11</p>
+                <p class="recipe-title">Skillet di Ceci con Crema di Yogurt</p>
+            </div>
+        </a>
+
+        <a href="est_15.html" class="recipe-card" data-legumi="ceci,fave">
+            <img src="est_15.jpg" alt="Zuppa di Farro e Ceci con Fave" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-07-09</p>
+                <p class="recipe-title">Zuppa di Farro e Ceci con Fave</p>
+            </div>
+        </a>
+
+        <a href="est_16.html" class="recipe-card" data-legumi="fagioli">
+            <img src="est_16.jpg" alt="Insalata estiva di fagioli alla mediterranea" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-07-30</p>
+                <p class="recipe-title">Insalata estiva di fagioli alla mediterranea</p>
+            </div>
+        </a>
+
+        <a href="est_17.html" class="recipe-card" data-legumi="fagioli">
+            <img src="est_17.jpg" alt="Paella di mare rivisitata con quinoa e fagioli cannellini" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-07-30</p>
+                <p class="recipe-title">Paella di mare rivisitata con quinoa e fagioli cannellini</p>
+            </div>
+        </a>
+
+        <a href="est_20.html" class="recipe-card" data-legumi="ceci">
+            <img src="est_20.jpg" alt="Panzanella di Ceci con Pomodorini Heirloom e Basilico" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-07-28</p>
+                <p class="recipe-title">Panzanella di Ceci con Pomodorini Heirloom e Basilico</p>
+            </div>
+        </a>
+
+        <a href="001.html" class="recipe-card" data-legumi="ceci">
+            <img src="001.jpg" alt="Ricetta del 2026-07-13" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-07-13</p>
+            </div>
+        </a>
+
+        <a href="002.html" class="recipe-card" data-legumi="ceci">
+            <img src="002.jpg" alt="Ricetta del 2026-07-13" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-07-13</p>
+            </div>
+        </a>
+
+        <a href="003.html" class="recipe-card" data-legumi="ceci">
+            <img src="003.jpg" alt="Ricetta del 2026-07-12" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-07-12</p>
+            </div>
+        </a>
+
+        <a href="006.html" class="recipe-card" data-legumi="ceci,piselli">
+            <img src="006.jpg" alt="Aperitivo Estivo Completo" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-07-02</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Aperitivo Estivo Completo</h3>
+            </div>
+        </a>
+
+        <a href="007.html" class="recipe-card" data-legumi="fave">
+            <img src="007.jpg" alt="Insalata Estiva di Fave" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-07-02</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Insalata Estiva di Fave</h3>
+            </div>
+        </a>
+
+        <a href="008.html" class="recipe-card" data-legumi="ceci">
+            <img src="008.jpg" alt="Base" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-06-28</p>
+            </div>
+        </a>
+
+        <a href="009.html" class="recipe-card" data-legumi="ceci">
+            <img src="009.jpg" alt="Base" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-06-27</p>
+            </div>
+        </a>
+
+        <a href="010.html" class="recipe-card" data-legumi="ceci">
+            <img src="010.jpg" alt="Base" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-06-27</p>
+            </div>
+        </a>
+
+        <a href="011.html" class="recipe-card" data-legumi="lenticchie">
+            <img src="011.jpg" alt="Orecchiette Senza Glutine con Pesto e Acciughe" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-06-23</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Orecchiette Senza Glutine con Pesto e Acciughe</h3>
+            </div>
+        </a>
+
+        <a href="012.html" class="recipe-card" data-legumi="ceci,fagioli,lenticchie">
+            <img src="012.jpg" alt="Tartine di Crema di Radicchio e Fagioli Bianchi" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-06-15</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Tartine di Crema di Radicchio e Fagioli Bianchi</h3>
+            </div>
+        </a>
+
+        <a href="013.html" class="recipe-card" data-legumi="ceci,lenticchie">
+            <img src="013.jpg" alt="Tartine di Hummus di Ceci e Lenticchie" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-06-15</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Tartine di Hummus di Ceci e Lenticchie</h3>
+            </div>
+        </a>
+
+        <a href="014.html" class="recipe-card" data-legumi="fagioli">
+            <img src="014.jpg" alt="Tartare di Fagioli con Sgombro Affumicato e Avocado" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-06-15</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Tartare di Fagioli con Sgombro Affumicato e Avocado</h3>
+            </div>
+        </a>
+
+        <a href="015.html" class="recipe-card" data-legumi="ceci">
+            <img src="015.jpg" alt="Crema Fredda di Ceci con Zucchine e Alici Marinate" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-06-15</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Crema Fredda di Ceci con Zucchine e Alici Marinate</h3>
+            </div>
+        </a>
+
+        <a href="016.html" class="recipe-card" data-legumi="ceci">
+            <img src="016.jpg" alt="Aperitivo Mediterraneo: Crackers di Ceci e Rosemary Gin Fizz" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-06-09</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Aperitivo Mediterraneo: Crackers di Ceci e Rosemary Gin Fizz</h3>
+            </div>
+        </a>
+
+        <a href="017.html" class="recipe-card" data-legumi="lenticchie">
+            <img src="017.jpg" alt="Risotto con Lenticchie Rosse, Porri e Gamberetti" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-06-09</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Risotto con Lenticchie Rosse, Porri e Gamberetti</h3>
+            </div>
+        </a>
+
+        <a href="018.html" class="recipe-card" data-legumi="piselli">
+            <img src="018.jpg" alt="Risotto con Piselli e Speck" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-06-09</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Risotto con Piselli e Speck</h3>
+            </div>
+        </a>
+
+        <a href="019.html" class="recipe-card" data-legumi="lenticchie">
+            <img src="019.jpg" alt="Drink Estivo e Schiacciate Croccanti di Lenticchie" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-06-02</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Drink Estivo e Schiacciate Croccanti di Lenticchie</h3>
+            </div>
+        </a>
+
+        <a href="020.html" class="recipe-card" data-legumi="ceci">
+            <img src="020.jpg" alt="Verdure al Forno con Ceci e Dressing al Tahini" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-06-02</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Verdure al Forno con Ceci e Dressing al Tahini</h3>
+            </div>
+        </a>
+
+        <a href="021.html" class="recipe-card" data-legumi="fave">
+            <img src="021.jpg" alt="Vellutata di Fave con Asparagi Croccanti e Ravanelli in Agrodolce" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2026-06-02</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Vellutata di Fave con Asparagi Croccanti e Ravanelli in Agrodolce</h3>
+            </div>
+        </a>
+
+        <a href="022.html" class="recipe-card" data-legumi="fagioli">
+            <img src="022.jpg" alt="Pollo con Fagioli Cannellini alla Cacciatora" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-08-31</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Pollo con Fagioli Cannellini alla Cacciatora</h3>
+            </div>
+        </a>
+
+        <a href="023.html" class="recipe-card" data-legumi="piselli">
+            <img src="023.jpg" alt="Sgombro con Piselli, Verza e Zenzero al Limone" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-08-30</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Sgombro con Piselli, Verza e Zenzero al Limone</h3>
+            </div>
+        </a>
+
+        <a href="024.html" class="recipe-card" data-legumi="lenticchie">
+            <img src="024.jpg" alt="Caponata Estiva con Polpette di Baccalà alle Lenticchie" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-08-29</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Caponata Estiva con Polpette di Baccalà alle Lenticchie</h3>
+            </div>
+        </a>
+
+        <a href="025.html" class="recipe-card" data-legumi="fagioli">
+            <img src="025.jpg" alt="Tacos Vegetali con Fagioli Rossi, Porcini e Peperoni" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-08-24</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Tacos Vegetali con Fagioli Rossi, Porcini e Peperoni</h3>
+            </div>
+        </a>
+
+        <a href="026.html" class="recipe-card" data-legumi="ceci,lenticchie">
+            <img src="026.jpg" alt="Maltagliati Tricolori di Ceci, Lenticchie e Quinoa con Salsa di Pesce Spada" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-08-21</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Maltagliati Tricolori di Ceci, Lenticchie e Quinoa con Salsa di Pesce Spada</h3>
+            </div>
+        </a>
+
+        <a href="027.html" class="recipe-card" data-legumi="fagioli">
+            <img src="027.jpg" alt="Baccalà alla Vicentina con Crema di Fagioli dall'Occhio" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-08-20</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Baccalà alla Vicentina con Crema di Fagioli dall'Occhio</h3>
+            </div>
+        </a>
+
+        <a href="028.html" class="recipe-card" data-legumi="ceci,lenticchie">
+            <img src="028.jpg" alt="Ricetta del 2025-08-15" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-08-15</p>
+            </div>
+        </a>
+
+        <a href="029.html" class="recipe-card" data-legumi="ceci">
+            <img src="029.jpg" alt="Ricetta del 2025-08-14" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-08-14</p>
+            </div>
+        </a>
+
+        <a href="030.html" class="recipe-card" data-legumi="ceci">
+            <img src="030.jpg" alt="Ricetta del 2025-08-10" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-08-10</p>
+            </div>
+        </a>
+
+        <a href="031.html" class="recipe-card" data-legumi="ceci">
+            <img src="031.jpg" alt="Insalata Estiva di Quinoa con Tonno e Uova Sode" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-08-10</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Insalata Estiva di Quinoa con Tonno e Uova Sode</h3>
+            </div>
+        </a>
+
+        <a href="032.html" class="recipe-card" data-legumi="piselli">
+            <img src="032.jpg" alt="Ricetta del 2025-08-09" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-08-09</p>
+            </div>
+        </a>
+
+        <a href="033.html" class="recipe-card" data-legumi="ceci">
+            <img src="033.jpg" alt="Ricetta del 2025-08-08" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-08-08</p>
+            </div>
+        </a>
+
+        <a href="034.html" class="recipe-card" data-legumi="fagioli">
+            <img src="034.jpg" alt="Ricetta del 2025-08-01" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-08-01</p>
+            </div>
+        </a>
+
+        <a href="035.html" class="recipe-card" data-legumi="ceci">
+            <img src="035.jpg" alt="Ricetta per Gnocchi di Patate Rosse e Bianche con Farina di Ceci e Condimento di Salmone Affumicato" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-07-27</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Ricetta per Gnocchi di Patate Rosse e Bianche con Farina di Ceci e Condimento di Salmone Affumicato</h3>
+            </div>
+        </a>
+
+        <a href="036.html" class="recipe-card" data-legumi="lenticchie">
+            <img src="036.jpg" alt="Ricetta del 2025-07-26" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-07-26</p>
+            </div>
+        </a>
+
+        <a href="037.html" class="recipe-card" data-legumi="lenticchie">
+            <img src="037.jpg" alt="Ricetta del 2025-07-23" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-07-23</p>
+            </div>
+        </a>
+
+        <a href="038.html" class="recipe-card" data-legumi="ceci">
+            <img src="038.jpg" alt="Ricetta del 2025-07-20" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-07-20</p>
+            </div>
+        </a>
+
+        <a href="039.html" class="recipe-card" data-legumi="ceci">
+            <img src="039.jpg" alt="Ricetta del 2025-07-20" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-07-20</p>
+            </div>
+        </a>
+
+        <a href="040.html" class="recipe-card" data-legumi="lenticchie">
+            <img src="040.jpg" alt="Ricetta del 2025-07-19" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-07-19</p>
+            </div>
+        </a>
+
+        <a href="041.html" class="recipe-card" data-legumi="ceci,fagioli,lenticchie">
+            <img src="041.jpg" alt="Ricetta del 2025-07-17" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-07-17</p>
+            </div>
+        </a>
+
+        <a href="044.html" class="recipe-card" data-legumi="carrube">
+            <img src="044.jpg" alt="Dessert di Pesche e Yogurt Greco con Farina di Carrube" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-07-14</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Dessert di Pesche e Yogurt Greco con Farina di Carrube</h3>
+            </div>
+        </a>
+
+        <a href="045.html" class="recipe-card" data-legumi="fagioli">
+            <img src="045.jpg" alt="Ricetta del 2025-07-13" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-07-13</p>
+            </div>
+        </a>
+
+        <a href="046.html" class="recipe-card" data-legumi="fagioli">
+            <img src="046.jpg" alt="Ricetta del 2025-07-13" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-07-13</p>
+            </div>
+        </a>
+
+        <a href="047.html" class="recipe-card" data-legumi="lenticchie">
+            <img src="047.jpg" alt="Ricetta del 2025-07-11" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-07-11</p>
+            </div>
+        </a>
+
+        <a href="048.html" class="recipe-card" data-legumi="ceci">
+            <img src="048.jpg" alt="Ricetta del 2025-07-07" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-07-07</p>
+            </div>
+        </a>
+
+        <a href="049.html" class="recipe-card" data-legumi="ceci">
+            <img src="049.jpg" alt="Ricetta del 2025-07-05" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-07-05</p>
+            </div>
+        </a>
+
+        <a href="050.html" class="recipe-card" data-legumi="piselli">
+            <img src="050.jpg" alt="Insalata Fredda Mediterranea" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-07-05</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Insalata Fredda Mediterranea</h3>
+            </div>
+        </a>
+
+        <a href="051.html" class="recipe-card" data-legumi="ceci,fagioli">
+            <img src="051.jpg" alt="Ricetta del 2025-06-29" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-06-29</p>
+            </div>
+        </a>
+
+        <a href="052.html" class="recipe-card" data-legumi="ceci">
+            <img src="052.jpg" alt="Ricetta del 2025-06-29" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-06-29</p>
+            </div>
+        </a>
+
+        <a href="053.html" class="recipe-card" data-legumi="ceci">
+            <img src="053.jpg" alt="Ricetta per Antipasto a Base di Crema di Ceci, Cavolfiore, Zucca e Olive Taggiasche" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-06-28</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Ricetta per Antipasto a Base di Crema di Ceci, Cavolfiore, Zucca e Olive Taggiasche</h3>
+            </div>
+        </a>
+
+        <a href="054.html" class="recipe-card" data-legumi="fagioli">
+            <img src="054.jpg" alt="Impiattamento" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-06-24</p>
+            </div>
+        </a>
+
+        <a href="055.html" class="recipe-card" data-legumi="ceci">
+            <img src="055.jpg" alt="Antipasto di Radicchio Trevigiano, Uova Sode e Ceci" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-06-20</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Antipasto di Radicchio Trevigiano, Uova Sode e Ceci</h3>
+            </div>
+        </a>
+
+        <a href="056.html" class="recipe-card" data-legumi="ceci,lenticchie">
+            <img src="056.jpg" alt="Ricetta del 2025-06-15" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-06-15</p>
+            </div>
+        </a>
+
+        <a href="057.html" class="recipe-card" data-legumi="fagioli">
+            <img src="057.jpg" alt="Antipasto con Capperi, Acciughe, Fagioli dall'Occhio e Pane ai Cereali" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-06-14</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Antipasto con Capperi, Acciughe, Fagioli dall'Occhio e Pane ai Cereali</h3>
+            </div>
+        </a>
+
+        <a href="058.html" class="recipe-card" data-legumi="fagioli">
+            <img src="058.jpg" alt="Ricetta del 2025-06-12" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-06-12</p>
+            </div>
+        </a>
+
+        <a href="059.html" class="recipe-card" data-legumi="ceci">
+            <img src="059.jpg" alt="Ingredienti" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-06-11</p>
+        <h3 style="color:#8B4513;margin-top:8px;font-size:1em;">Ingredienti</h3>
+            </div>
+        </a>
+
+        <a href="060.html" class="recipe-card" data-legumi="ceci">
+            <img src="060.jpg" alt="Ricetta del 2025-06-09" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-06-09</p>
+            </div>
+        </a>
+
+        <a href="061.html" class="recipe-card" data-legumi="lenticchie">
+            <img src="061.jpg" alt="Ricetta del 2025-06-06" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-06-06</p>
+            </div>
+        </a>
+
+        <a href="062.html" class="recipe-card" data-legumi="ceci">
+            <img src="062.jpg" alt="Ricetta del 2025-06-01" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2025-06-01</p>
+            </div>
+        </a>
+
+        <a href="063.html" class="recipe-card" data-legumi="ceci">
+            <img src="063.jpg" alt="Ricetta del 2024-08-30" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2024-08-30</p>
+            </div>
+        </a>
+
+        <a href="064.html" class="recipe-card" data-legumi="fagioli">
+            <img src="064.jpg" alt="Ricetta del 2024-08-19" class="recipe-thumb">
+            <div class="recipe-info">
+                <p class="recipe-date">📅 2024-08-19</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="footer">
+    <p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+    <p>"Tutto è iniziato con hummus di ceci..."</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+
+<script>
+function filterRecipes(legume) {
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    if (legume) {
+        event.target.classList.add('active');
+    } else {
+        document.querySelector('.filter-btn.reset').classList.add('active');
+    }
+    
+    document.querySelectorAll('.recipe-card, .season-card').forEach(card => {
+        if (!legume) { card.style.display = ''; return; }
+        let data = card.getAttribute('data-legumi') || '';
+        card.style.display = data.split(',').includes(legume) ? '' : 'none';
+    });
+}
+</script>
+
+<script src="../fuse.min.js"></script>
+<script>
+let fuse = null;
+let recipes = [];
+
+fetch('../search-index.json')
+  .then(r => r.json())
+  .then(data => {
+    let season = document.location.pathname.split('/').filter(Boolean)[0];
+    recipes = data.filter(item => item.season === season);
+    fuse = new Fuse(recipes, {
+      keys: ['title', 'ingredients', 'tags', 'text'],
+      threshold: 0.4,
+      includeScore: true
+    });
+  });
+
+document.getElementById('searchInput').addEventListener('keyup', function(e) {
+  let q = e.target.value.trim();
+  let out = document.getElementById('searchResults');
+  if (!q || !fuse) { out.style.display = 'none'; return; }
+  let results = fuse.search(q).slice(0, 10);
+  if (!results.length) { out.innerHTML = '<p style="text-align:center;color:#999;">Nessuna ricetta trovata</p>'; out.style.display = 'block'; return; }
+  let html = '<div class="search-grid">';
+  results.forEach(r => {
+    let path = r.item.path.split('/').pop();
+    html += '<a href="' + path + '" class="search-card">' + r.item.title + '</a>';
+  });
+  html += '</div>';
+  out.innerHTML = html;
+  out.style.display = 'block';
+});
+</script>
+</body>
+</html>

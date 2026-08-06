@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zuppa Thai di Lenticchie | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Zuppa Thai di Lenticchie">
+<meta property="og:title" content="Zuppa Thai di Lenticchie | Leguminando">
+<meta property="og:description" content="Zuppa Thai di Lenticchie">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="primavera/017.html" data-title="Zuppa Thai di Lenticchie" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="017.jpg" alt="Zuppa Thai di Lenticchie" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2026-03-14</p>
+<p><strong>Meta:</strong> 4 porzioni | Vegano</p>
+<p><strong>Descrizione:</strong> Una zuppa aromatica e speziata con lenticchie rosse, latte di cocco e curry thai.</p>
+<h3>Ingredienti</h3>
+<h3>Per la Base</h3>
+<ul>
+<li>250 g di lenticchie rosse decorticate</li>
+<li>400 ml di latte di cocco intero</li>
+<li>500 ml di brodo vegetale</li>
+<li>1 cipolla rossa o 4 scalogni</li>
+<li>2 spicchi d'aglio</li>
+<li>3 cm di zenzero fresco grattugiato</li>
+<li>1 cucchiaio di olio di cocco o di semi</li>
+</ul>
+<h3>Per il Sapore Thai</h3>
+<ul>
+<li>2-3 cucchiai di pasta di curry rosso thai</li>
+<li>1 cucchiaino di pasta di curry verde (opzionale)</li>
+<li>2 foglie di lime kaffir o scorza di lime bio</li>
+<li>1 stelo di citronella leggermente pestato (facoltativo)</li>
+<li>1 cucchiaio di salsa di pesce (o salsa di soia per vegano)</li>
+</ul>
+<h3>Per le Verdure</h3>
+<ul>
+<li>2 carote medie a dadini</li>
+<li>1 zucchina piccola a dadini</li>
+<li>1 tazza di spinaci baby</li>
+<li>1 peperoncino rosso fresco a rondelle</li>
+<li>Coriandolo fresco q.b.</li>
+</ul>
+<h3>Per Finire</h3>
+<ul>
+<li>Succo di 1 lime</li>
+<li>1 cucchiaio di zucchero di canna</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Prepara le lenticchie:</strong> Sciacqua le lenticchie sotto acqua fredda finché l'acqua non diventa chiara.</p>
+<p>2. <strong>Soffriggi gli aromi:</strong> In una pentola grande, scalda l'olio di cocco. Aggiungi cipolla tritata, aglio schiacciato e zenzero grattugiato. Cuoci finché la cipolla non diventa traslucida.</p>
+<p>3. <strong>Cuoci la base:</strong> Aggiungi le lenticchie, il latte di cocco e il brodo vegetale. Porta a ebollizione, poi riduci il fuoco e lascia sobbollire.</p>
+<p>4. <strong>Incorpora gli aromi Thai:</strong> Mescola la pasta di curry rosso (e verde se usi). Aggiungi le foglie di lime e/o lo stelo di citronella.</p>
+<p>5. <strong>Aggiungi le verdure:</strong> Unisci le carote e le zucchine a dadini. Poco prima di servire, aggiungi gli spinaci.</p>
+<p>6. <strong>Finalizza e servi:</strong> Aggiungi il succo di lime e lo zucchero di canna per bilanciare i sapori. Guarnisci con peperoncino fresco e coriandolo.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2026-03-14</p>
+<p><strong>Meta:</strong> 4 servings | Vegan</p>
+<p><strong>Description:</strong> An aromatic and spiced soup with red lentils, coconut milk and Thai curry.</p>
+<h3>Ingredients</h3>
+<h3>For the Base</h3>
+<ul>
+<li>250 g split red lentils</li>
+<li>400 ml full-fat coconut milk</li>
+<li>500 ml vegetable broth</li>
+<li>1 red onion or 4 shallots</li>
+<li>2 garlic cloves</li>
+<li>3 cm fresh ginger, grated</li>
+<li>1 tablespoon coconut or vegetable oil</li>
+</ul>
+<h3>For the Thai Flavour</h3>
+<ul>
+<li>2-3 tablespoons Thai red curry paste</li>
+<li>1 teaspoon green curry paste (optional)</li>
+<li>2 kaffir lime leaves or organic lime zest</li>
+<li>1 lemongrass stalk, lightly bruised (optional)</li>
+<li>1 tablespoon fish sauce (or soy sauce for vegan)</li>
+</ul>
+<h3>For the Vegetables</h3>
+<ul>
+<li>2 medium carrots, diced</li>
+<li>1 small courgette, diced</li>
+<li>1 cup baby spinach</li>
+<li>1 fresh red chilli, sliced</li>
+<li>Fresh coriander to taste</li>
+</ul>
+<h3>To Finish</h3>
+<ul>
+<li>Juice of 1 lime</li>
+<li>1 tablespoon cane sugar</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Prepare lentils:</strong> Rinse lentils under cold water until the water runs clear.</p>
+<p>2. <strong>Sauté aromatics:</strong> In a large pot, heat coconut oil. Add chopped onion, crushed garlic and grated ginger. Cook until onion becomes translucent.</p>
+<p>3. <strong>Cook base:</strong> Add lentils, coconut milk and vegetable broth. Bring to a boil, then reduce heat and simmer.</p>
+<p>4. <strong>Add Thai aromatics:</strong> Stir in red curry paste (and green if using). Add lime leaves and/or lemongrass stalk.</p>
+<p>5. <strong>Add vegetables:</strong> Add diced carrots and courgette. Shortly before serving, add spinach.</p>
+<p>6. <strong>Finish and serve:</strong> Add lime juice and cane sugar to balance flavours. Garnish with fresh chilli and coriander.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2026-03-14</p>
+<p><strong>Meta:</strong> 4 porciones | Vegano</p>
+<p><strong>Descripción:</strong> Una sopa aromática y especiada con lentejas rojas, leche de coco y curry thai.</p>
+<h3>Ingredientes</h3>
+<h3>Para la Base</h3>
+<ul>
+<li>250 g de lentejas rojas peladas</li>
+<li>400 ml de leche de coco entera</li>
+<li>500 ml de caldo de verduras</li>
+<li>1 cebolla roja o 4 chalotas</li>
+<li>2 dientes de ajo</li>
+<li>3 cm de jengibre fresco rallado</li>
+<li>1 cucharada de aceite de coco o de semillas</li>
+</ul>
+<h3>Para el Sabor Thai</h3>
+<ul>
+<li>2-3 cucharadas de pasta de curry rojo thai</li>
+<li>1 cucharadita de pasta de curry verde (opcional)</li>
+<li>2 hojas de lima kaffir o ralladura de lima ecológica</li>
+<li>1 tallo de hierba limón ligeramente machacado (opcional)</li>
+<li>1 cucharada de salsa de pescado (o salsa de soja para vegano)</li>
+</ul>
+<h3>Para las Verduras</h3>
+<ul>
+<li>2 zanahorias medianas en dados</li>
+<li>1 calabacín pequeño en dados</li>
+<li>1 taza de espinacas baby</li>
+<li>1 guindilla roja fresca en rodajas</li>
+<li>Cilantro fresco c.s.</li>
+</ul>
+<h3>Para Terminar</h3>
+<ul>
+<li>Zumo de 1 lima</li>
+<li>1 cucharada de azúcar de caña</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparar las lentejas:</strong> Enjuaga las lentejas bajo agua fría hasta que el agua salga clara.</p>
+<p>2. <strong>Sofreír los aromáticos:</strong> En una olla grande, calienta el aceite de coco. Añade cebolla picada, ajo aplastado y jengibre rallado. Cuece hasta que la cebolla esté transparente.</p>
+<p>3. <strong>Cocinar la base:</strong> Agrega las lentejas, la leche de coco y el caldo de verduras. Lleva a ebullición, luego baja el fuego y deja hervir a fuego lento.</p>
+<p>4. <strong>Incorporar aromáticos thai:</strong> Mezcla la pasta de curry rojo (y verde si la usas). Añade las hojas de lima y/o el tallo de hierba limón.</p>
+<p>5. <strong>Agregar verduras:</strong> Incorpora las zanahorias y el calabacín en dados. Poco antes de servir, añade las espinacas.</p>
+<p>6. <strong>Finalizar y servir:</strong> Añade el zumo de lima y el azúcar de caña para equilibrar los sabores. Decora con guindilla fresca y cilantro.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2026-03-14</p>
+<p><strong>Meta:</strong> 4 porções | Vegan</p>
+<p><strong>Descrição:</strong> Uma sopa aromática e picante com lentilhas vermelhas, leite de coco e curry thai.</p>
+<h3>Ingredientes</h3>
+<h3>Para a Base</h3>
+<ul>
+<li>250 g de lentilhas vermelhas descascadas</li>
+<li>400 ml de leite de coco integral</li>
+<li>500 ml de caldo de legumes</li>
+<li>1 cebola roxa ou 4 chalotas</li>
+<li>2 dentes de alho</li>
+<li>3 cm de gengibre fresco ralado</li>
+<li>1 colher de sopa de óleo de coco ou de sementes</li>
+</ul>
+<h3>Para o Sabor Thai</h3>
+<ul>
+<li>2-3 colheres de sopa de pasta de curry vermelho thai</li>
+<li>1 colher de chá de pasta de curry verde (opcional)</li>
+<li>2 folhas de lima kaffir ou raspas de lima biológica</li>
+<li>1 haste de capim-limão ligeiramente esmagada (opcional)</li>
+<li>1 colher de sopa de molho de peixe (ou molho de soja para vegano)</li>
+</ul>
+<h3>Para os Legumes</h3>
+<ul>
+<li>2 cenouras médias em cubos</li>
+<li>1 courgette pequena em cubos</li>
+<li>1 chávena de espinafres baby</li>
+<li>1 malagueta vermelha fresca em rodelas</li>
+<li>Coentros frescos q.b.</li>
+</ul>
+<h3>Para Finalizar</h3>
+<ul>
+<li>Sumo de 1 lima</li>
+<li>1 colher de sopa de açúcar de cana</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparar as lentilhas:</strong> Enxágue as lentilhas sob água fria até a água ficar límpida.</p>
+<p>2. <strong>Refogar os aromáticos:</strong> Numa panela grande, aquece o óleo de coco. Junta cebola picada, alho esmagado e gengibre ralado. Cozinha até a cebola ficar translúcida.</p>
+<p>3. <strong>Cozinhar a base:</strong> Adiciona as lentilhas, o leite de coco e o caldo de legumes. Leva a ferver, depois reduz o lume e deixa cozinhar em lume brando.</p>
+<p>4. <strong>Incorporar aromáticos thai:</strong> Mistura a pasta de curry vermelho (e verde se usares). Adiciona as folhas de lima e/ou a haste de capim-limão.</p>
+<p>5. <strong>Adicionar legumes:</strong> Junta as cenouras e a courgette em cubos. Pouco antes de servir, acrescenta os espinafres.</p>
+<p>6. <strong>Finalizar e servir:</strong> Adiciona o sumo de lima e o açúcar de cana para equilibrar os sabores. Decora com malagueta fresca e coentros.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2026-03-14</p>
+<p><strong>Meta:</strong> 4 Portionen | Vegan</p>
+<p><strong>Beschreibung:</strong> Eine aromatische und würzige Suppe mit roten Linsen, Kokosmilch und Thai-Curry.</p>
+<h3>Zutaten</h3>
+<h3>Für die Basis</h3>
+<ul>
+<li>250 g geschälte rote Linsen</li>
+<li>400 ml Kokosmilch Vollfett</li>
+<li>500 ml Gemüsebrühe</li>
+<li>1 rote Zwiebel oder 4 Schalotten</li>
+<li>2 Knoblauchzehen</li>
+<li>3 cm frischer Ingwer, gerieben</li>
+<li>1 Esslöffel Kokos- oder Pflanzenöl</li>
+</ul>
+<h3>Für den Thai-Geschmack</h3>
+<ul>
+<li>2-3 Esslöffel Thai-Rot-Curry-Paste</li>
+<li>1 Teelöffel grüne Curry-Paste (optional)</li>
+<li>2 Kaffir-Limettenblätter oder Bio-Limettenschale</li>
+<li>1 Zitronengrasstange, leicht angedrückt (optional)</li>
+<li>1 Esslöffel Fischsauce (oder Sojasauce für Vegan)</li>
+</ul>
+<h3>Für das Gemüse</h3>
+<ul>
+<li>2 mittelgroße Karotten, gewürfelt</li>
+<li>1 kleine Zucchini, gewürfelt</li>
+<li>1 Tasse Baby-Spinat</li>
+<li>1 frische rote Chilischote, in Scheiben</li>
+<li>Frischer Koriander nach Geschmack</li>
+</ul>
+<h3>Zum Servieren</h3>
+<ul>
+<li>Saft von 1 Limette</li>
+<li>1 Esslöffel Rohrzucker</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Linsen vorbereiten:</strong> Linsen unter kaltem Wasser spülen, bis das Wasser klar ist.</p>
+<p>2. <strong>Aromaten anschwitzen:</strong> In einem großen Topf Kokosöl erhitzen. Gehackte Zwiebel, gepressten Knoblauch und geriebenen Ingwer zugeben. Anschwitzen, bis die Zwiebel glasig wird.</p>
+<p>3. <strong>Basis garen:</strong> Linsen, Kokosmilch und Gemüsebrühe zugeben. Zum Kochen bringen, dann Hitze reduzieren und köcheln lassen.</p>
+<p>4. <strong>Thai-Aromaten zugeben:</strong> Rote Curry-Paste (und grüne falls verwendet) einrühren. Limettenblätter und/oder Zitronengras zugeben.</p>
+<p>5. <strong>Gemüse zugeben:</strong> Gewürfelte Karotten und Zucchini zugeben. Kurz vor dem Servieren Spinat zugeben.</p>
+<p>6. <strong>Abschmecken und servieren:</strong> Limettensaft und Rohrzucker für Geschmacksbalance zugeben. Mit frischer Chili und Koriander garnieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2026-03-14</p>
+<p><strong>Meta:</strong> 4 μερίδες | Νηστίσιμο</p>
+<p><strong>Περιγραφή:</strong> Μια αρωματική και πικάντικη σούπα με κόκκινες φακές, γάλα καρύδας και curry thai.</p>
+<h3>Συστατικά</h3>
+<h3>Για τη Βάση</h3>
+<ul>
+<li>250 γρ ξεφλουδισμένες κόκκινες φακές</li>
+<li>400 ml πλήρες γάλα καρύδας</li>
+<li>500 ml ζωμός λαχανικών</li>
+<li>1 κόκκινο κρεμμύδι ή 4 κρεμμυδάκια</li>
+<li>2 σκελίδες σκόρδο</li>
+<li>3 εκ φρέσκο τζίντζερ, τριμμένο</li>
+<li>1 κουταλιά της σούπας λάδι καρύδας ή λαχανικών</li>
+</ul>
+<h3>Για τη Γεύση Thai</h3>
+<ul>
+<li>2-3 κουταλιές της σούπας πάστα κόκκινου curry thai</li>
+<li>1 κουταλάκι του γλυκού πάστα πράσινου curry (προαιρετικά)</li>
+<li>2 φύλλα kaffir lime ή ξύσμα βιολογικού lime</li>
+<li>1 κοτσάνι λεμονόχορτο, ελαφρά σπασμένο (προαιρετικά)</li>
+<li>1 κουταλιά της σούπας σάλτσα ψαριού (ή σόγιας για vegan)</li>
+</ul>
+<h3>Για τα Λαχανικά</h3>
+<ul>
+<li>2 μεσαία καρότα σε κύβους</li>
+<li>1 μικρό κολοκυθάκι σε κύβους</li>
+<li>1 φλιτζάνι baby σπανάκι</li>
+<li>1 φρέσκια κόκκινη καυτερή πιπεριά σε ροδέλες</li>
+<li>Φρέσκος κολίανδρος κατά βούληση</li>
+</ul>
+<h3>Για το Τελείωμα</h3>
+<ul>
+<li>Χυμός 1 lime</li>
+<li>1 κουταλιά της σούπας ζάχαρη καλαμποκιού</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία φακών:</strong> Ξεπλύνετε τις φακές κάτω από κρύο νερό μέχρι να καθαρίσει το νερό.</p>
+<p>2. <strong>Σοτάρισμα αρωματικών:</strong> Σε μια μεγάλη κατσαρόλα, ζεστάνετε το λάδι καρύδας. Προσθέστε ψιλοκομμένο κρεμμύδι, πιεσμένο σκόρδο και τριμμένο τζίντζερ. Σοτάρετε μέχρι το κρεμμύδι να γίνει διάφανο.</p>
+<p>3. <strong>Μαγείρεμα βάσης:</strong> Προσθέστε τις φακές, το γάλα καρύδας και τον ζωμό λαχανικών. Φέρτε σε βρασμό, μετά χαμηλώστε τη φωτιά και σιγοβράστε.</p>
+<p>4. <strong>Προσθήκη αρωματικών thai:</strong> Ανακατέψτε την πάστα κόκκινου curry (και πράσινου αν χρησιμοποιείτε). Προσθέστε τα φύλλα lime και/ή το κοτσάνι λεμονόχορτου.</p>
+<p>5. <strong>Προσθήκη λαχανικών:</strong> Προσθέστε τα καρότα και το κολοκυθάκι σε κύβους. Λίγο πριν σερβίρετε, προσθέστε το σπανάκι.</p>
+<p>6. <strong>Ολοκλήρωση και σερβίρισμα:</strong> Προσθέστε τον χυμό lime και τη ζάχαρη για ισορροπία γεύσης. Γαρνίρετε με φρέσκια καυτερή πιπεριά και κολίανδρο.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+<div data-legumi="lenticchie" style="display:none;"></div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

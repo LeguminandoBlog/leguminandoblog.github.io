@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caponata Estiva con Polpette di Baccalà alle Lenticchie | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Caponata Estiva con Polpette di Baccalà alle Lenticchie">
+<meta property="og:title" content="Caponata Estiva con Polpette di Baccalà alle Lenticchie | Leguminando">
+<meta property="og:description" content="Caponata Estiva con Polpette di Baccalà alle Lenticchie">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="estate/024.html" data-title="Caponata Estiva con Polpette di Baccalà alle Lenticchie" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="024.jpg" alt="Caponata Estiva con Polpette di Baccalà alle Lenticchie" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-08-29</p>
+<p><strong>Meta:</strong> 4 porzioni | Pesce</p>
+<p><strong>Descrizione:</strong> Caponata estiva con melanzane e peperoni, accompagnata da croccanti polpette di baccalà e lenticchie. Un piatto ricco di sapori mediterranei.</p>
+<h3>Ingredienti per la caponata</h3>
+<ul>
+<li>2 melanzane medie a cubetti</li>
+<li>1 peperone rosso a listarelle</li>
+<li>1 cipolla bianca a fettine</li>
+<li>1 spicchio d'aglio schiacciato</li>
+<li>100 g olive verdi denocciolate</li>
+<li>2 coste di sedano</li>
+<li>1 carota</li>
+<li>1 cipolla rossa</li>
+<li>200 g polpa di pomodoro</li>
+<li>8-10 pomodorini pachino</li>
+<li>Olio extravergine d'oliva, sale, pepe q.b.</li>
+</ul>
+<h3>Ingredienti per le polpette</h3>
+<ul>
+<li>300 g baccalà lessato e sminuzzato</li>
+<li>80 g farina di lenticchie</li>
+<li>Prezzemolo tritato, sale, pepe q.b.</li>
+<li>Olio di semi per friggere</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Battuto:</strong> Soffriggi cipolla rossa, aglio, sedano e carota tritati. Aggiungi i pomodorini a pezzetti e la polpa di pomodoro, cuoci 10 minuti a fuoco medio.</p>
+<p>2. <strong>Verdure:</strong> In altra padella, scalda un filo d'olio e rosola aglio, cipolla bianca, melanzane e peperone. Quando sono dorati aggiungi le olive e il sugo; amalgama 5 minuti.</p>
+<p>3. <strong>Polpette:</strong> Mescola baccalà, farina di lenticchie, prezzemolo, sale e pepe. Forma palline e friggi in olio caldo fino a doratura.</p>
+<p>4. <strong>Impiattamento:</strong> Impiatta la caponata tiepida con accanto 4-5 polpette croccanti.</p>
+<p><strong>Consigli:</strong> Lascia riposare la caponata almeno 1 ora per farle sprigionare tutti i profumi. Scolala leggermente prima di servire, così resta asciutta ma succosa.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-08-29</p>
+<p><strong>Meta:</strong> 4 servings | Fish</p>
+<p><strong>Description:</strong> Summer caponata with aubergines and peppers, accompanied by crispy salt cod and lentil fritters. A dish rich in Mediterranean flavours.</p>
+<h3>Ingredients for the caponata</h3>
+<ul>
+<li>2 medium aubergines in cubes</li>
+<li>1 red pepper in strips</li>
+<li>1 white onion in slices</li>
+<li>1 garlic clove crushed</li>
+<li>100 g pitted green olives</li>
+<li>2 celery stalks</li>
+<li>1 carrot</li>
+<li>1 red onion</li>
+<li>200 g tomato pulp</li>
+<li>8-10 cherry tomatoes</li>
+<li>Extra virgin olive oil, salt, pepper to taste</li>
+</ul>
+<h3>Ingredients for the fritters</h3>
+<ul>
+<li>300 g boiled and flaked salt cod</li>
+<li>80 g lentil flour</li>
+<li>Chopped parsley, salt, pepper to taste</li>
+<li>Seed oil for frying</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Soffritto:</strong> Sauté chopped red onion, garlic, celery and carrot. Add diced cherry tomatoes and tomato pulp, cook 10 minutes over medium heat.</p>
+<p>2. <strong>Vegetables:</strong> In another pan, heat a drizzle of oil and sauté garlic, white onion, aubergines and pepper. When golden add olives and sauce; mix 5 minutes.</p>
+<p>3. <strong>Fritters:</strong> Mix salt cod, lentil flour, parsley, salt and pepper. Form balls and fry in hot oil until golden.</p>
+<p>4. <strong>Plating:</strong> Plate the warm caponata with 4-5 crispy fritters on the side.</p>
+<p><strong>Tips:</strong> Let the caponata rest at least 1 hour to release all its aromas. Drain slightly before serving, so it stays dry but juicy.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-08-29</p>
+<p><strong>Meta:</strong> 4 porciones | Pescado</p>
+<p><strong>Descripción:</strong> Caponata de verano con berenjenas y pimientos, acompañada de crujientes albóndigas de bacalao y lentejas. Un plato rico en sabores mediterráneos.</p>
+<h3>Ingredientes para la caponata</h3>
+<ul>
+<li>2 berenjenas medianas en cubos</li>
+<li>1 pimiento rojo en tiras</li>
+<li>1 cebolla blanca en rodajas</li>
+<li>1 diente de ajo aplastado</li>
+<li>100 g aceitunas verdes deshuesadas</li>
+<li>2 tallos de apio</li>
+<li>1 zanahoria</li>
+<li>1 cebolla roja</li>
+<li>200 g pulpa de tomate</li>
+<li>8-10 tomates cherry</li>
+<li>Aceite de oliva virgen extra, sal, pimienta c.s.</li>
+</ul>
+<h3>Ingredientes para las albóndigas</h3>
+<ul>
+<li>300 g bacalao hervido y desmenuzado</li>
+<li>80 g harina de lentejas</li>
+<li>Perejil picado, sal, pimienta c.s.</li>
+<li>Aceite de semillas para freír</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Sofrito:</strong> Sofríe cebolla roja, ajo, apio y zanahoria picados. Añade tomates cherry en trozos y pulpa de tomate, cuece 10 minutos a fuego medio.</p>
+<p>2. <strong>Verduras:</strong> En otra sartén, calienta un chorrito de aceite y sofríe ajo, cebolla blanca, berenjenas y pimiento. Cuando estén dorados añade aceitunas y salsa; mezcla 5 minutos.</p>
+<p>3. <strong>Albóndigas:</strong> Mezcla bacalao, harina de lentejas, perejil, sal y pimienta. Forma bolas y fríe en aceite caliente hasta dorar.</p>
+<p>4. <strong>Emplatado:</strong> Emplata la caponata tibia con 4-5 albóndigas crujientes al lado.</p>
+<p><strong>Sugerencias:</strong> Deja reposar la caponata al menos 1 hora para que suelte todos sus aromas. Escúrrela ligeramente antes de servir, así quedará seca pero jugosa.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-08-29</p>
+<p><strong>Meta:</strong> 4 porções | Peixe</p>
+<p><strong>Descrição:</strong> Caponata de verão com beringelas e pimentos, acompanhada por croquetas crocantes de bacalhau e lentilhas. Um prato rico em sabores mediterrânicos.</p>
+<h3>Ingredientes para a caponata</h3>
+<ul>
+<li>2 beringelas médias em cubos</li>
+<li>1 pimento vermelho em tiras</li>
+<li>1 cebola branca em fatias</li>
+<li>1 dente de alho esmagado</li>
+<li>100 g azeitonas verdes descaroçadas</li>
+<li>2 talos de aipo</li>
+<li>1 cenoura</li>
+<li>1 cebola roxa</li>
+<li>200 g polpa de tomate</li>
+<li>8-10 tomates cherry</li>
+<li>Azeite extra virgem, sal, pimenta q.b.</li>
+</ul>
+<h3>Ingredientes para as croquetas</h3>
+<ul>
+<li>300 g bacalhau cozido e desfiado</li>
+<li>80 g farinha de lentilhas</li>
+<li>Salsa picada, sal, pimenta q.b.</li>
+<li>Óleo de sementes para fritar</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Refogado:</strong> Refoga cebola roxa, alho, aipo e cenoura picados. Adiciona tomates cherry em pedaços e polpa de tomate, cozinha 10 minutos em lume médio.</p>
+<p>2. <strong>Legumes:</strong> Noutra frigideira, aquece um fio de azeite e refoga alho, cebola branca, beringelas e pimento. Quando dourados adiciona azeitonas e molho; mistura 5 minutos.</p>
+<p>3. <strong>Croquetas:</strong> Mistura bacalhau, farinha de lentilhas, salsa, sal e pimenta. Forma bolas e frita em óleo quente até dourar.</p>
+<p>4. <strong>Empratamento:</strong> Emprata a caponata morna com 4-5 croquetas crocantes ao lado.</p>
+<p><strong>Sugestões:</strong> Deixa a caponata repousar pelo menos 1 hora para libertar todos os aromas. Escorre ligeiramente antes de servir, assim fica seca mas suculenta.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-08-29</p>
+<p><strong>Meta:</strong> 4 Portionen | Fisch</p>
+<p><strong>Beschreibung:</strong> Sommerliche Caponata mit Auberginen und Paprika, begleitet von knusprigen Kabeljau-Linsen-Bällchen. Ein Gericht reich an mediterranen Aromen.</p>
+<h3>Zutaten für die Caponata</h3>
+<ul>
+<li>2 mittlere Auberginen in Würfeln</li>
+<li>1 rote Paprika in Streifen</li>
+<li>1 weiße Zwiebel in Scheiben</li>
+<li>1 Knoblauchzehe gepresst</li>
+<li>100 g entsteinte grüne Oliven</li>
+<li>2 Selleriestangen</li>
+<li>1 Karotte</li>
+<li>1 rote Zwiebel</li>
+<li>200 g Tomatenpüree</li>
+<li>8-10 Kirschtomaten</li>
+<li>Olivenöl extra vergine, Salz, Pfeffer nach Geschmack</li>
+</ul>
+<h3>Zutaten für die Bällchen</h3>
+<ul>
+<li>300 g gekochter und zerkleinierter Kabeljau</li>
+<li>80 g Linsenmehl</li>
+<li>Gehackte Petersilie, Salz, Pfeffer nach Geschmack</li>
+<li>Samenöl zum Frittieren</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Soffritto:</strong> Rote Zwiebel, Knoblauch, Sellerie und Karotte hacken und anschwitzen. Kirschtomaten in Stücke und Tomatenpüree zugeben, 10 Minuten bei mittlerer Hitze köcheln.</p>
+<p>2. <strong>Gemüse:</strong> In einer weiteren Pfanne einen Schuss Öl erhitzen und Knoblauch, weiße Zwiebel, Auberginen und Paprika anschwitzen. Wenn goldbraun, Oliven und Sauce zugeben; 5 Minuten vermischen.</p>
+<p>3. <strong>Bällchen:</strong> Kabeljau, Linsenmehl, Petersilie, Salz und Pfeffer vermischen. Bällchen formen und in heißem Öl goldbraun frittieren.</p>
+<p>4. <strong>Anrichten:</strong> Die lauwarme Caponata mit 4-5 knusprigen Bällchen anrichten.</p>
+<p><strong>Tipps:</strong> Die Caponata mindestens 1 Stunde ruhen lassen, damit sich alle Aromen entfalten. Vor dem Servieren leicht abtropfen lassen, damit sie trocken aber saftig bleibt.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-08-29</p>
+<p><strong>Meta:</strong> 4 μερίδες | Ψάρι</p>
+<p><strong>Περιγραφή:</strong> Καλοκαιρινή καπονάτα με μελιτζάνες και πιπεριές, συνοδευόμενη από τραγανά κεφτεδάκια μπακαλιάρου με φακές. Ένα πιάτο πλούσιο σε μεσογειακά αρώματα.</p>
+<h3>Συστατικά για την καπονάτα</h3>
+<ul>
+<li>2 μεσαίες μελιτζάνες σε κύβους</li>
+<li>1 κόκκινη πιπεριά σε λωρίδες</li>
+<li>1 λευκό κρεμμύδι σε φέτες</li>
+<li>1 σκελίδα σκόρδο πλασταρωμένη</li>
+<li>100 γρ πράσινες ελιές χωρίς κουκούτσι</li>
+<li>2 σέλινα</li>
+<li>1 καρότο</li>
+<li>1 κόκκινο κρεμμύδι</li>
+<li>200 γρ πουρέ ντομάτας</li>
+<li>8-10 ντοματίνια</li>
+<li>Ελαιόλαδο, αλάτι, πιπέρι κατά βούληση</li>
+</ul>
+<h3>Συστατικά για τα κεφτεδάκια</h3>
+<ul>
+<li>300 γρ βρασμένος και ψιλοκομμένος μπακαλιάρος</li>
+<li>80 γρ αλεύρι φακής</li>
+<li>Ψιλοκομμένος μαϊντανός, αλάτι, πιπέρι κατά βούληση</li>
+<li>Λάδι σπορέλαιο για τηγάνισμα</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Σοτέ:</strong> Σοτάρε κόκκινο κρεμμύδι, σκόρδο, σέλινο και καρότο ψιλοκομμένα. Πρόσθεσε ντοματίνια σε κομμάτια και πουρέ ντομάτας, μαγείρεψε 10 λεπτά σε μέτρια φωτιά.</p>
+<p>2. <strong>Λαχανικά:</strong> Σε άλλο τηγάνι, ζέστανε λίγο λάδι και σόταρε σκόρδο, λευκό κρεμμύδι, μελιτζάνες και πιπεριά. Όταν ροδίσουν πρόσθεσε ελιές και σάλτσα· ανακάτεψε 5 λεπτά.</p>
+<p>3. <strong>Κεφτεδάκια:</strong> Ανακάτεψε μπακαλιάρο, αλεύρι φακής, μαϊντανό, αλάτι και πιπέρι. Πλάσε μπαλάκια και τηγάνισε σε καυτό λάδι μέχρι να ροδίσουν.</p>
+<p>4. <strong>Παρουσίαση:</strong> Σέρβιρε την καπονάτα χλιαρή με 4-5 τραγανά κεφτεδάκια στο πλάι.</p>
+<p><strong>Συμβουλές:</strong> Άφησε την καπονάτα να ξεκουραστεί τουλάχιστον 1 ώρα για να βγάλει όλα τα αρώματά της. Στράγγιξέ την ελαφρά πριν σερβίρεις, έτσι θα μείνει στεγνή αλλά ζουμερή.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

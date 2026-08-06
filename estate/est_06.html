@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spumini di Ceci Neri al Rosmarino | Leguminando</title>
+<meta name="description" content="Spumini di Ceci Neri al Rosmarino">
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%); color: #333; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 30px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.header h1 { margin: 0; font-size: 2.2em; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+.header p { margin: 10px 0 0 0; font-size: 1.1em; opacity: 0.9; }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border: 2px solid #D2691E; background: white; color: #8B4513; border-radius: 20px; cursor: pointer; font-size: 0.85em; transition: all 0.3s; }
+.lang-tab:hover { background: #faf8f5; }
+.lang-tab.active { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; }
+.lang-content { display: none; }
+.lang-content.active { display: block; }
+.content { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.recipe-image { width: 100%; max-width: 700px; height: 400px; object-fit: cover; border-radius: 12px; margin: 0 auto 30px auto; display: block; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.section { margin-bottom: 30px; }
+.section h2 { color: #8B4513; border-bottom: 3px solid #D2691E; padding-bottom: 10px; margin-bottom: 20px; font-size: 1.5em; }
+.section h3 { color: #D2691E; margin: 20px 0 10px 0; font-size: 1.2em; }
+.ingredients-list { background: #faf8f5; padding: 20px; border-radius: 10px; border-left: 5px solid #D2691E; }
+.ingredients-list ul { list-style: none; padding: 0; }
+.ingredients-list li { padding: 8px 0; border-bottom: 1px dashed #e0d5c8; }
+.ingredients-list li:last-child { border-bottom: none; }
+.ingredients-list li:before { content: "🫘 "; margin-right: 8px; }
+.steps-list { counter-reset: step; }
+.steps-list li { counter-increment: step; padding: 15px 0 15px 50px; position: relative; border-bottom: 1px solid #eee; }
+.steps-list li:last-child { border-bottom: none; }
+.steps-list li::before { content: counter(step); position: absolute; left: 0; top: 10px; background: #8B4513; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em; }
+.footer { text-align: center; margin-top: 40px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 20px 0; padding: 12px 24px; background: linear-gradient(135deg, #8B4513, #D2691E); color: white; text-decoration: none; border-radius: 25px; font-size: 1em; transition: transform 0.2s; }
+.back-link:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.fav-btn { cursor: pointer; font-size: 1.2em; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+@media print {
+    .lang-tabs { display: none !important; }
+    .lang-content { display: block !important; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>🫘 Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<div class="content">
+<div style="text-align: center; margin: -20px 0 20px 0;">
+<span style="display: inline-block; padding: 8px 16px; background: linear-gradient(135deg, #D2691E, #8B4513); color: white; border-radius: 20px; font-size: 0.9em;">
+📅 2026-07-24 — Estate ☀️</span>
+</div>
+<img src="est_06.jpg" alt="Spumini di Ceci Neri al Rosmarino" class="recipe-image">
+
+<div class="fav-bar" style="text-align:center;margin:5px 0;">
+<span class="fav-btn" data-path="estate/est_06.html" data-title="Spumini di Ceci Neri al Rosmarino" onclick="toggleFav(this.dataset.path, this.dataset.title)">
+🤍</span> Aggiungi ai preferiti
+</div>
+
+<div class="lang-tabs">
+<span class="lang-tab active" data-lang="it" onclick="switchLang('it')">🇮🇹 IT</span>
+<span class="lang-tab" data-lang="en" onclick="switchLang('en')">🇬🇧 EN</span>
+<span class="lang-tab" data-lang="es" onclick="switchLang('es')">🇪🇸 ES</span>
+<span class="lang-tab" data-lang="pt" onclick="switchLang('pt')">🇵🇹 PT</span>
+<span class="lang-tab" data-lang="de" onclick="switchLang('de')">🇩🇪 DE</span>
+<span class="lang-tab" data-lang="el" onclick="switchLang('el')">🇬🇷 EL</span>
+</div>
+
+<div id="lang-it" class="lang-content active">
+<div class="section">
+<h2>Spumini di Ceci Neri al Rosmarino</h2>
+<p>Un piatto estivo e rustico che celebra i ceci neri in tutta la loro intensità, aromatizzati dal profumo intenso del rosmarino fresco e arricchiti dalla paprika affumicata per un tocco leggermente piccante.</p>
+
+<h3>Ingredienti (4 persone)</h3>
+<div class="ingredients-list">
+<ul>
+<li>250g ceci neri precotti (scolati e risciacquati)</li>
+<li>2 cucchiai olio EVO</li>
+<li>1 rametto rosmarino fresco</li>
+<li>1/2 cucchiaino paprika affumicata</li>
+<li>Sale marino q.b.</li>
+<li>Pepe nero q.b.</li>
+<li>Crackers integrali</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparazione</h3>
+<ol class="steps-list">
+<li>Scaldare 2 cucchiai di olio extravergine in una padella antiaderente insieme al rametto di rosmarino fresco, lasciando che i suoi oli essenziali resinati si sprigionino nell'olio caldo per 2-3 minuti a fuoco medio-basso.</li>
+<li>Aggiungere i 250g di ceci neri scolati e lasciarli insaporire a fuoco medio per circa 5 minuti, mescolando delicatamente per mantenere intatta la loro consistenza soda.</li>
+<li>A fuoco spento, quando i ceci sono ancora caldi, spolverare con mezzo cucchiaino di paprika affumicata che donerà un profondo colore rosso-arancione e un aroma leggermente piccante, completare con sale marino e una macinata di pepe nero fresco.</li>
+<li>Servire immediatamente in piccole ciotoline di terracotta accompagnati da crackers integrali croccanti.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-en" class="lang-content">
+<div class="section">
+<h2>Spumini di Ceci Neri al Rosmarino</h2>
+<p>An authentic taste of the Mediterranean countryside, perfect for summer evenings by the sea.</p>
+
+<h3>Ingredients (4 servings)</h3>
+<div class="ingredients-list">
+<ul>
+<li>250g precooked black chickpeas (drained and rinsed)</li>
+<li>2 tablespoons extra virgin olive oil</li>
+<li>1 sprig fresh rosemary</li>
+<li>1/2 teaspoon smoked paprika</li>
+<li>Sea salt to taste</li>
+<li>Freshly ground black pepper to taste</li>
+<li>Whole grain crackers</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparation</h3>
+<ol class="steps-list">
+<li>Heat 2 tablespoons of extra virgin olive oil in a non-stick pan with the sprig of fresh rosemary, allowing its resinous essential oils to infuse the hot oil for 2-3 minutes over medium-low heat.</li>
+<li>Add the 250g of drained black chickpeas and let them absorb the flavors over medium heat for about 5 minutes, stirring gently to preserve their firm texture.</li>
+<li>Turn off the heat, and while the chickpeas are still warm, sprinkle with half a teaspoon of smoked paprika which will give a deep reddish-orange color and a lightly spicy aroma, then season with sea salt and a grind of fresh black pepper.</li>
+<li>Serve immediately in small terracotta bowls accompanied by crunchy whole grain crackers.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-es" class="lang-content">
+<div class="section">
+<h2>Spumini di Ceci Neri al Rosmarino</h2>
+<p>Un plato veraniego y rústico que celebra los garbanzos negros en toda su intensidad, aromatizados con el intenso perfume del romero fresco y enriquecidos con la paprika ahumada para un toque ligeramente picante.</p>
+
+<h3>Ingredientes (4 personas)</h3>
+<div class="ingredients-list">
+<ul>
+<li>250g garbanzos negros precocidos (escurridos y enjuagados)</li>
+<li>2 cucharadas aceite de oliva virgen extra</li>
+<li>1 ramita de romero fresco</li>
+<li>1/2 cucharadita de paprika ahumada</li>
+<li>Sal marina al gusto</li>
+<li>Pimienta negra al gusto</li>
+<li>Galletas integrales</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparación</h3>
+<ol class="steps-list">
+<li>Calentar 2 cucharadas de aceite de oliva virgen extra en una sartén antiadherente junto con la ramita de romero fresco, dejando que sus aceites esenciales resinosos se desprendan en el aceite caliente durante 2-3 minutos a fuego medio-bajo.</li>
+<li>Añadir los 250g de garbanzos negros escurridos y dejarlos insaporar a fuego medio durante unos 5 minutos, removiendo suavemente para mantener intacta su consistencia firme.</li>
+<li>A fuego apagado, cuando los garbanzos aún estén calientes, espolvorear con media cucharadita de paprika ahumada que dará un profundo color rojo-anaranjado y un aroma ligeramente picante, completar con sal marina y una molienda de pimienta negra fresca.</li>
+<li>Servir inmediatamente en pequeños cuencos de terracota acompañados de galletas integrales crujientes.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-pt" class="lang-content">
+<div class="section">
+<h2>Spumini di Ceci Neri al Rosmarino</h2>
+<p>Um prato estivo e rústico que celebra os grãos-de-bico pretos em toda a sua intensidade, aromatizados pelo perfume intenso do alecrim fresco e enriquecidos com a páprica defumada para um toque ligeiramente picante.</p>
+
+<h3>Ingredientes (4 pessoas)</h3>
+<div class="ingredients-list">
+<ul>
+<li>250g grãos-de-bico pretos precozidos (escorridos e enxaguados)</li>
+<li>2 colheres de sopa azeite de oliva virgem extra</li>
+<li>1 ramo de alecrim fresco</li>
+<li>1/2 colher de chá páprica defumada</li>
+<li>Sal marinho a gosto</li>
+<li>Pimenta preta moída a gosto</li>
+<li>Bolachas integrais</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparação</h3>
+<ol class="steps-list">
+<li>Aquecer 2 colheres de sopa de azeite de oliva virgem extra numa frigideira antiaderente junto com o ramo de alecrim fresco, deixando que os seus óleos essenciais resinosos se libertem no azeite quente durante 2-3 minutos em lume médio-baixo.</li>
+<li>Adicionar os 250g de grãos-de-bico pretos escorridos e deixá-los apurar em lume médio durante cerca de 5 minutos, mexendo delicadamente para manter intacta a sua consistência firme.</li>
+<li>A lume apagado, quando os grãos-de-bico ainda estiverem quentes, polvilhar com meia colher de chá de páprica defumada que dará uma profunda cor vermelho-laranja e um aroma ligeiramente picante, completar com sal marinho e uma moagem de pimenta preta fresca.</li>
+<li>Servir imediatamente em pequenas tigelas de terracota acompanhados de bolachas integrais crocantes.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-de" class="lang-content">
+<div class="section">
+<h2>Spumini di Ceci Neri al Rosmarino</h2>
+<p>Ein rustikales Sommergericht, das die schwarzen Kichererbsen in all ihrer Intensität zelebriert, aromatisiert mit dem intensiven Duft von frischem Rosmarin und bereichert mit geräuchertem Paprika für eine leicht pikante Note.</p>
+
+<h3>Zutaten (4 Personen)</h3>
+<div class="ingredients-list">
+<ul>
+<li>250g vorgekochte schwarze Kichererbsen (abgetropft und abgespült)</li>
+<li>2 Esslöffel natives Olivenöl extra</li>
+<li>1 Zweig frischer Rosmarin</li>
+<li>1/2 Teelöffel geräucherter Paprika</li>
+<li>Meersalz nach Geschmack</li>
+<li>Frisch gemahlener schwarzer Pfeffer nach Geschmack</li>
+<li>Vollkorn-Cracker</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Zubereitung</h3>
+<ol class="steps-list">
+<li>2 Esslöffel natives Olivenöl extra in einer beschichteten Pfanne zusammen mit dem Zweig frischen Rosmarin erhitzen, damit seine harzigen ätherischen Öle sich für 2-3 Minuten bei mittlerer Hitze im heißen Öl entfalten können.</li>
+<li>Die 250g abgetropften schwarzen Kichererbsen zugeben und bei mittlerer Hitze etwa 5 Minuten ziehen lassen, dabei sanft umrühren, damit ihre feste Konsistenz erhalten bleibt.</li>
+<li>Bei ausgeschalteter Hitze, während die Kichererbsen noch warm sind, mit einem halben Teelöffel geräuchertem Paprika bestreuen, der eine tiefe rot-orange Farbe und ein leicht pikantes Aroma verleiht, mit Meersalz und frisch gemahlenem schwarzen Pfeffer abschmecken.</li>
+<li>Sofort in kleinen Terrakotta-Schälchen servieren, begleitet von knusprigen Vollkorn-Crackern.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-el" class="lang-content">
+<div class="section">
+<h2>Spumini di Ceci Neri al Rosmarino</h2>
+<p>Ένα καλοκαιρινό και ρουστίκ πιάτο που γιορτάζει τα μαύρα ρεβίθια σε όλη την έντασή τους, αρωματισμένα με το έντονο άρωμα του φρέσκου δεντρολίβανου και εμπλουτισμένα με το καπνιστό πάπρικα για μια ελαφρώς πικάντικη νότα.</p>
+
+<h3>Συστατικά (4 άτομα)</h3>
+<div class="ingredients-list">
+<ul>
+<li>250g προψημένα μαύρα ρεβίθια (σουρωμένα και ξεπλυμένα)</li>
+<li>2 κουταλιές της σούπας έξτρα παρθένο ελαιόλαδο</li>
+<li>1 κλαδάκι φρέσκο δεντρολίβανο</li>
+<li>1/2 κουταλάκι του γλυκού καπνιστή πάπρικα</li>
+<li>Θαλασσινό αλάτι κατά βούληση</li>
+<li>Φρεσκοτριμμένο μαύρο πιπέρι κατά βούληση</li>
+<li>Ολικής άλεσης κράκερ</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Εκτέλεση</h3>
+<ol class="steps-list">
+<li>Ζεσταίνετε 2 κουταλιές της σούπας έξτρα παρθένο ελαιόλαδο σε ένα αντικολλητικό τηγάνι μαζί με το κλαδάκι φρέσκου δεντρολίβανου, αφήνοντας τα ρητινώδη αιθέρια έλαιά του να απελευθερωθούν στο ζεστό λάδι για 2-3 λεπτά σε μέτρια-χαμηλή φωτιά.</li>
+<li>Προσθέτετε τα 250g σουρωμένα μαύρα ρεβίθια και αφήστε τα να πάρουν γεύση σε μέτρια φωτιά για περίπου 5 λεπτά, ανακατεύοντας απαλά για να διατηρηθεί η σταθερή υφή τους.</li>
+<li>Σβήνετε τη φωτιά, ενώ τα ρεβίθια είναι ακόμα ζεστά, πασπαλίστε με μισό κουταλάκι του γλυκού καπνιστή πάπρικα που θα δώσει ένα βαθύ κοκκινωπό-πορτοκαλί χρώμα και ένα ελαφρώς πικάντικο άρωμα, συμπληρώστε με θαλασσινό αλάτι και φρεσκοτριμμένο μαύρο πιπέρι.</li>
+<li>Σερβίρετε αμέσως σε μικρά μπολ από τερακότα συνοδευόμενα με τραγανά κράκερ ολικής άλεσης.</li>
+</ol>
+</div>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<a href="../index.html" class="back-link">← Torna alla Home</a>
+</div>
+
+<script>
+function switchLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(c => c.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+    document.querySelector('.lang-tab[data-lang="' + lang + '"]').classList.add('active');
+    localStorage.setItem('preferredLang', lang);
+}
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

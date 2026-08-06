@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verdure al Forno con Ceci e Dressing al Tahini | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Verdure al Forno con Ceci e Dressing al Tahini">
+<meta property="og:title" content="Verdure al Forno con Ceci e Dressing al Tahini | Leguminando">
+<meta property="og:description" content="Verdure al Forno con Ceci e Dressing al Tahini">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="estate/020.html" data-title="Verdure al Forno con Ceci e Dressing al Tahini" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="020.jpg" alt="Verdure al Forno con Ceci e Dressing al Tahini" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2026-06-02</p>
+<p><strong>Meta:</strong> 4 porzioni | Vegetariano</p>
+<p><strong>Descrizione:</strong> Verdure estive al forno con ceci croccanti e dressing cremoso al tahini e limone.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>500 g di broccoli (testa, separata in cimette)</li>
+<li>400 g di cavolfiore (separato in cimette)</li>
+<li>400 g di ceci cotti (scolati)</li>
+<li>150 g di spinaci novelli</li>
+<li>1 cipolla rossa media (circa 100 g), affettata sottilmente</li>
+<li>3 cucchiai di olio extravergine d'oliva (circa 45 ml)</li>
+<li>2 cucchiai colmi di tahini (circa 30 g)</li>
+<li>2 cucchiai di succo di limone (circa 30 ml)</li>
+<li>1 spicchio d'aglio, schiacciato</li>
+<li>15-20 g di prezzemolo fresco, tritato</li>
+<li>1 cucchiaino di sale (o a piacere)</li>
+<li>Pepe nero q.b.</li>
+<li>Fiocchi di peperoncino (opzionale): un pizzico</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Prepara le verdure:</strong> Preriscalda il forno a 200°C. In una teglia larga distribuisci broccoli e cavolfiore. Condisci con 1 cucchiaio di olio, mezzo cucchiaino di sale e un pizzico di pepe; mescola bene.</p>
+<p>2. <strong>Cuoci al forno:</strong> Inforna le verdure per 20-25 minuti, girandole a metà cottura, finché sono dorate ai bordi e tenere. Negli ultimi 10 minuti aggiungi i ceci nella teglia (se li vuoi croccanti lasciali scoperti).</p>
+<p>3. <strong>Prepara cipolla e spinaci:</strong> Mentre le verdure cuociono, scalda 1 cucchiaio d'olio in una padella antiaderente e fai appassire la cipolla 5-6 minuti a fuoco medio; aggiungi gli spinaci e cuoci 1-2 minuti finché si ammorbidiscono. Togli dal fuoco.</p>
+<p>4. <strong>Dressing al tahini:</strong> In una ciotola mescola tahini, succo di limone, aglio schiacciato, 1 cucchiaio di olio rimanente, un pizzico di sale e pepe. Se troppo denso aggiungi 1-2 cucchiaini d'acqua per ottenere una consistenza fluida.</p>
+<p>5. <strong>Assembla e servi:</strong> Quando le verdure e i ceci sono pronti, unisci alla padella con spinaci e cipolla o disponili in un'unica grande ciotola. Versa il dressing e mescola delicatamente. Cospargi con prezzemolo e, se vuoi, fiocchi di peperoncino. Servire caldo o tiepido.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2026-06-02</p>
+<p><strong>Meta:</strong> 4 servings | Vegetarian</p>
+<p><strong>Description:</strong> Summer oven-roasted vegetables with crispy chickpeas and creamy tahini-lemon dressing.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>500 g broccoli (head, separated into florets)</li>
+<li>400 g cauliflower (separated into florets)</li>
+<li>400 g cooked chickpeas (drained)</li>
+<li>150 g baby spinach</li>
+<li>1 medium red onion (about 100 g), thinly sliced</li>
+<li>3 tablespoons extra virgin olive oil (about 45 ml)</li>
+<li>2 heaped tablespoons tahini (about 30 g)</li>
+<li>2 tablespoons lemon juice (about 30 ml)</li>
+<li>1 garlic clove, crushed</li>
+<li>15-20 g fresh parsley, chopped</li>
+<li>1 teaspoon salt (or to taste)</li>
+<li>Black pepper to taste</li>
+<li>Chilli flakes (optional): a pinch</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Prepare vegetables:</strong> Preheat oven to 200°C. In a large baking tray arrange broccoli and cauliflower. Season with 1 tablespoon oil, half teaspoon salt and a pinch of pepper; mix well.</p>
+<p>2. <strong>Oven bake:</strong> Bake vegetables for 20-25 minutes, turning halfway through, until golden at edges and tender. In the last 10 minutes add chickpeas to the tray (leave uncovered if you want them crispy).</p>
+<p>3. <strong>Prepare onion and spinach:</strong> While vegetables cook, heat 1 tablespoon oil in a non-stick pan and sweat onion for 5-6 minutes over medium heat; add spinach and cook 1-2 minutes until wilted. Remove from heat.</p>
+<p>4. <strong>Tahini dressing:</strong> In a bowl mix tahini, lemon juice, crushed garlic, remaining 1 tablespoon oil, a pinch of salt and pepper. If too thick add 1-2 teaspoons water to achieve a fluid consistency.</p>
+<p>5. <strong>Assemble and serve:</strong> When vegetables and chickpeas are ready, combine with spinach and onion in a pan or arrange in one large bowl. Pour dressing and mix gently. Sprinkle with parsley and, if desired, chilli flakes. Serve hot or warm.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2026-06-02</p>
+<p><strong>Meta:</strong> 4 porciones | Vegetariano</p>
+<p><strong>Descripción:</strong> Verduras de verano asadas al horno con garbanzos crujientes y aliño cremoso de tahini y limón.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>500 g de brócoli (cabeza, separada en ramilletes)</li>
+<li>400 g de coliflor (separada en ramilletes)</li>
+<li>400 g de garbanzos cocidos (escurridos)</li>
+<li>150 g de espinacas tiernas</li>
+<li>1 cebolla roja mediana (unos 100 g), en rodajas finas</li>
+<li>3 cucharadas de aceite de oliva virgen extra (unos 45 ml)</li>
+<li>2 cucharadas colmadas de tahini (unos 30 g)</li>
+<li>2 cucharadas de zumo de limón (unos 30 ml)</li>
+<li>1 diente de ajo, aplastado</li>
+<li>15-20 g de perejil fresco, picado</li>
+<li>1 cucharadita de sal (o al gusto)</li>
+<li>Pimienta negra c.s.</li>
+<li>Copos de guindilla (opcional): una pizca</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparar verduras:</strong> Precalienta el horno a 200°C. En una bandeja ancha distribuye brócoli y coliflor. Aliña con 1 cucharada de aceite, media cucharadita de sal y una pizca de pimienta; mezcla bien.</p>
+<p>2. <strong>Hornear:</strong> Hornea las verduras 20-25 minutos, girándolas a mitad de cocción, hasta que estén doradas en los bordes y tiernas. En los últimos 10 minutos añade los garbanzos en la bandeja (déjalos destapados si los quieres crujientes).</p>
+<p>3. <strong>Preparar cebolla y espinacas:</strong> Mientras cuecen las verduras, calienta 1 cucharada de aceite en una sartén antiadherente y sofríe la cebolla 5-6 minutos a fuego medio; agrega las espinacas y cuece 1-2 minutos hasta que se ablanden. Retira del fuego.</p>
+<p>4. <strong>Aliño de tahini:</strong> En un bol mezcla tahini, zumo de limón, ajo aplastado, 1 cucharada de aceite restante, una pizca de sal y pimienta. Si está demasiado denso añade 1-2 cucharaditas de agua para obtener una consistencia fluida.</p>
+<p>5. <strong>Montar y servir:</strong> Cuando las verduras y los garbanzos estén listos, únelos a la sartén con espinacas y cebolla o dispónlos en un bol grande. Vierte el aliño y mezcla delicadamente. Espolvorea con perejil y, si lo deseas, copos de guindilla. Sirve caliente o templado.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2026-06-02</p>
+<p><strong>Meta:</strong> 4 porções | Vegetariano</p>
+<p><strong>Descrição:</strong> Legumes de verão assados no forno com grão-de-bico crocante e molho cremoso de tahine e limão.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>500 g de brócolos (cabeça, separada em ramos)</li>
+<li>400 g de couve-flor (separada em ramos)</li>
+<li>400 g de grão-de-bico cozido (escorrido)</li>
+<li>150 g de espinafres novos</li>
+<li>1 cebola roxa média (cerca de 100 g), fatiada finamente</li>
+<li>3 colheres de sopa de azeite extra virgem (cerca de 45 ml)</li>
+<li>2 colheres de sopa cheias de tahine (cerca de 30 g)</li>
+<li>2 colheres de sopa de sumo de limão (cerca de 30 ml)</li>
+<li>1 dente de alho, esmagado</li>
+<li>15-20 g de salsa fresca, picada</li>
+<li>1 colher de chá de sal (ou a gosto)</li>
+<li>Pimenta preta q.b.</li>
+<li>Flocos de malagueta (opcional): uma pitada</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparar legumes:</strong> Pré-aquece o forno a 200°C. Num tabuleiro largo distribui brócolos e couve-flor. Tempere com 1 colher de sopa de azeite, meia colher de chá de sal e uma pitada de pimenta; mistura bem.</p>
+<p>2. <strong>Assar no forno:</strong> Leva ao forno 20-25 minutos, virando a meio da cozedura, até ficarem dourados nas bordas e macios. Nos últimos 10 minutos junta o grão-de-bico no tabuleiro (deixa descoberto se o quiseres crocante).</p>
+<p>3. <strong>Preparar cebola e espinafres:</strong> Enquanto os legumes cozinham, aquece 1 colher de sopa de azeite numa frigideira antiaderente e deixa a cebola murchar 5-6 minutos em lume médio; acrescenta os espinafres e cozinha 1-2 minutos até murchar. Retira do lume.</p>
+<p>4. <strong>Molho de tahine:</strong> Numa tigela mistura tahine, sumo de limão, alho esmagado, 1 colher de sopa de azeite restante, uma pitada de sal e pimenta. Se estiver demasiado denso acrescenta 1-2 colheres de chá de água para obter uma consistência fluida.</p>
+<p>5. <strong>Montar e servir:</strong> Quando os legumes e o grão-de-bico estiverem prontos, junta-os na frigideira com espinafres e cebola ou dispõe numa tigela grande. Deita o molho e mistura delicadamente. Polvilha com salsa e, se desejares, flocos de malagueta. Serve quente ou morno.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2026-06-02</p>
+<p><strong>Meta:</strong> 4 Portionen | Vegetarisch</p>
+<p><strong>Beschreibung:</strong> Sommerliches Ofengemüse mit knusprigen Kichererbsen und cremigem Tahini-Zitronen-Dressing.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>500 g Brokkoli (Kopf, in Röschen geteilt)</li>
+<li>400 g Blumenkohl (in Röschen geteilt)</li>
+<li>400 g gekochte Kichererbsen (abgetropft)</li>
+<li>150 g Babyspinat</li>
+<li>1 mittlere rote Zwiebel (ca. 100 g), in dünne Scheiben</li>
+<li>3 Esslöffel natives Olivenöl (ca. 45 ml)</li>
+<li>2 gehäufte Esslöffel Tahini (ca. 30 g)</li>
+<li>2 Esslöffel Zitronensaft (ca. 30 ml)</li>
+<li>1 Knoblauchzehe, gepresst</li>
+<li>15-20 g frische Petersilie, gehackt</li>
+<li>1 Teelöffel Salz (oder nach Geschmack)</li>
+<li>Schwarzer Pfeffer nach Geschmack</li>
+<li>Chiliflocken (optional): eine Prise</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Gemüse vorbereiten:</strong> Ofen auf 200°C vorheizen. Brokkoli und Blumenkohl auf einem großen Backblech verteilen. Mit 1 Esslöffel Öl, halbem Teelöffel Salz und einer Prise Pfeffer würzen; gut mischen.</p>
+<p>2. <strong>Im Ofen garen:</strong> Gemüse 20-25 Minuten backen, dabei halb durch die Garzeit wenden, bis die Ränder golden und das Gemüse zart sind. In den letzten 10 Minuten Kichererbsen auf dem Blech zugeben (ungedeckt lassen, wenn sie knusprig sein sollen).</p>
+<p>3. <strong>Zwiebel und Spinat zubereiten:</strong> Während das Gemüse gart, 1 Esslöffel Öl in einer beschichteten Pfanne erhitzen und Zwiebel bei mittlerer Hitze 5-6 Minuten anschwitzen; Spinat zugeben und 1-2 Minuten garen, bis er zusammenfällt. Vom Herd nehmen.</p>
+<p>4. <strong>Tahini-Dressing:</strong> Tahini, Zitronensaft, gepressten Knoblauch, restlichen 1 Esslöffel Öl, eine Prise Salz und Pfeffer in einer Schüssel vermischen. Falls zu dick, 1-2 Teelöffel Wasser zugeben, bis eine flüssige Konsistenz entsteht.</p>
+<p>5. <strong>Anrichten und servieren:</strong> Wenn Gemüse und Kichererbsen fertig sind, mit Spinat und Zwiebel in der Pfanne vermischen oder in eine große Schüssel geben. Dressing darüber gießen und vorsichtig umrühren. Mit Petersilie und bei Bedarf Chiliflocken bestreuen. Heiß oder warm servieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2026-06-02</p>
+<p><strong>Meta:</strong> 4 μερίδες | Χορτοφαγικό</p>
+<p><strong>Περιγραφή:</strong> Καλοκαιρινά λαχανικά ψημένα στο φούρνο με τραγανά ρεβίθια και κρεμώδες dressing ταχίνι-λεμόνι.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>500 γρ μπρόκολο (κορμός, χωρισμένο σε μικρά μπουκετάκια)</li>
+<li>400 γρ κουνουπίδι (χωρισμένο σε μικρά μπουκετάκια)</li>
+<li>400 γρ μαγειρεμένα ρεβίθια (στραγγισμένα)</li>
+<li>150 γρ μωρό σπανάκι</li>
+<li>1 μεσαία κόκκινη κρεμμύδι (περίπου 100 γρ), κομμένο σε λεπτές φέτες</li>
+<li>3 κουταλιές της σούπας ελαιόλαδο (περίπου 45 ml)</li>
+<li>2 γεμάτες κουταλιές της σούπας ταχίνι (περίπου 30 γρ)</li>
+<li>2 κουταλιές της σούπας χυμός λεμονιού (περίπου 30 ml)</li>
+<li>1 σκελίδα σκόρδο, πιεσμένη</li>
+<li>15-20 γρ φρέσκος μαϊντανός, ψιλοκομμένος</li>
+<li>1 κουταλάκι του γλυκού αλάτι (ή κατά βούληση)</li>
+<li>Μαύρο πιπέρι κατά βούληση</li>
+<li>Νιφάδες καυτερής πιπεριάς (προαιρετικά): μια πρέζα</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία λαχανικών:</strong> Προθερμαίνετε τον φούρνο στους 200°C. Σε ένα μεγάλο ταψί τοποθετήστε μπρόκολο και κουνουπίδι. Αλατοπιπερώστε με 1 κουταλιά λάδι, μισό κουταλάκι αλατιού και μια πρέζα πιπεριού· ανακατέψτε καλά.</p>
+<p>2. <strong>Ψήσιμο στον φούρνο:</strong> Ψήστε τα λαχανικά για 20-25 λεπτά, γυρίζοντάς τα στο μισό του χρόνου, μέχρι να ροδίσουν στις άκρες και να μαλακώσουν. Στα τελευταία 10 λεπτά προσθέστε τα ρεβίθια στο ταψί (αφήστε τα ακάλυπτα αν τα θέλετε τραγανά).</p>
+<p>3. <strong>Προετοιμασία κρεμμυδιού και σπανακιού:</strong> Ενώ ψήνονται τα λαχανικά, ζεστάνετε 1 κουταλιά λάδι σε ένα αντικολλητικό τηγάνι και σοτάρετε το κρεμμύδι για 5-6 λεπτά σε μέτρια φωτιά· προσθέστε το σπανάκι και μαγειρέψτε 1-2 λεπτά μέχρι να μαραθεί. Αφαιρέστε από τη φωτιά.</p>
+<p>4. <strong>Dressing ταχίνι:</strong> Σε ένα μπολ ανακατέψτε ταχίνι, χυμό λεμονιού, πιεσμένο σκόρδο, την υπόλοιπη 1 κουταλιά λάδι, μια πρέζα αλατιού και πιπεριού. Αν είναι πολύ πηχτό προσθέστε 1-2 κουταλάκια νερό για να πάρετε ρευστή υφή.</p>
+<p>5. <strong>Συναρμολόγηση και σερβίρισμα:</strong> Όταν τα λαχανικά και τα ρεβίθια είναι έτοιμα, ενώστε τα με το σπανάκι και το κρεμμύδι στο τηγάνι ή βάλτε τα σε ένα μεγάλο μπολ. Ρίξτε το dressing και ανακατέψτε απαλά. Πασπαλίστε με μαϊντανό και, αν θέλετε, νιφάδες καυτερής πιπεριάς. Σερβίρετε ζεστό ή χλιαρό.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

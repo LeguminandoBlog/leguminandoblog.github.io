@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ricette Extra | Leguminando</title>
+<meta name="description" content="Ricette Extra">
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%); }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 30px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.header h1 { margin: 0; font-size: 2.2em; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
+.card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s; position: relative; }
+.card:hover { transform: translateY(-8px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+.season-badge { position: absolute; top: 10px; right: 10px; padding: 5px 12px; border-radius: 15px; font-size: 0.8em; font-weight: bold; color: white; z-index: 10; }
+.season-primavera { background: linear-gradient(135deg, #FF69B4, #FF1493); }
+.season-estate { background: linear-gradient(135deg, #FFD700, #FFA500); }
+.season-autunno { background: linear-gradient(135deg, #FF8C00, #8B4513); }
+.season-inverno { background: linear-gradient(135deg, #87CEEB, #4682B4); }
+.card img { width: 100%; height: 200px; object-fit: cover; }
+.card-content { padding: 20px; }
+.card h3 { color: #8B4513; font-size: 1.2em; margin: 0 0 10px 0; }
+.card .description { color: #666; font-size: 0.9em; margin-bottom: 15px; }
+.card a { display: inline-block; padding: 10px 20px; background: linear-gradient(135deg, #8B4513, #D2691E); color: white; text-decoration: none; border-radius: 25px; font-size: 0.9em; transition: transform 0.2s; }
+.card a:hover { transform: scale(1.05); }
+.footer { text-align: center; margin-top: 40px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 12px 24px; background: #666; color: white; text-decoration: none; border-radius: 25px; font-size: 1em; transition: transform 0.2s; }
+.back-link:hover { transform: translateY(-2px); }
+.intro { background: white; padding: 25px; border-radius: 15px; margin-bottom: 30px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+.intro h2 { color: #8B4513; margin-top: 0; }
+.intro p { color: #666; line-height: 1.6; }
+.legend { display: flex; justify-content: center; gap: 15px; margin-top: 15px; flex-wrap: wrap; }
+.legend-item { display: flex; align-items: center; gap: 5px; font-size: 0.85em; }
+.legend-color { width: 20px; height: 20px; border-radius: 5px; }
+
+@media print {
+    .lang-tabs, input[type="radio"], .back-link, .footer, .view-counter,
+    .season-badge, .legend, .top-bar .logo, .slideshow-container,
+    .lang-content:not(:first-of-type) { display: none !important; }
+    body { background: white !important; padding: 0 !important; }
+    .content, .card-content, .recipe-info { box-shadow: none !important; }
+    .recipe-image, .recipe-thumb, .card img { max-width: 300px !important; height: auto !important; }
+    a { text-decoration: none !important; color: black !important; }
+    .header { padding: 10px !important; border-radius: 0 !important; }
+    #content-it, #content-en, #content-es, #content-pt, #content-de, #content-el { display: block !important; }
+}
+
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; }
+.fav-bar { text-align: center; margin: 10px 0; }
+
+
+.filter-bar { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 20px 0; padding: 15px; }
+.filter-btn { padding: 8px 16px; border: 2px solid #8B4513; border-radius: 20px; background: white; color: #8B4513; cursor: pointer; font-size: 0.9em; transition: all 0.3s; }
+.filter-btn:hover, .filter-btn.active { background: #8B4513; color: white; }
+.filter-btn.reset { border-color: #666; color: #666; }
+.filter-btn.reset:hover, .filter-btn.reset.active { background: #666; color: white; }
+
+
+
+
+
+
+
+.search-results { position: relative; z-index: 1000; margin: 10px auto; max-width: 800px; background: white; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); padding: 15px; }
+.search-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
+.search-card { display: block; padding: 15px; background: #fff; border: 2px solid #e0d5c5; border-radius: 10px; text-decoration: none; color: #5a4a3a; text-align: center; transition: all 0.3s; }
+.search-card:hover { border-color: #8B4513; background: #faf8f5; }
+</style>
+
+<meta property="og:title" content="Ricette Extra | Leguminando">
+<meta property="og:description" content="Ricetta a base di legumi da Leguminando">
+<meta property="og:image" content="https://leguminandoblog.github.io/extra/insalata_quinoa_tonno_uova.jpg">
+<meta property="og:url" content="https://leguminandoblog.github.io/extra/index.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="Leguminando — RSS Feed" href="../feed.xml">
+
+</head>
+<body>
+<div class="header">
+<h1>🫘 Ricette Extra</h1>
+
+<div class="filter-bar">
+<button class="filter-btn reset active" onclick="filterRecipes()">Tutte</button>
+<button class="filter-btn" onclick="filterRecipes('ceci')">Ceci</button>
+<button class="filter-btn" onclick="filterRecipes('fagioli')">Fagioli</button>
+</div>
+<p>Scopri le ricette non ancora nel blog principale</p>
+</div>
+
+<div class="intro">
+<h2>Benvenuto nella sezione Extra</h2>
+<p>Qui trovi ricette pubblicate su Instagram che non sono ancora state inserite nel blog principale. Sono ricette autentiche, testate e amate dalla nostra community.</p>
+<div class="legend">
+<div class="legend-item"><div class="legend-color" style="background: linear-gradient(135deg, #FF69B4, #FF1493);"></div>Primavera</div>
+<div class="legend-item"><div class="legend-color" style="background: linear-gradient(135deg, #FFD700, #FFA500);"></div>Estate</div>
+<div class="legend-item"><div class="legend-color" style="background: linear-gradient(135deg, #FF8C00, #8B4513);"></div>Autunno</div>
+<div class="legend-item"><div class="legend-color" style="background: linear-gradient(135deg, #87CEEB, #4682B4);"></div>Inverno</div>
+</div>
+
+
+
+<div class="search-bar" style="text-align:center;margin:20px 0;">
+<input type="text" id="searchInput" placeholder="Cerca ricetta..." autocomplete="off"
+       style="padding:10px 15px;width:80%;max-width:400px;border:2px solid #8B4513;border-radius:25px;font-size:1em;outline:none;">
+</div>
+<div id="searchResults" class="search-results" style="display:none;"></div>
+
+</div>
+
+<div class="grid">
+    <div class="card">
+        <span class="season-badge season-estate">Estate ☀️</span>
+        <img src="insalata_quinoa_tonno_uova.jpg" alt="Insalata Estiva di Quinoa">
+
+<div class="fav-bar" style="text-align:center;margin:5px 0;">
+<span class="fav-btn" data-path="extra/index.html" onclick="event.stopPropagation();toggleFav('extra/index.html', 'Ricette Extra')">🤍</span> Aggiungi ai preferiti
+</div>
+        <div class="card-content">
+            <h3>Insalata Estiva di Quinoa</h3>
+            <p class="description">Con tonno, uova sode e pomodorini freschi</p>
+            <a href="insalata_quinoa_tonno_uova.html">Vedi ricetta →</a>
+        </div>
+    </div>
+    
+    <div class="card">
+        <span class="season-badge season-estate">Estate ☀️</span>
+        <img src="piadina_peperoni_hummus.jpg" alt="Piadina Rustica">
+        <div class="card-content">
+            <h3>Piadina Rustica</h3>
+            <p class="description">Con peperoni grigliati e hummus di ceci</p>
+            <a href="piadina_peperoni_hummus.html">Vedi ricetta →</a>
+        </div>
+    </div>
+    
+    <div class="card">
+        <span class="season-badge season-primavera">Primavera 🌸</span>
+        <img src="pasta_fagioli_neri.jpg" alt="Pasta con Fagioli Neri">
+        <div class="card-content">
+            <h3>Pasta con Fagioli Neri</h3>
+            <p class="description">Pasta corta con fagioli neri e pomodoro</p>
+            <a href="pasta_fagioli_neri.html">Vedi ricetta →</a>
+        </div>
+    </div>
+    
+    <div class="card">
+        <span class="season-badge season-autunno">Autunno 🍂</span>
+        <img src="baccala_vicentina_fagioli.jpg" alt="Baccalà alla Vicentina">
+        <div class="card-content">
+            <h3>Baccalà alla Vicentina</h3>
+            <p class="description">Con crema di fagioli dall'occhio</p>
+            <a href="baccala_vicentina_fagioli.html">Vedi ricetta →</a>
+        </div>
+    </div>
+    
+    <div class="card">
+        <span class="season-badge season-autunno">Autunno 🍂</span>
+        <img src="filetti_merluzzo_ceci.jpg" alt="Filetti di Merluzzo">
+        <div class="card-content">
+            <h3>Filetti di Merluzzo</h3>
+            <p class="description">Con ceci e pomodoro fresco</p>
+            <a href="filetti_merluzzo_ceci.html">Vedi ricetta →</a>
+        </div>
+    </div>
+    
+    <div class="card">
+        <span class="season-badge season-estate">Estate ☀️</span>
+        <img src="quinoa_ceci_secchi.jpg" alt="Quinoa con Ceci">
+        <div class="card-content">
+            <h3>Quinoa con Ceci</h3>
+            <p class="description">Con avocado e pomodorini</p>
+            <a href="quinoa_ceci_secchi.html">Vedi ricetta →</a>
+        </div>
+    </div>
+    
+    <div class="card">
+        <span class="season-badge season-estate">Estate ☀️</span>
+        <img src="quinoa_ceci_secchi_variante.jpg" alt="Quinoa con Ceci Piccante">
+        <div class="card-content">
+            <h3>Quinoa Piccante</h3>
+            <p class="description">Variante con peperoncino fresco</p>
+            <a href="quinoa_ceci_secchi_variante.html">Vedi ricetta →</a>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette a base di legumi</p>
+<a href="../index.html" class="back-link">← Torna alla Home</a>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+
+<script>
+function filterRecipes(legume) {
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    if (legume) {
+        event.target.classList.add('active');
+    } else {
+        document.querySelector('.filter-btn.reset').classList.add('active');
+    }
+    
+    document.querySelectorAll('.recipe-card, .season-card').forEach(card => {
+        if (!legume) { card.style.display = ''; return; }
+        let data = card.getAttribute('data-legumi') || '';
+        card.style.display = data.split(',').includes(legume) ? '' : 'none';
+    });
+}
+</script>
+
+<script src="../fuse.min.js"></script>
+<script>
+let fuse = null;
+let recipes = [];
+
+fetch('../search-index.json')
+  .then(r => r.json())
+  .then(data => {
+    let season = document.location.pathname.split('/').filter(Boolean)[0];
+    recipes = data.filter(item => item.season === season);
+    fuse = new Fuse(recipes, {
+      keys: ['title', 'ingredients', 'tags', 'text'],
+      threshold: 0.4,
+      includeScore: true
+    });
+  });
+
+document.getElementById('searchInput').addEventListener('keyup', function(e) {
+  let q = e.target.value.trim();
+  let out = document.getElementById('searchResults');
+  if (!q || !fuse) { out.style.display = 'none'; return; }
+  let results = fuse.search(q).slice(0, 10);
+  if (!results.length) { out.innerHTML = '<p style="text-align:center;color:#999;">Nessuna ricetta trovata</p>'; out.style.display = 'block'; return; }
+  let html = '<div class="search-grid">';
+  results.forEach(r => {
+    let path = r.item.path.split('/').pop();
+    html += '<a href="' + path + '" class="search-card">' + r.item.title + '</a>';
+  });
+  html += '</div>';
+  out.innerHTML = html;
+  out.style.display = 'block';
+});
+</script>
+</body>
+</html>

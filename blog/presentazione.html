@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Presentazione | Leguminando</title>
+<meta name="description" content="Presentazione">
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+.back-link:hover { background: #D2691E; }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h2 { color: #D2691E; font-size: 1.5em; margin: 20px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; transition: all 0.3s; }
+.lang-tab.active { background: #8B4513; color: white; }
+.lang-tab:hover:not(.active) { background: #D2691E; color: white; }
+.lang-content { display: none; }
+.lang-content.active { display: block; }
+.emoji { font-size: 1.5em; }
+.hashtags { margin-top: 20px; padding: 15px; background: #f0f0f0; border-radius: 8px; font-size: 0.9em; color: #666; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+<script>
+function showLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    event.target.classList.add('active');
+}
+</script>
+<meta property="og:title" content="Presentazione | Leguminando">
+<meta property="og:description" content="Ricette stagionali a base di legumi — Leguminando">
+<meta property="og:url" content="https://leguminandoblog.github.io/blog/presentazione.html">
+<meta property="og:image" content="">
+<meta name="twitter:title" content="Presentazione | Leguminando">
+<meta name="twitter:description" content="Ricette stagionali a base di legumi — Leguminando">
+<meta name="twitter:image" content="">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Leguminando">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
+
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Presentazione Ufficiale</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="content">
+<div class="lang-tabs">
+    <button class="lang-tab active" onclick="showLang('it')">🇮🇹 IT</button>
+    <button class="lang-tab" onclick="showLang('en')">🇬🇧 EN</button>
+    <button class="lang-tab" onclick="showLang('es')">🇪🇸 ES</button>
+    <button class="lang-tab" onclick="showLang('pt')">🇵🇹 PT</button>
+    <button class="lang-tab" onclick="showLang('de')">🇩🇪 DE</button>
+    <button class="lang-tab" onclick="showLang('el')">🇬🇷 EL</button>
+</div>
+
+<div id="lang-it" class="lang-content active">
+<h1>🫘 Benvenuti su Leguminando!</h1>
+<p>Il primo blog di ricette stagionali a base di legumi, in 6 lingue.</p>
+<p>Ceci, lenticchie, fagioli, fave, piselli... protagonisti assoluti di ogni piatto. Tradizioni contadine, ingredienti semplici, sapori autentici. Un viaggio attraverso le stagioni italiane, un legume alla volta.</p>
+<p><strong>Ogni ricetta sarà tradotta strada facendo</strong> in 🇬🇧 Inglese, 🇪🇸 Spagnolo, 🇵🇹 Portoghese, 🇩🇪 Tedesco e 🇬🇷 Greco.</p>
+<p>Perché la buona cucina italiana non ha confini.</p>
+<div class="hashtags">#leguminando #ricettesemplici #legumi #cucinaitaliana #ricetteitaliane #cucinaveg #mangiaresano #cucinarechepassione #cucinareconamore #cucinacasalinga #ricetteperpassione #foodbloggeritalia #ricettedinonna #cucinadistagione
+</div>
+</div>
+
+<div id="lang-en" class="lang-content">
+<h1>🫘 Welcome to Leguminando!</h1>
+<p>The first seasonal legume recipe blog, in 6 languages.</p>
+<p>Chickpeas, lentils, beans, fava beans, peas... absolute stars of every dish. Farm traditions, simple ingredients, authentic flavors. A journey through Italian seasons, one legume at a time.</p>
+<p><strong>Every recipe will be translated along the way</strong> into 🇮🇹 Italian, 🇪🇸 Spanish, 🇵🇹 Portuguese, 🇩🇪 German and 🇬🇷 Greek.</p>
+<p>Because great Italian food has no borders.</p>
+<div class="hashtags">#leguminando #italianfood #legumes #italianrecipes #seasonalcooking #vegetarianfood #comfortfood #homecooking #foodieitalia #nonnasrecipes #italiantable #farmtotable #simplecooking
+</div>
+</div>
+
+<div id="lang-es" class="lang-content">
+<h1>🫘 ¡Bienvenidos a Leguminando!</h1>
+<p>El primer blog de recetas estacionales a base de legumbres, en 6 idiomas.</p>
+<p>Garbanzos, lentejas, judías, habas, guisantes... protagonistas absolutos de cada plato. Tradiciones campesinas, ingredientes sencillos, sabores auténticos. Un viaje a través de las estaciones italianas, una legumbre a la vez.</p>
+<p><strong>Cada receta será traducida sobre la marcha</strong> al 🇮🇹 Italiano, 🇬🇧 Inglés, 🇵🇹 Portugués, 🇩🇪 Alemán y 🇬🇷 Griego.</p>
+<p>Porque la buena cocina italiana no tiene fronteras.</p>
+<div class="hashtags">#leguminando #cocinaitaliana #legumbres #recetasitalianas #cocinavegetariana #comidasana #cocinacasera #foodieitalia #recetasdenonna #saboritaliano #mangiarbene
+</div>
+</div>
+
+<div id="lang-pt" class="lang-content">
+<h1>🫘 Bem-vindos ao Leguminando!</h1>
+<p>O primeiro blog de receitas sazonais à base de leguminosas, em 6 línguas.</p>
+<p>Grão-de-bico, lentilhas, feijão, favas, ervilhas... protagonistas absolutos de cada prato. Tradições camponesas, ingredientes simples, sabores autênticos. Uma viagem através das estações italianas, uma leguminosa de cada vez.</p>
+<p><strong>Cada receita será traduzida no caminho</strong> para o 🇮🇹 Italiano, 🇬🇧 Inglês, 🇪🇸 Espanhol, 🇩🇪 Alemão e 🇬🇷 Grego.</p>
+<p>Porque a boa cozinha italiana não tem fronteiras.</p>
+<div class="hashtags">#leguminando #cozinhaitaliana #leguminosas #receitasitalianas #cozinhovegetariana #comidasaudável #cozinhacaseira #foodieitalia #receitasdavó #saboritaliano #mangiarbene
+</div>
+</div>
+
+<div id="lang-de" class="lang-content">
+<h1>🫘 Willkommen bei Leguminando!</h1>
+<p>Der erste Blog für saisonale Hülsenfrücht-Rezepte, in 6 Sprachen.</p>
+<p>Kichererbsen, Linsen, Bohnen, Saubohnen, Erbsen... absolute Stars jedes Gerichts. Bäuerliche Traditionen, einfache Zutaten, authentische Aromen. Eine Reise durch die italienischen Jahreszeiten, eine Hülsenfrucht nach der anderen.</p>
+<p><strong>Jedes Rezept wird unterwegs übersetzt</strong> ins 🇮🇹 Italienische, 🇬🇧 Englische, 🇪🇸 Spanische, 🇵🇹 Portugiesische und 🇬🇷 Griechische.</p>
+<p>Denn gute italienische Küche kennt keine Grenzen.</p>
+<div class="hashtags">#leguminando #italienischeküche #hülsenfrüchte #italienischerezepte #saisonaleskochen #vegetarisch #hausmannskost #foodieitalia #omasrezepte #italienischerstil #einfachkochen
+</div>
+</div>
+
+<div id="lang-el" class="lang-content">
+<h1>🫘 Καλώς ήρθατε στο Leguminando!</h1>
+<p>Το πρώτο blog συνταγών με όσπρια ανά εποχή, σε 6 γλώσσες.</p>
+<p>Ρεβίθια, φακές, φασόλια, κουκιά, αρακάς... απόλυτοι πρωταγωνιστές κάθε πιάτου. Αγροτικές παραδόσεις, απλά υλικά, αυθεντικές γεύσεις. Ένα ταξίδι μέσα από τις εποχές της Ιταλίας, ένα όσπριο τη φορά.</p>
+<p><strong>Κάθε συνταγή θα μεταφράζεται καθ' οδόν</strong> στα 🇮🇹 Ιταλικά, 🇬🇧 Αγγλικά, 🇪🇸 Ισπανικά, 🇵🇹 Πορτογαλικά και 🇩🇪 Γερμανικά.</p>
+<p>Γιατί η καλή ιταλική κουζίνα δεν έχει σύνορα.</p>
+<div class="hashtags">#leguminando #ιταλικήκουζίνα #όσπρια #ιταλικέςσυνταγές #εποχιακόφαγητό #χορτοφαγικό #σπιτικόφαγητό #foodieitalia #συνταγέςγιαγιάς #γεύσηιταλίας #mangiarbene
+</div>
+</div>
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Il blog delle ricette a base di legumi</p>
+</div>
+</body>
+</html>

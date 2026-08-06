@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zuppa di Zucca e Lenticchie | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Zuppa di Zucca e Lenticchie">
+<meta property="og:title" content="Zuppa di Zucca e Lenticchie | Leguminando">
+<meta property="og:description" content="Zuppa di Zucca e Lenticchie">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="inverno/007.html" data-title="Zuppa di Zucca e Lenticchie" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="007.jpg" alt="Zuppa di Zucca e Lenticchie" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+
+                <h3>📋 Ingredienti</h3>
+                <ul>
+                    <li>500 g di zucca</li>
+                    <li>2 patate medie</li>
+                    <li>150 g di lenticchie secche</li>
+                    <li>1 cipolla</li>
+                    <li>2 spicchi d'aglio</li>
+                    <li>1 litro di brodo vegetale</li>
+                    <li>100 g di provola affumicata</li>
+                    <li>2 cucchiai di olio extravergine d'oliva</li>
+                    <li>Sale e pepe q.b.</li>
+                    <li>Una punta di noce moscata</li>
+                    <li>Qualche foglia di salvia o rosmarino (opzionale)</li>
+                </ul>
+            
+
+            <h4>1. Preparazione degli ingredienti</h4>
+                <ol>
+                    <li>Taglia a cubetti la zucca e le patate.</li>
+                    <li>Affetta la cipolla e trita l'aglio.</li>
+                    <li>Sciacqua le lenticchie sotto acqua corrente.</li>
+                </ol>
+            
+
+            <h4>2. Cottura dei legumi</h4>
+                <ol>
+                    <li>In una pentola capiente, scalda l'olio e soffriggi la cipolla e l'aglio fino a doratura.</li>
+                    <li>Aggiungi la zucca e le patate e mescola bene. Lascia insaporire per circa 5 minuti.</li>
+                </ol>
+            
+
+            <h4>4. Cottura della zuppa</h4>
+                <ol>
+                    <li>Versa il brodo vegetale nella pentola e porta a bollore.</li>
+                    <li>Riduci la fiamma e lascia cuocere a fuoco lento per 30-40 minuti, o finché lenticchie e verdure sono tenere.</li>
+                    <li>Aggiusta di sale, pepe e una punta di noce moscata.</li>
+                </ol>
+            
+
+            <h4>5. Aggiunta della provola</h4>
+                <ol>
+                    <li>Taglia la provola a cubetti e aggiungila alla zuppa, mescolando fino a fusione.</li>
+                </ol>
+            
+
+            <h4>6. Servizio</h4>
+                <ol>
+                    <li>Se desideri, aggiungi qualche foglia di salvia o rosmarino per decorare.</li>
+                    <li>Servila calda con un filo di olio extravergine d'oliva.</li>
+                </ol>
+            
+</div>
+
+<div id="content-en" class="lang-content">
+
+                <h3>📋 Ingredients</h3>
+                <ul>
+                    <li>500 g pumpkin</li>
+                    <li>2 medium potatoes</li>
+                    <li>150 g dried lentils</li>
+                    <li>1 onion</li>
+                    <li>2 garlic cloves</li>
+                    <li>1 liter vegetable broth</li>
+                    <li>100 g smoked provola cheese</li>
+                    <li>2 tablespoons extra virgin olive oil</li>
+                    <li>Salt and pepper to taste</li>
+                    <li>A pinch of nutmeg</li>
+                    <li>A few sage or rosemary leaves (optional)</li>
+                </ul>
+            
+
+            <h4>1. Ingredient preparation</h4>
+                <ol>
+                    <li>Cut the pumpkin and potatoes into cubes.</li>
+                    <li>Slice the onion and mince the garlic.</li>
+                    <li>Rinse the lentils under running water.</li>
+                </ol>
+            
+
+            <h4>2. Cooking the vegetables</h4>
+                <ol>
+                    <li>In a large pot, heat the olive oil and sauté the onion and garlic until golden.</li>
+                    <li>Add the pumpkin and potatoes and stir well. Let cook for about 5 minutes.</li>
+                </ol>
+            
+
+            <h4>4. Cooking the soup</h4>
+                <ol>
+                    <li>Pour the vegetable broth into the pot and bring to a boil.</li>
+                    <li>Reduce the heat and let simmer for 30-40 minutes, or until lentils and vegetables are tender.</li>
+                    <li>Season with salt, pepper and a pinch of nutmeg.</li>
+                </ol>
+            
+
+            <h4>5. Adding the provola</h4>
+                <ol>
+                    <li>Cut the provola into cubes and add it to the soup, stirring until melted.</li>
+                </ol>
+            
+
+            <h4>6. Serving</h4>
+                <ol>
+                    <li>If desired, add a few sage or rosemary leaves to decorate.</li>
+                    <li>Serve hot with a drizzle of extra virgin olive oil.</li>
+                </ol>
+            
+</div>
+
+<div id="content-es" class="lang-content">
+
+                <h3>📋 Ingredientes</h3>
+                <ul>
+                    <li>500 g de calabaza</li>
+                    <li>2 patatas medianas</li>
+                    <li>150 g de lentejas secas</li>
+                    <li>1 cebolla</li>
+                    <li>2 dientes de ajo</li>
+                    <li>1 litro de caldo vegetal</li>
+                    <li>100 g de provola ahumada</li>
+                    <li>2 cucharadas de aceite de oliva virgen extra</li>
+                    <li>Sal y pimienta q.b.</li>
+                    <li>Una pizca de nuez moscada</li>
+                    <li>Algunas hojas de salvia o romero (opcional)</li>
+                </ul>
+            
+
+            <h4>1. Preparación de los ingredientes</h4>
+                <ol>
+                    <li>Corta en cubos la calabaza y las patatas.</li>
+                    <li>Corta la cebolla en rodajas y pica el ajo.</li>
+                    <li>Enjuaga las lentejas bajo agua corriente.</li>
+                </ol>
+            
+
+            <h4>2. Cocción de las legumbres</h4>
+                <ol>
+                    <li>En una olla grande, calienta el aceite y sofríe la cebolla y el ajo hasta que se doren.</li>
+                    <li>Añade la calabaza y las patatas y remueve bien. Déjalo cocinar durante unos 5 minutos.</li>
+                </ol>
+            
+
+            <h4>4. Cocción de la sopa</h4>
+                <ol>
+                    <li>Vierte el caldo vegetal en la olla y lleva a ebullición.</li>
+                    <li>Reduce el fuego y deja cocinar a fuego lento durante 30-40 minutos, o hasta que las lentejas y las verduras estén tiernas.</li>
+                    <li>Sazona con sal, pimienta y una pizca de nuez moscada.</li>
+                </ol>
+            
+
+            <h4>5. Adición de la provola</h4>
+                <ol>
+                    <li>Corta la provola en cubos y añádela a la sopa, removiendo hasta que se derrita.</li>
+                </ol>
+            
+
+            <h4>6. Servicio</h4>
+                <ol>
+                    <li>Si lo deseas, añade algunas hojas de salvia o romero para decorar.</li>
+                    <li>Sirve la sopa caliente con un hilo de aceite de oliva virgen extra.</li>
+                </ol>
+            
+</div>
+
+<div id="content-pt" class="lang-content">
+
+                <h3>📋 Ingredientes</h3>
+                <ul>
+                    <li>500 g de abóbora</li>
+                    <li>2 batatas médias</li>
+                    <li>150 g de lentilhas secas</li>
+                    <li>1 cebola</li>
+                    <li>2 dentes de alho</li>
+                    <li>1 litro de caldo vegetal</li>
+                    <li>100 g de provola fumada</li>
+                    <li>2 colheres de sopa de azeite de oliva</li>
+                    <li>Sal e pimenta q.b.</li>
+                    <li>Uma pitada de noz-moscada</li>
+                    <li>Algumas folhas de sálvia ou alecrim (opcional)</li>
+                </ul>
+            
+
+            <h4>1. Preparação dos ingredientes</h4>
+                <ol>
+                    <li>Corte em cubos a abóbora e as batatas.</li>
+                    <li>Corte a cebola em fatias e pique o alho.</li>
+                    <li>Enxágue as lentilhas sob água corrente.</li>
+                </ol>
+            
+
+            <h4>2. Cozedura dos legumes</h4>
+                <ol>
+                    <li>Numa panela grande, aqueça o azeite e refogue a cebola e o alho até dourarem.</li>
+                    <li>Adicione a abóbora e as batatas e mexa bem. Deixe cozinhar durante cerca de 5 minutos.</li>
+                </ol>
+            
+
+            <h4>4. Cozedura da sopa</h4>
+                <ol>
+                    <li>Deite o caldo vegetal na panela e leve a fervura.</li>
+                    <li>Reduza o lume e deixe cozinhar em lume brando durante 30-40 minutos, ou até as lentilhas e os legumes estarem macios.</li>
+                    <li>Rectifique o sal, a pimenta e uma pitada de noz-moscada.</li>
+                </ol>
+            
+
+            <h4>5. Adição da provola</h4>
+                <ol>
+                    <li>Corte a provola em cubos e adicione-a à sopa, mexendo até derreter.</li>
+                </ol>
+            
+
+            <h4>6. Serviço</h4>
+                <ol>
+                    <li>Se desejar, adicione algumas folhas de sálvia ou alecrim para decorar.</li>
+                    <li>Sirva a sopa quente com um fio de azeite de oliva.</li>
+                </ol>
+            
+</div>
+
+<div id="content-de" class="lang-content">
+
+                <h3>📋 Zutaten</h3>
+                <ul>
+                    <li>500 g Kürbis</li>
+                    <li>2 mittlere Kartoffeln</li>
+                    <li>150 g getrocknete Linsen</li>
+                    <li>1 Zwiebel</li>
+                    <li>2 Knoblauchzehen</li>
+                    <li>1 Liter Gemüsebrühe</li>
+                    <li>100 g geräucherter Provola</li>
+                    <li>2 Esslöffel Olivenöl</li>
+                    <li>Salz und Pfeffer nach Geschmack</li>
+                    <li>Eine Prise Muskatnuss</li>
+                    <li>Einige Salbei- oder Rosmarinblätter (optional)</li>
+                </ul>
+            
+
+            <h4>1. Zutaten vorbereiten</h4>
+                <ol>
+                    <li>Kürbis und Kartoffeln schälen und würfeln.</li>
+                    <li>Zwiebel in feine Scheiben schneiden und Knoblauch fein hacken.</li>
+                    <li>Linsen unter fließendem Wasser abspülen.</li>
+                </ol>
+            
+
+            <h4>2. Gemüse garen</h4>
+                <ol>
+                    <li>In einem großen Topf Olivenöl erhitzen und Zwiebel und Knoblauch goldbraun anschwitzen.</li>
+                    <li>Kürbis und Kartoffeln zugeben und gut umrühren. Etwa 5 Minuten garen lassen.</li>
+                </ol>
+            
+
+            <h4>4. Suppe kochen</h4>
+                <ol>
+                    <li>Gemüsebrühe in den Topf gießen und zum Kochen bringen.</li>
+                    <li>Hitze reduzieren und 30–40 Minuten köcheln lassen, bis Linsen und Gemüse weich sind.</li>
+                    <li>Mit Salz, Pfeffer und einer Prise Muskatnuss würzen.</li>
+                </ol>
+            
+
+            <h4>5. Provola zugeben</h4>
+                <ol>
+                    <li>Provola würfeln und in die Suppe geben, dabei rühren, bis geschmolzen.</li>
+                </ol>
+            
+
+            <h4>6. Servieren</h4>
+                <ol>
+                    <li>Nach Belieben einige Salbei- oder Rosmarinblätter zum Garnieren zugeben.</li>
+                    <li>Die Suppe heiß mit einem Schuss Olivenöl servieren.</li>
+                </ol>
+            
+</div>
+
+<div id="content-el" class="lang-content">
+
+                <h3>📋 Συστατικά</h3>
+                <ul>
+                    <li>500 γρ κολοκύθα</li>
+                    <li>2 μεσαίες πατάτες</li>
+                    <li>150 γρ ξερές φακές</li>
+                    <li>1 κρεμμύδι</li>
+                    <li>2 σκελίδες σκόρδο</li>
+                    <li>1 λίτρο ζωμό λαχανικών</li>
+                    <li>100 γρ καπνιστή προβόλα</li>
+                    <li>2 κουταλιές της σούπας ελαιόλαδο</li>
+                    <li>Αλάτι και πιπέρι κατά βούληση</li>
+                    <li>Μια πρέζα μοσχοκάρυδο</li>
+                    <li>Μερικά φύλλα φασκόμηλου ή δεντρολίβανου (προαιρετικά)</li>
+                </ul>
+            
+
+            <h4>1. Προετοιμασία συστατικών</h4>
+                <ol>
+                    <li>Καθαρίστε και κόψτε σε κύβους την κολοκύθα και τις πατάτες.</li>
+                    <li>Κόψτε το κρεμμύδι σε λεπτές φέτες και ψιλοκόψτε το σκόρδο.</li>
+                    <li>Ξεπλύντε τις φακές κάτω από τρεχούμενο νερό.</li>
+                </ol>
+            
+
+            <h4>2. Μαγείρεμα λαχανικών</h4>
+                <ol>
+                    <li>Σε μια μεγάλη κατσαρόλα, ζεστάνετε το ελαιόλαδο και σοτάρετε το κρεμμύδι και το σκόρδο μέχρι να ροδίσουν.</li>
+                    <li>Προσθέστε την κολοκύθα και τις πατάτες και ανακατέψτε καλά. Αφήστε να μαγειρευτούν για περίπου 5 λεπτά.</li>
+                </ol>
+            
+
+            <h4>4. Μαγείρεμα της σούπας</h4>
+                <ol>
+                    <li>Ρίξτε τον ζωμό λαχανικών στην κατσαρόλα και φέρτε σε βρασμό.</li>
+                    <li>Μειώστε τη φωτιά και αφήστε να σιγοβράσει για 30-40 λεπτά, ή μέχρι οι φακές και τα λαχανικά να μαλακώσουν.</li>
+                    <li>Αλατοπιπερώστε με μια πρέζα μοσχοκάρυδου.</li>
+                </ol>
+            
+
+            <h4>5. Προσθήκη προβόλας</h4>
+                <ol>
+                    <li>Κόψτε την προβόλα σε κύβους και προσθέστε τη στη σούπα, ανακατεύοντας μέχρι να λιώσει.</li>
+                </ol>
+            
+
+            <h4>6. Σερβίρισμα</h4>
+                <ol>
+                    <li>Αν θέλετε, προσθέστε μερικά φύλλα φασκόμηλου ή δεντρολίβανου για γαρνίρισμα.</li>
+                    <li>Σερβίρετε τη σούπα ζεστή με έναν πίδακα ελαιόλαδου.</li>
+                </ol>
+            
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

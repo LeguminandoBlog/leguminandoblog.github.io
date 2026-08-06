@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polenta di Ceci con Porcini, Verza e Gamberi | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Polenta di Ceci con Porcini, Verza e Gamberi">
+<meta property="og:title" content="Polenta di Ceci con Porcini, Verza e Gamberi | Leguminando">
+<meta property="og:description" content="Polenta di Ceci con Porcini, Verza e Gamberi">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="inverno/013.html" data-title="Polenta di Ceci con Porcini, Verza e Gamberi" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="013.jpg" alt="Polenta di Ceci con Porcini, Verza e Gamberi" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2026-01-10</p>
+<p><strong>Meta:</strong> 4 porzioni | Pesce</p>
+<p><strong>Descrizione:</strong> Polenta cremosa di farina di mais e ceci, condita con porcini, verza e code di gambero.</p>
+<h3>Ingredienti</h3>
+<h3>Per la Polenta</h3>
+<ul>
+<li>250 g di farina di mais</li>
+<li>100 g di farina di ceci</li>
+<li>1 litro di acqua</li>
+<li>Sale q.b.</li>
+</ul>
+<h3>Per il Condimento</h3>
+<ul>
+<li>200 g di funghi porcini freschi o secchi</li>
+<li>300 g di verza</li>
+<li>200 g di code di gambero, pulite</li>
+<li>2 spicchi d'aglio</li>
+<li>Olio extravergine d'oliva q.b.</li>
+<li>1 bicchiere di vino bianco</li>
+<li>Sale e pepe q.b.</li>
+<li>Prezzemolo fresco tritato q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparare la polenta:</strong> Porta a ebollizione l'acqua con un pizzico di sale. Versa lentamente le farine, mescolando continuamente per evitare grumi. Cuoci a fuoco basso per circa 40-45 minuti, mescolando spesso, fino a ottenere una consistenza cremosa.</p>
+<p>2. <strong>Preparare il condimento:</strong> Se usi funghi secchi, reidratarli in acqua tiepida per 20 minuti, poi scolali e asciugali. Taglia i funghi porcini a fette e la verza a striscioline. In una padella, scalda l'olio e soffriggi l'aglio fino a doratura. Aggiungi i funghi e cuoci finché non diventano teneri. Sfuma con il vino bianco e lascia evaporare l'alcol. Aggiungi la verza e cuoci per altri 5-7 minuti.</p>
+<p>3. <strong>Cucinare le code di gambero:</strong> In un'altra padella, scalda un filo d'olio e aggiungi le code di gambero. Cuoci per 2-3 minuti per lato finché diventano rosa e opache. Unisci le code di gambero ai funghi e alla verza, mescolando per amalgamare i sapori. Aggiusta di sale e pepe e aggiungi il prezzemolo tritato.</p>
+<p>4. <strong>Servire:</strong> Versa la polenta calda su un piatto da portata. Distribuisci sopra il condimento di funghi, verza e gamberi. Guarnisci con un filo d'olio extravergine d'oliva e una spolverata di prezzemolo fresco.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2026-01-10</p>
+<p><strong>Meta:</strong> 4 servings | Fish</p>
+<p><strong>Description:</strong> Creamy polenta made with cornmeal and chickpea flour, topped with porcini mushrooms, savoy cabbage and prawn tails.</p>
+<h3>Ingredients</h3>
+<h3>For the Polenta</h3>
+<ul>
+<li>250 g cornmeal</li>
+<li>100 g chickpea flour</li>
+<li>1 litre water</li>
+<li>Salt to taste</li>
+</ul>
+<h3>For the Topping</h3>
+<ul>
+<li>200 g fresh or dried porcini mushrooms</li>
+<li>300 g savoy cabbage</li>
+<li>200 g prawn tails, cleaned</li>
+<li>2 garlic cloves</li>
+<li>Extra virgin olive oil to taste</li>
+<li>1 glass white wine</li>
+<li>Salt and pepper to taste</li>
+<li>Chopped fresh parsley to taste</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Prepare polenta:</strong> Bring water to a boil with a pinch of salt. Slowly pour in both flours, stirring continuously to avoid lumps. Cook over low heat for about 40-45 minutes, stirring often, until creamy.</p>
+<p>2. <strong>Prepare topping:</strong> If using dried mushrooms, rehydrate in warm water for 20 minutes, then drain and pat dry. Slice porcini and cut savoy cabbage into strips. In a pan, heat oil and sauté garlic until golden. Add mushrooms and cook until tender. Deglaze with white wine and let alcohol evaporate. Add savoy cabbage and cook for another 5-7 minutes.</p>
+<p>3. <strong>Cook prawn tails:</strong> In another pan, heat a drizzle of oil and add prawn tails. Cook for 2-3 minutes per side until pink and opaque. Add prawns to mushrooms and cabbage, stirring to combine flavours. Season with salt, pepper and chopped parsley.</p>
+<p>4. <strong>Serve:</strong> Pour hot polenta onto a serving platter. Spread mushroom, cabbage and prawn topping over it. Garnish with a drizzle of extra virgin olive oil and a sprinkle of fresh parsley.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2026-01-10</p>
+<p><strong>Meta:</strong> 4 porciones | Pescado</p>
+<p><strong>Descripción:</strong> Polenta cremosa de harina de maíz y garbanzos, con setas porcini, col rizada y colas de gambón.</p>
+<h3>Ingredientes</h3>
+<h3>Para la Polenta</h3>
+<ul>
+<li>250 g de harina de maíz</li>
+<li>100 g de harina de garbanzos</li>
+<li>1 litro de agua</li>
+<li>Sal c.s.</li>
+</ul>
+<h3>Para el Guiso</h3>
+<ul>
+<li>200 g de setas porcini frescas o secas</li>
+<li>300 g de col rizada</li>
+<li>200 g de colas de gambón, limpias</li>
+<li>2 dientes de ajo</li>
+<li>Aceite de oliva virgen extra c.s.</li>
+<li>1 vaso de vino blanco</li>
+<li>Sal y pimienta c.s.</li>
+<li>Perejil fresco picado c.s.</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparar la polenta:</strong> Lleva el agua a ebullición con una pizca de sal. Vierte lentamente las harinas, removiendo continuamente para evitar grumos. Cuece a fuego lento unos 40-45 minutos, removiendo a menudo, hasta obtener una textura cremosa.</p>
+<p>2. <strong>Preparar el guiso:</strong> Si usas setas secas, rehidrátalas en agua tibia 20 minutos, luego escúrrelas y sécalas. Corta los porcini en láminas y la col rizada en tiras. En una sartén, calienta aceite y sofríe el ajo hasta dorar. Añade las setas y cuece hasta que estén tiernas. Desglasa con vino blanco y deja evaporar el alcohol. Incorpora la col rizada y cuece 5-7 minutos más.</p>
+<p>3. <strong>Cocinar las colas de gambón:</strong> En otra sartén, calienta un chorrito de aceite y añade las colas de gambón. Cuece 2-3 minutos por lado hasta que estén rosas y opacas. Une las colas de gambón a las setas y la col, mezclando para integrar sabores. Sazona con sal, pimienta y perejil picado.</p>
+<p>4. <strong>Servir:</strong> Vierte la polenta caliente en una fuente. Distribuye encima el guiso de setas, col rizada y gambones. Decora con un chorrito de aceite de oliva virgen extra y una espolvoreada de perejil fresco.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2026-01-10</p>
+<p><strong>Meta:</strong> 4 porções | Peixe</p>
+<p><strong>Descrição:</strong> Polenta cremosa de farinha de milho e grão-de-bico, com porcini, couve-de-Milão e caudas de camarão.</p>
+<h3>Ingredientes</h3>
+<h3>Para a Polenta</h3>
+<ul>
+<li>250 g de farinha de milho</li>
+<li>100 g de farinha de grão-de-bico</li>
+<li>1 litro de água</li>
+<li>Sal q.b.</li>
+</ul>
+<h3>Para o Molho</h3>
+<ul>
+<li>200 g de cogumelos porcini frescos ou secos</li>
+<li>300 g de couve-de-Milão</li>
+<li>200 g de caudas de camarão, limpas</li>
+<li>2 dentes de alho</li>
+<li>Azeite extra virgem q.b.</li>
+<li>1 copo de vinho branco</li>
+<li>Sal e pimenta q.b.</li>
+<li>Salsa fresca picada q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparar a polenta:</strong> Leve a água a ferver com uma pitada de sal. Deite as farinhas aos poucos, mexendo sempre para evitar grumos. Cozinhe em lume brando cerca de 40-45 minutos, mexendo frequentemente, até ficar cremosa.</p>
+<p>2. <strong>Preparar o molho:</strong> Se usar cogumelos secos, reidrate-os em água morna por 20 minutos, depois escorra e seque. Corte os porcini em fatias e a couve-de-Milão em tiras. Numa frigideira, aqueça azeite e refogue o alho até dourar. Junte os cogumelos e cozinhe até ficarem macios. Deite vinho branco e deixe evaporar o álcool. Adicione a couve-de-Milão e cozinhe mais 5-7 minutos.</p>
+<p>3. <strong>Cozinhar as caudas de camarão:</strong> Noutra frigideira, aqueça um fio de azeite e junte as caudas de camarão. Cozinhe 2-3 minutos de cada lado até ficarem rosadas e opacas. Una as caudas aos cogumelos e à couve, misturando para amalgamar sabores. Tempere com sal, pimenta e salsa picada.</p>
+<p>4. <strong>Servir:</strong> Deite a polenta quente numa travessa. Distribua por cima o molho de cogumelos, couve-de-Milão e camarão. Decore com um fio de azeite extra virgem e uma pitada de salsa fresca.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2026-01-10</p>
+<p><strong>Meta:</strong> 4 Portionen | Fisch</p>
+<p><strong>Beschreibung:</strong> Cremige Polenta aus Maismehl und Kichererbsenmehl, garniert mit Steinpilzen, Wirsing und Garnelenschwänzen.</p>
+<h3>Zutaten</h3>
+<h3>Für die Polenta</h3>
+<ul>
+<li>250 g Maismehl</li>
+<li>100 g Kichererbsenmehl</li>
+<li>1 Liter Wasser</li>
+<li>Salz nach Geschmack</li>
+</ul>
+<h3>Für die Garnitur</h3>
+<ul>
+<li>200 g frische oder getrocknete Steinpilze</li>
+<li>300 g Wirsing</li>
+<li>200 g Garnelenschwänze, gereinigt</li>
+<li>2 Knoblauchzehen</li>
+<li>Extra natives Olivenöl nach Geschmack</li>
+<li>1 Glas Weißwein</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Gehackte frische Petersilie nach Geschmack</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Polenta zubereiten:</strong> Wasser mit einer Prise Salz zum Kochen bringen. Beide Mehle langsam einrieseln lassen, dabei ständig umrühren, um Klümpchen zu vermeiden. Bei niedriger Hitze etwa 40-45 Minuten köcheln, oft umrühren, bis cremig.</p>
+<p>2. <strong>Garnitur zubereiten:</strong> Getrocknete Pilze bei Bedarf 20 Minuten in warmem Wasser einweichen, dann abtropfen und trockentupfen. Steinpilze in Scheiben schneiden und Wirsing in Streifen. In einer Pfanne Öl erhitzen und Knoblauch goldbraun anschwitzen. Pilze zugeben und bis zur Zartheit garen. Mit Weißwein ablöschen und Alkohol verdampfen lassen. Wirsing zugeben und weitere 5-7 Minuten garen.</p>
+<p>3. <strong>Garnelenschwänze garen:</strong> In einer weiteren Pfanne einen Spritzer Öl erhitzen und Garnelenschwänze zugeben. Von jeder Seite 2-3 Minuten braten, bis sie rosa und undurchsichtig sind. Garnelen zu Pilzen und Wirsing geben und vermischen. Mit Salz, Pfeffer und Petersilie würzen.</p>
+<p>4. <strong>Servieren:</strong> Heiße Polenta auf eine Servierplatte geben. Pilz-, Wirsing- und Garnelen-Garnitur darauf verteilen. Mit einem Spritzer extra nativem Olivenöl und gehackter Petersilie garnieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2026-01-10</p>
+<p><strong>Meta:</strong> 4 μερίδες | Ψάρι</p>
+<p><strong>Περιγραφή:</strong> Κρεμώδης πολέντα από αλεύρι καλαμποκιού και ρεβιθιού, με μανιτάρια πορτσίνι, λάχανο και ουρές γαρίδας.</p>
+<h3>Συστατικά</h3>
+<h3>Για την Πολέντα</h3>
+<ul>
+<li>250 γρ αλεύρι καλαμποκιού</li>
+<li>100 γρ αλεύρι ρεβιθιών</li>
+<li>1 λίτρο νερό</li>
+<li>Αλάτι κατά βούληση</li>
+</ul>
+<h3>Για τη Γαρνιτούρα</h3>
+<ul>
+<li>200 γρ φρέσκα ή ξερά μανιτάρια πορτσίνι</li>
+<li>300 γρ λάχανο savoy</li>
+<li>200 γρ ουρές γαρίδας, καθαρισμένες</li>
+<li>2 σκελίδες σκόρδο</li>
+<li>Ελαιόλαδο κατά βούληση</li>
+<li>1 ποτήρι λευκό κρασί</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>Ψιλοκομμένος φρέσκος μαϊντανός κατά βούληση</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία πολέντα:</strong> Βράστε το νερό με μια πρέζα αλάτι. Ρίξτε σιγά-σιγά τα αλεύρια, ανακατεύοντας συνεχώς για να αποφύγετε σβώλους. Μαγειρέψτε σε χαμηλή φωτιά για περίπου 40-45 λεπτά, ανακατεύοντας συχνά, μέχρι να γίνει κρεμώδες.</p>
+<p>2. <strong>Προετοιμασία γαρνιτούρας:</strong> Αν χρησιμοποιείτε ξερά μανιτάρια, τα μουλιάζετε σε χλιαρό νερό για 20 λεπτά, μετά στραγγίζετε και στεγνώνετε. Κόψτε τα πορτσίνι σε φέτες και το λάχανο σε λωρίδες. Σε ένα τηγάνι, ζεστάνετε λάδι και σοτάρετε το σκόρδο μέχρι να ροδίσει. Προσθέστε τα μανιτάρια και μαγειρέψτε μέχρι να μαλακώσουν. Σβήστε με λευκό κρασί και αφήστε να εξατμιστεί το αλκοόλ. Προσθέστε το λάχανο και μαγειρέψτε για άλλα 5-7 λεπτά.</p>
+<p>3. <strong>Μαγείρεμα ουρών γαρίδας:</strong> Σε ένα άλλο τηγάνι, ζεστάνετε λίγο λάδι και προσθέστε τις ουρές γαρίδας. Μαγειρέψτε 2-3 λεπτά από κάθε πλευρά μέχρι να γίνουν ροζ και αδιαφανείς. Ενσωματώστε τις γαρίδες στα μανιτάρια και το λάχανο, ανακατεύοντας για να ενωθούν οι γεύσεις. Αλατοπιπερώστε και προσθέστε ψιλοκομμένο μαϊντανό.</p>
+<p>4. <strong>Σερβίρισμα:</strong> Ρίξτε τη ζεστή πολέντα σε μια πιατέλα. Απλώστε από πάνω τη γαρνιτούρα μανιταριών, λάχανου και γαρίδας. Γαρνίρετε με ένα νήμα ελαιολάδου και μια πασπαλιά φρέσκου μαϊντα.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

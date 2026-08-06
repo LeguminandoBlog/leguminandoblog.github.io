@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Involtini di Pollo con Lenticchie, Fontina e Speck | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Involtini di Pollo con Lenticchie, Fontina e Speck">
+<meta property="og:title" content="Involtini di Pollo con Lenticchie, Fontina e Speck | Leguminando">
+<meta property="og:description" content="Involtini di Pollo con Lenticchie, Fontina e Speck">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="autunno/023.html" data-title="Involtini di Pollo con Lenticchie, Fontina e Speck" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="023.jpg" alt="Involtini di Pollo con Lenticchie, Fontina e Speck" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-10-05</p>
+<p><strong>Meta:</strong> 4 porzioni | Carne</p>
+<p><strong>Descrizione:</strong> Involtini di pollo ripieni di lenticchie, fontina e speck, arrostiti in forno con erbe aromatiche.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>4 petti di pollo</li>
+<li>150 g fontina a fette</li>
+<li>100 g speck</li>
+<li>200 g lenticchie già cotte</li>
+<li>1 scalogno</li>
+<li>1 rametto di rosmarino</li>
+<li>Foglie di salvia e alloro</li>
+<li>Olio extravergine d'oliva, sale, pepe</li>
+<li>Stecchini o spago da cucina</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Soffriggi lo scalogno tritato in un po' d'olio. Aggiungi le lenticchie, condiscili con sale e pepe e cuoci per qualche minuto.</p>
+<p>2. Prendi i petti di pollo e incidili per creare una tasca, oppure aprili a libro e appiattiscili leggermente. Condiscili con sale e pepe.</p>
+<p>3. Farcisci ogni petto con fette di speck, fontina e un cucchiaio di lenticchie. Arrotola i petti di pollo e fissali con stecchini o legali con spago da cucina.</p>
+<p>4. Disponi i rotoli in una teglia leggermente unta, aggiungi le erbe aromatiche e irrora con un filo d'olio. Aggiungi una macinata di pepe.</p>
+<p>5. Cuoci in forno preriscaldato a 180 °C per 25-30 minuti, girandoli a metà cottura. Servi caldo con il fondo di cottura.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-10-05</p>
+<p><strong>Meta:</strong> 4 servings | Meat</p>
+<p><strong>Description:</strong> Chicken rolls stuffed with lentils, fontina cheese and speck, roasted in the oven with aromatic herbs.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>4 chicken breasts</li>
+<li>150 g fontina cheese in slices</li>
+<li>100 g speck</li>
+<li>200 g cooked lentils</li>
+<li>1 shallot</li>
+<li>1 sprig of rosemary</li>
+<li>Sage and bay leaves</li>
+<li>Extra virgin olive oil, salt, pepper</li>
+<li>Toothpicks or kitchen twine</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. Sauté minced shallot in a little oil. Add lentils, season with salt and pepper and cook for a few minutes.</p>
+<p>2. Take the chicken breasts and slit them to create a pocket, or butterfly and flatten slightly. Season with salt and pepper.</p>
+<p>3. Stuff each breast with speck slices, fontina and a spoonful of lentils. Roll up the chicken breasts and secure with toothpicks or tie with kitchen twine.</p>
+<p>4. Arrange the rolls in a lightly greased baking tray, add aromatic herbs and drizzle with a thread of oil. Add a grind of pepper.</p>
+<p>5. Bake in a preheated oven at 180 °C for 25-30 minutes, turning halfway through. Serve hot with the cooking juices.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-10-05</p>
+<p><strong>Meta:</strong> 4 porciones | Carne</p>
+<p><strong>Descripción:</strong> Rollitos de pollo rellenos de lentejas, queso fontina y speck, asados en el horno con hierbas aromáticas.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>4 pechugas de pollo</li>
+<li>150 g queso fontina en lonchas</li>
+<li>100 g speck</li>
+<li>200 g lentejas ya cocidas</li>
+<li>1 chalota</li>
+<li>1 ramillete de romero</li>
+<li>Hojas de salvia y laurel</li>
+<li>Aceite de oliva virgen extra, sal, pimienta</li>
+<li>Palillos o cordel de cocina</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. Sofríe la chalota picada en un poco de aceite. Añade las lentejas, condimenta con sal y pimienta y cocina unos minutos.</p>
+<p>2. Toma las pechugas de pollo e incídelas para crear un bolsillo, o ábrelas a libro y aplánalas ligeramente. Condimenta con sal y pimienta.</p>
+<p>3. Rellena cada pechuga con lonchas de speck, fontina y una cucharada de lentejas. Enrolla las pechugas y sujétalas con palillos o átalas con cordel.</p>
+<p>4. Dispon los rollitos en una bandeja ligeramente engrasada, añade las hierbas aromáticas y riega con un hilo de aceite. Añade una molienda de pimienta.</p>
+<p>5. Hornea en horno precalentado a 180 °C durante 25-30 minutos, dándoles la vuelta a mitad de cocción. Sirve caliente con el jugo de cocción.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-10-05</p>
+<p><strong>Meta:</strong> 4 porções | Carne</p>
+<p><strong>Descrição:</strong> Rolos de frango recheados com lentilhas, queijo fontina e speck, assados no forno com ervas aromáticas.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>4 peitos de frango</li>
+<li>150 g queijo fontina em fatias</li>
+<li>100 g speck</li>
+<li>200 g lentilhas já cozidas</li>
+<li>1 chalota</li>
+<li>1 ramo de alecrim</li>
+<li>Folhas de sálvia e louro</li>
+<li>Azeite extra virgem, sal, pimenta</li>
+<li>Palitos ou barbante de cozinha</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Refoga a chalota picada num pouco de azeite. Adiciona as lentilhas, tempera com sal e pimenta e cozinha alguns minutos.</p>
+<p>2. Pega nos peitos de frango e faz-lhes um corte para criar um bolso, ou abre-os a livro e achata ligeiramente. Tempera com sal e pimenta.</p>
+<p>3. Recheia cada peito com fatias de speck, fontina e uma colher de lentilhas. Enrola os peitos e fixa com palitos ou amarra com barbante.</p>
+<p>4. Dispõe os rolos num tabuleiro ligeiramente untado, adiciona as ervas aromáticas e rega com um fio de azeite. Adiciona uma moagem de pimenta.</p>
+<p>5. Cozinha em forno pré-aquecido a 180 °C durante 25-30 minutos, virando a meio da cozedura. Serve quente com o fundo de cozedura.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-10-05</p>
+<p><strong>Meta:</strong> 4 Portionen | Fleisch</p>
+<p><strong>Beschreibung:</strong> Hähnchenrouladen gefüllt mit Linsen, Fontina-Käse und Speck, im Ofen mit aromatischen Kräutern gebraten.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>4 Hähnchenbrustfilets</li>
+<li>150 g Fontina-Käse in Scheiben</li>
+<li>100 g Speck</li>
+<li>200 g gekochte Linsen</li>
+<li>1 Schalotte</li>
+<li>1 Zweig Rosmarin</li>
+<li>Salbei- und Lorbeerblätter</li>
+<li>Olivenöl extra vergine, Salz, Pfeffer</li>
+<li>Zahnstocher oder Küchengarn</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. Gehackte Schalotte in etwas Öl anschwitzen. Linsen zugeben, mit Salz und Pfeffer würzen und einige Minuten köcheln lassen.</p>
+<p>2. Die Hähnchenbrustfilets aufschneiden, um eine Tasche zu bilden, oder aufklappen und leicht plattieren. Mit Salz und Pfeffer würzen.</p>
+<p>3. Jede Brust mit Speckscheiben, Fontina und einem Esslöffel Linsen füllen. Aufrollen und mit Zahnstochern fixieren oder mit Küchengarn binden.</p>
+<p>4. Die Rollen auf ein leicht gefettetes Backblech legen, aromatische Kräuter zugeben und mit einem Schuss Öl beträufeln. Mit Pfeffer würzen.</p>
+<p>5. Im vorgeheizten Ofen bei 180 °C 25-30 Minuten backen, dabei einmal wenden. Heiß mit dem Bratensaft servieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-10-05</p>
+<p><strong>Meta:</strong> 4 μερίδες | Κρέας</p>
+<p><strong>Περιγραφή:</strong> Ρολά κοτόπουλου γεμιστά με φακές, τυρί φοντίνα και σπέκ, ψημένα στο φούρνο με αρωματικά βότανα.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>4 στήθη κοτόπουλου</li>
+<li>150 γρ τυρί φοντίνα σε φέτες</li>
+<li>100 γρ σπέκ</li>
+<li>200 γρ μαγειρεμένες φακές</li>
+<li>1 φρέσκο κρεμμυδάκι</li>
+<li>1 κλωνάρι δενδρολίβανου</li>
+<li>Φύλλα φασκόμηλου και δάφνης</li>
+<li>Ελαιόλαδο, αλάτι, πιπέρι</li>
+<li>Οδοντογλυφίδες ή κουζινόσπαγγος</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. Σοτάρε το ψιλοκομμένο φρέσκο κρεμμυδάκι σε λίγο λάδι. Πρόσθεσε τις φακές, αλατοπίπερωσέ τες και μαγείρεψέ τες λίγα λεπτά.</p>
+<p>2. Πάρε τα στήθη κοτόπουλου και κάνε μια τομή για να δημιουργήσεις τσέπη, ή άνοιξέ τα σαν βιβλίο και πλάστείς τα ελαφρά. Αλατοπίπερωσέ τα.</p>
+<p>3. Γέμισε κάθε στήθος με φέτες σπέκ, φοντίνα και μια κουταλιά φακές. Τύλιξε τα στήθη και στερέωσέ τα με οδοντογλυφίδες ή δέσε τα με κουζινόσπαγγο.</p>
+<p>4. Βάλε τα ρολά σε ένα ελαφρά λαδωμένο ταψί, πρόσθεσε τα αρωματικά βότανα και πασπάλισε με λίγο λάδι. Πρόσθεσε λίγο πιπέρι.</p>
+<p>5. Ψήσε σε προθερμασμένο φούρνο στους 180 °C για 25-30 λεπτά, γυρνώντας τα στα μισά. Σέρβιρε ζεστά με τους χυμούς ψησίματος.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

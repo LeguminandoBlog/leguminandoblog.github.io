@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bowl Primaverile di Lenticchie, Quinoa e Verdure Arrosto con Salsa Tahina | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Bowl Primaverile di Lenticchie, Quinoa e Verdure Arrosto con Salsa Tahina">
+<meta property="og:title" content="Bowl Primaverile di Lenticchie, Quinoa e Verdure Arrosto con Salsa Tahina | Leguminando">
+<meta property="og:description" content="Bowl Primaverile di Lenticchie, Quinoa e Verdure Arrosto con Salsa Tahina">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="primavera/021.html" data-title="Bowl Primaverile di Lenticchie, Quinoa e Verdure Arrosto con Salsa Tahina" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="021.jpg" alt="Bowl Primaverile di Lenticchie, Quinoa e Verdure Arrosto con Salsa Tahina" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2026-03-07</p>
+<p><strong>Meta:</strong> 2 porzioni | Vegetariano</p>
+<p><strong>Descrizione:</strong> Bowl nutriente e colorato con lenticchie rosse, quinoa, zucca arrosto, cavolfiore e salsa tahina al limone.</p>
+<h3>Ingredienti</h3>
+<p><strong>Lenticchie:</strong></p>
+<ul>
+<li>150 g di lenticchie rosse decorticate</li>
+<li>1 spicchio d'aglio</li>
+<li>1 foglia di alloro</li>
+</ul>
+<p><strong>Quinoa:</strong></p>
+<ul>
+<li>120 g di quinoa</li>
+<li>250 ml di acqua o brodo vegetale</li>
+</ul>
+<p><strong>Verdure Arrosto:</strong></p>
+<ul>
+<li>1 zucca (o 1/2 butternut) a cubetti</li>
+<li>1 cavolfiore a teste piccole</li>
+<li>1 cipolla rossa a spicchi</li>
+<li>2 cucchiai di olio d'oliva</li>
+<li>1 cucchiaino di paprika dolce</li>
+</ul>
+<p><strong>Salsa Tahina:</strong></p>
+<ul>
+<li>3 cucchiai di tahina</li>
+<li>Succo di 1 limone</li>
+<li>1 cucchiaio di olio d'oliva</li>
+<li>Sale e acqua tiepida q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Cuoci le lenticchie:</strong> Sciacqua e cuoci con aglio e alloro per 15 minuti. Scola e rimuovi aglio e alloro.</p>
+<p>2. <strong>Prepara la quinoa:</strong> Sciacqua, cuoci con acqua per 15 minuti a fuoco medio.</p>
+<p>3. <strong>Verdure al forno:</strong> Preriscalda il forno a 200°C. Condiscile con olio, paprika, sale e pepe. Inforna per 25-30 minuti.</p>
+<p>4. <strong>Salsa tahina:</strong> Mescola tahina, succo di limone, olio e sale. Aggiungi acqua tiepida fino alla consistenza desiderata.</p>
+<p>5. <strong>Assembla il bowl:</strong> Base di quinoa, aggiungi lenticchie, zucca, cavolfiore, cipolla. Completa con salsa tahina, semi di sesamo e erbe fresche.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2026-03-07</p>
+<p><strong>Meta:</strong> 2 servings | Vegetarian</p>
+<p><strong>Description:</strong> Nutritious and colourful bowl with red lentils, quinoa, roasted pumpkin, cauliflower and lemon tahini sauce.</p>
+<h3>Ingredients</h3>
+<p><strong>Lentils:</strong></p>
+<ul>
+<li>150 g split red lentils</li>
+<li>1 garlic clove</li>
+<li>1 bay leaf</li>
+</ul>
+<p><strong>Quinoa:</strong></p>
+<ul>
+<li>120 g quinoa</li>
+<li>250 ml water or vegetable broth</li>
+</ul>
+<p><strong>Roasted Vegetables:</strong></p>
+<ul>
+<li>1 pumpkin (or 1/2 butternut) in cubes</li>
+<li>1 cauliflower in small florets</li>
+<li>1 red onion in wedges</li>
+<li>2 tablespoons olive oil</li>
+<li>1 teaspoon sweet paprika</li>
+</ul>
+<p><strong>Tahini Sauce:</strong></p>
+<ul>
+<li>3 tablespoons tahini</li>
+<li>Juice of 1 lemon</li>
+<li>1 tablespoon olive oil</li>
+<li>Salt and warm water to taste</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Cook lentils:</strong> Rinse and simmer with garlic and bay leaf for 15 minutes. Drain and remove garlic and bay leaf.</p>
+<p>2. <strong>Prepare quinoa:</strong> Rinse, cook with water for 15 minutes over medium heat.</p>
+<p>3. <strong>Roast vegetables:</strong> Preheat oven to 200°C. Season with oil, paprika, salt and pepper. Bake for 25-30 minutes.</p>
+<p>4. <strong>Tahini sauce:</strong> Mix tahini, lemon juice, oil and salt. Add warm water until desired consistency.</p>
+<p>5. <strong>Assemble bowl:</strong> Quinoa base, add lentils, pumpkin, cauliflower, onion. Finish with tahini sauce, sesame seeds and fresh herbs.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2026-03-07</p>
+<p><strong>Meta:</strong> 2 porciones | Vegetariano</p>
+<p><strong>Descripción:</strong> Bowl nutritivo y colorido con lentejas rojas, quinoa, calabaza asada, coliflor y salsa tahini al limón.</p>
+<h3>Ingredientes</h3>
+<p><strong>Lentejas:</strong></p>
+<ul>
+<li>150 g de lentejas rojas decortezadas</li>
+<li>1 diente de ajo</li>
+<li>1 hoja de laurel</li>
+</ul>
+<p><strong>Quinoa:</strong></p>
+<ul>
+<li>120 g de quinoa</li>
+<li>250 ml de agua o caldo de verduras</li>
+</ul>
+<p><strong>Verduras Asadas:</strong></p>
+<ul>
+<li>1 calabaza (o 1/2 butternut) en cubos</li>
+<li>1 coliflor en floretes pequeños</li>
+<li>1 cebolla roja en gajos</li>
+<li>2 cucharadas de aceite de oliva</li>
+<li>1 cucharadita de pimentón dulce</li>
+</ul>
+<p><strong>Salsa Tahini:</strong></p>
+<ul>
+<li>3 cucharadas de tahini</li>
+<li>Zumo de 1 limón</li>
+<li>1 cucharada de aceite de oliva</li>
+<li>Sal y agua tibia c.s.</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Cocinar lentejas:</strong> Enjuaga y cuece con ajo y laurel 15 minutos. Escurre y retira ajo y laurel.</p>
+<p>2. <strong>Preparar quinoa:</strong> Enjuaga, cuece con agua 15 minutos a fuego medio.</p>
+<p>3. <strong>Verduras al horno:</strong> Precalienta a 200°C. Aliña con aceite, pimentón, sal y pimienta. Hornea 25-30 minutos.</p>
+<p>4. <strong>Salsa tahini:</strong> Mezcla tahini, zumo de limón, aceite y sal. Agrega agua tibia hasta la consistencia deseada.</p>
+<p>5. <strong>Montar el bowl:</strong> Base de quinoa, añade lentejas, calabaza, coliflor, cebolla. Termina con salsa tahini, semillas de sésamo y hierbas frescas.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2026-03-07</p>
+<p><strong>Meta:</strong> 2 porções | Vegetariano</p>
+<p><strong>Descrição:</strong> Bowl nutritivo e colorido com lentilhas vermelhas, quinoa, abóbora assada, couve-flor e molho tahine de limão.</p>
+<h3>Ingredientes</h3>
+<p><strong>Lentilhas:</strong></p>
+<ul>
+<li>150 g de lentilhas vermelhas descascadas</li>
+<li>1 dente de alho</li>
+<li>1 folha de louro</li>
+</ul>
+<p><strong>Quinoa:</strong></p>
+<ul>
+<li>120 g de quinoa</li>
+<li>250 ml de água ou caldo de legumes</li>
+</ul>
+<p><strong>Legumes Assados:</strong></p>
+<ul>
+<li>1 abóbora (ou 1/2 butternut) em cubos</li>
+<li>1 couve-flor em pequenos floretes</li>
+<li>1 cebola roxa em gomos</li>
+<li>2 colheres de sopa de azeite</li>
+<li>1 colher de chá de páprica doce</li>
+</ul>
+<p><strong>Molho Tahine:</strong></p>
+<ul>
+<li>3 colheres de sopa de tahine</li>
+<li>Sumo de 1 limão</li>
+<li>1 colher de sopa de azeite</li>
+<li>Sal e água morna q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Cozinhar lentilhas:</strong> Enxágua e cozinha com alho e louro 15 minutos. Escorre e retira alho e louro.</p>
+<p>2. <strong>Preparar quinoa:</strong> Enxágua, cozinha com água 15 minutos em lume médio.</p>
+<p>3. <strong>Legumes no forno:</strong> Pré-aquece a 200°C. Tempere com azeite, páprica, sal e pimenta. Assa 25-30 minutos.</p>
+<p>4. <strong>Molho tahine:</strong> Mistura tahine, sumo de limão, azeite e sal. Adiciona água morna até à consistência desejada.</p>
+<p>5. <strong>Montar o bowl:</strong> Base de quinoa, junta lentilhas, abóbora, couve-flor, cebola. Completa com molho tahine, sementes de sésamo e ervas frescas.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2026-03-07</p>
+<p><strong>Meta:</strong> 2 Portionen | Vegetarisch</p>
+<p><strong>Beschreibung:</strong> Nährstoffreiche und bunte Bowl mit roten Linsen, Quinoa, geröstetem Kürbis, Blumenkohl und Zitronen-Tahini-Sauce.</p>
+<h3>Zutaten</h3>
+<p><strong>Linsen:</strong></p>
+<ul>
+<li>150 g geschälte rote Linsen</li>
+<li>1 Knoblauchzehe</li>
+<li>1 Lorbeerblatt</li>
+</ul>
+<p><strong>Quinoa:</strong></p>
+<ul>
+<li>120 g Quinoa</li>
+<li>250 ml Wasser oder Gemüsebrühe</li>
+</ul>
+<p><strong>Ofengemüse:</strong></p>
+<ul>
+<li>1 Kürbis (oder 1/2 Butternut) in Würfeln</li>
+<li>1 Blumenkohl in kleinen Röschen</li>
+<li>1 rote Zwiebel in Spalten</li>
+<li>2 Esslöffel Olivenöl</li>
+<li>1 Teelöffel süßes Paprikapulver</li>
+</ul>
+<p><strong>Tahini-Sauce:</strong></p>
+<ul>
+<li>3 Esslöffel Tahini</li>
+<li>Saft von 1 Zitrone</li>
+<li>1 Esslöffel Olivenöl</li>
+<li>Salz und warmes Wasser nach Geschmack</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Linsen kochen:</strong> Spülen und mit Knoblauch und Lorbeerblatt 15 Minuten köcheln. Abtropfen und Knoblauch und Lorbeerblatt entfernen.</p>
+<p>2. <strong>Quinoa zubereiten:</strong> Spülen, in Wasser 15 Minuten bei mittlerer Hitze kochen.</p>
+<p>3. <strong>Ofengemüse:</strong> Ofen auf 200°C vorheizen. Mit Öl, Paprika, Salz und Pfeffer würzen. 25-30 Minuten backen.</p>
+<p>4. <strong>Tahini-Sauce:</strong> Tahini, Zitronensaft, Öl und Salz verrühren. Warmes Wasser zugeben bis zur gewünschten Konsistenz.</p>
+<p>5. <strong>Bowl anrichten:</strong> Quinoa als Basis, Linsen, Kürbis, Blumenkohl, Zwiebel zugeben. Mit Tahini-Sauce, Sesamkörnern und frischen Kräutern garnieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2026-03-07</p>
+<p><strong>Meta:</strong> 2 μερίδες | Χορτοφαγικό</p>
+<p><strong>Περιγραφή:</strong> Θρεπτικό και πολύχρωμο bowl με κόκκινες φακές, κινόα, ψητό κολοκύθι, κουνουπίδι και σάλτσα ταχίνι με λεμόνι.</p>
+<h3>Συστατικά</h3>
+<p><strong>Φακές:</strong></p>
+<ul>
+<li>150 γρ ξεφλουδισμένες κόκκινες φακές</li>
+<li>1 σκελίδα σκόρδο</li>
+<li>1 φύλλο δάφνης</li>
+</ul>
+<p><strong>Κινόα:</strong></p>
+<ul>
+<li>120 γρ κινόα</li>
+<li>250 ml νερό ή ζωμός λαχανικών</li>
+</ul>
+<p><strong>Ψητά Λαχανικά:</strong></p>
+<ul>
+<li>1 κολοκύθι (ή 1/2 butternut) σε κύβους</li>
+<li>1 κουνουπίδι σε μικρά μπουκετάκια</li>
+<li>1 κόκκινο κρεμμύδι σε φέτες</li>
+<li>2 κουταλιές της σούπας ελαιόλαδο</li>
+<li>1 κουταλάκι του γλυκού γλυκιά πάπρικα</li>
+</ul>
+<p><strong>Σάλτσα Ταχίνι:</strong></p>
+<ul>
+<li>3 κουταλιές της σούπας ταχίνι</li>
+<li>Χυμός 1 λεμονιού</li>
+<li>1 κουταλιά της σούπας ελαιόλαδο</li>
+<li>Αλάτι και χλιαρό νερό κατά βούληση</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Βράσε τις φακές:</strong> Ξέπλυνε και βράσε με σκόρδο και δάφνη 15 λεπτά. Στράγγισε και αφαίρεσε σκόρδο και δάφνη.</p>
+<p>2. <strong>Ετοίμασε την κινόα:</strong> Ξέπλυνε, βράσε με νερό 15 λεπτά σε μέτρια φωτιά.</p>
+<p>3. <strong>Ψήσε τα λαχανικά:</strong> Προθέρμανε τον φούρνο στους 200°C. Αλατοπιπέρωσε με λάδι, πάπρικα. Ψήσε 25-30 λεπτά.</p>
+<p>4. <strong>Σάλτσα ταχίνι:</strong> Ανακάτεψε ταχίνι, χυμό λεμονιού, λάδι και αλάτι. Πρόσθεσε χλιαρό νερό μέχρι να πάρεις την επιθυμητή υφή.</p>
+<p>5. <strong>Συναρμολόγησε το bowl:</strong> Βάσε κινόα, πρόσθεσε φακές, κολοκύθι, κουνουπίδι, κρεμμύδι. Ολοκλήρωσε με σάλτσα ταχίνι, σουσάμι και φρέσκα μυρωδικά.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+<div data-legumi="lenticchie" style="display:none;"></div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tortini di Lenticchie e Porri con Carciofi al Forno | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Tortini di Lenticchie e Porri con Carciofi al Forno">
+<meta property="og:title" content="Tortini di Lenticchie e Porri con Carciofi al Forno | Leguminando">
+<meta property="og:description" content="Tortini di Lenticchie e Porri con Carciofi al Forno">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="inverno/026.html" data-title="Tortini di Lenticchie e Porri con Carciofi al Forno" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="026.jpg" alt="Tortini di Lenticchie e Porri con Carciofi al Forno" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-12-13</p>
+<p><strong>Meta:</strong> 4 porzioni | Vegetariano</p>
+<p><strong>Descrizione:</strong> Tortini saporiti di lenticchie e porri accompagnati da carciofi al forno conditi con curcuma e limone.</p>
+<h3>Ingredienti per i tortini</h3>
+<ul>
+<li>200 g lenticchie (rosse o verdi, lessate)</li>
+<li>2 porri</li>
+<li>2 uova</li>
+<li>100 g pangrattato</li>
+<li>50 g Parmigiano Reggiano grattugiato</li>
+<li>2 cucchiai olio extravergine d'oliva</li>
+<li>Sale e pepe q.b.</li>
+<li>Prezzemolo fresco tritato (per guarnire)</li>
+</ul>
+<h3>Ingredienti per i carciofi</h3>
+<ul>
+<li>4 carciofi (puliti e tagliati a spicchi)</li>
+<li>2 cucchiai olio extravergine d'oliva</li>
+<li>1 cucchiaino curcuma in polvere</li>
+<li>Succo di limone (per non far annerire i carciofi)</li>
+<li>Sale e pepe q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Carciofi:</strong> Pulisci i carciofi eliminando le foglie esterne più dure e taglia i gambi, lasciando solo la parte tenera. Metti gli spicchi in una ciotola, aggiungi il succo di limone, l'olio, la curcuma, il sale e il pepe. Mescola bene. Disponi i carciofi su una teglia rivestita di carta da forno. Cuoci in forno preriscaldato a 200 °C per circa 25-30 minuti, finché sono teneri e dorati.</p>
+<p>2. <strong>Tortini:</strong> In una padella, scalda 2 cucchiai di olio e aggiungi i porri affettati. Soffriggi a fuoco medio finché diventano teneri e trasparenti. In una ciotola, unisci le lenticchie lessate, i porri, le uova, il pangrattato, il Parmigiano, sale e pepe. Mescola bene fino a ottenere un composto omogeneo. Imburra leggermente degli stampini per muffin o tortini, riempili con il composto e livella la superficie. Cuoci in forno a 180 °C per circa 20-25 minuti, fino a quando i tortini risultano dorati in superficie.</p>
+<p>3. <strong>Impiattamento:</strong> Sforna i tortini e lasciali riposare qualche minuto. Servili caldi, accompagnati dai carciofi al forno. Guarnisci con prezzemolo fresco tritato.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-12-13</p>
+<p><strong>Meta:</strong> 4 servings | Vegetarian</p>
+<p><strong>Description:</strong> Flavourful lentil and leek patties accompanied by oven-roasted artichokes seasoned with turmeric and lemon.</p>
+<h3>Ingredients for the patties</h3>
+<ul>
+<li>200 g lentils (red or green, boiled)</li>
+<li>2 leeks</li>
+<li>2 eggs</li>
+<li>100 g breadcrumbs</li>
+<li>50 g grated Parmigiano Reggiano</li>
+<li>2 tablespoons extra virgin olive oil</li>
+<li>Salt and pepper to taste</li>
+<li>Fresh chopped parsley (to garnish)</li>
+</ul>
+<h3>Ingredients for the artichokes</h3>
+<ul>
+<li>4 artichokes (cleaned and cut into wedges)</li>
+<li>2 tablespoons extra virgin olive oil</li>
+<li>1 teaspoon turmeric powder</li>
+<li>Lemon juice (to prevent browning)</li>
+<li>Salt and pepper to taste</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Artichokes:</strong> Clean the artichokes by removing the tougher outer leaves and trimming the stems, keeping only the tender part. Place wedges in a bowl, add lemon juice, oil, turmeric, salt and pepper. Mix well. Arrange artichokes on a baking tray lined with parchment paper. Bake in a preheated oven at 200 °C for about 25-30 minutes, until tender and golden.</p>
+<p>2. <strong>Patties:</strong> In a pan, heat 2 tablespoons oil and add sliced leeks. Sauté over medium heat until tender and translucent. In a bowl, mix boiled lentils, leeks, eggs, breadcrumbs, Parmesan, salt and pepper. Stir well until smooth. Lightly butter muffin or patty tins, fill with the mixture and level the surface. Bake at 180 °C for about 20-25 minutes, until golden on top.</p>
+<p>3. <strong>Plating:</strong> Remove patties from oven and let rest a few minutes. Serve hot with the roasted artichokes. Garnish with fresh chopped parsley.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-12-13</p>
+<p><strong>Meta:</strong> 4 porciones | Vegetariano</p>
+<p><strong>Descripción:</strong> Pastelitos sabrosos de lentejas y puerros acompañados de alcachofas al horno condimentadas con cúrcuma y limón.</p>
+<h3>Ingredientes para los pastelitos</h3>
+<ul>
+<li>200 g lentejas (rojas o verdes, cocidas)</li>
+<li>2 puerros</li>
+<li>2 huevos</li>
+<li>100 g pan rallado</li>
+<li>50 g Parmigiano Reggiano rallado</li>
+<li>2 cucharadas aceite de oliva virgen extra</li>
+<li>Sal y pimienta c.s.</li>
+<li>Perejil fresco picado (para decorar)</li>
+</ul>
+<h3>Ingredientes para las alcachofas</h3>
+<ul>
+<li>4 alcachofas (limpias y cortadas en gajos)</li>
+<li>2 cucharadas aceite de oliva virgen extra</li>
+<li>1 cucharadita cúrcuma en polvo</li>
+<li>Zumo de limón (para evitar que se oxiden)</li>
+<li>Sal y pimienta c.s.</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Alcachofas:</strong> Limpia las alcachofas eliminando las hojas externas más duras y corta los tallos, dejando solo la parte tierna. Pon los gajos en un bol, añade zumo de limón, aceite, cúrcuma, sal y pimienta. Mezcla bien. Dispon las alcachofas en una bandeja forrada con papel de horno. Hornea en horno precalentado a 200 °C unos 25-30 minutos, hasta que estén tiernas y doradas.</p>
+<p>2. <strong>Pastelitos:</strong> En una sartén, calienta 2 cucharadas de aceite y añade los puerros en rodajas. Sofríe a fuego medio hasta que estén tiernos y transparentes. En un bol, mezcla las lentejas cocidas, los puerros, los huevos, el pan rallado, el Parmesano, sal y pimienta. Remueve bien hasta obtener una masa homogénea. Engrasa ligeramente moldes para muffins o pastelitos, rellénalos con la mezcla y nivela la superficie. Hornea a 180 °C unos 20-25 minutos, hasta que estén dorados por encima.</p>
+<p>3. <strong>Emplatado:</strong> Saca los pastelitos del horno y déjalos reposar unos minutos. Sírvelos calientes, acompañados de las alcachofas al horno. Decora con perejil fresco picado.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-12-13</p>
+<p><strong>Meta:</strong> 4 porções | Vegetariano</p>
+<p><strong>Descrição:</strong> Tortinhos saborosos de lentilhas e alhos-porros acompanhados por alcachofras assadas temperadas com açafrão-da-terra e limão.</p>
+<h3>Ingredientes para os tortinhos</h3>
+<ul>
+<li>200 g lentilhas (vermelhas ou verdes, cozidas)</li>
+<li>2 alhos-porros</li>
+<li>2 ovos</li>
+<li>100 g migalhas de pão</li>
+<li>50 g Parmigiano Reggiano ralado</li>
+<li>2 colheres de sopa azeite extra virgem</li>
+<li>Sal e pimenta q.b.</li>
+<li>Salsa fresca picada (para guarnecer)</li>
+</ul>
+<h3>Ingredientes para as alcachofras</h3>
+<ul>
+<li>4 alcachofras (limpas e cortadas em gomos)</li>
+<li>2 colheres de sopa azeite extra virgem</li>
+<li>1 colher de chá açafrão-da-terra em pó</li>
+<li>Sumo de limão (para não escurecerem)</li>
+<li>Sal e pimenta q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Alcachofras:</strong> Limpa as alcachofras eliminando as folhas externas mais duras e corta os talos, deixando apenas a parte macia. Põe os gomos numa taça, adiciona sumo de limão, azeite, açafrão, sal e pimenta. Mistura bem. Dispõe as alcachofras num tabuleiro forrado com papel vegetal. Cozinha no forno pré-aquecido a 200 °C cerca de 25-30 minutos, até ficarem macias e douradas.</p>
+<p>2. <strong>Tortinhos:</strong> Numa frigideira, aquece 2 colheres de azeite e adiciona os alhos-porros em fatias. Refoga em lume médio até ficarem macios e transparentes. Numa taça, mistura as lentilhas cozidas, os alhos-porros, os ovos, as migalhas de pão, o Parmesão, sal e pimenta. Mexe bem até obter uma massa homogénea. Unta ligeiramente forminhas para muffins ou tortinhos, enche-as com a mistura e nivela a superfície. Cozinha no forno a 180 °C cerca de 20-25 minutos, até ficarem dourados por cima.</p>
+<p>3. <strong>Empratamento:</strong> Tira os tortinhos do forno e deixa-os repousar uns minutos. Serve-os quentes, acompanhados pelas alcachofras assadas. Guarnece com salsa fresca picada.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-12-13</p>
+<p><strong>Meta:</strong> 4 Portionen | Vegetarisch</p>
+<p><strong>Beschreibung:</strong> Würzige Linsen- und Lauchküchlein, begleitet von im Ofen gebackenen Artischocken mit Kurkuma und Zitrone.</p>
+<h3>Zutaten für die Küchlein</h3>
+<ul>
+<li>200 g Linsen (rot oder grün, gekocht)</li>
+<li>2 Lauchstangen</li>
+<li>2 Eier</li>
+<li>100 g Semmelbrösel</li>
+<li>50 g geriebener Parmigiano Reggiano</li>
+<li>2 Esslöffel Olivenöl extra vergine</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Frisch gehackte Petersilie (zum Garnieren)</li>
+</ul>
+<h3>Zutaten für die Artischocken</h3>
+<ul>
+<li>4 Artischocken (gereinigt und in Spalten geschnitten)</li>
+<li>2 Esslöffel Olivenöl extra vergine</li>
+<li>1 Teelöffel Kurkumapulver</li>
+<li>Zitronensaft (zum Braunwerden verhindern)</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Artischocken:</strong> Artischocken reinigen, die härteren äußeren Blätter entfernen und Stiele abschneiden, nur den zarten Teil behalten. Spalten in eine Schüssel geben, Zitronensaft, Öl, Kurkuma, Salz und Pfeffer zugeben. Gut mischen. Artischocken auf ein mit Backpapier ausgelegtes Backblech legen. Im vorgeheizten Ofen bei 200 °C etwa 25-30 Minuten backen, bis sie weich und goldbraun sind.</p>
+<p>2. <strong>Küchlein:</strong> In einer Pfanne 2 Esslöffel Öl erhitzen und Lauch in Scheiben zugeben. Bei mittlerer Hitze anschwitzen, bis weich und glasig. In einer Schüssel gekochte Linsen, Lauch, Eier, Semmelbrösel, Parmesan, Salz und Pfeffer mischen. Gut rühren, bis eine glatte Masse entsteht. Muffin- oder Küchlein-Förmchen leicht buttern, mit der Masse füllen und Oberfläche glatt streichen. Bei 180 °C etwa 20-25 Minuten backen, bis goldbraun.</p>
+<p>3. <strong>Anrichten:</strong> Küchlein aus dem Ofen nehmen und einige Minuten ruhen lassen. Heiß mit den gebackenen Artischocken servieren. Mit frisch gehackter Petersilie garnieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-12-13</p>
+<p><strong>Meta:</strong> 4 μερίδες | Χορτοφαγικό</p>
+<p><strong>Περιγραφή:</strong> Αρωματικά κεκάκια φακών με πράσα συνοδευόμενα από ψητές αγκινάρες με κουρκουμά και λεμόνι.</p>
+<h3>Συστατικά για τα κεκάκια</h3>
+<ul>
+<li>200 γρ φακές (κόκκινες ή πράσινες, βρασμένες)</li>
+<li>2 πράσα</li>
+<li>2 αυγά</li>
+<li>100 γρ τριμμένη φρυγανιά</li>
+<li>50 γρ τριμμένο Parmigiano Reggiano</li>
+<li>2 κουταλιές της σούπας ελαιόλαδο</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>Φρέσκος ψιλοκομμένος μαϊντανός (για γαρνίρισμα)</li>
+</ul>
+<h3>Συστατικά για τις αγκινάρες</h3>
+<ul>
+<li>4 αγκινάρες (καθαρισμένες και κομμένες σε φέτες)</li>
+<li>2 κουταλιές της σούπας ελαιόλαδο</li>
+<li>1 κουταλάκι του γλυκού κουρκουμάς σε σκόνη</li>
+<li>Χυμός λεμονιού (για να μην μαυρίσουν)</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Αγκινάρες:</strong> Καθάρισε τις αγκινάρες αφαιρώντας τα πιο σκληρά εξωτερικά φύλλα και κόβοντας τα κοτσάνια, αφήνοντας μόνο το τρυφερό μέρος. Βάλε τις φέτες σε ένα μπολ, πρόσθεσε χυμό λεμονιού, λάδι, κουρκουμά, αλάτι και πιπέρι. Ανακάτεψε καλά. Τοποθέτησε τις αγκινάρες σε ταψί στρωμένο με λαδόκολλα. Ψήσε σε προθερμασμένο φούρνο στους 200 °C για περίπου 25-30 λεπτά, μέχρι να μαλακώσουν και να ροδίσουν.</p>
+<p>2. <strong>Κεκάκια:</strong> Σε ένα τηγάνι, ζέστανε 2 κουταλιές λάδι και πρόσθεσε τα πράσα σε φέτες. Σοτάρε σε μέτρια φωτιά μέχρι να μαλακώσουν και να γίνουν διάφανα. Σε ένα μπολ, ανακάτεψε τις βρασμένες φακές, τα πράσα, τα αυγά, τη φρυγανιά, τον Παρμεζάνα, αλάτι και πιπέρι. Ανακάτεψε καλά μέχρι να γίνει ένα ομοιογενές μείγμα. Άλειψε ελαφρά φορμάκια για muffins ή κεκάκια, γέμισέ τα με το μείγμα και ίσιωσε την επιφάνεια. Ψήσε στους 180 °C για περίπου 20-25 λεπτά, μέχρι να ροδίσουν από πάνω.</p>
+<p>3. <strong>Παρουσίαση:</strong> Βγάλε τα κεκάκια από το φούρνο και άφησέ τα να ξεκουραστούν λίγα λεπτά. Σέρβιρέ τα ζεστά, συνοδευόμενα από τις ψητές αγκινάρες. Γαρνίρισε με φρέσκο ψιλοκομμένο μαϊντανό.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tartine di Hummus di Ceci e Lenticchie | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Tartine di Hummus di Ceci e Lenticchie">
+<meta property="og:title" content="Tartine di Hummus di Ceci e Lenticchie | Leguminando">
+<meta property="og:description" content="Tartine di Hummus di Ceci e Lenticchie">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="estate/013.html" data-title="Tartine di Hummus di Ceci e Lenticchie" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="013.jpg" alt="Tartine di Hummus e Lenticchie" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2026-06-15</p>
+<p><strong>Meta:</strong> 8 tartine | Stuzzichini</p>
+<p><strong>Descrizione:</strong> Due varianti di tartine: hummus di ceci con pomodorini confit e tartine di lenticchie con caprino e noci.</p>
+<h3>Stuzzichino 1 — Tartine di Hummus di Ceci con Pomodorini Confit</h3>
+<ul>
+<li>8 fette di pane di segale o integrale (circa 200 g)</li>
+<li>240 g di ceci precotti, scolati e risciacquati</li>
+<li>2 cucchiai di tahini (30 ml)</li>
+<li>2 cucchiai di succo di limone fresco (30 ml)</li>
+<li>1 spicchio d'aglio piccolo (3 g), tritato</li>
+<li>3 cucchiai di olio extravergine d'oliva + 2 per i pomodorini</li>
+<li>1/2 cucchiaino di paprika dolce (1 g)</li>
+<li>1/4 cucchiaino di cumino in polvere (0,5 g)</li>
+<li>2-3 cucchiai di acqua fredda per regolare</li>
+<li>150 g di pomodorini datterino, tagliati a metà</li>
+<li>1 pizzico di zucchero di canna</li>
+<li>20 g di pinoli</li>
+<li>8 foglie di menta fresca</li>
+<li>Paprika affumicata dolce e fior di sale q.b.</li>
+</ul>
+<h3>Stuzzichino 2 — Tartine di Lenticchie con Caprino e Noci</h3>
+<ul>
+<li>8 fette di pane casereccio integrale (circa 200 g)</li>
+<li>200 g di lenticchie verdi di Le Puy precotte (o 80 g secche)</li>
+<li>2 cucchiai di olio extravergine d'oliva (30 ml)</li>
+<li>1 scalogno piccolo (20 g), tritato finemente</li>
+<li>2 cucchiai di prezzemolo fresco tritato (8 g)</li>
+<li>1 cucchiaio di succo di limone (15 ml)</li>
+<li>100 g di caprino fresco (o feta), sbriciolato</li>
+<li>40 g di noci, spezzate grossolanamente</li>
+<li>1 cucchiaio di miele di castagno (20 ml)</li>
+<li>1/2 cucchiaino di sale marino fino (2 g)</li>
+<li>1/4 cucchiaino di pepe nero macinato fresco (0,5 g)</li>
+</ul>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2026-06-15</p>
+<p><strong>Meta:</strong> 8 tartines | Appetizers</p>
+<p><strong>Description:</strong> Two tartine variations: chickpea hummus with confit cherry tomatoes and lentil tartines with goat cheese and walnuts.</p>
+<h3>Appetizer 1 — Chickpea Hummus Tartines with Confit Cherry Tomatoes</h3>
+<ul>
+<li>8 slices rye or wholemeal bread (about 200 g)</li>
+<li>240 g precooked chickpeas, drained and rinsed</li>
+<li>2 tablespoons tahini (30 ml)</li>
+<li>2 tablespoons fresh lemon juice (30 ml)</li>
+<li>1 small garlic clove (3 g), minced</li>
+<li>3 tablespoons extra virgin olive oil + 2 for tomatoes</li>
+<li>1/2 teaspoon sweet paprika (1 g)</li>
+<li>1/4 teaspoon ground cumin (0.5 g)</li>
+<li>2-3 tablespoons cold water to adjust consistency</li>
+<li>150 g datterini cherry tomatoes, halved</li>
+<li>A pinch of cane sugar</li>
+<li>20 g pine nuts</li>
+<li>8 fresh mint leaves</li>
+<li>Sweet smoked paprika and fleur de sel to taste</li>
+</ul>
+<h3>Appetizer 2 — Lentil Tartines with Goat Cheese and Walnuts</h3>
+<ul>
+<li>8 slices wholemeal country bread (about 200 g)</li>
+<li>200 g precooked green Le Puy lentils (or 80 g dried)</li>
+<li>2 tablespoons extra virgin olive oil (30 ml)</li>
+<li>1 small shallot (20 g), finely minced</li>
+<li>2 tablespoons chopped fresh parsley (8 g)</li>
+<li>1 tablespoon lemon juice (15 ml)</li>
+<li>100 g fresh goat cheese (or feta), crumbled</li>
+<li>40 g walnuts, roughly broken by hand</li>
+<li>1 tablespoon chestnut honey (20 ml)</li>
+<li>1/2 teaspoon fine sea salt (2 g)</li>
+<li>1/4 teaspoon freshly ground black pepper (0.5 g)</li>
+</ul>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2026-06-15</p>
+<p><strong>Meta:</strong> 8 tartinas | Aperitivos</p>
+<p><strong>Descripción:</strong> Dos variantes de tartinas: hummus de garbanzos con tomates cherry confitados y tartinas de lentejas con queso de cabra y nueces.</p>
+<h3>Aperitivo 1 — Tartinas de Hummus de Garbanzos con Tomates Cherry Confitados</h3>
+<ul>
+<li>8 rebanadas de pan de centeno o integral (unos 200 g)</li>
+<li>240 g de garbanzos precocidos, escurridos y enjuagados</li>
+<li>2 cucharadas de tahini (30 ml)</li>
+<li>2 cucharadas de zumo de limón fresco (30 ml)</li>
+<li>1 diente de ajo pequeño (3 g), picado</li>
+<li>3 cucharadas de aceite de oliva virgen extra + 2 para tomates</li>
+<li>1/2 cucharadita de pimentón dulce (1 g)</li>
+<li>1/4 cucharadita de comino en polvo (0,5 g)</li>
+<li>2-3 cucharadas de agua fría para ajustar</li>
+<li>150 g de tomates cherry datterini, cortados por la mitad</li>
+<li>Una pizca de azúcar de caña</li>
+<li>20 g de piñones</li>
+<li>8 hojas de menta fresca</li>
+<li>Pimentón ahumado dulce y flor de sal c.s.</li>
+</ul>
+<h3>Aperitivo 2 — Tartinas de Lentejas con Queso de Cabra y Nueces</h3>
+<ul>
+<li>8 rebanadas de pan casero integral (unos 200 g)</li>
+<li>200 g de lentejas verdes de Le Puy cocidas (o 80 g secas)</li>
+<li>2 cucharadas de aceite de oliva virgen extra (30 ml)</li>
+<li>1 chalota pequeña (20 g), picada finamente</li>
+<li>2 cucharadas de perejil fresco picado (8 g)</li>
+<li>1 cucharada de zumo de limón (15 ml)</li>
+<li>100 g de queso de cabra fresco (o feta), desmenuzado</li>
+<li>40 g de nueces, rotas gruesamente</li>
+<li>1 cucharada de miel de castaño (20 ml)</li>
+<li>1/2 cucharadita de sal marina fina (2 g)</li>
+<li>1/4 cucharadita de pimienta negra recién molida (0,5 g)</li>
+</ul>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2026-06-15</p>
+<p><strong>Meta:</strong> 8 tartines | Aperitivos</p>
+<p><strong>Descrição:</strong> Duas variantes de tartines: hummus de grão-de-bico com tomates cherry confitados e tartines de lentilhas com queijo de cabra e nozes.</p>
+<h3>Aperitivo 1 — Tartines de Hummus de Grão-de-Bico com Tomates Cherry Confitados</h3>
+<ul>
+<li>8 fatias de pão de centeio ou integral (cerca de 200 g)</li>
+<li>240 g de grão-de-bico pré-cozido, escorrido e enxaguado</li>
+<li>2 colheres de sopa de tahina (30 ml)</li>
+<li>2 colheres de sopa de sumo de limão fresco (30 ml)</li>
+<li>1 dente de alho pequeno (3 g), picado</li>
+<li>3 colheres de sopa de azeite extra virgem + 2 para tomates</li>
+<li>1/2 colher de chá de pimentão doce (1 g)</li>
+<li>1/4 colher de chá de cominho em pó (0,5 g)</li>
+<li>2-3 colheres de sopa de água fria para ajustar</li>
+<li>150 g de tomates cherry datterini, cortados ao meio</li>
+<li>Uma pitada de açúcar de cana</li>
+<li>20 g de pinhões</li>
+<li>8 folhas de hortelã fresca</li>
+<li>Pimentão defumado doce e flor de sal q.b.</li>
+</ul>
+<h3>Aperitivo 2 — Tartines de Lentilhas com Queijo de Cabra e Nozes</h3>
+<ul>
+<li>8 fatias de pão caseiro integral (cerca de 200 g)</li>
+<li>200 g de lentilhas verdes de Le Puy cozidas (ou 80 g secas)</li>
+<li>2 colheres de sopa de azeite extra virgem (30 ml)</li>
+<li>1 chalota pequena (20 g), picada finamente</li>
+<li>2 colheres de sopa de salsa fresca picada (8 g)</li>
+<li>1 colher de sopa de sumo de limão (15 ml)</li>
+<li>100 g de queijo de cabra fresco (ou feta), esfarelando</li>
+<li>40 g de nozes, partidas grosseiramente</li>
+<li>1 colher de sopa de mel de castanha (20 ml)</li>
+<li>1/2 colher de chá de sal marinho fino (2 g)</li>
+<li>1/4 colher de chá de pimenta preta moída na hora (0,5 g)</li>
+</ul>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2026-06-15</p>
+<p><strong>Meta:</strong> 8 Tartines | Vorspeisen</p>
+<p><strong>Beschreibung:</strong> Zwei Tartines-Variationen: Kichererbsen-Hummus mit konfierten Kirschtomaten und Linsen-Tartines mit Ziegenkäse und Walnüssen.</p>
+<h3>Vorspeise 1 — Kichererbsen-Hummus-Tartines mit Konfierten Kirschtomaten</h3>
+<ul>
+<li>8 Scheiben Roggen- oder Vollkornbrot (ca. 200 g)</li>
+<li>240 g vorgekochte Kichererbsen, abgetropft und gespült</li>
+<li>2 Esslöffel Tahini (30 ml)</li>
+<li>2 Esslöffel frischer Zitronensaft (30 ml)</li>
+<li>1 kleine Knoblauchzehe (3 g), gehackt</li>
+<li>3 Esslöffel extra natives Olivenöl + 2 für Tomaten</li>
+<li>1/2 Teelöffel süßes Paprikapulver (1 g)</li>
+<li>1/4 Teelöffel gemahlener Kreuzkümmel (0,5 g)</li>
+<li>2-3 Esslöffel kaltes Wasser zur Konsistenz</li>
+<li>150 g Datterini-Kirschtomaten, halbiert</li>
+<li>Eine Prise Rohrzucker</li>
+<li>20 g Pinienkerne</li>
+<li>8 frische Minzblätter</li>
+<li>Süßes geräuchertes Paprikapulver und Fleur de Sel nach Geschmack</li>
+</ul>
+<h3>Vorspeise 2 — Linsen-Tartines mit Ziegenkäse und Walnüssen</h3>
+<ul>
+<li>8 Scheiben Vollkorn-Landbrot (ca. 200 g)</li>
+<li>200 g vorgekochte grüne Le-Puy-Linsen (oder 80 g getrocknet)</li>
+<li>2 Esslöffel extra natives Olivenöl (30 ml)</li>
+<li>1 kleine Schalotte (20 g), fein gehackt</li>
+<li>2 Esslöffel gehackte frische Petersilie (8 g)</li>
+<li>1 Esslöffel Zitronensaft (15 ml)</li>
+<li>100 g frischer Ziegenkäse (oder Feta), zerbröselt</li>
+<li>40 g Walnüsse, grob zerbrochen</li>
+<li>1 Esslöffel Kastanienhonig (20 ml)</li>
+<li>1/2 Teelöffel feines Meersalz (2 g)</li>
+<li>1/4 Teelöffel frisch gemahlener schwarzer Pfeffer (0,5 g)</li>
+</ul>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2026-06-15</p>
+<p><strong>Meta:</strong> 8 tartines | Ορεκτικά</p>
+<p><strong>Περιγραφή:</strong> Δύο παραλλαγές tartines: hummus ρεβιθιών με ντοματίνια confit και tartines φακών με κατσικίσιο τυρί και καρύδια.</p>
+<h3>Ορεκτικό 1 — Tartines Hummus Ρεβιθιών με Ντοματίνια Confit</h3>
+<ul>
+<li>8 φέτες ψωμί σίκαλης ή ολικής άλεσης (περίπου 200 γρ)</li>
+<li>240 γρ προμαγειρεμένα ρεβίθια, στραγγισμένα και ξεπλυμένα</li>
+<li>2 κουταλιές της σούπας ταχίνι (30 ml)</li>
+<li>2 κουταλιές της σούπας φρέσκος χυμός λεμονιού (30 ml)</li>
+<li>1 μικρή σκελίδα σκόρδο (3 γρ), ψιλοκομμένη</li>
+<li>3 κουταλιές της σούπας ελαιόλαδο + 2 για ντομάτες</li>
+<li>1/2 κουταλάκι του γλυκού γλυκιά πάπρικα (1 γρ)</li>
+<li>1/4 κουταλάκι του γλυκού κύμινο σε σκόνη (0,5 γρ)</li>
+<li>2-3 κουταλιές της σούπας κρύο νερό για ρύθμιση</li>
+<li>150 γρ ντοματίνια datterini, κομμένα στη μέση</li>
+<li>Μια πρέζα καστανή ζάχαρη</li>
+<li>20 γρ κουκουνάρια</li>
+<li>8 φρέσκα φύλλα μέντας</li>
+<li>Γλυκιά καπνιστή πάπρικα και ανθός αλατιού κατά βούληση</li>
+</ul>
+<h3>Ορεκτικό 2 — Tartines Φακών με Κατσικίσιο Τυρί και Καρύδια</h3>
+<ul>
+<li>8 φέτες χωριάτικο ψωμί ολικής (περίπου 200 γρ)</li>
+<li>200 γρ μαγειρεμένες πράσινες φακές Le Puy (ή 80 γρ ξερές)</li>
+<li>2 κουταλιές της σούπας ελαιόλαδο (30 ml)</li>
+<li>1 μικρό κρεμμυδάκι (20 γρ), ψιλοκομμένο</li>
+<li>2 κουταλιές της σούπας ψιλοκομμένος μαϊντανός (8 γρ)</li>
+<li>1 κουταλιά της σούπας χυμός λεμονιού (15 ml)</li>
+<li>100 γρ φρέσκο κατσικίσιο τυρί (ή φέτα), θρυμματισμένο</li>
+<li>40 γρ καρύδια, σπασμένα χοντρά</li>
+<li>1 κουταλιά της σούπας μέλι καστανιάς (20 ml)</li>
+<li>1/2 κουταλάκι του γλυκού ψιλό θαλασσινό αλάτι (2 γρ)</li>
+<li>1/4 κουταλάκι του γλυκού φρεσκοτριμμένο μαύρο πιπέρι (0,5 γρ)</li>
+</ul>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

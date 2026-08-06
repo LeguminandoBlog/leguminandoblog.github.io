@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aperitivo Mediterraneo: Crackers di Ceci e Rosemary Gin Fizz | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Aperitivo Mediterraneo: Crackers di Ceci e Rosemary Gin Fizz">
+<meta property="og:title" content="Aperitivo Mediterraneo: Crackers di Ceci e Rosemary Gin Fizz | Leguminando">
+<meta property="og:description" content="Aperitivo Mediterraneo: Crackers di Ceci e Rosemary Gin Fizz">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="estate/016.html" data-title="Aperitivo Mediterraneo: Crackers di Ceci e Rosemary Gin Fizz" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="016.jpg" alt="Crackers di Ceci e Rosemary Gin Fizz" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2026-06-09</p>
+<p><strong>Meta:</strong> 4 porzioni | Aperitivo</p>
+<p><strong>Descrizione:</strong> Aperitivo mediterraneo leggero e saporito con crackers croccanti di ceci e rosmarino, accompagnati da un cocktail aromatico.</p>
+<h3>Ingredienti — Crackers di Ceci e Rosmarino</h3>
+<ul>
+<li>200 g di farina di ceci</li>
+<li>100 g di farina di riso</li>
+<li>1 cucchiaino di lievito in polvere</li>
+<li>1 cucchiaino di sale</li>
+<li>1/2 cucchiaino di pepe nero</li>
+<li>2 cucchiai di rosmarino fresco tritato</li>
+<li>3 cucchiai di olio extravergine d'oliva</li>
+<li>Acqua fredda q.b.</li>
+<li>Semi di sesamo per spolverare</li>
+<li>Sale grosso q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Impasto:</strong> Mescola farina di ceci e riso, lievito, sale, pepe e rosmarino tritato. Aggiungi olio e lavora fino a ottenere un composto sabbioso.</p>
+<p>2. <strong>Idratazione:</strong> Aggiungi acqua fredda gradualmente fino a ottenere un impasto liscio e compatto.</p>
+<p>3. <strong>Riposo:</strong> Forma una palla, avvolgi in pellicola e refrigerare per 30 minuti.</p>
+<p>4. <strong>Stesura:</strong> Stendi l'impasto tra due fogli di carta forno a 2-3 mm di spessore.</p>
+<p>5. <strong>Decorazione:</strong> Spennella con olio, cospargi con semi di sesamo e sale grosso.</p>
+<p>6. <strong>Taglio:</strong> Taglia a rettangoli, quadrati o rombi.</p>
+<p>7. <strong>Cottura:</strong> Cuoci in forno ventilato a 180 °C per 15-20 minuti, fino a doratura.</p>
+<p>8. <strong>Raffreddamento:</strong> Lascia raffreddare completamente prima di staccare i crackers.</p>
+<p>9. <strong>Servizio:</strong> Servi a temperatura ambiente con tapenade di olive, hummus di barbabietola e pecorino stagionato.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2026-06-09</p>
+<p><strong>Meta:</strong> 4 servings | Appetizer</p>
+<p><strong>Description:</strong> Light and savoury Mediterranean appetizer with crispy chickpea and rosemary crackers, paired with an aromatic cocktail.</p>
+<h3>Ingredients — Chickpea and Rosemary Crackers</h3>
+<ul>
+<li>200 g chickpea flour</li>
+<li>100 g rice flour</li>
+<li>1 teaspoon baking powder</li>
+<li>1 teaspoon salt</li>
+<li>1/2 teaspoon black pepper</li>
+<li>2 tablespoons chopped fresh rosemary</li>
+<li>3 tablespoons extra virgin olive oil</li>
+<li>Cold water as needed</li>
+<li>Sesame seeds for sprinkling</li>
+<li>Coarse salt to taste</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Dough:</strong> Mix chickpea and rice flour, baking powder, salt, pepper and chopped rosemary. Add oil and work until sandy.</p>
+<p>2. <strong>Hydration:</strong> Gradually add cold water until smooth and compact dough forms.</p>
+<p>3. <strong>Rest:</strong> Shape into a ball, wrap in cling film and refrigerate for 30 minutes.</p>
+<p>4. <strong>Rolling:</strong> Roll out dough between two sheets of baking paper to 2-3 mm thick.</p>
+<p>5. <strong>Decoration:</strong> Brush with oil, sprinkle with sesame seeds and coarse salt.</p>
+<p>6. <strong>Cutting:</strong> Cut into rectangles, squares or diamonds.</p>
+<p>7. <strong>Baking:</strong> Bake in fan oven at 180 °C for 15-20 minutes, until golden.</p>
+<p>8. <strong>Cooling:</strong> Let cool completely before removing crackers.</p>
+<p>9. <strong>Serve:</strong> Serve at room temperature with olive tapenade, beetroot hummus and aged pecorino.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2026-06-09</p>
+<p><strong>Meta:</strong> 4 porciones | Aperitivo</p>
+<p><strong>Descripción:</strong> Aperitivo mediterráneo ligero y sabroso con crackers crujientes de garbanzos y romero, acompañados de un cóctel aromático.</p>
+<h3>Ingredientes — Crackers de Garbanzos y Romero</h3>
+<ul>
+<li>200 g de harina de garbanzos</li>
+<li>100 g de harina de arroz</li>
+<li>1 cucharadita de levadura en polvo</li>
+<li>1 cucharadita de sal</li>
+<li>1/2 cucharadita de pimienta negra</li>
+<li>2 cucharadas de romero fresco picado</li>
+<li>3 cucharadas de aceite de oliva virgen extra</li>
+<li>Agua fría c.s.</li>
+<li>Semillas de sésamo para espolvorear</li>
+<li>Sal gruesa c.s.</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Masa:</strong> Mezcla harina de garbanzos y arroz, levadura, sal, pimienta y romero picado. Añade aceite y trabaja hasta obtener una masa arenosa.</p>
+<p>2. <strong>Hidratación:</strong> Añade agua fría poco a poco hasta obtener una masa lisa y compacta.</p>
+<p>3. <strong>Reposo:</strong> Forma una bola, envuelve en film transparente y refrigera 30 minutos.</p>
+<p>4. <strong>Estirado:</strong> Extiende la masa entre dos hojas de papel de hornear a 2-3 mm de grosor.</p>
+<p>5. <strong>Decoración:</strong> Pincela con aceite, espolvorea semillas de sésamo y sal gruesa.</p>
+<p>6. <strong>Corte:</strong> Corta en rectángulos, cuadrados o rombos.</p>
+<p>7. <strong>Horneado:</strong> Hornea en horno ventilado a 180 °C unos 15-20 minutos, hasta dorar.</p>
+<p>8. <strong>Enfriado:</strong> Deja enfriar completamente antes de separar los crackers.</p>
+<p>9. <strong>Servir:</strong> Sirve a temperatura ambiente con tapenade de aceitunas, hummus de remolacha y pecorino curado.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2026-06-09</p>
+<p><strong>Meta:</strong> 4 porções | Aperitivo</p>
+<p><strong>Descrição:</strong> Aperitivo mediterrânico leve e saboroso com crackers crocantes de grão-de-bico e alecrim, acompanhados de um cocktail aromático.</p>
+<h3>Ingredientes — Crackers de Grão-de-Bico e Alecrim</h3>
+<ul>
+<li>200 g de farinha de grão-de-bico</li>
+<li>100 g de farinha de arroz</li>
+<li>1 colher de chá de fermento em pó</li>
+<li>1 colher de chá de sal</li>
+<li>1/2 colher de chá de pimenta preta</li>
+<li>2 colheres de sopa de alecrim fresco picado</li>
+<li>3 colheres de sopa de azeite extra virgem</li>
+<li>Água fria q.b.</li>
+<li>Sementes de sésamo para polvilhar</li>
+<li>Sal grosso q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Massa:</strong> Misture farinha de grão-de-bico e arroz, fermento, sal, pimenta e alecrim picado. Junte azeite e amasse até obter uma massa arenosa.</p>
+<p>2. <strong>Hidratação:</strong> Adicione água fria gradualmente até obter uma massa lisa e compacta.</p>
+<p>3. <strong>Repouso:</strong> Forme uma bola, envolva em película aderente e refrigere por 30 minutos.</p>
+<p>4. <strong>Abertura:</strong> Estenda a massa entre dois folhos de papel vegetal a 2-3 mm de espessura.</p>
+<p>5. <strong>Decoração:</strong> Pincele com azeite, polvilhe com sementes de sésamo e sal grosso.</p>
+<p>6. <strong>Corte:</strong> Corte em retângulos, quadrados ou losangos.</p>
+<p>7. <strong>Cozedura:</strong> Cozinhe em forno ventilado a 180 °C durante 15-20 minutos, até dourar.</p>
+<p>8. <strong>Arrefecimento:</strong> Deixe arrefecer completamente antes de separar os crackers.</p>
+<p>9. <strong>Servir:</strong> Sirva à temperatura ambiente com tapenade de azeitonas, hummus de beterraba e pecorino curado.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2026-06-09</p>
+<p><strong>Meta:</strong> 4 Portionen | Aperitif</p>
+<p><strong>Beschreibung:</strong> Leichter und würziger mediterraner Aperitif mit knusprigen Kichererbsen-Rosmarin-Crackern, begleitet von einem aromatischen Cocktail.</p>
+<h3>Zutaten — Kichererbsen-Rosmarin-Cracker</h3>
+<ul>
+<li>200 g Kichererbsenmehl</li>
+<li>100 g Reismehl</li>
+<li>1 Teelöffel Backpulver</li>
+<li>1 Teelöffel Salz</li>
+<li>1/2 Teelöffel schwarzer Pfeffer</li>
+<li>2 Esslöffel gehackter frischer Rosmarin</li>
+<li>3 Esslöffel extra natives Olivenöl</li>
+<li>Kaltes Wasser nach Bedarf</li>
+<li>Sesamkörner zum Bestreuen</li>
+<li>Grobes Salz nach Geschmack</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Teig:</strong> Kichererbsen- und Reismehl, Backpulver, Salz, Pfeffer und gehackten Rosmarin mischen. Öl zugeben und zu einem sandigen Teig verarbeiten.</p>
+<p>2. <strong>Hydration:</strong> Nach und nach kaltes Wasser zugeben, bis ein glatter, kompakter Teig entsteht.</p>
+<p>3. <strong>Ruhe:</strong> Zu einer Kugel formen, in Frischhaltefolie wickeln und 30 Minuten kühlen.</p>
+<p>4. <strong>Ausrollen:</strong> Teig zwischen zwei Backpapierbögen auf 2-3 mm Dicke ausrollen.</p>
+<p>5. <strong>Dekoration:</strong> Mit Öl bestreichen, mit Sesamkörnern und grobem Salz bestreuen.</p>
+<p>6. <strong>Schneiden:</strong> In Rechtecke, Quadrate oder Rauten schneiden.</p>
+<p>7. <strong>Backen:</strong> Im Umluftofen bei 180 °C etwa 15-20 Minuten backen, bis goldbraun.</p>
+<p>8. <strong>Abkühlen:</strong> Vollständig abkühlen lassen, bevor die Cracker gelöst werden.</p>
+<p>9. <strong>Servieren:</strong> Bei Zimmertemperatur mit Oliven-Tapenade, Rote-Bete-Hummus und gereiftem Pecorino servieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2026-06-09</p>
+<p><strong>Meta:</strong> 4 μερίδες | Ορεκτικό</p>
+<p><strong>Περιγραφή:</strong> Ελαφρύ και νόστιμο μεσογειακό ορεκτικό με τραγανά κράκερ ρεβιθιών και δενδρολίβανου, συνοδευόμενο από ένα αρωματικό κοκτέιλ.</p>
+<h3>Συστατικά — Κράκερ Ρεβιθιών με Δενδρολίβανο</h3>
+<ul>
+<li>200 γρ αλεύρι ρεβιθιών</li>
+<li>100 γρ αλεύρι ρυζιού</li>
+<li>1 κουταλάκι του γλυκού μπέικιν πάουντερ</li>
+<li>1 κουταλάκι του γλυκού αλάτι</li>
+<li>1/2 κουταλάκι του γλυκού μαύρο πιπέρι</li>
+<li>2 κουταλιές της σούπας ψιλοκομμένο φρέσκο δενδρολίβανο</li>
+<li>3 κουταλιές της σούπας ελαιόλαδο</li>
+<li>Κρύο νερό κατά βούληση</li>
+<li>Σουσάμι για πασπάλισμα</li>
+<li>Χοντρό αλάτι κατά βούληση</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Ζύμη:</strong> Ανακατέψτε αλεύρι ρεβιθιών και ρυζιού, μπέικιν πάουντερ, αλάτι, πιπέρι και δενδρολίβανο. Προσθέστε λάδι και ζυμώστε μέχρι να γίνει αμμώδες.</p>
+<p>2. <strong>Ενυδάτωση:</strong> Προσθέστε σταδιακά κρύο νερό μέχρι να σχηματιστεί λεία και σφιχτή ζύμη.</p>
+<p>3. <strong>Ξεκούραση:</strong> Πλάστε μπάλα, τυλίξτε σε μεμβράνη και αφήστε στο ψυγείο για 30 λεπτά.</p>
+<p>4. <strong>Άνοιγμα:</strong> Ανοίξτε τη ζύμη ανάμεσα σε δύο φύλλα λαδόκολλας σε πάχος 2-3 χιλιοστά.</p>
+<p>5. <strong>Διακόσμηση:</strong> Αλείψτε με λάδι, πασπαλίστε σουσάμι και χοντρό αλάτι.</p>
+<p>6. <strong>Κόψιμο:</strong> Κόψτε σε ορθογώνια, τετράγωνα ή ρόμβους.</p>
+<p>7. <strong>Ψήσιμο:</strong> Ψήστε σε ανεμιστήρα στους 180 °C για 15-20 λεπτά, μέχρι να ροδίσουν.</p>
+<p>8. <strong>Κρέμασμα:</strong> Αφήστε να κρυώσουν εντελώς πριν ξεκολλήσετε τα κράκερ.</p>
+<p>9. <strong>Σερβίρισμα:</strong> Σερβίρετε σε θερμοκρασία δωματίου με tapenade ελιάς, hummus παντζαριού και ωριμασμένο πεκορίνο.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

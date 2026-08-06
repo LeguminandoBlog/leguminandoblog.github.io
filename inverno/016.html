@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chili Senza Carne | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Chili Senza Carne">
+<meta property="og:title" content="Chili Senza Carne | Leguminando">
+<meta property="og:description" content="Chili Senza Carne">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="inverno/016.html" data-title="Chili Senza Carne" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="016.jpg" alt="Chili Senza Carne" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-12-30</p>
+<p><strong>Meta:</strong> 4 porzioni | Vegetariano</p>
+<p><strong>Descrizione:</strong> Un chili vegetariano ricco e speziato, a base di fagioli, mais e peperoni.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>250 g di fagioli (puoi usare fagioli neri, borlotti o rossi)</li>
+<li>100 g di mais cotto al vapore</li>
+<li>2 peperoni (1 rosso e 1 giallo)</li>
+<li>1 cipolla bianca</li>
+<li>1 cipolla rossa</li>
+<li>1 carota</li>
+<li>400 g di passata di pomodoro</li>
+<li>1 cucchiaio di concentrato di pomodoro</li>
+<li>1-2 cucchiai di aceto balsamico</li>
+<li>Peperoncino fresco o secco a piacere</li>
+<li>Olio extravergine d'oliva q.b.</li>
+<li>Sale e pepe q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparazione dei fagioli:</strong> Se utilizzi fagioli secchi, mettili in ammollo per almeno 8 ore, quindi cuocili fino a renderli teneri. Se usi fagioli in scatola, scolali e risciacquali sotto acqua corrente.</p>
+<p>2. <strong>Preparazione delle verdure:</strong> Lava e taglia i peperoni a cubetti. Sbuccia e trita finemente le cipolle (bianca e rossa) e la carota a rondelle sottili.</p>
+<p>3. <strong>Soffritto:</strong> In una pentola capiente, scalda 2-3 cucchiai di olio extravergine d'oliva a fuoco medio. Aggiungi le cipolle e la carota, e fai rosolare per circa 5-7 minuti, finché le cipolle non diventano trasparenti e la carota inizia ad ammorbidirsi.</p>
+<p>4. <strong>Aggiunta dei peperoni:</strong> Aggiungi i cubetti di peperone nella pentola e continua a cuocere per altri 5 minuti, mescolando di tanto in tanto.</p>
+<p>5. <strong>Incorporazione dei fagioli e del mais:</strong> Unisci i fagioli cotti, il mais e mescola bene. Lascia insaporire per un paio di minuti.</p>
+<p>6. <strong>Aggiunta della passata di pomodoro:</strong> Versa la passata di pomodoro e il concentrato di pomodoro. Mescola bene per amalgamare tutti gli ingredienti.</p>
+<p>7. <strong>Condimento:</strong> Aggiungi l'aceto balsamico, il peperoncino (regolati secondo il tuo gusto) e aggiusta di sale e pepe. Porta a ebollizione, poi riduci il fuoco e lascia sobbollire per circa 20-30 minuti, mescolando di tanto in tanto. Questo permetterà ai sapori di amalgamarsi e al chili di addensarsi.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-12-30</p>
+<p><strong>Meta:</strong> 4 servings | Vegetarian</p>
+<p><strong>Description:</strong> A rich and spicy vegetarian chili made with beans, sweetcorn and peppers.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>250 g beans (you can use black, borlotti or red beans)</li>
+<li>100 g steamed sweetcorn</li>
+<li>2 peppers (1 red and 1 yellow)</li>
+<li>1 white onion</li>
+<li>1 red onion</li>
+<li>1 carrot</li>
+<li>400 g tomato passata</li>
+<li>1 tablespoon tomato paste</li>
+<li>1-2 tablespoons balsamic vinegar</li>
+<li>Fresh or dried chilli to taste</li>
+<li>Extra virgin olive oil to taste</li>
+<li>Salt and pepper to taste</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Prepare beans:</strong> If using dried beans, soak for at least 8 hours, then cook until tender. If using canned beans, drain and rinse under running water.</p>
+<p>2. <strong>Prepare vegetables:</strong> Wash and dice peppers. Peel and finely chop onions (white and red) and slice carrot into thin rounds.</p>
+<p>3. <strong>Sauté:</strong> In a large pot, heat 2-3 tablespoons extra virgin olive oil over medium heat. Add onions and carrot, and sauté for about 5-7 minutes, until onions are translucent and carrot begins to soften.</p>
+<p>4. <strong>Add peppers:</strong> Add diced peppers to the pot and continue cooking for another 5 minutes, stirring occasionally.</p>
+<p>5. <strong>Add beans and sweetcorn:</strong> Add cooked beans and sweetcorn and mix well. Let flavours meld for a couple of minutes.</p>
+<p>6. <strong>Add tomato passata:</strong> Pour in tomato passata and tomato paste. Mix well to combine all ingredients.</p>
+<p>7. <strong>Season:</strong> Add balsamic vinegar, chilli (adjust to your taste) and season with salt and pepper. Bring to a boil, then reduce heat and simmer for about 20-30 minutes, stirring occasionally. This will allow flavours to meld and the chili to thicken.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-12-30</p>
+<p><strong>Meta:</strong> 4 porciones | Vegetariano</p>
+<p><strong>Descripción:</strong> Un chili vegetariano rico y especiado, a base de frijoles, maíz y pimientos.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>250 g de frijoles (puedes usar frijoles negros, borlotti o rojos)</li>
+<li>100 g de maíz cocido al vapor</li>
+<li>2 pimientos (1 rojo y 1 amarillo)</li>
+<li>1 cebolla blanca</li>
+<li>1 cebolla roja</li>
+<li>1 zanahoria</li>
+<li>400 g de tomate triturado</li>
+<li>1 cucharada de concentrado de tomate</li>
+<li>1-2 cucharadas de vinagre balsámico</li>
+<li>Guindilla fresca o seca al gusto</li>
+<li>Aceite de oliva virgen extra c.s.</li>
+<li>Sal y pimienta c.s.</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparar los frijoles:</strong> Si usas frijoles secos, ponlos en remojo al menos 8 horas, luego cuécelos hasta que estén tiernos. Si usas frijoles enlatados, escúrrelos y enjuágalos bajo el grifo.</p>
+<p>2. <strong>Preparar las verduras:</strong> Lava y corta los pimientos en cubos. Pela y pica finamente las cebollas (blanca y roja) y corta la zanahoria en rodajas finas.</p>
+<p>3. <strong>Sofreír:</strong> En una olla grande, calienta 2-3 cucharadas de aceite de oliva virgen extra a fuego medio. Añade las cebollas y la zanahoria, y sofríe unos 5-7 minutos, hasta que las cebollas estén transparentes y la zanahoria empiece a ablandarse.</p>
+<p>4. <strong>Agregar pimientos:</strong> Incorpora los cubos de pimiento a la olla y sigue cocinando otros 5 minutos, removiendo de vez en cuando.</p>
+<p>5. <strong>Incorporar frijoles y maíz:</strong> Añade los frijoles cocidos, el maíz y mezcla bien. Deja que los sabores se integren un par de minutos.</p>
+<p>6. <strong>Añadir tomate triturado:</strong> Vierte el tomate triturado y el concentrado de tomate. Mezcla bien para integrar todos los ingredientes.</p>
+<p>7. <strong>Sazonar:</strong> Agrega vinagre balsámico, guindilla (ajusta al gusto) y sazona con sal y pimienta. Lleva a ebullición, luego baja el fuego y deja hervir a fuego lento unos 20-30 minutos, removiendo de vez en cuando. Esto permitirá que los sabores se mezclen y el chili espese.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-12-30</p>
+<p><strong>Meta:</strong> 4 porções | Vegetariano</p>
+<p><strong>Descrição:</strong> Um chili vegetariano rico e picante, à base de feijão, milho e pimentos.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>250 g de feijão (podes usar feijão preto, borlotti ou vermelho)</li>
+<li>100 g de milho cozido a vapor</li>
+<li>2 pimentos (1 vermelho e 1 amarelo)</li>
+<li>1 cebola branca</li>
+<li>1 cebola roxa</li>
+<li>1 cenoura</li>
+<li>400 g de polpa de tomate</li>
+<li>1 colher de sopa de concentrado de tomate</li>
+<li>1-2 colheres de sopa de vinagre balsâmico</li>
+<li>Malagueta fresca ou seca a gosto</li>
+<li>Azeite extra virgem q.b.</li>
+<li>Sal e pimenta q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparar o feijão:</strong> Se usares feijão seco, pôe-o de molho pelo menos 8 horas, depois cozinha-o até ficar macio. Se usares feijão em lata, escorre e enxágue sob água corrente.</p>
+<p>2. <strong>Preparar os legumes:</strong> Lava e corta os pimentos em cubos. Descasca e pica finamente as cebolas (branca e roxa) e corta a cenoura em rodelas finas.</p>
+<p>3. <strong>Refogar:</strong> Numa panela grande, aquece 2-3 colheres de sopa de azeite extra virgem em lume médio. Junte as cebolas e a cenoura, e refoga cerca de 5-7 minutos, até as cebolas ficarem translúcidas e a cenoura começar a amolecer.</p>
+<p>4. <strong>Adicionar pimentos:</strong> Junte os cubos de pimento à panela e continua a cozinhar mais 5 minutos, mexendo de vez em quando.</p>
+<p>5. <strong>Incorporar feijão e milho:</strong> Une o feijão cozido, o milho e mistura bem. Deixa os sabores fundirem um par de minutos.</p>
+<p>6. <strong>Adicionar polpa de tomate:</strong> Deita a polpa de tomate e o concentrado de tomate. Mistura bem para unir todos os ingredientes.</p>
+<p>7. <strong>Temperar:</strong> Acrescenta vinagre balsâmico, malagueta (ajusta ao teu gosto) e tempera com sal e pimenta. Leva a lume brando e deixa cozer cerca de 20-30 minutos, mexendo de vez em quando. Isto permitirá que os sabores se fundam e o chili engrosse.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-12-30</p>
+<p><strong>Meta:</strong> 4 Portionen | Vegetarisch</p>
+<p><strong>Beschreibung:</strong> Ein reichhaltiges und würziges vegetarisches Chili auf Basis von Bohnen, Mais und Paprika.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>250 g Bohnen (schwarze, Borlotti oder rote Bohnen)</li>
+<li>100 g gedämpfter Mais</li>
+<li>2 Paprikaschoten (1 rote und 1 gelbe)</li>
+<li>1 weiße Zwiebel</li>
+<li>1 rote Zwiebel</li>
+<li>1 Karotte</li>
+<li>400 g passierte Tomaten</li>
+<li>1 Esslöffel Tomatenmark</li>
+<li>1-2 Esslöffel Balsamico-Essig</li>
+<li>Frische oder getrocknete Chilischote nach Geschmack</li>
+<li>Extra natives Olivenöl nach Geschmack</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Bohnen vorbereiten:</strong> Trockene Bohnen mindestens 8 Stunden einweichen, dann weich kochen. Bei Dosenbohnen abtropfen und unter fließendem Wasser abspülen.</p>
+<p>2. <strong>Gemüse vorbereiten:</strong> Paprika waschen und würfeln. Zwiebeln (weiß und rot) schälen und fein hacken, Karotte in dünne Scheiben schneiden.</p>
+<p>3. <strong>Anschwitzen:</strong> In einem großen Topf 2-3 Esslöffel natives Olivenöl bei mittlerer Hitze erhitzen. Zwiebeln und Karotte zugeben und etwa 5-7 Minuten anschwitzen, bis Zwiebeln glasig und Karotte weich werden.</p>
+<p>4. <strong>Paprika zugeben:</strong> Paprikawürfel in den Topf geben und weitere 5 Minuten garen, dabei gelegentlich umrühren.</p>
+<p>5. <strong>Bohnen und Mais zugeben:</strong> Gekochte Bohnen und Mais zugeben und gut vermischen. Ein paar Minuten durchziehen lassen.</p>
+<p>6. <strong>Passierte Tomaten zugeben:</strong> Passierte Tomaten und Tomatenmark eingießen. Gut vermischen, damit alle Zutaten sich verbinden.</p>
+<p>7. <strong>Würzen:</strong> Balsamico-Essig, Chili (nach Geschmack) zugeben und mit Salz und Pfeffer abschmecken. Zum Kochen bringen, dann Hitze reduzieren und etwa 20-30 Minuten köcheln lassen, dabei gelegentlich umrühren. So können sich die Aromen entfalten und das Chili eindicken.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-12-30</p>
+<p><strong>Meta:</strong> 4 μερίδες | Χορτοφαγικό</p>
+<p><strong>Περιγραφή:</strong> Ένα πλούσιο και πικάντικο χορτοφαγικό τσίλι με βάση τα φασόλια, το καλαμπόκι και τις πιπεριές.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>250 γρ φασόλια (μπορείτε να χρησιμοποιήσετε μαύρα, borlotti ή κόκκινα φασόλια)</li>
+<li>100 γρ καλαμπόκι μαγειρεμένο στον ατμό</li>
+<li>2 πιπεριές (1 κόκκινη και 1 κίτρινη)</li>
+<li>1 λευκό κρεμμύδι</li>
+<li>1 κόκκινο κρεμμύδι</li>
+<li>1 καρότο</li>
+<li>400 γρ πολτός ντομάτας</li>
+<li>1 κουταλιά της σούπας πελτές ντομάτας</li>
+<li>1-2 κουταλιές της σούπας βαλσαμικό ξίδι</li>
+<li>Φρέσκια ή ξερή καυτερή πιπεριά κατά βούληση</li>
+<li>Ελαιόλαδο κατά βούληση</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία φασολιών:</strong> Αν χρησιμοποιείτε ξερά φασόλια, μουλιάστε τα τουλάχιστον 8 ώρες, μετά μαγειρέψτε τα μέχρι να μαλακώσουν. Αν χρησιμοποιείτε φασόλια κονσέρβας, στραγγίστε τα και ξεπλύνετε κάτω από τρεχούμενο νερό.</p>
+<p>2. <strong>Προετοιμασία λαχανικών:</strong> Πλύνετε και κόψτε τις πιπεριές σε κύβους. Ξεφλουδίστε και ψιλοκόψτε τα κρεμμύδια (λευκό και κόκκινο) και κόψτε το καρότο σε λεπτές ροδέλες.</p>
+<p>3. <strong>Σοτάρισμα:</strong> Σε μια μεγάλη κατσαρόλα, ζεστάνετε 2-3 κουταλιές της σούπας ελαιόλαδο σε μέτρια φωτιά. Προσθέστε τα κρεμμύδια και το καρότο, και σοτάρετε για περίπου 5-7 λεπτά, μέχρι τα κρεμμύδια να γίνουν διάφανα και το καρότο να αρχίσει να μαλακώνει.</p>
+<p>4. <strong>Προσθήκη πιπεριών:</strong> Προσθέστε τους κύβους πιπεριάς στην κατσαρόλα και συνεχίστε το μαγείρεμα για άλλα 5 λεπτά, ανακατεύοντας που και που.</p>
+<p>5. <strong>Ενσωμάτωση φασολιών και καλαμποκιού:</strong> Ενσωματώστε τα μαγειρεμένα φασόλια, το καλαμπόκι και ανακατέψτε καλά. Αφήστε τα αρώματα να ενωθούν για μερικά λεπτά.</p>
+<p>6. <strong>Προσθήκη πολτού ντομάτας:</strong> Ρίξτε τον πολτό ντομάτας και τον πελτέ. Ανακατέψτε καλά για να ενωθούν όλα τα υλικά.</p>
+<p>7. <strong>Καλλυντικά:</strong> Προσθέστε βαλσαμικό ξίδι, καυτερή πιπεριά (προσαρμόστε ανάλογα με το γούστο σας) και αλατοπιπερώστε. Φέρτε σε βρασμό, μετά χαμηλώστε τη φωτιά και αφήστε να σιγοβράσει για περίπου 20-30 λεπτά, ανακατεύοντας που και που. Αυτό θα επιτρέψει στις γεύσεις να ενωθούν και στο τσίλι να πήξει.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

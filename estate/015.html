@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crema Fredda di Ceci con Zucchine e Alici Marinate | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Crema Fredda di Ceci con Zucchine e Alici Marinate">
+<meta property="og:title" content="Crema Fredda di Ceci con Zucchine e Alici Marinate | Leguminando">
+<meta property="og:description" content="Crema Fredda di Ceci con Zucchine e Alici Marinate">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="estate/015.html" data-title="Crema Fredda di Ceci con Zucchine e Alici Marinate" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="015.jpg" alt="Crema Fredda di Ceci con Zucchine e Alici" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2026-06-15</p>
+<p><strong>Meta:</strong> 4 porzioni | Estivo</p>
+<p><strong>Descrizione:</strong> Crema fredda di ceci aromatica con zucchine crude marinate e alici.</p>
+<h3>Ingredienti</h3>
+<h3>Crema di Ceci Fredda</h3>
+<ul>
+<li>400 g di ceci precotti</li>
+<li>200 ml di acqua o brodo vegetale</li>
+<li>10 foglie di menta fresca</li>
+<li>8 foglie di basilico fresco</li>
+<li>3 cucchiai di olio extravergine d'oliva</li>
+<li>2 cucchiai di succo di limone</li>
+<li>Sale e pepe a piacere</li>
+</ul>
+<h3>Zucchine Crude</h3>
+<ul>
+<li>2 zucchine piccole (circa 300 g)</li>
+<li>1 cucchiaio di olio extravergine d'oliva</li>
+<li>1 cucchiaio di succo di limone</li>
+<li>Sale q.b.</li>
+</ul>
+<h3>Alici Marinate</h3>
+<ul>
+<li>80 g di filetti di alici sott'olio</li>
+<li>1 cucchiaio di succo di limone</li>
+<li>1/2 cucchiaino di scorza di limone grattugiata</li>
+<li>Pepe nero q.b.</li>
+<li>1 cucchiaio di olio extravergine d'oliva</li>
+</ul>
+<h3>Guarnizione</h3>
+<ul>
+<li>150 g di pomodorini rossi e gialli, tagliati a metà</li>
+<li>Menta fresca, scorza di limone, olio a crudo, pepe nero</li>
+<li>Crostini (opzionale)</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Alici marinate:</strong> Scolare le alici e disporle in un piatto. Aggiungere succo e scorza di limone, pepe e marinare per 10 minuti. Condire con olio extravergine d'oliva.</p>
+<p>2. <strong>Crema di ceci:</strong> Risciacquare i ceci e frullare con acqua, menta, basilico, olio extravergine d'oliva, limone, sale e pepe fino a ottenere una consistenza vellutata. Raffreddare in frigorifero.</p>
+<p>3. <strong>Zucchine crude:</strong> Lavare e tagliare le zucchine a dadini. Condire con olio extravergine d'oliva, limone e sale.</p>
+<p>4. <strong>Assemblaggio:</strong> Versare la crema di ceci nelle ciotole. Aggiungere zucchine e alici. Decorare con pomodorini, menta fresca, scorza di limone, un filo d'olio e pepe nero.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2026-06-15</p>
+<p><strong>Meta:</strong> 4 servings | Summer</p>
+<p><strong>Description:</strong> Aromatic cold chickpea cream with marinated raw courgettes and anchovies.</p>
+<h3>Ingredients</h3>
+<h3>Cold Chickpea Cream</h3>
+<ul>
+<li>400 g precooked chickpeas</li>
+<li>200 ml water or vegetable broth</li>
+<li>10 fresh mint leaves</li>
+<li>8 fresh basil leaves</li>
+<li>3 tablespoons extra virgin olive oil</li>
+<li>2 tablespoons lemon juice</li>
+<li>Salt and pepper to taste</li>
+</ul>
+<h3>Raw Courgettes</h3>
+<ul>
+<li>2 small courgettes (about 300 g)</li>
+<li>1 tablespoon extra virgin olive oil</li>
+<li>1 tablespoon lemon juice</li>
+<li>Salt to taste</li>
+</ul>
+<h3>Marinated Anchovies</h3>
+<ul>
+<li>80 g anchovy fillets in oil</li>
+<li>1 tablespoon lemon juice</li>
+<li>1/2 teaspoon grated lemon zest</li>
+<li>Black pepper to taste</li>
+<li>1 tablespoon extra virgin olive oil</li>
+</ul>
+<h3>Garnish</h3>
+<ul>
+<li>150 g red and yellow cherry tomatoes, halved</li>
+<li>Fresh mint, lemon zest, raw olive oil, black pepper</li>
+<li>Crostini (optional)</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Marinate anchovies:</strong> Drain anchovies and place on a plate. Add lemon juice and zest, pepper and marinate for 10 minutes. Dress with extra virgin olive oil.</p>
+<p>2. <strong>Chickpea cream:</strong> Rinse chickpeas and blend with water, mint, basil, extra virgin olive oil, lemon, salt and pepper until velvety. Chill in refrigerator.</p>
+<p>3. <strong>Raw courgettes:</strong> Wash and dice courgettes. Season with extra virgin olive oil, lemon juice and salt.</p>
+<p>4. <strong>Assembly:</strong> Pour chickpea cream into bowls. Add courgettes and anchovies. Garnish with cherry tomatoes, fresh mint, lemon zest, a drizzle of oil and black pepper.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2026-06-15</p>
+<p><strong>Meta:</strong> 4 porciones | Verano</p>
+<p><strong>Descripción:</strong> Crema fría de garbanzos aromática con calabacines crudos en adobo y anchoas.</p>
+<h3>Ingredientes</h3>
+<h3>Crema Fría de Garbanzos</h3>
+<ul>
+<li>400 g de garbanzos precocidos</li>
+<li>200 ml de agua o caldo de verduras</li>
+<li>10 hojas de menta fresca</li>
+<li>8 hojas de albahaca fresca</li>
+<li>3 cucharadas de aceite de oliva virgen extra</li>
+<li>2 cucharadas de zumo de limón</li>
+<li>Sal y pimienta c.s.</li>
+</ul>
+<h3>Calabacines Crudos</h3>
+<ul>
+<li>2 calabacines pequeños (unos 300 g)</li>
+<li>1 cucharada de aceite de oliva virgen extra</li>
+<li>1 cucharada de zumo de limón</li>
+<li>Sal c.s.</li>
+</ul>
+<h3>Anchoas Marinadas</h3>
+<ul>
+<li>80 g de filetes de anchoa en aceite</li>
+<li>1 cucharada de zumo de limón</li>
+<li>1/2 cucharadita de ralladura de limón</li>
+<li>Pimienta negra c.s.</li>
+<li>1 cucharada de aceite de oliva virgen extra</li>
+</ul>
+<h3>Guarnición</h3>
+<ul>
+<li>150 g de tomates cherry rojos y amarillos, cortados por la mitad</li>
+<li>Menta fresca, ralladura de limón, aceite crudo, pimienta negra</li>
+<li>Crostini (opcional)</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Anchoas marinadas:</strong> Escurre las anchoas y colócalas en un plato. Añade zumo y ralladura de limón, pimienta y marina 10 minutos. Aliña con aceite de oliva virgen extra.</p>
+<p>2. <strong>Crema de garbanzos:</strong> Enjuaga los garbanzos y tritura con agua, menta, albahaca, aceite de oliva virgen extra, limón, sal y pimienta hasta obtener una textura aterciopelada. Enfría en la nevera.</p>
+<p>3. <strong>Calabacines crudos:</strong> Lava y corta los calabacines en dados. Aliña con aceite de oliva virgen extra, zumo de limón y sal.</p>
+<p>4. <strong>Montaje:</strong> Vierte la crema de garbanzos en los cuencos. Añade calabacines y anchoas. Decora con tomates cherry, menta fresca, ralladura de limón, un chorrito de aceite y pimienta negra.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2026-06-15</p>
+<p><strong>Meta:</strong> 4 porções | Verão</p>
+<p><strong>Descrição:</strong> Creme frio de grão-de-bico aromático com courgetes crus marinados e anchovas.</p>
+<h3>Ingredientes</h3>
+<h3>Creme Frio de Grão-de-Bico</h3>
+<ul>
+<li>400 g de grão-de-bico pré-cozido</li>
+<li>200 ml de água ou caldo de legumes</li>
+<li>10 folhas de hortelã fresca</li>
+<li>8 folhas de manjericão fresco</li>
+<li>3 colheres de sopa de azeite extra virgem</li>
+<li>2 colheres de sopa de sumo de limão</li>
+<li>Sal e pimenta q.b.</li>
+</ul>
+<h3>Courgetes Crus</h3>
+<ul>
+<li>2 courgetes pequenas (cerca de 300 g)</li>
+<li>1 colher de sopa de azeite extra virgem</li>
+<li>1 colher de sopa de sumo de limão</li>
+<li>Sal q.b.</li>
+</ul>
+<h3>Anchovas Marinadas</h3>
+<ul>
+<li>80 g de filés de anchova em azeite</li>
+<li>1 colher de sopa de sumo de limão</li>
+<li>1/2 colher de chá de raspa de limão</li>
+<li>Pimenta preta q.b.</li>
+<li>1 colher de sopa de azeite extra virgem</li>
+</ul>
+<h3>Guarnição</h3>
+<ul>
+<li>150 g de tomates cherry vermelhos e amarelos, cortados ao meio</li>
+<li>Hortelã fresca, raspa de limão, azeite cru, pimenta preta</li>
+<li>Crostini (opcional)</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Anchovas marinadas:</strong> Escorra as anchovas e disponha num prato. Junte sumo e raspa de limão, pimenta e deixe marinar 10 minutos. Tempere com azeite extra virgem.</p>
+<p>2. <strong>Creme de grão-de-bico:</strong> Enxágue o grão-de-bico e reduza a puré com água, hortelã, manjericão, azeite extra virgem, limão, sal e pimenta até obter uma consistência aveludada. Arrefeça no frigorífico.</p>
+<p>3. <strong>Courgetes crus:</strong> Lave e corte as courgetes em cubos. Tempere com azeite extra virgem, sumo de limão e sal.</p>
+<p>4. <strong>Montagem:</strong> Deite o creme de grão-de-bico nas tigelas. Junte courgetes e anchovas. Decore com tomates cherry, hortelã fresca, raspa de limão, um fio de azeite e pimenta preta.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2026-06-15</p>
+<p><strong>Meta:</strong> 4 Portionen | Sommer</p>
+<p><strong>Beschreibung:</strong> Aromatisches kaltes Kichererbsen-Creme mit marinierten rohen Zucchini und Sardellen.</p>
+<h3>Zutaten</h3>
+<h3>Kalte Kichererbsen-Creme</h3>
+<ul>
+<li>400 g vorgekochte Kichererbsen</li>
+<li>200 ml Wasser oder Gemüsebrühe</li>
+<li>10 frische Minzblätter</li>
+<li>8 frische Basilikumblätter</li>
+<li>3 Esslöffel extra natives Olivenöl</li>
+<li>2 Esslöffel Zitronensaft</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+</ul>
+<h3>Roh zucchini</h3>
+<ul>
+<li>2 kleine Zucchini (ca. 300 g)</li>
+<li>1 Esslöffel extra natives Olivenöl</li>
+<li>1 Esslöffel Zitronensaft</li>
+<li>Salz nach Geschmack</li>
+</ul>
+<h3>Marinierte Sardellen</h3>
+<ul>
+<li>80 g Sardellenfilets in Öl</li>
+<li>1 Esslöffel Zitronensaft</li>
+<li>1/2 Teelöffel geraspelte Zitronenschale</li>
+<li>Schwarzer Pfeffer nach Geschmack</li>
+<li>1 Esslöffel extra natives Olivenöl</li>
+</ul>
+<h3>Garnierung</h3>
+<ul>
+<li>150 g rote und gelbe Kirschtomaten, halbiert</li>
+<li>Frische Minze, Zitronenschale, rohes Olivenöl, schwarzer Pfeffer</li>
+<li>Crostini (optional)</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Sardellen marinieren:</strong> Sardellen abtropfen lassen und auf einen Teller legen. Zitronensaft und -schale, Pfeffer zugeben und 10 Minuten marinieren. Mit extra nativem Olivenöl beträufeln.</p>
+<p>2. <strong>Kichererbsen-Creme:</strong> Kichererbsen spülen und mit Wasser, Minze, Basilikum, extra nativem Olivenöl, Zitrone, Salz und Pfeffer pürieren, bis eine samtige Konsistenz entsteht. Im Kühlschrank kalt stellen.</p>
+<p>3. <strong>Roh zucchini:</strong> Zucchini waschen und würfeln. Mit extra nativem Olivenöl, Zitronensaft und Salz würzen.</p>
+<p>4. <strong>Anrichten:</strong> Kichererbsen-Creme in Schalen geben. Zucchini und Sardellen zugeben. Mit Kirschtomaten, frischer Minze, Zitronenschale, einem Spritzer Öl und schwarzem Pfeffer garnieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2026-06-15</p>
+<p><strong>Meta:</strong> 4 μερίδες | Καλοκαίρι</p>
+<p><strong>Περιγραφή:</strong> Αρωματικό κρύο κρεμ ρεβιθιών με μαριναρισμένα ωμά κολοκυθάκια και αντσούγιες.</p>
+<h3>Συστατικά</h3>
+<h3>Κρύο Κρεμ Ρεβιθιών</h3>
+<ul>
+<li>400 γρ προμαγειρεμένα ρεβίθια</li>
+<li>200 ml νερό ή ζωμός λαχανικών</li>
+<li>10 φρέσκα φύλλα μέντας</li>
+<li>8 φρέσκα φύλλα βασιλικού</li>
+<li>3 κουταλιές της σούπας ελαιόλαδο</li>
+<li>2 κουταλιές της σούπας χυμός λεμονιού</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+</ul>
+<h3>Ωμά Κολοκυθάκια</h3>
+<ul>
+<li>2 μικρά κολοκυθάκια (περίπου 300 γρ)</li>
+<li>1 κουταλιά της σούπας ελαιόλαδο</li>
+<li>1 κουταλιά της σούπας χυμός λεμονιού</li>
+<li>Αλάτι κατά βούληση</li>
+</ul>
+<h3>Μαριναρισμένες Αντσούγιες</h3>
+<ul>
+<li>80 γρ φιλέτα αντσούγιας σε λάδι</li>
+<li>1 κουταλιά της σούπας χυμός λεμονιού</li>
+<li>1/2 κουταλάκι του γλυκού τριμμένη φλούδα λεμονιού</li>
+<li>Μαύρο πιπέρι κατά βούληση</li>
+<li>1 κουταλιά της σούπας ελαιόλαδο</li>
+</ul>
+<h3>Γαρνίρισμα</h3>
+<ul>
+<li>150 γρ κόκκινα και κίτρινα ντοματίνια, κομμένα στη μέση</li>
+<li>Φρέσκα μέντα, φλούδα λεμονιού, ωμό ελαιόλαδο, μαύρο πιπέρι</li>
+<li>Crostini (προαιρετικά)</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Αντσούγιες μαρινάτα:</strong> Στραγγίστε τις αντσούγιες και τοποθετήστε σε πιάτο. Προσθέστε χυμό και φλούδα λεμονιού, πιπέρι και μαρινάρετε για 10 λεπτά. Πασπαλίστε με ελαιόλαδο.</p>
+<p>2. <strong>Κρεμ ρεβιθιών:</strong> Ξεπλύνετε τα ρεβίθια και λιώστε με νερό, μέντα, βασιλικό, ελαιόλαδο, λεμόνι, αλάτι και πιπέρι μέχρι να γίνει βελούδινο. Βάλτε στο ψυγείο.</p>
+<p>3. <strong>Ωμά κολοκυθάκια:</strong> Πλύνετε και κόψτε τα κολοκυθάκια σε κυβάκια. Αλατοπιπερώστε με ελαιόλαδο, χυμό λεμονιού και αλάτι.</p>
+<p>4. <strong>Συναρμολόγηση:</strong> Ρίξτε το κρεμ ρεβιθιών σε μπολ. Προσθέστε κολοκυθάκια και αντσούγιες. Γαρνίρετε με ντοματίνια, φρέσκα μέντα, φλούδα λεμονιού, νήμα ελαιολάδου και μαύρο πιπέρι.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

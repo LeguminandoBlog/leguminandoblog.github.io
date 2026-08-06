@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moscardini con Piselli e Curcuma | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Moscardini con Piselli e Curcuma">
+<meta property="og:title" content="Moscardini con Piselli e Curcuma | Leguminando">
+<meta property="og:description" content="Moscardini con Piselli e Curcuma">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="inverno/015.html" data-title="Moscardini con Piselli e Curcuma" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="015.jpg" alt="Moscardini con Piselli e Curcuma" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2026-01-07</p>
+<p><strong>Meta:</strong> 4 porzioni | Pesce</p>
+<p><strong>Descrizione:</strong> Moscardini teneri in umido con piselli freschi e curcuma, un piatto invernale ricco e profumato.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>500 g di moscardini già puliti</li>
+<li>250 g di piselli freschi</li>
+<li>200 ml di passata di pomodoro</li>
+<li>500 ml di vino rosso</li>
+<li>2 cucchiai di cipolla rossa tritata</li>
+<li>1 cucchiaio di cipolla bianca tritata</li>
+<li>Carote e sedano a cubetti piccoli</li>
+<li>3 spicchi d'aglio</li>
+<li>3 cucchiai di curcuma</li>
+<li>Olio extravergine d'oliva (EVO) q.b.</li>
+<li>Sale e pepe q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparazione del soffritto:</strong> In una casseruola capiente, scalda un filo d'olio EVO. Aggiungi la cipolla rossa e bianca tritata, l'aglio, le carote e il sedano. Fai rosolare a fuoco medio finché le verdure saranno morbide.</p>
+<p>2. <strong>Aggiunta dei moscardini:</strong> Unisci i moscardini al soffritto e cuoci per alcuni minuti, mescolando di tanto in tanto, finché non cambiano colore.</p>
+<p>3. <strong>Sfumatura con vino:</strong> Versa il vino rosso nella casseruola e lascia evaporare l'alcol a fuoco vivace per circa 5 minuti.</p>
+<p>4. <strong>Cottura con pomodoro e curcuma:</strong> Aggiungi la passata di pomodoro e la curcuma. Mescola bene e abbassa la fiamma. Copri con un coperchio e lascia cuocere a fuoco lento per circa 30 minuti.</p>
+<p>5. <strong>Aggiunta dei piselli:</strong> Incorpora i piselli freschi e continua la cottura per altri 10-15 minuti, finché i piselli saranno teneri.</p>
+<p>6. <strong>Condimento finale:</strong> Aggiusta di sale e pepe a piacere. Se il sugo dovesse risultare troppo denso, puoi aggiungere un po' di acqua calda.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2026-01-07</p>
+<p><strong>Meta:</strong> 4 servings | Seafood</p>
+<p><strong>Description:</strong> Tender baby octopus stewed with fresh peas and turmeric, a rich and fragrant winter dish.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>500 g cleaned baby octopus</li>
+<li>250 g fresh peas</li>
+<li>200 ml tomato passata</li>
+<li>500 ml red wine</li>
+<li>2 tablespoons chopped red onion</li>
+<li>1 tablespoon chopped white onion</li>
+<li>Diced carrots and celery</li>
+<li>3 garlic cloves</li>
+<li>3 tablespoons turmeric</li>
+<li>Extra virgin olive oil to taste</li>
+<li>Salt and pepper to taste</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Prepare the sauté:</strong> In a large casserole, heat a drizzle of EVO oil. Add chopped red and white onion, garlic, carrots and celery. Sauté over medium heat until vegetables are soft.</p>
+<p>2. <strong>Add octopus:</strong> Add baby octopus to the sauté and cook for a few minutes, stirring occasionally, until they change colour.</p>
+<p>3. <strong>Deglaze with wine:</strong> Pour red wine into the casserole and let alcohol evaporate over high heat for about 5 minutes.</p>
+<p>4. <strong>Cook with tomato and turmeric:</strong> Add tomato passata and turmeric. Mix well and lower the heat. Cover and simmer for about 30 minutes.</p>
+<p>5. <strong>Add peas:</strong> Stir in fresh peas and continue cooking for another 10-15 minutes, until peas are tender.</p>
+<p>6. <strong>Final seasoning:</strong> Season with salt and pepper to taste. If sauce is too thick, add a little hot water.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2026-01-07</p>
+<p><strong>Meta:</strong> 4 porciones | Marisco</p>
+<p><strong>Descripción:</strong> Pulpitos tiernos guisados con guisantes frescos y cúrcuma, un plato invernal rico y aromático.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>500 g de pulpitos ya limpios</li>
+<li>250 g de guisantes frescos</li>
+<li>200 ml de tomate triturado</li>
+<li>500 ml de vino tinto</li>
+<li>2 cucharadas de cebolla roja picada</li>
+<li>1 cucharada de cebolla blanca picada</li>
+<li>Zanahoria y apio en dados pequeños</li>
+<li>3 dientes de ajo</li>
+<li>3 cucharadas de cúrcuma</li>
+<li>Aceite de oliva virgen extra c.s.</li>
+<li>Sal y pimienta c.s.</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparar el sofrito:</strong> En una cazuela grande, calienta un chorrito de aceite AOVE. Añade cebolla roja y blanca picada, ajo, zanahoria y apio. Sofríe a fuego medio hasta que las verduras estén tiernas.</p>
+<p>2. <strong>Agregar los pulpitos:</strong> Incorpora los pulpitos al sofrito y cuece unos minutos, removiendo de vez en cuando, hasta que cambien de color.</p>
+<p>3. <strong>Desglasar con vino:</strong> Vierte el vino tinto en la cazuela y deja evaporar el alcohol a fuego vivo unos 5 minutos.</p>
+<p>4. <strong>Cocción con tomate y cúrcuma:</strong> Añade el tomate triturado y la cúrcuma. Mezcla bien y baja el fuego. Tapa y cuece a fuego lento unos 30 minutos.</p>
+<p>5. <strong>Incorporar guisantes:</strong> Añade los guisantes frescos y continúa la cocción otros 10-15 minutos, hasta que estén tiernos.</p>
+<p>6. <strong>Sazonado final:</strong> Sazona con sal y pimienta al gusto. Si la salsa queda muy espesa, añade un poco de agua caliente.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2026-01-07</p>
+<p><strong>Meta:</strong> 4 porções | Marisco</p>
+<p><strong>Descrição:</strong> Polvos de recife tenros guisados com ervilhas frescas e açafrão-da-terra, um prato invernal rico e aromático.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>500 g de polvos de recife já limpos</li>
+<li>250 g de ervilhas frescas</li>
+<li>200 ml de polpa de tomate</li>
+<li>500 ml de vinho tinto</li>
+<li>2 colheres de sopa de cebola roxa picada</li>
+<li>1 colher de sopa de cebola branca picada</li>
+<li>Cenoura e aipo em cubos pequenos</li>
+<li>3 dentes de alho</li>
+<li>3 colheres de sopa de açafrão-da-terra</li>
+<li>Azeite extra virgem q.b.</li>
+<li>Sal e pimenta q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparar o refogado:</strong> Numa caçarola grande, aqueça um fio de azeite AOVE. Junte cebola roxa e branca picada, alho, cenoura e aipo. Refogue em lume médio até os legumes ficarem macios.</p>
+<p>2. <strong>Adicionar os polvos:</strong> Junte os polvos de recife ao refogado e cozinhe alguns minutos, mexendo de vez em quando, até mudarem de cor.</p>
+<p>3. <strong>Desglaçar com vinho:</strong> Deite o vinho tinto na caçarola e deixe evaporar o álcool em lume forte cerca de 5 minutos.</p>
+<p>4. <strong>Cozinhar com tomate e açafrão:</strong> Adicione a polpa de tomate e o açafrão-da-terra. Misture bem e baixe o lume. Tape e cozinhe em lume brando cerca de 30 minutos.</p>
+<p>5. <strong>Incorporar ervilhas:</strong> Acrescente as ervilhas frescas e continue a cozedura mais 10-15 minutos, até ficarem tenras.</p>
+<p>6. <strong>Temperar:</strong> Tempere com sal e pimenta a gosto. Se o molho ficar muito espesso, acrescente um pouco de água quente.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2026-01-07</p>
+<p><strong>Meta:</strong> 4 Portionen | Meeresfrüchte</p>
+<p><strong>Beschreibung:</strong> Zarte Kleine Kraken geschmort mit frischen Erbsen und Kurkuma, ein reichhaltiges und duftendes Wintergericht.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>500 g bereits gereinigte Kleine Kraken</li>
+<li>250 g frische Erbsen</li>
+<li>200 ml passierte Tomaten</li>
+<li>500 ml Rotwein</li>
+<li>2 Esslöffel gehackte rote Zwiebel</li>
+<li>1 Esslöffel gehackte weiße Zwiebel</li>
+<li>Klein gewürfelte Karotten und Sellerie</li>
+<li>3 Knoblauchzehen</li>
+<li>3 Esslöffel Kurkuma</li>
+<li>Extra natives Olivenöl nach Geschmack</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Schmorrn zubereiten:</strong> In einem großen Bräter natives Olivenöl erhitzen. Gehackte rote und weiße Zwiebel, Knoblauch, Karotten und Sellerie zugeben. Bei mittlerer Hitze anschwitzen, bis das Gemüse weich ist.</p>
+<p>2. <strong>Kraken zugeben:</strong> Kleine Kraken zum Schmorgemüse geben und einige Minuten braten, dabei gelegentlich umrühren, bis sie die Farbe wechseln.</p>
+<p>3. <strong>Mit Wein ablöschen:</strong> Rotwein in den Bräter gießen und Alkohol bei starker Hitze etwa 5 Minuten verdampfen lassen.</p>
+<p>4. <strong>Mit Tomate und Kurkuma garen:</strong> Passierte Tomaten und Kurkuma zugeben. Gut vermischen und Hitze reduzieren. Zugedeckt etwa 30 Minuten schmoren lassen.</p>
+<p>5. <strong>Erbsen zugeben:</strong> Frische Erbsen einrühren und weitere 10-15 Minuten garen, bis die Erbsen zart sind.</p>
+<p>6. <strong>Abschmecken:</strong> Mit Salz und Pfeffer abschmecken. Falls die Soße zu dickflüssig ist, etwas heißes Wasser zugeben.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2026-01-07</p>
+<p><strong>Meta:</strong> 4 μερίδες | Θαλασσινά</p>
+<p><strong>Περιγραφή:</strong> Τρυφεροί μικροί χταποδάκια στιφάδο με φρέσκα μπιζέλια και κουρκούμη, ένα πλούσιο και αρωματικό χειμωνιάτικο πιάτο.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>500 γρ ήδη καθαρισμένα μικρά χταπόδια</li>
+<li>250 γρ φρέσκα μπιζέλια</li>
+<li>200 ml πολτός ντομάτας</li>
+<li>500 ml κόκκινο κρασί</li>
+<li>2 κουταλιές της σούπας ψιλοκομμένο κόκκινο κρεμμύδι</li>
+<li>1 κουταλιά της σούπας ψιλοκομμένο λευκό κρεμμύδι</li>
+<li>Καρότα και σέλινο σε μικρούς κύβους</li>
+<li>3 σκελίδες σκόρδο</li>
+<li>3 κουταλιές της σούπας κουρκούμη</li>
+<li>Ελαιόλαδο κατά βούληση</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία σοταρίσματος:</strong> Σε μια μεγάλη κατσαρόλα, ζεστάνετε λίγο ελαιόλαδο. Προσθέστε ψιλοκομμένο κόκκινο και λευκό κρεμμύδι, σκόρδο, καρότα και σέλινο. Σοτάρετε σε μέτρια φωτιά μέχρι να μαλακώσουν τα λαχανικά.</p>
+<p>2. <strong>Προσθήκη χταποδιών:</strong> Προσθέστε τα μικρά χταπόδια στο σοτάρισμα και μαγειρέψτε για λίγα λεπτά, ανακατεύοντας που και που, μέχρι να αλλάξουν χρώμα.</p>
+<p>3. <strong>Σβήσιμο με κρασί:</strong> Ρίξτε το κόκκινο κρασί στην κατσαρόλα και αφήστε το αλκοόλ να εξατμιστεί σε δυνατή φωτιά για περίπου 5 λεπτά.</p>
+<p>4. <strong>Μαγείρεμα με ντομάτα και κουρκούμη:</strong> Προσθέστε τον πολτό ντομάτας και την κουρκούμη. Ανακατέψτε καλά και χαμηλώστε τη φωτιά. Σκεπάστε και αφήστε να σιγοβράσει για περίπου 30 λεπτά.</p>
+<p>5. <strong>Προσθήκη μπιζελιών:</strong> Ενσωματώστε τα φρέσκα μπιζέλια και συνεχίστε το μαγείρεμα για άλλα 10-15 λεπτά, μέχρι να μαλακώσουν.</p>
+<p>6. <strong>Καλλυντικά:</strong> Αλατοπιπερώστε κατά βούληση. Αν η σάλτσα είναι πολύ πηκτή, προσθέστε λίγο ζεστό νερό.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

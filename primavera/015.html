@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Focaccia Ripiena di Ceci | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Focaccia Ripiena di Ceci">
+<meta property="og:title" content="Focaccia Ripiena di Ceci | Leguminando">
+<meta property="og:description" content="Focaccia Ripiena di Ceci">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="primavera/015.html" data-title="Focaccia Ripiena di Ceci" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="015.jpg" alt="Focaccia Ripiena di Ceci" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2026-03-18</p>
+<p><strong>Meta:</strong> 6 porzioni | Vegetariano</p>
+<p><strong>Descrizione:</strong> Focaccia soffice ripiena di ceci aromatici con rosmarino e limone.</p>
+<h3>Ingredienti</h3>
+<h3>Per l'Impasto</h3>
+<ul>
+<li>300 g di farina 00</li>
+<li>150 ml di acqua tiepida</li>
+<li>5 g di lievito di birra secco</li>
+<li>1 cucchiaino di zucchero</li>
+<li>2 cucchiai di olio extravergine d'oliva</li>
+<li>1 pizzico di sale</li>
+</ul>
+<h3>Per il Ripieno di Ceci</h3>
+<ul>
+<li>400 g di ceci precotti, scolati</li>
+<li>2 cucchiai di olio extravergine d'oliva</li>
+<li>1 spicchio d'aglio</li>
+<li>1 rametto di rosmarino fresco</li>
+<li>100 ml di brodo vegetale</li>
+<li>Succo e scorza di 1 limone</li>
+<li>Sale e pepe q.b.</li>
+<li>Peperoncino (opzionale)</li>
+</ul>
+<h3>Per la Finitura</h3>
+<ul>
+<li>Olio extravergine d'oliva per spennellare</li>
+<li>Rosmarino fresco</li>
+<li>Fiocchi di sale grosso</li>
+<li>Semi di sesamo (opzionale)</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparazione dell'impasto:</strong> In una ciotola, mescola l'acqua tiepida con il lievito e lo zucchero e lascia riposare per qualche minuto finché non si formano delle bollicine. Aggiungi la farina e mescola. Unisci l'olio e il sale, poi impasta fino a ottenere una consistenza liscia ed elastica. Copri l'impasto con un panno umido e lascialo lievitare in un luogo caldo per circa 1-2 ore, o finché non raddoppia di volume.</p>
+<p>2. <strong>Preparazione del ripieno:</strong> Scalda l'olio in una padella, aggiungi l'aglio e il rosmarino e fai soffriggere per qualche minuto. Aggiungi i ceci scolati e mescola bene. Versa il brodo vegetale, il succo e la scorza di limone, e aggiusta di sale e pepe. Se gradito, aggiungi il peperoncino. Lascia cuocere a fuoco medio finché il liquido si è ridotto e i ceci sono ben insaporiti.</p>
+<p>3. <strong>Composizione e cottura:</strong> Dividi l'impasto in due, stendi la prima metà su una teglia unta d'olio. Distribuisci il ripieno di ceci uniformemente sull'impasto steso. Stendi l'altra metà dell'impasto sopra e sigilla bene i bordi. Spennella con olio d'oliva abbondante, cospargi con rosmarino, fiocchi di sale grosso e semi di sesamo se desiderati. Cuoci in forno preriscaldato a 220 °C per circa 20-25 minuti, o finché la focaccia è dorata e croccante.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2026-03-18</p>
+<p><strong>Meta:</strong> 6 servings | Vegetarian</p>
+<p><strong>Description:</strong> Soft focaccia stuffed with aromatic chickpeas, rosemary and lemon.</p>
+<h3>Ingredients</h3>
+<h3>For the Dough</h3>
+<ul>
+<li>300 g 00 flour</li>
+<li>150 ml warm water</li>
+<li>5 g dry brewer's yeast</li>
+<li>1 teaspoon sugar</li>
+<li>2 tablespoons extra virgin olive oil</li>
+<li>A pinch of salt</li>
+</ul>
+<h3>For the Chickpea Filling</h3>
+<ul>
+<li>400 g precooked chickpeas, drained</li>
+<li>2 tablespoons extra virgin olive oil</li>
+<li>1 garlic clove</li>
+<li>1 sprig fresh rosemary</li>
+<li>100 ml vegetable broth</li>
+<li>Juice and zest of 1 lemon</li>
+<li>Salt and pepper to taste</li>
+<li>Chili (optional)</li>
+</ul>
+<h3>To Finish</h3>
+<ul>
+<li>Extra virgin olive oil for brushing</li>
+<li>Fresh rosemary</li>
+<li>Coarse sea salt flakes</li>
+<li>Sesame seeds (optional)</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Prepare the dough:</strong> In a bowl, mix warm water with yeast and sugar and let rest for a few minutes until bubbles form. Add flour and mix. Add oil and salt, then knead until smooth and elastic. Cover the dough with a damp cloth and let rise in a warm place for about 1-2 hours, or until doubled in volume.</p>
+<p>2. <strong>Prepare the filling:</strong> Heat oil in a pan, add garlic and rosemary and sauté for a few minutes. Add drained chickpeas and mix well. Pour in vegetable broth, lemon juice and zest, and season with salt and pepper. Add chili if desired. Cook over medium heat until the liquid has reduced and chickpeas are well flavored.</p>
+<p>3. <strong>Assembly and baking:</strong> Divide dough in half, roll out first half on an oiled baking sheet. Spread chickpea filling evenly over the dough. Roll out remaining dough on top and seal edges well. Brush generously with olive oil, sprinkle with rosemary, coarse salt flakes and sesame seeds if desired. Bake in preheated oven at 220 °C for about 20-25 minutes, until golden and crispy.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2026-03-18</p>
+<p><strong>Meta:</strong> 6 porciones | Vegetariano</p>
+<p><strong>Descripción:</strong> Focaccia tierna rellena de garbanzos aromáticos con romero y limón.</p>
+<h3>Ingredientes</h3>
+<h3>Para la Masa</h3>
+<ul>
+<li>300 g de harina 00</li>
+<li>150 ml de agua templada</li>
+<li>5 g de levadura de cerveza seca</li>
+<li>1 cucharadita de azúcar</li>
+<li>2 cucharadas de aceite de oliva virgen extra</li>
+<li>Una pizca de sal</li>
+</ul>
+<h3>Para el Relleno de Garbanzos</h3>
+<ul>
+<li>400 g de garbanzos precocidos, escurridos</li>
+<li>2 cucharadas de aceite de oliva virgen extra</li>
+<li>1 diente de ajo</li>
+<li>1 ramita de romero fresco</li>
+<li>100 ml de caldo de verduras</li>
+<li>Zumo y ralladura de 1 limón</li>
+<li>Sal y pimienta c.s.</li>
+<li>Guindilla (opcional)</li>
+</ul>
+<h3>Para la Finition</h3>
+<ul>
+<li>Aceite de oliva virgen extra para pincelar</li>
+<li>Romero fresco</li>
+<li>Escamas de sal gruesa</li>
+<li>Semillas de sésamo (opcional)</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparar la masa:</strong> En un bol, mezcla agua templada con levadura y azúcar y deja reposar unos minutos hasta que se formen burbujas. Añade harina y mezcla. Agrega aceite y sal, luego amasa hasta obtener una consistencia lisa y elástica. Cubre la masa con un paño húmedo y deja levar en un lugar cálido unas 1-2 horas, o hasta que duplique su volumen.</p>
+<p>2. <strong>Preparar el relleno:</strong> Calienta aceite en una sartén, añade ajo y romero y sofríe unos minutos. Agrega garbanzos escurridos y mezcla bien. Vierte caldo de verduras, zumo y ralladura de limón, y sazona con sal y pimienta. Añade guindilla si lo deseas. Cocina a fuego medio hasta que el líquido se haya reducido y los garbanzos estén bien sazonados.</p>
+<p>3. <strong>Montaje y cocción:</strong> Divide la masa por la mitad, extiende la primera en una bandeja engrasada. Distribuye el relleno de garbanzos uniformemente sobre la masa. Extiende la otra mitad encima y sella bien los bordes. Pincela con aceite de oliva abundante, espolvorea romero, escamas de sal gruesa y semillas de sésamo si lo deseas. Hornea a 220 °C unos 20-25 minutos, hasta que esté dorada y crujiente.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2026-03-18</p>
+<p><strong>Meta:</strong> 6 porções | Vegetariano</p>
+<p><strong>Descrição:</strong> Focaccia macia recheada com grão-de-bico aromático, alecrim e limão.</p>
+<h3>Ingredientes</h3>
+<h3>Para a Massa</h3>
+<ul>
+<li>300 g de farinha 00</li>
+<li>150 ml de água morna</li>
+<li>5 g de fermento de cerveja seco</li>
+<li>1 colher de chá de açúcar</li>
+<li>2 colheres de sopa de azeite extra virgem</li>
+<li>Uma pitada de sal</li>
+</ul>
+<h3>Para o Recheio de Grão-de-Bico</h3>
+<ul>
+<li>400 g de grão-de-bico pré-cozido, escorrido</li>
+<li>2 colheres de sopa de azeite extra virgem</li>
+<li>1 dente de alho</li>
+<li>1 ramo de alecrim fresco</li>
+<li>100 ml de caldo de legumes</li>
+<li>Sumo e raspa de 1 limão</li>
+<li>Sal e pimenta q.b.</li>
+<li>Pimentão (opcional)</li>
+</ul>
+<h3>Para a Finalização</h3>
+<ul>
+<li>Azeite extra virgem para pincelar</li>
+<li>Alecrim fresco</li>
+<li>Flocos de sal grosso</li>
+<li>Sementes de sésamo (opcional)</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparar a massa:</strong> Numa tigela, misture água morna com fermento e açúcar e deixe repousar alguns minutos até se formarem bolhas. Adicione farinha e misture. Junte azeite e sal, depois amasse até obter uma consistência lisa e elástica. Cubra a massa com um pano húmido e deixe levedar num local quente cerca de 1-2 horas, ou até duplicar de volume.</p>
+<p>2. <strong>Preparar o recheio:</strong> Aqueça o azeite numa frigideira, junte alho e alecrim e refogue alguns minutos. Adicione grão-de-bico escorrido e misture bem. Deite caldo de legumes, sumo e raspa de limão, e tempere com sal e pimenta. Adicione pimentão se desejar. Cozinhe em lume brando até o líquido se reduzir e o grão-de-bico ficar bem temperado.</p>
+<p>3. <strong>Montagem e cozedura:</strong> Divida a massa ao meio, estenda a primeira metade num tabuleiro untado. Distribua o recheio de grão-de-bico uniformemente sobre a massa. Estenda a outra metade por cima e feche bem as bordas. Pincele com azeite abundante, polvilhe alecrim, flocos de sal grosso e sementes de sésamo se desejar. Cozinhe no forno pré-aquecido a 220 °C cerca de 20-25 minutos, até ficar dourada e crocante.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2026-03-18</p>
+<p><strong>Meta:</strong> 6 Portionen | Vegetarisch</p>
+<p><strong>Beschreibung:</strong> Weiche Focaccia gefüllt mit aromatischen Kichererbsen, Rosmarin und Zitrone.</p>
+<h3>Zutaten</h3>
+<h3>Für den Teig</h3>
+<ul>
+<li>300 g Mehl Type 00</li>
+<li>150 ml lauwarmes Wasser</li>
+<li>5 g trockene Backhefe</li>
+<li>1 Teelöffel Zucker</li>
+<li>2 Esslöffel extra natives Olivenöl</li>
+<li>Eine Prise Salz</li>
+</ul>
+<h3>Für die Kichererbsen-Füllung</h3>
+<ul>
+<li>400 g vorgekochte Kichererbsen, abgetropft</li>
+<li>2 Esslöffel extra natives Olivenöl</li>
+<li>1 Knoblauchzehe</li>
+<li>1 Zweig frischer Rosmarin</li>
+<li>100 ml Gemüsebrühe</li>
+<li>Saft und Schale von 1 Zitrone</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Chili (optional)</li>
+</ul>
+<h3>Zum Bestreichen</h3>
+<ul>
+<li>Extra natives Olivenöl zum Bestreichen</li>
+<li>Frischer Rosmarin</li>
+<li>Grobe Meersalzflocken</li>
+<li>Sesamkörner (optional)</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Teig zubereiten:</strong> In einer Schüssel lauwarmes Wasser mit Hefe und Zucker mischen und einige Minuten ruhen lassen, bis sich Bläschen bilden. Mehl hinzufügen und mischen. Öl und Salz zugeben, dann kneten, bis ein glatter, elastischer Teig entsteht. Den Teig mit einem feuchten Tuch bedecken und an einem warmen Ort etwa 1-2 Stunden gehen lassen, oder bis er sich verdoppelt hat.</p>
+<p>2. <strong>Füllung zubereiten:</strong> Öl in einer Pfanne erhitzen, Knoblauch und Rosmarin zugeben und einige Minuten anschwitzen. Abgetropfte Kichererbsen zugeben und gut mischen. Gemüsebrühe, Zitronensaft und -schale hinzufügen und mit Salz und Pfeffer abschmecken. Bei Bedarf Chili zugeben. Bei mittlerer Hitze kochen, bis die Flüssigkeit reduziert ist und die Kichererbsen gut durchgewürzt sind.</p>
+<p>3. <strong>Zusammenbau und Backen:</strong> Teig halbieren, erste Hälfte auf einem geölten Backblech ausrollen. Kichererbsen-Füllung gleichmäßig auf dem Teig verteilen. Restlichen Teig darüber ausrollen und Ränder gut verschließen. Reichlich mit Olivenöl bestreichen, mit Rosmarin, groben Salzflocken und Sesamkörnern bestreuen. Im vorgeheizten Ofen bei 220 °C etwa 20-25 Minuten backen, bis goldbraun und knusprig.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2026-03-18</p>
+<p><strong>Meta:</strong> 6 μερίδες | Χορτοφαγικό</p>
+<p><strong>Περιγραφή:</strong> Αφράτη φοκάτσια γεμισμένη με αρωματικά ρεβίθια, δενδρολίβανο και λεμόνι.</p>
+<h3>Συστατικά</h3>
+<h3>Για τη Ζύμη</h3>
+<ul>
+<li>300 γρ αλεύρι 00</li>
+<li>150 ml χλιαρό νερό</li>
+<li>5 γρ ξηρή μαγιά μπύρας</li>
+<li>1 κουταλάκι του γλυκού ζάχαρη</li>
+<li>2 κουταλιές της σούπας ελαιόλαδο</li>
+<li>Μια πρέζα αλάτι</li>
+</ul>
+<h3>Για τη Γέμιση Ρεβιθιών</h3>
+<ul>
+<li>400 γρ προμαγειρεμένα ρεβίθια, στραγγισμένα</li>
+<li>2 κουταλιές της σούπας ελαιόλαδο</li>
+<li>1 σκελίδα σκόρδο</li>
+<li>1 κλαδάκι φρέσκο δενδρολίβανο</li>
+<li>100 ml ζωμό λαχανικών</li>
+<li>Χυμός και ξύσμα 1 λεμονιού</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>Καυτερή πιπεριά (προαιρετικά)</li>
+</ul>
+<h3>Για το Τελείωμα</h3>
+<ul>
+<li>Ελαιόλαδο για άλειμμα</li>
+<li>Φρέσκο δενδρολίβανο</li>
+<li>Νιφάδες χοντρού θαλασσινού αλατιού</li>
+<li>Σουσάμι (προαιρετικά)</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία ζύμης:</strong> Σε ένα μπολ, ανακατέψτε το χλιαρό νερό με τη μαγιά και τη ζάχαρη και αφήστε το να ξεκουραστεί για λίγα λεπτά μέχρι να σχηματιστούν φυσαλίδες. Προσθέστε αλεύρι και ανακατέψτε. Προσθέστε λάδι και αλάτι, ζυμώστε μέχρι να γίνει λεία και ελαστική. Καλύψτε με υγρό πανί και αφήστε να φουσκώσει σε ζεστό μέρος περίπου 1-2 ώρες, ή μέχρι να διπλασιαστεί.</p>
+<p>2. <strong>Προετοιμασία γέμισης:</strong> Ζεστάνετε λάδι σε ένα τηγάνι, προσθέστε σκόρδο και δενδρολίβανο και σοτάρετε για λίγα λεπτά. Προσθέστε στραγγισμένα ρεβίθια και ανακατέψτε καλά. Ρίξτε ζωμό λαχανικών, χυμό και ξύσμα λεμονιού, και αλατοπιπερώστε. Προσθέστε καυτερή πιπεριά αν θέλετε. Μαγειρέψτε σε μέτρια φωτιά μέχρι να μειωθεί το υγρό και τα ρεβίθια να πάρουν καλά γεύση.</p>
+<p>3. <strong>Συναρμολόγηση και ψήσιμο:</strong> Χωρίστε τη ζύμη στα δύο, απλώστε το πρώτο μισό σε λαδωμένο ταψί. Απλώστε τη γέμιση ρεβιθιών ομοιόμορφα πάνω στη ζύμη. Απλώστε το υπόλοιπο μισό από πάνω και κλείστε καλά τα άκρα. Αλείψτε με άφθονο λάδι, πασπαλίστε δενδρολίβανο, νιφάδες χοντρού αλατιού και σουσάμι αν θέλετε. Ψήστε σε προθερμασμένο φούρνο στους 220 °C για περίπου 20-25 λεπτά, μέχρι να ροδίσει και να γίνει τραγανή.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+<div data-legumi="ceci" style="display:none;"></div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

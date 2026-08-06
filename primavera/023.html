@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hamburger di Ceci | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Hamburger di Ceci">
+<meta property="og:title" content="Hamburger di Ceci | Leguminando">
+<meta property="og:description" content="Hamburger di Ceci">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="primavera/023.html" data-title="Hamburger di Ceci" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="023.jpg" alt="Hamburger di Ceci" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2026-03-04</p>
+<p><strong>Meta:</strong> 4 hamburger | Vegetariano</p>
+<p><strong>Descrizione:</strong> Hamburger vegetariani di ceci con rosmarino, paprika e parmigiano, croccanti fuori e morbidi dentro.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>400 g di ceci precotti (sgocciolati)</li>
+<li>1 cipolla piccola (o 1/2 se grande), tritata finemente</li>
+<li>2 cucchiai di parmigiano grattugiato</li>
+<li>1 rametto di rosmarino (solo le foglioline), tritato finemente (circa 1 cucchiaino)</li>
+<li>1 cucchiaino di paprica dolce (o affumicata)</li>
+<li>1 uovo (per legare; opzionale: 2-3 cucchiai di farina di ceci o semi di lino macinati + acqua per versione veg)</li>
+<li>3-4 cucchiai di pangrattato (più extra per aggiustare consistenza)</li>
+<li>2 cucchiai di olio extravergine d'oliva + q.b. per la cottura</li>
+<li>Sale e pepe q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparazione:</strong> Scola e asciuga i ceci. Trita cipolla e rosmarino.</p>
+<p>2. <strong>Soffritto:</strong> Scalda 1-2 cucchiai d'olio in padella. Appassisci la cipolla a fuoco medio per 4-5 minuti.</p>
+<p>3. <strong>Impasto:</strong> Schiaccia i ceci (lascia qualche pezzetto per consistenza). Aggiungi cipolla, parmigiano, rosmarino, paprica, uovo, 3 cucchiai di pangrattato, sale e pepe. Mescola bene, aggiungi pangrattato se necessario.</p>
+<p>4. <strong>Formatura e riposo:</strong> Crea 4 hamburger (spessi 1,5-2 cm). Metti in frigo per 10 minuti.</p>
+<p>5. <strong>Cottura:</strong> In padella: 4-5 minuti per lato a fuoco medio. Al forno: 200°C per 12-15 minuti, girando a metà.</p>
+<p>6. <strong>Servizio:</strong> Servi nel panino con lattuga, pomodoro e salsa yogurt; oppure come secondo con insalata mista.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2026-03-04</p>
+<p><strong>Meta:</strong> 4 burgers | Vegetarian</p>
+<p><strong>Description:</strong> Vegetarian chickpea burgers with rosemary, paprika and Parmesan, crispy outside and soft inside.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>400 g pre-cooked chickpeas (drained)</li>
+<li>1 small onion (or 1/2 if large), finely chopped</li>
+<li>2 tablespoons grated Parmesan</li>
+<li>1 sprig rosemary (leaves only), finely chopped (about 1 teaspoon)</li>
+<li>1 teaspoon sweet paprika (or smoked)</li>
+<li>1 egg (to bind; optional: 2-3 tablespoons chickpea flour or ground flaxseeds + water for vegan version)</li>
+<li>3-4 tablespoons breadcrumbs (plus extra to adjust consistency)</li>
+<li>2 tablespoons extra virgin olive oil + extra for cooking</li>
+<li>Salt and pepper to taste</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Preparation:</strong> Drain and dry chickpeas. Chop onion and rosemary.</p>
+<p>2. <strong>Sauté:</strong> Heat 1-2 tablespoons oil in a pan. Sauté onion over medium heat for 4-5 minutes.</p>
+<p>3. <strong>Mixture:</strong> Mash chickpeas (leave some pieces for texture). Add onion, Parmesan, rosemary, paprika, egg, 3 tablespoons breadcrumbs, salt and pepper. Mix well, add breadcrumbs if needed.</p>
+<p>4. <strong>Shaping and resting:</strong> Form 4 burgers (1.5-2 cm thick). Chill for 10 minutes.</p>
+<p>5. <strong>Cooking:</strong> In pan: 4-5 minutes per side over medium heat. In oven: 200°C for 12-15 minutes, turning halfway.</p>
+<p>6. <strong>Serving:</strong> Serve in a bun with lettuce, tomato and yogurt sauce; or as a main with mixed salad.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2026-03-04</p>
+<p><strong>Meta:</strong> 4 hamburguesas | Vegetariano</p>
+<p><strong>Descripción:</strong> Hamburguesas vegetarianas de garbanzos con romero, pimentón y parmesano, crujientes por fuera y tiernas por dentro.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>400 g de garbanzos precocidos (escurridos)</li>
+<li>1 cebolla pequeña (o 1/2 si es grande), picada finamente</li>
+<li>2 cucharadas de parmesano rallado</li>
+<li>1 ramita de romero (solo hojas), picada finamente (unos 1 cucharadita)</li>
+<li>1 cucharadita de pimentón dulce (o ahumado)</li>
+<li>1 huevo (para ligar; opcional: 2-3 cucharadas de harina de garbanzos o semillas de lino molidas + agua para versión vegana)</li>
+<li>3-4 cucharadas de pan rallado (más extra para ajustar consistencia)</li>
+<li>2 cucharadas de aceite de oliva virgen extra + extra para cocinar</li>
+<li>Sal y pimienta c.s.</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparación:</strong> Escurre y seca los garbanzos. Pica cebolla y romero.</p>
+<p>2. <strong>Sofrito:</strong> Calienta 1-2 cucharadas de aceite en sartén. Sofríe la cebolla a fuego medio 4-5 minutos.</p>
+<p>3. <strong>Masa:</strong> Machaca los garbanzos (deja algunos trozos para textura). Añade cebolla, parmesano, romero, pimentón, huevo, 3 cucharadas de pan rallado, sal y pimienta. Mezcla bien, añade pan rallado si es necesario.</p>
+<p>4. <strong>Formar y reposar:</strong> Forma 4 hamburguesas (1,5-2 cm de grosor). Refrigera 10 minutos.</p>
+<p>5. <strong>Cocción:</strong> En sartén: 4-5 minutos por lado a fuego medio. En horno: 200°C 12-15 minutos, girando a mitad.</p>
+<p>6. <strong>Servicio:</strong> Sirve en pan con lechuga, tomate y salsa de yogur; o como plato principal con ensalada mixta.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2026-03-04</p>
+<p><strong>Meta:</strong> 4 hambúrgueres | Vegetariano</p>
+<p><strong>Descrição:</strong> Hambúrgueres vegetarianos de grão-de-bico com alecrim, páprica e parmesão, crocantes por fora e macios por dentro.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>400 g de grão-de-bico pré-cozido (escorrido)</li>
+<li>1 cebola pequena (ou 1/2 se for grande), picada finamente</li>
+<li>2 colheres de sopa de parmesão ralado</li>
+<li>1 ramo de alecrim (só folhas), picado finamente (cerca de 1 colher de chá)</li>
+<li>1 colher de chá de páprica doce (ou defumada)</li>
+<li>1 ovo (para ligar; opcional: 2-3 colheres de sopa de farinha de grão-de-bico ou sementes de linhaça moídas + água para versão vegana)</li>
+<li>3-4 colheres de sopa de pão ralado (mais extra para ajustar consistência)</li>
+<li>2 colheres de sopa de azeite extra virgem + extra para cozinhar</li>
+<li>Sal e pimenta q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparação:</strong> Escorre e seca o grão-de-bico. Pica cebola e alecrim.</p>
+<p>2. <strong>Refogado:</strong> Aquece 1-2 colheres de sopa de azeite numa frigideira. Refoga a cebola em lume médio 4-5 minutos.</p>
+<p>3. <strong>Massa:</strong> Esmaga o grão-de-bico (deixa alguns pedaços para textura). Adiciona cebola, parmesão, alecrim, páprica, ovo, 3 colheres de sopa de pão ralado, sal e pimenta. Mistura bem, adiciona pão ralado se necessário.</p>
+<p>4. <strong>Formar e repousar:</strong> Forma 4 hambúrgueres (1,5-2 cm de espessura). Refrigera 10 minutos.</p>
+<p>5. <strong>Cozedura:</strong> Na frigideira: 4-5 minutos de cada lado em lume médio. No forno: 200°C durante 12-15 minutos, virando a meio.</p>
+<p>6. <strong>Serviço:</strong> Serve no pão com alface, tomate e molho de iogurte; ou como prato principal com salada mista.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2026-03-04</p>
+<p><strong>Meta:</strong> 4 Burger | Vegetarisch</p>
+<p><strong>Beschreibung:</strong> Vegetarische Kichererbsen-Burger mit Rosmarin, Paprika und Parmesan, außen knusprig und innen zart.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>400 g vorgekochte Kichererbsen (abgetropft)</li>
+<li>1 kleine Zwiebel (oder 1/2 bei großer), fein gehackt</li>
+<li>2 Esslöffel geriebener Parmesan</li>
+<li>1 Rosmarinzweig (nur Blätter), fein gehackt (etwa 1 Teelöffel)</li>
+<li>1 Teelöffel süßes Paprikapulver (oder geräuchertes)</li>
+<li>1 Ei (zum Binden; optional: 2-3 Esslöffel Kichererbsenmehl oder gemahlene Leinsamen + Wasser für vegane Version)</li>
+<li>3-4 Esslöffel Semmelbrösel (plus Extra zum Anpassen der Konsistenz)</li>
+<li>2 Esslöffel natives Olivenöl extra + Extra zum Braten</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Vorbereitung:</strong> Kichererbsen abtropfen und trocknen. Zwiebel und Rosmarin hacken.</p>
+<p>2. <strong>Anschwitzen:</strong> 1-2 Esslöffel Öl in einer Pfanne erhitzen. Zwiebel bei mittlerer Hitze 4-5 Minuten anschwitzen.</p>
+<p>3. <strong>Masse:</strong> Kichererbsen zerstampfen (einige Stücke für Textur lassen). Zwiebel, Parmesan, Rosmarin, Paprika, Ei, 3 Esslöffel Semmelbrösel, Salz und Pfeffer zugeben. Gut vermischen, bei Bedarf mehr Semmelbrösel zufügen.</p>
+<p>4. <strong>Formen und Ruhen:</strong> 4 Burger formen (1,5-2 cm dick). 10 Minuten kühlen.</p>
+<p>5. <strong>Garen:</strong> In der Pfanne: 4-5 Minuten pro Seite bei mittlerer Hitze. Im Ofen: 200°C für 12-15 Minuten, dabei einmal wenden.</p>
+<p>6. <strong>Servieren:</strong> Im Brötchen mit Salat, Tomate und Joghurtsauce servieren; oder als Hauptgericht mit gemischtem Salat.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2026-03-04</p>
+<p><strong>Meta:</strong> 4 μπέργκερ | Χορτοφαγικό</p>
+<p><strong>Περιγραφή:</strong> Χορτοφαγικά μπέργκερ ρεβιθιών με δεντρολίβανο, πάπρικα και παρμεζάνα, τραγανά απ' έξω και μαλακά μέσα.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>400 γρ προμαγειρεμένα ρεβίθια (στραγγισμένα)</li>
+<li>1 μικρό κρεμμύδι (ή 1/2 αν είναι μεγάλο), ψιλοκομμένο</li>
+<li>2 κουταλιές της σούπας τριμμένη παρμεζάνα</li>
+<li>1 κλωνάρι δεντρολίβανου (μόνο τα φύλλα), ψιλοκομμένο (περίπου 1 κουταλάκι)</li>
+<li>1 κουταλάκι του γλυκού γλυκιά πάπρικα (ή καπνιστή)</li>
+<li>1 αυγό (για δέσιμο; προαιρετικά: 2-3 κουταλιές της σούπας αλεύρι ρεβιθιών ή αλεσμένοι σπόροι λιναριού + νερό για vegan εκδοχή)</li>
+<li>3-4 κουταλιές της σούπας τριμμένη φρυγανιά (συν έξτρα για ρύθμιση υφής)</li>
+<li>2 κουταλιές της σούπας ελαιόλαδο + έξτρα για ψήσιμο</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία:</strong> Στράγγισε και στέγνωσε τα ρεβίθια. Ψιλόκοψε κρεμμύδι και δεντρολίβανο.</p>
+<p>2. <strong>Σοτάρισμα:</strong> Ζέστανε 1-2 κουταλιές λάδι σε τηγάνι. Σοτάρε το κρεμμύδι σε μέτρια φωτιά 4-5 λεπτά.</p>
+<p>3. <strong>Μείγμα:</strong> Λιώσε τα ρεβίθια (άφησε μερικά κομμάτια για υφή). Πρόσθεσε κρεμμύδι, παρμεζάνα, δεντρολίβανο, πάπρικα, αυγό, 3 κουταλιές φρυγανιά, αλάτι και πιπέρι. Ανακάτεψε καλά, πρόσθεσε φρυγανιά αν χρειάζεται.</p>
+<p>4. <strong>Πλασιμο και ξεκούραση:</strong> Πλάσε 4 μπέργκερ (πάχος 1,5-2 εκ.). Βάλε στο ψυγείο 10 λεπτά.</p>
+<p>5. <strong>Ψήσιμο:</strong> Στο τηγάνι: 4-5 λεπτά από κάθε πλευρά σε μέτρια φωτιά. Στον φούρνο: 200°C για 12-15 λεπτά, γυρίζοντας στη μέση.</p>
+<p>6. <strong>Σερβίρισμα:</strong> Σέρβιρε στο ψωμάκι με μαρούλι, ντομάτα και σάλτσα γιαουρτιού· ή ως κυρίως με μικτή σαλάτα.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+<div data-legumi="ceci" style="display:none;"></div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

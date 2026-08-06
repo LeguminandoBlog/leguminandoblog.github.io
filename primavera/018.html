@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shakshuka di Ceci | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Shakshuka di Ceci">
+<meta property="og:title" content="Shakshuka di Ceci | Leguminando">
+<meta property="og:description" content="Shakshuka di Ceci">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="primavera/018.html" data-title="Shakshuka di Ceci" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="018.jpg" alt="Shakshuka di Ceci" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2026-03-12</p>
+<p><strong>Meta:</strong> 2-3 porzioni | Vegetariano</p>
+<p><strong>Descrizione:</strong> La classica shakshuka nordafricana arricchita con ceci, pomodoro speziato e uova in cottura.</p>
+<h3>Ingredienti</h3>
+<h3>Per il Sugo</h3>
+<ul>
+<li>400 g di ceci precotti (scolati) oppure 200 g secchi lessati</li>
+<li>400 g di passata di pomodoro o pelati schiacciati</li>
+<li>1 cipolla rossa</li>
+<li>2 spicchi d'aglio</li>
+<li>1 peperone rosso</li>
+<li>2 cucchiai di concentrato di pomodoro</li>
+<li>1 cucchiaino di paprika dolce</li>
+<li>1 cucchiaino di paprika affumicata</li>
+<li>1 cucchiaino di cumino in polvere</li>
+<li>1/2 cucchiaino di coriandolo in polvere</li>
+<li>1 pizzico di pepe di Cayenne (facoltativo)</li>
+<li>1 cucchiaino di zucchero</li>
+<li>Olio extravergine d'oliva q.b.</li>
+<li>Sale e pepe q.b.</li>
+<li>Circa 100 ml di acqua</li>
+</ul>
+<h3>Per le Uova</h3>
+<ul>
+<li>3-4 uova freschissime a temperatura ambiente</li>
+</ul>
+<h3>Per la Guarnizione</h3>
+<ul>
+<li>Prezzemolo fresco tritato</li>
+<li>Cumino intero tostato per decorazione</li>
+<li>Olio extravergine a crudo</li>
+<li>Feta sbriciolata (opzionale, oppure tofu strapazzato per versione vegan)</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparazione delle verdure:</strong> Affetta la cipolla rossa e schiaccia l'aglio. Taglia a dadini il peperone rosso.</p>
+<p>2. <strong>Cottura base:</strong> Scalda l'olio in una padella capiente. Soffriggi cipolla e aglio fino a renderli trasparenti. Aggiungi il peperone e cuoci finché non si ammorbidisce.</p>
+<p>3. <strong>Aggiunta di spezie e pomodoro:</strong> Incorpora il concentrato di pomodoro e le spezie (paprika, cumino, coriandolo, pepe di Cayenne). Mescola e cuoci per un paio di minuti. Aggiungi la passata di pomodoro e i ceci. Condisci con zucchero, sale e pepe. Aggiungi acqua per regolare la consistenza. Porta a ebollizione, poi lascia sobbollire 15-20 minuti.</p>
+<p>4. <strong>Cottura delle uova:</strong> Crea incavi nel sugo e rompi le uova all'interno. Copri e cuoci a fuoco basso finché le uova sono cotte a piacere.</p>
+<p>5. <strong>Guarnizione e servizio:</strong> Guarnisci con prezzemolo, cumino tostato e, se desideri, feta o tofu. Completa con un filo d'olio a crudo. Servi con pane croccante.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2026-03-12</p>
+<p><strong>Meta:</strong> 2-3 servings | Vegetarian</p>
+<p><strong>Description:</strong> The classic North African shakshuka enriched with chickpeas, spiced tomato sauce and baked eggs.</p>
+<h3>Ingredients</h3>
+<h3>For the Sauce</h3>
+<ul>
+<li>400 g cooked chickpeas (drained) or 200 g dried boiled chickpeas</li>
+<li>400 g tomato passata or crushed peeled tomatoes</li>
+<li>1 red onion</li>
+<li>2 garlic cloves</li>
+<li>1 red pepper</li>
+<li>2 tablespoons tomato paste</li>
+<li>1 teaspoon sweet paprika</li>
+<li>1 teaspoon smoked paprika</li>
+<li>1 teaspoon ground cumin</li>
+<li>1/2 teaspoon ground coriander</li>
+<li>A pinch of cayenne pepper (optional)</li>
+<li>1 teaspoon sugar</li>
+<li>Extra virgin olive oil to taste</li>
+<li>Salt and pepper to taste</li>
+<li>About 100 ml water</li>
+</ul>
+<h3>For the Eggs</h3>
+<ul>
+<li>3-4 very fresh eggs at room temperature</li>
+</ul>
+<h3>For the Garnish</h3>
+<ul>
+<li>Chopped fresh parsley</li>
+<li>Whole toasted cumin for decoration</li>
+<li>Raw extra virgin olive oil</li>
+<li>Crumbled feta or strained tofu for garnish (optional)</li>
+</ul>
+</div>
+
+<div id="content-es" class="lang-content"></div>
+<div id="content-pt" class="lang-content"></div>
+<div id="content-de" class="lang-content"></div>
+<div id="content-el" class="lang-content"></div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+<div data-legumi="ceci" style="display:none;"></div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

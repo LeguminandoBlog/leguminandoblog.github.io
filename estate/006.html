@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aperitivo Estivo Completo | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h2 { color: #D2691E; font-size: 1.5em; margin: 20px 0 10px; }
+.content h3 { color: #8B4513; font-size: 1.3em; margin: 15px 0 10px; }
+.content h4 { color: #666; font-size: 1.1em; margin: 10px 0 5px; }
+.content ul { margin: 15px 0; padding-left: 20px; }
+.content li { margin: 8px 0; line-height: 1.5; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.content strong { color: #8B4513; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+.back-link:hover { background: #D2691E; }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; transition: all 0.3s; }
+.lang-tab.active { background: #8B4513; color: white; }
+.lang-tab:hover:not(.active) { background: #D2691E; color: white; }
+.lang-content { display: none; }
+.lang-content.active { display: block; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Aperitivo Estivo Completo">
+<meta property="og:title" content="Aperitivo Estivo Completo | Leguminando">
+<meta property="og:description" content="Aperitivo Estivo Completo">
+
+<script>
+function showLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    event.target.classList.add('active');
+}
+</script>
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="estate/006.html" data-title="Aperitivo Estivo Completo" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="006.jpg" alt="Aperitivo Estivo Completo" class="recipe-image">
+
+<div class="content">
+<div class="lang-tabs">
+    <button class="lang-tab active" onclick="showLang('it')">IT</button>
+    <button class="lang-tab" onclick="showLang('en')">EN</button>
+    <button class="lang-tab" onclick="showLang('es')">ES</button>
+    <button class="lang-tab" onclick="showLang('pt')">PT</button>
+    <button class="lang-tab" onclick="showLang('de')">DE</button>
+    <button class="lang-tab" onclick="showLang('el')">EL</button>
+</div>
+
+<div id="lang-it" class="lang-content active">
+<h1>🍹 Aperitivo Estivo Completo</h1>
+<p><strong>Data:</strong> 2026-07-02 | <strong>Tipo:</strong> Aperitivo | <strong>3 elementi</strong></p>
+
+<h3>1️⃣ Il Drink: Ruby Rose Fizz 🍊</h3>
+<p><em>Un mocktail fresco, amarognolo e profumatissimo.</em></p>
+<p><strong>Ingredienti:</strong> 90ml succo di pompelmo rosa, 60ml acqua tonica, 15ml sciroppo al rosmarino, ghiaccio.</p>
+<p><strong>How-to:</strong> Riempi il bicchiere di ghiaccio, versa il succo di pompelmo e lo sciroppo. Colma con la tonica e guarnisci con un rametto di rosmarino e una fetta di pompelmo.</p>
+
+<h3>2️⃣ Lo Sfizio Croccante: Ceci alla Paprika & Lime 🌶️</h3>
+<p><em>Addio patatine, benvenuti ceci croccanti e speziati!</em></p>
+<p><strong>Ingredienti:</strong> 240g ceci precotti (asciugati benissimo!), 1 cucchiaio di olio EVO, 1 cucchiaino di paprika affumicata, cumino, sale, pepe e scorza di lime.</p>
+<p><strong>How-to:</strong> Condisci i ceci con olio e spezie. Inforna a 200°C (ventilato) per 20 minuti finché non sono super croccanti. Completa con la scorza di lime fresca!</p>
+
+<h3>3️⃣ Il Crostino: Hummus di Piselli & Feta 🥑</h3>
+<p><em>Cremosità primaverile su pane tostato.</em></p>
+<p><strong>Ingredienti:</strong> 200g piselli sbollentati, 1 cucchiaio di tahina (o caprino), menta fresca, succo di limone, pane rustico, feta sbriciolata.</p>
+<p><strong>How-to:</strong> Frulla i piselli con la tahina, la menta, il limone, sale e olio. Spalma sul pane tostato e rifinisci con feta sbriciolata e foglioline di menta.</p>
+</div>
+
+<div id="lang-en" class="lang-content">
+<h1>🍹 Summer Appetizer Set</h1>
+<p><strong>Date:</strong> 2026-07-02 | <strong>Type:</strong> Appetizer | <strong>3 elements</strong></p>
+
+<h3>1️⃣ The Drink: Ruby Rose Fizz 🍊</h3>
+<p><em>A fresh, slightly bitter and very fragrant mocktail.</em></p>
+<p><strong>Ingredients:</strong> 90ml pink grapefruit juice, 60ml tonic water, 15ml rosemary syrup, ice.</p>
+<p><strong>How-to:</strong> Fill the glass with ice, pour the grapefruit juice and syrup. Top with tonic and garnish with a sprig of rosemary and a slice of grapefruit.</p>
+
+<h3>2️⃣ The Crunchy Snack: Paprika & Lime Chickpeas 🌶️</h3>
+<p><em>Goodbye chips, welcome crispy and spiced chickpeas!</em></p>
+<p><strong>Ingredients:</strong> 240g pre-cooked chickpeas (dried very well!), 1 tablespoon extra virgin olive oil, 1 teaspoon smoked paprika, cumin, salt, pepper and lime zest.</p>
+<p><strong>How-to:</strong> Season chickpeas with oil and spices. Bake at 200°C (fan) for 20 minutes until super crispy. Finish with fresh lime zest!</p>
+
+<h3>3️⃣ The Crostino: Pea & Feta Hummus 🥑</h3>
+<p><em>Spring creaminess on toasted bread.</em></p>
+<p><strong>Ingredients:</strong> 200g blanched peas, 1 tablespoon tahini (or goat cheese), fresh mint, lemon juice, rustic bread, crumbled feta.</p>
+<p><strong>How-to:</strong> Blend peas with tahini, mint, lemon, salt and oil. Spread on toasted bread and finish with crumbled feta and mint leaves.</p>
+</div>
+
+<div id="lang-es" class="lang-content">
+<h1>🍹 Aperitivo de Verano Completo</h1>
+<p><strong>Fecha:</strong> 2026-07-02 | <strong>Tipo:</strong> Aperitivo | <strong>3 elementos</strong></p>
+
+<h3>1️⃣ La Bebida: Ruby Rose Fizz 🍊</h3>
+<p><em>Un mocktail fresco, amarguito y muy aromático.</em></p>
+<p><strong>Ingredientes:</strong> 90ml zumo de pomelo rosa, 60ml agua tónica, 15ml sirope de romero, hielo.</p>
+<p><strong>How-to:</strong> Llena el vaso de hielo, vierte el zumo de pomelo y el sirope. Colma con la tónica y decora con una ramita de romero y una rodaja de pomelo.</p>
+
+<h3>2️⃣ El Aperitivo Crujiente: Garbanzos con Pimentón y Lima 🌶️</h3>
+<p><em>¡Adiós patatas fritas, bienvenidos garbanzos crujientes y especiados!</em></p>
+<p><strong>Ingredientes:</strong> 240g garbanzos precocidos (¡secados muy bien!), 1 cucharada de aceite de oliva virgen extra, 1 cucharadita de pimentón ahumado, comino, sal, pimienta y ralladura de lima.</p>
+<p><strong>How-to:</strong> Sazona los garbanzos con aceite y especias. Hornea a 200°C (ventilador) por 20 minutos hasta que estén super crujientes. ¡Termina con ralladura de lima fresca!</p>
+
+<h3>3️⃣ El Crostino: Hummus de Guisantes y Feta 🥑</h3>
+<p><em>Cremosidad primaveral sobre pan tostado.</em></p>
+<p><strong>Ingredientes:</strong> 200g guisantes escaldados, 1 cucharada de tahina (o queso de cabra), menta fresca, zumo de limón, pan rústico, feta desmenuzada.</p>
+<p><strong>How-to:</strong> Tritura los guisantes con la tahina, la menta, el limón, sal y aceite. Unta sobre el pan tostado y remata con feta desmenuzada y hojitas de menta.</p>
+</div>
+
+<div id="lang-pt" class="lang-content">
+<h1>🍹 Aperitivo de Verão Completo</h1>
+<p><strong>Data:</strong> 2026-07-02 | <strong>Tipo:</strong> Aperitivo | <strong>3 elementos</strong></p>
+
+<h3>1️⃣ A Bebida: Ruby Rose Fizz 🍊</h3>
+<p><em>Um mocktail fresco, amargo e muito perfumado.</em></p>
+<p><strong>Ingredientes:</strong> 90ml sumo de toranja rosa, 60ml água tónica, 15ml xarope de alecrim, gelo.</p>
+<p><strong>How-to:</strong> Enche o copo de gelo, deita o sumo de toranja e o xarope. Completa com a tónica e decora com um ramo de alecrim e uma fatia de toranja.</p>
+
+<h3>2️⃣ O Petisco Crocante: Grão-de-Bico com Páprica e Lima 🌶️</h3>
+<p><em>Adeus batatas fritas, bem-vindos grão-de-bico crocante e especiado!</em></p>
+<p><strong>Ingredientes:</strong> 240g grão-de-bico pré-cozido (bem seco!), 1 colher de sopa de azeite extra virgem, 1 colher de chá de páprica defumada, cominho, sal, pimenta e raspa de lima.</p>
+<p><strong>How-to:</strong> Tempere o grão-de-bico com azeite e especiarias. Leve ao forno a 200°C (ventilado) por 20 minutos até ficar super crocante. Finalize com raspa de lima fresca!</p>
+
+<h3>3️⃣ A Crostino: Hummus de Ervilhas e Feta 🥑</h3>
+<p><em>Cremosidade primaveril sobre pão torrado.</em></p>
+<p><strong>Ingredientes:</strong> 200g ervilhas branqueadas, 1 colher de sopa de tahine (ou queijo de cabra), hortelã fresca, sumo de limão, pão rústico, feta desfeita.</p>
+<p><strong>How-to:</strong> Triture as ervilhas com a tahine, a hortelã, o limão, sal e azeite. Espalhe sobre o pão torrado e acabe com feta desfeita e folhinhas de hortelã.</p>
+</div>
+
+<div id="lang-de" class="lang-content">
+<h1>🍹 Sommerlicher Aperitif</h1>
+<p><strong>Datum:</strong> 2026-07-02 | <strong>Typ:</strong> Vorspeise | <strong>3 Elemente</strong></p>
+
+<h3>1️⃣ Das Getränk: Ruby Rose Fizz 🍊</h3>
+<p><em>Ein frischer, leicht bitterer und sehr duftender Mocktail.</em></p>
+<p><strong>Zutaten:</strong> 90ml Rosa-Grapefruitsaft, 60ml Tonic Water, 15ml Rosmarinsirup, Eis.</p>
+<p><strong>How-to:</strong> Füllen Sie das Glas mit Eis, gießen Sie den Grapefruitsaft und den Sirup ein. Füllen Sie mit Tonic auf und garnieren Sie mit einem Zweig Rosmarin und einer Grapefruitscheibe.</p>
+
+<h3>2️⃣ Der Knusprige Snack: Paprika- & Limette-Kichererbsen 🌶️</h3>
+<p><em>Adieu Chips, willkommen knusprige und würzige Kichererbsen!</em></p>
+<p><strong>Zutaten:</strong> 240g vorgekochte Kichererbsen (sehr gut getrocknet!), 1 Esslöffel natives Olivenöl extra, 1 Teelöffel geräuchertes Paprikapulver, Kreuzkümmel, Salz, Pfeffer und Limettenschale.</p>
+<p><strong>How-to:</strong> Würzen Sie die Kichererbsen mit Öl und Gewürzen. Bei 200°C (Umluft) für 20 Minuten backen, bis sie super knusprig sind. Mit frischer Limettenschale abschließen!</p>
+
+<h3>3️⃣ Das Crostino: Erbsen- & Feta-Hummus 🥑</h3>
+<p><em>Frühlingshafte Cremigkeit auf geröstetem Brot.</em></p>
+<p><strong>Zutaten:</strong> 200g blanchierte Erbsen, 1 Esslöffel Tahini (oder Ziegenkäse), frische Minze, Zitronensaft, rustikales Brot, zerbröselter Feta.</p>
+<p><strong>How-to:</strong> Pürieren Sie die Erbsen mit Tahini, Minze, Zitrone, Salz und Öl. Auf geröstetem Brot verteilen und mit zerbröseltem Feta und Minzblättern garnieren.</p>
+</div>
+
+<div id="lang-el" class="lang-content">
+<h1>🍹 Καλοκαιρινό Aperitivo</h1>
+<p><strong>Ημερομηνία:</strong> 2026-07-02 | <strong>Τύπος:</strong> Ορεκτικό | <strong>3 στοιχεία</strong></p>
+
+<h3>1️⃣ Το Ποτό: Ruby Rose Fizz 🍊</h3>
+<p><em>Ένα φρέσκο, ελαφρώς πικρό και πολύ αρωματικό mocktail.</em></p>
+<p><strong>Συστατικά:</strong> 90ml χυμός ροζ γκρέιπφρουτ, 60ml τονικό νερό, 15ml σιρόπι δεντρολίβανου, πάγος.</p>
+<p><strong>How-to:</strong> Γεμίστε το ποτήρι με πάγο, ρίξτε τον χυμό γκρέιπφρουτ και το σιρόπι. Συμπληρώστε με τονικό και γαρνίρετε με ένα κλαδάκι δεντρολίβανου και μια φέτα γκρέιπφρουτ.</p>
+
+<h3>2️⃣ Το Τραγανό Σνακ: Ρεβίθια με Πάπρικα και Λάιμ 🌶️</h3>
+<p><em>Αντίο πατατάκια, καλώς ήρθατε τραγανά και μπαχαρένια ρεβίθια!</em></p>
+<p><strong>Συστατικά:</strong> 240γρ προμαγειρεμένα ρεβίθια (πολύ καλά στεγνωμένα!), 1 κουταλιά της σούπας έξτρα παρθένο ελαιόλαδο, 1 κουταλάκι του γλυκού καπνιστή πάπρικα, κύμινο, αλάτι, πιπέρι και ξύσμα λάιμ.</p>
+<p><strong>How-to:</strong> Αλατοπιπερώστε τα ρεβίθια με λάδι και μπαχαρικά. Ψήστε στους 200°C (ανεμιστήρας) για 20 λεπτά μέχρι να γίνουν super τραγανά. Ολοκληρώστε με φρέσκο ξύσμα λάιμ!</p>
+
+<h3>3️⃣ Το Crostino: Χούμους Αρακά και Φέτα 🥑</h3>
+<p><em>Ανοιξιάτικη κρεμώδης υφή πάνω σε ψημένο ψωμί.</em></p>
+<p><strong>Συστατικά:</strong> 200γρ βρασμένα αρακά, 1 κουταλιά της σούπας ταχίνι (ή κατσικίσιο τυρί), φρέσκια μέντα, χυμός λεμονιού, χωριάτικο ψωμί, θρυμματισμένη φέτα.</p>
+<p><strong>How-to:</strong> Χτυπήστε στο μπλέντερ τον αρακά με το ταχίνι, τη μέντα, το λεμόνι, αλάτι και λάδι. Αλείψτε στο ψημένο ψωμί και τελειώστε με θρυμματισμένη φέτα και φυλλαράκια μέντας.</p>
+</div>
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

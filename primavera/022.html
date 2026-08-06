@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ceci in Zimino con Funghi Porcini e Bietole | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Ceci in Zimino con Funghi Porcini e Bietole">
+<meta property="og:title" content="Ceci in Zimino con Funghi Porcini e Bietole | Leguminando">
+<meta property="og:description" content="Ceci in Zimino con Funghi Porcini e Bietole">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="primavera/022.html" data-title="Ceci in Zimino con Funghi Porcini e Bietole" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="022.jpg" alt="Ceci in Zimino con Funghi Porcini e Bietole" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2026-03-05</p>
+<p><strong>Meta:</strong> 4 porzioni | Vegetariano</p>
+<p><strong>Descrizione:</strong> Piatto rustico toscano con ceci, funghi porcini secchi e bietole, cotto lentamente con passata di pomodoro.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>250 g di ceci secchi</li>
+<li>30 g di funghi porcini secchi</li>
+<li>400 g di passata di pomodoro</li>
+<li>300 g di bietole</li>
+<li>1 cipolla</li>
+<li>2 spicchi d'aglio</li>
+<li>1 carota</li>
+<li>1 costa di sedano</li>
+<li>Olio extravergine d'oliva</li>
+<li>Sale e pepe q.b.</li>
+<li>1 rametto di rosmarino</li>
+<li>1 foglia di alloro</li>
+<li>Pane tostato per servire</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparazione dei ceci:</strong> Metti i ceci in ammollo in abbondante acqua fredda per almeno 8 ore. Dopo l'ammollo, scolali e sciacquali bene.</p>
+<p>2. <strong>Preparazione dei funghi:</strong> Metti i funghi porcini secchi in ammollo in acqua tiepida per circa 20 minuti. Scolali e conserva l'acqua di ammollo filtrata.</p>
+<p>3. <strong>Preparazione delle verdure:</strong> Lava e taglia le bietole a pezzi. Trita finemente cipolla, aglio, carota e sedano.</p>
+<p>4. <strong>Cottura:</strong> In una pentola capiente versa un po' di olio e soffriggi il trito di verdure. Aggiungi i ceci scolati, i funghi porcini e la passata di pomodoro. Versa l'acqua di ammollo dei funghi e abbastanza acqua per coprire il tutto. Aggiungi rosmarino e alloro. Cuoci a fuoco lento per circa 1-1,5 ore finché i ceci non sono teneri.</p>
+<p>5. <strong>Aggiunta delle bietole:</strong> Aggiungi le bietole e cuoci per altri 15-20 minuti. Aggiusta di sale e pepe.</p>
+<p>6. <strong>Servizio:</strong> Servi i ceci in zimino caldi, accompagnati da fette di pane tostato.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2026-03-05</p>
+<p><strong>Meta:</strong> 4 servings | Vegetarian</p>
+<p><strong>Description:</strong> Rustic Tuscan dish with chickpeas, dried porcini mushrooms and Swiss chard, slowly cooked with tomato passata.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>250 g dried chickpeas</li>
+<li>30 g dried porcini mushrooms</li>
+<li>400 g tomato passata</li>
+<li>300 g Swiss chard</li>
+<li>1 onion</li>
+<li>2 garlic cloves</li>
+<li>1 carrot</li>
+<li>1 celery stalk</li>
+<li>Extra virgin olive oil</li>
+<li>Salt and pepper to taste</li>
+<li>1 sprig of rosemary</li>
+<li>1 bay leaf</li>
+<li>Toasted bread for serving</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Prepare chickpeas:</strong> Soak chickpeas in plenty of cold water for at least 8 hours. After soaking, drain and rinse well.</p>
+<p>2. <strong>Prepare mushrooms:</strong> Soak dried porcini in warm water for about 20 minutes. Drain, reserving the filtered soaking water.</p>
+<p>3. <strong>Prepare vegetables:</strong> Wash and cut Swiss chard into pieces. Finely chop onion, garlic, carrot and celery.</p>
+<p>4. <strong>Cooking:</strong> In a large pot, heat some oil and sauté the chopped vegetables. Add drained chickpeas, porcini and tomato passata. Pour in the mushroom soaking water and enough water to cover everything. Add rosemary and bay leaf. Simmer for about 1-1.5 hours until chickpeas are tender.</p>
+<p>5. <strong>Add chard:</strong> Add Swiss chard and cook for another 15-20 minutes. Season with salt and pepper.</p>
+<p>6. <strong>Serving:</strong> Serve zimino chickpeas hot, accompanied by slices of toasted bread.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2026-03-05</p>
+<p><strong>Meta:</strong> 4 porciones | Vegetariano</p>
+<p><strong>Descripción:</strong> Plato rústico toscano con garbanzos, setas porcini secas y acelgas, cocinado lentamente con tomate triturado.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>250 g de garbanzos secos</li>
+<li>30 g de setas porcini secas</li>
+<li>400 g de tomate triturado</li>
+<li>300 g de acelgas</li>
+<li>1 cebolla</li>
+<li>2 dientes de ajo</li>
+<li>1 zanahoria</li>
+<li>1 tallo de apio</li>
+<li>Aceite de oliva virgen extra</li>
+<li>Sal y pimienta c.s.</li>
+<li>1 ramita de romero</li>
+<li>1 hoja de laurel</li>
+<li>Pan tostado para servir</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparar garbanzos:</strong> Pon los garbanzos en remojo en abundante agua fría al menos 8 horas. Después del remojo, escúrrelos y enjuágalos bien.</p>
+<p>2. <strong>Preparar setas:</strong> Pon las setas porcini secas en remojo en agua templada unos 20 minutos. Escúrrelas y reserva el agua de remojo filtrada.</p>
+<p>3. <strong>Preparar verduras:</strong> Lava y corta las acelgas en trozos. Pica finamente cebolla, ajo, zanahoria y apio.</p>
+<p>4. <strong>Cocción:</strong> En una olla grande, calienta un poco de aceite y sofríe las verduras picadas. Añade garbanzos escurridos, porcini y tomate triturado. Vierte el agua de remojo de las setas y agua suficiente para cubrir todo. Añade romero y laurel. Cuece a fuego lento unas 1-1,5 horas hasta que los garbanzos estén tiernos.</p>
+<p>5. <strong>Añadir acelgas:</strong> Incorpora las acelgas y cuece otros 15-20 minutos. Sazona con sal y pimienta.</p>
+<p>6. <strong>Servicio:</strong> Sirve los garbanzos en zimino calientes, acompañados de rebanadas de pan tostado.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2026-03-05</p>
+<p><strong>Meta:</strong> 4 porções | Vegetariano</p>
+<p><strong>Descrição:</strong> Prato rústico toscano com grão-de-bico, cogumelos porcini secos e acelgas, cozido lentamente com tomate triturado.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>250 g de grão-de-bico seco</li>
+<li>30 g de cogumelos porcini secos</li>
+<li>400 g de tomate triturado</li>
+<li>300 g de acelgas</li>
+<li>1 cebola</li>
+<li>2 dentes de alho</li>
+<li>1 cenoura</li>
+<li>1 talo de aipo</li>
+<li>Azeite extra virgem</li>
+<li>Sal e pimenta q.b.</li>
+<li>1 ramo de alecrim</li>
+<li>1 folha de louro</li>
+<li>Pão tostado para servir</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparar grão-de-bico:</strong> Põe o grão-de-bico de molho em abundante água fria pelo menos 8 horas. Depois do molho, escorre e enxágua bem.</p>
+<p>2. <strong>Preparar cogumelos:</strong> Põe os porcini secos de molho em água morna cerca de 20 minutos. Escorre e guarda a água do molho filtrada.</p>
+<p>3. <strong>Preparar legumes:</strong> Lava e corta as acelgas em pedaços. Pica finamente cebola, alho, cenoura e aipo.</p>
+<p>4. <strong>Cozedura:</strong> Numa panela grande, aquece um pouco de azeite e refoga as verduras picadas. Junta o grão-de-bico escorrido, os porcini e o tomate triturado. Deita a água do molho dos cogumelos e água suficiente para cobrir tudo. Adiciona alecrim e louro. Cozinha em lume brando cerca de 1-1,5 horas até o grão ficar macio.</p>
+<p>5. <strong>Adicionar acelgas:</strong> Junta as acelgas e cozinha mais 15-20 minutos. Tempera com sal e pimenta.</p>
+<p>6. <strong>Serviço:</strong> Serve o grão em zimino quente, acompanhado de fatias de pão tostado.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2026-03-05</p>
+<p><strong>Meta:</strong> 4 Portionen | Vegetarisch</p>
+<p><strong>Beschreibung:</strong> Rustikales toskanisches Gericht mit Kichererbsen, getrockneten Steinpilzen und Mangold, langsam gekocht mit Tomatenpassata.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>250 g getrocknete Kichererbsen</li>
+<li>30 g getrocknete Steinpilze</li>
+<li>400 g Tomatenpassata</li>
+<li>300 g Mangold</li>
+<li>1 Zwiebel</li>
+<li>2 Knoblauchzehen</li>
+<li>1 Karotte</li>
+<li>1 Selleriestange</li>
+<li>Natives Olivenöl extra</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>1 Rosmarinzweig</li>
+<li>1 Lorbeerblatt</li>
+<li>Geröstetes Brot zum Servieren</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Kichererbsen vorbereiten:</strong> Kichererbsen in reichlich kaltem Wasser mindestens 8 Stunden einweichen. Danach abtropfen und gut abspülen.</p>
+<p>2. <strong>Pilze vorbereiten:</strong> Getrocknete Steinpilze in warmem Wasser etwa 20 Minuten einweichen. Abtropfen, Einweichwasser filtriert auffangen.</p>
+<p>3. <strong>Gemüse vorbereiten:</strong> Mangold waschen und in Stücke schneiden. Zwiebel, Knoblauch, Karotte und Sellerie fein hacken.</p>
+<p>4. <strong>Garen:</strong> In einem großen Topf etwas Öl erhitzen und das kleingeschnittene Gemüse anschwitzen. Abgetropfte Kichererbsen, Steinpilze und Tomatenpassata zugeben. Das Pilz-Einweichwasser und genug Wasser zum Bedecken eingießen. Rosmarin und Lorbeerblatt zugeben. Bei schwacher Hitze etwa 1-1,5 Stunden köcheln, bis die Kichererbsen zart sind.</p>
+<p>5. <strong>Mangold zugeben:</strong> Mangold zugeben und weitere 15-20 Minuten garen. Mit Salz und Pfeffer abschmecken.</p>
+<p>6. <strong>Servieren:</strong> Zimino-Kichererbsen heiß mit Scheiben gerösteten Brotes servieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2026-03-05</p>
+<p><strong>Meta:</strong> 4 μερίδες | Χορτοφαγικό</p>
+<p><strong>Περιγραφή:</strong> Χωριάτικο πιάτο της Τοσκάνης με ρεβίθια, ξερά μανιτάρια porcini και σέσκουλα, μαγειρεμένο αργά με πολτό ντομάτας.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>250 γρ ξερά ρεβίθια</li>
+<li>30 γρ ξερά μανιτάρια porcini</li>
+<li>400 γρ πολτός ντομάτας</li>
+<li>300 γρ σέσκουλα</li>
+<li>1 κρεμμύδι</li>
+<li>2 σκελίδες σκόρδο</li>
+<li>1 καρότο</li>
+<li>1 κοτσάνι σέλινου</li>
+<li>Ελαιόλαδο</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>1 κλωνάρι δεντρολίβανου</li>
+<li>1 φύλλο δάφνης</li>
+<li>Ψητό ψωμί για σερβίρισμα</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία ρεβιθιών:</strong> Βάλε τα ρεβίθια σε νερό για τουλάχιστον 8 ώρες. Μετά το μούλιασμα, στράγγισε και ξέπλυνέ τα καλά.</p>
+<p>2. <strong>Προετοιμασία μανιταριών:</strong> Βάλε τα ξερά porcini σε χλιαρό νερό για 20 λεπτά. Στράγγισε και κράτα το νερό του μουλιάσματος φιλτραρισμένο.</p>
+<p>3. <strong>Προετοιμασία λαχανικών:</strong> Πλύνε και κόψε τα σέσκουλα σε κομμάτια. Ψιλόκοψε κρεμμύδι, σκόρδο, καρότο και σέλινο.</p>
+<p>4. <strong>Μαγείρεμα:</strong> Σε μια μεγάλη κατσαρόλα ζέστανε λίγο λάδι και σοτάρε τα λαχανικά. Πρόσθεσε τα στραγγισμένα ρεβίθια, τα porcini και τον πολτό ντομάτας. Ρίξε το νερό του μουλιάσματος και αρκετό νερό για να σκεπαστούν. Βάλε δεντρολίβανο και δάφνη. Σιγοβράσε 1-1,5 ώρα μέχρι να μαλακώσουν τα ρεβίθια.</p>
+<p>5. <strong>Προσθήκη σέσκουλων:</strong> Πρόσθεσε τα σέσκουλα και μαγείρεψε άλλα 15-20 λεπτά. Αλατοπιπέρωσε.</p>
+<p>6. <strong>Σερβίρισμα:</strong> Σέρβιρε τα ρεβίθια zimino ζεστά με φέτες ψητού ψωμιού.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+<div data-legumi="ceci" style="display:none;"></div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

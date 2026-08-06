@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lenticchie con Radicchio e Gorgonzola | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Lenticchie con Radicchio e Gorgonzola">
+<meta property="og:title" content="Lenticchie con Radicchio e Gorgonzola | Leguminando">
+<meta property="og:description" content="Lenticchie con Radicchio e Gorgonzola">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="autunno/015.html" data-title="Lenticchie con Radicchio e Gorgonzola" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="015.jpg" alt="Lenticchie con Radicchio e Gorgonzola" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-10-26</p>
+<p><strong>Meta:</strong> 4 porzioni | Vegetariano</p>
+<p><strong>Descrizione:</strong> Lenticchie cremose con radicchio appassito e gorgonzola, per un piatto autunnale ricco e confortante.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>200 g di lenticchie</li>
+<li>150 g di gorgonzola</li>
+<li>1 cespo di radicchio rosso</li>
+<li>1 cipolla</li>
+<li>2 cucchiai di olio extravergine d'oliva</li>
+<li>1 spicchio d'aglio</li>
+<li>Sale e pepe q.b.</li>
+<li>Brodo vegetale q.b.</li>
+<li>Noci tritate (opzionale)</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparazione delle lenticchie:</strong> Sciacqua le lenticchie sotto acqua corrente e scolale. In una pentola, versa le lenticchie e coprile con il brodo vegetale. Porta a ebollizione e cuoci a fuoco lento per circa 25-30 minuti, finché non saranno tenere. Scola e tieni da parte.</p>
+<p>2. <strong>Preparazione del radicchio:</strong> Lava il radicchio e taglialo a striscioline. In una padella, scalda un cucchiaio di olio e aggiungi l'aglio tritato. Quando l'aglio sarà dorato, aggiungi il radicchio e saltalo per 5-7 minuti finché non sarà appassito. Togli l'aglio e tieni da parte.</p>
+<p>3. <strong>Cottura della cipolla:</strong> Nella stessa padella, aggiungi un altro cucchiaio di olio e la cipolla tritata finemente. Soffriggi finché non diventa trasparente.</p>
+<p>4. <strong>Assemblaggio del piatto:</strong> Aggiungi le lenticchie cotte alla padella con la cipolla e mescola bene. Unisci il radicchio appassito e mescola. Spezzetta il gorgonzola e aggiungilo al composto, mescolando finché non si scioglie leggermente, creando una crema.</p>
+<p>5. <strong>Condimento:</strong> Aggiusta di sale e pepe secondo il tuo gusto. Se lo desideri, aggiungi delle noci tritate per un tocco croccante.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-10-26</p>
+<p><strong>Meta:</strong> 4 servings | Vegetarian</p>
+<p><strong>Description:</strong> Creamy lentils with wilted radicchio and gorgonzola, a rich and comforting autumn dish.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>200 g lentils</li>
+<li>150 g gorgonzola</li>
+<li>1 head red radicchio</li>
+<li>1 onion</li>
+<li>2 tablespoons extra virgin olive oil</li>
+<li>1 garlic clove</li>
+<li>Salt and pepper to taste</li>
+<li>Vegetable broth as needed</li>
+<li>Chopped walnuts (optional)</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Prepare lentils:</strong> Rinse lentils under running water and drain. In a pot, cover lentils with vegetable broth. Bring to a boil and simmer for about 25-30 minutes, until tender. Drain and set aside.</p>
+<p>2. <strong>Prepare radicchio:</strong> Wash radicchio and cut into strips. In a pan, heat 1 tablespoon oil and add minced garlic. When golden, add radicchio and sauté for 5-7 minutes until wilted. Remove garlic and set aside.</p>
+<p>3. <strong>Cook onion:</strong> In the same pan, add another tablespoon oil and finely chopped onion. Sauté until translucent.</p>
+<p>4. <strong>Assemble:</strong> Add cooked lentils to the pan with onion and mix well. Add wilted radicchio and stir. Crumble gorgonzola into the mixture, stirring until slightly melted and creamy.</p>
+<p>5. <strong>Season:</strong> Season with salt and pepper to taste. Add chopped walnuts for a crunchy touch if desired.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-10-26</p>
+<p><strong>Meta:</strong> 4 porciones | Vegetariano</p>
+<p><strong>Descripción:</strong> Lentejas cremosas con achicoria marchitada y gorgonzola, un plato otoñal rico y reconfortante.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>200 g de lentejas</li>
+<li>150 g de gorgonzola</li>
+<li>1 cabeza de achicoria roja</li>
+<li>1 cebolla</li>
+<li>2 cucharadas de aceite de oliva virgen extra</li>
+<li>1 diente de ajo</li>
+<li>Sal y pimienta c.s.</li>
+<li>Caldo de verduras c.s.</li>
+<li>Nueces picadas (opcional)</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparar las lentejas:</strong> Enjuaga las lentejas bajo el grifo y escúrrelas. En una olla, cúbrelas con caldo de verduras. Lleva a ebullición y cuece a fuego lento unos 25-30 minutos, hasta que estén tiernas. Escurre y reserva.</p>
+<p>2. <strong>Preparar la achicoria:</strong> Lava la achicoria y córtala en tiras. En una sartén, calienta 1 cucharada de aceite y añade el ajo picado. Cuando esté dorado, agrega la achicoria y saltea 5-7 minutos hasta que se marchite. Retira el ajo y reserva.</p>
+<p>3. <strong>Cocinar la cebolla:</strong> En la misma sartén, añade otra cucharada de aceite y la cebolla picada finamente. Sofríe hasta que esté transparente.</p>
+<p>4. <strong>Montaje:</strong> Añade las lentejas cocidas a la sartén con la cebolla y mezcla bien. Incorpora la achicoria marchitada y remueve. Desmenuza el gorgonzola sobre la mezcla, removiendo hasta que se derrita ligeramente formando una crema.</p>
+<p>5. <strong>Sazonar:</strong> Sazona con sal y pimienta al gusto. Si lo deseas, añade nueces picadas para un toque crujiente.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-10-26</p>
+<p><strong>Meta:</strong> 4 porções | Vegetariano</p>
+<p><strong>Descrição:</strong> Lentilhas cremosas com chicória murta e gorgonzola, um prato outonal rico e reconfortante.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>200 g de lentilhas</li>
+<li>150 g de gorgonzola</li>
+<li>1 cabeça de chicória vermelha</li>
+<li>1 cebola</li>
+<li>2 colheres de sopa de azeite extra virgem</li>
+<li>1 dente de alho</li>
+<li>Sal e pimenta q.b.</li>
+<li>Caldo de legumes q.b.</li>
+<li>Nozes picadas (opcional)</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparar as lentilhas:</strong> Enxágue as lentilhas sob água corrente e escorra. Numa panela, cubra-as com caldo de legumes. Leve a ferver e cozinhe em lume brando cerca de 25-30 minutos, até ficarem macias. Escorra e reserve.</p>
+<p>2. <strong>Preparar a chicória:</strong> Lave a chicória e corte em tiras. Numa frigideira, aqueça 1 colher de sopa de azeite e junte o alho picado. Quando dourado, adicione a chicória e salteie 5-7 minutos até murchar. Retire o alho e reserve.</p>
+<p>3. <strong>Cozinhar a cebola:</strong> Na mesma frigideira, junte outra colher de sopa de azeite e a cebola picada finamente. Refogue até ficar translúcida.</p>
+<p>4. <strong>Montagem:</strong> Adicione as lentilhas cozidas à frigideira com a cebola e misture bem. Una a chicória murcha e mexa. Desfaça o gorgonzola sobre a mistura, mexendo até derreter ligeiramente e formar um creme.</p>
+<p>5. <strong>Temperar:</strong> Tempere com sal e pimenta a gosto. Se desejar, acrescente nozes picadas para um toque crocante.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-10-26</p>
+<p><strong>Meta:</strong> 4 Portionen | Vegetarisch</p>
+<p><strong>Beschreibung:</strong> Cremige Linsen mit geschmortem Radicchio und Gorgonzola, ein reichhaltiges und wärmendes Herbstgericht.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>200 g Linsen</li>
+<li>150 g Gorgonzola</li>
+<li>1 Kopf roter Radicchio</li>
+<li>1 Zwiebel</li>
+<li>2 Esslöffel extra natives Olivenöl</li>
+<li>1 Knoblauchzehe</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Gemüsebrühe nach Bedarf</li>
+<li>Gehackte Walnüsse (optional)</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Linsen zubereiten:</strong> Linsen unter fließendem Wasser spülen und abtropfen. In einem Topf mit Gemüsebrühe bedecken. Zum Kochen bringen und etwa 25-30 Minuten köcheln, bis sie weich sind. Abgießen und beiseitestellen.</p>
+<p>2. <strong>Radicchio zubereiten:</strong> Radicchio waschen und in Streifen schneiden. In einer Pfanne 1 Esslöffel Öl erhitzen und gehackten Knoblauch zugeben. Wenn goldbraun, Radicchio zugeben und 5-7 Minuten schmoren, bis er welkt. Knoblauch entfernen und beiseitestellen.</p>
+<p>3. <strong>Zwiebel garen:</strong> In derselben Pfanne einen weiteren Esslöffel Öl und die fein gehackte Zwiebel zugeben. Anschwitzen, bis sie glasig wird.</p>
+<p>4. <strong>Zusammenstellen:</strong> Gekochte Linsen in die Pfanne mit der Zwiebel geben und gut mischen. Welken Radicchio zugeben und umrühren. Gorgonzola über die Mischung bröseln und rühren, bis er leicht schmilzt und eine Creme bildet.</p>
+<p>5. <strong>Würzen:</strong> Mit Salz und Pfeffer abschmecken. Nach Wunsch gehackte Walnüsse für einen knackigen Biss zugeben.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-10-26</p>
+<p><strong>Meta:</strong> 4 μερίδες | Χορτοφαγικό</p>
+<p><strong>Περιγραφή:</strong> Κρεμώδεις φακές με μαραμένο ραντίτσιο και γκοργκοντζόλα, ένα πλούσιο και ζεστό φθινοπωρινό πιάτο.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>200 γρ φακές</li>
+<li>150 γρ γκοργκοντζόλα</li>
+<li>1 κεφάλι κόκκινο ραντίτσιο</li>
+<li>1 κρεμμύδι</li>
+<li>2 κουταλιές της σούπας ελαιόλαδο</li>
+<li>1 σκελίδα σκόρδο</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>Ζωμός λαχανικών κατά βούληση</li>
+<li>Ψιλοκομμένα καρύδια (προαιρετικά)</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία φακών:</strong> Ξεπλύνετε τις φακές κάτω από τρεχούμενο νερό και στραγγίστε τις. Σε μια κατσαρόλα, σκεπάστε τις με ζωμό λαχανικών. Φέρτε σε βρασμό και σιγοβράστε περίπου 25-30 λεπτά, μέχρι να μαλακώσουν. Στραγγίστε και κρατήστε στην άκρη.</p>
+<p>2. <strong>Προετοιμασία ραντίτσιο:</strong> Πλύνετε το ραντίτσιο και κόψτε το σε λωρίδες. Σε ένα τηγάνι, ζεστάνετε 1 κουταλιά ελαιόλαδο και προσθέστε το ψιλοκομμένο σκόρδο. Όταν ροδίσει, προσθέστε το ραντίτσιο και σοτάρετε 5-7 λεπτά μέχρι να μαραθεί. Αφαιρέστε το σκόρδο και κρατήστε στην άκρη.</p>
+<p>3. <strong>Μαγείρεμα κρεμμυδιού:</strong> Στο ίδιο τηγάνι, προσθέστε άλλη 1 κουταλιά ελαιόλαδο και το ψιλοκομμένο κρεμμύδι. Σοτάρετε μέχρι να γίνει διάφανο.</p>
+<p>4. <strong>Συναρμολόγηση:</strong> Προσθέστε τις μαγειρεμένες φακές στο τηγάνι με το κρεμμύδι και ανακατέψτε καλά. Ενσωματώστε το μαραμένο ραντίτσιο και ανακατέψτε. Θρυμματίστε τη γκοργκοντζόλα πάνω στο μείγμα, ανακατεύοντας μέχρι να λιώσει ελαφρά και να σχηματίσει μια κρέμα.</p>
+<p>5. <strong>Καλλυντικά:</strong> Αλατοπιπερώστε κατά βούληση. Αν θέλετε, προσθέστε ψιλοκομμένα καρύδια για μια τραγανή νότα.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

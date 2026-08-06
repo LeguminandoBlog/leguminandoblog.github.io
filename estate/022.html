@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pollo con Fagioli Cannellini alla Cacciatora | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Pollo con Fagioli Cannellini alla Cacciatora">
+<meta property="og:title" content="Pollo con Fagioli Cannellini alla Cacciatora | Leguminando">
+<meta property="og:description" content="Pollo con Fagioli Cannellini alla Cacciatora">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="estate/022.html" data-title="Pollo con Fagioli Cannellini alla Cacciatora" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="022.jpg" alt="Pollo con Fagioli Cannellini alla Cacciatora" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-08-31</p>
+<p><strong>Meta:</strong> 4 porzioni | Secondo</p>
+<p><strong>Descrizione:</strong> Petto di pollo con fagioli cannellini in salsa di pomodoro, aromatizzato con origano e alloro. Un piatto rustico e nutriente.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>500 g petto di pollo a cubetti</li>
+<li>1 cipolla grande tritata</li>
+<li>2 spicchi d'aglio tritati</li>
+<li>400 g fagioli cannellini scolati e risciacquati</li>
+<li>400 ml salsa di pomodoro</li>
+<li>2 cucchiai olio extravergine d'oliva</li>
+<li>1 cucchiaino origano secco</li>
+<li>1 foglia di alloro</li>
+<li>Sale, pepe e peperoncino q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparazione:</strong> Taglia il pollo a cubetti e trita cipolla e aglio.</p>
+<p>2. <strong>Rosola il pollo:</strong> In una padella capiente, scalda l'olio a fuoco medio-alto. Aggiungi il pollo e rosola fino a doratura su tutti i lati. Togli e metti da parte.</p>
+<p>3. <strong>Soffritto:</strong> Nella stessa padella, aggiungi la cipolla e cuocila finché diventa traslucida. Aggiungi l'aglio e cuoci per un altro minuto.</p>
+<p>4. <strong>Salsa e fagioli:</strong> Versa la salsa di pomodoro, mescola, poi aggiungi i fagioli scolati.</p>
+<p>5. <strong>Unisci il pollo:</strong> Riporta il pollo in padella. Aggiungi origano, alloro, sale, pepe e peperoncino a piacere. Mescola bene.</p>
+<p>6. <strong>Cottura:</strong> Riduci il fuoco, copri e cuoci a fuoco lento per 20-25 minuti, mescolando di tanto in tanto, fino a quando il pollo è cotto e i sapori si sono amalgamati.</p>
+<p>7. <strong>Servire:</strong> Rimuovi la foglia di alloro. Servi caldo con pane croccante o riso bianco.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-08-31</p>
+<p><strong>Meta:</strong> 4 servings | Main course</p>
+<p><strong>Description:</strong> Chicken breast with cannellini beans in tomato sauce, flavoured with oregano and bay leaf. A rustic and nutritious dish.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>500 g chicken breast in cubes</li>
+<li>1 large onion chopped</li>
+<li>2 garlic cloves minced</li>
+<li>400 g cannellini beans drained and rinsed</li>
+<li>400 ml tomato sauce</li>
+<li>2 tablespoons extra virgin olive oil</li>
+<li>1 teaspoon dried oregano</li>
+<li>1 bay leaf</li>
+<li>Salt, pepper and chilli to taste</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Preparation:</strong> Cut chicken into cubes and chop onion and garlic.</p>
+<p>2. <strong>Sear chicken:</strong> In a large pan, heat oil over medium-high heat. Add chicken and sear until golden on all sides. Remove and set aside.</p>
+<p>3. <strong>Sauté:</strong> In the same pan, add onion and cook until translucent. Add garlic and cook for another minute.</p>
+<p>4. <strong>Sauce and beans:</strong> Pour in tomato sauce, stir, then add drained beans.</p>
+<p>5. <strong>Combine chicken:</strong> Return chicken to the pan. Add oregano, bay leaf, salt, pepper and chilli to taste. Mix well.</p>
+<p>6. <strong>Cooking:</strong> Reduce heat, cover and simmer for 20-25 minutes, stirring occasionally, until chicken is cooked and flavours have melded.</p>
+<p>7. <strong>Serve:</strong> Remove bay leaf. Serve hot with crusty bread or white rice.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-08-31</p>
+<p><strong>Meta:</strong> 4 porciones | Plato principal</p>
+<p><strong>Descripción:</strong> Pechuga de pollo con alubias cannellini en salsa de tomate, aromatizado con orégano y laurel. Un plato rústico y nutritivo.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>500 g pechuga de pollo en dados</li>
+<li>1 cebolla grande picada</li>
+<li>2 dientes de ajo picados</li>
+<li>400 g alubias cannellini escurridas y enjuagadas</li>
+<li>400 ml salsa de tomate</li>
+<li>2 cucharadas aceite de oliva virgen extra</li>
+<li>1 cucharadita orégano seco</li>
+<li>1 hoja de laurel</li>
+<li>Sal, pimienta y guindilla c.s.</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparación:</strong> Corta el pollo en dados y pica la cebolla y el ajo.</p>
+<p>2. <strong>Sella el pollo:</strong> En una sartén grande, calienta el aceite a fuego medio-alto. Añade el pollo y dóralo por todos los lados. Retíralo y resérvalo.</p>
+<p>3. <strong>Sofrito:</strong> En la misma sartén, añade la cebolla y cocínala hasta que esté translúcida. Añade el ajo y cocina un minuto más.</p>
+<p>4. <strong>Salsa y alubias:</strong> Vierte la salsa de tomate, remueve, luego añade las alubias escurridas.</p>
+<p>5. <strong>Une el pollo:</strong> Devuelve el pollo a la sartén. Añade orégano, laurel, sal, pimienta y guindilla al gusto. Mezcla bien.</p>
+<p>6. <strong>Cocción:</strong> Reduce el fuego, tapa y cuece a fuego lento 20-25 minutos, removiendo de vez en cuando, hasta que el pollo esté cocido y los sabores se hayan mezclado.</p>
+<p>7. <strong>Servir:</strong> Retira la hoja de laurel. Sirve caliente con pan crujiente o arroz blanco.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-08-31</p>
+<p><strong>Meta:</strong> 4 porções | Prato principal</p>
+<p><strong>Descrição:</strong> Peito de frango com feijão cannellini em molho de tomate, aromatizado com orégãos e louro. Um prato rústico e nutritivo.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>500 g peito de frango em cubos</li>
+<li>1 cebola grande picada</li>
+<li>2 dentes de alho picados</li>
+<li>400 g feijão cannellini escorrido e enxaguado</li>
+<li>400 ml molho de tomate</li>
+<li>2 colheres de sopa azeite extra virgem</li>
+<li>1 colher de chá orégãos secos</li>
+<li>1 folha de louro</li>
+<li>Sal, pimenta e piri-piri q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparação:</strong> Corta o frango em cubos e pica a cebola e o alho.</p>
+<p>2. <strong>Doura o frango:</strong> Numa frigideira grande, aquece o azeite em lume médio-alto. Adiciona o frango e doura por todos os lados. Retira e reserva.</p>
+<p>3. <strong>Refogado:</strong> Na mesma frigideira, adiciona a cebola e cozinha até ficar translúcida. Adiciona o alho e cozinha mais um minuto.</p>
+<p>4. <strong>Molho e feijão:</strong> Deita o molho de tomate, mexe, depois adiciona o feijão escorrido.</p>
+<p>5. <strong>Junta o frango:</strong> Volta a colocar o frango na frigideira. Adiciona orégãos, louro, sal, pimenta e piri-piri a gosto. Mistura bem.</p>
+<p>6. <strong>Cozedura:</strong> Reduz o lume, tapa e deixa cozinhar em lume brando 20-25 minutos, mexendo de vez em quando, até o frango estar cozido e os sabores combinados.</p>
+<p>7. <strong>Servir:</strong> Retira a folha de louro. Serve quente com pão crocante ou arroz branco.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-08-31</p>
+<p><strong>Meta:</strong> 4 Portionen | Hauptgericht</p>
+<p><strong>Beschreibung:</strong> Hähnchenbrust mit Cannellini-Bohnen in Tomatensauce, gewürzt mit Oregano und Lorbeerblatt. Ein rustikales und nahrhaftes Gericht.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>500 g Hähnchenbrust in Würfeln</li>
+<li>1 große Zwiebel gehackt</li>
+<li>2 Knoblauchzehen gehackt</li>
+<li>400 g Cannellini-Bohnen abgetropft und abgespült</li>
+<li>400 ml Tomatensauce</li>
+<li>2 Esslöffel Olivenöl extra vergine</li>
+<li>1 Teelöffel getrockneter Oregano</li>
+<li>1 Lorbeerblatt</li>
+<li>Salz, Pfeffer und Chiliflocken nach Geschmack</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Vorbereitung:</strong> Hähnchen in Würfel schneiden, Zwiebel und Knoblauch hacken.</p>
+<p>2. <strong>Hähnchen anbraten:</strong> In einer großen Pfanne Öl bei mittlerer bis starker Hitze erhitzen. Hähnchen zugeben und von allen Seiten anbraten. Herausnehmen und beiseitestellen.</p>
+<p>3. <strong>Anschwitzen:</strong> In derselben Pfanne Zwiebel zugeben und glasig dünsten. Knoblauch zugeben und eine Minute mitkochen.</p>
+<p>4. <strong>Sauce und Bohnen:</strong> Tomatensauce eingießen, umrühren, dann abgetropfte Bohnen zugeben.</p>
+<p>5. <strong>Hähnchen zugeben:</strong> Hähnchen zurück in die Pfanne geben. Oregano, Lorbeerblatt, Salz, Pfeffer und Chiliflocken nach Geschmack zugeben. Gut vermischen.</p>
+<p>6. <strong>Kochen:</strong> Hitze reduzieren, zudecken und 20-25 Minuten köcheln lassen, dabei gelegentlich umrühren, bis das Hähnchen gar ist und die Aromen sich verbunden haben.</p>
+<p>7. <strong>Servieren:</strong> Lorbeerblatt entfernen. Heiß mit knusprigem Brot oder weißem Reis servieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-08-31</p>
+<p><strong>Meta:</strong> 4 μερίδες | Κυρίως πιάτο</p>
+<p><strong>Περιγραφή:</strong> Στήθος κοτόπουλου με φασόλια cannellini σε σάλτσα ντομάτας, αρωματισμένο με ρίγανη και δάφνη. Ένα χωριάτικο και θρεπτικό πιάτο.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>500 γρ στήθος κοτόπουλου σε κύβους</li>
+<li>1 μεγάλο κρεμμύδι ψιλοκομμένο</li>
+<li>2 σκελίδες σκόρδο ψιλοκομμένες</li>
+<li>400 γρ φασόλια cannellini στραγγισμένα και ξεπλυμένα</li>
+<li>400 ml σάλτσα ντομάτας</li>
+<li>2 κουταλιές της σούπας ελαιόλαδο</li>
+<li>1 κουταλάκι του γλυκού ξηρή ρίγανη</li>
+<li>1 φύλλο δάφνης</li>
+<li>Αλάτι, πιπέρι και τσίλι κατά βούληση</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία:</strong> Κόψε το κοτόπουλο σε κύβους και ψιλόκοψε κρεμμύδι και σκόρδο.</p>
+<p>2. <strong>Σοτάρισμα κοτόπουλου:</strong> Σε ένα μεγάλο τηγάνι, ζέστανε το λάδι σε μέτρια-δυνατή φωτιά. Πρόσθεσε το κοτόπουλο και σόταρε μέχρι να ροδίσει από όλες τις πλευρές. Βγάλε το και άφησέ το στην άκρη.</p>
+<p>3. <strong>Σοτάρισμα:</strong> Στο ίδιο τηγάνι, πρόσθεσε το κρεμμύδι και μαγείρεψέ το μέχρι να γίνει διάφανο. Πρόσθεσε το σκόρδο και μαγείρεψέ το για άλλο ένα λεπτό.</p>
+<p>4. <strong>Σάλτσα και φασόλια:</strong> Ρίξε τη σάλτσα ντομάτας, ανακάτεψε, μετά πρόσθεσε τα στραγγισμένα φασόλια.</p>
+<p>5. <strong>Ένωσε το κοτόπουλο:</strong> Επέστρεψε το κοτόπουλο στο τηγάνι. Πρόσθεσε ρίγανη, δάφνη, αλάτι, πιπέρι και τσίλι κατά βούληση. Ανακάτεψε καλά.</p>
+<p>6. <strong>Μαγείρεμα:</strong> Χαμήλωσε τη φωτιά, σκέπασε και άφησε να σιγοβράσει 20-25 λεπτά, ανακατεύοντας που και που, μέχρι το κοτόπουλο να ψηθεί και τα αρώματα να ενωθούν.</p>
+<p>7. <strong>Σερβίρισμα:</strong> Αφαίρεσε το φύλλο δάφνης. Σέρβιρε ζεστό με τραγανό ψωμί ή λευκό ρύζι.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

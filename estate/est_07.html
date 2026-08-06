@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ceci neri con pomodori gialli e rossi, feta e bottarga | Leguminando</title>
+<meta name="description" content="Ceci neri con pomodori gialli e rossi, feta e bottarga">
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%); color: #333; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 30px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.header h1 { margin: 0; font-size: 2.2em; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+.header p { margin: 10px 0 0 0; font-size: 1.1em; opacity: 0.9; }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border: 2px solid #D2691E; background: white; color: #8B4513; border-radius: 20px; cursor: pointer; font-size: 0.85em; transition: all 0.3s; }
+.lang-tab:hover { background: #faf8f5; }
+.lang-tab.active { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; }
+.lang-content { display: none; }
+.lang-content.active { display: block; }
+.content { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.recipe-image { width: 100%; max-width: 700px; height: 400px; object-fit: cover; border-radius: 12px; margin: 0 auto 30px auto; display: block; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.section { margin-bottom: 30px; }
+.section h2 { color: #8B4513; border-bottom: 3px solid #D2691E; padding-bottom: 10px; margin-bottom: 20px; font-size: 1.5em; }
+.section h3 { color: #D2691E; margin: 20px 0 10px 0; font-size: 1.2em; }
+.ingredients-list { background: #faf8f5; padding: 20px; border-radius: 10px; border-left: 5px solid #D2691E; }
+.ingredients-list ul { list-style: none; padding: 0; }
+.ingredients-list li { padding: 8px 0; border-bottom: 1px dashed #e0d5c8; }
+.ingredients-list li:last-child { border-bottom: none; }
+.ingredients-list li:before { content: "🫘 "; margin-right: 8px; }
+.steps-list { counter-reset: step; }
+.steps-list li { counter-increment: step; padding: 15px 0 15px 50px; position: relative; border-bottom: 1px solid #eee; }
+.steps-list li:last-child { border-bottom: none; }
+.steps-list li::before { content: counter(step); position: absolute; left: 0; top: 10px; background: #8B4513; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em; }
+.footer { text-align: center; margin-top: 40px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 20px 0; padding: 12px 24px; background: linear-gradient(135deg, #8B4513, #D2691E); color: white; text-decoration: none; border-radius: 25px; font-size: 1em; transition: transform 0.2s; }
+.back-link:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.fav-btn { cursor: pointer; font-size: 1.2em; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+@media print {
+    .lang-tabs { display: none !important; }
+    .lang-content { display: block !important; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>🫘 Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<div class="content">
+<div style="text-align: center; margin: -20px 0 20px 0;">
+<span style="display: inline-block; padding: 8px 16px; background: linear-gradient(135deg, #D2691E, #8B4513); color: white; border-radius: 20px; font-size: 0.9em;">
+📅 2026-07-26 — Estate ☀️</span>
+</div>
+<img src="est_07.jpg" alt="Ceci neri con pomodori gialli e rossi, feta e bottarga" class="recipe-image">
+
+<div class="fav-bar" style="text-align:center;margin:5px 0;">
+<span class="fav-btn" data-path="estate/est_07.html" data-title="Ceci neri con pomodori gialli e rossi, feta e bottarga" onclick="toggleFav(this.dataset.path, this.dataset.title)">
+🤍</span> Aggiungi ai preferiti
+</div>
+
+<div class="lang-tabs">
+<span class="lang-tab active" data-lang="it" onclick="switchLang('it')">🇮🇹 IT</span>
+<span class="lang-tab" data-lang="en" onclick="switchLang('en')">🇬🇧 EN</span>
+<span class="lang-tab" data-lang="es" onclick="switchLang('es')">🇪🇸 ES</span>
+<span class="lang-tab" data-lang="pt" onclick="switchLang('pt')">🇵🇹 PT</span>
+<span class="lang-tab" data-lang="de" onclick="switchLang('de')">🇩🇪 DE</span>
+<span class="lang-tab" data-lang="el" onclick="switchLang('el')">🇬🇷 EL</span>
+</div>
+
+<div id="lang-it" class="lang-content active">
+<div class="section">
+<h2>Ceci neri con pomodori gialli e rossi, feta e bottarga</h2>
+<p>Un piatto estivo mediterraneo che unisce la dolcezza dei pomodori maturi, la sapidità della bottarga e la freschezza della feta, con i ceci neri a fare da protagonista.</p>
+
+<h3>Ingredienti (4 persone)</h3>
+<div class="ingredients-list">
+<ul>
+<li>Ceci neri cotti: 600 g (peso scolato; ~150 g a persona) — se usi secchi: 240 g secchi (mettere a bagno 12 h, poi cuocere 45-60 min)</li>
+<li>Pomodori gialli: 300 g (circa 3 medi)</li>
+<li>Pomodori rossi: 300 g (circa 3 medi)</li>
+<li>Feta greca a cubetti: 200 g</li>
+<li>Bottarga (sarda o tonno) grattugiata: 40 g (~10 g a porzione)</li>
+<li>Olio extravergine d'oliva: 4 cucchiai (~40 ml)</li>
+<li>Aglio: 1 spicchio (facoltativo)</li>
+<li>Prezzemolo fresco tritato: 15 g</li>
+<li>Succo di limone: 1 cucchiaio (facoltativo)</li>
+<li>Sale e pepe q.b.</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparazione</h3>
+<ol class="steps-list">
+<li>Se i ceci sono secchi: sciacquarli, metterli in ammollo 12 h, poi cuocerli in acqua non salata 45-60 min fino a tenerezza; scolare. Se usi ceci già cotti/surgelati: sciacqua e scola.</li>
+<li>Taglia i pomodori gialli e rossi a spicchi o a cubetti grossi.</li>
+<li>Scalda 2 cucchiai d'olio in una padella larga a fuoco medio-alto. Aggiungi lo spicchio d'aglio leggermente schiacciato (se lo usi) e fallo dorare 30-60 s, poi rimuovilo.</li>
+<li>Aggiungi i pomodori in padella e cuoci 4-6 min fino a che iniziano a disfarsi e a rilasciare succhi (devono restare morbidi ma non completamente sfatti). Sala e pepa.</li>
+<li>In un'altra padella scalda 1 cucchiaio d'olio e salta i ceci cotti 3-4 min per riscaldarli; aggiungi una presa di sale e pepe.</li>
+<li>Unisci i ceci ai pomodori nella padella più grande, mescola e cuoci 1-2 min per amalgamare i sapori. Aggiungi il succo di limone se desideri una nota fresca.</li>
+<li>Togli dal fuoco. Aggiungi la feta a cubetti e il prezzemolo; mescola con delicatezza per non far sciogliere troppo la feta.</li>
+<li>Impiatta e termina grattugiando sopra la bottarga (10 g a porzione) e distribuendo l'ultimo cucchiaio d'olio a crudo. Aggiusta di pepe.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-en" class="lang-content">
+<div class="section">
+<h2>Black Chickpeas with Yellow and Red Tomatoes, Feta and Bottarga</h2>
+<p>A Mediterranean summer dish combining the sweetness of ripe tomatoes, the savoriness of bottarga and the freshness of feta, with black chickpeas as the star.</p>
+
+<h3>Ingredients (4 servings)</h3>
+<div class="ingredients-list">
+<ul>
+<li>Cooked black chickpeas: 600 g (drained weight; ~150 g per person) — if using dried: 240 g (soak 12 h, then cook 45-60 min)</li>
+<li>Yellow tomatoes: 300 g (about 3 medium)</li>
+<li>Red tomatoes: 300 g (about 3 medium)</li>
+<li>Greek feta in cubes: 200 g</li>
+<li>Grated bottarga (sardinian or tuna): 40 g (~10 g per serving)</li>
+<li>Extra virgin olive oil: 4 tablespoons (~40 ml)</li>
+<li>Garlic: 1 clove (optional)</li>
+<li>Fresh chopped parsley: 15 g</li>
+<li>Lemon juice: 1 tablespoon (optional)</li>
+<li>Salt and pepper to taste</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparation</h3>
+<ol class="steps-list">
+<li>If using dried chickpeas: rinse, soak for 12 hours, then cook in unsalted water for 45-60 minutes until tender; drain. If using pre-cooked/frozen: rinse and drain.</li>
+<li>Cut yellow and red tomatoes into wedges or large cubes.</li>
+<li>Heat 2 tablespoons of oil in a wide pan over medium-high heat. Add the lightly crushed garlic clove (if using) and let it golden for 30-60 seconds, then remove it.</li>
+<li>Add tomatoes to the pan and cook 4-6 minutes until they begin to break down and release juices (should remain soft but not completely mushy). Season with salt and pepper.</li>
+<li>In another pan heat 1 tablespoon of oil and sauté the cooked chickpeas for 3-4 minutes to warm them; add a pinch of salt and pepper.</li>
+<li>Combine chickpeas with tomatoes in the larger pan, mix and cook 1-2 minutes to blend flavors. Add lemon juice if desired for a fresh note.</li>
+<li>Remove from heat. Add cubed feta and parsley; mix gently to avoid melting the feta too much.</li>
+<li>Plate and finish by grating bottarga on top (10 g per serving) and drizzling the last tablespoon of raw oil. Adjust pepper.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-es" class="lang-content">
+<div class="section">
+<h2>Garbanzos Negros con Tomates Amarillos y Rojos, Feta y Bottarga</h2>
+<p>Un plato mediterráneo de verano que une la dulzura de los tomates maduros, la sabrosura de la bottarga y la frescura de la feta, con los garbanzos negros como protagonistas.</p>
+
+<h3>Ingredientes (4 personas)</h3>
+<div class="ingredients-list">
+<ul>
+<li>Garbanzos negros cocidos: 600 g (peso escurrido; ~150 g por persona) — si usas secos: 240 g (poner en remojo 12 h, luego cocer 45-60 min)</li>
+<li>Tomates amarillos: 300 g (unos 3 medianos)</li>
+<li>Tomates rojos: 300 g (unos 3 medianos)</li>
+<li>Feta griega en cubos: 200 g</li>
+<li>Bottarga rallada (sarda o atún): 40 g (~10 g por ración)</li>
+<li>Aceite de oliva virgen extra: 4 cucharadas (~40 ml)</li>
+<li>Ajo: 1 diente (opcional)</li>
+<li>Perejil fresco picado: 15 g</li>
+<li>Zumo de limón: 1 cucharada (opcional)</li>
+<li>Sal y pimienta al gusto</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparación</h3>
+<ol class="steps-list">
+<li>Si los garbanzos son secos: enjuagarlos, ponerlos en remojo 12 h, luego cocerlos en agua sin sal 45-60 min hasta que estén tiernos; escurrir. Si usas garbanzos ya cocidos/congelados: enjuagar y escurrir.</li>
+<li>Corta los tomates amarillos y rojos en gajos o cubos grandes.</li>
+<li>Calienta 2 cucharadas de aceite en una sartén ancha a fuego medio-alto. Añade el diente de ajo ligeramente aplastado (si lo usas) y déjalo dorar 30-60 s, luego retíralo.</li>
+<li>Añade los tomates a la sartén y cuece 4-6 min hasta que empiecen a deshacerse y soltar jugos (deben quedar blandos pero no completamente deshechos). Sala y pimienta.</li>
+<li>En otra sartén calienta 1 cucharada de aceite y saltea los garbanzos cocidos 3-4 min para calentarlos; añade una pizca de sal y pimienta.</li>
+<li>Une los garbanzos con los tomates en la sartén más grande, mezcla y cuece 1-2 min para amalgamar los sabores. Añade el zumo de limón si deseas una nota fresca.</li>
+<li>Retira del fuego. Añade la feta en cubos y el perejil; mezcla con delicadeza para no hacerla derretir demasiado.</li>
+<li>Emplata y termina rallando bottarga por encima (10 g por ración) y distribuyendo la última cucharada de aceite en crudo. Ajusta de pimienta.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-pt" class="lang-content">
+<div class="section">
+<h2>Grãos-de-Bico Pretos com Tomates Amarelos e Vermelhos, Feta e Bottarga</h2>
+<p>Um prato mediterrânico de verão que une a doçura dos tomates maduros, o sabor da bottarga e a frescura da feta, com os grãos-de-bico pretos como protagonistas.</p>
+
+<h3>Ingredientes (4 pessoas)</h3>
+<div class="ingredients-list">
+<ul>
+<li>Grãos-de-bico pretos cozidos: 600 g (peso escorrido; ~150 g por pessoa) — se usar secos: 240 g (deixar de molho 12 h, depois cozinhar 45-60 min)</li>
+<li>Tomates amarelos: 300 g (cerca de 3 médios)</li>
+<li>Tomates vermelhos: 300 g (cerca de 3 médios)</li>
+<li>Feta grega em cubos: 200 g</li>
+<li>Bottarga ralada (sarda ou atum): 40 g (~10 g por porção)</li>
+<li>Azeite de oliva virgem extra: 4 colheres de sopa (~40 ml)</li>
+<li>Alho: 1 dente (opcional)</li>
+<li>Salsa fresca picada: 15 g</li>
+<li>Sumo de limão: 1 colher de sopa (opcional)</li>
+<li>Sal e pimenta a gosto</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparação</h3>
+<ol class="steps-list">
+<li>Se os grãos-de-bico forem secos: enxaguá-los, deixá-los de molho 12 h, depois cozinhá-los em água sem sal 45-60 min até ficarem macios; escorrer. Se usar grãos-de-bico já cozidos/congelados: enxaguar e escorrer.</li>
+<li>Corta os tomates amarelos e vermelhos em gomos ou cubos grandes.</li>
+<li>Aquece 2 colheres de sopa de azeite numa frigideira larga em lume médio-alto. Adiciona o dente de alho ligeiramente esmagado (se usares) e deixa-o dourar 30-60 s, depois remove-o.</li>
+<li>Adiciona os tomates à frigideira e cozinha 4-6 min até começarem a desfazer-se e libertar sumos (devem ficar macios mas não completamente desfeitos). Salga e pimenta.</li>
+<li>Noutra frigideira aquece 1 colher de sopa de azeite e salteia os grãos-de-bico cozidos 3-4 min para os aquecer; adiciona uma pitada de sal e pimenta.</li>
+<li>Une os grãos-de-bico com os tomates na frigideira maior, mistura e cozinha 1-2 min para amalgamar os sabores. Adiciona o sumo de limão se desejares uma nota fresca.</li>
+<li>Retira do lume. Adiciona a feta em cubos e a salsa; mistura com delicadeza para não a fazer derreter demasiado.</li>
+<li>Emplata e termina ralando bottarga por cima (10 g por porção) e distribuindo a última colher de sopa de azeite a cru. Ajusta de pimenta.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-de" class="lang-content">
+<div class="section">
+<h2>Schwarze Kichererbsen mit Gelben und Roten Tomaten, Feta und Bottarga</h2>
+<p>Ein mediterranes Sommergericht, das die Süße reifer Tomaten, die Würze der Bottarga und die Frische von Feta vereint, mit schwarzen Kichererbsen als Hauptdarsteller.</p>
+
+<h3>Zutaten (4 Personen)</h3>
+<div class="ingredients-list">
+<ul>
+<li>Gekochte schwarze Kichererbsen: 600 g (Abtropfgewicht; ~150 g pro Person) — bei getrockneten: 240 g (12 h einweichen, dann 45-60 min kochen)</li>
+<li>Gelbe Tomaten: 300 g (etwa 3 mittlere)</li>
+<li>Rote Tomaten: 300 g (etwa 3 mittlere)</li>
+<li>Griechischer Feta in Würfeln: 200 g</li>
+<li>Geriebene Bottarga (sardische oder Thunfisch): 40 g (~10 g pro Portion)</li>
+<li>Natives Olivenöl extra: 4 Esslöffel (~40 ml)</li>
+<li>Knoblauch: 1 Zehe (optional)</li>
+<li>Frisch gehackte Petersilie: 15 g</li>
+<li>Zitronensaft: 1 Esslöffel (optional)</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Zubereitung</h3>
+<ol class="steps-list">
+<li>Bei getrockneten Kichererbsen: abspülen, 12 Stunden einweichen, dann in ungesalzenem Wasser 45-60 Minuten kochen bis sie weich sind; abtropfen lassen. Bei vorgekochten/gefrorenen: abspülen und abtropfen.</li>
+<li>Gelbe und rote Tomaten in Spalten oder große Würfel schneiden.</li>
+<li>2 Esslöffel Öl in einer weiten Pfanne bei mittlerer bis hoher Hitze erhitzen. Die leicht angedrückte Knoblauchzehe (falls verwendet) hinzufügen und 30-60 Sekunden goldgelb werden lassen, dann entfernen.</li>
+<li>Tomaten in die Pfanne geben und 4-6 Minuten kochen, bis sie zu zerfallen beginnen und Saft abgeben (sollten weich bleiben, aber nicht komplett matschig). Mit Salz und Pfeffer würzen.</li>
+<li>In einer weiteren Pfanne 1 Esslöffel Öl erhitzen und die gekochten Kichererbsen 3-4 Minuten anbraten, um sie zu erwärmen; eine Prise Salz und Pfeffer hinzufügen.</li>
+<li>Kichererbsen mit den Tomaten in der größeren Pfanne vereinen, mischen und 1-2 Minuten kochen, um die Aromen zu verbinden. Bei Bedarf Zitronensaft für eine frische Note hinzufügen.</li>
+<li>Vom Herd nehmen. Feta-Würfel und Petersilie hinzufügen; vorsichtig mischen, damit der Feta nicht zu sehr schmilzt.</li>
+<li>Anrichten und mit geriebener Bottarga (10 g pro Portion) bestreuen und den letzten Esslöffel rohes Öl darüber träufeln. Pfeffer nach Geschmack anpassen.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-el" class="lang-content">
+<div class="section">
+<h2>Μαύρα Ρεβίθια με Κίτρινες και Κόκκινες Ντομάτες, Φέτα και Bottarga</h2>
+<p>Ένα καλοκαιρινό μεσογειακό πιάτο που ενώνει τη γλυκύτητα των ώριμων ντοματών, τη γεύση της bottarga και τη φρεσκάδα της φέτας, με τα μαύρα ρεβίθια να πρωταγωνιστούν.</p>
+
+<h3>Συστατικά (4 άτομα)</h3>
+<div class="ingredients-list">
+<ul>
+<li>Μαγειρεμένα μαύρα ρεβίθια: 600 γραμ. (βάρος σουρωμένο; ~150 γραμ. ανά άτομο) — αν χρησιμοποιείτε ξηρά: 240 γραμ. (μουλιάστε 12 ώρες, μετά μαγειρέψτε 45-60 λεπτά)</li>
+<li>Κίτρινες ντομάτες: 300 γραμ. (περίπου 3 μεσαίες)</li>
+<li>Κόκκινες ντομάτες: 300 γραμ. (περίπου 3 μεσαίες)</li>
+<li>Ελληνική φέτα σε κύβους: 200 γραμ.</li>
+<li>Τριμμένη bottarga (σαρδηνιακή ή τόνου): 40 γραμ. (~10 γραμ. ανά μερίδα)</li>
+<li>Έξτρα παρθένο ελαιόλαδο: 4 κουταλιές της σούπας (~40 ml)</li>
+<li>Σκόρδο: 1 σκελίδα (προαιρετικά)</li>
+<li>Φρέσκο ψιλοκομμένο μαϊντανό: 15 γραμ.</li>
+<li>Χυμός λεμονιού: 1 κουταλιά της σούπας (προαιρετικά)</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Εκτέλεση</h3>
+<ol class="steps-list">
+<li>Αν χρησιμοποιείτε ξηρά ρεβίθια: ξεπλύνετε, μουλιάστε για 12 ώρες, μετά μαγειρέψτε σε αλατισμένο νερό για 45-60 λεπτά μέχρι να μαλακώσουν· σουρώστε. Αν χρησιμοποιείτε προψημένα/κατεψυγμένα: ξεπλύνετε και σουρώστε.</li>
+<li>Κόψτε τις κίτρινες και κόκκινες ντομάτες σε φέτες ή μεγάλους κύβους.</li>
+<li>Ζεστάνετε 2 κουταλιές της σούπας λάδι σε ένα φαρδύ τηγάνι σε μέτρια-υψηλή φωτιά. Προσθέστε τη σκελίδα σκόρδου ελαφρώς πλαστημένη (αν τη χρησιμοποιείτε) και αφήστε τη να χρυσίσει για 30-60 δευτερόλεπτα, μετά αφαιρέστε τη.</li>
+<li>Προσθέστε τις ντομάτες στο τηγάνι και μαγειρέψτε για 4-6 λεπτά μέχρι να αρχίσουν να διαλύονται και να αφήνουν χυμούς (πρέπει να μείνουν μαλακές αλλά όχι εντελώς διαλυμένες). Αλατοπιπερώστε.</li>
+<li>Σε ένα άλλο τηγάνι ζεστάνετε 1 κουταλιά της σούπας λάδι και σοτάρετε τα μαγειρεμένα ρεβίθια για 3-4 λεπτά για να ζεσταθούν· προσθέστε μια πρέζα αλάτι και πιπέρι.</li>
+<li>Ενώστε τα ρεβίθια με τις ντομάτες στο μεγαλύτερο τηγάνι, ανακατέψτε και μαγειρέψτε για 1-2 λεπτά για να ενωθούν οι γεύσεις. Προσθέστε χυμό λεμονιού αν θέλετε μια φρέσκια νότα.</li>
+<li>Κατεβάστε από τη φωτιά. Προσθέστε τη φέτα σε κύβους και τον μαϊντανό· ανακατέψτε απαλά για να μην λιώσει πολύ η φέτα.</li>
+<li>Σερβίρετε και τελειώστε τρίβοντας bottarga από πάνω (10 γραμ. ανά μερίδα) και μοιράζοντας την τελευταία κουταλιά της σούπας λάδι ωμό. Ρυθμίστε το πιπέρι.</li>
+</ol>
+</div>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<a href="../index.html" class="back-link">← Torna alla Home</a>
+</div>
+
+<script>
+function switchLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(c => c.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+    document.querySelector('.lang-tab[data-lang="' + lang + '"]').classList.add('active');
+    localStorage.setItem('preferredLang', lang);
+}
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

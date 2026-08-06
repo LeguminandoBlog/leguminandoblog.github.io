@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crema di Funghi Porcini e Lenticchie | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Crema di Funghi Porcini e Lenticchie">
+<meta property="og:title" content="Crema di Funghi Porcini e Lenticchie | Leguminando">
+<meta property="og:description" content="Crema di Funghi Porcini e Lenticchie">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="inverno/014.html" data-title="Crema di Funghi Porcini e Lenticchie" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="014.jpg" alt="Crema di Funghi Porcini e Lenticchie" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2026-01-08</p>
+<p><strong>Meta:</strong> 4 porzioni | Zuppa</p>
+<p><strong>Descrizione:</strong> Crema vellutata di funghi porcini e lenticchie, perfetta per le giornate invernali.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>300 g di funghi porcini freschi (o 100 g secchi)</li>
+<li>200 g di lenticchie (preferibilmente verdi o marroni)</li>
+<li>1 cipolla media</li>
+<li>2 spicchi d'aglio</li>
+<li>1 litro di brodo vegetale</li>
+<li>3 cucchiai di olio extravergine d'oliva</li>
+<li>Sale q.b.</li>
+<li>Pepe nero q.b.</li>
+<li>Prezzemolo fresco per guarnire</li>
+<li>100 ml di panna vegetale (opzionale)</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparare le lenticchie:</strong> Sciacquare le lenticchie sotto acqua corrente. In una pentola, portare a ebollizione il brodo vegetale e aggiungere le lenticchie. Cuocere per circa 20-30 minuti, finché non sono tenere. Scolare e mettere da parte.</p>
+<p>2. <strong>Soffriggere le verdure:</strong> In una casseruola, scaldare l'olio extravergine d'oliva a fuoco medio. Aggiungere la cipolla tritata e l'aglio schiacciato. Soffriggere finché la cipolla diventa trasparente.</p>
+<p>3. <strong>Cuocere i funghi:</strong> Pulire i funghi porcini e tagliarli a fette. Aggiungerli nella casseruola con la cipolla e l'aglio. Cuocere per circa 5-7 minuti, finché i funghi sono morbidi e leggermente dorati. Se si utilizzano funghi secchi, metterli in ammollo in acqua calda per 20 minuti, poi tritarli e aggiungerli al soffritto.</p>
+<p>4. <strong>Unire lenticchie e brodo:</strong> Aggiungere le lenticchie cotte ai funghi nella casseruola. Mescolare bene e aggiungere un po' di brodo vegetale per ottenere la consistenza desiderata. Cuocere a fuoco lento per circa 10 minuti.</p>
+<p>5. <strong>Frullare la crema:</strong> Utilizzare un frullatore a immersione per frullare la crema fino a ottenere una consistenza liscia. Se si desidera, aggiungere la panna vegetale per renderla ancora più cremosa. Aggiustare di sale e pepe.</p>
+<p>6. <strong>Servire:</strong> Versare la crema in ciotole e guarnire con prezzemolo fresco tritato. Servire calda, accompagnata con crostini di pane.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2026-01-08</p>
+<p><strong>Meta:</strong> 4 servings | Soup</p>
+<p><strong>Description:</strong> Velvety cream of porcini mushrooms and lentils, perfect for winter days.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>300 g fresh porcini mushrooms (or 100 g dried)</li>
+<li>200 g lentils (preferably green or brown)</li>
+<li>1 medium onion</li>
+<li>2 garlic cloves</li>
+<li>1 litre vegetable broth</li>
+<li>3 tablespoons extra virgin olive oil</li>
+<li>Salt to taste</li>
+<li>Black pepper to taste</li>
+<li>Fresh parsley for garnish</li>
+<li>100 ml plant-based cream (optional)</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Prepare lentils:</strong> Rinse lentils under running water. In a pot, bring vegetable broth to a boil and add lentils. Cook for about 20-30 minutes, until tender. Drain and set aside.</p>
+<p>2. <strong>Sauté vegetables:</strong> In a casserole, heat extra virgin olive oil over medium heat. Add chopped onion and crushed garlic. Sauté until onion becomes translucent.</p>
+<p>3. <strong>Cook mushrooms:</strong> Clean porcini mushrooms and slice them. Add to casserole with onion and garlic. Cook for about 5-7 minutes, until mushrooms are tender and slightly golden. If using dried mushrooms, soak in hot water for 20 minutes, then chop and add to the sauté.</p>
+<p>4. <strong>Combine lentils and broth:</strong> Add cooked lentils to mushrooms in casserole. Mix well and add some vegetable broth to reach desired consistency. Simmer for about 10 minutes.</p>
+<p>5. <strong>Blend the cream:</strong> Use an immersion blender to blend until smooth. If desired, add plant-based cream for extra creaminess. Season with salt and pepper.</p>
+<p>6. <strong>Serve:</strong> Pour cream into bowls and garnish with chopped fresh parsley. Serve hot, accompanied by bread crostini.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2026-01-08</p>
+<p><strong>Meta:</strong> 4 porciones | Sopa</p>
+<p><strong>Descripción:</strong> Crema aterciopelada de setas porcini y lentejas, perfecta para los días de invierno.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>300 g de setas porcini frescas (o 100 g secas)</li>
+<li>200 g de lentejas (preferiblemente verdes o marrones)</li>
+<li>1 cebolla mediana</li>
+<li>2 dientes de ajo</li>
+<li>1 litro de caldo de verduras</li>
+<li>3 cucharadas de aceite de oliva virgen extra</li>
+<li>Sal c.s.</li>
+<li>Pimienta negra c.s.</li>
+<li>Perejil fresco para decorar</li>
+<li>100 ml de nata vegetal (opcional)</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparar las lentejas:</strong> Enjuaga las lentejas bajo el grifo. En una olla, lleva el caldo de verduras a ebullición y añade las lentejas. Cuece unos 20-30 minutos, hasta que estén tiernas. Escurre y reserva.</p>
+<p>2. <strong>Sofreír las verduras:</strong> En una cazuela, calienta aceite de oliva virgen extra a fuego medio. Añade cebolla picada y ajo aplastado. Sofríe hasta que la cebolla esté transparente.</p>
+<p>3. <strong>Cocinar las setas:</strong> Limpia los porcini y córtalos en láminas. Incorpóralos a la cazuela con la cebolla y el ajo. Cuece unos 5-7 minutos, hasta que estén tiernas y ligeramente doradas. Si usas setas secas, ponlas en remojo en agua caliente 20 minutos, trítalas y añádelas al sofrito.</p>
+<p>4. <strong>Unir lentejas y caldo:</strong> Agrega las lentejas cocidas a las setas en la cazuela. Mezcla bien y añade un poco de caldo para obtener la textura deseada. Cuece a fuego lento unos 10 minutos.</p>
+<p>5. <strong>Triturar la crema:</strong> Usa una batidora de inmersión para triturar hasta obtener una textura lisa. Si lo deseas, añade nata vegetal para mayor cremosidad. Sazona con sal y pimienta.</p>
+<p>6. <strong>Servir:</strong> Vierte la crema en cuencos y decora con perejil fresco picado. Sirve caliente, acompañada de crostini de pan.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2026-01-08</p>
+<p><strong>Meta:</strong> 4 porções | Sopa</p>
+<p><strong>Descrição:</strong> Creme aveludado de cogumelos porcini e lentilhas, perfeito para os dias de inverno.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>300 g de cogumelos porcini frescos (ou 100 g secos)</li>
+<li>200 g de lentilhas (de preferência verdes ou castanhas)</li>
+<li>1 cebola média</li>
+<li>2 dentes de alho</li>
+<li>1 litro de caldo de legumes</li>
+<li>3 colheres de sopa de azeite extra virgem</li>
+<li>Sal q.b.</li>
+<li>Pimenta preta q.b.</li>
+<li>Salsa fresca para guarnecer</li>
+<li>100 ml de natas vegetais (opcional)</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparar as lentilhas:</strong> Enxágue as lentilhas sob água corrente. Numa panela, leve o caldo de legumes a ferver e junte as lentilhas. Cozinhe cerca de 20-30 minutos, até ficarem macias. Escorra e reserve.</p>
+<p>2. <strong>Refogar os legumes:</strong> Numa caçarola, aqueça o azeite extra virgem em lume médio. Junte a cebola picada e o alho esmagado. Refogue até a cebola ficar translúcida.</p>
+<p>3. <strong>Cozinhar os cogumelos:</strong> Limpe os porcini e corte-os em fatias. Adicione-os à caçarola com a cebola e o alho. Cozinhe cerca de 5-7 minutos, até ficarem macios e ligeiramente dourados. Se usar cogumelos secos, ponha-os de molho em água quente por 20 minutos, depois pique-os e junte ao refogado.</p>
+<p>4. <strong>Juntar lentilhas e caldo:</strong> Adicione as lentilhas cozidas aos cogumelos na caçarola. Misture bem e acrescente um pouco de caldo para obter a consistência desejada. Cozinhe em lume brando cerca de 10 minutos.</p>
+<p>5. <strong>Reduzir o creme:</strong> Utilize uma varinha mágica para reduzir a um creme liso. Se desejar, junte natas vegetais para mais cremosidade. Tempere com sal e pimenta.</p>
+<p>6. <strong>Servir:</strong> Deite o creme em tigelas e guarneça com salsa fresca picada. Sirva quente, acompanhado de crostini de pão.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2026-01-08</p>
+<p><strong>Meta:</strong> 4 Portionen | Suppe</p>
+<p><strong>Beschreibung:</strong> Samtige Steinpilz-Linsen-Creme, perfekt für Wintertage.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>300 g frische Steinpilze (oder 100 g getrocknete)</li>
+<li>200 g Linsen (vorzugsweise grüne oder braune)</li>
+<li>1 mittelgroße Zwiebel</li>
+<li>2 Knoblauchzehen</li>
+<li>1 Liter Gemüsebrühe</li>
+<li>3 Esslöffel extra natives Olivenöl</li>
+<li>Salz nach Geschmack</li>
+<li>Schwarzer Pfeffer nach Geschmack</li>
+<li>Frische Petersilie zum Garnieren</li>
+<li>100 ml pflanzliche Sahne (optional)</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Linsen vorbereiten:</strong> Linsen unter fließendem Wasser spülen. In einem Topf Gemüsebrühe zum Kochen bringen und Linsen zugeben. Etwa 20-30 Minuten köcheln, bis sie weich sind. Abgießen und beiseitestellen.</p>
+<p>2. <strong>Gemüse anschwitzen:</strong> In einem Bräter natives Olivenöl bei mittlerer Hitze erhitzen. Gehackte Zwiebel und gepressten Knoblauch zugeben. Anschwitzen, bis die Zwiebel glasig wird.</p>
+<p>3. <strong>Pilze garen:</strong> Steinpilze putzen und in Scheiben schneiden. Im Bräter mit Zwiebel und Knoblauch zugeben. Etwa 5-7 Minuten garen, bis sie zart und leicht goldbraun sind. Bei Verwendung getrockneter Pilze diese 20 Minuten in heißem Wasser einweichen, dann hacken und zum Schmorren zugeben.</p>
+<p>4. <strong>Linsen und Brühe vereinen:</strong> Gekochte Linsen zu den Pilzen im Bräter geben. Gut mischen und etwas Gemüsebrühe für die gewünschte Konsistenz zugießen. Bei niedriger Hitze etwa 10 Minuten köcheln lassen.</p>
+<p>5. <strong>Creme pürieren:</strong> Mit einem Stabmixer pürieren, bis eine glatte Konsistenz entsteht. Bei Bedarf pflanzliche Sahne für mehr Cremigkeit zugeben. Mit Salz und Pfeffer abschmecken.</p>
+<p>6. <strong>Servieren:</strong> Creme in Schalen geben und mit gehackter frischer Petersilie garnieren. Heiß servieren, begleitet von Brot-Crostini.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2026-01-08</p>
+<p><strong>Meta:</strong> 4 μερίδες | Σούπα</p>
+<p><strong>Περιγραφή:</strong> Βελούδινη κρέμα μανιταριών πορτσίνι και φακών, ιδανική για τις χειμωνιάτικες μέρες.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>300 γρ φρέσκα μανιτάρια πορτσίνι (ή 100 γρ ξερά)</li>
+<li>200 γρ φακές (προτιμότερα πράσινες ή καφέ)</li>
+<li>1 μεσαίο κρεμμύδι</li>
+<li>2 σκελίδες σκόρδο</li>
+<li>1 λίτρο ζωμός λαχανικών</li>
+<li>3 κουταλιές της σούπας ελαιόλαδο</li>
+<li>Αλάτι κατά βούληση</li>
+<li>Μαύρο πιπέρι κατά βούληση</li>
+<li>Φρέσκος μαϊντανός για γαρνίρισμα</li>
+<li>100 ml φυτική κρέμα (προαιρετικά)</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία φακών:</strong> Ξεπλύνετε τις φακές κάτω από τρεχούμενο νερό. Σε μια κατσαρόλα, φέρτε σε βρασμό τον ζωμό λαχανικών και προσθέστε τις φακές. Μαγειρέψτε για περίπου 20-30 λεπτά, μέχρι να μαλακώσουν. Στραγγίστε και κρατήστε στην άκρη.</p>
+<p>2. <strong>Σοτάρισμα λαχανικών:</strong> Σε μια κατσαρόλα, ζεστάνετε το ελαιόλαδο σε μέτρια φωτιά. Προσθέστε ψιλοκομμένο κρεμμύδι και πιεσμένο σκόρδο. Σοτάρετε μέχρι το κρεμμύδι να γίνει διάφανο.</p>
+<p>3. <strong>Μαγείρεμα μανιταριών:</strong> Καθαρίστε τα πορτσίνι και κόψτε τα σε φέτες. Προσθέστε τα στην κατσαρόλα με το κρεμμύδι και το σκόρδο. Μαγειρέψτε για περίπου 5-7 λεπτά, μέχρι να μαλακώσουν και να ροδίσουν ελαφρά. Αν χρησιμοποιείτε ξερά μανιτάρια, μουλιάστε τα σε ζεστό νερό για 20 λεπτά, ψιλοκόψτε τα και προσθέστε τα στο σοτάρισμα.</p>
+<p>4. <strong>Ένωση φακών και ζωμού:</strong> Προσθέστε τις μαγειρεμένες φακές στα μανιτάρια στην κατσαρόλα. Ανακατέψτε καλά και προσθέστε λίγο ζωμό για να πάρετε την επιθυμητή υφή. Σιγοβράστε για περίπου 10 λεπτά.</p>
+<p>5. <strong>Λιώσιμο κρέμας:</strong> Χρησιμοποιήστε ράβδο μπλέντερ για να λιώσετε την κρέμα μέχρι να γίνει λεία. Αν θέλετε, προσθέστε φυτική κρέμα για περισσότερη κρεμώδη υφή. Αλατοπιπερώστε.</p>
+<p>6. <strong>Σερβίρισμα:</strong> Μοιράστε την κρέμα σε μπολ και γαρνίρετε με ψιλοκομμένο φρέσκο μαϊντανό. Σερβίρετε ζεστή, συνοδευόμενη με crostini ψωμιού.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

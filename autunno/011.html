@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lasagne di Lenticchie e Porcini | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Lasagne di Lenticchie e Porcini">
+<meta property="og:title" content="Lasagne di Lenticchie e Porcini | Leguminando">
+<meta property="og:description" content="Lasagne di Lenticchie e Porcini">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="autunno/011.html" data-title="Lasagne di Lenticchie e Porcini" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="011.jpg" alt="Lasagne di Lenticchie e Porcini" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-11-01</p>
+<p><strong>Meta:</strong> 6-8 porzioni | Vegetariano</p>
+<p><strong>Descrizione:</strong> Lasagne vegetariane con ragù di lenticchie e porcini, besciamella e Parmigiano.</p>
+<h3>Ingredienti</h3>
+<h3>1) Ragù di Lenticchie e Porcini</h3>
+<ul>
+<li>200 g di lenticchie secche (preferibilmente piccole, come le lenticchie di Colfiorito)</li>
+<li>30 g di funghi porcini secchi</li>
+<li>1 cipolla grande</li>
+<li>1 carota</li>
+<li>1 costa di sedano</li>
+<li>2 spicchi d'aglio</li>
+<li>400 g di passata di pomodoro</li>
+<li>100 ml di vino rosso (facoltativo)</li>
+<li>500 ml di brodo vegetale caldo</li>
+<li>4 cucchiai d'olio extravergine d'oliva</li>
+<li>Sale, pepe, un pizzico di peperoncino in fiocchi</li>
+<li>Una manciata di prezzemolo tritato</li>
+</ul>
+<h3>2) Besciamella</h3>
+<ul>
+<li>50 g di burro</li>
+<li>50 g di farina 00</li>
+<li>500 ml di latte intero (o latte vegetale se preferisci)</li>
+<li>Un pizzico di noce moscata</li>
+<li>Sale q.b.</li>
+</ul>
+<h3>3) Lasagne e Montaggio</h3>
+<ul>
+<li>250 g di sfoglie per lasagne (fresche o secche)</li>
+<li>100 g di Parmigiano Reggiano grattugiato</li>
+<li>Un filo d'olio per ungere la teglia</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Ammollo e cottura lenticchie:</strong> Metti i porcini in acqua tiepida 20 min, scolali e conserva l'acqua filtrata. Sciacqua le lenticchie e cuocile in brodo per 20-25 min; scolale tenendo il brodo.</p>
+<p>2. <strong>Soffritto e ragù:</strong> Trita cipolla, carota, sedano e aglio. Fai appassire in olio, unisci i porcini tritati e salta 2-3 min. Sfuma col vino, poi aggiungi passata, lenticchie, un mestolo di brodo (anche dell'ammollo) e cuoci a fiamma bassa 15 min. Aggiusta di sale, pepe e peperoncino, incorpora il prezzemolo.</p>
+<p>3. <strong>Besciamella:</strong> Fondi il burro a fuoco basso, togli dal calore e unisci la farina mescolando bene. Rimetti sul fuoco, versa il latte a filo e cuoci mescolando finché si addensa; sala e profuma con noce moscata.</p>
+<p>4. <strong>Montaggio:</strong> Unghi una teglia (30×20 cm). Stendi uno strato sottile di besciamella, copri con le sfoglie, poi alterna ragù, besciamella e Parmigiano. Ripeti fino a esaurire gli ingredienti, terminando con besciamella e formaggio.</p>
+<p>5. <strong>Cottura e riposo:</strong> Scalda il forno a 180 °C (statico) e cuoci 25-30 min, finché la superficie diventa dorata. Fai riposare 10 min prima di servire.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-11-01</p>
+<p><strong>Meta:</strong> 6-8 servings | Vegetarian</p>
+<p><strong>Description:</strong> Vegetarian lasagne with lentil and porcini ragù, béchamel sauce and Parmigiano.</p>
+<h3>Ingredients</h3>
+<h3>1) Lentil and Porcini Ragù</h3>
+<ul>
+<li>200 g dried lentils (preferably small, like Colfiorito lentils)</li>
+<li>30 g dried porcini mushrooms</li>
+<li>1 large onion</li>
+<li>1 carrot</li>
+<li>1 celery stalk</li>
+<li>2 garlic cloves</li>
+<li>400 g tomato passata</li>
+<li>100 ml red wine (optional)</li>
+<li>500 ml hot vegetable broth</li>
+<li>4 tablespoons extra virgin olive oil</li>
+<li>Salt, pepper, a pinch of chili flakes</li>
+<li>A handful of chopped parsley</li>
+</ul>
+<h3>2) Béchamel</h3>
+<ul>
+<li>50 g butter</li>
+<li>50 g 00 flour</li>
+<li>500 ml whole milk (or plant milk if preferred)</li>
+<li>A pinch of nutmeg</li>
+<li>Salt to taste</li>
+</ul>
+<h3>3) Lasagne and Assembly</h3>
+<ul>
+<li>250 g lasagne sheets (fresh or dried)</li>
+<li>100 g grated Parmigiano Reggiano</li>
+<li>A drizzle of oil to grease the pan</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Soaking and cooking lentils:</strong> Soak porcini in warm water for 20 min, drain and keep the filtered water. Rinse lentils and cook them in broth for 20-25 min; drain keeping the broth.</p>
+<p>2. <strong>Soffritto and ragù:</strong> Finely chop onion, carrot, celery and garlic. Sauté in oil, add chopped porcini and toss for 2-3 min. Deglaze with wine, then add passata, lentils, a ladle of broth (including soaking water) and cook over low heat for 15 min. Season with salt, pepper and chili, stir in parsley.</p>
+<p>3. <strong>Béchamel:</strong> Melt butter over low heat, remove from heat and add flour mixing well. Return to heat, pour in milk gradually and cook stirring until thickened; season with salt and nutmeg.</p>
+<p>4. <strong>Assembly:</strong> Grease a baking pan (30×20 cm). Spread a thin layer of béchamel, cover with lasagne sheets, then alternate ragù, béchamel and Parmigiano. Repeat until ingredients are used up, finishing with béchamel and cheese.</p>
+<p>5. <strong>Baking and resting:</strong> Preheat oven to 180 °C (static) and bake for 25-30 min, until the surface turns golden. Let rest 10 min before serving.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-11-01</p>
+<p><strong>Meta:</strong> 6-8 porciones | Vegetariano</p>
+<p><strong>Descripción:</strong> Lasañas vegetarianas con ragú de lentejas y porcini, bechamel y Parmigiano.</p>
+<h3>Ingredientes</h3>
+<h3>1) Ragú de Lentejas y Porcini</h3>
+<ul>
+<li>200 g de lentejas secas (preferiblemente pequeñas, como las lentejas de Colfiorito)</li>
+<li>30 g de setas porcini secas</li>
+<li>1 cebolla grande</li>
+<li>1 zanahoria</li>
+<li>1 tallo de apio</li>
+<li>2 dientes de ajo</li>
+<li>400 g de pasata de tomate</li>
+<li>100 ml de vino tinto (opcional)</li>
+<li>500 ml de caldo de verduras caliente</li>
+<li>4 cucharadas de aceite de oliva virgen extra</li>
+<li>Sal, pimienta, una pizca de guindilla en copos</li>
+<li>Un puñado de perejil picado</li>
+</ul>
+<h3>2) Bechamel</h3>
+<ul>
+<li>50 g de mantequilla</li>
+<li>50 g de harina 00</li>
+<li>500 ml de leche entera (o vegetal si se prefiere)</li>
+<li>Una pizca de nuez moscada</li>
+<li>Sal c.s.</li>
+</ul>
+<h3>3) Lasañas y Montaje</h3>
+<ul>
+<li>250 g de placas de lasaña (frescas o secas)</li>
+<li>100 g de Parmigiano Reggiano rallado</li>
+<li>Un chorrito de aceite para engrasar la bandeja</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Remojo y cocción de lentejas:</strong> Pon los porcini en agua templada 20 min, escúrrelos y conserva el agua filtrada. Lava las lentejas y cuécelas en caldo durante 20-25 min; escúrrelas conservando el caldo.</p>
+<p>2. <strong>Sofrito y ragú:</strong> Pica cebolla, zanahoria, apio y ajo. Sofríe en aceite, añade los porcini picados y saltea 2-3 min. Desglasa con el vino, luego agrega la pasata, las lentejas, un cucharón de caldo (también del remojo) y cuece a fuego lento 15 min. Ajusta de sal, pimienta y guindilla, incorpora el perejil.</p>
+<p>3. <strong>Bechamel:</strong> Derrite la mantequilla a fuego lento, retira del fuego y añade la harina mezclando bien. Vuelve al fuego, vierte la leche poco a poco y cuece removiendo hasta que espese; sala y perfuma con nuez moscada.</p>
+<p>4. <strong>Montaje:</strong> Engrasa una bandeja (30×20 cm). Extiende una capa fina de bechamel, cubre con las placas de lasaña, luego alterna ragú, bechamel y Parmigiano. Repite hasta agotar los ingredientes, terminando con bechamel y queso.</p>
+<p>5. <strong>Cocción y reposo:</strong> Precalienta el horno a 180 °C (estático) y cuece 25-30 min, hasta que la superficie esté dorada. Deja reposar 10 min antes de servir.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-11-01</p>
+<p><strong>Meta:</strong> 6-8 porções | Vegetariano</p>
+<p><strong>Descrição:</strong> Lasanhas vegetarianas com ragú de lentilhas e porcini, bechamel e Parmigiano.</p>
+<h3>Ingredientes</h3>
+<h3>1) Ragú de Lentilhas e Porcini</h3>
+<ul>
+<li>200 g de lentilhas secas (de preferência pequenas, como as lentilhas de Colfiorito)</li>
+<li>30 g de cogumelos porcini secos</li>
+<li>1 cebola grande</li>
+<li>1 cenoura</li>
+<li>1 talo de aipo</li>
+<li>2 dentes de alho</li>
+<li>400 g de polpa de tomate</li>
+<li>100 ml de vinho tinto (opcional)</li>
+<li>500 ml de caldo de legumes quente</li>
+<li>4 colheres de sopa de azeite extra virgem</li>
+<li>Sal, pimenta, uma pitada de pimentão em flocos</li>
+<li>Um punhado de salsa picada</li>
+</ul>
+<h3>2) Bechamel</h3>
+<ul>
+<li>50 g de manteiga</li>
+<li>50 g de farinha 00</li>
+<li>500 ml de leite integral (ou vegetal se preferir)</li>
+<li>Uma pitada de noz-moscada</li>
+<li>Sal q.b.</li>
+</ul>
+<h3>3) Lasanhas e Montagem</h3>
+<ul>
+<li>250 g de folhas de lasanha (frescas ou secas)</li>
+<li>100 g de Parmigiano Reggiano ralado</li>
+<li>Um fio de azeite para untar a forma</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Demolho e cozedura das lentilhas:</strong> Coloque os porcini em água morna por 20 min, escorra e guarde a água filtrada. Lave as lentilhas e cozinhe-as em caldo por 20-25 min; escorra-as guardando o caldo.</p>
+<p>2. <strong>Refogado e ragú:</strong> Pique a cebola, cenoura, aipo e alho. Refogue no azeite, junte os porcini picados e salteie 2-3 min. Desglassee com o vinho, depois acrescente a polpa de tomate, as lentilhas, uma concha de caldo (incluindo da água do demolho) e cozinhe em lume brando por 15 min. Ajuste o sal, a pimenta e o pimentão, incorpore a salsa.</p>
+<p>3. <strong>Bechamel:</strong> Derreta a manteiga em lume brando, retire do lume e junte a farinha mexendo bem. Volte ao lume, deite o leite aos poucos e cozinhe mexendo até engrossar; tempere com sal e noz-moscada.</p>
+<p>4. <strong>Montagem:</strong> Unte uma forma (30×20 cm). Estenda uma camada fina de bechamel, cubra com as folhas de lasanha, depois alterne ragú, bechamel e Parmigiano. Repita até esgotar os ingredientes, terminando com bechamel e queijo.</p>
+<p>5. <strong>Cozedura e repouso:</strong> Pré-aqueça o forno a 180 °C (estático) e cozinhe 25-30 min, até a superfície ficar dourada. Deixe repousar 10 min antes de servir.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-11-01</p>
+<p><strong>Meta:</strong> 6-8 Portionen | Vegetarisch</p>
+<p><strong>Beschreibung:</strong> Vegetarische Lasagne mit Linsen-Porcini-Ragù, Béchamel und Parmigiano.</p>
+<h3>Zutaten</h3>
+<h3>1) Linsen-Porcini-Ragù</h3>
+<ul>
+<li>200 g getrocknete Linsen (vorzugsweise kleine, wie Colfiorito-Linsen)</li>
+<li>30 g getrocknete Steinpilze</li>
+<li>1 große Zwiebel</li>
+<li>1 Karotte</li>
+<li>1 Stangensellerie</li>
+<li>2 Knoblauchzehen</li>
+<li>400 g Tomatenpassata</li>
+<li>100 ml Rotwein (optional)</li>
+<li>500 ml heiße Gemüsebrühe</li>
+<li>4 Esslöffel extra natives Olivenöl</li>
+<li>Salz, Pfeffer, eine Prise Chiliflocken</li>
+<li>Eine Handvoll gehackte Petersilie</li>
+</ul>
+<h3>2) Béchamel</h3>
+<ul>
+<li>50 g Butter</li>
+<li>50 g Mehl Type 00</li>
+<li>500 ml Vollmilch (oder Pflanzenmilch, falls gewünscht)</li>
+<li>Eine Prise Muskatnuss</li>
+<li>Salz nach Geschmack</li>
+</ul>
+<h3>3) Lasagne und Zusammenbau</h3>
+<ul>
+<li>250 g Lasagneblätter (frisch oder getrocknet)</li>
+<li>100 g geriebener Parmigiano Reggiano</li>
+<li>Ein Ölstrich zum Einfetten der Form</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Einweichen und Kochen der Linsen:</strong> Die Steinpilze 20 Min. in lauwarmem Wasser einweichen, abtropfen lassen und das Wasser filtern und aufbewahren. Die Linsen spülen und in Brühe 20-25 Min. kochen; abtropfen lassen und die Brühe aufbewahren.</p>
+<p>2. <strong>Soffritto und Ragù:</strong> Zwiebel, Karotte, Sellerie und Knoblauch fein hacken. In Öl anschwitzen, gehackte Steinpilze zugeben und 2-3 Min. anschwenken. Mit Wein ablöschen, dann Passata, Linsen, eine Kelle Brühe (auch vom Einweichwasser) zugeben und bei schwacher Hitze 15 Min. köcheln lassen. Mit Salz, Pfeffer und Chili abschmecken, Petersilie unterheben.</p>
+<p>3. <strong>Béchamel:</strong> Butter bei schwacher Hitze schmelzen, vom Herd nehmen und Mehl unterrühren. Zurück auf den Herd stellen, Milch nach und nach zugießen und unter Rühren köcheln, bis es eindickt; mit Salz und Muskatnuss würzen.</p>
+<p>4. <strong>Zusammenbau:</strong> Eine Auflaufform (30×20 cm) einfetten. Eine dünne Schicht Béchamel verteilen, mit Lasagneblättern bedecken, dann abwechselnd Ragù, Béchamel und Parmigiano schichten. Wiederholen, bis die Zutaten aufgebraucht sind, mit Béchamel und Käse abschließen.</p>
+<p>5. <strong>Backen und Ruhen:</strong> Ofen auf 180 °C (Ober-/Unterhitze) vorheizen und 25-30 Min. backen, bis die Oberfläche goldbraun ist. Vor dem Servieren 10 Min. ruhen lassen.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-11-01</p>
+<p><strong>Meta:</strong> 6-8 μερίδες | Χορτοφαγικό</p>
+<p><strong>Περιγραφή:</strong> Χορτοφαγική λαζάνια με ραγού φακών και porcini, μπεσαμέλ και Parmigiano.</p>
+<h3>Συστατικά</h3>
+<h3>1) Ραγού Φακών και Porcini</h3>
+<ul>
+<li>200 γρ ξερές φακές (προτιμώτερα μικρές, όπως οι φακές Colfiorito)</li>
+<li>30 γρ ξερά μανιτάρια porcini</li>
+<li>1 μεγάλο κρεμμύδι</li>
+<li>1 καρότο</li>
+<li>1 σέλινο</li>
+<li>2 σκελίδες σκόρδο</li>
+<li>400 γρ πασάτα ντομάτας</li>
+<li>100 ml κόκκινο κρασί (προαιρετικά)</li>
+<li>500 ml ζεστό ζωμό λαχανικών</li>
+<li>4 κουταλιές της σούπας ελαιόλαδο</li>
+<li>Αλάτι, πιπέρι, μια πρέζα καυτερή πιπεριά σε νιφάδες</li>
+<li>Μια χούφτα μαϊντανό ψιλοκομμένο</li>
+</ul>
+<h3>2) Μπεσαμέλ</h3>
+<ul>
+<li>50 γρ βούτυρο</li>
+<li>50 γρ αλεύρι 00</li>
+<li>500 ml πλήρες γάλα (ή φυτικό γάλα αν προτιμάτε)</li>
+<li>Μια πρέζα μοσχοκάρυδο</li>
+<li>Αλάτι κατά βούληση</li>
+</ul>
+<h3>3) Λαζάνια και Συναρμολόγηση</h3>
+<ul>
+<li>250 γρ φύλλα λαζανίας (φρέσκα ή ξερά)</li>
+<li>100 γρ Parmigiano Reggiano τριμμένο</li>
+<li>Ένα νήμα λαδιού για λίπανση του ταψιού</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Μούλιασμα και μαγείρεμα φακών:</strong> Βάλτε τα porcini σε χλιαρό νερό για 20 λεπτά, στραγγίστε τα και κρατήστε το φιλτραρισμένο νερό. Ξεπλύνετε τις φακές και μαγειρέψτε τις σε ζωμό για 20-25 λεπτά· στραγγίστε τις κρατώντας τον ζωμό.</p>
+<p>2. <strong>Σοφρίτο και ραγού:</strong> Ψιλοκόψτε κρεμμύδι, καρότο, σέλινο και σκόρδο. Σοτάρετε σε λάδι, προσθέστε τα ψιλοκομμένα porcini και σοτάρετε 2-3 λεπτά. Απογλακώστε με το κρασί, μετά προσθέστε πασάτα, φακές, μια κουτάλα ζωμό (και από το νερό του μουλιάσματος) και μαγειρέψτε σε χαμηλή φωτιά για 15 λεπτά. Ρυθμίστε αλάτι, πιπέρι και πιπεριά, ενσωματώστε τον μαϊντανό.</p>
+<p>3. <strong>Μπεσαμέλ:</strong> Λιώστε το βούτυρο σε χαμηλή φωτιά, κατεβάστε από τη φωτιά και προσθέστε το αλεύρι ανακατεύοντας καλά. Επιστρέψτε στη φωτιά, ρίξτε το γάλα σιγά-σιγά και μαγειρέψτε ανακατεύοντας μέχρι να πήξει· αλατίστε και αρωματίστε με μοσχοκάρυδο.</p>
+<p>4. <strong>Συναρμολόγηση:</strong> Αλείψτε με λίπος ένα ταψί (30×20 εκ). Απλώστε μια λεπτή στρώση μπεσαμέλ, σκεπάστε με φύλλα λαζανίας, μετά εναλλάξτε ραγού, μπεσαμέλ και Parmigiano. Επαναλάβετε μέχρι να τελειώσουν τα υλικά, τελειώνοντας με μπεσαμέλ και τυρί.</p>
+<p>5. <strong>Ψήσιμο και ξεκούραση:</strong> Προθερμάνετε το φούρνο στους 180°C (στατικό) και ψήστε 25-30 λεπτά, μέχρι η επιφάνεια να ροδίσει. Αφήστε να ξεκουραστούν 10 λεπτά πριν το σερβίρισμα.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

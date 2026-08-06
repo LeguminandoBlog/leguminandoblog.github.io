@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insalata Estiva di Fave | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h2 { color: #D2691E; font-size: 1.5em; margin: 20px 0 10px; }
+.content h3 { color: #8B4513; font-size: 1.3em; margin: 15px 0 10px; }
+.content h4 { color: #666; font-size: 1.1em; margin: 10px 0 5px; }
+.content ul { margin: 15px 0; padding-left: 20px; }
+.content li { margin: 8px 0; line-height: 1.5; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.content strong { color: #8B4513; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+.back-link:hover { background: #D2691E; }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; transition: all 0.3s; }
+.lang-tab.active { background: #8B4513; color: white; }
+.lang-tab:hover:not(.active) { background: #D2691E; color: white; }
+.lang-content { display: none; }
+.lang-content.active { display: block; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Insalata Estiva di Fave">
+<meta property="og:title" content="Insalata Estiva di Fave | Leguminando">
+<meta property="og:description" content="Insalata Estiva di Fave">
+
+<script>
+function showLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    event.target.classList.add('active');
+}
+</script>
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="estate/007.html" data-title="Insalata Estiva di Fave" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="007.jpg" alt="Insalata Estiva di Fave" class="recipe-image">
+
+<div class="content">
+<div class="lang-tabs">
+    <button class="lang-tab active" onclick="showLang('it')">IT</button>
+    <button class="lang-tab" onclick="showLang('en')">EN</button>
+    <button class="lang-tab" onclick="showLang('es')">ES</button>
+    <button class="lang-tab" onclick="showLang('pt')">PT</button>
+    <button class="lang-tab" onclick="showLang('de')">DE</button>
+    <button class="lang-tab" onclick="showLang('el')">EL</button>
+</div>
+
+<div id="lang-it" class="lang-content active">
+<h1>🥗 Insalata Estiva di Fave</h1>
+<p><strong>Data:</strong> 2026-07-02 | <strong>Stagione:</strong> Giugno (estate) | <strong>Tipo:</strong> Insalata / Piatto unico freddo | <strong>Porzioni:</strong> 4 | <strong>Tempo:</strong> 30 min | <strong>Difficoltà:</strong> Facile</p>
+
+<p><em>Le fave erano il cuore dell'alimentazione etrusca: i baccelli venivano raccolti a primavera e consumati freschi con cipolla, erbe aromatiche e pancetta. Gli Etruschi, raffinati buongustai, plasmarono i principi della cucina mediterranea — olio, legumi, erbe selvatiche — che ancora oggi definiscono il gusto dell'Italia.</em></p>
+
+<h3>Ingredienti</h3>
+<p><strong>Per le fave:</strong></p>
+<ul>
+<li>Fave fresche in baccello: 1 kg (peso lordo) → circa 300-350 g di fave sgusciate</li>
+<li>Acqua per sbollentare: 2 litri</li>
+<li>Sale: 1 cucchiaino (5 g)</li>
+</ul>
+
+<p><strong>Per la pancetta croccante:</strong></p>
+<ul>
+<li>Pancetta dolce (o guanciale): 120 g, a dadini piccoli (0,5 cm)</li>
+<li>Olio extravergine d'oliva: 1 cucchiaio (15 ml), solo se necessario</li>
+<li>Pepe nero: q.b.</li>
+</ul>
+
+<p><strong>Per il condimento:</strong></p>
+<ul>
+<li>Olio extravergine d'oliva: 4 cucchiai (60 ml)</li>
+<li>Aceto di vino bianco: 2 cucchiai (30 ml)</li>
+<li>Succo di limone fresco: 2 cucchiai (30 ml)</li>
+<li>Aglio: 1 spicchio piccolo (5 g), tritato finemente</li>
+<li>Rosmarino fresco: 2 rametti (10 g), aghi tritati finemente</li>
+<li>Sale marino: 1/2 cucchiaino (2 g)</li>
+<li>Pepe nero macinato fresco: 1/2 cucchiaino (1 g)</li>
+<li>Scorza di limone non trattato: 1/2 cucchiaino (1 g), grattugiata</li>
+</ul>
+
+<p><strong>Per l'insalata finale:</strong></p>
+<ul>
+<li>Cipolla rossa: 1 piccola (80 g), affettata sottilmente a mezzelune</li>
+<li>Rucola selvatica: 80 g</li>
+<li>Pomodorini ciliegino gialli: 150 g, tagliati a metà</li>
+<li>Parmigiano Reggiano (o Pecorino Romano): 50 g, scaglie sottili</li>
+<li>Noci tostate: 30 g, spezzate grossolanamente</li>
+<li>Menta fresca: 8 foglie, per guarnire</li>
+</ul>
+</div>
+
+<div id="lang-en" class="lang-content">
+<h1>🥗 Summer Fava Bean Salad</h1>
+<p><strong>Date:</strong> 2026-07-02 | <strong>Season:</strong> June (summer) | <strong>Type:</strong> Salad / Cold main dish | <strong>Servings:</strong> 4 | <strong>Time:</strong> 30 min | <strong>Difficulty:</strong> Easy</p>
+
+<p><em>Fava beans were the heart of Etruscan diet: the pods were gathered in spring and consumed fresh with onion, aromatic herbs and bacon. The Etruscans, refined gourmets, shaped the principles of Mediterranean cuisine — oil, legumes, wild herbs — that still today define the taste of Italy.</em></p>
+
+<h3>Ingredients</h3>
+<p><strong>For the fava beans:</strong></p>
+<ul>
+<li>Fresh fava beans in pod: 1 kg (gross weight) → about 300-350 g shelled</li>
+<li>Water for blanching: 2 litres</li>
+<li>Salt: 1 teaspoon (5 g)</li>
+</ul>
+
+<p><strong>For the crispy bacon:</strong></p>
+<ul>
+<li>Sweet bacon (or guanciale): 120 g, small dice (0.5 cm)</li>
+<li>Extra virgin olive oil: 1 tablespoon (15 ml), only if necessary</li>
+<li>Black pepper: to taste</li>
+</ul>
+
+<p><strong>For the dressing:</strong></p>
+<ul>
+<li>Extra virgin olive oil: 4 tablespoons (60 ml)</li>
+<li>White wine vinegar: 2 tablespoons (30 ml)</li>
+<li>Fresh lemon juice: 2 tablespoons (30 ml)</li>
+<li>Garlic: 1 small clove (5 g), finely minced</li>
+<li>Fresh rosemary: 2 sprigs (10 g), needles finely chopped</li>
+<li>Sea salt: ½ teaspoon (2 g)</li>
+<li>Freshly ground black pepper: ½ teaspoon (1 g)</li>
+<li>Untreated lemon zest: ½ teaspoon (1 g), grated</li>
+</ul>
+
+<p><strong>For the final salad:</strong></p>
+<ul>
+<li>Red onion: 1 small (80 g), thinly sliced into half-moons</li>
+<li>Wild rocket: 80 g</li>
+<li>Yellow cherry tomatoes: 150 g, halved</li>
+<li>Parmigiano Reggiano (or Pecorino Romano): 50 g, thin shavings</li>
+<li>Toasted walnuts: 30 g, roughly broken</li>
+<li>Fresh mint: 8 leaves, to garnish</li>
+</ul>
+</div>
+
+<div id="lang-es" class="lang-content">
+<h1>🥗 Ensalada de Verano de Habas</h1>
+<p><strong>Fecha:</strong> 2026-07-02 | <strong>Temporada:</strong> Junio (verano) | <strong>Tipo:</strong> Ensalada / Plato único frío | <strong>Raciones:</strong> 4 | <strong>Tiempo:</strong> 30 min | <strong>Dificultad:</strong> Fácil</p>
+
+<p><em>Las habas eran el corazón de la alimentación etrusca: las vainas se recogían en primavera y se consumían frescas con cebolla, hierbas aromáticas y panceta. Los etruscos, refinados gastronomos, moldearon los principios de la cocina mediterránea — aceite, legumbres, hierbas silvestres — que aún hoy definen el sabor de Italia.</em></p>
+
+<h3>Ingredientes</h3>
+<p><strong>Para las habas:</strong></p>
+<ul>
+<li>Habas frescas en vaina: 1 kg (peso bruto) → unos 300-350 g desgranadas</li>
+<li>Agua para escaldar: 2 litros</li>
+<li>Sal: 1 cucharadita (5 g)</li>
+</ul>
+
+<p><strong>Para la panceta crujiente:</strong></p>
+<ul>
+<li>Panceta dulce (o guanciale): 120 g, en daditos pequeños (0,5 cm)</li>
+<li>Aceite de oliva virgen extra: 1 cucharada (15 ml), solo si es necesario</li>
+<li>Pimienta negra: q.b.</li>
+</ul>
+
+<p><strong>Para el aliño:</strong></p>
+<ul>
+<li>Aceite de oliva virgen extra: 4 cucharadas (60 ml)</li>
+<li>Vinagre de vino blanco: 2 cucharadas (30 ml)</li>
+<li>Zumo de limón fresco: 2 cucharadas (30 ml)</li>
+<li>Ajo: 1 diente pequeño (5 g), picado finamente</li>
+<li>Romero fresco: 2 ramitas (10 g), agujas picadas finamente</li>
+<li>Sal marina: 1/2 cucharadita (2 g)</li>
+<li>Pimienta negra recién molida: 1/2 cucharadita (1 g)</li>
+<li>Ralladura de limón no tratado: 1/2 cucharadita (1 g), rallada</li>
+</ul>
+
+<p><strong>Para la ensalada final:</strong></p>
+<ul>
+<li>Cebolla roja: 1 pequeña (80 g), en rodajas finas en medias lunas</li>
+<li>Rúcola silvestre: 80 g</li>
+<li>Tomates cherry amarillos: 150 g, cortados por la mitad</li>
+<li>Parmigiano Reggiano (o Pecorino Romano): 50 g, láminas finas</li>
+<li>Nueces tostadas: 30 g, rotas gruesamente</li>
+<li>Menta fresca: 8 hojas, para decorar</li>
+</ul>
+</div>
+
+<div id="lang-pt" class="lang-content">
+<h1>🥗 Salada de Verão de Favas</h1>
+<p><strong>Data:</strong> 2026-07-02 | <strong>Estação:</strong> Junho (verão) | <strong>Tipo:</strong> Salada / Prato único frio | <strong>Porções:</strong> 4 | <strong>Tempo:</strong> 30 min | <strong>Dificuldade:</strong> Fácil</p>
+
+<p><em>As favas eram o coração da alimentação etrusca: as vagens eram colhidas na primavera e consumidas frescas com cebola, ervas aromáticas e panceta. Os etruscos, refinados gourmets, moldaram os princípios da cozinha mediterrânica — azeite, legumes, ervas silvestres — que ainda hoje definem o sabor de Itália.</em></p>
+
+<h3>Ingredientes</h3>
+<p><strong>Para as favas:</strong></p>
+<ul>
+<li>Favas frescas em vagem: 1 kg (peso bruto) → cerca de 300-350 g desgranadas</li>
+<li>Água para branquear: 2 litros</li>
+<li>Sal: 1 colher de chá (5 g)</li>
+</ul>
+
+<p><strong>Para a panceta crocante:</strong></p>
+<ul>
+<li>Panceta doce (ou guanciale): 120 g, em cubinhos pequenos (0,5 cm)</li>
+<li>Azeite extra virgem: 1 colher de sopa (15 ml), só se necessário</li>
+<li>Pimenta-preta: q.b.</li>
+</ul>
+
+<p><strong>Para o tempero:</strong></p>
+<ul>
+<li>Azeite extra virgem: 4 colheres de sopa (60 ml)</li>
+<li>Vinagre de vinho branco: 2 colheres de sopa (30 ml)</li>
+<li>Sumo de limão fresco: 2 colheres de sopa (30 ml)</li>
+<li>Alho: 1 dente pequeno (5 g), picado finamente</li>
+<li>Alecrim fresco: 2 raminhos (10 g), agulhas picadas finamente</li>
+<li>Sal marinho: 1/2 colher de chá (2 g)</li>
+<li>Pimenta-preta moída fresca: 1/2 colher de chá (1 g)</li>
+<li>Raspa de limão não tratado: 1/2 colher de chá (1 g), ralada</li>
+</ul>
+
+<p><strong>Para a salada final:</strong></p>
+<ul>
+<li>Cebola roxa: 1 pequena (80 g), em meias-luas finas</li>
+<li>Rúcula selvagem: 80 g</li>
+<li>Tomates cherry amarelos: 150 g, cortados ao meio</li>
+<li>Parmigiano Reggiano (ou Pecorino Romano): 50 g, lascas finas</li>
+<li>Nozes torradas: 30 g, partidas grosseiramente</li>
+<li>Hortelã fresca: 8 folhas, para decorar</li>
+</ul>
+</div>
+
+<div id="lang-de" class="lang-content">
+<h1>🥗 Sommerlicher Saubohnen-Salat</h1>
+<p><strong>Datum:</strong> 2026-07-02 | <strong>Saison:</strong> Juni (Sommer) | <strong>Art:</strong> Salat / Kaltes Hauptgericht | <strong>Portionen:</strong> 4 | <strong>Zeit:</strong> 30 Min | <strong>Schwierigkeit:</strong> Einfach</p>
+
+<p><em>Saubohnen waren das Herz der etruskischen Ernährung: die Hülsen wurden im Frühling geerntet und frisch mit Zwiebel, aromatischen Kräutern und Speck verzehrt. Die Etrusker, raffinierte Feinschmecker, prägten die Prinzipien der mediterranen Küche — Öl, Hülsenfrüchte, Wildkräuter — die noch heute den Geschmack Italiens definieren.</em></p>
+
+<h3>Zutaten</h3>
+<p><strong>Für die Saubohnen:</strong></p>
+<ul>
+<li>Frische Saubohnen in der Hülse: 1 kg (Bruttogewicht) → ca. 300-350 g geschälte Saubohnen</li>
+<li>Wasser zum Blanchieren: 2 Liter</li>
+<li>Salz: 1 Teelöffel (5 g)</li>
+</ul>
+
+<p><strong>Für den knusprigen Speck:</strong></p>
+<ul>
+<li>Süßer Speck (oder Guanciale): 120 g, kleine Würfel (0,5 cm)</li>
+<li>Natives Olivenöl extra: 1 Esslöffel (15 ml), nur wenn nötig</li>
+<li>Schwarzer Pfeffer: nach Geschmack</li>
+</ul>
+
+<p><strong>Für das Dressing:</strong></p>
+<ul>
+<li>Natives Olivenöl extra: 4 Esslöffel (60 ml)</li>
+<li>Weißweinessig: 2 Esslöffel (30 ml)</li>
+<li>Frischer Zitronensaft: 2 Esslöffel (30 ml)</li>
+<li>Knoblauch: 1 kleine Zehe (5 g), fein gehackt</li>
+<li>Frischer Rosmarin: 2 Zweige (10 g), Nadeln fein gehackt</li>
+<li>Meersalz: ½ Teelöffel (2 g)</li>
+<li>Frisch gemahlener schwarzer Pfeffer: ½ Teelöffel (1 g)</li>
+<li>Unbehandelte Zitronenschale: ½ Teelöffel (1 g), gerieben</li>
+</ul>
+
+<p><strong>Für den fertigen Salat:</strong></p>
+<ul>
+<li>Rote Zwiebel: 1 kleine (80 g), in feine Halbmonde geschnitten</li>
+<li>Wilder Rucola: 80 g</li>
+<li>Gelbe Kirschtomaten: 150 g, halbiert</li>
+<li>Parmigiano Reggiano (oder Pecorino Romano): 50 g, dünne Späne</li>
+<li>Geröstete Walnüsse: 30 g, grob gebrochen</li>
+<li>Frische Minze: 8 Blätter, zum Garnieren</li>
+</ul>
+</div>
+
+<div id="lang-el" class="lang-content">
+<h1>🥗 Καλοκαιρινή Σαλάτα Κουκιών</h1>
+<p><strong>Ημερομηνία:</strong> 2026-07-02 | <strong>Εποχή:</strong> Ιούνιος (καλοκαίρι) | <strong>Τύπος:</strong> Σαλάτα / Κρύο πιάτο ημέρας | <strong>Μερίδες:</strong> 4 | <strong>Χρόνος:</strong> 30 λεπτά | <strong>Δυσκολία:</strong> Εύκολη</p>
+
+<p><em>Τα κουκιά ήταν η καρδιά της ετρουσκικής διατροφής: τα χαλκούνια συγκεντρώνονταν την άνοιξη και καταναλώνονταν φρέσκα με κρεμμύδι, αρωματικά βότανα και μπέικον. Οι Ετρούσκοι, εκλεπτυσμένοι γκουρμέ, διαμόρφωσαν τις αρχές της μεσογειακής κουζίνας — λάδι, όσπρια, άγρια βότανα — που ακόμη και σήμερα καθορίζουν τη γεύση της Ιταλίας.</em></p>
+
+<h3>Συστατικά</h3>
+<p><strong>Για τα κουκιά:</strong></p>
+<ul>
+<li>Φρέσκα κουκιά στο χαλκούνι: 1 κιλό (αιθμικό βάρος) → περίπου 300-350 γρ ξεφλουδισμένα κουκιά</li>
+<li>Νερό για βράσιμο: 2 λίτρα</li>
+<li>Αλάτι: 1 κουταλάκι του γλυκού (5 γρ)</li>
+</ul>
+
+<p><strong>Για το τραγανό μπέικον:</strong></p>
+<ul>
+<li>Γλυκιά παντσέτα (ή guanciale): 120 γρ, μικροί κύβοι (0,5 εκ)</li>
+<li>Έξτρα παρθένο ελαιόλαδο: 1 κουταλιά της σούπας (15 ml), μόνο αν χρειάζεται</li>
+<li>Μαύρο πιπέρι: κατά βούληση</li>
+</ul>
+
+<p><strong>Για τη σάλτσα:</strong></p>
+<ul>
+<li>Έξτρα παρθένο ελαιόλαδο: 4 κουταλιές της σούπας (60 ml)</li>
+<li>Ξύδι λευκού κρασιού: 2 κουταλιές της σούπας (30 ml)</li>
+<li>Φρέσκος χυμός λεμονιού: 2 κουταλιές της σούπας (30 ml)</li>
+<li>Σκόρδο: 1 μικρή σκελίδα (5 γρ), ψιλοκομμένη</li>
+<li>Φρέσκο δεντρολίβανο: 2 κλαδάκια (10 γρ), βελόνες ψιλοκομμένες</li>
+<li>Αλάτι θαλασσινό: 1/2 κουταλάκι του γλυκού (2 γρ)</li>
+<li>Φρεσκοτριμμένο μαύρο πιπέρι: 1/2 κουταλάκι του γλυκού (1 γρ)</li>
+<li>Ξύσμα μη επεξεργασμένου λεμονιού: 1/2 κουταλάκι του γλυκού (1 γρ), τριμμένο</li>
+</ul>
+
+<p><strong>Για την τελική σαλάτα:</strong></p>
+<ul>
+<li>Κόκκινο κρεμμύδι: 1 μικρό (80 γρ), σε λεπτές φέτες μισοφέγγαρα</li>
+<li>Άγρια ρόκα: 80 γρ</li>
+<li>Κίτρινα ντοματίνια: 150 γρ, κομμένα στη μέση</li>
+<li>Παρμεζάνα Reggiano (ή Pecorino Romano): 50 γρ, λεπτές φλούδες</li>
+<li>Καβουρδισμένα καρύδια: 30 γρ, σπασμένα χοντρά</li>
+<li>Φρέσκια μέντα: 8 φύλλα, για γαρνίρισμα</li>
+</ul>
+</div>
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

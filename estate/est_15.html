@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zuppa di Farro e Ceci con Fave | Leguminando</title>
+<meta name="description" content="Zuppa di Farro e Ceci con Fave">
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%); color: #333; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 30px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.header h1 { margin: 0; font-size: 2.2em; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+.header p { margin: 10px 0 0 0; font-size: 1.1em; opacity: 0.9; }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border: 2px solid #D2691E; background: white; color: #8B4513; border-radius: 20px; cursor: pointer; font-size: 0.85em; transition: all 0.3s; }
+.lang-tab:hover { background: #faf8f5; }
+.lang-tab.active { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; }
+.lang-content { display: none; }
+.lang-content.active { display: block; }
+.content { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.recipe-image { width: 100%; max-width: 700px; height: 400px; object-fit: cover; border-radius: 12px; margin: 0 auto 30px auto; display: block; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.section { margin-bottom: 30px; }
+.section h2 { color: #8B4513; border-bottom: 3px solid #D2691E; padding-bottom: 10px; margin-bottom: 20px; font-size: 1.5em; }
+.section h3 { color: #D2691E; margin: 20px 0 10px 0; font-size: 1.2em; }
+.ingredients-list { background: #faf8f5; padding: 20px; border-radius: 10px; border-left: 5px solid #D2691E; }
+.ingredients-list ul { list-style: none; padding: 0; }
+.ingredients-list li { padding: 8px 0; border-bottom: 1px dashed #e0d5c8; }
+.ingredients-list li:last-child { border-bottom: none; }
+.ingredients-list li:before { content: "🫘 "; margin-right: 8px; }
+.steps-list { counter-reset: step; }
+.steps-list li { counter-increment: step; padding: 15px 0 15px 50px; position: relative; border-bottom: 1px solid #eee; }
+.steps-list li:last-child { border-bottom: none; }
+.steps-list li::before { content: counter(step); position: absolute; left: 0; top: 10px; background: #8B4513; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em; }
+.footer { text-align: center; margin-top: 40px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 20px 0; padding: 12px 24px; background: linear-gradient(135deg, #8B4513, #D2691E); color: white; text-decoration: none; border-radius: 25px; font-size: 1em; transition: transform 0.2s; }
+.back-link:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.fav-btn { cursor: pointer; font-size: 1.2em; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+@media print {
+    .lang-tabs { display: none !important; }
+    .lang-content { display: block !important; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>🫘 Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<div class="content">
+<div style="text-align: center; margin: -20px 0 20px 0;">
+<span style="display: inline-block; padding: 8px 16px; background: linear-gradient(135deg, #D2691E, #8B4513); color: white; border-radius: 20px; font-size: 0.9em;">
+📅 2026-07-09 — Estate ☀️</span>
+</div>
+<img src="est_15.jpg" alt="Zuppa di Farro e Ceci con Fave" class="recipe-image">
+
+<div class="fav-bar" style="text-align:center;margin:5px 0;">
+<span class="fav-btn" data-path="estate/est_15.html" data-title="Zuppa di Farro e Ceci con Fave" onclick="toggleFav(this.dataset.path, this.dataset.title)">
+🤍</span> Aggiungi ai preferiti
+</div>
+
+<div class="lang-tabs">
+<span class="lang-tab active" data-lang="it" onclick="switchLang('it')">🇮🇹 IT</span>
+<span class="lang-tab" data-lang="en" onclick="switchLang('en')">🇬🇧 EN</span>
+<span class="lang-tab" data-lang="es" onclick="switchLang('es')">🇪🇸 ES</span>
+<span class="lang-tab" data-lang="pt" onclick="switchLang('pt')">🇵🇹 PT</span>
+<span class="lang-tab" data-lang="de" onclick="switchLang('de')">🇩🇪 DE</span>
+<span class="lang-tab" data-lang="el" onclick="switchLang('el')">🇬🇷 EL</span>
+</div>
+
+<div id="lang-it" class="lang-content active">
+<div class="section">
+<h2>Zuppa di Farro e Ceci con Fave</h2>
+<p>Una zuppa nutriente e avvolgente che unisce il sapore rustico del farro con la cremosità dei ceci e la delicatezza delle fave fresche. Un piatto completo, perfetto per le sere estive più fresche.</p>
+
+<h3>Ingredienti</h3>
+<div class="ingredients-list">
+<ul>
+<li><strong>Ingredienti principali:</strong></li>
+<li>Farro perlato: 200g</li>
+<li>Ceci: 150g secchi o 400g precotti</li>
+<li>Fave: 200g fresche o 120g secche</li>
+<li>Cipolla rossa, aglio, sedano: tritati finemente</li>
+<li>Olio EVO, sale, pepe, rosmarino fresco</li>
+<li><strong>Guarnizione:</strong></li>
+<li>Pecorino Romano, pangrattato croccante, olio al rosmarino, fior di sale</li>
+<li><strong>Crostini di farro (opzionali):</strong></li>
+<li>Pane integrale, olio EVO, aglio</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparazione</h3>
+<ol class="steps-list">
+<li><strong>Cottura legumi:</strong> ammollare e cuocere ceci e fave se secchi. Se usi legumi precotti, sciacquali e scolali.</li>
+<li><strong>Cottura farro:</strong> bollire il farro perlato in abbondante acqua o brodo vegetale per circa 20 minuti, fino a che risulti al dente.</li>
+<li><strong>Crema ceci-fave:</strong> frullare una parte dei legumi cotti con olio EVO, cipolla rosata e un rametto di rosmarino, fino a ottenere una crema vellutata.</li>
+<li><strong>Assemblaggio zuppa:</strong> mescolare la crema ottenuta con il farro, i ceci interi, le fave e il sedano tritato. Cuocere a fuoco dolce per 10 minuti per amalgamare i sapori.</li>
+<li><strong>Impiattamento:</strong> servire in ciotole calde, decorando con scaglie di pecorino romano, pangrattato croccante, una goccia di olio al rosmarino e un pizzico di fior di sale.</li>
+</ol>
+
+<h3>💡 Consigli dello Chef</h3>
+<ul>
+<li><strong>Texture perfetta:</strong> combina crema vellutata, farro al dente e ceci interi per un contrasto di consistenze piacevole.</li>
+<li><strong>Ingredienti freschi:</strong> preferisci il farro perlato italiano e il pecorino stagionato per un sapore più intenso.</li>
+</ul>
+</div>
+</div>
+
+<div id="lang-en" class="lang-content">
+<div class="section">
+<h2>Spelt and Chickpea Soup with Fava Beans</h2>
+<p>A nourishing and comforting soup combining the rustic flavor of spelt with the creaminess of chickpeas and the delicacy of fresh fava beans. A complete dish, perfect for cooler summer evenings.</p>
+
+<h3>Ingredients</h3>
+<div class="ingredients-list">
+<ul>
+<li><strong>Main ingredients:</strong></li>
+<li>Pearled spelt: 200g</li>
+<li>Chickpeas: 150g dried or 400g pre-cooked</li>
+<li>Fava beans: 200g fresh or 120g dried</li>
+<li>Red onion, garlic, celery: finely chopped</li>
+<li>Extra virgin olive oil, salt, pepper, fresh rosemary</li>
+<li><strong>Garnish:</strong></li>
+<li>Pecorino Romano, crunchy breadcrumbs, rosemary oil, fleur de sel</li>
+<li><strong>Spelt crostini (optional):</strong></li>
+<li>Whole grain bread, extra virgin olive oil, garlic</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparation</h3>
+<ol class="steps-list">
+<li><strong>Cook the legumes:</strong> soak and cook chickpeas and fava beans if using dried. If using pre-cooked, rinse and drain.</li>
+<li><strong>Cook the spelt:</strong> boil pearled spelt in plenty of water or vegetable broth for about 20 minutes, until al dente.</li>
+<li><strong>Chickpea-fava cream:</strong> blend some of the cooked legumes with extra virgin olive oil, sautéed onion and a sprig of rosemary until velvety smooth.</li>
+<li><strong>Assemble the soup:</strong> mix the cream with spelt, whole chickpeas, fava beans and chopped celery. Cook over low heat for 10 minutes to blend flavors.</li>
+<li><strong>Serve:</strong> serve in warm bowls, garnishing with Pecorino Romano shavings, crunchy breadcrumbs, a drop of rosemary oil and a pinch of fleur de sel.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-es" class="lang-content">
+<div class="section">
+<h2>Sopa de Espelta y Garbanzos con Habas</h2>
+<p>Una sopa nutritiva y reconfortante que une el sabor rústico de la espelta con la cremosidad de los garbanzos y la delicadeza de las habas frescas. Un plato completo, perfecto para las noches de verano más frescas.</p>
+
+<h3>Ingredientes</h3>
+<div class="ingredients-list">
+<ul>
+<li><strong>Ingredientes principales:</strong></li>
+<li>Espelta perlada: 200g</li>
+<li>Garbanzos: 150g secos o 400g precocidos</li>
+<li>Habas: 200g frescas o 120g secas</li>
+<li>Cebolla roja, ajo, apio: picados finamente</li>
+<li>Aceite de oliva virgen extra, sal, pimienta, romero fresco</li>
+<li><strong>Guarnición:</strong></li>
+<li>Pecorino Romano, pan rallado crujiente, aceite de romero, flor de sal</li>
+<li><strong>Crostini de espelta (opcionales):</strong></li>
+<li>Pan integral, aceite de oliva virgen extra, ajo</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparación</h3>
+<ol class="steps-list">
+<li><strong>Cocción de legumbres:</strong> poner en remojo y cocer garbanzos y habas si son secos. Si usas precocidos, enjuagar y escurrir.</li>
+<li><strong>Cocción de la espelta:</strong> hervir la espelta perlada en abundante agua o caldo vegetal durante unos 20 minutos, hasta que esté al dente.</li>
+<li><strong>Crema de garbanzos y habas:</strong> triturar una parte de las legumbres cocidas con aceite de oliva, cebolla pochada y una ramita de romero, hasta obtener una crema aterciopelada.</li>
+<li><strong>Montaje de la sopa:</strong> mezclar la crema obtenida con la espelta, los garbanzos enteros, las habas y el apio picado. Cocinar a fuego lento durante 10 minutos para amalgamar los sabores.</li>
+<li><strong>Emplatado:</strong> servir en cuencos calientes, decorando con virutas de Pecorino Romano, pan rallado crujiente, una gota de aceite de romero y una pizca de flor de sal.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-pt" class="lang-content">
+<div class="section">
+<h2>Sopa de Espelta e Grãos-de-Bico com Favas</h2>
+<p>Uma sopa nutritiva e reconfortante que une o sabor rústico da espelta com a cremosidade dos grãos-de-bico e a delicadeza das favas frescas. Um prato completo, perfeito para as noites de verão mais frescas.</p>
+
+<h3>Ingredientes</h3>
+<div class="ingredients-list">
+<ul>
+<li><strong>Ingredientes principais:</strong></li>
+<li>Espelta perlada: 200g</li>
+<li>Grãos-de-bico: 150g secos ou 400g precozidos</li>
+<li>Favas: 200g frescas ou 120g secas</li>
+<li>Cebola roxa, alho, aipo: picados finamente</li>
+<li>Azeite de oliva virgem extra, sal, pimenta, alecrim fresco</li>
+<li><strong>Guarnição:</strong></li>
+<li>Pecorino Romano, migalhas de pão crocantes, azeite de alecrim, flor de sal</li>
+<li><strong>Crostini de espelta (opcionais):</strong></li>
+<li>Pão integral, azeite de oliva virgem extra, alho</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparação</h3>
+<ol class="steps-list">
+<li><strong>Cozedura dos legumes:</strong> deixar de molho e cozinhar grãos-de-bico e favas se forem secos. Se usar precozidos, enxaguar e escorrer.</li>
+<li><strong>Cozedura da espelta:</strong> ferver a espelta perlada em abundante água ou caldo de legumes durante cerca de 20 minutos, até ficar al dente.</li>
+<li><strong>Creme de grãos-de-bico e favas:</strong> triturar uma parte dos legumes cozidos com azeite de oliva, cebola estufada e um ramo de alecrim, até obter um creme aveludado.</li>
+<li><strong>Montagem da sopa:</strong> misturar o creme obtido com a espelta, os grãos-de-bico inteiros, as favas e o aipo picado. Cozinhar em lume brando durante 10 minutos para amalgamar os sabores.</li>
+<li><strong>Empratamento:</strong> servir em tigelas quentes, guarnecendo com lascas de Pecorino Romano, migalhas de pão crocantes, uma gota de azeite de alecrim e uma pitada de flor de sal.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-de" class="lang-content">
+<div class="section">
+<h2>Dinkel-Kichererbsen-Suppe mit Saubohnen</h2>
+<p>Eine nahrhafte und wohltuende Suppe, die den rustikalen Geschmack von Dinkel mit der Cremigkeit von Kichererbsen und der Delikatesse von frischen Saubohnen vereint. Ein vollständiges Gericht, perfekt für kühlere Sommerabende.</p>
+
+<h3>Zutaten</h3>
+<div class="ingredients-list">
+<ul>
+<li><strong>Hauptzutaten:</strong></li>
+<li>Perlgraupen-Dinkel: 200g</li>
+<li>Kichererbsen: 150g getrocknet oder 400g vorgekocht</li>
+<li>Saubohnen: 200g frisch oder 120g getrocknet</li>
+<li>Rote Zwiebel, Knoblauch, Sellerie: fein gehackt</li>
+<li>Natives Olivenöl extra, Salz, Pfeffer, frischer Rosmarin</li>
+<li><strong>Garnierung:</strong></li>
+<li>Pecorino Romano, knusprige Semmelbrösel, Rosmarinöl, Fleur de Sel</li>
+<li><strong>Dinkel-Crostini (optional):</strong></li>
+<li>Vollkornbrot, natives Olivenöl extra, Knoblauch</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Zubereitung</h3>
+<ol class="steps-list">
+<li><strong>Hülsenfrüchte garen:</strong> Kichererbsen und Saubohnen einweichen und kochen, wenn getrocknet. Bei vorgekochten abspülen und abtropfen lassen.</li>
+<li><strong>Dinkel garen:</strong> Perlgraupen-Dinkel in reichlich Wasser oder Gemüsebrühe etwa 20 Minuten kochen, bis er bissfest ist.</li>
+<li><strong>Kichererbsen-Saubohnen-Creme:</strong> einen Teil der gekochten Hülsenfrüchte mit nativem Olivenöl, geschmorter Zwiebel und einem Rosmarinzweig pürieren, bis eine samtige Creme entsteht.</li>
+<li><strong>Suppe zusammenstellen:</strong> die Creme mit Dinkel, ganzen Kichererbsen, Saubohnen und gehacktem Sellerie vermischen. Bei schwacher Hitze 10 Minuten kochen, um die Aromen zu verbinden.</li>
+<li><strong>Anrichten:</strong> in warmen Schalen servieren, garniert mit Pecorino-Romano-Spähnen, knusprigen Semmelbröseln, einem Tropfen Rosmarinöl und einer Prise Fleur de Sel.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-el" class="lang-content">
+<div class="section">
+<h2>Σούπα Ντίνκελ με Ρεβίθια και Φασόλια</h2>
+<p>Μια θρεπτική και παρηγορητική σούπα που ενώνει τη ρουστίκ γεύση του ντίνκελ με την κρεμώδη υφή των ρεβιθιών και τη λεπτότητα των φρέσκων φασολιών. Ένα πλήρες πιάτο, τέλειο για τις πιο δροσερές καλοκαιρινές βραδιές.</p>
+
+<h3>Συστατικά</h3>
+<div class="ingredients-list">
+<ul>
+<li><strong>Κύρια συστατικά:</strong></li>
+<li>Ντίνκελ πέρλα: 200 γραμ.</li>
+<li>Ρεβίθια: 150 γραμ. ξηρά ή 400 γραμ. προψημένα</li>
+<li>Φασόλια: 200 γραμ. φρέσκα ή 120 γραμ. ξηρά</li>
+<li>Κόκκινο κρεμμύδι, σκόρδο, σέλερι: ψιλοκομμένα</li>
+<li>Έξτρα παρθένο ελαιόλαδο, αλάτι, πιπέρι, φρέσκο δεντρολίβανο</li>
+<li><strong>Γαρνιτούρα:</strong></li>
+<li>Πεκορίνο Ρομάνο, τραγανές φρυγανιές, λάδι δεντρολίβανου, ανθός αλατιού</li>
+<li><strong>Κροστίνι ντίνκελ (προαιρετικά):</strong></li>
+<li>Ολικής άλεσης ψωμί, έξτρα παρθένο ελαιόλαδο, σκόρδο</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Εκτέλεση</h3>
+<ol class="steps-list">
+<li><strong>Μαγείρεμα οσπρίων:</strong> μουλιάστε και μαγειρέψτε ρεβίθια και φασόλια αν είναι ξηρά. Αν χρησιμοποιείτε προψημένα, ξεπλύνετε και σουρώστε.</li>
+<li><strong>Μαγείρεμα ντίνκελ:</strong> βράστε το ντίνκελ πέρλα σε άφθονο νερό ή λαχανόζουμο για περίπου 20 λεπτά, μέχρι να γίνει al dente.</li>
+<li><strong>Κρέμα ρεβιθιών-φασολιών:</strong> πολτοποιήστε μέρος των μαγειρεμένων οσπρίων με ελαιόλαδο, σοταρισμένο κρεμμύδι και ένα κλαδάκι δεντρολίβανου, μέχρι να γίνει βελούδινη κρέμα.</li>
+<li><strong>Συναρμολόγηση σούπας:</strong> αναμείξτε την κρέμα με το ντίνκελ, τα ολόκληρα ρεβίθια, τα φασόλια και το ψιλοκομμένο σέλερι. Μαγειρέψτε σε χαμηλή φωτιά για 10 λεπτά για να ενωθούν οι γεύσεις.</li>
+<li><strong>Σερβίρισμα:</strong> σερβίρετε σε ζεστά μπολ, γαρνίροντας με νιφάδες Πεκορίνο Ρομάνο, τραγανές φρυγανιές, μια σταγόνα λάδι δεντρολίβανου και μια πρέζα ανθό αλατιού.</li>
+</ol>
+</div>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<a href="../index.html" class="back-link">← Torna alla Home</a>
+</div>
+
+<script>
+function switchLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(c => c.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+    document.querySelector('.lang-tab[data-lang="' + lang + '"]').classList.add('active');
+    localStorage.setItem('preferredLang', lang);
+}
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

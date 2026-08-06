@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quinoa con Patate, Cavolo Nero e Cicerchie | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Quinoa con Patate, Cavolo Nero e Cicerchie">
+<meta property="og:title" content="Quinoa con Patate, Cavolo Nero e Cicerchie | Leguminando">
+<meta property="og:description" content="Quinoa con Patate, Cavolo Nero e Cicerchie">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="inverno/018.html" data-title="Quinoa con Patate, Cavolo Nero e Cicerchie" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="018.jpg" alt="Quinoa con Patate, Cavolo Nero e Cicerchie" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-12-28</p>
+<p><strong>Meta:</strong> 4 porzioni | Vegetariano</p>
+<p><strong>Descrizione:</strong> Piatto unico invernale nutriente con quinoa, patate, cavolo nero e cicerchie, profumato alla paprika dolce.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>200 g di quinoa</li>
+<li>2 patate medie, pelate e tagliate a cubetti</li>
+<li>200 g di cavolo nero, lavato e tagliato a strisce</li>
+<li>150 g di cicerchie, ammollate e cotte</li>
+<li>1 cipolla, tritata</li>
+<li>2 spicchi d'aglio, tritati</li>
+<li>2 cucchiai di olio extravergine d'oliva</li>
+<li>1 cucchiaino di paprika dolce</li>
+<li>Sale e pepe q.b.</li>
+<li>Brodo vegetale (circa 500 ml)</li>
+<li>Succo di mezzo limone</li>
+<li>Prezzemolo fresco tritato per guarnire</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparazione della quinoa:</strong> Sciacqua la quinoa sotto acqua corrente. Cuocila in una pentola con 400 ml di acqua e un pizzico di sale. Porta ad ebollizione, poi abbassa la fiamma e lascia cuocere coperta per circa 15 minuti, finché l'acqua è assorbita.</p>
+<p>2. <strong>Cottura delle verdure:</strong> In una padella grande, scalda l'olio a fuoco medio. Aggiungi la cipolla e l'aglio, e soffriggi finché sono dorati.</p>
+<p>3. <strong>Aggiunta delle patate:</strong> Unisci le patate a cubetti alla padella. Mescola bene e cuoci per circa 5 minuti, aggiungendo un po' di brodo vegetale se necessario per evitare che si attacchino.</p>
+<p>4. <strong>Cottura del cavolo nero:</strong> Aggiungi il cavolo nero, mescola e copri la padella. Cuoci per altri 5 minuti.</p>
+<p>5. <strong>Completamento del piatto:</strong> Incorpora le cicerchie cotte, la quinoa e la paprika. Mescola bene tutti gli ingredienti e aggiusta di sale e pepe. Servi con succo di limone e prezzemolo fresco.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-12-28</p>
+<p><strong>Meta:</strong> 4 servings | Vegetarian</p>
+<p><strong>Description:</strong> Nutritious winter one-pot meal with quinoa, potatoes, kale and chickpeas, scented with sweet paprika.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>200 g quinoa</li>
+<li>2 medium potatoes, peeled and cubed</li>
+<li>200 g kale, washed and cut into strips</li>
+<li>150 g chickpeas, soaked and cooked</li>
+<li>1 onion, chopped</li>
+<li>2 garlic cloves, minced</li>
+<li>2 tablespoons extra virgin olive oil</li>
+<li>1 teaspoon sweet paprika</li>
+<li>Salt and pepper to taste</li>
+<li>Vegetable broth (about 500 ml)</li>
+<li>Juice of half a lemon</li>
+<li>Chopped fresh parsley for garnish</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Prepare quinoa:</strong> Rinse quinoa under running water. Cook in a pot with 400 ml water and a pinch of salt. Bring to a boil, then reduce heat and simmer covered for about 15 minutes until water is absorbed.</p>
+<p>2. <strong>Cook vegetables:</strong> In a large pan, heat oil over medium heat. Add onion and garlic, and sauté until golden.</p>
+<p>3. <strong>Add potatoes:</strong> Add cubed potatoes to the pan. Stir well and cook for about 5 minutes, adding a little vegetable broth if needed to prevent sticking.</p>
+<p>4. <strong>Cook kale:</strong> Add kale, stir and cover the pan. Cook for another 5 minutes.</p>
+<p>5. <strong>Finish dish:</strong> Stir in cooked chickpeas, quinoa and paprika. Mix all ingredients well and season with salt and pepper. Serve with lemon juice and fresh parsley.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-12-28</p>
+<p><strong>Meta:</strong> 4 porciones | Vegetariano</p>
+<p><strong>Descripción:</strong> Plato único de invierno nutritivo con quinoa, patatas, kale y garbanzos, perfumado con pimentón dulce.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>200 g de quinoa</li>
+<li>2 patatas medianas, peladas y en cubos</li>
+<li>200 g de kale, lavado y cortado en tiras</li>
+<li>150 g de garbanzos, puestos en remojo y cocidos</li>
+<li>1 cebolla, picada</li>
+<li>2 dientes de ajo, picados</li>
+<li>2 cucharadas de aceite de oliva virgen extra</li>
+<li>1 cucharadita de pimentón dulce</li>
+<li>Sal y pimienta c.s.</li>
+<li>Caldo de verduras (unos 500 ml)</li>
+<li>Zumo de medio limón</li>
+<li>Perejil fresco picado para decorar</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparar la quinoa:</strong> Enjuaga la quinoa bajo el grifo. Cuécela en una olla con 400 ml de agua y una pizca de sal. Lleva a ebullición, luego baja el fuego y cuece tapada unos 15 minutos hasta que el agua se absorba.</p>
+<p>2. <strong>Cocinar verduras:</strong> En una sartén grande, calienta el aceite a fuego medio. Añade la cebolla y el ajo, y sofríe hasta dorar.</p>
+<p>3. <strong>Añadir patatas:</strong> Incorpora las patatas en cubos. Remueve bien y cuece unos 5 minutos, añadiendo un poco de caldo si es necesario para evitar que se peguen.</p>
+<p>4. <strong>Cocinar kale:</strong> Agrega el kale, remueve y tapa la sartén. Cuece otros 5 minutos.</p>
+<p>5. <strong>Terminar el plato:</strong> Mezcla los garbanzos cocidos, la quinoa y el pimentón. Remueve bien todos los ingredientes y sazona con sal y pimienta. Sirve con zumo de limón y perejil fresco.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-12-28</p>
+<p><strong>Meta:</strong> 4 porções | Vegetariano</p>
+<p><strong>Descrição:</strong> Prato único de inverno nutritivo com quinoa, batatas, couve-crespa e grão-de-bico, perfumado com páprica doce.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>200 g de quinoa</li>
+<li>2 batatas médias, descascadas e em cubos</li>
+<li>200 g de couve-crespa, lavada e cortada em tiras</li>
+<li>150 g de grão-de-bico, de molho e cozido</li>
+<li>1 cebola, picada</li>
+<li>2 dentes de alho, picados</li>
+<li>2 colheres de sopa de azeite extra virgem</li>
+<li>1 colher de chá de páprica doce</li>
+<li>Sal e pimenta q.b.</li>
+<li>Caldo de legumes (cerca de 500 ml)</li>
+<li>Sumo de meio limão</li>
+<li>Salsa fresca picada para guarnecer</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparar quinoa:</strong> Enxágua a quinoa sob água corrente. Coze numa panela com 400 ml de água e uma pitada de sal. Leva a lume brando e cozinha tapada cerca de 15 minutos até a água ser absorvida.</p>
+<p>2. <strong>Cozinhar legumes:</strong> Numa frigideira grande, aquece o azeite em lume médio. Adiciona a cebola e o alho, e refoga até dourar.</p>
+<p>3. <strong>Adicionar batatas:</strong> Junta as batatas em cubos. Mistura bem e cozinha cerca de 5 minutos, acrescentando um pouco de caldo se necessário para evitar que agarrem.</p>
+<p>4. <strong>Cozinhar couve-crespa:</strong> Adiciona a couve-crespa, mistura e tapa a frigideira. Cozinha mais 5 minutos.</p>
+<p>5. <strong>Terminar o prato:</strong> Mistura o grão-de-bico cozido, a quinoa e a páprica. Mexe bem todos os ingredientes e tempera com sal e pimenta. Serve com sumo de limão e salsa fresca.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-12-28</p>
+<p><strong>Meta:</strong> 4 Portionen | Vegetarisch</p>
+<p><strong>Beschreibung:</strong> Nährstoffreiches Winter-Eintopfgericht mit Quinoa, Kartoffeln, Grünkohl und Kichererbsen, duftend mit süßem Paprika.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>200 g Quinoa</li>
+<li>2 mittlere Kartoffeln, geschält und gewürfelt</li>
+<li>200 g Grünkohl, gewaschen und in Streifen</li>
+<li>150 g Kichererbsen, eingeweicht und gekocht</li>
+<li>1 Zwiebel, gehackt</li>
+<li>2 Knoblauchzehen, gehackt</li>
+<li>2 Esslöffel natives Olivenöl extra</li>
+<li>1 Teelöffel süßes Paprikapulver</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Gemüsebrühe (etwa 500 ml)</li>
+<li>Saft einer halben Zitrone</li>
+<li>Gehackte frische Petersilie zum Garnieren</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Quinoa zubereiten:</strong> Quinoa unter fließendem Wasser abspülen. In einem Topf mit 400 ml Wasser und einer Prise Salz kochen. Zum Kochen bringen, dann Hitze reduzieren und zugedeckt etwa 15 Minuten köcheln, bis das Wasser aufgesogen ist.</p>
+<p>2. <strong>Gemüse garen:</strong> In einer großen Pfanne Öl bei mittlerer Hitze erhitzen. Zwiebel und Knoblauch zugeben und goldbraun anschwitzen.</p>
+<p>3. <strong>Kartoffeln zugeben:</strong> Kartoffelwürfel in die Pfanne geben. Gut umrühren und etwa 5 Minuten garen, bei Bedarf etwas Gemüsebrühe zugießen, damit nichts anklebt.</p>
+<p>4. <strong>Grünkohl garen:</strong> Grünkohl zugeben, umrühren und Pfanne zudecken. Weitere 5 Minuten garen.</p>
+<p>5. <strong>Gericht fertigstellen:</strong> Gekochte Kichererbsen, Quinoa und Paprika unterheben. Alle Zutaten gut vermischen und mit Salz und Pfeffer abschmecken. Mit Zitronensaft und frischer Petersilie servieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-12-28</p>
+<p><strong>Meta:</strong> 4 μερίδες | Χορτοφαγικό</p>
+<p><strong>Περιγραφή:</strong> Χειμερινό θρεπτικό πιάτο με κινόα, πατάτες, kale και ρεβίθια, αρωματισμένο με γλυκιά πάπρικα.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>200 γρ κινόα</li>
+<li>2 μεσαίες πατάτες, καθαρισμένες και κομμένες σε κύβους</li>
+<li>200 γρ kale, πλυμένο και κομμένο σε λωρίδες</li>
+<li>150 γρ ρεβίθια, μουλιασμένα και μαγειρεμένα</li>
+<li>1 κρεμμύδι, ψιλοκομμένο</li>
+<li>2 σκελίδες σκόρδο, ψιλοκομμένες</li>
+<li>2 κουταλιές της σούπας ελαιόλαδο</li>
+<li>1 κουταλάκι του γλυκού γλυκιά πάπρικα</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>Ζωμός λαχανικών (περίπου 500 ml)</li>
+<li>Χυμός μισού λεμονιού</li>
+<li>Ψιλοκομμένος φρέσκος μαϊντανός για γαρνίρισμα</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία κινόα:</strong> Ξέπλυνε την κινόα κάτω από τρεχούμενο νερό. Μαγείρεψέ την σε κατσαρόλα με 400 ml νερό και μια πρέζα αλατιού. Βράσε, μετά χαμήλωσε τη φωτιά και σιγοβράσε σκεπασμένη περίπου 15 λεπτά μέχρι να απορροφηθεί το νερό.</p>
+<p>2. <strong>Μαγείρεμα λαχανικών:</strong> Σε ένα μεγάλο τηγάνι, ζέστανε λάδι σε μέτρια φωτιά. Πρόσθεσε κρεμμύδι και σκόρδο, και σοτάρε μέχρι να ροδίσουν.</p>
+<p>3. <strong>Προσθήκη πατατών:</strong> Πρόσθεσε τις πατάτες σε κύβους. Ανακάτεψε καλά και μαγείρεψε περίπου 5 λεπτά, προσθέτοντας λίγο ζωμό αν χρειάζεται για να μην κολλήσουν.</p>
+<p>4. <strong>Μαγείρεμα kale:</strong> Πρόσθεσε το kale, ανακάτεψε και σκέπασε το τηγάνι. Μαγείρεψε άλλα 5 λεπτά.</p>
+<p>5. <strong>Ολοκλήρωση πιάτου:</strong> Ενσωμάτωσε τα μαγειρεμένα ρεβίθια, την κινόα και την πάπρικα. Ανακάτεψε καλά όλα τα υλικά και αλατοπιπέρωσε. Σέρβιρε με χυμό λεμονιού και φρέσκο μαϊντανό.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

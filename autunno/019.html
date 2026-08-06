@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sgombro Glassato al Miele e Senape su Radicchio e Cavolo Nero | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Sgombro Glassato al Miele e Senape su Radicchio e Cavolo Nero">
+<meta property="og:title" content="Sgombro Glassato al Miele e Senape su Radicchio e Cavolo Nero | Leguminando">
+<meta property="og:description" content="Sgombro Glassato al Miele e Senape su Radicchio e Cavolo Nero">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="autunno/019.html" data-title="Sgombro Glassato al Miele e Senape su Radicchio e Cavolo Nero" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="019.jpg" alt="Sgombro Glassato al Miele e Senape" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-10-18</p>
+<p><strong>Meta:</strong> 2 porzioni | Pesce</p>
+<p><strong>Descrizione:</strong> Filetti di sgombro glassati al miele e senape, serviti su letto di radicchio e cavolo nero.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>2 sgombri (300-400 g cadauno), puliti</li>
+<li>20 g di miele</li>
+<li>10 g di senape</li>
+<li>10 g di olio extravergine d'oliva</li>
+<li>1 g di sale</li>
+<li>0,1 g di pepe</li>
+<li>3 g di prezzemolo</li>
+<li>300 g di radicchio a spicchi</li>
+<li>400 g di cavolo nero a foglie</li>
+<li>50 g di fagioli</li>
+<li>10 g di olio extravergine d'oliva</li>
+<li>2 g di sale</li>
+<li>0,1 g di pepe</li>
+<li>5 g di aceto balsamico</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Mescola miele, senape, olio, sale e pepe. Spennella gli sgombri e lascia 5-10 min.</p>
+<p>2. In padella scalda 10 g di olio; salta il radicchio 3-4 min, aggiungi il cavolo nero, sala, pepa e cuoci 5 min; spruzza aceto e tieni al caldo.</p>
+<p>3. In padella antiaderente calda cuoci gli sgombri dalla pelle 4-5 min, poi 2-3 min dal lato opposto, spennellando altra glassa.</p>
+<p>4. Impiatta la verdura, adagia lo sgombro e cospargi con prezzemolo. Servi subito.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-10-18</p>
+<p><strong>Meta:</strong> 2 servings | Fish</p>
+<p><strong>Description:</strong> Mackerel fillets glazed with honey and mustard, served on a bed of radicchio and kale.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>2 mackerels (300-400 g each), cleaned</li>
+<li>20 g honey</li>
+<li>10 g mustard</li>
+<li>10 g extra virgin olive oil</li>
+<li>1 g salt</li>
+<li>0.1 g pepper</li>
+<li>3 g parsley</li>
+<li>300 g radicchio wedges</li>
+<li>400 g kale leaves</li>
+<li>50 g beans</li>
+<li>10 g extra virgin olive oil</li>
+<li>2 g salt</li>
+<li>0.1 g pepper</li>
+<li>5 g balsamic vinegar</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. Mix honey, mustard, oil, salt and pepper. Brush mackerels and leave 5-10 min.</p>
+<p>2. Heat 10 g oil in a pan; sauté radicchio 3-4 min, add kale, season and cook 5 min; drizzle vinegar and keep warm.</p>
+<p>3. In a hot non-stick pan cook mackerels skin-side down 4-5 min, then 2-3 min on the other side, brushing with more glaze.</p>
+<p>4. Plate the vegetables, lay the mackerel on top and sprinkle with parsley. Serve immediately.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-10-18</p>
+<p><strong>Meta:</strong> 2 porciones | Pescado</p>
+<p><strong>Descripción:</strong> Filetes de caballa glaseados con miel y mostaza, servidos sobre lecho de radicchio y kale.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>2 caballas (300-400 g cada una), limpiadas</li>
+<li>20 g de miel</li>
+<li>10 g de mostaza</li>
+<li>10 g de aceite de oliva virgen extra</li>
+<li>1 g de sal</li>
+<li>0,1 g de pimienta</li>
+<li>3 g de perejil</li>
+<li>300 g de radicchio en gajos</li>
+<li>400 g de hojas de kale</li>
+<li>50 g de judías</li>
+<li>10 g de aceite de oliva virgen extra</li>
+<li>2 g de sal</li>
+<li>0,1 g de pimienta</li>
+<li>5 g de vinagre balsámico</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. Mezcla miel, mostaza, aceite, sal y pimienta. Pincela las caballas y deja 5-10 min.</p>
+<p>2. En sartén calienta 10 g de aceite; saltea el radicchio 3-4 min, añade el kale, sala, pimienta y cuece 5 min; rocía vinagre y mantén caliente.</p>
+<p>3. En sartén antiadherente caliente cuece las caballas por la piel 4-5 min, luego 2-3 min por el otro lado, pincelando más glaseado.</p>
+<p>4. Emplata las verduras, coloca la caballa y espolvorea con perejil. Sirve inmediatamente.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-10-18</p>
+<p><strong>Meta:</strong> 2 porções | Peixe</p>
+<p><strong>Descrição:</strong> Filetes de cavala glaceados com mel e mostarda, servidos sobre cama de radicchio e couve-crespa.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>2 cavalas (300-400 g cada uma), limpas</li>
+<li>20 g de mel</li>
+<li>10 g de mostarda</li>
+<li>10 g de azeite extra virgem</li>
+<li>1 g de sal</li>
+<li>0,1 g de pimenta</li>
+<li>3 g de salsa</li>
+<li>300 g de radicchio em gomos</li>
+<li>400 g de folhas de couve-crespa</li>
+<li>50 g de feijão</li>
+<li>10 g de azeite extra virgem</li>
+<li>2 g de sal</li>
+<li>0,1 g de pimenta</li>
+<li>5 g de vinagre balsâmico</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Mistura mel, mostarda, azeite, sal e pimenta. Pincela as cavalas e deixa 5-10 min.</p>
+<p>2. Numa frigideira aquece 10 g de azeite; salta o radicchio 3-4 min, junta a couve-crespa, tempera e cozinha 5 min; rega com vinagre e mantém quente.</p>
+<p>3. Numa frigideira antiaderente quente cozinha as cavalas pelo lado da pele 4-5 min, depois 2-3 min do outro lado, pincelando mais glace.</p>
+<p>4. Emprata os legumes, coloca a cavala por cima e polvilha com salsa. Serve imediatamente.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-10-18</p>
+<p><strong>Meta:</strong> 2 Portionen | Fisch</p>
+<p><strong>Beschreibung:</strong> Makrelenfilets glasiert mit Honig und Senf, serviert auf einem Bett aus Radicchio und Grünkohl.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>2 Makrelen (300-400 g pro Stück), gereinigt</li>
+<li>20 g Honig</li>
+<li>10 g Senf</li>
+<li>10 g natives Olivenöl extra</li>
+<li>1 g Salz</li>
+<li>0,1 g Pfeffer</li>
+<li>3 g Petersilie</li>
+<li>300 g Radicchio in Spalten</li>
+<li>400 g Grünkohlblätter</li>
+<li>50 g Bohnen</li>
+<li>10 g natives Olivenöl extra</li>
+<li>2 g Salz</li>
+<li>0,1 g Pfeffer</li>
+<li>5 g Balsamico-Essig</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. Honig, Senf, Öl, Salz und Pfeffer mischen. Makrelen bestreichen und 5-10 Min. marinieren.</p>
+<p>2. 10 g Öl in einer Pfanne erhitzen; Radicchio 3-4 Min. anbraten, Grünkohl zugeben, würzen und 5 Min. garen; mit Essig beträufeln und warm halten.</p>
+<p>3. Makrelen in einer heißen beschichteten Pfanne 4-5 Min. mit der Haut nach unten braten, dann 2-3 Min. wenden und mit mehr Glasur bestreichen.</p>
+<p>4. Gemüse anrichten, Makrele darauflegen und mit Petersilie bestreuen. Sofort servieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-10-18</p>
+<p><strong>Meta:</strong> 2 μερίδες | Ψάρι</p>
+<p><strong>Περιγραφή:</strong> Φιλέτα σκουμπριού με γλάσο μελιού και μουστάρδας, σερβιρισμένα πάνω σε ραδίκιο και kale.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>2 σκουμπριά (300-400 γρ το καθένα), καθαρισμένα</li>
+<li>20 γρ μέλι</li>
+<li>10 γρ μουστάρδα</li>
+<li>10 γρ ελαιόλαδο</li>
+<li>1 γρ αλάτι</li>
+<li>0,1 γρ πιπέρι</li>
+<li>3 γρ μαϊντανός</li>
+<li>300 γρ ραδίκιο σε φέτες</li>
+<li>400 γρ φύλλα kale</li>
+<li>50 γρ φασόλια</li>
+<li>10 γρ ελαιόλαδο</li>
+<li>2 γρ αλάτι</li>
+<li>0,1 γρ πιπέρι</li>
+<li>5 γρ βαλσαμικό ξίδι</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. Ανακάτεψε μέλι, μουστάρδα, λάδι, αλάτι και πιπέρι. Άλειψε τα σκουμπριά και άφησε 5-10 λεπτά.</p>
+<p>2. Ζέστανε 10 γρ λάδι σε τηγάνι· σοτάρε το ραδίκιο 3-4 λεπτά, πρόσθεσε το kale, αλατοπιπέρωσε και μαγείρεψε 5 λεπτά· πασπάλισε ξίδι και κράτα ζεστό.</p>
+<p>3. Ψήσε τα σκουμπριά σε ζεστό αντικολλητικό τηγάνι από τη μεριά του δέρματος 4-5 λεπτά, μετά 2-3 λεπτά από την άλλη πλευρά, αλείφοντας με περισσότερο γλάσο.</p>
+<p>4. Σερβίρε τα λαχανικά, τοποθέτησε το σκουμπρί από πάνω και πασπάλισε με μαϊντανό. Σέρβιρε αμέσως.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

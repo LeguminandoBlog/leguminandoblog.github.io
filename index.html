@@ -1,0 +1,770 @@
+<!-- Test deploy timestamp: 2026-08-06 -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leguminando - Ricette di Stagione</title>
+<meta name="description" content="Leguminando - Ricette di Stagione">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Georgia', serif;
+            background: #f8f5f0;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        .top-bar {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 50%, #F4A460 100%);
+            color: white;
+            padding: 40px 20px 30px;
+            text-align: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+        .top-bar .logo { font-size: 4em; margin-bottom: 10px; animation: pulse 2s infinite; }
+        .top-bar h1 { font-size: 3.5em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .top-bar .tagline { font-size: 1.3em; opacity: 0.9; font-style: italic; }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .slideshow-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 30px auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            position: relative;
+        }
+        .slideshow-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: opacity 1s ease-in-out;
+        }
+        .slideshow-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            padding: 40px 20px 20px;
+            color: white;
+            text-align: center;
+        }
+        .slideshow-title { font-size: 1.5em; font-weight: bold; }
+        .slideshow-season { font-size: 0.9em; opacity: 0.9; }
+
+        .lang-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .lang-tab {
+            padding: 10px 20px;
+            border: 2px solid rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+        .lang-tab:hover { background: rgba(255,255,255,0.3); }
+        .lang-tab.active { background: white; color: #667eea; border-color: white; }
+
+        .description-box {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-content h2 { color: #667eea; margin-bottom: 20px; font-size: 2em; }
+        .lang-content p {
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .seasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .season-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+        .season-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+        }
+        .season-icon {
+            font-size: 3em;
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .season-content {
+            padding: 25px;
+            text-align: center;
+        }
+        .season-title {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .season-desc {
+            color: #666;
+            font-style: italic;
+        }
+
+        .spring .season-icon { background: linear-gradient(135deg, #88d498 0%, #4a9c5c 100%); }
+        .summer .season-icon { background: linear-gradient(135deg, #f7b731 0%, #e58e26 100%); }
+        .autumn .season-icon { background: linear-gradient(135deg, #e17055 0%, #d63031 100%); }
+        .winter .season-icon { background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); }
+        .extra .season-icon { background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%); }
+        .preferiti .season-icon { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); }
+
+        .instagram-box {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            border-radius: 20px;
+            padding: 30px;
+            color: white;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .instagram-box h3 { font-size: 1.8em; margin-bottom: 15px; }
+        .instagram-box a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        .instagram-box a:hover { text-decoration: underline; }
+
+        footer {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 50%, #F4A460 100%);
+            color: white;
+            text-align: center;
+            padding: 40px;
+            margin-top: 40px;
+            margin-bottom: 50px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        footer p { margin-bottom: 10px; }
+        .footer-links { margin-top: 20px; }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .footer-links a:hover { text-decoration: underline; }
+
+        /* Bottom Bar: NTP Time + View Counter */
+        .bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.85);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85em;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        .bottom-bar .ntp-time {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .bottom-bar .ntp-time .sync-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #4CAF50;
+            animation: pulse-dot 2s infinite;
+        }
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+        /* ===== CONTATORE VISUALIZZAZIONI ===== */
+        .bottom-bar .view-counter {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255,255,255,0.15);
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        .bottom-bar .view-counter:hover { background: rgba(255,255,255,0.25); }
+        .bottom-bar .view-counter .eye-icon { font-size: 1.1em; }
+        .bottom-bar .view-counter .counter-value { font-variant-numeric: tabular-nums; letter-spacing: 0.5px; }
+        .bottom-bar .view-counter .counter-label { opacity: 0.7; font-size: 0.85em; margin-left: 4px; }
+        /* ===== TABELLA RIASSUNTIVA RICETTE ===== */
+        .stats-table-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .stats-title {
+            font-size: 2em;
+            margin-bottom: 25px;
+            color: #333;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        .stats-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        .stats-table th:first-child { border-radius: 10px 0 0 0; }
+        .stats-table th:last-child { border-radius: 0 10px 0 0; text-align: center; }
+        .stats-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            font-size: 1.05em;
+        }
+        .stats-table td:first-child { text-align: left; }
+        .stats-table td:nth-child(2) { text-align: center; font-size: 1.2em; }
+        .stats-table td:nth-child(3) { text-align: center; }
+        .stats-table tr:hover { background: #f8f9ff; }
+        .season-emoji { font-size: 1.3em; margin-right: 8px; }
+        .season-link {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            padding: 5px 10px;
+            border-radius: 8px;
+        }
+        .season-link:hover {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            transform: translateX(5px);
+        }
+        .bar-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+        }
+        .bar {
+            height: 20px;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 1s ease;
+        }
+        .total-bar {
+            background: linear-gradient(90deg, #f093fb, #f5576c);
+        }
+        .total-row { background: #fff5f5; font-weight: bold; }
+        .spring-row .bar { background: linear-gradient(90deg, #84fab0, #8fd3f4); }
+        .summer-row .bar { background: linear-gradient(90deg, #fa709a, #fee140); }
+        .autumn-row .bar { background: linear-gradient(90deg, #ff9a9e, #fecfef); }
+        .winter-row .bar { background: linear-gradient(90deg, #a8edea, #fed6e3); }
+        .extra-row .bar { background: linear-gradient(90deg, #d4a5ff, #9b59b6); }
+        .stats-note {
+            color: #888;
+            font-size: 0.9em;
+            margin-top: 15px;
+            font-style: italic;
+        }
+        /* VIEW COUNTER RIMOSSO - usare GitHub Insights per dati reali */
+        .bottom-bar .season-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 3px 12px;
+            border-radius: 12px;
+            font-size: 0.9em;
+        }
+    
+@media print {
+    .lang-tabs, input[type="radio"], .back-link, .footer, .view-counter,
+    .season-badge, .legend, .top-bar .logo, .slideshow-container,
+    .lang-content:not(:first-of-type) { display: none !important; }
+    body { background: white !important; padding: 0 !important; }
+    .content, .card-content, .recipe-info { box-shadow: none !important; }
+    .recipe-image, .recipe-thumb, .card img { max-width: 300px !important; height: auto !important; }
+    a { text-decoration: none !important; color: black !important; }
+    .header { padding: 10px !important; border-radius: 0 !important; }
+    #content-it, #content-en, #content-es, #content-pt, #content-de, #content-el { display: block !important; }
+}
+
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; }
+.fav-bar { text-align: center; margin: 10px 0; }
+
+</style>
+<meta property="og:title" content="Leguminando - Ricette di Stagione">
+<meta property="og:description" content="Ricetta a base di legumi da Leguminando">
+<meta property="og:image" content="https://leguminandoblog.github.io/">
+<meta property="og:url" content="https://leguminandoblog.github.io/index.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="Leguminando — RSS Feed" href="feed.xml">
+
+</head>
+<body>
+    <div class="top-bar">
+        <div class="logo">🫘</div>
+        <h1>Leguminando</h1>
+        <p class="tagline" id="tagline">Ricette di stagione a base di legumi</p>
+    </div>
+
+    <div class="container">
+
+        <div class="slideshow-container">
+            <img id="slideshow-img" src="" class="slideshow-image" alt="Ricetta in evidenza">
+            <div class="slideshow-overlay">
+                <div class="slideshow-title" id="slideshow-title">Caricamento...</div>
+                <div class="slideshow-season" id="slideshow-season">...</div>
+            </div>
+        </div>
+
+        <div class="lang-tabs">
+            <button class="lang-tab active" onclick="showLang('it')">🇮🇹 IT</button>
+            <button class="lang-tab" onclick="showLang('en')">🇬🇧 EN</button>
+            <button class="lang-tab" onclick="showLang('es')">🇪🇸 ES</button>
+            <button class="lang-tab" onclick="showLang('pt')">🇵🇹 PT</button>
+            <button class="lang-tab" onclick="showLang('de')">🇩🇪 DE</button>
+            <button class="lang-tab" onclick="showLang('el')">🇬🇷 EL</button>
+        </div>
+
+        <div class="description-box">
+
+            <div id="lang-it" class="lang-content active">
+                <h2>🫘 Chi Siamo</h2>
+                <p>Tutto è iniziato con hummus di ceci... <strong>Leguminando</strong> è un food blog italiano dedicato ai legumi, protagonisti assoluti di ogni ricetta. Nato dalla passione per la cucina tradizionale e dalla consapevolezza ambientale, oggi attraversa stagioni e tradizioni con un occhio sempre puntato sulla sostenibilità.</p>
+                <p>Molte ricette sono completamente vegane, altre includono carne o pesce come accompagnamento: il filo conduttore è sempre un legume al centro del piatto.</p>
+            </div>
+
+            <div id="lang-en" class="lang-content">
+                <h2>🫘 About Us</h2>
+                <p>It all started with hummus di ceci... <strong>Leguminando</strong> is an Italian food blog dedicated to legumes, the absolute protagonists of every recipe. Born from a passion for traditional cuisine and environmental awareness, it now travels through seasons and traditions with a constant focus on sustainability.</p>
+                <p>Many recipes are completely vegan, others include meat or fish as an accompaniment: the common thread is always a legume at the center of the plate.</p>
+            </div>
+
+            <div id="lang-es" class="lang-content">
+                <h2>🫘 Quiénes Somos</h2>
+                <p>Todo empezó con un hummus de garbanzos... <strong>Leguminando</strong> es un blog de cocina italiano dedicado a las legumbres, protagonistas absolutas de cada receta. Nacido de la pasión por la cocina tradicional y la conciencia ambiental, hoy recorre estaciones y tradiciones con la mirada siempre puesta en la sostenibilidad.</p>
+                <p>Muchas recetas son completamente veganas, otras incluyen carne o pescado como acompañamiento: el hilo conductor es siempre una legumbre en el centro del plato.</p>
+            </div>
+
+            <div id="lang-pt" class="lang-content">
+                <h2>🫘 Quem Somos</h2>
+                <p>Tudo começou com hummus de grão-de-bico... <strong>Leguminando</strong> é um blog de culinária italiano dedicado aos legumes, protagonistas absolutos de cada receita. Nascido da paixão pela cozinha tradicional e da consciência ambiental, hoje atravessa estações e tradições com o olhar sempre voltado para a sustentabilidade.</p>
+                <p>Muitas receitas são completamente veganas, outras incluem carne ou peixe como acompanhamento: o fio condutor é sempre um legume no centro do prato.</p>
+            </div>
+
+            <div id="lang-de" class="lang-content">
+                <h2>🫘 Über Uns</h2>
+                <p>Alles begann mit Kichererbsen-Hummus... <strong>Leguminando</strong> ist ein italienischer Food-Blog, der sich Hülsenfrüchten widmet, den absoluten Protagonisten jedes Rezepts. Geboren aus der Leidenschaft für traditionelle Küche und Umweltbewusstsein, durchquert er heute Jahreszeiten und Traditionen mit einem ständigen Blick auf Nachhaltigkeit.</p>
+                <p>Viele Rezepte sind komplett vegan, andere enthalten Fleisch oder Fisch als Beilage: Der rote Faden ist immer derselbe, eine Hülsenfrucht im Mittelpunkt des Tellers.</p>
+            </div>
+
+            <div id="lang-el" class="lang-content">
+                <h2>🫘 Ποιοι Είμαστε</h2>
+                <p>Όλα ξεκίνησαν με ένα hummus από ρεβίθια... Το <strong>Leguminando</strong> είναι ένα ιταλικό food blog αφιερωμένο στα όσπρια, τους απόλυτους πρωταγωνιστές κάθε συνταγής. Γεννημένο από το πάθος για την παραδοσιακή κουζίνα και την περιβαλλοντική συνείδηση, σήμερα διασχίζει εποχές και παραδόσεις με το βλέμμα πάντα στραμμένο στη βιωσιμότητα.</p>
+                <p>Πολλές συνταγές είναι εντελώς vegan, άλλες περιλαμβάνουν κρέας ή ψάρι ως συνοδευτικό: το κοινό νήμα είναι πάντα ένα όσπριο στο κέντρο του πιάτου.</p>
+            </div>
+        </div>
+
+        <div class="seasons-grid">
+            <a href="primavera/index.html" class="season-card spring" data-season="spring">
+                <div class="season-icon">🌸</div>
+                <div class="season-content">
+                    <h3 class="season-title" data-it="Primavera" data-en="Spring" data-es="Primavera" data-pt="Primavera" data-de="Frühling" data-el="Άνοιξη">Primavera</h3>
+                    <p class="season-desc">Fave, asparagi, piselli freschi</p>
+                </div>
+            </a>
+
+            <a href="estate/index.html" class="season-card summer" data-season="summer">
+                <div class="season-icon">☀️</div>
+                <div class="season-content">
+                    <h3 class="season-title" data-it="Estate" data-en="Summer" data-es="Verano" data-pt="Verão" data-de="Sommer" data-el="Καλοκαίρι">Estate</h3>
+                    <p class="season-desc">Insalate fresche, hummus freddi</p>
+                </div>
+            </a>
+
+            <a href="autunno/index.html" class="season-card autumn" data-season="autumn">
+                <div class="season-icon">🍂</div>
+                <div class="season-content">
+                    <h3 class="season-title" data-it="Autunno" data-en="Autumn" data-es="Otoño" data-pt="Outono" data-de="Herbst" data-el="Φθινόπωρο">Autunno</h3>
+                    <p class="season-desc">Zucche, funghi, zuppe calde</p>
+                </div>
+            </a>
+
+            <a href="inverno/index.html" class="season-card winter" data-season="winter">
+                <div class="season-icon">❄️</div>
+                <div class="season-content">
+                    <h3 class="season-title" data-it="Inverno" data-en="Winter" data-es="Invierno" data-pt="Inverno" data-de="Winter" data-el="Χειμώνας">Inverno</h3>
+                    <p class="season-desc">Zuppe nutrienti, stufati ricchi</p>
+                </div>
+            </a>
+
+            <a href="extra/index.html" class="season-card extra" data-season="extra">
+                <div class="season-icon">✨</div>
+                <div class="season-content">
+                    <h3 class="season-title" data-it="Extra" data-en="Extra" data-es="Extra" data-pt="Extra" data-de="Extra" data-el="Extra">Extra</h3>
+                    <p class="season-desc">Ricette speciali e fuori stagione</p>
+                </div>
+            </a>
+
+            <a href="preferiti.html" class="season-card preferiti" data-season="preferiti">
+                <div class="season-icon">❤️</div>
+                <div class="season-content">
+                    <h3 class="season-title" data-it="Preferiti" data-en="Favorites" data-es="Favoritos" data-pt="Favoritos" data-de="Favoriten" data-el="Αγαπημένα">Preferiti</h3>
+                    <p class="season-desc">Le tue ricette preferite</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- TABELLA RIASSUNTIVA RICETTE -->
+        <div class="stats-table-container">
+            <h2 class="stats-title">📊 <span class="season-name" data-it="Ricette per Stagione" data-en="Recipes by Season" data-es="Recetas por Temporada" data-pt="Receitas por Época" data-de="Rezepte nach Jahreszeit" data-el="Συνταγές ανά Εποχή">Ricette per Stagione</span></h2>
+            <table class="stats-table">
+                <thead>
+                    <tr>
+                        <th class="season-name" data-it="Stagione" data-en="Season" data-es="Temporada" data-pt="Época" data-de="Jahreszeit" data-el="Εποχή">Stagione</th>
+                        <th class="season-name" data-it="Ricette" data-en="Recipes" data-es="Recetas" data-pt="Receitas" data-de="Rezepte" data-el="Συνταγές">Ricette</th>
+                        <th class="season-name" data-it="Percentuale" data-en="Percentage" data-es="Porcentaje" data-pt="Percentagem" data-de="Prozentsatz" data-el="Ποσοστό">Percentuale</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="spring-row">
+                        <td><a href="primavera/index.html" class="season-link"><span class="season-emoji">🌸</span> <span class="season-name" data-it="Primavera" data-en="Spring" data-es="Primavera" data-pt="Primavera" data-de="Frühling" data-el="Άνοιξη">Primavera</span></a></td>
+                        <td><strong>78</strong></td>
+                        <td><div class="bar-container"><div class="bar" style="width: 27%;"></div><span>27%</span></div></td>
+                    </tr>
+                    <tr class="summer-row">
+                        <td><a href="estate/index.html" class="season-link"><span class="season-emoji">☀️</span> <span class="season-name" data-it="Estate" data-en="Summer" data-es="Verano" data-pt="Verão" data-de="Sommer" data-el="Καλοκαίρι">Estate</span></a></td>
+                        <td><strong>74</strong></td>
+                        <td><div class="bar-container"><div class="bar" style="width: 25%;"></div><span>25%</span></div></td>
+                    </tr>
+                    <tr class="autumn-row">
+                        <td><a href="autunno/index.html" class="season-link"><span class="season-emoji">🍂</span> <span class="season-name" data-it="Autunno" data-en="Autumn" data-es="Otoño" data-pt="Outono" data-de="Herbst" data-el="Φθινόπωρο">Autunno</span></a></td>
+                        <td><strong>81</strong></td>
+                        <td><div class="bar-container"><div class="bar" style="width: 28%;"></div><span>28%</span></div></td>
+                    </tr>
+                    <tr class="winter-row">
+                        <td><a href="inverno/index.html" class="season-link"><span class="season-emoji">❄️</span> <span class="season-name" data-it="Inverno" data-en="Winter" data-es="Invierno" data-pt="Inverno" data-de="Winter" data-el="Χειμώνας">Inverno</span></a></td>
+                        <td><strong>60</strong></td>
+                        <td><div class="bar-container"><div class="bar" style="width: 21%;"></div><span>21%</span></div></td>
+                    </tr>
+                    <tr class="extra-row">
+                        <td><a href="extra/index.html" class="season-link"><span class="season-emoji">✨</span> <span class="season-name" data-it="Extra" data-en="Extra" data-es="Extra" data-pt="Extra" data-de="Extra" data-el="Extra">Extra</span></a></td>
+                        <td><strong>7</strong></td>
+                        <td><div class="bar-container"><div class="bar" style="width: 2%;"></div><span>2%</span></div></td>
+                    </tr>
+                    <tr class="total-row">
+                        <td><strong><span class="season-emoji">🫘</span> <span class="season-name" data-it="Totale" data-en="Total" data-es="Total" data-pt="Total" data-de="Gesamt" data-el="Σύνολο">Totale</span></strong></td>
+                        <td><strong>300</strong></td>
+                        <td><div class="bar-container"><div class="bar total-bar" style="width: 100%;"></div><span>100%</span></div></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="stats-note" data-it="* Ultimo aggiornamento: 6 Agosto 2026 — Totale 300 ricette (78 Primavera, 74 Estate, 81 Autunno, 60 Inverno, 7 Extra)" data-en="* Last updated: August 6, 2026 — Total 300 recipes (78 Spring, 74 Summer, 81 Autumn, 60 Winter, 7 Extra)" data-es="* Última actualización: 6 de agosto de 2026 — Total 300 recetas (78 Primavera, 74 Verano, 81 Otoño, 60 Invierno, 7 Extra)" data-pt="* Última atualização: 6 de agosto de 2026 — Total 300 receitas (78 Primavera, 74 Verão, 81 Outono, 60 Inverno, 7 Extra)" data-de="* Letztes Update: 6. August 2026 — Insgesamt 300 Rezepte (78 Frühling, 74 Sommer, 81 Herbst, 60 Winter, 7 Extra)" data-el="* Τελευταία ενημέρωση: 6 Αυγούστου 2026 — Σύνολο 300 συνταγές (78 Άνοιξη, 74 Καλοκαίρι, 81 Φθινόπωρο, 60 Χειμώνας, 7 Extra)">* Ultimo aggiornamento: 6 Agosto 2026 — Totale 300 ricette (78 Primavera, 74 Estate, 81 Autunno, 60 Inverno, 7 Extra)</p>
+        </div>
+
+        <div class="instagram-box">
+            <h3>📷 Seguici su Instagram</h3>
+            <a href="https://instagram.com/leguminando" target="_blank">@leguminando</a>
+        </div>
+
+        <footer>
+            <p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+            <div class="footer-links">
+                <a href="https://instagram.com/leguminando" target="_blank">📷 Instagram</a>
+                <a href="feed.xml">📡 RSS Feed</a>
+            </div>
+            <div id="newsletter-form" style="margin-top:20px;text-align:center;">
+                <p style="color:#8B4513;font-size:0.9em;opacity:0.8;">📬 Newsletter in arrivo... stay tuned!</p>
+            </div>
+            <p style="margin-top: 20px; opacity: 0.7;">© 2026 Leguminando</p>
+        </footer>
+    </div>
+
+    <!-- Bottom Bar: NTP Time + View Counter -->
+    <div class="bottom-bar">
+        <div class="ntp-time">
+            <span class="sync-dot"></span>
+            <span id="ntp-server">NTP: INRIM</span>
+            <span id="current-time">--:--:--</span>
+            <span class="season-badge" id="season-badge">--</span>
+        </div>
+        <div class="view-counter" title="Visualizzazioni totali del sito">
+            <span class="eye-icon">👁</span>
+            <span class="counter-value" id="view-counter">--</span>
+            <span class="counter-label">visite</span>
+        </div>
+    </div>
+
+    <script>
+        // Language Switcher
+        function showLang(lang) {
+            currentLang = lang;
+            document.querySelectorAll('.lang-content').forEach(el => {
+                el.classList.remove('active');
+            });
+            document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
+            document.getElementById('lang-' + lang).classList.add('active');
+            event.target.classList.add('active');
+
+            document.querySelectorAll('.season-name, .season-title').forEach(el => {
+                el.textContent = el.getAttribute('data-' + lang);
+            });
+
+            // Aggiorna anche la stagione nello slideshow
+            const slide = pickRandomImage();
+            if (slide) {
+                document.getElementById('slideshow-season').textContent = seasonNames[slide.season][lang];
+            }
+        }
+
+        // Determine current season based on date
+        function getCurrentSeason() {
+            const month = new Date().getMonth() + 1;
+            if (month >= 3 && month <= 5) return 'spring';
+            if (month >= 6 && month <= 8) return 'summer';
+            if (month >= 9 && month <= 11) return 'autumn';
+            return 'winter';
+        }
+
+        // Get season name in current language
+        function getSeasonName(season, lang) {
+            const names = {
+                spring: { it: 'Primavera', en: 'Spring', es: 'Primavera', pt: 'Primavera', de: 'Frühling', el: 'Άνοιξη' },
+                summer: { it: 'Estate', en: 'Summer', es: 'Verano', pt: 'Verão', de: 'Sommer', el: 'Καλοκαίρι' },
+                autumn: { it: 'Autunno', en: 'Autumn', es: 'Otoño', pt: 'Outono', de: 'Herbst', el: 'Φθινόπωρο' },
+                winter: { it: 'Inverno', en: 'Winter', es: 'Invierno', pt: 'Inverno', de: 'Winter', el: 'Χειμώνας' }
+            };
+            return names[season][lang] || names[season]['it'];
+        }
+
+        // ===== NTP TIME SYNC =====
+        let ntpOffset = 0;
+        let currentSeason = ''; // 'primavera', 'estate', 'autunno', 'inverno'
+
+        async function syncNTPTime() {
+            try {
+                const response = await fetch('https://worldtimeapi.org/api/timezone/Europe/Rome');
+                const data = await response.json();
+                const serverTime = new Date(data.datetime);
+                const localTime = new Date();
+                ntpOffset = serverTime - localTime;
+
+                const month = serverTime.getMonth() + 1;
+                let seasonBadge = '';
+                if (month >= 3 && month <= 5) { seasonBadge = '🌸 Primavera'; currentSeason = 'primavera'; }
+                else if (month >= 6 && month <= 8) { seasonBadge = '🌞 Estate'; currentSeason = 'estate'; }
+                else if (month >= 9 && month <= 11) { seasonBadge = '🍂 Autunno'; currentSeason = 'autunno'; }
+                else { seasonBadge = '❄️ Inverno'; currentSeason = 'inverno'; }
+
+                document.getElementById('ntp-server').textContent = 'NTP: INRIM';
+                document.getElementById('season-badge').textContent = seasonBadge;
+                return serverTime;
+            } catch (e) {
+                const now = new Date();
+                const month = now.getMonth() + 1;
+                if (month >= 3 && month <= 5) currentSeason = 'primavera';
+                else if (month >= 6 && month <= 8) currentSeason = 'estate';
+                else if (month >= 9 && month <= 11) currentSeason = 'autunno';
+                else currentSeason = 'inverno';
+
+                document.getElementById('ntp-server').textContent = 'NTP: locale';
+                document.getElementById('season-badge').textContent = '📅';
+                return now;
+            }
+        }
+
+        function updateClock() {
+            const now = new Date(Date.now() + ntpOffset);
+            const timeStr = now.toLocaleTimeString('it-IT', { hour12: false });
+
+            // Stagione
+            const month = now.getMonth() + 1;
+            let season = '';
+            if (month >= 3 && month <= 5) season = '🌸 Primavera';
+            else if (month >= 6 && month <= 8) season = '🌞 Estate';
+            else if (month >= 9 && month <= 11) season = '🍂 Autunno';
+            else season = '❄️ Inverno';
+
+            document.getElementById('current-time').textContent = timeStr + ' | ' + season;
+        }
+
+        // ===== CONTATORE VISUALIZZAZIONI GLOBALE =====
+        // Servizio: abacus.jasoncameron.dev — contatore condiviso, incrementa ad ogni visita (non per IP/device)
+        async function initViewCounter() {
+            try {
+                const resp = await fetch('https://abacus.jasoncameron.dev/hit/leguminando/home');
+                const data = await resp.json();
+                const el = document.getElementById('view-counter');
+                if (el) el.textContent = data.value.toLocaleString('it-IT');
+            } catch (e) {
+                console.log('Contatore non disponibile');
+            }
+        }
+
+        // ===== IMMAGINI FISSE PER STAGIONE (selezionate da Mike) =====
+        const SEASONAL_IMAGES = {
+            primavera: [
+                'immagini_stagionali/primavera/007.jpg',   // 2026-03-30
+                'immagini_stagionali/primavera/008.jpg',   // 2026-03-30
+                'immagini_stagionali/primavera/020.jpg',   // 2026-03-07
+                'immagini_stagionali/primavera/021.jpg',   // 2026-03-07
+                'immagini_stagionali/primavera/022.jpg',   // 2026-03-05
+                'immagini_stagionali/primavera/025.jpg',   // 2025-05-31
+                'immagini_stagionali/primavera/031.jpg'    // 2025-05-20
+            ],
+            estate: [
+                'immagini_stagionali/estate/009.jpg',      // 2026-06-27
+                'immagini_stagionali/estate/010.jpg',      // 2026-06-27
+                'immagini_stagionali/estate/012.jpg',      // 2026-06-15
+                'immagini_stagionali/estate/013.jpg',      // 2026-06-15
+                'immagini_stagionali/estate/014.jpg',      // 2026-06-15
+                'immagini_stagionali/estate/015.jpg',      // 2026-06-15
+                'immagini_stagionali/estate/028.jpg',      // 2025-08-15
+                'immagini_stagionali/estate/029.jpg',      // 2025-08-14
+                'immagini_stagionali/estate/033.jpg'       // 2025-08-08
+            ],
+            autunno: [
+                'immagini_stagionali/autunno/001.jpg',      // 2025-11-28
+                'immagini_stagionali/autunno/007.jpg',      // 2025-11-09
+                'immagini_stagionali/autunno/010.jpg',      // 2025-11-05
+                'immagini_stagionali/autunno/021.jpg',      // 2025-10-12
+                'immagini_stagionali/autunno/030.jpg',      // 2025-09-20
+                'immagini_stagionali/autunno/067.jpg',      // 2024-10-11
+                'immagini_stagionali/autunno/068.jpg'       // 2024-10-11
+            ],
+            inverno: [
+                'immagini_stagionali/inverno/004.jpg',      // 2026-02-08
+                'immagini_stagionali/inverno/005.jpg',      // 2026-02-06
+                'immagini_stagionali/inverno/007.jpg',      // 2026-01-31
+                'immagini_stagionali/inverno/009.jpg',      // 2026-01-24
+                'immagini_stagionali/inverno/010.jpg',      // 2026-01-21
+                'immagini_stagionali/inverno/013.jpg'       // 2026-01-10
+            ]
+        };
+
+        const seasonNames = {
+            primavera: { it: 'Primavera', en: 'Spring', es: 'Primavera', pt: 'Primavera', de: 'Frühling', el: 'Άνοιξη' },
+            estate: { it: 'Estate', en: 'Summer', es: 'Verano', pt: 'Verão', de: 'Sommer', el: 'Καλοκαίρι' },
+            autunno: { it: 'Autunno', en: 'Autumn', es: 'Otoño', pt: 'Outono', de: 'Herbst', el: 'Φθινόπωρο' },
+            inverno: { it: 'Inverno', en: 'Winter', es: 'Invierno', pt: 'Inverno', de: 'Winter', el: 'Χειμώνας' }
+        };
+
+        let currentLang = 'it';
+
+        function pickRandomSeasonalImage() {
+            // Ottieni array immagini per la stagione corrente
+            const images = SEASONAL_IMAGES[currentSeason] || SEASONAL_IMAGES['estate'];
+            if (!images || images.length === 0) return null;
+            // Seleziona una a caso
+            const randomIndex = Math.floor(Math.random() * images.length);
+            return images[randomIndex];
+        }
+
+        function loadHeroImage() {
+            const imgPath = pickRandomSeasonalImage();
+            if (!imgPath) return;
+            
+            const img = document.getElementById('slideshow-img');
+            const caption = document.getElementById('slideshow-season');
+            const title = document.getElementById('slideshow-title');
+            
+            img.src = imgPath;
+            
+            // Se l'immagine non esiste, riprova con un'altra
+            img.onerror = () => {
+                console.log('Immagine non trovata, riprovo...');
+                const newPath = pickRandomSeasonalImage();
+                if (newPath && newPath !== imgPath) {
+                    img.src = newPath;
+                }
+            };
+            
+            // Mostra nome stagione
+            const seasonName = seasonNames[currentSeason] ? seasonNames[currentSeason][currentLang] : currentSeason;
+            if (caption) caption.textContent = seasonName;
+            if (title) title.textContent = '🫘 Leguminando';
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', async function() {
+            // Prima sincronizza NTP per sapere la stagione
+            await syncNTPTime();
+
+            // Carica un'immagine random della stagione attuale
+            loadHeroImage();
+
+            // Clock
+            updateClock();
+            setInterval(updateClock, 1000);
+            setInterval(syncNTPTime, 5 * 60 * 1000); // re-sync ogni 5 min
+
+            // Counter
+            initViewCounter();
+        });
+    </script>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

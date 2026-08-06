@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quinoa con Ceci Secchi - Variante Piccante | Leguminando</title>
+<meta name="description" content="Quinoa con Ceci Secchi - Variante Piccante">
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%); color: #333; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 30px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.header h1 { margin: 0; font-size: 2.2em; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+.header p { margin: 10px 0 0 0; font-size: 1.1em; opacity: 0.9; }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border: 2px solid #D2691E; background: white; color: #8B4513; border-radius: 20px; cursor: pointer; font-size: 0.85em; transition: all 0.3s; }
+.lang-tab:hover { background: #faf8f5; }
+.lang-tab.active { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; }
+.lang-content { display: none; }
+.lang-content.active { display: block; }
+.content { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.recipe-image { width: 100%; max-width: 700px; height: 400px; object-fit: cover; border-radius: 12px; margin: 0 auto 30px auto; display: block; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.section { margin-bottom: 30px; }
+.section h2 { color: #8B4513; border-bottom: 3px solid #D2691E; padding-bottom: 10px; margin-bottom: 20px; font-size: 1.5em; }
+.section h3 { color: #D2691E; margin: 20px 0 10px 0; font-size: 1.2em; }
+.ingredients-list { background: #faf8f5; padding: 20px; border-radius: 10px; border-left: 5px solid #D2691E; }
+.ingredients-list ul { list-style: none; padding: 0; }
+.ingredients-list li { padding: 8px 0; border-bottom: 1px dashed #e0d5c8; }
+.ingredients-list li:last-child { border-bottom: none; }
+.ingredients-list li:before { content: "🫘 "; margin-right: 8px; }
+.steps-list { counter-reset: step; }
+.steps-list li { counter-increment: step; padding: 15px 0 15px 50px; position: relative; border-bottom: 1px solid #eee; }
+.steps-list li:last-child { border-bottom: none; }
+.steps-list li::before { content: counter(step); position: absolute; left: 0; top: 10px; background: #8B4513; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em; }
+.footer { text-align: center; margin-top: 40px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 20px 0; padding: 12px 24px; background: linear-gradient(135deg, #8B4513, #D2691E); color: white; text-decoration: none; border-radius: 25px; font-size: 1em; transition: transform 0.2s; }
+.back-link:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+@media print {
+    .lang-tabs { display: none !important; }
+    .lang-content { display: block !important; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>🫘 Leguminando</h1>
+<p>Ricette a base di legumi</p>
+</div>
+
+<div class="content">
+<div style="text-align: center; margin: -20px 0 20px 0;">
+<span style="display: inline-block; padding: 8px 16px; background: linear-gradient(135deg, #D2691E, #8B4513); color: white; border-radius: 20px; font-size: 0.9em;">📅 Stagione: Estate ☀️</span>
+</div>
+<img src="quinoa_ceci_secchi_variante.jpg" alt="Quinoa con Ceci Secchi - Variante" class="recipe-image">
+
+<div class="fav-bar" style="text-align:center;margin:5px 0;">
+<span class="fav-btn" data-path="extra/quinoa_ceci_secchi_variante.html" onclick="event.stopPropagation();toggleFav('extra/quinoa_ceci_secchi_variante.html', 'Quinoa con Ceci Secchi - Variante')">🤍</span> Aggiungi ai preferiti
+</div>
+
+<div class="lang-tabs">
+<span class="lang-tab active" data-lang="it" onclick="switchLang('it')">🇮🇹 IT</span>
+<span class="lang-tab" data-lang="en" onclick="switchLang('en')">🇬🇧 EN</span>
+<span class="lang-tab" data-lang="es" onclick="switchLang('es')">🇪🇸 ES</span>
+<span class="lang-tab" data-lang="pt" onclick="switchLang('pt')">🇵🇹 PT</span>
+<span class="lang-tab" data-lang="de" onclick="switchLang('de')">🇩🇪 DE</span>
+<span class="lang-tab" data-lang="el" onclick="switchLang('el')">🇬🇷 EL</span>
+</div>
+
+<div id="lang-it" class="lang-content active">
+<div class="section">
+<h2>🌾 Quinoa con Ceci Secchi - Variante Piccante</h2>
+<h3>Ingredienti:</h3>
+<div class="ingredients-list">
+<ul>
+<li>150g di quinoa</li>
+<li>150g di ceci secchi (o 300g precotti)</li>
+<li>3 pomodori maturi</li>
+<li>1 cipolla rossa</li>
+<li>1 peperoncino fresco</li>
+<li>Olio extravergine d'oliva q.b.</li>
+<li>Sale e pepe q.b.</li>
+<li>Succo di limone</li>
+<li>Prezzemolo fresco</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparazione</h2>
+<ol class="steps-list">
+<li>Se usi i ceci secchi, mettili in ammollo per 12 ore e cuocili per 1 ora.</li>
+<li>Cuoci la quinoa in acqua salata per 15 minuti, poi scolala.</li>
+<li>Taglia i pomodori a cubetti, la cipolla a fette sottili.</li>
+<li>Trita il peperoncino (usa guanti!).</li>
+<li>In una ciotola, mescola la quinoa con ceci, pomodori e cipolla.</li>
+<li>Aggiungi il peperoncino, olio EVO, sale, pepe e limone.</li>
+<li>Guarnisci con prezzemolo fresco e servi.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Consigli</h2>
+<p>Questa variante piccante è ideale per chi ama i sapori decisi. Il peperoncino accelera il metabolismo e dà un tocco di carattere al piatto. Regola la quantità di peperoncino in base alle tue preferenze.</p>
+</div>
+</div>
+
+<div id="lang-en" class="lang-content">
+<div class="section">
+<h2>🌾 Quinoa with Dried Chickpeas - Spicy Variant</h2>
+<h3>Ingredients:</h3>
+<div class="ingredients-list">
+<ul>
+<li>150g quinoa</li>
+<li>150g dried chickpeas (or 300g precooked)</li>
+<li>3 ripe tomatoes</li>
+<li>1 red onion</li>
+<li>1 fresh chili pepper</li>
+<li>Extra virgin olive oil to taste</li>
+<li>Salt and pepper to taste</li>
+<li>Lemon juice</li>
+<li>Fresh parsley</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparation</h2>
+<ol class="steps-list">
+<li>If using dried chickpeas, soak them for 12 hours and cook for 1 hour.</li>
+<li>Cook the quinoa in salted water for 15 minutes, then drain.</li>
+<li>Dice the tomatoes, slice the red onion thinly.</li>
+<li>Finely chop the chili pepper (wear gloves!).</li>
+<li>In a bowl, mix the quinoa with chickpeas, tomatoes and onion.</li>
+<li>Add the chili pepper, EVO oil, salt, pepper and lemon.</li>
+<li>Garnish with fresh parsley and serve.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Tips</h2>
+<p>This spicy variant is ideal for those who love bold flavors. Chili pepper speeds up metabolism and adds character to the dish. Adjust the amount of chili according to your preferences.</p>
+</div>
+</div>
+
+<div id="lang-es" class="lang-content">
+<div class="section">
+<h2>🌾 Quinoa con Garbanzos Secos - Variante Picante</h2>
+<h3>Ingredientes:</h3>
+<div class="ingredients-list">
+<ul>
+<li>150g de quinoa</li>
+<li>150g de garbanzos secos (o 300g precocidos)</li>
+<li>3 tomates maduros</li>
+<li>1 cebolla roja</li>
+<li>1 guindilla fresca</li>
+<li>Aceite de oliva virgen extra al gusto</li>
+<li>Sal y pimienta al gusto</li>
+<li>Zumo de limon</li>
+<li>Perejil fresco</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparacion</h2>
+<ol class="steps-list">
+<li>Si utiliza garbanzos secos, pongalos en remojo durante 12 horas y cuezalos durante 1 hora.</li>
+<li>Cocina la quinoa en agua salada durante 15 minutos, luego escurrirla.</li>
+<li>Corta los tomates en cubitos, la cebolla roja en rodajas finas.</li>
+<li>Pique finamente la guindilla (use guantes!).</li>
+<li>En un bol, mezcla la quinoa con garbanzos, tomates y cebolla.</li>
+<li>Anade la guindilla, aceite EVO, sal, pimienta y limon.</li>
+<li>Decore con perejil fresco y sirva.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Consejos</h2>
+<p>Esta variante picante es ideal para quienes aman los sabores intensos. La guindilla acelera el metabolismo y anade caracter al plato. Ajuste la cantidad de guindilla segun sus preferencias.</p>
+</div>
+</div>
+
+<div id="lang-pt" class="lang-content">
+<div class="section">
+<h2>🌾 Quinoa com Grao-de-Bico Seco - Variante Picante</h2>
+<h3>Ingredientes:</h3>
+<div class="ingredients-list">
+<ul>
+<li>150g de quinoa</li>
+<li>150g de grao-de-bico seco (ou 300g pre-cozido)</li>
+<li>3 tomates maduros</li>
+<li>1 cebola roxa</li>
+<li>1 malagueta fresca</li>
+<li>Azeite extra virgem a gosto</li>
+<li>Sal e pimenta a gosto</li>
+<li>Sumo de limao</li>
+<li>Salsa fresca</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparacao</h2>
+<ol class="steps-list">
+<li>Se utilizar grao-de-bico seco, coloque-o de molho durante 12 horas e coza durante 1 hora.</li>
+<li>Cozinhe a quinoa em agua salgada durante 15 minutos, depois escorra.</li>
+<li>Corte os tomates em cubinhos, a cebola roxa em rodelas finas.</li>
+<li>Pique finamente a malagueta (use luvas!).</li>
+<li>Numa tigela, misture a quinoa com grao-de-bico, tomates e cebola.</li>
+<li>Junte a malagueta, azeite EVO, sal, pimenta e limao.</li>
+<li>Decore com salsa fresca e sirva.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Dicas</h2>
+<p>Esta variante picante e ideal para quem gosta de sabores fortes. A malagueta acelera o metabolismo e da um toque de carater ao prato. Ajuste a quantidade de malagueta de acordo com as suas preferencias.</p>
+</div>
+</div>
+
+<div id="lang-de" class="lang-content">
+<div class="section">
+<h2>🌾 Quinoa mit getrockneten Kichererbsen - Scharfe Variante</h2>
+<h3>Zutaten:</h3>
+<div class="ingredients-list">
+<ul>
+<li>150g Quinoa</li>
+<li>150g getrocknete Kichererbsen (oder 300g vorgekochte)</li>
+<li>3 reife Tomaten</li>
+<li>1 rote Zwiebel</li>
+<li>1 frische Chili-Schote</li>
+<li>Natives Olivenoel extra nach Geschmack</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Zitronensaft</li>
+<li>Frische Petersilie</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Zubereitung</h2>
+<ol class="steps-list">
+<li>Wenn Sie getrocknete Kichererbsen verwenden, legen Sie sie 12 Stunden ein und kochen Sie sie 1 Stunde.</li>
+<li>Die Quinoa in Salzwasser 15 Minuten kochen, dann abtropfen lassen.</li>
+<li>Die Tomaten wuerfeln, die rote Zwiebel in duenne Scheiben schneiden.</li>
+<li>Die Chili-Schote fein hacken (Handschuhe tragen!).</li>
+<li>In einer Schuessel Quinoa mit Kichererbsen, Tomaten und Zwiebel vermischen.</li>
+<li>Chili, natives Olivenoel, Salz, Pfeffer und Zitrone hinzufuegen.</li>
+<li>Mit frischer Petersilie garnieren und servieren.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Tipps</h2>
+<p>Diese scharfe Variante ist ideal fuer Liebhaber von kraeftigen Aromen. Chili beschleunigt den Stoffwechsel und verleiht dem Gericht Charakter. Die Menge an Chili nach Ihrem Geschmack anpassen.</p>
+</div>
+</div>
+
+<div id="lang-el" class="lang-content">
+<div class="section">
+<h2>🌾 Κινόα με Ξερά Ρεβίθια - Πικάντικη Εκδοχή</h2>
+<h3>Συστατικά:</h3>
+<div class="ingredients-list">
+<ul>
+<li>150g κινόα</li>
+<li>150g ξερά ρεβίθια (ή 300g προψημένα)</li>
+<li>3 ώριμες ντομάτες</li>
+<li>1 κόκκινο κρεμμύδι</li>
+<li>1 φρέσκια καυτερή πιπεριά</li>
+<li>Έξτρα παρθένο ελαιόλαδο κατά βούληση</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>Χυμός λεμονιού</li>
+<li>Φρέσκο μαϊντανό</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Εκτέλεση</h2>
+<ol class="steps-list">
+<li>Αν χρησιμοποιείτε ξερά ρεβίθια, μουσκέψτε τα για 12 ώρες και βράστε τα για 1 ώρα.</li>
+<li>Βράστε την κινόα σε αλατισμένο νερό για 15 λεπτά, μετά στραγγίστε την.</li>
+<li>Κόψτε τις ντομάτες σε κύβους, το κόκκινο κρεμμύδι σε λεπτές φέτες.</li>
+<li>Ψιλοκόψτε την καυτερή πιπεριά (φορέστε γάντια!).</li>
+<li>Σε ένα μπολ, αναμείξτε την κινόα με ρεβίθια, ντομάτες και κρεμμύδι.</li>
+<li>Προσθέστε την καυτερή πιπεριά, ελαιόλαδο, αλάτι, πιπέρι και λεμόνι.</li>
+<li>Γαρνίρετε με φρέσκο μαϊντανό και σερβίρετε.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Συμβουλές</h2>
+<p>Αυτή η πικάντικη εκδοχή είναι ιδανική για όσους αγαπούν έντονες γεύσεις. Η καυτερή πιπεριά επιταχύνει τον μεταβολισμό και δίνει χαρακτήρα στο πιάτο. Ρυθμίστε την ποσότητα καυτερής πιπεριάς σύμφωνα με τις προτιμήσεις σας.</p>
+</div>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette a base di legumi</p>
+<a href="../index.html" class="back-link">← Torna alla Home</a>
+</div>
+
+<script>
+function switchLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(c => c.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+    document.querySelector('.lang-tab[data-lang="' + lang + '"]').classList.add('active');
+    localStorage.setItem('preferredLang', lang);
+}
+</script>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

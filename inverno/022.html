@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cotechino in Crosta con Lenticchie e Porri | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Cotechino in Crosta con Lenticchie e Porri">
+<meta property="og:title" content="Cotechino in Crosta con Lenticchie e Porri | Leguminando">
+<meta property="og:description" content="Cotechino in Crosta con Lenticchie e Porri">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="inverno/022.html" data-title="Cotechino in Crosta con Lenticchie e Porri" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="022.jpg" alt="Cotechino in Crosta con Lenticchie e Porri" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-12-22</p>
+<p><strong>Meta:</strong> 4-6 porzioni | Tradizione</p>
+<p><strong>Descrizione:</strong> Cotechino avvolto in una crosta fragrante di farina di carrube e lenticchie, con un ricco ripieno di lenticchie e porri stufati. Un piatto della tradizione rivisitato.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>1 cotechino (circa 500 g)</li>
+<li>200 g di lenticchie cotte</li>
+<li>2 porri, tagliati a rondelle</li>
+<li>2 cucchiai di olio extravergine d'oliva</li>
+<li>Sale e pepe q.b.</li>
+</ul>
+<p><strong>Per la crosta:</strong></p>
+<ul>
+<li>150 g di farina di carrube</li>
+<li>150 g di farina di lenticchie</li>
+<li>100 ml di acqua tiepida</li>
+<li>1 cucchiaino di lievito di birra secco</li>
+<li>1 cucchiaino di zucchero</li>
+<li>1 cucchiaio di olio extravergine d'oliva</li>
+<li>1 pizzico di sale</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparazione della crosta:</strong> Sciogli il lievito e lo zucchero nell'acqua tiepida. Lascia riposare 5-10 minuti finché non diventa schiumoso. In una ciotola, mescola le due farine con il sale. Aggiungi il composto di lievito e l'olio. Impasta fino a ottenere un impasto omogeneo e liscio. Copri e lascia lievitare circa 1 ora o fino al raddoppio.</p>
+<p>2. <strong>Preparazione del ripieno:</strong> In una padella, scalda l'olio e aggiungi i porri. Cuoci a fuoco medio finché non diventano morbidi. Aggiungi le lenticchie cotte, sale e pepe, e mescola bene. Lascia raffreddare.</p>
+<p>3. <strong>Preparazione del cotechino:</strong> Cuoci il cotechino secondo le istruzioni della confezione. Una volta cotto, rimuovi la pelle e lascialo raffreddare leggermente.</p>
+<p>4. <strong>Assemblaggio:</strong> Su una superficie infarinata, stendi l'impasto lievitato fino a ottenere un rettangolo abbastanza grande da avvolgere il cotechino. Distribuisci il mix di lenticchie e porri sull'impasto, lasciando un bordo libero. Posiziona il cotechino al centro. Arrotola delicatamente l'impasto attorno al cotechino, sigillando bene i bordi.</p>
+<p>5. <strong>Cottura:</strong> Posiziona il cotechino in crosta su una teglia rivestita di carta da forno. Cuoci in forno preriscaldato a 200°C per circa 25-30 minuti, finché la crosta non è dorata e croccante.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-12-22</p>
+<p><strong>Meta:</strong> 4-6 servings | Traditional</p>
+<p><strong>Description:</strong> Cotechino wrapped in a fragrant crust of carob and lentil flour, with a rich filling of stewed lentils and leeks. A traditional dish with a modern twist.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>1 cotechino (about 500 g)</li>
+<li>200 g cooked lentils</li>
+<li>2 leeks, sliced into rounds</li>
+<li>2 tablespoons extra virgin olive oil</li>
+<li>Salt and pepper to taste</li>
+</ul>
+<p><strong>For the crust:</strong></p>
+<ul>
+<li>150 g carob flour</li>
+<li>150 g lentil flour</li>
+<li>100 ml lukewarm water</li>
+<li>1 teaspoon dried brewer's yeast</li>
+<li>1 teaspoon sugar</li>
+<li>1 tablespoon extra virgin olive oil</li>
+<li>A pinch of salt</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Prepare the crust:</strong> Dissolve the yeast and sugar in lukewarm water. Let rest 5-10 minutes until foamy. In a bowl, mix both flours with salt. Add the yeast mixture and oil. Knead until smooth and homogeneous. Cover and let rise about 1 hour or until doubled.</p>
+<p>2. <strong>Prepare the filling:</strong> In a pan, heat the oil and add the leeks. Cook over medium heat until soft. Add cooked lentils, salt and pepper, and mix well. Let cool.</p>
+<p>3. <strong>Prepare the cotechino:</strong> Cook the cotechino according to package instructions. Once cooked, remove the skin and let cool slightly.</p>
+<p>4. <strong>Assembly:</strong> On a floured surface, roll out the risen dough into a rectangle large enough to wrap the cotechino. Spread the lentil and leek mix over the dough, leaving a border. Place the cotechino in the centre. Roll the dough gently around the cotechino, sealing the edges well.</p>
+<p>5. <strong>Cooking:</strong> Place the cotechino in crust on a baking tray lined with parchment paper. Bake in a preheated oven at 200°C for about 25-30 minutes, until the crust is golden and crispy.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-12-22</p>
+<p><strong>Meta:</strong> 4-6 porciones | Tradicional</p>
+<p><strong>Descripción:</strong> Cotechino envuelto en una fragante corteza de harina de algarroba y lentejas, con un rico relleno de lentejas y puerros estofados. Un plato tradicional revisitado.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>1 cotechino (unos 500 g)</li>
+<li>200 g de lentejas cocidas</li>
+<li>2 puerros, cortados en rodajas</li>
+<li>2 cucharadas de aceite de oliva virgen extra</li>
+<li>Sal y pimienta c.s.</li>
+</ul>
+<p><strong>Para la corteza:</strong></p>
+<ul>
+<li>150 g de harina de algarroba</li>
+<li>150 g de harina de lentejas</li>
+<li>100 ml de agua tibia</li>
+<li>1 cucharadita de levadura de cerveza seca</li>
+<li>1 cucharadita de azúcar</li>
+<li>1 cucharada de aceite de oliva virgen extra</li>
+<li>1 pizca de sal</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparar la corteza:</strong> Disuelve la levadura y el azúcar en agua tibia. Deja reposar 5-10 minutos hasta que espume. En un bol, mezcla las dos harinas con la sal. Añade la mezcla de levadura y el aceite. Amasa hasta obtener una masa homogénea y lisa. Cubre y deja levar unos 60 minutos o hasta que doble su volumen.</p>
+<p>2. <strong>Preparar el relleno:</strong> En una sartén, calienta el aceite y añade los puerros. Sofríe a fuego medio hasta que estén tiernos. Incorpora las lentejas cocidas, sal y pimienta, y remueve bien. Deja enfriar.</p>
+<p>3. <strong>Preparar el cotechino:</strong> Cocina el cotechino según las instrucciones del envase. Una vez cocido, retira la piel y deja enfriar ligeramente.</p>
+<p>4. <strong>Montaje:</strong> Sobre una superficie enharinada, extiende la masa levada hasta obtener un rectángulo lo suficientemente grande para envolver el cotechino. Distribuye la mezcla de lentejas y puerros sobre la masa, dejando un borde libre. Coloca el cotechino en el centro. Enrolla la masa delicadamente alrededor del cotechino, sellando bien los bordes.</p>
+<p>5. <strong>Cocción:</strong> Coloca el cotechino en corteza sobre una bandeja forrada con papel de horno. Hornea en horno precalentado a 200°C unos 25-30 minutos, hasta que la corteza esté dorada y crujiente.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-12-22</p>
+<p><strong>Meta:</strong> 4-6 porções | Tradição</p>
+<p><strong>Descrição:</strong> Cotechino envolvido numa crosta fragrante de farinha de alfarroba e lentilhas, com um rico recheio de lentilhas e alho-porro estufados. Um prato tradicional revisitado.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>1 cotechino (cerca de 500 g)</li>
+<li>200 g de lentilhas cozidas</li>
+<li>2 alho-porros, cortados em rodelas</li>
+<li>2 colheres de sopa de azeite extra virgem</li>
+<li>Sal e pimenta q.b.</li>
+</ul>
+<p><strong>Para a crosta:</strong></p>
+<ul>
+<li>150 g de farinha de alfarroba</li>
+<li>150 g de farinha de lentilhas</li>
+<li>100 ml de água morna</li>
+<li>1 colher de chá de fermento de cerveja seco</li>
+<li>1 colher de chá de açúcar</li>
+<li>1 colher de sopa de azeite extra virgem</li>
+<li>1 pitada de sal</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparar a crosta:</strong> Dissolve o fermento e o açúcar na água morna. Deixa repousar 5-10 minutos até fazer espuma. Numa tigela, mistura as duas farinhas com o sal. Adiciona a mistura de fermento e o azeite. Amasa até obter uma massa homogénea e lisa. Cobre e deixa levedar cerca de 1 hora ou até duplicar de volume.</p>
+<p>2. <strong>Preparar o recheio:</strong> Numa frigideira, aquece o azeite e adiciona os alho-porros. Cozinha em lume médio até ficarem macios. Junta as lentilhas cozidas, sal e pimenta, e mistura bem. Deixa arrefecer.</p>
+<p>3. <strong>Preparar o cotechino:</strong> Cozinha o cotechino de acordo com as instruções da embalagem. Uma vez cozido, remove a pele e deixa arrefecer ligeiramente.</p>
+<p>4. <strong>Montagem:</strong> Numa superfície enfarinhada, estende a massa levedada até obter um rectângulo grande o suficiente para envolver o cotechino. Distribui a mistura de lentilhas e alho-porros sobre a massa, deixando uma borda livre. Coloca o cotechino no centro. Enrola a massa delicadamente em volta do cotechino, selando bem as bordas.</p>
+<p>5. <strong>Cozedura:</strong> Coloca o cotechino em crosta num tabuleiro forrado com papel de forno. Coze em forno pré-aquecido a 200°C durante cerca de 25-30 minutos, até a crosta estar dourada e crocante.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-12-22</p>
+<p><strong>Meta:</strong> 4-6 Portionen | Traditionell</p>
+<p><strong>Beschreibung:</strong> Cotechino in einer duftenden Kruste aus Johannisbrot- und Linsenmehl, mit einer reichhaltigen Füllung aus geschmorten Linsen und Porree. Ein traditionelles Gericht neu interpretiert.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>1 Cotechino (etwa 500 g)</li>
+<li>200 g gekochte Linsen</li>
+<li>2 Porree, in Scheiben geschnitten</li>
+<li>2 Esslöffel natives Olivenöl extra</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+</ul>
+<p><strong>Für die Kruste:</strong></p>
+<ul>
+<li>150 g Johannisbrotmehl</li>
+<li>150 g Linsenmehl</li>
+<li>100 ml lauwarmes Wasser</li>
+<li>1 Teelöffel trockene Bierhefe</li>
+<li>1 Teelöffel Zucker</li>
+<li>1 Esslöffel natives Olivenöl extra</li>
+<li>1 Prise Salz</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Kruste zubereiten:</strong> Hefe und Zucker in lauwarmem Wasser auflösen. 5-10 Minuten ruhen lassen, bis es schäumt. In einer Schüssel beide Mehlsorten mit Salz vermischen. Hefemischung und Öl zugeben. Zu einem glatten, homogenen Teig kneten. Abdecken und etwa 1 Stunde oder bis zur Verdopplung gehen lassen.</p>
+<p>2. <strong>Füllung zubereiten:</strong> In einer Pfanne Öl erhitzen und Porree zugeben. Bei mittlerer Hitze dünsten, bis weich. Gekochte Linsen, Salz und Pfeffer zugeben und gut vermischen. Abkühlen lassen.</p>
+<p>3. <strong>Cotechino zubereiten:</strong> Den Cotechino nach Packungsanweisung kochen. Danach die Haut entfernen und etwas abkühlen lassen.</p>
+<p>4. <strong>Zusammensetzen:</strong> Auf einer bemehlten Fläche den aufgegangenen Teig zu einem Rechteck ausrollen, das groß genug ist, um den Cotechino zu umwickeln. Die Linsen-Porree-Mischung auf dem Teig verteilen, dabei einen Rand frei lassen. Den Cotechino in die Mitte setzen. Den Teig vorsichtig um den Cotechino rollen und die Ränder gut verschließen.</p>
+<p>5. <strong>Garen:</strong> Den Cotechino in Kruste auf ein mit Backpapier belegtes Blech legen. Im vorgeheizten Ofen bei 200°C etwa 25-30 Minuten backen, bis die Kruste goldbraun und knusprig ist.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-12-22</p>
+<p><strong>Meta:</strong> 4-6 μερίδες | Παραδοσιακό</p>
+<p><strong>Περιγραφή:</strong> Κοτετσίνο τυλιγμένο σε αρωματική κρούστα από αλεύρι χαρουπιού και φακής, με πλούσια γέμιση από φακές και πράσο σοταρισμένα. Ένα παραδοσιακό πιάτο επαναπροσδιορισμένο.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>1 κοτετσίνο (περίπου 500 γρ)</li>
+<li>200 γρ μαγειρεμένες φακές</li>
+<li>2 πράσα, κομμένα σε ροδέλες</li>
+<li>2 κουταλιές της σούπας ελαιόλαδο</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+</ul>
+<p><strong>Για την κρούστα:</strong></p>
+<ul>
+<li>150 γρ αλεύρι χαρουπιού</li>
+<li>150 γρ αλεύρι φακής</li>
+<li>100 ml χλιαρό νερό</li>
+<li>1 κουταλάκι του γλυκού ξηρή μαγιά μπύρας</li>
+<li>1 κουταλάκι του γλυκού ζάχαρη</li>
+<li>1 κουταλιά της σούπας ελαιόλαδο</li>
+<li>1 πρέζα αλάτι</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία κρούστας:</strong> Διάλυσε τη μαγιά και τη ζάχαρη στο χλιαρό νερό. Άφησε να ξεκουραστεί 5-10 λεπτά μέχρι να αφρίσει. Σε ένα μπολ, ανακάτεψε τα δύο αλεύρια με το αλάτι. Πρόσθεσε το μείγμα μαγιάς και το λάδι. Ζύμωσε μέχρι να πάρεις μια λεία και ομοιογενή ζύμη. Σκέπασε και άφησε να φουσκώσει περίπου 1 ώρα ή μέχρι να διπλασιαστεί.</p>
+<p>2. <strong>Προετοιμασία γέμισης:</strong> Σε ένα τηγάνι, ζέστανε το λάδι και πρόσθεσε τα πράσα. Σοτάρε σε μέτρια φωτιά μέχρι να μαλακώσουν. Πρόσθεσε τις μαγειρεμένες φακές, αλάτι και πιπέρι, και ανακάτεψε καλά. Άφησε να κρυώσει.</p>
+<p>3. <strong>Προετοιμασία κοτετσίνο:</strong> Ψήσε το κοτετσίνο σύμφωνα με τις οδηγίες συσκευασίας. Μόλις ψηθεί, αφαίρεσε το πετσί και άφησε να κρυώσει ελαφρά.</p>
+<p>4. <strong>Συναρμολόγηση:</strong> Σε μια αλευρωμένη επιφάνεια, άνοιξε τη φουσκωμένη ζύμη σε ένα ορθογώνιο αρκετά μεγάλο για να τυλίξει το κοτετσίνο. Άπλωσε το μείγμα φακών και πράσου πάνω στη ζύμη, αφήνοντας ένα περιθώριο. Τοποθέτησε το κοτετσίνο στο κέντρο. Τύλιξε τη ζύμη προσεκτικά γύρω από το κοτετσίνο, σφραγίζοντας καλά τις άκρες.</p>
+<p>5. <strong>Ψήσιμο:</strong> Τοποθέτησε το κοτετσίνο σε κρούστα σε ένα ταψί στρωμένο με λαδόκολλα. Ψήσε σε προθερμασμένο φούρνο στους 200°C για περίπου 25-30 λεπτά, μέχρι η κρούστα να ροδίσει και να γίνει τραγανή.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

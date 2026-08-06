@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Risotto con Piselli e Speck | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Risotto con Piselli e Speck">
+<meta property="og:title" content="Risotto con Piselli e Speck | Leguminando">
+<meta property="og:description" content="Risotto con Piselli e Speck">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="estate/018.html" data-title="Risotto con Piselli e Speck" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="018.jpg" alt="Risotto con Piselli e Speck" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2026-06-09</p>
+<p><strong>Meta:</strong> 4 porzioni | Carne</p>
+<p><strong>Descrizione:</strong> Risotto cremoso con piselli dolci e speck croccante, mantecato con parmigiano.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>320 g di riso Carnaroli o Arborio</li>
+<li>120 g di speck affumicato, tagliato a listarelle</li>
+<li>250 g di piselli surgelati</li>
+<li>150 ml di panna da cucina</li>
+<li>1,2-1,4 L di brodo vegetale caldo</li>
+<li>1 cipolla piccola (60-70 g), tritata finemente</li>
+<li>70 ml di vino bianco secco</li>
+<li>30 g di burro (20 g per mantecatura, 10 g per soffritto)</li>
+<li>1 cucchiaio di olio extravergine d'oliva</li>
+<li>60-80 g di parmigiano Reggiano grattugiato</li>
+<li>Sale e pepe nero q.b.</li>
+<li>Prezzemolo fresco tritato per guarnire (opzionale)</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparazione base:</strong> Porta il brodo a leggero bollore e mantienilo caldo a fiamma bassissima. Scongela i piselli, se necessario, e scolali.</p>
+<p>2. <strong>Soffritto:</strong> In una casseruola ampia, scalda l'olio e 10 g di burro. Aggiungi la cipolla tritata e falla appassire dolcemente senza farla colorire per 3-4 minuti.</p>
+<p>3. <strong>Tostatura:</strong> Unisci il riso e mescola per 1-2 minuti finché i chicchi diventano lucidi. Sfuma con il vino bianco e lascia evaporare quasi del tutto.</p>
+<p>4. <strong>Cottura:</strong> Aggiungi il brodo caldo un mestolo alla volta, mescolando spesso. A metà cottura (dopo circa 8-9 minuti) aggiungi i piselli. Continua a cuocere aggiungendo brodo quando necessario, per un totale di 15-17 minuti.</p>
+<p>5. <strong>Speck:</strong> Mentre il risotto cuoce, tosta rapidamente lo speck in una padella antiaderente senza condimento a fiamma viva per 2-3 minuti fino a renderlo croccante; scolalo su carta assorbente.</p>
+<p>6. <strong>Mantecatura:</strong> Quando il riso è quasi pronto, togli la casseruola dal fuoco, aggiungi la panna, 20 g di burro e il parmigiano. Mescola energicamente per ottenere una consistenza cremosa. Aggiusta di sale e pepe.</p>
+<p>7. <strong>Completamento:</strong> Incorpora lo speck (tenendone qualche pezzetto per guarnire) e mescola delicatamente. Lascia riposare per 1 minuto con il coperchio leggermente aperto.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2026-06-09</p>
+<p><strong>Meta:</strong> 4 servings | Meat</p>
+<p><strong>Description:</strong> Creamy risotto with sweet peas and crispy speck, creamed with Parmesan.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>320 g Carnaroli or Arborio rice</li>
+<li>120 g smoked speck, cut into strips</li>
+<li>250 g frozen peas</li>
+<li>150 ml cooking cream</li>
+<li>1.2-1.4 L hot vegetable broth</li>
+<li>1 small onion (60-70 g), finely chopped</li>
+<li>70 ml dry white wine</li>
+<li>30 g butter (20 g for creaming, 10 g for sauté)</li>
+<li>1 tablespoon extra virgin olive oil</li>
+<li>60-80 g grated Parmigiano Reggiano</li>
+<li>Salt and black pepper to taste</li>
+<li>Chopped fresh parsley for garnish (optional)</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Base preparation:</strong> Bring broth to a gentle simmer and keep warm over very low heat. Thaw peas if necessary and drain.</p>
+<p>2. <strong>Sauté:</strong> In a large casserole, heat oil and 10 g butter. Add chopped onion and sweat gently without colouring for 3-4 minutes.</p>
+<p>3. <strong>Toasting:</strong> Add rice and stir for 1-2 minutes until grains become shiny. Deglaze with white wine and let almost completely evaporate.</p>
+<p>4. <strong>Cooking:</strong> Add hot broth one ladle at a time, stirring often. At halfway point (after about 8-9 minutes) add peas. Continue cooking, adding broth as needed, for a total of 15-17 minutes.</p>
+<p>5. <strong>Speck:</strong> While risotto cooks, quickly toast speck in a non-stick pan without oil over high heat for 2-3 minutes until crispy; drain on absorbent paper.</p>
+<p>6. <strong>Creaming:</strong> When rice is almost ready, remove casserole from heat, add cream, 20 g butter and Parmesan. Stir vigorously to obtain a creamy consistency. Season with salt and pepper.</p>
+<p>7. <strong>Finishing:</strong> Fold in speck (keeping some pieces for garnish) and stir gently. Rest for 1 minute with lid slightly ajar.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2026-06-09</p>
+<p><strong>Meta:</strong> 4 porciones | Carne</p>
+<p><strong>Descripción:</strong> Risotto cremoso con guisantes dulces y speck crujiente, cremado con parmesano.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>320 g de arroz Carnaroli o Arborio</li>
+<li>120 g de speck ahumado, cortado en tiras</li>
+<li>250 g de guisantes congelados</li>
+<li>150 ml de nata para cocinar</li>
+<li>1,2-1,4 L de caldo de verduras caliente</li>
+<li>1 cebolla pequeña (60-70 g), picada finamente</li>
+<li>70 ml de vino blanco seco</li>
+<li>30 g de mantequilla (20 g para cremar, 10 g para sofreír)</li>
+<li>1 cucharada de aceite de oliva virgen extra</li>
+<li>60-80 g de parmesano Reggiano rallado</li>
+<li>Sal y pimienta negra c.s.</li>
+<li>Perejil fresco picado para decorar (opcional)</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparación base:</strong> Lleva el caldo a hervor suave y mantén caliente a fuego muy bajo. Descongela los guisantes si es necesario y escúrrelos.</p>
+<p>2. <strong>Sofreír:</strong> En una cazuela amplia, calienta el aceite y 10 g de mantequilla. Añade la cebolla picada y sofríe suavemente sin dejar que se dore durante 3-4 minutos.</p>
+<p>3. <strong>Tostar:</strong> Agrega el arroz y remueve 1-2 minutos hasta que los granos brillen. Desglasa con el vino blanco y deja evaporar casi por completo.</p>
+<p>4. <strong>Cocción:</strong> Vierte el caldo caliente cucharón a cucharón, removiendo a menudo. A mitad de cocción (después de unos 8-9 minutos) añade los guisantes. Continúa cocinando añadiendo caldo cuando sea necesario, para un total de 15-17 minutos.</p>
+<p>5. <strong>Speck:</strong> Mientras el risotto cuece, tuesta rápidamente el speck en una sartén antiadherente sin condimento a fuego vivo durante 2-3 minutos hasta que esté crujiente; escúrrelo sobre papel absorbente.</p>
+<p>6. <strong>Cremado:</strong> Cuando el arroz esté casi listo, retira la cazuela del fuego, añade la nata, 20 g de mantequilla y el parmesano. Remueve enérgicamente para obtener una textura cremosa. Sazona con sal y pimienta.</p>
+<p>7. <strong>Terminar:</strong> Incorpora el speck (reservando algunos trozos para decorar) y remueve suavemente. Deja reposar 1 minuto con la tapa ligeramente entreabierta.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2026-06-09</p>
+<p><strong>Meta:</strong> 4 porções | Carne</p>
+<p><strong>Descrição:</strong> Risotto cremoso com ervilhas doces e speck crocante, cremado com parmesão.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>320 g de arroz Carnaroli ou Arborio</li>
+<li>120 g de speck defumado, cortado em tiras</li>
+<li>250 g de ervilhas congeladas</li>
+<li>150 ml de natas para culinária</li>
+<li>1,2-1,4 L de caldo de legumes quente</li>
+<li>1 cebola pequena (60-70 g), picada finamente</li>
+<li>70 ml de vinho branco seco</li>
+<li>30 g de manteiga (20 g para cremar, 10 g para refogar)</li>
+<li>1 colher de sopa de azeite extra virgem</li>
+<li>60-80 g de parmesão Reggiano ralado</li>
+<li>Sal e pimenta preta q.b.</li>
+<li>Salsa fresca picada para guarnecer (opcional)</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparação base:</strong> Leve o caldo a lume brando e mantenha quente em lume muito baixo. Descongele as ervilhas se necessário e escorra-as.</p>
+<p>2. <strong>Refogado:</strong> Numa caçarola ampla, aqueça o azeite e 10 g de manteiga. Junte a cebola picada e deixe murchar suavemente sem deixar dourar durante 3-4 minutos.</p>
+<p>3. <strong>Tostar:</strong> Junte o arroz e mexa 1-2 minutos até os grãos ficarem brilhantes. Desglace com o vinho branco e deixe evaporar quase por completo.</p>
+<p>4. <strong>Cozedura:</strong> Adicione o caldo quente concha a concha, mexendo frequentemente. A meio da cozedura (após cerca de 8-9 minutos) junte as ervilhas. Continue a cozinhar acrescentando caldo conforme necessário, para um total de 15-17 minutos.</p>
+<p>5. <strong>Speck:</strong> Enquanto o risotto cozinha, toste rapidamente o speck numa frigideira antiaderente sem condimento em lume forte durante 2-3 minutos até ficar crocante; escorra em papel absorvente.</p>
+<p>6. <strong>Cremar:</strong> Quando o arroz estiver quase pronto, retire a caçarola do lume, acrescente as natas, 20 g de manteiga e o parmesão. Mexa energicamente para obter uma consistência cremosa. Tempere com sal e pimenta.</p>
+<p>7. <strong>Terminar:</strong> Envolver o speck (reservando alguns pedaços para guarnecer) e mexa delicadamente. Deixe repousar 1 minuto com a tampa ligeiramente entreaberta.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2026-06-09</p>
+<p><strong>Meta:</strong> 4 Portionen | Fleisch</p>
+<p><strong>Beschreibung:</strong> Cremiges Risotto mit süßen Erbsen und knusprigem Speck, mit Parmesan eingezogen.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>320 g Carnaroli- oder Arborio-Reis</li>
+<li>120 g geräucherter Speck, in Streifen geschnitten</li>
+<li>250 g gefrorene Erbsen</li>
+<li>150 ml Kochsahne</li>
+<li>1,2-1,4 L heiße Gemüsebrühe</li>
+<li>1 kleine Zwiebel (60-70 g), fein gehackt</li>
+<li>70 ml trockener Weißwein</li>
+<li>30 g Butter (20 g zum Einrühren, 10 g zum Anschwitzen)</li>
+<li>1 Esslöffel natives Olivenöl</li>
+<li>60-80 g geriebener Parmigiano Reggiano</li>
+<li>Salz und schwarzer Pfeffer nach Geschmack</li>
+<li>Gehackte frische Petersilie zum Garnieren (optional)</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Vorbereitung:</strong> Brühe zum leichten Köcheln bringen und bei sehr niedriger Hitze warm halten. Erbsen bei Bedarf auftauen und abtropfen.</p>
+<p>2. <strong>Anschwitzen:</strong> In einer großen Kasserolle Öl und 10 g Butter erhitzen. Gehackte Zwiebel zugeben und bei schwacher Hitze 3-4 Minuten anschwitzen, ohne Farbe zu nehmen.</p>
+<p>3. <strong>Reis rösten:</strong> Reis zugeben und 1-2 Minuten rühren, bis die Körner glänzen. Mit Weißwein ablöschen und fast vollständig verdampfen lassen.</p>
+<p>4. <strong>Kochen:</strong> Heiße Brühe schöpflöffelweise zugeben, dabei oft umrühren. Bei halber Garzeit (nach etwa 8-9 Minuten) Erbsen zugeben. Weiterkochen, bei Bedarf Brühe nachgießen, insgesamt 15-17 Minuten.</p>
+<p>5. <strong>Speck:</strong> Während das Risotto kocht, den Speck in einer beschichteten Pfanne ohne Fett bei starker Hitze 2-3 Minuten rösten, bis er knusprig ist; auf saugfähigem Papier abtropfen.</p>
+<p>6. <strong>Einrühren:</strong> Wenn der Reis fast gar ist, Kasserolle vom Herd nehmen, Sahne, 20 g Butter und Parmesan zugeben. Kräftig rühren, bis eine cremige Konsistenz entsteht. Mit Salz und Pfeffer abschmecken.</p>
+<p>7. <strong>Fertigstellen:</strong> Speck unterheben (einige Stücke zum Garnieren zurückbehalten) und vorsichtig umrühren. 1 Minute mit leicht geöffnetem Deckel ziehen lassen.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2026-06-09</p>
+<p><strong>Meta:</strong> 4 μερίδες | Κρέας</p>
+<p><strong>Περιγραφή:</strong> Κρεμώδες ριζότο με γλυκά μπιζέλια και τραγανό speck, κρεμασμένο με παρμεζάνα.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>320 γρ ρύζι Carnaroli ή Arborio</li>
+<li>120 γρ καπνιστό speck, κομμένο σε λωρίδες</li>
+<li>250 γρ κατεψυγμένα μπιζέλια</li>
+<li>150 ml κρέμα μαγειρικής</li>
+<li>1,2-1,4 Λ ζεστός ζωμός λαχανικών</li>
+<li>1 μικρό κρεμμύδι (60-70 γρ), ψιλοκομμένο</li>
+<li>70 ml ξηρό λευκό κρασί</li>
+<li>30 γρ βούτυρο (20 γρ για κρέμα, 10 γρ για σοτάρισμα)</li>
+<li>1 κουταλιά της σούπας ελαιόλαδο</li>
+<li>60-80 γρ τριμμένη παρμεζάνα Reggiano</li>
+<li>Αλάτι και μαύρο πιπέρι κατά βούληση</li>
+<li>Ψιλοκομμένος φρέσκος μαϊντανός για γαρνίρισμα (προαιρετικά)</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία:</strong> Φέρτε τον ζωμό σε χαμηλό βρασμό και κρατήστε τον ζεστό σε πολύ χαμηλή φωτιά. Αποψύξτε τα μπιζέλια αν χρειάζεται και στραγγίστε τα.</p>
+<p>2. <strong>Σοτάρισμα:</strong> Σε μια φαρδιά κατσαρόλα, ζεστάνετε το λάδι και 10 γρ βούτυρο. Προσθέστε το ψιλοκομμένο κρεμμύδι και σοτάρετε απαλά χωρίς να πάρει χρώμα για 3-4 λεπτά.</p>
+<p>3. <strong>Καβούρδισμα:</strong> Προσθέστε το ρύζι και ανακατέψτε για 1-2 λεπτά μέχρι οι κόκκοι να γίνουν λαμπεροί. Σβήστε με το λευκό κρασί και αφήστε το να εξατμιστεί σχεδόν εντελώς.</p>
+<p>4. <strong>Μαγείρεμα:</strong> Προσθέστε ζεστό ζωμό κουταλιά-κουταλιά, ανακατεύοντας συχνά. Στο μέσο του μαγειρέματος (μετά από περίπου 8-9 λεπτά) προσθέστε τα μπιζέλια. Συνεχίστε το μαγείρεμα προσθέτοντας ζωμό όταν χρειάζεται, για συνολικά 15-17 λεπτά.</p>
+<p>5. <strong>Speck:</strong> Ενώ το ριζότο μαγειρεύεται, καβουρδίστε γρήγορα το speck σε ένα αντικολλητικό τηγάνι χωρίς λάδι σε δυνατή φωτιά για 2-3 λεπτά μέχρι να γίνει τραγανό· στραγγίστε το σε απορροφητικό χαρτί.</p>
+<p>6. <strong>Κρέμα:</strong> Όταν το ρύζι είναι σχεδόν έτοιμο, αφαιρέστε την κατσαρόλα από τη φωτιά, προσθέστε την κρέμα, 20 γρ βούτυρο και την παρμεζάνα. Ανακατέψτε δυνατά για να πάρετε μια κρεμώδη υφή. Αλατοπιπερώστε.</p>
+<p>7. <strong>Ολοκλήρωση:</strong> Ενσωματώστε το speck (κρατώντας μερικά κομμάτια για γαρνίρισμα) και ανακατέψτε απαλά. Αφήστε το να ξεκουραστεί για 1 λεπτό με το καπάκι ελαφρώς ανοιχτό.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

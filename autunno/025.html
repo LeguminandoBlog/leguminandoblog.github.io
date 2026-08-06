@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polpette di Fagioli Rossi con Provola e Speck | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Polpette di Fagioli Rossi con Provola e Speck">
+<meta property="og:title" content="Polpette di Fagioli Rossi con Provola e Speck | Leguminando">
+<meta property="og:description" content="Polpette di Fagioli Rossi con Provola e Speck">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="autunno/025.html" data-title="Polpette di Fagioli Rossi con Provola e Speck" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="025.jpg" alt="Polpette di Fagioli Rossi con Provola e Speck" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-10-01</p>
+<p><strong>Meta:</strong> 18-20 polpette | Antipasto</p>
+<p><strong>Descrizione:</strong> Croccanti polpette di fagioli rossi con cuore filante di provola piccante e speck, panate con farina di lenticchie.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>300 g fagioli rossi lessi (scolati e ben asciugati)</li>
+<li>200 g patate (peso a crudo)</li>
+<li>100 g provola piccante a cubetti (circa 1 cm)</li>
+<li>100 g speck a cubetti (stessa misura della provola)</li>
+<li>1 uovo medio</li>
+<li>40 g Parmigiano Reggiano grattugiato</li>
+<li>1 spicchio d'aglio (facoltativo)</li>
+<li>1 ciuffo prezzemolo tritato</li>
+<li>sale e pepe nero macinato fresco</li>
+<li>un pizzico di peperoncino in scaglie (facoltativo)</li>
+<li>80-100 g farina di lenticchie per la panatura</li>
+<li>olio di semi per friggere</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparazione:</strong> Pela le patate, tagliale a cubetti e falla bollire in acqua salata finché sono morbide (10-12 min). Scolale e lasciale intiepidire.</p>
+<p>2. Schiaccia bene i fagioli rossi in una ciotola capiente con una forchetta (devono risultare quasi una crema). Aggiungi le patate ancora calde e schiacciale anch'esse.</p>
+<p>3. Aggiungi l'uovo, il Parmigiano, l'aglio schiacciato, il prezzemolo, sale, pepe e peperoncino. Mescola energicamente fino a ottenere un composto omogeneo e leggermente umido (non troppo asciutto).</p>
+<p>4. Prendi una cucchiaiata di composto, appiattiscila leggermente sul palmo, metti al centro 1-2 cubetti di provola e speck e ricopri con altra pastella. Chiudi bene formando una polpetta. Ripeti fino a esaurimento ingredienti.</p>
+<p>5. Passa ogni polpetta nella farina di lenticchie, eliminando l'eccesso.</p>
+<p>6. Scalda abbondante olio di semi in una padella capiente. Quando è ben caldo (circa 170-180 °C), friggi le polpette poche alla volta, girandole delicatamente, fino a doratura uniforme (3-4 min).</p>
+<p>7. Scola su carta assorbente e servi ben calde, possibilmente al momento.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-10-01</p>
+<p><strong>Meta:</strong> 18-20 fritters | Appetiser</p>
+<p><strong>Description:</strong> Crispy red bean fritters with a melting heart of spicy provola and speck, coated with lentil flour.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>300 g boiled red beans (drained and well dried)</li>
+<li>200 g potatoes (raw weight)</li>
+<li>100 g spicy provola in cubes (about 1 cm)</li>
+<li>100 g speck in cubes (same size as the provola)</li>
+<li>1 medium egg</li>
+<li>40 g grated Parmigiano Reggiano</li>
+<li>1 garlic clove (optional)</li>
+<li>1 bunch chopped parsley</li>
+<li>salt and freshly ground black pepper</li>
+<li>a pinch of chilli flakes (optional)</li>
+<li>80-100 g lentil flour for coating</li>
+<li>seed oil for frying</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Preparation:</strong> Peel potatoes, cut into cubes and boil in salted water until tender (10-12 min). Drain and let cool.</p>
+<p>2. Mash the red beans well in a large bowl with a fork (they should become almost a cream). Add the still warm potatoes and mash them too.</p>
+<p>3. Add egg, Parmesan, crushed garlic, parsley, salt, pepper and chilli. Mix vigorously until smooth and slightly moist (not too dry).</p>
+<p>4. Take a spoonful of mixture, flatten slightly on your palm, place 1-2 cubes of provola and speck in the centre and cover with more batter. Close well forming a ball. Repeat until ingredients are used up.</p>
+<p>5. Roll each ball in lentil flour, shaking off excess.</p>
+<p>6. Heat plenty of seed oil in a large pan. When hot (about 170-180 °C), fry the balls a few at a time, turning gently, until evenly golden (3-4 min).</p>
+<p>7. Drain on absorbent paper and serve very hot, preferably immediately.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-10-01</p>
+<p><strong>Meta:</strong> 18-20 albóndigas | Aperitivo</p>
+<p><strong>Descripción:</strong> Crujientes albóndigas de alubias rojas con corazón fundente de provola picante y speck, rebozadas con harina de lentejas.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>300 g alubias rojas cocidas (escurridas y bien secas)</li>
+<li>200 g patatas (peso en crudo)</li>
+<li>100 g provola picante en cubos (unos 1 cm)</li>
+<li>100 g speck en cubos (mismo tamaño que la provola)</li>
+<li>1 huevo mediano</li>
+<li>40 g Parmigiano Reggiano rallado</li>
+<li>1 diente de ajo (opcional)</li>
+<li>1 manojo de perejil picado</li>
+<li>sal y pimienta negra recién molida</li>
+<li>una pizca de guindilla en escamas (opcional)</li>
+<li>80-100 g harina de lentejas para rebozar</li>
+<li>aceite de semillas para freír</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparación:</strong> Pela las patatas, córtalas en cubos y hierve en agua salada hasta que estén tiernas (10-12 min). Escúrrelas y deja entibiar.</p>
+<p>2. Machaca bien las alubias rojas en un bol grande con un tenedor (deben quedar casi una crema). Añade las patatas aún calientes y machácalas también.</p>
+<p>3. Añade el huevo, el Parmesano, el ajo aplastado, el perejil, sal, pimienta y guindilla. Mezcla enérgicamente hasta obtener un compuesto homogéneo y ligeramente húmedo (no demasiado seco).</p>
+<p>4. Toma una cucharada de compuesto, aplánala ligeramente en la palma, pon en el centro 1-2 cubos de provola y speck y cúbrelos con más pasta. Cierra bien formando una albóndiga. Repite hasta agotar los ingredientes.</p>
+<p>5. Pasa cada albóndiga por la harina de lentejas, eliminando el exceso.</p>
+<p>6. Calienta abundante aceite de semillas en una sartén amplia. Cuando esté bien caliente (unos 170-180 °C), fríe las albóndigas de pocas en pocas, girándolas delicadamente, hasta dorar uniformemente (3-4 min).</p>
+<p>7. Escúrrelas sobre papel absorbente y sírvelas bien calientes, preferiblemente al momento.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-10-01</p>
+<p><strong>Meta:</strong> 18-20 croquetas | Aperitivo</p>
+<p><strong>Descrição:</strong> Crocantes croquetas de feijão vermelho com coração derretido de provola picante e speck, panadas com farinha de lentilhas.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>300 g feijão vermelho cozido (escorrido e bem seco)</li>
+<li>200 g batatas (peso a cru)</li>
+<li>100 g provola picante em cubos (cerca de 1 cm)</li>
+<li>100 g speck em cubos (mesmo tamanho da provola)</li>
+<li>1 ovo médio</li>
+<li>40 g Parmigiano Reggiano ralado</li>
+<li>1 dente de alho (opcional)</li>
+<li>1 molho de salsa picada</li>
+<li>sal e pimenta preta moída na altura</li>
+<li>uma pitada de piripíri em lascas (opcional)</li>
+<li>80-100 g farinha de lentilhas para panar</li>
+<li>óleo de sementes para fritar</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparação:</strong> Descasca as batatas, corta em cubos e cozinha em água salgada até ficarem macias (10-12 min). Escorre e deixa arrefecer.</p>
+<p>2. Esmaga bem o feijão vermelho numa taça grande com um garfo (deve ficar quase um creme). Adiciona as batatas ainda quentes e esmaga-as também.</p>
+<p>3. Adiciona o ovo, o Parmesão, o alho esmagado, a salsa, sal, pimenta e piripíri. Mistura energicamente até obter um composto homogéneo e ligeiramente húmido (não demasiado seco).</p>
+<p>4. Pega numa colherada de composto, achata ligeiramente na palma da mão, mete ao centro 1-2 cubos de provola e speck e cobre com mais massa. Fecha bem formando uma croqueta. Repete até esgotar os ingredientes.</p>
+<p>5. Passa cada croqueta pela farinha de lentilhas, eliminando o excesso.</p>
+<p>6. Aquece óleo de sementes numa frigideira grande. Quando estiver bem quente (cerca de 170-180 °C), frita as croquetas de poucas em poucas, virando delicadamente, até dourar uniformemente (3-4 min).</p>
+<p>7. Escoa sobre papel absorvente e serve bem quentes, preferencialmente no momento.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-10-01</p>
+<p><strong>Meta:</strong> 18-20 Bällchen | Vorspeise</p>
+<p><strong>Beschreibung:</strong> Knusprige Rote-Bohnen-Bällchen mit schmelzendem Herzen aus scharfer Provola und Speck, paniert mit Linsenmehl.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>300 g gekochte rote Bohnen (abgetropft und gut getrocknet)</li>
+<li>200 g Kartoffeln (Rohgewicht)</li>
+<li>100 g scharfe Provola in Würfeln (ca. 1 cm)</li>
+<li>100 g Speck in Würfeln (gleiche Größe wie die Provola)</li>
+<li>1 mittleres Ei</li>
+<li>40 g geriebener Parmigiano Reggiano</li>
+<li>1 Knoblauchzehe (optional)</li>
+<li>1 Bund gehackte Petersilie</li>
+<li>Salz und frisch gemahlener schwarzer Pfeffer</li>
+<li>eine Prise Chiliflocken (optional)</li>
+<li>80-100 g Linsenmehl zum Panieren</li>
+<li>Samenöl zum Frittieren</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Vorbereitung:</strong> Kartoffeln schälen, würfeln und in Salzwasser kochen, bis sie weich sind (10-12 Min). Abgießen und abkühlen lassen.</p>
+<p>2. Rote Bohnen in einer großen Schüssel mit einer Gabel gut zerdrücken (sollten fast eine Creme werden). Noch warme Kartoffeln zugeben und ebenfalls zerdrücken.</p>
+<p>3. Ei, Parmesan, zerdrückter Knoblauch, Petersilie, Salz, Pfeffer und Chili zugeben. Kräftig mischen, bis eine glatte und leicht feuchte Masse entsteht (nicht zu trocken).</p>
+<p>4. Einen Esslöffel Masse nehmen, leicht in der Handfläche flach drücken, 1-2 Würfel Provola und Speck in die Mitte legen und mit mehr Teig bedecken. Gut verschließen und ein Bällchen formen. Wiederholen, bis alle Zutaten aufgebraucht sind.</p>
+<p>5. Jedes Bällchen in Linsenmehl wenden, Überschuss abschütteln.</p>
+<p>6. Reichlich Samenöl in einer großen Pfanne erhitzen. Bei etwa 170-180 °C die Bällchen portionsweise goldbraun frittieren, dabei vorsichtig wenden (3-4 Min).</p>
+<p>7. Auf Küchenpapier abtropfen lassen und sehr heiß, am besten sofort, servieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-10-01</p>
+<p><strong>Meta:</strong> 18-20 κεφτεδάκια | Ορεκτικό</p>
+<p><strong>Περιγραφή:</strong> Τραγανά κεφτεδάκια κόκκινων φασολιών με λιωμένη καρδιά από πικάντικη προβόλα και σπέκ, παναρισμένα με αλεύρι φακής.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>300 γρ βρασμένα κόκκινα φασόλια (στραγγισμένα και καλά στεγνωμένα)</li>
+<li>200 γρ πατάτες (βάρος ωμά)</li>
+<li>100 γρ πικάντικη προβόλα σε κύβους (περίπου 1 εκ.)</li>
+<li>100 γρ σπέκ σε κύβους (ίδιο μέγεθος με την προβόλα)</li>
+<li>1 μεσαίο αυγό</li>
+<li>40 γρ τριμμένο Parmigiano Reggiano</li>
+<li>1 σκελίδα σκόρδο (προαιρετικά)</li>
+<li>1 ματσάκι ψιλοκομμένος μαϊντανός</li>
+<li>αλάτι και φρεσκοτριμμένο μαύρο πιπέρι</li>
+<li>1 πρέζα νιφάδες τσίλι (προαιρετικά)</li>
+<li>80-100 γρ αλεύρι φακής για πανάρισμα</li>
+<li>σπορέλαιο για τηγάνισμα</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία:</strong> Ξεφλούδισε τις πατάτες, κόψε σε κύβους και βράσε σε αλατισμένο νερό μέχρι να μαλακώσουν (10-12 λεπτά). Στράγγιξέ τες και άφησέ τες να κρυώσουν.</p>
+<p>2. Λιώσε καλά τα κόκκινα φασόλια σε ένα μεγάλο μπολ με ένα πιρούνι (πρέπει να γίνουν σχεδόν κρέμα). Πρόσθεσε τις πατάτες ακόμα ζεστές και λιώσε τες κι αυτές.</p>
+<p>3. Πρόσθεσε το αυγό, το Παρμεζάνα, το σκόρδο πλασταρωμένο, το μαϊντανό, αλάτι, πιπέρι και τσίλι. Ανακάτεψε δυνατά μέχρι να γίνει ένα ομοιογενές και ελαφρά υγρό μείγμα (όχι πολύ στεγνό).</p>
+<p>4. Πάρε μια κουταλιά μείγμα, πλάσέ το ελαφρά στην παλάμη, βάλε στο κέντρο 1-2 κύβους προβόλα και σπέκ και κάλυψέ τους με άλλο μείγμα. Κλείσε καλά πλάθοντας ένα κεφτεδάκι. Επανάλαβε μέχρι να τελειώσουν τα υλικά.</p>
+<p>5. Πέρασε κάθε κεφτεδάκι στο αλεύρι φακής, τινάζοντας το περίσσευμα.</p>
+<p>6. Ζέστανε άφθονο σπορέλαιο σε ένα μεγάλο τηγάνι. Όταν κάψει καλά (περίπου 170-180 °C), τηγάνισε τα κεφτεδάκια λίγα-λίγα, γυρνώντας τα προσεκτικά, μέχρι να ροδίσουν ομοιόμορφα (3-4 λεπτά).</p>
+<p>7. Στράγγιξέ τα σε απορροφητικό χαρτί και σέρβιρέ τα πολύ ζεστά, προτιμότερα αμέσως.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

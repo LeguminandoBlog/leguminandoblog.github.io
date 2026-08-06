@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zuppa di Legumi con Soffritto aromatico | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Zuppa di Legumi con Soffritto aromatico">
+<meta property="og:title" content="Zuppa di Legumi con Soffritto aromatico | Leguminando">
+<meta property="og:description" content="Zuppa di Legumi con Soffritto aromatico">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="inverno/025.html" data-title="Zuppa di Legumi con Soffritto aromatico" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="025.jpg" alt="Zuppa di Legumi con Soffritto aromatico" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-12-17</p>
+<p><strong>Meta:</strong> 4 porzioni | Vegetariano</p>
+<p><strong>Descrizione:</strong> Zuppa rustica di legumi misti con granturco, fagioli, ceci e lenticchie, arricchita da un soffritto aromatico all'aglio, cipolla, salvia e rosmarino.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>100 g granturco o mais bianco</li>
+<li>100 g fagioli bianchi cannellini secchi</li>
+<li>100 g ceci secchi</li>
+<li>100 g fagioli borlotti secchi</li>
+<li>100 g lenticchie</li>
+<li>3 spicchi d'aglio</li>
+<li>Sale q.b.</li>
+</ul>
+<p><strong>Per il soffritto:</strong></p>
+<ul>
+<li>2 spicchi d'aglio</li>
+<li>1/2 cipolla bianca</li>
+<li>2 foglie di salvia</li>
+<li>1 rametto di rosmarino</li>
+<li>5 cucchiai olio extravergine d'oliva</li>
+<li>Peperoncino q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparazione dei legumi:</strong> Metti a bagno i fagioli e i ceci per almeno 8 ore. Sciacqua i legumi e mettili in una pentola con acqua. Porta a ebollizione e cuoci a fuoco lento fino a quando sono teneri (circa 1-1,5 ore). Aggiungi sale verso fine cottura. Dopo 30 minuti aggiungi lenticchie e granturco e continua a cuocere per altri 30-40 minuti.</p>
+<p>2. <strong>Preparazione del soffritto:</strong> In una padella, scalda l'olio a fuoco medio. Aggiungi cipolla tritata e aglio schiacciato, soffriggendo finché la cipolla è trasparente. Unisci salvia e rosmarino, cuocendo per un paio di minuti. Aggiungi peperoncino se desideri.</p>
+<p>3. <strong>Assemblaggio:</strong> Aggiungi il soffritto nella pentola con i legumi e mescola bene. Se la zuppa è troppo densa, aggiungi acqua calda fino a ottenere la consistenza desiderata. Cuoci per altri 10-15 minuti, aggiustando di sale e pepe.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-12-17</p>
+<p><strong>Meta:</strong> 4 servings | Vegetarian</p>
+<p><strong>Description:</strong> Rustic mixed legume soup with sweetcorn, beans, chickpeas and lentils, enriched by an aromatic soffritto with garlic, onion, sage and rosemary.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>100 g sweetcorn or white corn</li>
+<li>100 g dried white cannellini beans</li>
+<li>100 g dried chickpeas</li>
+<li>100 g dried borlotti beans</li>
+<li>100 g lentils</li>
+<li>3 garlic cloves</li>
+<li>Salt to taste</li>
+</ul>
+<p><strong>For the soffritto:</strong></p>
+<ul>
+<li>2 garlic cloves</li>
+<li>1/2 white onion</li>
+<li>2 sage leaves</li>
+<li>1 sprig of rosemary</li>
+<li>5 tablespoons extra virgin olive oil</li>
+<li>Chilli to taste</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Preparation of legumes:</strong> Soak beans and chickpeas for at least 8 hours. Rinse and place in a pot with water. Bring to the boil and simmer until tender (about 1-1.5 hours). Add salt towards the end of cooking. After 30 minutes add lentils and sweetcorn and continue cooking for another 30-40 minutes.</p>
+<p>2. <strong>Preparation of the soffritto:</strong> In a pan, heat oil over medium heat. Add chopped onion and crushed garlic, sautéing until the onion is translucent. Add sage and rosemary, cooking for a couple of minutes. Add chilli if desired.</p>
+<p>3. <strong>Assembly:</strong> Add the soffritto to the pot with the legumes and stir well. If the soup is too thick, add hot water until desired consistency is reached. Cook for another 10-15 minutes, adjusting salt and pepper.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-12-17</p>
+<p><strong>Meta:</strong> 4 porciones | Vegetariano</p>
+<p><strong>Descripción:</strong> Sopa rústica de legumbres mixtas con maíz, alubias, garbanzos y lentejas, enriquecida con un sofrito aromático de ajo, cebolla, salvia y romero.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>100 g maíz o maíz blanco</li>
+<li>100 g alubias blancas cannellini secas</li>
+<li>100 g garbanzos secos</li>
+<li>100 g alubias borlotti secas</li>
+<li>100 g lentejas</li>
+<li>3 dientes de ajo</li>
+<li>Sal c.s.</li>
+</ul>
+<p><strong>Para el sofrito:</strong></p>
+<ul>
+<li>2 dientes de ajo</li>
+<li>1/2 cebolla blanca</li>
+<li>2 hojas de salvia</li>
+<li>1 ramillete de romero</li>
+<li>5 cucharadas aceite de oliva virgen extra</li>
+<li>Guindilla c.s.</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparación de las legumbres:</strong> Poner en remojo las alubias y los garbanzos al menos 8 horas. Enjuagar y poner en una olla con agua. Llevar a ebullición y cocer a fuego lento hasta que estén tiernas (unos 1-1,5 horas). Añadir sal hacia el final de la cocción. A los 30 minutos añadir lentejas y maíz y continuar cociendo otros 30-40 minutos.</p>
+<p>2. <strong>Preparación del sofrito:</strong> En una sartén, calienta el aceite a fuego medio. Añade cebolla picada y ajo aplastado, sofriendo hasta que la cebolla esté transparente. Añade salvia y romero, cocinando un par de minutos. Añade guindilla si lo deseas.</p>
+<p>3. <strong>Montaje:</strong> Añade el sofrito a la olla con las legumbres y mezcla bien. Si la sopa está demasiado densa, añade agua caliente hasta obtener la consistencia deseada. Cocina otros 10-15 minutos, ajustando sal y pimienta.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-12-17</p>
+<p><strong>Meta:</strong> 4 porções | Vegetariano</p>
+<p><strong>Descrição:</strong> Sopa rústica de leguminosas mistas com milho, feijão, grão-de-bico e lentilhas, enriquecida com um refogado aromático de alho, cebola, sálvia e alecrim.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>100 g milho ou milho branco</li>
+<li>100 g feijão branco cannellini seco</li>
+<li>100 g grão-de-bico seco</li>
+<li>100 g feijão borlotti seco</li>
+<li>100 g lentilhas</li>
+<li>3 dentes de alho</li>
+<li>Sal q.b.</li>
+</ul>
+<p><strong>Para o refogado:</strong></p>
+<ul>
+<li>2 dentes de alho</li>
+<li>1/2 cebola branca</li>
+<li>2 folhas de sálvia</li>
+<li>1 ramo de alecrim</li>
+<li>5 colheres de sopa azeite extra virgem</li>
+<li>Piripíri q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparação das leguminosas:</strong> Deixa o feijão e o grão-de-bico de molho pelo menos 8 horas. Escorre e põe numa panela com água. Leva a ferver e cozinha em lume brando até ficarem macios (cerca de 1-1,5 horas). Adiciona sal perto do final da cozedura. Após 30 minutos adiciona lentilhas e milho e continua a cozinhar mais 30-40 minutos.</p>
+<p>2. <strong>Preparação do refogado:</strong> Numa frigideira, aquece o azeite em lume médio. Adiciona cebola picada e alho esmagado, refogando até a cebola ficar transparente. Junta sálvia e alecrim, cozinhando uns dois minutos. Adiciona piripíri se desejares.</p>
+<p>3. <strong>Montagem:</strong> Adiciona o refogado à panela com as leguminosas e mistura bem. Se a sopa estiver demasiado espessa, adiciona água quente até obter a consistência desejada. Cozinha mais 10-15 minutos, ajustando sal e pimenta.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-12-17</p>
+<p><strong>Meta:</strong> 4 Portionen | Vegetarisch</p>
+<p><strong>Beschreibung:</strong> Rustikale Hülsenfrüchtesuppe mit Mais, Bohnen, Kichererbsen und Linsen, angereichert mit einem aromatischen Soffritto aus Knoblauch, Zwiebel, Salbei und Rosmarin.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>100 g Zuckermais oder weißer Mais</li>
+<li>100 g getrocknete weiße Cannellini-Bohnen</li>
+<li>100 g getrocknete Kichererbsen</li>
+<li>100 g getrocknete Borlotti-Bohnen</li>
+<li>100 g Linsen</li>
+<li>3 Knoblauchzehen</li>
+<li>Salz nach Geschmack</li>
+</ul>
+<p><strong>Für das Soffritto:</strong></p>
+<ul>
+<li>2 Knoblauchzehen</li>
+<li>1/2 weiße Zwiebel</li>
+<li>2 Salbeiblätter</li>
+<li>1 Rosmarinzweig</li>
+<li>5 Esslöffel Olivenöl extra vergine</li>
+<li>Chili nach Geschmack</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Vorbereitung der Hülsenfrüchte:</strong> Bohnen und Kichererbsen mindestens 8 Stunden einweichen. Abspülen und in einen Topf mit Wasser geben. Zum Kochen bringen und bei niedriger Hitze köcheln, bis sie weich sind (etwa 1-1,5 Stunden). Salz gegen Ende des Garens zugeben. Nach 30 Minuten Linsen und Mais zugeben und weitere 30-40 Minuten köcheln lassen.</p>
+<p>2. <strong>Zubereitung des Soffrittos:</strong> Öl in einer Pfanne bei mittlerer Hitze erhitzen. Gehackte Zwiebel und zerdrückten Knoblauch zugeben, anschwitzen bis die Zwiebel glasig ist. Salbei und Rosmarin zugeben, zwei Minuten köcheln. Nach Belieben Chili zugeben.</p>
+<p>3. <strong>Zusammensetzen:</strong> Das Soffritto zum Topf mit den Hülsenfrüchten geben und gut umrühren. Falls die Suppe zu dick ist, heißes Wasser zugeben, bis die gewünschte Konsistenz erreicht ist. Weitere 10-15 Minuten köcheln lassen, Salz und Pfeffer abschmecken.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-12-17</p>
+<p><strong>Meta:</strong> 4 μερίδες | Χορτοφαγικό</p>
+<p><strong>Περιγραφή:</strong> Ρουστίκ σούπα με μικτά όσπρια, καλαμπόκι, φασόλια, ρεβίθια και φακές, εμπλουτισμένη με ένα αρωματικό σοτέ σκόρδου, κρεμμυδιού, φασκόμηλου και δενδρολίβανου.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>100 γρ καλαμπόκι ή άσπρο καλαμπόκι</li>
+<li>100 γρ άσπρα φασόλια cannellini ξερά</li>
+<li>100 γρ ξερά ρεβίθια</li>
+<li>100 γρ ξερά φασόλια borlotti</li>
+<li>100 γρ φακές</li>
+<li>3 σκελίδες σκόρδο</li>
+<li>Αλάτι κατά βούληση</li>
+</ul>
+<p><strong>Για το σοτέ:</strong></p>
+<ul>
+<li>2 σκελίδες σκόρδο</li>
+<li>1/2 λευκό κρεμμύδι</li>
+<li>2 φύλλα φασκόμηλου</li>
+<li>1 κλωνάρι δενδρολίβανου</li>
+<li>5 κουταλιές της σούπας ελαιόλαδο</li>
+<li>Τσίλι κατά βούληση</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία των οσπρίων:</strong> Μούλιασε τα φασόλια και τα ρεβίθια τουλάχιστον 8 ώρες. Ξέπλυνέ τα και βάλε τα σε μια κατσαρόλα με νερό. Βράσε σε χαμηλή φωτιά μέχρι να μαλακώσουν (περίπου 1-1,5 ώρες). Πρόσθεσε αλάτι προς το τέλος του μαγειρέματος. Μετά από 30 λεπτά πρόσθεσε φακές και καλαμπόκι και συνέχισε το μαγείρεμα για άλλα 30-40 λεπτά.</p>
+<p>2. <strong>Προετοιμασία του σοτέ:</strong> Σε ένα τηγάνι, ζέστανε το λάδι σε μέτρια φωτιά. Πρόσθεσε ψιλοκομμένο κρεμμύδι και πλασταρωμένο σκόρδο, σοτάρε μέχρι το κρεμμύδι να γίνει διάφανο. Πρόσθεσε φασκόμηλο και δενδρολίβανο, μαγείρεψε για δύο λεπτά. Πρόσθεσε τσίλι αν θέλεις.</p>
+<p>3. <strong>Συναρμολόγηση:</strong> Πρόσθεσε το σοτέ στην κατσαρόλα με τα όσπρια και ανακάτεψε καλά. Αν η σούπα είναι πολύ πηχτή, πρόσθεσε ζεστό νερό μέχρι να φτάσεις την επιθυμητή πυκνότητα. Μαγείρεψε για άλλα 10-15 λεπτά, αλατοπιπερώνοντας.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

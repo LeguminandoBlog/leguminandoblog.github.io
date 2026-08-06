@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crostata Salata di Ceci con Asparagi e Pomodorini | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+</style>
+<meta name="description" content="Crostata Salata di Ceci con Asparagi e Pomodorini">
+<meta property="og:title" content="Crostata Salata di Ceci con Asparagi e Pomodorini | Leguminando">
+<meta property="og:description" content="Crostata salata con crema di ceci, asparagi caramellati, pomodorini colorati e pecorino.">
+<meta property="og:image" content="https://leguminandoblog.github.io/primavera/014.jpg">
+<meta property="og:url" content="https://leguminandoblog.github.io/primavera/014.html">
+<meta property="og:type" content="article">
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="primavera/014.html" data-title="Crostata Salata di Ceci con Asparagi e Pomodorini" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="014.jpg" alt="Crostata Salata di Ceci" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2026-03-20</p>
+<p><strong>Meta:</strong> 6 porzioni | Vegetariano</p>
+<p><strong>Descrizione:</strong> Crostata salata con crema di ceci, asparagi caramellati, pomodorini colorati e pecorino.</p>
+<h3>Ingredienti</h3>
+<h3>Per la Pasta Brisée</h3>
+<ul>
+<li>300 g di farina 00</li>
+<li>150 g di burro freddo (o olio di cocco solido per versione vegana)</li>
+<li>1 uovo</li>
+<li>Un pizzico di sale</li>
+<li>Acqua fredda q.b.</li>
+</ul>
+<h3>Per la Crema di Ceci</h3>
+<ul>
+<li>400 g di ceci precotti, scolati</li>
+<li>100 g di ricotta fresca</li>
+<li>2 cucchiai di olio extravergine d'oliva</li>
+<li>Succo e scorza di 1 limone</li>
+<li>1 spicchio d'aglio</li>
+<li>Sale, pepe e noce moscata q.b.</li>
+</ul>
+<h3>Per il Topping Primaverile</h3>
+<ul>
+<li>1 mazzetto di asparagi (circa 400 g)</li>
+<li>4 cipollotti freschi (o 2 cipolle rosse)</li>
+<li>2 cucchiai di zucchero di canna</li>
+<li>2 cucchiai di aceto balsamico</li>
+<li>50 g di pecorino stagionato grattugiato (o Parmigiano)</li>
+<li>100 g di pomodorini gialli e rossi</li>
+<li>Olio extravergine d'oliva q.b.</li>
+</ul>
+<h3>Per la Finitura</h3>
+<ul>
+<li>Foglie di basilico fresco</li>
+<li>Scorza di limone grattugiata</li>
+<li>Pepe nero macinato</li>
+<li>Olio aromatizzato al basilico o al limone</li>
+</ul>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2026-03-20</p>
+<p><strong>Meta:</strong> 6 servings | Vegetarian</p>
+<p><strong>Description:</strong> Savory tart with chickpea cream, caramelized asparagus, colorful cherry tomatoes and pecorino.</p>
+<h3>Ingredients</h3>
+<h3>For the Shortcrust Pastry</h3>
+<ul>
+<li>300 g 00 flour</li>
+<li>150 g cold butter (or solid coconut oil for vegan version)</li>
+<li>1 egg</li>
+<li>A pinch of salt</li>
+<li>Cold water to taste</li>
+</ul>
+<h3>For the Chickpea Cream</h3>
+<ul>
+<li>400 g precooked chickpeas, drained</li>
+<li>100 g fresh ricotta</li>
+<li>2 tablespoons extra virgin olive oil</li>
+<li>Juice and zest of 1 lemon</li>
+<li>1 garlic clove</li>
+<li>Salt, pepper and nutmeg to taste</li>
+</ul>
+<h3>For the Spring Topping</h3>
+<ul>
+<li>1 bunch of asparagus (about 400 g)</li>
+<li>4 fresh spring onions (or 2 red onions)</li>
+<li>2 tablespoons cane sugar</li>
+<li>2 tablespoons balsamic vinegar</li>
+<li>50 g grated aged pecorino (or Parmigiano)</li>
+<li>100 g yellow and red cherry tomatoes</li>
+<li>Extra virgin olive oil to taste</li>
+</ul>
+<h3>To Finish</h3>
+<ul>
+<li>Fresh basil leaves</li>
+<li>Grated lemon zest</li>
+<li>Ground black pepper</li>
+<li>Basil or lemon flavored oil</li>
+</ul>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2026-03-20</p>
+<p><strong>Meta:</strong> 6 porciones | Vegetariano</p>
+<p><strong>Descripción:</strong> Tarta salada con crema de garbanzos, espárragos caramelizados, tomates cherry de colores y pecorino.</p>
+<h3>Ingredientes</h3>
+<h3>Para la Masa Brisée</h3>
+<ul>
+<li>300 g de harina 00</li>
+<li>150 g de mantequilla fría (o aceite de coco sólido para versión vegana)</li>
+<li>1 huevo</li>
+<li>Una pizca de sal</li>
+<li>Agua fría c.s.</li>
+</ul>
+<h3>Para la Crema de Garbanzos</h3>
+<ul>
+<li>400 g de garbanzos precocidos, escurridos</li>
+<li>100 g de ricotta fresca</li>
+<li>2 cucharadas de aceite de oliva virgen extra</li>
+<li>Zumo y ralladura de 1 limón</li>
+<li>1 diente de ajo</li>
+<li>Sal, pimienta y nuez moscada c.s.</li>
+</ul>
+<h3>Para el Topping Primaveral</h3>
+<ul>
+<li>1 manojo de espárragos (unos 400 g)</li>
+<li>4 cebollines frescos (o 2 cebollas rojas)</li>
+<li>2 cucharadas de azúcar de caña</li>
+<li>2 cucharadas de vinagre balsámico</li>
+<li>50 g de pecorino añejo rallado (o Parmigiano)</li>
+<li>100 g de tomates cherry amarillos y rojos</li>
+<li>Aceite de oliva virgen extra c.s.</li>
+</ul>
+<h3>Para la Finition</h3>
+<ul>
+<li>Hojas de albahaca fresca</li>
+<li>Ralladura de limón</li>
+<li>Pimienta negra molida</li>
+<li>Aceite aromatizado al albahaca o limón</li>
+</ul>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2026-03-20</p>
+<p><strong>Meta:</strong> 6 porções | Vegetariano</p>
+<p><strong>Descrição:</strong> Tarte salgada com creme de grão-de-bico, aspargos caramelizados, tomates cherry coloridos e pecorino.</p>
+<h3>Ingredientes</h3>
+<h3>Para a Massa Brisée</h3>
+<ul>
+<li>300 g de farinha 00</li>
+<li>150 g de manteiga fria (ou óleo de coco sólido para versão vegana)</li>
+<li>1 ovo</li>
+<li>Uma pitada de sal</li>
+<li>Água fria q.b.</li>
+</ul>
+<h3>Para o Creme de Grão-de-Bico</h3>
+<ul>
+<li>400 g de grão-de-bico pré-cozido, escorrido</li>
+<li>100 g de ricotta fresca</li>
+<li>2 colheres de sopa de azeite extra virgem</li>
+<li>Sumo e raspa de 1 limão</li>
+<li>1 dente de alho</li>
+<li>Sal, pimenta e noz-moscada q.b.</li>
+</ul>
+<h3>Para a Cobertura Primaveril</h3>
+<ul>
+<li>1 molho de aspargos (cerca de 400 g)</li>
+<li>4 cebolinhas frescas (ou 2 cebolas roxas)</li>
+<li>2 colheres de sopa de açúcar de cana</li>
+<li>2 colheres de sopa de vinagre balsâmico</li>
+<li>50 g de pecorino curado ralado (ou Parmigiano)</li>
+<li>100 g de tomates cherry amarelos e vermelhos</li>
+<li>Azeite extra virgem q.b.</li>
+</ul>
+<h3>Para a Finalização</h3>
+<ul>
+<li>Folhas de manjericão fresco</li>
+<li>Raspa de limão</li>
+<li>Pimenta preta moída</li>
+<li>Azeite aromatizado com manjericão ou limão</li>
+</ul>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2026-03-20</p>
+<p><strong>Meta:</strong> 6 Portionen | Vegetarisch</p>
+<p><strong>Beschreibung:</strong> Herzhafte Tarte mit Kichererbsen-Creme, karamellisiertem Spargel, bunten Kirschtomaten und Pecorino.</p>
+<h3>Zutaten</h3>
+<h3>Für den Mürbteig</h3>
+<ul>
+<li>300 g Mehl Type 00</li>
+<li>150 g kalte Butter (oder festes Kokosöl für vegane Version)</li>
+<li>1 Ei</li>
+<li>Eine Prise Salz</li>
+<li>Kaltes Wasser nach Geschmack</li>
+</ul>
+<h3>Für die Kichererbsen-Creme</h3>
+<ul>
+<li>400 g vorgekochte Kichererbsen, abgetropft</li>
+<li>100 g frische Ricotta</li>
+<li>2 Esslöffel extra natives Olivenöl</li>
+<li>Saft und Schale von 1 Zitrone</li>
+<li>1 Knoblauchzehe</li>
+<li>Salz, Pfeffer und Muskatnuss nach Geschmack</li>
+</ul>
+<h3>Für das Frühlings-Topping</h3>
+<ul>
+<li>1 Bund Spargel (ca. 400 g)</li>
+<li>4 frische Frühlingszwiebeln (oder 2 rote Zwiebeln)</li>
+<li>2 Esslöffel Rohrzucker</li>
+<li>2 Esslöffel Balsamico-Essig</li>
+<li>50 g geriebener gereifter Pecorino (oder Parmigiano)</li>
+<li>100 g gelbe und rote Kirschtomaten</li>
+<li>Extra natives Olivenöl nach Geschmack</li>
+</ul>
+<h3>Zum Servieren</h3>
+<ul>
+<li>Frische Basilikumblätter</li>
+<li>Geriebene Zitronenschale</li>
+<li>Frisch gemahlener schwarzer Pfeffer</li>
+<li>Basilikum- oder Zitronenöl</li>
+</ul>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2026-03-20</p>
+<p><strong>Meta:</strong> 6 μερίδες | Χορτοφαγικό</p>
+<p><strong>Περιγραφή:</strong> Αλμυρή τάρτα με κρέμα ρεβιθιών, καραμελωμένα σπαράγγια, έγχρωμα ντοματίνια και πεκορίνο.</p>
+<h3>Συστατικά</h3>
+<h3>Για τη Ζύμη Μπριζέ</h3>
+<ul>
+<li>300 γρ αλεύρι 00</li>
+<li>150 γρ κρύο βούτυρο (ή στερεό λάδι καρύδας για vegan)</li>
+<li>1 αυγό</li>
+<li>Μια πρέζα αλάτι</li>
+<li>Κρύο νερό κατά βούληση</li>
+</ul>
+<h3>Για την Κρέμα Ρεβιθιών</h3>
+<ul>
+<li>400 γρ προμαγειρεμένα ρεβίθια, στραγγισμένα</li>
+<li>100 γρ φρέσκια ρικότα</li>
+<li>2 κουταλιές της σούπας ελαιόλαδο</li>
+<li>Χυμός και ξύσμα 1 λεμονιού</li>
+<li>1 σκελίδα σκόρδο</li>
+<li>Αλάτι, πιπέρι και μοσχοκάρυδο κατά βούληση</li>
+</ul>
+<h3>Για την Ανοιξιάτικη Επικάλυψη</h3>
+<ul>
+<li>1 ματσάκι σπαράγγια (περίπου 400 γρ)</li>
+<li>4 φρέσκα κρεμμυδάκια (ή 2 κόκκινα κρεμμύδια)</li>
+<li>2 κουταλιές της σούπας καστανή ζάχαρη</li>
+<li>2 κουταλιές της σούπας βαλσαμικό ξίδι</li>
+<li>50 γρ τριμμένο ώριμο πεκορίνο (ή Parmigiano)</li>
+<li>100 γρ κίτρινα και κόκκινα ντοματίνια</li>
+<li>Ελαιόλαδο κατά βούληση</li>
+</ul>
+<h3>Για το Τελείωμα</h3>
+<ul>
+<li>Φρέσκα φύλλα βασιλικού</li>
+<li>Τριμμένο ξύσμα λεμονιού</li>
+<li>Τριμμένο μαύρο πιπέρι</li>
+<li>Αρωματισμένο λάδι βασιλικού ή λεμονιού</li>
+</ul>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+<div data-legumi="ceci" style="display:none;"></div>
+
+</body>
+</html>

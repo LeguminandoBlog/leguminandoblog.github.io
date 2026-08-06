@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insalata Invernale di Fagioli, Pesce Spada e Radicchio | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Insalata Invernale di Fagioli, Pesce Spada e Radicchio">
+<meta property="og:title" content="Insalata Invernale di Fagioli, Pesce Spada e Radicchio | Leguminando">
+<meta property="og:description" content="Insalata Invernale di Fagioli, Pesce Spada e Radicchio">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="inverno/017.html" data-title="Insalata Invernale di Fagioli, Pesce Spada e Radicchio" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="017.jpg" alt="Insalata Invernale di Fagioli, Pesce Spada e Radicchio" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-12-29</p>
+<p><strong>Meta:</strong> 2 porzioni | Pesce</p>
+<p><strong>Descrizione:</strong> Insalata invernale colorata con fagioli cannellini, pesce spada, radicchio, peperone e olive nere, condita con vinaigrette piccante.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>200 g di fagioli cannellini (già cotti)</li>
+<li>200 g di pesce spada abbattuto o affumicato</li>
+<li>1 cespo di radicchio rosso (tipo Chioggia o Treviso)</li>
+<li>1 peperone (giallo o rosso)</li>
+<li>100 g di olive nere snocciolate</li>
+<li>Aceto balsamico di Modena</li>
+<li>Pepe nero macinato fresco</li>
+<li>Peperoncino secco o fresco q.b.</li>
+<li>Olio extravergine d'oliva</li>
+<li>Sale q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparazione delle verdure:</strong> Sciacqua i fagioli e scolali. Lava il radicchio, taglialo a listarelle e mettilo in acqua fredda per 10 minuti per renderlo più croccante. Scolalo e asciugalo. Lava il peperone, rimuovi semi e coste interne, taglia a cubetti.</p>
+<p>2. <strong>Preparazione del pesce spada:</strong> Se usi pesce spada abbattuto, taglia a dadini di 1-2 cm (puoi usarlo a crudo o scottarlo in padella 1-2 minuti). Se usi quello affumicato, taglia a listarelle.</p>
+<p>3. <strong>Assemblaggio:</strong> In una ciotola unisci fagioli, pesce spada, radicchio, peperone e olive. Mescola delicatamente.</p>
+<p>4. <strong>Condimento:</strong> Prepara una vinaigrette con 5-6 cucchiai di olio, 2-3 cucchiai di aceto balsamico, pepe nero e peperoncino a piacere. Sbatti con una forchetta fino a emulsionare. Versa sull'insalata, mescola e servi.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-12-29</p>
+<p><strong>Meta:</strong> 2 servings | Fish</p>
+<p><strong>Description:</strong> Colourful winter salad with cannellini beans, swordfish, radicchio, pepper and black olives, dressed with spicy vinaigrette.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>200 g cooked cannellini beans</li>
+<li>200 g raw or smoked swordfish</li>
+<li>1 head red radicchio (Chioggia or Treviso type)</li>
+<li>1 pepper (yellow or red)</li>
+<li>100 g pitted black olives</li>
+<li>Balsamic vinegar of Modena</li>
+<li>Freshly ground black pepper</li>
+<li>Dried or fresh chilli to taste</li>
+<li>Extra virgin olive oil</li>
+<li>Salt to taste</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Prepare vegetables:</strong> Rinse beans and drain. Wash radicchio, slice into strips and soak in cold water for 10 minutes for extra crunch. Drain and dry. Wash pepper, remove seeds and ribs, dice.</p>
+<p>2. <strong>Prepare swordfish:</strong> If using raw swordfish, dice into 1-2 cm cubes (can be used raw or seared in pan 1-2 minutes). If using smoked, cut into strips.</p>
+<p>3. <strong>Assemble:</strong> In a bowl combine beans, swordfish, radicchio, pepper and olives. Mix gently.</p>
+<p>4. <strong>Dressing:</strong> Make a vinaigrette with 5-6 tablespoons oil, 2-3 tablespoons balsamic vinegar, black pepper and chilli to taste. Whisk with a fork until emulsified. Pour over salad, toss and serve.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-12-29</p>
+<p><strong>Meta:</strong> 2 porciones | Pescado</p>
+<p><strong>Descripción:</strong> Ensalada de invierno colorida con frijoles cannellini, pez espada, radicchio, pimiento y aceitunas negras, aliñada con vinagreta picante.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>200 g de frijoles cannellini cocidos</li>
+<li>200 g de pez espada crudo o ahumado</li>
+<li>1 cabeza de radicchio rojo (tipo Chioggia o Treviso)</li>
+<li>1 pimiento (amarillo o rojo)</li>
+<li>100 g de aceitunas negras sin hueso</li>
+<li>Vinagre balsámico de Módena</li>
+<li>Pimienta negra recién molida</li>
+<li>Guindilla seca o fresca c.s.</li>
+<li>Aceite de oliva virgen extra</li>
+<li>Sal c.s.</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparar verduras:</strong> Enjuaga los frijoles y escúrrelos. Lava el radicchio, córtalo en tiras y ponlo en agua fría 10 minutos para hacerlo más crujiente. Escúrrelo y sécalo. Lava el pimiento, quita semillas y costillas, corta en cubos.</p>
+<p>2. <strong>Preparar pez espada:</strong> Si usas pez espada crudo, corta en dados de 1-2 cm (puedes usarlo crudo o sellarlo en sartén 1-2 minutos). Si usas ahumado, corta en tiras.</p>
+<p>3. <strong>Montaje:</strong> En un bol mezcla frijoles, pez espada, radicchio, pimiento y aceitunas. Remueve suavemente.</p>
+<p>4. <strong>Aliño:</strong> Prepara una vinagreta con 5-6 cucharadas de aceite, 2-3 cucharadas de vinagre balsámico, pimienta negra y guindilla al gusto. Bate con un tenedor hasta emulsionar. Vierte sobre la ensalada, mezcla y sirve.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-12-29</p>
+<p><strong>Meta:</strong> 2 porções | Peixe</p>
+<p><strong>Descrição:</strong> Salada de inverno colorida com feijão cannellini, espadarte, radicchio, pimento e azeitonas pretas, temperada com vinagrete picante.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>200 g de feijão cannellini cozido</li>
+<li>200 g de espadarte cru ou defumado</li>
+<li>1 cabeça de radicchio vermelho (tipo Chioggia ou Treviso)</li>
+<li>1 pimento (amarelo ou vermelho)</li>
+<li>100 g de azeitonas pretas sem caroço</li>
+<li>Vinagre balsâmico de Módena</li>
+<li>Pimenta preta moída na altura</li>
+<li>Malagueta seca ou fresca q.b.</li>
+<li>Azeite extra virgem</li>
+<li>Sal q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparar legumes:</strong> Enxágua o feijão e escorre. Lava o radicchio, corta em tiras e põe em água fria 10 minutos para ficar mais crocante. Escorre e seca. Lava o pimento, retira sementes e filamentos, corta em cubos.</p>
+<p>2. <strong>Preparar espadarte:</strong> Se usares espadarte cru, corta em cubos de 1-2 cm (podes usar cru ou selar na frigideira 1-2 minutos). Se usares defumado, corta em tiras.</p>
+<p>3. <strong>Montagem:</strong> Numa tigela mistura feijão, espadarte, radicchio, pimento e azeitonas. Mexe suavemente.</p>
+<p>4. <strong>Tempero:</strong> Prepara um vinagrete com 5-6 colheres de sopa de azeite, 2-3 colheres de vinagre balsâmico, pimenta preta e malagueta a gosto. Bate com um garfo até emulsionar. Deita sobre a salada, envolve e serve.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-12-29</p>
+<p><strong>Meta:</strong> 2 Portionen | Fisch</p>
+<p><strong>Beschreibung:</strong> Bunte Wintersalat mit Cannellini-Bohnen, Schwertfisch, Radicchio, Paprika und schwarzen Oliven, mit scharfem Vinaigrette.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>200 g gekochte Cannellini-Bohnen</li>
+<li>200 g roher oder geräucherter Schwertfisch</li>
+<li>1 Kopf roter Radicchio (Chioggia oder Treviso)</li>
+<li>1 Paprika (gelb oder rot)</li>
+<li>100 g entsteinte schwarze Oliven</li>
+<li>Balsamico-Essig aus Modena</li>
+<li>Frisch gemahlener schwarzer Pfeffer</li>
+<li>Getrocknete oder frische Chili nach Geschmack</li>
+<li>Natives Olivenöl extra</li>
+<li>Salz nach Geschmack</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Gemüse vorbereiten:</strong> Bohnen abspülen und abtropfen. Radicchio waschen, in Streifen schneiden und 10 Minuten in kaltem Wasser einweichen für extra Biss. Abtropfen und trocknen. Paprika waschen, Samen und weiße Häute entfernen, würfeln.</p>
+<p>2. <strong>Schwertfisch vorbereiten:</strong> Rohen Schwertfisch in 1-2 cm Würfel schneiden (kann roh verwendet oder in Pfanne 1-2 Minuten angebraten werden). Geräucherten in Streifen schneiden.</p>
+<p>3. <strong>Zusammenstellen:</strong> Bohnen, Schwertfisch, Radicchio, Paprika und Oliven in einer Schüssel vermischen. Vorsichtig umrühren.</p>
+<p>4. <strong>Dressing:</strong> Vinaigrette mit 5-6 Esslöffeln Öl, 2-3 Esslöffeln Balsamico, schwarzem Pfeffer und Chili nach Geschmack zubereiten. Mit einer Gabel schlagen bis emulgiert. Über den Salat gießen, mischen und servieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-12-29</p>
+<p><strong>Meta:</strong> 2 μερίδες | Ψάρι</p>
+<p><strong>Περιγραφή:</strong> Χρωματιστή χειμερινή σαλάτα με φασόλια cannellini, ξιφία, ραδίκιο, πιπεριά και μαύρες ελιές, ντυμένη με πικάντικη βινεγκρέτ.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>200 γρ μαγειρεμένα φασόλια cannellini</li>
+<li>200 γρ ωμό ή καπνιστό ξιφία</li>
+<li>1 κεφάλι κόκκινο ραδίκιο (τύπου Chioggia ή Treviso)</li>
+<li>1 πιπεριά (κίτρινη ή κόκκινη)</li>
+<li>100 γρ μαύρες ελιές χωρίς κουκούτσι</li>
+<li>Βαλσαμικό ξίδι Μοδένας</li>
+<li>Φρέσκο τριμμένο μαύρο πιπέρι</li>
+<li>Ξερή ή φρέσκια καυτερή πιπεριά κατά βούληση</li>
+<li>Ελαιόλαδο</li>
+<li>Αλάτι κατά βούληση</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία λαχανικών:</strong> Ξέπλυνε τα φασόλια και στράγγισέ τα. Πλύνε το ραδίκιο, κόψε το σε λωρίδες και βάλτο σε κρύο νερό για 10 λεπτά για επιπλέον τραγανότητα. Στράγγισε και στέγνωσέ το. Πλύνε την πιπεριά, αφαίρεσε σπόρους και μεμβράνες, κόψε σε κύβους.</p>
+<p>2. <strong>Προετοιμασία ξιφία:</strong> Αν χρησιμοποιείς ωμό ξιφία, κόψε σε κύβους 1-2 εκ. (μπορείς να τον χρησιμοποιήσεις ωμό ή να τον σοτάρεις στο τηγάνι 1-2 λεπτά). Αν χρησιμοποιείς καπνιστό, κόψε σε λωρίδες.</p>
+<p>3. <strong>Συναρμολόγηση:</strong> Σε ένα μπολ ανακάτεψε φασόλια, ξιφία, ραδίκιο, πιπεριά και ελιές. Ανακάτεψε απαλά.</p>
+<p>4. <strong>Ντρέσινγκ:</strong> Ετοίμασε μια βινεγκρέτ με 5-6 κουταλιές λάδι, 2-3 κουταλιές βαλσαμικό ξίδι, μαύρο πιπέρι και καυτερή πιπεριά κατά βούληση. Χτύπα με ένα πιρούνι μέχρι να γίνει γαλάζιο. Περιέχυσε πάνω στη σαλάτα, ανακάτεψε και σέρβιρε.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

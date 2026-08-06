@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insalata estiva di fagioli alla mediterranea | Leguminando</title>
+<meta name="description" content="Insalata estiva di fagioli alla mediterranea">
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%); color: #333; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 30px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.header h1 { margin: 0; font-size: 2.2em; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+.header p { margin: 10px 0 0 0; font-size: 1.1em; opacity: 0.9; }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border: 2px solid #D2691E; background: white; color: #8B4513; border-radius: 20px; cursor: pointer; font-size: 0.85em; transition: all 0.3s; }
+.lang-tab:hover { background: #faf8f5; }
+.lang-tab.active { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; }
+.lang-content { display: none; }
+.lang-content.active { display: block; }
+.content { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.recipe-image { width: 100%; max-width: 700px; height: 400px; object-fit: cover; border-radius: 12px; margin: 0 auto 30px auto; display: block; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.section { margin-bottom: 30px; }
+.section h2 { color: #8B4513; border-bottom: 3px solid #D2691E; padding-bottom: 10px; margin-bottom: 20px; font-size: 1.5em; }
+.section h3 { color: #D2691E; margin: 20px 0 10px 0; font-size: 1.2em; }
+.ingredients-list { background: #faf8f5; padding: 20px; border-radius: 10px; border-left: 5px solid #D2691E; }
+.ingredients-list ul { list-style: none; padding: 0; }
+.ingredients-list li { padding: 8px 0; border-bottom: 1px dashed #e0d5c8; }
+.ingredients-list li:last-child { border-bottom: none; }
+.ingredients-list li:before { content: "🫘 "; margin-right: 8px; }
+.steps-list { counter-reset: step; }
+.steps-list li { counter-increment: step; padding: 15px 0 15px 50px; position: relative; border-bottom: 1px solid #eee; }
+.steps-list li:last-child { border-bottom: none; }
+.steps-list li::before { content: counter(step); position: absolute; left: 0; top: 10px; background: #8B4513; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em; }
+.footer { text-align: center; margin-top: 40px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 20px 0; padding: 12px 24px; background: linear-gradient(135deg, #8B4513, #D2691E); color: white; text-decoration: none; border-radius: 25px; font-size: 1em; transition: transform 0.2s; }
+.back-link:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.fav-btn { cursor: pointer; font-size: 1.2em; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+@media print {
+    .lang-tabs { display: none !important; }
+    .lang-content { display: block !important; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>🫘 Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<div class="content">
+<div style="text-align: center; margin: -20px 0 20px 0;">
+<span style="display: inline-block; padding: 8px 16px; background: linear-gradient(135deg, #D2691E, #8B4513); color: white; border-radius: 20px; font-size: 0.9em;">
+📅 2026-07-30 — Estate ☀️</span>
+</div>
+<img src="est_16.jpg" alt="Insalata estiva di fagioli alla mediterranea" class="recipe-image">
+
+<div class="fav-bar" style="text-align:center;margin:5px 0;">
+<span class="fav-btn" data-path="estate/est_16.html" data-title="Insalata estiva di fagioli alla mediterranea" onclick="toggleFav(this.dataset.path, this.dataset.title)">
+🤍</span> Aggiungi ai preferiti
+</div>
+
+<div class="lang-tabs">
+<span class="lang-tab active" data-lang="it" onclick="switchLang('it')">🇮🇹 IT</span>
+<span class="lang-tab" data-lang="en" onclick="switchLang('en')">🇬🇧 EN</span>
+<span class="lang-tab" data-lang="es" onclick="switchLang('es')">🇪🇸 ES</span>
+<span class="lang-tab" data-lang="pt" onclick="switchLang('pt')">🇵🇹 PT</span>
+<span class="lang-tab" data-lang="de" onclick="switchLang('de')">🇩🇪 DE</span>
+<span class="lang-tab" data-lang="el" onclick="switchLang('el')">🇬🇷 EL</span>
+</div>
+
+<div id="lang-it" class="lang-content active">
+<div class="section">
+<h2>Insalata estiva di fagioli alla mediterranea</h2>
+<p>Un'insalata fresca e leggera, perfetta per il pranzo estivo o come contorno per grigliate. I fagioli cannellini si sposano con pomodorini dolci e cipolla rossa, conditi con olio extravergine e limone.</p>
+
+<h3>Ingredienti (4 porzioni)</h3>
+<div class="ingredients-list">
+<ul>
+<li>400 g fagioli cannellini cotti (sgocciolati)</li>
+<li>200 g pomodorini ciliegia, tagliati a metà</li>
+<li>1 cipolla rossa piccola, affettata sottile</li>
+<li>1 manciata di prezzemolo tritato</li>
+<li>2 cucchiai (30 ml) olio extravergine d'oliva</li>
+<li>Succo di 1/2 limone</li>
+<li>Sale, pepe nero a piacere</li>
+<li>(Opzionale) 100 g feta sbriciolata o 120 g tonno al naturale per variante proteica</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparazione</h3>
+<ol class="steps-list">
+<li>In una ciotola grande unisci i fagioli, i pomodorini, la cipolla e il prezzemolo.</li>
+<li>Condisca con olio, succo di limone, sale e pepe; mescola delicatamente.</li>
+<li>Lascia riposare in frigorifero 15-30 minuti per far amalgamare i sapori.</li>
+<li>Aggiungi feta o tonno solo al momento di servire se usi le varianti.</li>
+</ol>
+
+<h3>📊 Valori nutrizionali (per porzione, ricetta base senza feta/tonno)</h3>
+<ul>
+<li>Calorie: ~210 kcal</li>
+<li>Proteine: ~7 g</li>
+<li>Grassi: ~8 g</li>
+<li>Carboidrati: ~22 g</li>
+</ul>
+</div>
+</div>
+
+<div id="lang-en" class="lang-content">
+<div class="section">
+<h2>Mediterranean Summer Bean Salad</h2>
+<p>A fresh and light salad, perfect for a summer lunch or as a side for barbecues. Cannellini beans pair with sweet cherry tomatoes and red onion, dressed with extra virgin olive oil and lemon.</p>
+
+<h3>Ingredients (4 servings)</h3>
+<div class="ingredients-list">
+<ul>
+<li>400 g cooked cannellini beans (drained)</li>
+<li>200 g cherry tomatoes, halved</li>
+<li>1 small red onion, thinly sliced</li>
+<li>1 handful chopped parsley</li>
+<li>2 tablespoons (30 ml) extra virgin olive oil</li>
+<li>Juice of 1/2 lemon</li>
+<li>Salt, black pepper to taste</li>
+<li>(Optional) 100 g crumbled feta or 120 g natural tuna for protein variation</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparation</h3>
+<ol class="steps-list">
+<li>In a large bowl combine beans, cherry tomatoes, onion and parsley.</li>
+<li>Dress with oil, lemon juice, salt and pepper; mix gently.</li>
+<li>Refrigerate for 15-30 minutes to let flavors meld.</li>
+<li>Add feta or tuna just before serving if using variations.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-es" class="lang-content">
+<div class="section">
+<h2>Ensalada de Verano de Alubias a la Mediterránea</h2>
+<p>Una ensalada fresca y ligera, perfecta para el almuerzo de verano o como guarnición para barbacoas. Las alubias cannellini se combinan con tomates cherry dulces y cebolla roja, aliñados con aceite de oliva virgen extra y limón.</p>
+
+<h3>Ingredientes (4 raciones)</h3>
+<div class="ingredients-list">
+<ul>
+<li>400 g alubias cannellini cocidas (escurridas)</li>
+<li>200 g tomates cherry, cortados por la mitad</li>
+<li>1 cebolla roja pequeña, cortada en finas láminas</li>
+<li>1 puñado de perejil picado</li>
+<li>2 cucharadas (30 ml) aceite de oliva virgen extra</li>
+<li>Zumo de 1/2 limón</li>
+<li>Sal, pimienta negra al gusto</li>
+<li>(Opcional) 100 g feta desmenuzada o 120 g atún al natural para variación proteica</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparación</h3>
+<ol class="steps-list">
+<li>En un bol grande mezcla las alubias, los tomates cherry, la cebolla y el perejil.</li>
+<li>Aliña con aceite, zumo de limón, sal y pimienta; mezcla suavemente.</li>
+<li>Deja reposar en el frigorífico 15-30 minutos para que se mezclen los sabores.</li>
+<li>Añade feta o atún justo antes de servir si usas las variaciones.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-pt" class="lang-content">
+<div class="section">
+<h2>Salada de Verão de Feijão à Mediterrânica</h2>
+<p>Uma salada fresca e leve, perfeita para o almoço de verão ou como acompanhamento para churrascos. O feijão cannellini combina com tomates cherry doces e cebola roxa, temperado com azeite de oliva virgem extra e limão.</p>
+
+<h3>Ingredientes (4 porções)</h3>
+<div class="ingredients-list">
+<ul>
+<li>400 g feijão cannellini cozido (escorrido)</li>
+<li>200 g tomates cherry, cortados ao meio</li>
+<li>1 cebola roxa pequena, cortada em fatias finas</li>
+<li>1 punhado de salsa picada</li>
+<li>2 colheres de sopa (30 ml) azeite de oliva virgem extra</li>
+<li>Sumo de 1/2 limão</li>
+<li>Sal, pimenta preta a gosto</li>
+<li>(Opcional) 100 g feta desfeita ou 120 g atum ao natural para variante proteica</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparação</h3>
+<ol class="steps-list">
+<li>Numa tigela grande misture o feijão, os tomates cherry, a cebola e a salsa.</li>
+<li>Tempere com azeite, sumo de limão, sal e pimenta; misture delicadamente.</li>
+<li>Deixe repousar no frigorífico 15-30 minutos para os sabores se misturarem.</li>
+<li>Adicione feta ou atum apenas na hora de servir se usar as variantes.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-de" class="lang-content">
+<div class="section">
+<h2>Mediterraner Sommerbohnensalat</h2>
+<p>Ein frischer und leichter Salat, perfekt für das Sommermittagessen oder als Beilage zum Grillen. Cannellini-Bohnen vereinen sich mit süßen Cherrytomaten und roten Zwiebeln, abgeschmeckt mit nativem Olivenöl extra und Zitrone.</p>
+
+<h3>Zutaten (4 Portionen)</h3>
+<div class="ingredients-list">
+<ul>
+<li>400 g gekochte Cannellini-Bohnen (abgetropft)</li>
+<li>200 g Cherrytomaten, halbiert</li>
+<li>1 kleine rote Zwiebel, in dünne Scheiben geschnitten</li>
+<li>1 Handvoll gehackte Petersilie</li>
+<li>2 Esslöffel (30 ml) natives Olivenöl extra</li>
+<li>Saft von 1/2 Zitrone</li>
+<li>Salz, schwarzer Pfeffer nach Geschmack</li>
+<li>(Optional) 100 g zerbröselter Feta oder 120 g Naturthunfisch für proteinreiche Variante</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Zubereitung</h3>
+<ol class="steps-list">
+<li>In einer großen Schüssel Bohnen, Cherrytomaten, Zwiebel und Petersilie vermischen.</li>
+<li>Mit Öl, Zitronensaft, Salz und Pfeffer würzen; vorsichtig mischen.</li>
+<li>Für 15-30 Minuten im Kühlschrank ruhen lassen, damit sich die Aromen verbinden.</li>
+<li>Bei Bedarf Feta oder Thunfisch kurz vor dem Servieren hinzufügen.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-el" class="lang-content">
+<div class="section">
+<h2>Μεσογειακή Καλοκαιρινή Σαλάτα με Φασόλια</h2>
+<p>Μια φρέσκια και ελαφριά σαλάτα, τέλεια για το καλοκαιρινό μεσημεριανό ή ως συνοδευτικό για ψητά. Τα φασόλια cannellini συνδυάζονται με γλυκά ντοματίνια και κόκκινο κρεμμύδι, ντυμένα με έξτρα παρθένο ελαιόλαδο και λεμόνι.</p>
+
+<h3>Συστατικά (4 μερίδες)</h3>
+<div class="ingredients-list">
+<ul>
+<li>400 γραμ. μαγειρεμένα φασόλια cannellini (σουρωμένα)</li>
+<li>200 γραμ. ντοματίνια, κομμένα στη μέση</li>
+<li>1 μικρό κόκκινο κρεμμύδι, κομμένο σε λεπτές φέτες</li>
+<li>1 χούφτα ψιλοκομμένο μαϊντανό</li>
+<li>2 κουταλιές της σούπας (30 ml) έξτρα παρθένο ελαιόλαδο</li>
+<li>Χυμός 1/2 λεμονιού</li>
+<li>Αλάτι, μαύρο πιπέρι κατά βούληση</li>
+<li>(Προαιρετικά) 100 γραμ. τριμμένη φέτα ή 120 γραμ. τόνος στο νερό για παραλλαγή με πρωτεΐνη</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Εκτέλεση</h3>
+<ol class="steps-list">
+<li>Σε ένα μεγάλο μπολ αναμείξτε τα φασόλια, τα ντοματίνια, το κρεμμύδι και τον μαϊντανό.</li>
+<li>Ντύστε με ελαιόλαδο, χυμό λεμονιού, αλάτι και πιπέρι· ανακατέψτε απαλά.</li>
+<li>Αφήστε το στο ψυγείο για 15-30 λεπτά για να ενωθούν οι γεύσεις.</li>
+<li>Προσθέστε φέτα ή τόνο λίγο πριν το σερβίρισμα αν χρησιμοποιείτε παραλλαγές.</li>
+</ol>
+</div>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<a href="../index.html" class="back-link">← Torna alla Home</a>
+</div>
+
+<script>
+function switchLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(c => c.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+    document.querySelector('.lang-tab[data-lang="' + lang + '"]').classList.add('active');
+    localStorage.setItem('preferredLang', lang);
+}
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maltagliati Tricolori di Ceci, Lenticchie e Quinoa con Salsa di Pesce Spada | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Maltagliati Tricolori di Ceci, Lenticchie e Quinoa con Salsa di Pesce Spada">
+<meta property="og:title" content="Maltagliati Tricolori di Ceci, Lenticchie e Quinoa con Salsa di Pesce Spada | Leguminando">
+<meta property="og:description" content="Maltagliati Tricolori di Ceci, Lenticchie e Quinoa con Salsa di Pesce Spada">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="estate/026.html" data-title="Maltagliati Tricolori di Ceci, Lenticchie e Quinoa con Salsa di Pesce Spada" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="026.jpg" alt="Maltagliati Tricolori di Ceci, Lenticchie e Quinoa con Salsa di Pesce Spada" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-08-21</p>
+<p><strong>Meta:</strong> 4 porzioni | Pesce</p>
+<p><strong>Descrizione:</strong> Maltagliati tricolori fatti in casa con farina di ceci, lenticchie e quinoa, conditi con una salsa al pesce spada affumicato, burro e Prosecco.</p>
+<h3>Ingredienti per la pasta</h3>
+<ul>
+<li>200 g farina di ceci</li>
+<li>150 g farina di lenticchie</li>
+<li>150 g farina di quinoa</li>
+<li>4 uova grandi</li>
+<li>2-3 cucchiai olio extravergine d'oliva</li>
+<li>Sale q.b.</li>
+<li>120 g spinaci freschi sbollentati (per il verde)</li>
+<li>120 g purea di barbabietola rossa cotta (per il rosso)</li>
+</ul>
+<h3>Ingredienti per la salsa</h3>
+<ul>
+<li>200 g pesce spada affumicato a tranci</li>
+<li>80 g burro</li>
+<li>120 ml Prosecco</li>
+<li>1 scalogno piccolo tritato</li>
+<li>Pepe nero, scorza di limone, prezzemolo tritato</li>
+<li>Olio extravergine d'oliva, sale</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Impasti:</strong> Dividi le farine in tre parti. Per ogni colore prepara un impasto con farina + uovo + olio + sale. Per il verde aggiungi gli spinaci frullati; per il rosso la purea di barbabietola. Impasta fino a ottenere pasta liscia e omogenea.</p>
+<p>2. <strong>Riposo:</strong> Avvolgi i tre impasti nella pellicola e lasciali riposare 30 minuti a temperatura ambiente.</p>
+<p>3. <strong>Sfoglia:</strong> Stendi ogni impasto con il mattarello fino a ottenere sfoglie sottili. Sovrapponi leggermente le tre sfoglie e taglia a rombi irregolari (maltagliati).</p>
+<p>4. <strong>Salsa:</strong> In padella fondi il burro con lo scalogno tritato. Aggiungi il pesce spada affumicato a pezzetti, sfuma con il Prosecco e lascia ridurre 2-3 minuti. Aggiungi pepe, scorza di limone e prezzemolo.</p>
+<p>5. <strong>Cottura:</strong> Cuoci i maltagliati in abbondante acqua salata per 3-4 minuti. Scolali al dente e saltali in padella con la salsa. Servi immediatamente con un filo di olio a crudo.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-08-21</p>
+<p><strong>Meta:</strong> 4 servings | Fish</p>
+<p><strong>Description:</strong> Homemade tricolour maltagliati with chickpea, lentil and quinoa flour, dressed with a smoked swordfish sauce with butter and Prosecco.</p>
+<h3>Ingredients for the pasta</h3>
+<ul>
+<li>200 g chickpea flour</li>
+<li>150 g lentil flour</li>
+<li>150 g quinoa flour</li>
+<li>4 large eggs</li>
+<li>2-3 tablespoons extra virgin olive oil</li>
+<li>Salt to taste</li>
+<li>120 g blanched fresh spinach (for the green)</li>
+<li>120 g cooked red beetroot puree (for the red)</li>
+</ul>
+<h3>Ingredients for the sauce</h3>
+<ul>
+<li>200 g smoked swordfish in slices</li>
+<li>80 g butter</li>
+<li>120 ml Prosecco</li>
+<li>1 small shallot minced</li>
+<li>Black pepper, lemon zest, chopped parsley</li>
+<li>Extra virgin olive oil, salt</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Doughs:</strong> Divide the flours into three parts. For each colour prepare a dough with flour + egg + oil + salt. For the green add blended spinach; for the red the beetroot puree. Knead until smooth and homogeneous.</p>
+<p>2. <strong>Rest:</strong> Wrap the three doughs in cling film and let rest 30 minutes at room temperature.</p>
+<p>3. <strong>Sheets:</strong> Roll out each dough with a rolling pin until thin. Slightly overlap the three sheets and cut into irregular diamonds (maltagliati).</p>
+<p>4. <strong>Sauce:</strong> Melt butter in a pan with minced shallot. Add diced smoked swordfish, deglaze with Prosecco and let reduce 2-3 minutes. Add pepper, lemon zest and parsley.</p>
+<p>5. <strong>Cooking:</strong> Cook the maltagliati in plenty of salted water for 3-4 minutes. Drain al dente and toss in the pan with the sauce. Serve immediately with a drizzle of raw oil.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-08-21</p>
+<p><strong>Meta:</strong> 4 porciones | Pescado</p>
+<p><strong>Descripción:</strong> Maltagliati tricolores caseros con harina de garbanzos, lentejas y quinoa, condimentados con una salsa de pez espada ahumado, mantequilla y Prosecco.</p>
+<h3>Ingredientes para la pasta</h3>
+<ul>
+<li>200 g harina de garbanzos</li>
+<li>150 g harina de lentejas</li>
+<li>150 g harina de quinoa</li>
+<li>4 huevos grandes</li>
+<li>2-3 cucharadas aceite de oliva virgen extra</li>
+<li>Sal c.s.</li>
+<li>120 g espinacas frescas blanqueadas (para el verde)</li>
+<li>120 g puré de remolacha roja cocida (para el rojo)</li>
+</ul>
+<h3>Ingredientes para la salsa</h3>
+<ul>
+<li>200 g pez espada ahumado en lonchas</li>
+<li>80 g mantequilla</li>
+<li>120 ml Prosecco</li>
+<li>1 chalota pequeña picada</li>
+<li>Pimienta negra, ralladura de limón, perejil picado</li>
+<li>Aceite de oliva virgen extra, sal</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Masas:</strong> Divide las harinas en tres partes. Para cada color prepara una masa con harina + huevo + aceite + sal. Para el verde añade espinacas trituradas; para el rojo el puré de remolacha. Amasa hasta obtener pasta lisa y homogénea.</p>
+<p>2. <strong>Reposo:</strong> Envuelve las tres masas en film transparente y déjalas reposar 30 minutos a temperatura ambiente.</p>
+<p>3. <strong>Láminas:</strong> Extiende cada masa con un rodillo hasta obtener láminas finas. Superpon ligeramente las tres láminas y corta en rombos irregulares (maltagliati).</p>
+<p>4. <strong>Salsa:</strong> En sartén derrite la mantequilla con la chalota picada. Añade el pez espada ahumado en trozos, desglasa con el Prosecco y deja reducir 2-3 minutos. Añade pimienta, ralladura de limón y perejil.</p>
+<p>5. <strong>Cocción:</strong> Cocina los maltagliati en abundante agua salada durante 3-4 minutos. Escúrrelos al dente y salteados en sartén con la salsa. Sirve inmediatamente con un chorrito de aceite crudo.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-08-21</p>
+<p><strong>Meta:</strong> 4 porções | Peixe</p>
+<p><strong>Descrição:</strong> Maltagliati tricolores caseiros com farinha de grão-de-bico, lentilhas e quinoa, temperados com um molho de peixe-espada defumado, manteiga e Prosecco.</p>
+<h3>Ingredientes para a massa</h3>
+<ul>
+<li>200 g farinha de grão-de-bico</li>
+<li>150 g farinha de lentilhas</li>
+<li>150 g farinha de quinoa</li>
+<li>4 ovos grandes</li>
+<li>2-3 colheres de sopa azeite extra virgem</li>
+<li>Sal q.b.</li>
+<li>120 g espinafres frescos branqueados (para o verde)</li>
+<li>120 g puré de beterraba cozida (para o vermelho)</li>
+</ul>
+<h3>Ingredientes para o molho</h3>
+<ul>
+<li>200 g peixe-espada defumado em fatias</li>
+<li>80 g manteiga</li>
+<li>120 ml Prosecco</li>
+<li>1 chalota pequena picada</li>
+<li>Pimenta preta, raspa de limão, salsa picada</li>
+<li>Azeite extra virgem, sal</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Massas:</strong> Divide as farinhas em três partes. Para cada cor prepara uma massa com farinha + ovo + azeite + sal. Para o verde adiciona espinafres triturados; para o vermelho o puré de beterraba. Amassa até obter massa lisa e homogénea.</p>
+<p>2. <strong>Repouso:</strong> Enrola as três massas em película transparente e deixa repousar 30 minutos à temperatura ambiente.</p>
+<p>3. <strong>Folhas:</strong> Estende cada massa com o rolo até obter folhas finas. Sobrepõe ligeiramente as três folhas e corta em losangos irregulares (maltagliati).</p>
+<p>4. <strong>Molho:</strong> Numa frigideira derrete a manteiga com a chalota picada. Adiciona o peixe-espada defumado aos pedaços, desglasa com o Prosecco e deixa reduzir 2-3 minutos. Adiciona pimenta, raspa de limão e salsa.</p>
+<p>5. <strong>Cozedura:</strong> Cozinha os maltagliati em abundante água salgada durante 3-4 minutos. Escorre-os al dente e salta-os na frigideira com o molho. Serve imediatamente com um fio de azeite a cru.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-08-21</p>
+<p><strong>Meta:</strong> 4 Portionen | Fisch</p>
+<p><strong>Beschreibung:</strong> Selbstgemachte dreifarbige Maltagliati mit Kichererbsen-, Linsen- und Quinoamehl, serviert mit einer Sauce aus geräuchertem Schwertfisch, Butter und Prosecco.</p>
+<h3>Zutaten für die Pasta</h3>
+<ul>
+<li>200 g Kichererbsenmehl</li>
+<li>150 g Linsenmehl</li>
+<li>150 g Quinoamehl</li>
+<li>4 große Eier</li>
+<li>2-3 Esslöffel Olivenöl extra vergine</li>
+<li>Salz nach Geschmack</li>
+<li>120 g blanchierter frischer Spinat (für das Grün)</li>
+<li>120 g gekochtes rotes Rote-Bete-Püree (für das Rot)</li>
+</ul>
+<h3>Zutaten für die Sauce</h3>
+<ul>
+<li>200 g geräucherter Schwertfisch in Scheiben</li>
+<li>80 g Butter</li>
+<li>120 ml Prosecco</li>
+<li>1 kleine Schalotte gehackt</li>
+<li>Schwarzer Pfeffer, Zitronenschale, gehackte Petersilie</li>
+<li>Olivenöl extra vergine, Salz</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Teige:</strong> Teile die Mehle in drei Teile. Für jede Farbe bereite einen Teig mit Mehl + Ei + Öl + Salz zu. Für das Grün Spinat zugeben; für das Rot das Rote-Bete-Püree. Kneten, bis glatt und homogen.</p>
+<p>2. <strong>Ruhen:</strong> Wickle die drei Teige in Frischhaltefolie und lasse 30 Minuten bei Raumtemperatur ruhen.</p>
+<p>3. <strong>Blätter:</strong> Rolle jeden Teig mit dem Nudelholz dünn aus. Lege die drei Blätter leicht übereinander und schneide in unregelmäßige Rauten (Maltagliati).</p>
+<p>4. <strong>Sauce:</strong> Butter in einer Pfanne mit gehackter Schalotte schmelzen. Schwertfisch in Würfeln zugeben, mit Prosecco ablöschen und 2-3 Minuten reduzieren lassen. Pfeffer, Zitronenschale und Petersilie zugeben.</p>
+<p>5. <strong>Garen:</strong> Maltagliati in reichlich Salzwasser 3-4 Minuten kochen. Al dente abgießen und in der Pfanne mit der Sauce schwenken. Sofort mit einem Schuss Öl servieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-08-21</p>
+<p><strong>Meta:</strong> 4 μερίδες | Ψάρι</p>
+<p><strong>Περιγραφή:</strong> Σπιτικά τρίχρωμα maltagliati με αλεύρι ρεβιθιού, φακής και κινόα, ντυμένα με σάλτσα καπνιστού ξιφία, βούτυρο και Prosecco.</p>
+<h3>Συστατικά για τα ζυμαρικά</h3>
+<ul>
+<li>200 γρ αλεύρι ρεβιθιού</li>
+<li>150 γρ αλεύρι φακής</li>
+<li>150 γρ αλεύρι κινόα</li>
+<li>4 μεγάλα αυγά</li>
+<li>2-3 κουταλιές της σούπας ελαιόλαδο</li>
+<li>Αλάτι κατά βούληση</li>
+<li>120 γρ βρασμένα φρέσκα σπανάκια (για το πράσινο)</li>
+<li>120 γρ πουρέ βρασμένου κόκκινου παντζαριού (για το κόκκινο)</li>
+</ul>
+<h3>Συστατικά για τη σάλτσα</h3>
+<ul>
+<li>200 γρ καπνιστός ξιφίας σε φέτες</li>
+<li>80 γρ βούτυρο</li>
+<li>120 ml Prosecco</li>
+<li>1 μικρό κρεμμυδάκι ψιλοκομμένο</li>
+<li>Μαύρο πιπέρι, ξύσμα λεμονιού, ψιλοκομμένος μαϊντανός</li>
+<li>Ελαιόλαδο, αλάτι</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Ζύμες:</strong> Διαίρεσε τα αλεύρια σε τρία μέρη. Για κάθε χρώμα ετοίμασε μια ζύμη με αλεύρι + αυγό + λάδι + αλάτι. Για το πράσινο πρόσθεσε σπανάκι τριμμένο· για το κόκκινο τον πουρέ παντζαριού. Ζύμωσε μέχρι να γίνει λεία και ομοιογενής.</p>
+<p>2. <strong>Ξεκούραση:</strong> Τύλιξε τις τρεις ζύμες με μεμβράνη και άφησέ τες να ξεκουραστούν 30 λεπτά σε θερμοκρασία δωματίου.</p>
+<p>3. <strong>Φύλλα:</strong> Άνοιξε κάθε ζύμη με τον πλάστη μέχρι να γίνει λεπτό φύλλο. Τοποθέτησε ελαφρά τα τρία φύλλα το ένα πάνω στο άλλο και κόψε σε ακανόνιστους ρόμβους (maltagliati).</p>
+<p>4. <strong>Σάλτσα:</strong> Σε τηγάνι λιώσε το βούτυρο με το ψιλοκομμένο κρεμμυδάκι. Πρόσθεσε τον ξιφία σε κομμάτια, απογλυκάνισε με το Prosecco και άφησέ το να μειωθεί 2-3 λεπτά. Πρόσθεσε πιπέρι, ξύσμα λεμονιού και μαϊντανό.</p>
+<p>5. <strong>Μαγείρεμα:</strong> Βράσε τα maltagliati σε άφθονο αλατισμένο νερό για 3-4 λεπτά. Στράγγιξέ τα al dente και πέταξέ τα στο τηγάνι με τη σάλτσα. Σέρβιρε αμέσως με λίγο ελαιόλαδο.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

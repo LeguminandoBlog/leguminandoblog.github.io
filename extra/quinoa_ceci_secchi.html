@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quinoa con Ceci Secchi | Leguminando</title>
+<meta name="description" content="Quinoa con Ceci Secchi">
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%); color: #333; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 30px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.header h1 { margin: 0; font-size: 2.2em; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+.header p { margin: 10px 0 0 0; font-size: 1.1em; opacity: 0.9; }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border: 2px solid #D2691E; background: white; color: #8B4513; border-radius: 20px; cursor: pointer; font-size: 0.85em; transition: all 0.3s; }
+.lang-tab:hover { background: #faf8f5; }
+.lang-tab.active { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; }
+.lang-content { display: none; }
+.lang-content.active { display: block; }
+.content { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.recipe-image { width: 100%; max-width: 700px; height: 400px; object-fit: cover; border-radius: 12px; margin: 0 auto 30px auto; display: block; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.section { margin-bottom: 30px; }
+.section h2 { color: #8B4513; border-bottom: 3px solid #D2691E; padding-bottom: 10px; margin-bottom: 20px; font-size: 1.5em; }
+.section h3 { color: #D2691E; margin: 20px 0 10px 0; font-size: 1.2em; }
+.ingredients-list { background: #faf8f5; padding: 20px; border-radius: 10px; border-left: 5px solid #D2691E; }
+.ingredients-list ul { list-style: none; padding: 0; }
+.ingredients-list li { padding: 8px 0; border-bottom: 1px dashed #e0d5c8; }
+.ingredients-list li:last-child { border-bottom: none; }
+.ingredients-list li:before { content: "🫘 "; margin-right: 8px; }
+.steps-list { counter-reset: step; }
+.steps-list li { counter-increment: step; padding: 15px 0 15px 50px; position: relative; border-bottom: 1px solid #eee; }
+.steps-list li:last-child { border-bottom: none; }
+.steps-list li::before { content: counter(step); position: absolute; left: 0; top: 10px; background: #8B4513; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em; }
+.footer { text-align: center; margin-top: 40px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 20px 0; padding: 12px 24px; background: linear-gradient(135deg, #8B4513, #D2691E); color: white; text-decoration: none; border-radius: 25px; font-size: 1em; transition: transform 0.2s; }
+.back-link:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+@media print {
+    .lang-tabs { display: none !important; }
+    .lang-content { display: block !important; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>🫘 Leguminando</h1>
+<p>Ricette a base di legumi</p>
+</div>
+
+<div class="content">
+<div style="text-align: center; margin: -20px 0 20px 0;">
+<span style="display: inline-block; padding: 8px 16px; background: linear-gradient(135deg, #D2691E, #8B4513); color: white; border-radius: 20px; font-size: 0.9em;">📅 Stagione: Estate ☀️</span>
+</div>
+<img src="quinoa_ceci_secchi.jpg" alt="Quinoa con Ceci Secchi" class="recipe-image">
+
+<div class="fav-bar" style="text-align:center;margin:5px 0;">
+<span class="fav-btn" data-path="extra/quinoa_ceci_secchi.html" onclick="event.stopPropagation();toggleFav('extra/quinoa_ceci_secchi.html', 'Quinoa con Ceci Secchi')">🤍</span> Aggiungi ai preferiti
+</div>
+
+<div class="lang-tabs">
+<span class="lang-tab active" data-lang="it" onclick="switchLang('it')">🇮🇹 IT</span>
+<span class="lang-tab" data-lang="en" onclick="switchLang('en')">🇬🇧 EN</span>
+<span class="lang-tab" data-lang="es" onclick="switchLang('es')">🇪🇸 ES</span>
+<span class="lang-tab" data-lang="pt" onclick="switchLang('pt')">🇵🇹 PT</span>
+<span class="lang-tab" data-lang="de" onclick="switchLang('de')">🇩🇪 DE</span>
+<span class="lang-tab" data-lang="el" onclick="switchLang('el')">🇬🇷 EL</span>
+</div>
+
+<div id="lang-it" class="lang-content active">
+<div class="section">
+<h2>🌾 Quinoa con Ceci Secchi</h2>
+<h3>Ingredienti:</h3>
+<div class="ingredients-list">
+<ul>
+<li>150g di quinoa</li>
+<li>150g di ceci secchi (o 300g precotti)</li>
+<li>3 pomodori maturi</li>
+<li>1 cipolla</li>
+<li>1 avocado</li>
+<li>1 gambo di sedano</li>
+<li>Olio extravergine d'oliva q.b.</li>
+<li>Sale e pepe q.b.</li>
+<li>Succo di limone</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparazione</h2>
+<ol class="steps-list">
+<li>Se usi i ceci secchi, mettili in ammollo per 12 ore e cuocili per 1 ora.</li>
+<li>Cuoci la quinoa in acqua salata per 15 minuti, poi scolala.</li>
+<li>Taglia i pomodori a cubetti, la cipolla a fette e il sedano a rondelle.</li>
+<li>Taglia l'avocado a fette.</li>
+<li>In una ciotola, mescola la quinoa con ceci, pomodori, cipolla e sedano.</li>
+<li>Aggiungi l'avocado, olio EVO, sale, pepe e limone.</li>
+<li>Servi a temperatura ambiente o leggermente fredda.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Consigli</h2>
+<p>Questa insalata è un piatto completo, ricco di proteine vegetali e fibre. La quinoa è un pseudo-cereale senza glutine, perfetto per chi è intollerante. L'avocado aggiunge grassi sani e cremosità.</p>
+</div>
+</div>
+
+<div id="lang-en" class="lang-content">
+<div class="section">
+<h2>🌾 Quinoa with Dried Chickpeas</h2>
+<h3>Ingredients:</h3>
+<div class="ingredients-list">
+<ul>
+<li>150g quinoa</li>
+<li>150g dried chickpeas (or 300g precooked)</li>
+<li>3 ripe tomatoes</li>
+<li>1 onion</li>
+<li>1 avocado</li>
+<li>1 celery stalk</li>
+<li>Extra virgin olive oil to taste</li>
+<li>Salt and pepper to taste</li>
+<li>Lemon juice</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparation</h2>
+<ol class="steps-list">
+<li>If using dried chickpeas, soak them for 12 hours and cook for 1 hour.</li>
+<li>Cook the quinoa in salted water for 15 minutes, then drain.</li>
+<li>Dice the tomatoes, slice the onion and cut the celery into rounds.</li>
+<li>Slice the avocado.</li>
+<li>In a bowl, mix the quinoa with chickpeas, tomatoes, onion and celery.</li>
+<li>Add the avocado, EVO oil, salt, pepper and lemon.</li>
+<li>Serve at room temperature or slightly chilled.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Tips</h2>
+<p>This salad is a complete dish, rich in plant-based protein and fiber. Quinoa is a gluten-free pseudo-cereal, perfect for those who are intolerant. Avocado adds healthy fats and creaminess.</p>
+</div>
+</div>
+
+<div id="lang-es" class="lang-content">
+<div class="section">
+<h2>🌾 Quinoa con Garbanzos Secos</h2>
+<h3>Ingredientes:</h3>
+<div class="ingredients-list">
+<ul>
+<li>200g de quinoa</li>
+<li>200g de garbanzos secos (o 400g precocidos)</li>
+<li>3 tomates maduros</li>
+<li>1 cebolla</li>
+<li>1 aguacate</li>
+<li>1 tallo de apio</li>
+<li>Aceite de oliva virgen extra al gusto</li>
+<li>Sal y pimienta al gusto</li>
+<li>Zumo de limon</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparacion</h2>
+<ol class="steps-list">
+<li>Si utiliza garbanzos secos, pongalos en remojo durante 12 horas y cuezalos durante 1 hora.</li>
+<li>Cocina la quinoa en agua salada durante 15 minutos, luego escurrirla.</li>
+<li>Corta los tomates en cubitos, la cebolla en rodajas y el apio en rodajas.</li>
+<li>Corta el aguacate en rodajas.</li>
+<li>En un bol, mezcla la quinoa con garbanzos, tomates, cebolla y apio.</li>
+<li>Anade el aguacate, aceite EVO, sal, pimienta y limon.</li>
+<li>Sirva a temperatura ambiente o ligeramente fria.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Consejos</h2>
+<p>Esta ensalada es un plato completo, rico en proteinas vegetales y fibra. La quinoa es un pseudo-cereal sin gluten, perfecto para quienes son intolerantes. El aguacate anade grasas saludables y cremosidad.</p>
+</div>
+</div>
+
+<div id="lang-pt" class="lang-content">
+<div class="section">
+<h2>🌾 Quinoa com Grao-de-Bico Seco</h2>
+<h3>Ingredientes:</h3>
+<div class="ingredients-list">
+<ul>
+<li>150g de quinoa</li>
+<li>150g de grao-de-bico seco (ou 300g pre-cozido)</li>
+<li>3 tomates maduros</li>
+<li>1 cebola</li>
+<li>1 abacate</li>
+<li>1 talo de aipo</li>
+<li>Azeite extra virgem a gosto</li>
+<li>Sal e pimenta a gosto</li>
+<li>Sumo de limao</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparacao</h2>
+<ol class="steps-list">
+<li>Se utilizar grao-de-bico seco, coloque-o de molho durante 12 horas e coza durante 1 hora.</li>
+<li>Cozinhe a quinoa em agua salgada durante 15 minutos, depois escorra.</li>
+<li>Corte os tomates em cubinhos, a cebola em rodelas e o aipo em rodelas.</li>
+<li>Corte o abacate em fatias.</li>
+<li>Numa tigela, misture a quinoa com grao-de-bico, tomates, cebola e aipo.</li>
+<li>Junte o abacate, azeite EVO, sal, pimenta e limao.</li>
+<li>Sirva a temperatura ambiente ou ligeiramente fria.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Dicas</h2>
+<p>Esta salada e um prato completo, rico em proteinas vegetais e fibras. A quinoa e um pseudo-cereal sem gluten, perfeito para quem e intolerante. O abacate acrescenta gorduras saudaveis e cremosidade.</p>
+</div>
+</div>
+
+<div id="lang-de" class="lang-content">
+<div class="section">
+<h2>🌾 Quinoa mit getrockneten Kichererbsen</h2>
+<h3>Zutaten:</h3>
+<div class="ingredients-list">
+<ul>
+<li>150g Quinoa</li>
+<li>150g getrocknete Kichererbsen (oder 300g vorgekochte)</li>
+<li>3 reife Tomaten</li>
+<li>1 Zwiebel</li>
+<li>1 Avocado</li>
+<li>1 Selleriestange</li>
+<li>Natives Olivenoel extra nach Geschmack</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Zitronensaft</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Zubereitung</h2>
+<ol class="steps-list">
+<li>Wenn Sie getrocknete Kichererbsen verwenden, legen Sie sie 12 Stunden ein und kochen Sie sie 1 Stunde.</li>
+<li>Die Quinoa in Salzwasser 15 Minuten kochen, dann abtropfen lassen.</li>
+<li>Die Tomaten wuerfeln, die Zwiebel in Scheiben und den Sellerie in Ringe schneiden.</li>
+<li>Die Avocado in Scheiben schneiden.</li>
+<li>In einer Schuessel Quinoa mit Kichererbsen, Tomaten, Zwiebel und Sellerie vermischen.</li>
+<li>Die Avocado, natives Olivenoel, Salz, Pfeffer und Zitrone hinzufuegen.</li>
+<li>Bei Zimmertemperatur oder leicht gekuehlt servieren.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Tipps</h2>
+<p>Dieser Salat ist ein vollwertiges Gericht, reich an pflanzlichem Protein und Ballaststoffen. Quinoa ist ein glutenfreies Pseudo-Getreide, perfekt fuer Unvertraegliche. Avocado liefert gesunde Fette und Cremigkeit.</p>
+</div>
+</div>
+
+<div id="lang-el" class="lang-content">
+<div class="section">
+<h2>🌾 Κινόα με Ξερά Ρεβίθια</h2>
+<h3>Συστατικά:</h3>
+<div class="ingredients-list">
+<ul>
+<li>150g κινόα</li>
+<li>150g ξερά ρεβίθια (ή 300g προψημένα)</li>
+<li>3 ώριμες ντομάτες</li>
+<li>1 κρεμμύδι</li>
+<li>1 αβοκάντο</li>
+<li>1 στέλεχος σέλινου</li>
+<li>Έξτρα παρθένο ελαιόλαδο κατά βούληση</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>Χυμός λεμονιού</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Εκτέλεση</h2>
+<ol class="steps-list">
+<li>Αν χρησιμοποιείτε ξερά ρεβίθια, μουσκέψτε τα για 12 ώρες και βράστε τα για 1 ώρα.</li>
+<li>Βράστε την κινόα σε αλατισμένο νερό για 15 λεπτά, μετά στραγγίστε την.</li>
+<li>Κόψτε τις ντομάτες σε κύβους, το κρεμμύδι σε φέτες και το σέλινο σε ροδέλες.</li>
+<li>Κόψτε το αβοκάντο σε φέτες.</li>
+<li>Σε ένα μπολ, αναμείξτε την κινόα με ρεβίθια, ντομάτες, κρεμμύδι και σέλινο.</li>
+<li>Προσθέστε το αβοκάντο, ελαιόλαδο, αλάτι, πιπέρι και λεμόνι.</li>
+<li>Σερβίρετε σε θερμοκρασία δωματίου ή ελαφρώς κρύα.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Συμβουλές</h2>
+<p>Αυτή η σαλάτα είναι ένα πλήρες πιάτο, πλούσιο σε φυτικές πρωτεΐνες και φυτικές ίνες. Η κινόα είναι ένα ψευδο-δημητριακό χωρίς γλουτένη, ιδανικό για όσους είναι δυσανεκτικοί. Το αβοκάντο προσθέτει υγιεινά λίπη και κρεμώδη υφή.</p>
+</div>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette a base di legumi</p>
+<a href="../index.html" class="back-link">← Torna alla Home</a>
+</div>
+
+<script>
+function switchLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(c => c.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+    document.querySelector('.lang-tab[data-lang="' + lang + '"]').classList.add('active');
+    localStorage.setItem('preferredLang', lang);
+}
+</script>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

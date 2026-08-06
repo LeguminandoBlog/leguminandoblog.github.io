@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skillet di Ceci con Crema di Yogurt | Leguminando</title>
+<meta name="description" content="Skillet di Ceci con Crema di Yogurt">
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%); color: #333; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 30px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.header h1 { margin: 0; font-size: 2.2em; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+.header p { margin: 10px 0 0 0; font-size: 1.1em; opacity: 0.9; }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border: 2px solid #D2691E; background: white; color: #8B4513; border-radius: 20px; cursor: pointer; font-size: 0.85em; transition: all 0.3s; }
+.lang-tab:hover { background: #faf8f5; }
+.lang-tab.active { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; }
+.lang-content { display: none; }
+.lang-content.active { display: block; }
+.content { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.recipe-image { width: 100%; max-width: 700px; height: 400px; object-fit: cover; border-radius: 12px; margin: 0 auto 30px auto; display: block; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.section { margin-bottom: 30px; }
+.section h2 { color: #8B4513; border-bottom: 3px solid #D2691E; padding-bottom: 10px; margin-bottom: 20px; font-size: 1.5em; }
+.section h3 { color: #D2691E; margin: 20px 0 10px 0; font-size: 1.2em; }
+.ingredients-list { background: #faf8f5; padding: 20px; border-radius: 10px; border-left: 5px solid #D2691E; }
+.ingredients-list ul { list-style: none; padding: 0; }
+.ingredients-list li { padding: 8px 0; border-bottom: 1px dashed #e0d5c8; }
+.ingredients-list li:last-child { border-bottom: none; }
+.ingredients-list li:before { content: "🫘 "; margin-right: 8px; }
+.steps-list { counter-reset: step; }
+.steps-list li { counter-increment: step; padding: 15px 0 15px 50px; position: relative; border-bottom: 1px solid #eee; }
+.steps-list li:last-child { border-bottom: none; }
+.steps-list li::before { content: counter(step); position: absolute; left: 0; top: 10px; background: #8B4513; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em; }
+.footer { text-align: center; margin-top: 40px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 20px 0; padding: 12px 24px; background: linear-gradient(135deg, #8B4513, #D2691E); color: white; text-decoration: none; border-radius: 25px; font-size: 1em; transition: transform 0.2s; }
+.back-link:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.fav-btn { cursor: pointer; font-size: 1.2em; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+@media print {
+    .lang-tabs { display: none !important; }
+    .lang-content { display: block !important; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>🫘 Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<div class="content">
+<div style="text-align: center; margin: -20px 0 20px 0;">
+<span style="display: inline-block; padding: 8px 16px; background: linear-gradient(135deg, #D2691E, #8B4513); color: white; border-radius: 20px; font-size: 0.9em;">
+📅 2026-07-11 — Estate ☀️</span>
+</div>
+<img src="est_14.jpg" alt="Skillet di Ceci con Crema di Yogurt" class="recipe-image">
+
+<div class="fav-bar" style="text-align:center;margin:5px 0;">
+<span class="fav-btn" data-path="estate/est_14.html" data-title="Skillet di Ceci con Crema di Yogurt" onclick="toggleFav(this.dataset.path, this.dataset.title)">
+🤍</span> Aggiungi ai preferiti
+</div>
+
+<div class="lang-tabs">
+<span class="lang-tab active" data-lang="it" onclick="switchLang('it')">🇮🇹 IT</span>
+<span class="lang-tab" data-lang="en" onclick="switchLang('en')">🇬🇧 EN</span>
+<span class="lang-tab" data-lang="es" onclick="switchLang('es')">🇪🇸 ES</span>
+<span class="lang-tab" data-lang="pt" onclick="switchLang('pt')">🇵🇹 PT</span>
+<span class="lang-tab" data-lang="de" onclick="switchLang('de')">🇩🇪 DE</span>
+<span class="lang-tab" data-lang="el" onclick="switchLang('el')">🇬🇷 EL</span>
+</div>
+
+<div id="lang-it" class="lang-content active">
+<div class="section">
+<h2>Skillet di Ceci con Crema di Yogurt</h2>
+<p>Un piatto unico rustico e nutriente: ceci croccanti in padella con spezie, accompagnati da una crema di yogurt fresco e un topping colorato di verdure estive.</p>
+
+<h3>Ingredienti</h3>
+<div class="ingredients-list">
+<ul>
+<li>800 g ceci precotti (scolati)</li>
+<li>60 ml olio extravergine d'oliva</li>
+<li>150 g cipolla dorata (affettata)</li>
+<li>12 g aglio (2 spicchi)</li>
+<li>250 ml brodo vegetale</li>
+<li>2 g scorza di limone</li>
+<li>45 ml succo di limone</li>
+<li>1 g origano secco</li>
+<li>1 g paprika dolce</li>
+<li>1 g pepe nero</li>
+<li>5 g sale marino</li>
+<li>200 g yogurt greco</li>
+<li>10 foglie menta fresca</li>
+<li>15 ml olio extravergine d'oliva (per la crema)</li>
+<li>200 g pomodorini</li>
+<li>150 g cetriolo</li>
+<li>40 g noci tostate</li>
+<li>80 g feta (opzionale)</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparazione</h3>
+<ol class="steps-list">
+<li><strong>Skillet di ceci:</strong> Scalda 3 cucchiai di olio in una padella capiente. Aggiungi la cipolla e soffriggila a fuoco medio fino a doratura (circa 5 minuti).</li>
+<li>Aggiungi l'aglio tritato e cuoci per 30 secondi, finché non sprigiona aroma.</li>
+<li>Unisci i ceci scolati, la paprika, l'origano, il sale e il pepe. Mescola e cuoci 4-5 minuti per far insaporire.</li>
+<li>Versa il brodo vegetale, la scorza e il succo di limone. Lascia cuocere a fuoco medio finché il liquido si riduce e i ceci risultano croccanti all'esterno e morbidi dentro.</li>
+<li>Schiaccia leggermente circa un quarto dei ceci con il dorso di un cucchiaio per addensare il fondo di cottura.</li>
+<li><strong>Crema di yogurt:</strong> In una ciotolina mescola lo yogurt greco con la menta tritata, un cucchiaio di olio e un pizzico di sale.</li>
+<li>Spegna il fuoco sotto lo skillet e distribuisci la crema di yogurt sopra i ceci caldi.</li>
+<li><strong>Topping:</strong> Taglia i pomodorini a metà, il cetriolo a fette e sbriciola la feta. Spezza grossolanamente le noci tostate.</li>
+<li>Distribuisci i ceci in ciotole individuali, decora con il topping colorato, un filo di olio e pepe nero fresco. Servi tiepido.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-en" class="lang-content">
+<div class="section">
+<h2>Chickpea Skillet with Yogurt Cream</h2>
+<p>A rustic and nutritious one-pan dish: crispy spiced chickpeas accompanied by fresh yogurt cream and a colourful summer vegetable topping.</p>
+
+<h3>Ingredients</h3>
+<div class="ingredients-list">
+<ul>
+<li>800 g cooked chickpeas (drained)</li>
+<li>60 ml extra virgin olive oil</li>
+<li>150 g golden onion (sliced)</li>
+<li>12 g garlic (2 cloves)</li>
+<li>250 ml vegetable broth</li>
+<li>2 g lemon zest</li>
+<li>45 ml lemon juice</li>
+<li>1 g dried oregano</li>
+<li>1 g sweet paprika</li>
+<li>1 g black pepper</li>
+<li>5 g sea salt</li>
+<li>200 g Greek yogurt</li>
+<li>10 fresh mint leaves</li>
+<li>15 ml extra virgin olive oil (for the cream)</li>
+<li>200 g cherry tomatoes</li>
+<li>150 g cucumber</li>
+<li>40 g toasted walnuts</li>
+<li>80 g feta cheese (optional)</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparation</h3>
+<ol class="steps-list">
+<li><strong>Chickpea skillet:</strong> Heat 3 tablespoons of oil in a large pan. Add the onion and sauté over medium heat until golden (about 5 minutes).</li>
+<li>Add minced garlic and cook for 30 seconds until fragrant.</li>
+<li>Add drained chickpeas, paprika, oregano, salt and pepper. Stir and cook for 4-5 minutes to develop flavour.</li>
+<li>Pour in the vegetable broth, lemon zest and juice. Cook over medium heat until the liquid reduces and the chickpeas are crispy outside and tender inside.</li>
+<li>Lightly mash about a quarter of the chickpeas with the back of a spoon to thicken the cooking base.</li>
+<li><strong>Yogurt cream:</strong> In a small bowl mix Greek yogurt with chopped mint, a tablespoon of oil and a pinch of salt.</li>
+<li>Turn off the heat under the skillet and spoon the yogurt cream over the hot chickpeas.</li>
+<li><strong>Topping:</strong> Halve the cherry tomatoes, slice the cucumber and crumble the feta. Coarsely break the toasted walnuts.</li>
+<li>Divide the chickpeas into individual bowls, decorate with the colourful topping, a drizzle of oil and freshly ground pepper. Serve warm.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-es" class="lang-content">
+<div class="section">
+<h2>Skillet de Garbanzos con Crema de Yogur</h2>
+<p>Un plato único rústico y nutritivo: garbanzos crujientes en sartén con especias, acompañados de una crema de yogur fresco y un topping colorido de verduras de verano.</p>
+
+<h3>Ingredientes</h3>
+<div class="ingredients-list">
+<ul>
+<li>800 g garbanzos cocidos (escurridos)</li>
+<li>60 ml aceite de oliva virgen extra</li>
+<li>150 g cebolla dorada (en rodajas)</li>
+<li>12 g ajo (2 dientes)</li>
+<li>250 ml caldo de verduras</li>
+<li>2 g ralladura de limón</li>
+<li>45 ml zumo de limón</li>
+<li>1 g orégano seco</li>
+<li>1 g pimentón dulce</li>
+<li>1 g pimienta negra</li>
+<li>5 g sal marina</li>
+<li>200 g yogur griego</li>
+<li>10 hojas de menta fresca</li>
+<li>15 ml aceite de oliva virgen extra (para la crema)</li>
+<li>200 g tomates cherry</li>
+<li>150 g pepino</li>
+<li>40 g nueces tostadas</li>
+<li>80 g queso feta (opcional)</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparación</h3>
+<ol class="steps-list">
+<li><strong>Skillet de garbanzos:</strong> Calienta 3 cucharadas de aceite en una sartén grande. Añade la cebolla y sofríe a fuego medio hasta dorar (unos 5 minutos).</li>
+<li>Añade el ajo picado y cuece 30 segundos hasta que suelte aroma.</li>
+<li>Agrega los garbanzos escurridos, el pimentón, el orégano, la sal y la pimienta. Remueve y cuece 4-5 minutos para que cojan sabor.</li>
+<li>Vierte el caldo, la ralladura y el zumo de limón. Cocina a fuego medio hasta que el líquido se reduzca y los garbanzos queden crujientes por fuera y tiernos por dentro.</li>
+<li>Aplasta ligeramente un cuarto de los garbanzos con el dorso de una cuchara para espesar la base de cocción.</li>
+<li><strong>Crema de yogur:</strong> En un cuenco pequeño mezcla el yogur griego con la menta picada, una cucharada de aceite y una pizca de sal.</li>
+<li>Apaga el fuego bajo el skillet y distribuye la crema de yogur sobre los garbanzos calientes.</li>
+<li><strong>Topping:</strong> Corta los tomates cherry por la mitad, el pepino en rodajas y desmenuza la feta. Rompe gruesamente las nueces tostadas.</li>
+<li>Distribuye los garbanzos en cuencos individuales, decora con el topping colorido, un hilo de aceite y pimienta negra recién molida. Sirve templado.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-pt" class="lang-content">
+<div class="section">
+<h2>Skillet de Grão-de-Bico com Creme de Iogurte</h2>
+<p>Um prato único rústico e nutritivo: grão-de-bico crocante na frigideira com especiarias, acompanhado de um creme de iogurte fresco e um topping colorido de legumes de verão.</p>
+
+<h3>Ingredientes</h3>
+<div class="ingredients-list">
+<ul>
+<li>800 g grão-de-bico cozido (escorrido)</li>
+<li>60 ml azeite extra virgem</li>
+<li>150 g cebola dourada (fatiada)</li>
+<li>12 g alho (2 dentes)</li>
+<li>250 ml caldo de legumes</li>
+<li>2 g raspas de limão</li>
+<li>45 ml sumo de limão</li>
+<li>1 g orégãos secos</li>
+<li>1 g paprika doce</li>
+<li>1 g pimenta preta</li>
+<li>5 g sal marinho</li>
+<li>200 g iogurte grego</li>
+<li>10 folhas de menta fresca</li>
+<li>15 ml azeite extra virgem (para o creme)</li>
+<li>200 g tomates cherry</li>
+<li>150 g pepino</li>
+<li>40 g nozes tostadas</li>
+<li>80 g queijo feta (opcional)</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparação</h3>
+<ol class="steps-list">
+<li><strong>Skillet de grão-de-bico:</strong> Aquece 3 colheres de sopa de azeite numa frigideira grande. Adiciona a cebola e refoga em lume médio até dourar (cerca de 5 minutos).</li>
+<li>Adiciona o alho picado e cozinha 30 segundos até libertar aroma.</li>
+<li>Junta o grão-de-bico escorrido, a paprika, o orégão, o sal e a pimenta. Mexe e cozinha 4-5 minutos para ganhar sabor.</li>
+<li>Deita o caldo, as raspas e o sumo de limão. Cozinha em lume médio até o líquido reduzir e o grão-de-bico ficar crocante por fora e macio por dentro.</li>
+<li>Esmaga ligeiramente cerca de um quarto do grão-de-bico com o dorso de uma colher para engrossar a base de cozedura.</li>
+<li><strong>Creme de iogurte:</strong> Numa taça pequena mistura o iogurte grego com a menta picada, uma colher de sopa de azeite e uma pitada de sal.</li>
+<li>Apaga o lume sob o skillet e distribui o creme de iogurte sobre o grão-de-bico quente.</li>
+<li><strong>Topping:</strong> Corta os tomates cherry ao meio, o pepino em rodelas e desfia a feta. Parte grosseiramente as nozes tostadas.</li>
+<li>Distribui o grão-de-bico em taças individuais, decora com o topping colorido, um fio de azeite e pimenta preta moída na hora. Serve morno.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-de" class="lang-content">
+<div class="section">
+<h2>Kichererbsen-Skillet mit Joghurtcreme</h2>
+<p>Ein rustikales und nährstoffreiches One-Pan-Gericht: knusprige gewürzte Kichererbsen, begleitet von frischer Joghurtcreme und einem bunten Sommergemüse-Topping.</p>
+
+<h3>Zutaten</h3>
+<div class="ingredients-list">
+<ul>
+<li>800 g gekochte Kichererbsen (abgetropft)</li>
+<li>60 ml natives Olivenöl extra</li>
+<li>150 g goldene Zwiebel (geschnitten)</li>
+<li>12 g Knoblauch (2 Zehen)</li>
+<li>250 ml Gemüsebrühe</li>
+<li>2 g Zitronenschale</li>
+<li>45 ml Zitronensaft</li>
+<li>1 g getrockneter Oregano</li>
+<li>1 g süßes Paprikapulver</li>
+<li>1 g schwarzer Pfeffer</li>
+<li>5 g Meersalz</li>
+<li>200 g griechischer Joghurt</li>
+<li>10 frische Minzblätter</li>
+<li>15 ml natives Olivenöl extra (für die Creme)</li>
+<li>200 g Kirschtomaten</li>
+<li>150 g Gurke</li>
+<li>40 g geröstete Walnüsse</li>
+<li>80 g Feta (optional)</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Zubereitung</h3>
+<ol class="steps-list">
+<li><strong>Kichererbsen-Skillet:</strong> Erhitze 3 Esslöffel Öl in einer großen Pfanne. Zwiebel zugeben und bei mittlerer Hitze goldbraun anschwitzen (ca. 5 Minuten).</li>
+<li>Knoblauch zugeben und 30 Sekunden anbraten, bis er duftet.</li>
+<li>Abgetropfte Kichererbsen, Paprika, Oregano, Salz und Pfeffer zugeben. Umrühren und 4-5 Minuten garen, damit sie aromatisieren.</li>
+<li>Gemüsebrühe, Zitronenschale und -saft angießen. Bei mittlerer Hitze kochen, bis die Flüssigkeit reduziert ist und die Kichererbsen außen knusprig und innen weich sind.</li>
+<li>Etwa ein Viertel der Kichererbsen leicht mit dem Löffelrücken zerdrücken, um die Kochbasis einzudicken.</li>
+<li><strong>Joghurtcreme:</strong> Griechischen Joghurt mit gehackter Minze, einem Esslöffel Öl und einer Prise Salz in einer kleinen Schüssel vermischen.</li>
+<li>Hitze unter dem Skillet ausschalten und die Joghurtcreme über die heißen Kichererbsen löffeln.</li>
+<li><strong>Topping:</strong> Kirschtomaten halbieren, Gurke in Scheiben schneiden und Feta bröseln. Geröstete Walnüsse grob brechen.</li>
+<li>Kichererbsen in Schalen verteilen, mit dem bunten Topping dekorieren, Olivenöl und frisch gemahlenen Pfeffer darübergeben. Warm servieren.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-el" class="lang-content">
+<div class="section">
+<h2>Σιζλάρ με Ρεβίθια και Κρέμα Γιαουρτιού</h2>
+<p>Ένα ρουστίκ και θρεπτικό πιάτο: τραγανά αρωματισμένα ρεβίθια συνοδευόμενα από φρέσκια κρέμα γιαουρτιού και ένα πολύχρωμο topping λαχανικών καλοκαιριού.</p>
+
+<h3>Συστατικά</h3>
+<div class="ingredients-list">
+<ul>
+<li>800 g μαγειρεμένα ρεβίθια (σουρωμένα)</li>
+<li>60 ml εξαιρετικό παρθένο ελαιόλαδο</li>
+<li>150 g χρυσό κρεμμύδι (σε φέτες)</li>
+<li>12 g σκόρδο (2 σκελίδες)</li>
+<li>250 ml ζωμό λαχανικών</li>
+<li>2 g ξύσμα λεμονιού</li>
+<li>45 ml χυμό λεμονιού</li>
+<li>1 g ξηρό ρίγανη</li>
+<li>1 g γλυκιά πάπρικα</li>
+<li>1 g μαύρο πιπέρι</li>
+<li>5 g θαλασσινό αλάτι</li>
+<li>200 g ελληνικό γιαούρτι</li>
+<li>10 φρέσκα φύλλα δυόσμου</li>
+<li>15 ml εξαιρετικό παρθένο ελαιόλαδο (για την κρέμα)</li>
+<li>200 g ντοματίνια</li>
+<li>150 g αγγούρι</li>
+<li>40 g καβουρντισμένα καρύδια</li>
+<li>80 g φέτα (προαιρετικά)</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Εκτέλεση</h3>
+<ol class="steps-list">
+<li><strong>Σιζλάρ με ρεβίθια:</strong> Ζεστάνετε 3 κουταλιές της σούπας ελαιόλαδο σε ένα μεγάλο τηγάνι. Προσθέστε το κρεμμύδι και σοτάρετε σε μέτρια φωτιά μέχρι να ροδίσει (περίπου 5 λεπτά).</li>
+<li>Προσθέστε το ψιλοκομμένο σκόρδο και μαγειρέψτε 30 δευτερόλεπτα μέχρι να μυρίσει.</li>
+<li>Προσθέστε τα σουρωμένα ρεβίθια, την πάπρικα, τη ρίγανη, το αλάτι και το πιπέρι. Ανακατέψτε και μαγειρέψτε 4-5 λεπτά για να αρωματιστούν.</li>
+<li>Περιχύστε με τον ζωμό, το ξύσμα και τον χυμό λεμονιού. Μαγειρέψτε σε μέτρια φωτιά μέχρι να μειωθεί το υγρό και τα ρεβίθια να είναι τραγανά απ' έξω και μαλακά μέσα.</li>
+<li>Πιέστε ελαφρά περίπου το ένα τέταρτο των ρεβιθιών με την ανάποδη ενός κουταλιού για να πυκνώσει η βάση του μαγειρέματος.</li>
+<li><strong>Κρέμα γιαουρτιού:</strong> Σε ένα μικρό μπολ αναμείξτε το ελληνικό γιαούρτι με τον ψιλοκομμένο δυόσμο, μια κουταλιά της σούπας ελαιόλαδο και μια πρέζα αλάτι.</li>
+<li>Σβήστε τη φωτιά κάτω από το σιζλάρ και απλώστε την κρέμα γιαουρτιού πάνω από τα ζεστά ρεβίθια.</li>
+<li><strong>Topping:</strong> Κόψτε τα ντοματίνια στη μέση, το αγγούρι σε φέτες και θρυμματίστε τη φέτα. Χοντροκόψτε τα καβουρντισμένα καρύδια.</li>
+<li>Μοιράστε τα ρεβίθια σε μεμονωμένα μπολ, διακοσμήστε με το πολύχρωμο topping, έναν ψεκασμό ελαιολάδου και φρεσκοτριμμένο μαύρο πιπέρι. Σερβίρετε χλιαρό.</li>
+</ol>
+</div>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<a href="../index.html" class="back-link">← Torna alla Home</a>
+</div>
+
+<script>
+function switchLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(c => c.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+    document.querySelector('.lang-tab[data-lang="' + lang + '"]').classList.add('active');
+    localStorage.setItem('preferredLang', lang);
+}
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Involtini di Cavoletti di Bruxelles con Fagioli dall'Occhio e Salsiccia | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Involtini di Cavoletti di Bruxelles con Fagioli dall'Occhio e Salsiccia">
+<meta property="og:title" content="Involtini di Cavoletti di Bruxelles con Fagioli dall'Occhio e Salsiccia | Leguminando">
+<meta property="og:description" content="Involtini di Cavoletti di Bruxelles con Fagioli dall'Occhio e Salsiccia">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="autunno/026.html" data-title="Involtini di Cavoletti di Bruxelles con Fagioli dall'Occhio e Salsiccia" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="026.jpg" alt="Involtini di Cavoletti di Bruxelles con Fagioli dall'Occhio e Salsiccia" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-09-27</p>
+<p><strong>Meta:</strong> 4 porzioni | Carne</p>
+<p><strong>Descrizione:</strong> Involtini di cavoletti di Bruxelles farciti con fagioli dall'occhio e salsiccia sbriciolata, un antipasto rustico e saporito.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>16 cavoletti di Bruxelles</li>
+<li>200 g fagioli dall'occhio cotti</li>
+<li>150 g salsiccia sbriciolata</li>
+<li>1 cipolla piccola, tritata</li>
+<li>1 cucchiaio olio extravergine d'oliva</li>
+<li>Sale e pepe q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Scotta i cavoletti di Bruxelles in acqua bollente per 4 minuti, quindi raffreddali in acqua ghiacciata.</p>
+<p>2. In una padella, scalda l'olio e rosola la cipolla tritata. Aggiungi la salsiccia sbriciolata e cuoci fino a doratura. Unisci i fagioli dall'occhio e mescola bene.</p>
+<p>3. Taglia i cavoletti a metà e farciscili con il composto di salsiccia e fagioli. Fissa con uno stecchino e servi tiepidi.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-09-27</p>
+<p><strong>Meta:</strong> 4 servings | Meat</p>
+<p><strong>Description:</strong> Brussels sprouts rolls stuffed with black-eyed peas and crumbled sausage, a rustic and flavourful appetiser.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>16 Brussels sprouts</li>
+<li>200 g cooked black-eyed peas</li>
+<li>150 g crumbled sausage</li>
+<li>1 small onion, minced</li>
+<li>1 tablespoon extra virgin olive oil</li>
+<li>Salt and pepper to taste</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. Blanch the Brussels sprouts in boiling water for 4 minutes, then cool in iced water.</p>
+<p>2. In a pan, heat the oil and sauté the minced onion. Add the crumbled sausage and cook until browned. Stir in the black-eyed peas and mix well.</p>
+<p>3. Halve the Brussels sprouts and stuff them with the sausage and bean mixture. Secure with a toothpick and serve warm.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-09-27</p>
+<p><strong>Meta:</strong> 4 porciones | Carne</p>
+<p><strong>Descripción:</strong> Rollitos de coles de Bruselas rellenos de frijoles carita y salchicha desmenuzada, un aperitivo rústico y sabroso.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>16 coles de Bruselas</li>
+<li>200 g frijoles carita cocidos</li>
+<li>150 g salchicha desmenuzada</li>
+<li>1 cebolla pequeña, picada</li>
+<li>1 cucharada aceite de oliva virgen extra</li>
+<li>Sal y pimienta c.s.</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. Escaldar las coles de Bruselas en agua hirviendo 4 minutos, luego enfriar en agua con hielo.</p>
+<p>2. En una sartén, calienta el aceite y sofríe la cebolla picada. Añade la salchicha desmenuzada y cocina hasta dorar. Incorpora los frijoles carita y mezcla bien.</p>
+<p>3. Corta las coles por la mitad y rellénalas con la mezcla de salchicha y frijoles. Sujétalas con un palillo y sirve tibias.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-09-27</p>
+<p><strong>Meta:</strong> 4 porções | Carne</p>
+<p><strong>Descrição:</strong> Rolos de couves de Bruxelas recheados com feijão-frade e chouriço desfeito, um aperitivo rústico e saboroso.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>16 couves de Bruxelas</li>
+<li>200 g feijão-frade cozido</li>
+<li>150 g chouriço desfeito</li>
+<li>1 cebola pequena, picada</li>
+<li>1 colher de sopa azeite extra virgem</li>
+<li>Sal e pimenta q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Escalfa as couves de Bruxelas em água a ferver durante 4 minutos, depois arrefece em água com gelo.</p>
+<p>2. Numa frigideira, aquece o azeite e refoga a cebola picada. Adiciona o chouriço desfeito e cozinha até dourar. Junta o feijão-frade e mistura bem.</p>
+<p>3. Corta as couves ao meio e recheia-as com a mistura de chouriço e feijão. Fixa com um palito e serve mornas.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-09-27</p>
+<p><strong>Meta:</strong> 4 Portionen | Fleisch</p>
+<p><strong>Beschreibung:</strong> Rosenkohl-Rouladen gefüllt mit Augenbohnen und zerbröselter Bratwurst, ein rustikaler und würziger Vorspeise.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>16 Rosenkohlköpfe</li>
+<li>200 g gekochte Augenbohnen</li>
+<li>150 g zerbröselte Bratwurst</li>
+<li>1 kleine Zwiebel, gehackt</li>
+<li>1 Esslöffel Olivenöl extra vergine</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. Rosenkohl in kochendem Wasser 4 Minuten blanchieren, dann in Eiswasser abschrecken.</p>
+<p>2. Öl in einer Pfanne erhitzen und gehackte Zwiebel anschwitzen. Zerbröselte Bratwurst zugeben und goldbraun braten. Augenbohnen unterheben und gut vermischen.</p>
+<p>3. Rosenkohl halbieren und mit der Wurst-Bohnen-Mischung füllen. Mit einem Zahnstocher fixieren und warm servieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-09-27</p>
+<p><strong>Meta:</strong> 4 μερίδες | Κρέας</p>
+<p><strong>Περιγραφή:</strong> Ρολά λαχανάκια Βρυξελλών γεμιστά με μαυρομάτικα φασόλια και θρυμματισμένο λουκάνικο, ένα ρουστίκ και νόστιμο ορεκτικό.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>16 λαχανάκια Βρυξελλών</li>
+<li>200 γρ βρασμένα μαυρομάτικα φασόλια</li>
+<li>150 γρ θρυμματισμένο λουκάνικο</li>
+<li>1 μικρό κρεμμύδι, ψιλοκομμένο</li>
+<li>1 κουταλιά της σούπας ελαιόλαδο</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. Βράσε τα λαχανάκια Βρυξελλών σε βραστό νερό για 4 λεπτά, μετά βύθισέ τα σε παγωμένο νερό.</p>
+<p>2. Σε ένα τηγάνι, ζέστανε το λάδι και σοτάρε το ψιλοκομμένο κρεμμύδι. Πρόσθεσε το θρυμματισμένο λουκάνικο και μαγείρεψέ το μέχρι να ροδίσει. Ανακάτεψε τα μαυρομάτικα φασόλια και ανακάτεψε καλά.</p>
+<p>3. Κόψε τα λαχανάκια στη μέση και γέμισέ τα με το μείγμα λουκάνικου και φασολιών. Στερέωσέ τα με μια οδοντογλυφίδα και σέρβιρέ τα χλιαρά.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

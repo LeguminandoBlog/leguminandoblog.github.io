@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samosa di Lenticchie e Porcini con Salse | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Samosa di Lenticchie e Porcini con Salse">
+<meta property="og:title" content="Samosa di Lenticchie e Porcini con Salse | Leguminando">
+<meta property="og:description" content="Samosa di Lenticchie e Porcini con Salse">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="inverno/011.html" data-title="Samosa di Lenticchie e Porcini con Salse" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="011.jpg" alt="Samosa di Lenticchie e Porcini" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2026-01-18</p>
+<p><strong>Meta:</strong> 12-16 samosa | Vegetariano</p>
+<p><strong>Descrizione:</strong> Samosa croccanti ripieni di lenticchie, porcini e cavolo nero, con salsa di olive e salsa di radicchio grigliato.</p>
+<h3>Ingredienti</h3>
+<h3>Per la Pasta</h3>
+<ul>
+<li>300 g di farina 00</li>
+<li>3 cucchiai di olio vegetale (o ghee)</li>
+<li>1/2 cucchiaino di sale</li>
+<li>Acqua tiepida q.b.</li>
+</ul>
+<h3>Per il Ripieno</h3>
+<ul>
+<li>200 g di lenticchie secche (o 350 g cotte)</li>
+<li>100 g di funghi porcini freschi o reidratati, tritati</li>
+<li>150 g di cavolo nero, mondato e tritato finemente</li>
+<li>1 cipolla media, tritata</li>
+<li>2 spicchi d'aglio, tritati</li>
+<li>1 pezzetto di zenzero (circa 1 cm), grattugiato</li>
+<li>1 cucchiaino di cumino in polvere</li>
+<li>1 cucchiaino di coriandolo in polvere</li>
+<li>1/2 cucchiaino di curcuma</li>
+<li>1/2 - 1 cucchiaino di peperoncino in polvere (a piacere)</li>
+<li>2 cucchiai di olio extravergine d'oliva</li>
+<li>Sale e pepe q.b.</li>
+<li>Succo di 1/2 limone</li>
+</ul>
+<h3>Salsa di Olive</h3>
+<ul>
+<li>100 g di olive nere denocciolate</li>
+<li>1 cucchiaio di succo di limone</li>
+<li>1 cucchiaino di olio extravergine d'oliva</li>
+<li>1 spicchio d'aglio piccolo (opzionale)</li>
+<li>Pepe nero q.b.</li>
+<li>Acqua q.b.</li>
+</ul>
+<h3>Salsa di Radicchio Grigliato</h3>
+<ul>
+<li>1 cespo piccolo di radicchio rosso</li>
+<li>1 cucchiaio di olio extravergine d'oliva + olio per grigliare</li>
+<li>1 cucchiaino di aceto balsamico</li>
+<li>1 cucchiaino di miele o sciroppo d'acero (opzionale)</li>
+<li>Sale e pepe q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparare la pasta:</strong> Mescola farina, sale e olio. Aggiungi acqua tiepida poco alla volta fino a ottenere un impasto liscio e compatto. Avvolgi in pellicola e lascia riposare 30 min.</p>
+<p>2. <strong>Preparare il ripieno:</strong> Cuoci le lenticchie in acqua salata finché sono tenere (20-25 min), scolale e lasciale intiepidire. In una padella scalda l'olio, soffriggi cipolla, aglio e zenzero. Aggiungi porcini e cavolo nero, cuoci 8-10 min. Unisci lenticchie, spezie, sale, pepe e limone. Mescola e lascia raffreddare.</p>
+<p>3. <strong>Salsa di olive:</strong> Frulla olive, succo di limone, olio, aglio (se usi) e pepe. Aggiungi poca acqua fino a ottenere una crema densa.</p>
+<p>4. <strong>Salsa di radicchio:</strong> Taglia il radicchio a spicchi, spennella con olio e griglia su piastra calda 2-3 min per lato. Frulla con aceto balsamico, miele (se vuoi), sale, pepe e un cucchiaino d'olio.</p>
+<p>5. <strong>Formare le samosa:</strong> Stendi la pasta sottile (2 mm) e taglia in cerchi di 15 cm di diametro. Taglia ogni cerchio a metà. Forma coni, riempi con 1-2 cucchiai di ripieno e sigilla i bordi con una forchetta.</p>
+<p>6. <strong>Cuocere:</strong> Friggi le samosa in olio caldo (170 °C) per 3-4 min fino a doratura. Scola su carta assorbente. Servi calde con le due salse a parte.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2026-01-18</p>
+<p><strong>Meta:</strong> 12-16 samosas | Vegetarian</p>
+<p><strong>Description:</strong> Crispy samosas filled with lentils, porcini and black kale, served with olive sauce and grilled radicchio sauce.</p>
+<h3>Ingredients</h3>
+<h3>For the Pastry</h3>
+<ul>
+<li>300 g 00 flour</li>
+<li>3 tablespoons vegetable oil (or ghee)</li>
+<li>1/2 teaspoon salt</li>
+<li>Warm water to taste</li>
+</ul>
+<h3>For the Filling</h3>
+<ul>
+<li>200 g dried lentils (or 350 g cooked)</li>
+<li>100 g fresh or rehydrated porcini mushrooms, chopped</li>
+<li>150 g black kale, cleaned and finely chopped</li>
+<li>1 medium onion, chopped</li>
+<li>2 garlic cloves, chopped</li>
+<li>1 piece ginger (about 1 cm), grated</li>
+<li>1 teaspoon ground cumin</li>
+<li>1 teaspoon ground coriander</li>
+<li>1/2 teaspoon turmeric</li>
+<li>1/2 - 1 teaspoon chili powder (to taste)</li>
+<li>2 tablespoons extra virgin olive oil</li>
+<li>Salt and pepper to taste</li>
+<li>Juice of 1/2 lemon</li>
+</ul>
+<h3>Olive Sauce</h3>
+<ul>
+<li>100 g pitted black olives</li>
+<li>1 tablespoon lemon juice</li>
+<li>1 teaspoon extra virgin olive oil</li>
+<li>1 small garlic clove (optional)</li>
+<li>Black pepper to taste</li>
+<li>Water to taste</li>
+</ul>
+<h3>Grilled Radicchio Sauce</h3>
+<ul>
+<li>1 small head of red radicchio</li>
+<li>1 tablespoon extra virgin olive oil + oil for grilling</li>
+<li>1 teaspoon balsamic vinegar</li>
+<li>1 teaspoon honey or maple syrup (optional)</li>
+<li>Salt and pepper to taste</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Prepare pastry:</strong> Mix flour, salt and oil. Add warm water gradually until you get a smooth, firm dough. Wrap in cling film and rest 30 min.</p>
+<p>2. <strong>Prepare filling:</strong> Cook lentils in salted water until tender (20-25 min), drain and let cool slightly. In a pan heat oil, sauté onion, garlic and ginger. Add porcini and black kale, cook 8-10 min. Add lentils, spices, salt, pepper and lemon. Mix and let cool.</p>
+<p>3. <strong>Olive sauce:</strong> Blend olives, lemon juice, oil, garlic (if using) and pepper. Add a little water until you get a thick cream.</p>
+<p>4. <strong>Radicchio sauce:</strong> Cut radicchio into wedges, brush with oil and grill on a hot plate 2-3 min per side. Blend with balsamic vinegar, honey (if using), salt, pepper and a teaspoon of oil.</p>
+<p>5. <strong>Shape samosas:</strong> Roll out pastry thin (2 mm) and cut into 15 cm diameter circles. Cut each circle in half. Form cones, fill with 1-2 tablespoons of filling and seal edges with a fork.</p>
+<p>6. <strong>Cook:</strong> Fry samosas in hot oil (170 °C) for 3-4 min until golden. Drain on absorbent paper. Serve hot with both sauces on the side.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2026-01-18</p>
+<p><strong>Meta:</strong> 12-16 samosas | Vegetariano</p>
+<p><strong>Descripción:</strong> Samosas crujientes rellenos de lentejas, porcini y kale negro, con salsa de aceitunas y salsa de radicchio a la parrilla.</p>
+<h3>Ingredientes</h3>
+<h3>Para la Masa</h3>
+<ul>
+<li>300 g de harina 00</li>
+<li>3 cucharadas de aceite vegetal (o ghee)</li>
+<li>1/2 cucharadita de sal</li>
+<li>Agua templada c.s.</li>
+</ul>
+<h3>Para el Relleno</h3>
+<ul>
+<li>200 g de lentejas secas (o 350 g cocidas)</li>
+<li>100 g de setas porcini frescas o rehidratadas, picadas</li>
+<li>150 g de kale negro, limpio y picado finamente</li>
+<li>1 cebolla mediana, picada</li>
+<li>2 dientes de ajo, picados</li>
+<li>1 trozo de jengibre (unos 1 cm), rallado</li>
+<li>1 cucharadita de comino en polvo</li>
+<li>1 cucharadita de cilantro en polvo</li>
+<li>1/2 cucharadita de cúrcuma</li>
+<li>1/2 - 1 cucharadita de guindilla en polvo (a gusto)</li>
+<li>2 cucharadas de aceite de oliva virgen extra</li>
+<li>Sal y pimienta c.s.</li>
+<li>Zumo de 1/2 limón</li>
+</ul>
+<h3>Salsa de Aceitunas</h3>
+<ul>
+<li>100 g de aceitunas negras sin hueso</li>
+<li>1 cucharada de zumo de limón</li>
+<li>1 cucharadita de aceite de oliva virgen extra</li>
+<li>1 diente de ajo pequeño (opcional)</li>
+<li>Pimienta negra c.s.</li>
+<li>Agua c.s.</li>
+</ul>
+<h3>Salsa de Radicchio a la Parrilla</h3>
+<ul>
+<li>1 cogollo pequeño de radicchio rojo</li>
+<li>1 cucharada de aceite de oliva virgen extra + aceite para grillar</li>
+<li>1 cucharadita de vinagre balsámico</li>
+<li>1 cucharadita de miel o sirope de arce (opcional)</li>
+<li>Sal y pimienta c.s.</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparar la masa:</strong> Mezcla harina, sal y aceite. Añade agua templada poco a poco hasta obtener una masa lisa y compacta. Envuelve en film y deja reposar 30 min.</p>
+<p>2. <strong>Preparar el relleno:</strong> Cocina las lentejas en agua con sal hasta que estén tiernas (20-25 min), escúrrelas y déjalas entibiar. En una sartén calienta el aceite, sofríe cebolla, ajo y jengibre. Añade porcini y kale negro, cuece 8-10 min. Une las lentejas, especias, sal, pimienta y limón. Mezcla y deja enfriar.</p>
+<p>3. <strong>Salsa de aceitunas:</strong> Tritura aceitunas, zumo de limón, aceite, ajo (si usas) y pimienta. Añade poca agua hasta obtener una crema densa.</p>
+<p>4. <strong>Salsa de radicchio:</strong> Corta el radicchio en gajos, pincela con aceite y grilla en plancha caliente 2-3 min por lado. Tritura con vinagre balsámico, miel (si quieres), sal, pimienta y una cucharadita de aceite.</p>
+<p>5. <strong>Formar las samosas:</strong> Estira la masa fina (2 mm) y corta en círculos de 15 cm. Corta cada círculo por la mitad. Forma conos, rellena con 1-2 cucharadas de relleno y sella los bordes con un tenedor.</p>
+<p>6. <strong>Cocinar:</strong> Fríe las samosas en aceite caliente (170 °C) durante 3-4 min hasta dorar. Escurre sobre papel absorbente. Sirve calientes con las dos salsas a parte.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2026-01-18</p>
+<p><strong>Meta:</strong> 12-16 samosas | Vegetariano</p>
+<p><strong>Descrição:</strong> Samosas crocantes recheadas com lentilhas, porcini e couve preta, com molho de azeitonas e molho de radicchio grelhado.</p>
+<h3>Ingredientes</h3>
+<h3>Para a Massa</h3>
+<ul>
+<li>300 g de farinha 00</li>
+<li>3 colheres de sopa de óleo vegetal (ou ghee)</li>
+<li>1/2 colher de chá de sal</li>
+<li>Água morna q.b.</li>
+</ul>
+<h3>Para o Recheio</h3>
+<ul>
+<li>200 g de lentilhas secas (ou 350 g cozidas)</li>
+<li>100 g de cogumelos porcini frescos ou reidratados, picados</li>
+<li>150 g de couve preta, limpa e picada finamente</li>
+<li>1 cebola média, picada</li>
+<li>2 dentes de alho, picados</li>
+<li>1 pedaço de gengibre (cerca de 1 cm), ralado</li>
+<li>1 colher de chá de cominho em pó</li>
+<li>1 colher de chá de coentro em pó</li>
+<li>1/2 colher de chá de cúrcuma</li>
+<li>1/2 - 1 colher de chá de pimentão em pó (a gosto)</li>
+<li>2 colheres de sopa de azeite extra virgem</li>
+<li>Sal e pimenta q.b.</li>
+<li>Sumo de 1/2 limão</li>
+</ul>
+<h3>Molho de Azeitonas</h3>
+<ul>
+<li>100 g de azeitonas pretas sem caroço</li>
+<li>1 colher de sopa de sumo de limão</li>
+<li>1 colher de chá de azeite extra virgem</li>
+<li>1 dente de alho pequeno (opcional)</li>
+<li>Pimenta preta q.b.</li>
+<li>Água q.b.</li>
+</ul>
+<h3>Molho de Radicchio Grelhado</h3>
+<ul>
+<li>1 cabeça pequena de radicchio vermelho</li>
+<li>1 colher de sopa de azeite extra virgem + azeite para grelhar</li>
+<li>1 colher de chá de vinagre balsâmico</li>
+<li>1 colher de chá de mel ou xarope de ácer (opcional)</li>
+<li>Sal e pimenta q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparar a massa:</strong> Misture farinha, sal e azeite. Adicione água morna aos poucos até obter uma massa lisa e compacta. Envolva em película e deixe repousar 30 min.</p>
+<p>2. <strong>Preparar o recheio:</strong> Cozinhe as lentilhas em água com sal até ficarem macias (20-25 min), escorra e deixe amornar. Numa frigideira aqueça o azeite, refogue cebola, alho e gengibre. Junte porcini e couve preta, cozinhe 8-10 min. Adicione lentilhas, especiarias, sal, pimenta e limão. Misture e deixe arrefecer.</p>
+<p>3. <strong>Molho de azeitonas:</strong> Reduza a um creme as azeitonas, sumo de limão, azeite, alho (se usar) e pimenta. Adicione pouca água até obter uma consistência densa.</p>
+<p>4. <strong>Molho de radicchio:</strong> Corte o radicchio em gomos, pincele com azeite e grelhe numa chapa quente 2-3 min de cada lado. Reduza a um creme com vinagre balsâmico, mel (se quiser), sal, pimenta e uma colher de chá de azeite.</p>
+<p>5. <strong>Formar as samosas:</strong> Estenda a massa fina (2 mm) e corte em círculos de 15 cm. Corte cada círculo ao meio. Forme cones, recheie com 1-2 colheres de sopa de recheio e feche as bordas com um garfo.</p>
+<p>6. <strong>Cozinhar:</strong> Frite as samosas em azeite quente (170 °C) durante 3-4 min até dourar. Escorra sobre papel absorvente. Sirva quentes com os dois molhos à parte.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2026-01-18</p>
+<p><strong>Meta:</strong> 12-16 Samosas | Vegetarisch</p>
+<p><strong>Beschreibung:</strong> Knusprige Samosas gefüllt mit Linsen, Steinpilzen und Schwarzkohl, mit Olivensoße und gegrillter Radicchio-Soße.</p>
+<h3>Zutaten</h3>
+<h3>Für den Teig</h3>
+<ul>
+<li>300 g Mehl Type 00</li>
+<li>3 Esslöffel Pflanzenöl (oder Ghee)</li>
+<li>1/2 Teelöffel Salz</li>
+<li>Lauwarmes Wasser nach Geschmack</li>
+</ul>
+<h3>Für die Füllung</h3>
+<ul>
+<li>200 g getrocknete Linsen (oder 350 g gekocht)</li>
+<li>100 g frische oder rehydrierte Steinpilze, gehackt</li>
+<li>150 g Schwarzkohl, gereinigt und fein gehackt</li>
+<li>1 mittlere Zwiebel, gehackt</li>
+<li>2 Knoblauchzehen, gehackt</li>
+<li>1 Stück Ingwer (ca. 1 cm), gerieben</li>
+<li>1 Teelöffel Kreuzkümmel</li>
+<li>1 Teelöffel Koriander gemahlen</li>
+<li>1/2 Teelöffel Kurkuma</li>
+<li>1/2 - 1 Teelöffel Chilipulver (nach Geschmack)</li>
+<li>2 Esslöffel extra natives Olivenöl</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Saft von 1/2 Zitrone</li>
+</ul>
+<h3>Olivensoße</h3>
+<ul>
+<li>100 g entsteinte schwarze Oliven</li>
+<li>1 Esslöffel Zitronensaft</li>
+<li>1 Teelöffel extra natives Olivenöl</li>
+<li>1 kleine Knoblauchzehe (optional)</li>
+<li>Schwarzer Pfeffer nach Geschmack</li>
+<li>Wasser nach Geschmack</li>
+</ul>
+<h3>Gegrillte Radicchio-Soße</h3>
+<ul>
+<li>1 kleiner roter Radicchio</li>
+<li>1 Esslöffel extra natives Olivenöl + Öl zum Grillen</li>
+<li>1 Teelöffel Balsamico-Essig</li>
+<li>1 Teelöffel Honig oder Ahornsirup (optional)</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Teig zubereiten:</strong> Mehl, Salz und Öl mischen. Nach und nach lauwarmes Wasser zugeben, bis ein glatter, fester Teig entsteht. In Frischhaltefolie wickeln und 30 Min. ruhen lassen.</p>
+<p>2. <strong>Füllung zubereiten:</strong> Linsen in Salzwasser bis zum Weichwerden kochen (20-25 Min.), abgießen und leicht abkühlen lassen. In einer Pfanne Öl erhitzen, Zwiebel, Knoblauch und Ingwer anschwitzen. Steinpilze und Schwarzkohl zugeben, 8-10 Min. kochen. Linsen, Gewürze, Salz, Pfeffer und Zitrone zugeben. Mischen und abkühlen lassen.</p>
+<p>3. <strong>Olivensoße:</strong> Oliven, Zitronensaft, Öl, Knoblauch (falls verwendet) und Pfeffer pürieren. Etwas Wasser zugeben, bis eine dicke Creme entsteht.</p>
+<p>4. <strong>Radicchio-Soße:</strong> Radicchio in Spalten schneiden, mit Öl bestreichen und auf einer heißen Platte von jeder Seite 2-3 Min. grillen. Mit Balsamico-Essig, Honig (falls verwendet), Salz, Pfeffer und einem Teelöffel Öl pürieren.</p>
+<p>5. <strong>Samosas formen:</strong> Teig dünn ausrollen (2 mm) und Kreise von 15 cm Durchmesser schneiden. Jeden Kreis halbieren. Kegel formen, mit 1-2 Esslöffeln Füllung füllen und Ränder mit einer Gabel verschließen.</p>
+<p>6. <strong>Zubereiten:</strong> Samosas in heißem Öl (170 °C) 3-4 Min. goldbraun frittieren. Auf saugfähigem Papier abtropfen lassen. Heiß mit beiden Soßen servieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2026-01-18</p>
+<p><strong>Meta:</strong> 12-16 samosas | Χορτοφαγικό</p>
+<p><strong>Περιγραφή:</strong> Τραγανές samosas γεμισμένες με φακές, porcini και μαύρο kale, με σάλτσα ελιάς και σάλτσα ψητού radicchio.</p>
+<h3>Συστατικά</h3>
+<h3>Για τη Ζύμη</h3>
+<ul>
+<li>300 γρ αλεύρι 00</li>
+<li>3 κουταλιές της σούπας φυτικό λάδι (ή ghee)</li>
+<li>1/2 κουταλάκι του γλυκού αλάτι</li>
+<li>Χλιαρό νερό κατά βούληση</li>
+</ul>
+<h3>Για τη Γέμιση</h3>
+<ul>
+<li>200 γρ ξερές φακές (ή 350 γρ μαγειρεμένες)</li>
+<li>100 γρ φρέσκα ή αναζυγρανωμένα μανιτάρια porcini, ψιλοκομμένα</li>
+<li>150 γρ μαύρο kale, καθαρισμένο και ψιλοκομμένο</li>
+<li>1 μεσαίο κρεμμύδι, ψιλοκομμένο</li>
+<li>2 σκελίδες σκόρδο, ψιλοκομμένες</li>
+<li>1 κομμάτι τζίντζερ (περίπου 1 εκ), τριμμένο</li>
+<li>1 κουταλάκι του γλυκού κύμινο σε σκόνη</li>
+<li>1 κουταλάκι του γλυκού κολίανδρο σε σκόνη</li>
+<li>1/2 κουταλάκι του γλυκού κουρκουμάς</li>
+<li>1/2 - 1 κουταλάκι του γλυκού καυτερή πιπεριά σε σκόνη (κατά βούληση)</li>
+<li>2 κουταλιές της σούπας ελαιόλαδο</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>Χυμός 1/2 λεμονιού</li>
+</ul>
+<h3>Σάλτσα Ελιάς</h3>
+<ul>
+<li>100 γρ μαύρες ελιές χωρίς κουκούτσι</li>
+<li>1 κουταλιά της σούπας χυμός λεμονιού</li>
+<li>1 κουταλάκι του γλυκού ελαιόλαδο</li>
+<li>1 μικρή σκελίδα σκόρδο (προαιρετικά)</li>
+<li>Μαύρο πιπέρι κατά βούληση</li>
+<li>Νερό κατά βούληση</li>
+</ul>
+<h3>Σάλτσα Ψητού Radicchio</h3>
+<ul>
+<li>1 μικρό κεφάλι κόκκινο radicchio</li>
+<li>1 κουταλιά της σούπας ελαιόλαδο + λάδι για ψήσιμο</li>
+<li>1 κουταλάκι του γλυκού βαλσαμικό ξίδι</li>
+<li>1 κουταλάκι του γλυκού μέλι ή σιρόπι σφενδάμου (προαιρετικά)</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία ζύμης:</strong> Ανακατέψτε αλεύρι, αλάτι και λάδι. Προσθέστε σιγά-σιγά χλιαρό νερό μέχρι να γίνει μια λεία, σφιχτή ζύμη. Τυλίξτε σε μεμβράνη και αφήστε να ξεκουραστεί 30 λεπτά.</p>
+<p>2. <strong>Προετοιμασία γέμισης:</strong> Μαγειρέψτε τις φακές σε αλατισμένο νερό μέχρι να μαλακώσουν (20-25 λεπτά), στραγγίστε και αφήστε να κρυώσει λίγο. Σε ένα τηγάνι ζεστάνετε το λάδι, σοτάρετε κρεμμύδι, σκόρδο και τζίντζερ. Προσθέστε porcini και μαύρο kale, μαγειρέψτε 8-10 λεπτά. Προσθέστε φακές, μπαχαρικά, αλάτι, πιπέρι και λεμόνι. Ανακατέψτε και αφήστε να κρυώσει.</p>
+<p>3. <strong>Σάλτσα ελιάς:</strong> Χτυπήστε ελιές, χυμό λεμονιού, λάδι, σκόρδο (αν χρησιμοποιείτε) και πιπέρι. Προσθέστε λίγο νερό μέχρι να γίνει πηχτή κρέμα.</p>
+<p>4. <strong>Σάλτσα radicchio:</strong> Κόψτε το radicchio σε φέτες, αλείψτε με λάδι και ψήστε σε καυτή πλάκα 2-3 λεπτά από κάθε πλευρά. Χτυπήστε με βαλσαμικό ξίδι, μέλι (αν θέλετε), αλάτι, πιπέρι και ένα κουταλάκι λαδιού.</p>
+<p>5. <strong>Σχηματισμός samosas:</strong> Ανοίξτε τη ζύμη λεπτή (2 χιλ) και κόψτε σε κύκλους 15 εκ. Κόψτε κάθε κύκλο στη μέση. Σχηματίστε κώνους, γεμίστε με 1-2 κουταλιές γέμισης και κλείστε τις άκρες με ένα πιρούνι.</p>
+<p>6. <strong>Μαγείρεμα:</strong> Τηγανίστε τις samosas σε καυτό λάδι (170°C) για 3-4 λεπτά μέχρι να ροδίσουν. Στραγγίστε σε απορροφητικό χαρτί. Σερβίρετε ζεστές με και τις δύο σάλτσες.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Risotto con Lenticchie Rosse, Porri e Gamberetti | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Risotto con Lenticchie Rosse, Porri e Gamberetti">
+<meta property="og:title" content="Risotto con Lenticchie Rosse, Porri e Gamberetti | Leguminando">
+<meta property="og:description" content="Risotto con Lenticchie Rosse, Porri e Gamberetti">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="estate/017.html" data-title="Risotto con Lenticchie Rosse, Porri e Gamberetti" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="017.jpg" alt="Risotto con Lenticchie Rosse, Porri e Gamberetti" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2026-06-09</p>
+<p><strong>Meta:</strong> 4 porzioni | Pesce</p>
+<p><strong>Descrizione:</strong> Risotto cremoso con lenticchie rosse, porri e gamberetti, profumato al limone e curcuma.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>300 g di riso Carnaroli o Arborio</li>
+<li>200 g di gamberetti sgusciati (freschi o surgelati)</li>
+<li>100 g di lenticchie rosse decorticate (secche)</li>
+<li>200 g di porri (solo parte bianca e verde chiaro)</li>
+<li>1-1,2 L di brodo vegetale caldo</li>
+<li>1 cipolla piccola (circa 70 g), tritata finemente</li>
+<li>1 spicchio d'aglio, schiacciato</li>
+<li>1 cucchiaino di curcuma in polvere</li>
+<li>1 cucchiaio di olio extravergine d'oliva per soffritto</li>
+<li>20 g di burro per mantecatura (opzionale)</li>
+<li>30-40 g di parmigiano grattugiato (opzionale)</li>
+<li>Succo e scorza di mezzo limone</li>
+<li>Sale e pepe q.b.</li>
+<li>Prezzemolo fresco tritato per guarnire</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Cuoci le lenticchie:</strong> Sciacquale e falle sobbollire in acqua per 10-12 minuti finché diventano morbide. Scolale e tienile da parte (devono restare compatte ma non al dente).</p>
+<p>2. <strong>Prepara i porri:</strong> Pulisci i porri e tagliali a rondelle sottili. In una casseruola larga, scalda l'olio, aggiungi la cipolla e l'aglio, e fai appassire a fuoco medio per 3-4 minuti.</p>
+<p>3. <strong>Cuoci i porri:</strong> Aggiungi i porri e cuoci per 5-6 minuti finché sono morbidi. Unisci la curcuma e mescola per tostare leggermente le spezie (30-60 secondi).</p>
+<p>4. <strong>Tosta il riso:</strong> Aggiungi il riso e tostalo per 2 minuti mescolando. Sfuma con poco brodo caldo, se necessario.</p>
+<p>5. <strong>Cottura del riso:</strong> Porta il riso a cottura aggiungendo il brodo caldo un mestolo alla volta (circa 16-18 minuti), mescolando di tanto in tanto.</p>
+<p>6. <strong>Unisci lenticchie e gamberetti:</strong> A 4-5 minuti dalla fine della cottura, unisci le lenticchie rosse già cotte e i gamberetti (se surgelati, scongelati e asciugati). Cuoci il tempo necessario affinché i gamberetti diventino rosa e cotti (2-4 minuti).</p>
+<p>7. <strong>Mantecatura:</strong> Togli dal fuoco, manteca con burro e parmigiano (se usati), aggiungi la scorza e il succo di limone, e regola di sale e pepe.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2026-06-09</p>
+<p><strong>Meta:</strong> 4 servings | Fish</p>
+<p><strong>Description:</strong> Creamy risotto with red lentils, leeks and prawns, scented with lemon and turmeric.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>300 g Carnaroli or Arborio rice</li>
+<li>200 g shelled prawns (fresh or frozen)</li>
+<li>100 g split red lentils (dried)</li>
+<li>200 g leeks (white and light green parts only)</li>
+<li>1-1.2 L hot vegetable broth</li>
+<li>1 small onion (about 70 g), finely chopped</li>
+<li>1 garlic clove, crushed</li>
+<li>1 teaspoon turmeric powder</li>
+<li>1 tablespoon extra virgin olive oil for sauté</li>
+<li>20 g butter for creaming (optional)</li>
+<li>30-40 g grated Parmesan (optional)</li>
+<li>Juice and zest of half a lemon</li>
+<li>Salt and pepper to taste</li>
+<li>Chopped fresh parsley for garnish</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Cook lentils:</strong> Rinse and simmer in water for 10-12 minutes until tender. Drain and set aside (they should remain compact but not al dente).</p>
+<p>2. <strong>Prepare leeks:</strong> Clean leeks and slice into thin rounds. In a wide casserole, heat oil, add onion and garlic, and sweat over medium heat for 3-4 minutes.</p>
+<p>3. <strong>Cook leeks:</strong> Add leeks and cook for 5-6 minutes until soft. Add turmeric and stir to lightly toast the spices (30-60 seconds).</p>
+<p>4. <strong>Toast rice:</strong> Add rice and toast for 2 minutes, stirring. Deglaze with a little hot broth if needed.</p>
+<p>5. <strong>Cook rice:</strong> Cook rice by adding hot broth one ladle at a time (about 16-18 minutes), stirring occasionally.</p>
+<p>6. <strong>Add lentils and prawns:</strong> 4-5 minutes before the end, add cooked red lentils and prawns (if frozen, thawed and dried). Cook until prawns turn pink and are done (2-4 minutes).</p>
+<p>7. <strong>Creaming:</strong> Remove from heat, cream with butter and Parmesan (if using), add lemon zest and juice, and season with salt and pepper.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2026-06-09</p>
+<p><strong>Meta:</strong> 4 porciones | Pescado</p>
+<p><strong>Descripción:</strong> Risotto cremoso con lentejas rojas, puerros y gambones, perfumado con limón y cúrcuma.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>300 g de arroz Carnaroli o Arborio</li>
+<li>200 g de gambones pelados (frescos o congelados)</li>
+<li>100 g de lentejas rojas peladas (secas)</li>
+<li>200 g de puerros (solo parte blanca y verde claro)</li>
+<li>1-1,2 L de caldo de verduras caliente</li>
+<li>1 cebolla pequeña (unos 70 g), picada finamente</li>
+<li>1 diente de ajo, aplastado</li>
+<li>1 cucharadita de cúrcuma en polvo</li>
+<li>1 cucharada de aceite de oliva virgen extra para sofreír</li>
+<li>20 g de mantequilla para cremado (opcional)</li>
+<li>30-40 g de parmesano rallado (opcional)</li>
+<li>Zumo y ralladura de medio limón</li>
+<li>Sal y pimienta c.s.</li>
+<li>Perejil fresco picado para decorar</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Cocinar las lentejas:</strong> Enjuágalas y cuécelas a fuego lento en agua 10-12 minutos hasta que estén tiernas. Escúrrelas y resérvalas (deben quedar compactas pero no al dente).</p>
+<p>2. <strong>Preparar los puerros:</strong> Limpia los puerros y córtalos en rodajas finas. En una cazuela ancha, calienta el aceite, añade la cebolla y el ajo, y sofríe a fuego medio 3-4 minutos.</p>
+<p>3. <strong>Cocinar los puerros:</strong> Agrega los puerros y cuece 5-6 minutos hasta que estén tiernos. Incorpora la cúrcuma y remueve para tostar ligeramente las especias (30-60 segundos).</p>
+<p>4. <strong>Tostar el arroz:</strong> Añade el arroz y tóstalo 2 minutos removiendo. Desglasa con un poco de caldo caliente si es necesario.</p>
+<p>5. <strong>Cocción del arroz:</strong> Lleva el arroz a cocción añadiendo caldo caliente cucharón a cucharón (unos 16-18 minutos), removiendo de vez en cuando.</p>
+<p>6. <strong>Unir lentejas y gambones:</strong> A 4-5 minutos del final, agrega las lentejas rojas ya cocidas y los gambones (si son congelados, descongelados y secos). Cuece el tiempo necesario para que los gambones se vuelvan rosas y estén cocidos (2-4 minutos).</p>
+<p>7. <strong>Cremado:</strong> Retira del fuego, cremar con mantequilla y parmesano (si los usas), añade la ralladura y el zumo de limón, y sazona con sal y pimienta.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2026-06-09</p>
+<p><strong>Meta:</strong> 4 porções | Peixe</p>
+<p><strong>Descrição:</strong> Risotto cremoso com lentilhas vermelhas, alhos-franceses e camarão, perfumado com limão e açafrão-da-terra.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>300 g de arroz Carnaroli ou Arborio</li>
+<li>200 g de camarão descascado (fresco ou congelado)</li>
+<li>100 g de lentilhas vermelhas descascadas (secas)</li>
+<li>200 g de alhos-franceses (apenas parte branca e verde claro)</li>
+<li>1-1,2 L de caldo de legumes quente</li>
+<li>1 cebola pequena (cerca de 70 g), picada finamente</li>
+<li>1 dente de alho, esmagado</li>
+<li>1 colher de chá de açafrão-da-terra em pó</li>
+<li>1 colher de sopa de azeite extra virgem para refogar</li>
+<li>20 g de manteiga para cremar (opcional)</li>
+<li>30-40 g de parmesão ralado (opcional)</li>
+<li>Sumo e raspas de meio limão</li>
+<li>Sal e pimenta q.b.</li>
+<li>Salsa fresca picada para guarnecer</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Cozinhar as lentilhas:</strong> Enxágue-as e cozinhe em lume brando em água por 10-12 minutos até ficarem macias. Escorra e reserve (devem ficar compactas mas não al dente).</p>
+<p>2. <strong>Preparar os alhos-franceses:</strong> Limpe os alhos-franceses e corte em rodelas finas. Numa caçarola larga, aqueça o azeite, junte a cebola e o alho, e refogue em lume médio 3-4 minutos.</p>
+<p>3. <strong>Cozinhar os alhos-franceses:</strong> Junte os alhos-franceses e cozinhe 5-6 minutos até ficarem macios. Una o açafrão-da-terra e mexa para tostar levemente as especiarias (30-60 segundos).</p>
+<p>4. <strong>Tostar o arroz:</strong> Adicione o arroz e toste 2 minutos mexendo. Desglace com um pouco de caldo quente se necessário.</p>
+<p>5. <strong>Cozedura do arroz:</strong> Leve o arroz a cozer acrescentando caldo quente concha a concha (cerca de 16-18 minutos), mexendo de vez em quando.</p>
+<p>6. <strong>Juntar lentilhas e camarão:</strong> A 4-5 minutos do final, junte as lentilhas vermelhas já cozidas e o camarão (se congelado, descongelado e seco). Cozinhe o tempo necessário até o camarão ficar rosado e cozido (2-4 minutos).</p>
+<p>7. <strong>Cremar:</strong> Retire do lume, cremar com manteiga e parmesão (se usar), acrescente as raspas e o sumo de limão, e tempere com sal e pimenta.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2026-06-09</p>
+<p><strong>Meta:</strong> 4 Portionen | Fisch</p>
+<p><strong>Beschreibung:</strong> Cremiges Risotto mit roten Linsen, Lauch und Garnelen, duftend nach Zitrone und Kurkuma.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>300 g Carnaroli- oder Arborio-Reis</li>
+<li>200 g geschälte Garnelen (frisch oder gefroren)</li>
+<li>100 g geschälte rote Linsen (getrocknet)</li>
+<li>200 g Lauch (nur weißer und hellgrüner Teil)</li>
+<li>1-1,2 L heiße Gemüsebrühe</li>
+<li>1 kleine Zwiebel (ca. 70 g), fein gehackt</li>
+<li>1 Knoblauchzehe, gepresst</li>
+<li>1 Teelöffel Kurkumapulver</li>
+<li>1 Esslöffel natives Olivenöl zum Anschwitzen</li>
+<li>20 g Butter zum Einrühren (optional)</li>
+<li>30-40 g geriebener Parmesan (optional)</li>
+<li>Saft und Abrieb von einer halben Zitrone</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Gehackte frische Petersilie zum Garnieren</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Linsen kochen:</strong> Spülen und bei schwacher Hitze 10-12 Minuten in Wasser köcheln, bis sie weich sind. Abtropfen und beiseitestellen (sollten fest bleiben, aber nicht bissfest).</p>
+<p>2. <strong>Lauch vorbereiten:</strong> Lauch putzen und in dünne Scheiben schneiden. In einem breiten Bräter Öl erhitzen, Zwiebel und Knoblauch zugeben und bei mittlerer Hitze 3-4 Minuten anschwitzen.</p>
+<p>3. <strong>Lauch garen:</strong> Lauch zugeben und 5-6 Minuten garen, bis er weich ist. Kurkuma zugeben und kurz anrösten (30-60 Sekunden).</p>
+<p>4. <strong>Reis rösten:</strong> Reis zugeben und 2 Minuten röstend umrühren. Bei Bedarf mit etwas heißer Brühe ablöschen.</p>
+<p>5. <strong>Reis garen:</strong> Reis schrittweise mit heißer Brühe garen (etwa 16-18 Minuten), dabei gelegentlich umrühren.</p>
+<p>6. <strong>Linsen und Garnelen zugeben:</strong> 4-5 Minuten vor Ende die gekochten roten Linsen und die Garnelen (wenn gefroren, aufgetaut und getrocknet) zugeben. Garnelen gar werden lassen, bis sie rosa sind (2-4 Minuten).</p>
+<p>7. <strong>Einrühren:</strong> Vom Herd nehmen, mit Butter und Parmesan (falls verwendet) einrühren, Zitronenabrieb und -saft zugeben und mit Salz und Pfeffer abschmecken.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2026-06-09</p>
+<p><strong>Meta:</strong> 4 μερίδες | Ψάρι</p>
+<p><strong>Περιγραφή:</strong> Κρεμώδες ριζότο με κόκκινες φακές, πράσα και γαρίδες, αρωματισμένο με λεμόνι και κουρκούμη.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>300 γρ ρύζι Carnaroli ή Arborio</li>
+<li>200 γρ γαρίδες καθαρισμένες (φρέσκες ή κατεψυγμένες)</li>
+<li>100 γρ ξεφλουδισμένες κόκκινες φακές (ξερές)</li>
+<li>200 γρ πράσα (μόνο λευκό και ανοιχτό πράσινο μέρος)</li>
+<li>1-1,2 Λ ζεστός ζωμός λαχανικών</li>
+<li>1 μικρό κρεμμύδι (περίπου 70 γρ), ψιλοκομμένο</li>
+<li>1 σκελίδα σκόρδο, πιεσμένη</li>
+<li>1 κουταλάκι του γλυκού κουρκούμη σε σκόνη</li>
+<li>1 κουταλιά της σούπας ελαιόλαδο για σοτάρισμα</li>
+<li>20 γρ βούτυρο για κρέμα (προαιρετικά)</li>
+<li>30-40 γρ τριμμένη παρμεζάνα (προαιρετικά)</li>
+<li>Χυμός και ξύσμα μισού λεμονιού</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>Ψιλοκομμένος φρέσκος μαϊντανός για γαρνίρισμα</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Μαγείρεμα φακών:</strong> Ξεπλύνετε τις και σιγοβράστε σε νερό για 10-12 λεπτά μέχρι να μαλακώσουν. Στραγγίστε και κρατήστε στην άκρη (πρέπει να παραμείνουν σφικτές αλλά όχι al dente).</p>
+<p>2. <strong>Προετοιμασία πράσων:</strong> Καθαρίστε τα πράσα και κόψτε τα σε λεπτές ροδέλες. Σε μια φαρδιά κατσαρόλα, ζεστάνετε λάδι, προσθέστε κρεμμύδι και σκόρδο και σοτάρετε σε μέτρια φωτιά για 3-4 λεπτά.</p>
+<p>3. <strong>Μαγείρεμα πράσων:</strong> Προσθέστε τα πράσα και μαγειρέψτε για 5-6 λεπτά μέχρι να μαλακώσουν. Προσθέστε κουρκούμη και ανακατέψτε για ελαφρύ καβουρδισμα (30-60 δευτερόλεπτα).</p>
+<p>4. <strong>Καβούρδισμα ρυζιού:</strong> Προσθέστε το ρύζι και καβουρδίστε για 2 λεπτά ανακατεύοντας. Σβήστε με λίγο ζεστό ζωμό αν χρειάζεται.</p>
+<p>5. <strong>Μαγείρεμα ρυζιού:</strong> Μαγειρέψτε το ρύζι προσθέτοντας ζεστό ζωμό κουταλιά-κουταλιά (περίπου 16-18 λεπτά), ανακατεύοντας που και που.</p>
+<p>6. <strong>Προσθήκη φακών και γαρίδων:</strong> 4-5 λεπτά πριν το τέλος, προσθέστε τις μαγειρεμένες κόκκινες φακές και τις γαρίδες (αν είναι κατεψυγμένες, αποψυγμένες και στεγνές). Μαγειρέψτε μέχρι οι γαρίδες να γίνουν ροζ και ψημένες (2-4 λεπτά).</p>
+<p>7. <strong>Κρέμα:</strong> Αφαιρέστε από τη φωτιά, ανακατέψτε με βούτυρο και παρμεζάνα (αν χρησιμοποιείτε), προσθέστε ξύσμα και χυμό λεμονιού, και αλατοπιπερώστε.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

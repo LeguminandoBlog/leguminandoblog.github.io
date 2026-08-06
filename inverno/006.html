@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cotiche e Fagioli con Bietole | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Cotiche e Fagioli con Bietole">
+<meta property="og:title" content="Cotiche e Fagioli con Bietole | Leguminando">
+<meta property="og:description" content="Cotiche e Fagioli con Bietole">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="inverno/006.html" data-title="Cotiche e Fagioli con Bietole" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="006.jpg" alt="Cotiche e Fagioli con Bietole" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+
+                <h3>📋 Ingredienti</h3>
+                <ul>
+                    <li>500 g di cotiche di maiale</li>
+                    <li>300 g di fagioli borlotti secchi (o 2 lattine di fagioli precotti)</li>
+                    <li>1 mazzo di bietole</li>
+                    <li>1 cipolla</li>
+                    <li>2 spicchi d'aglio</li>
+                    <li>2 carote</li>
+                    <li>1 costa di sedano</li>
+                    <li>400 g di pomodori pelati</li>
+                    <li>2 foglie di alloro</li>
+                    <li>Olio extravergine d'oliva</li>
+                    <li>Sale e pepe q.b.</li>
+                    <li>Peperoncino (opzionale)</li>
+                </ul>
+            
+
+            <h4>1. Preparazione dei fagioli</h4>
+                <ol>
+                    <li>Se usi fagioli secchi, mettili in ammollo in acqua fredda per almeno 8 ore o tutta la notte.</li>
+                    <li>Scolali e sciacquali. Cuocili in abbondante acqua fresca per circa 1-1,5 ore, fino a quando sono teneri.</li>
+                    <li>Scolali e tienili da parte. Se usi fagioli precotti, sciacquali e scolali.</li>
+                </ol>
+            
+
+            <h4>2. Preparazione delle cotiche</h4>
+                <ol>
+                    <li>Fai bollire le cotiche in acqua per circa 30 minuti per ammorbidirle.</li>
+                    <li>Scolale, lasciale intiepidire e tagliale a strisce.</li>
+                </ol>
+            
+
+            <h4>3. Preparazione delle verdure</h4>
+                <ol>
+                    <li>Lava le bietole e tagliale a pezzi.</li>
+                    <li>Trita finemente la cipolla, l'aglio, le carote e il sedano.</li>
+                </ol>
+            
+
+            <h4>4. Cottura</h4>
+                <ol>
+                    <li>In una casseruola capiente, scalda un filo d'olio extravergine d'oliva.</li>
+                    <li>Aggiungi la cipolla, l'aglio, le carote e il sedano tritati. Fai soffriggere a fuoco medio finché le verdure non sono morbide.</li>
+                    <li>Aggiungi le strisce di cotiche e rosolale per qualche minuto.</li>
+                    <li>Unisci i pomodori pelati, schiacciandoli con una forchetta, e le foglie di alloro. Cuoci a fuoco lento per circa 30 minuti, mescolando di tanto in tanto.</li>
+                    <li>Aggiungi i fagioli cotti e le bietole. Continua a cuocere per altri 15-20 minuti, finché le bietole sono tenere.</li>
+                    <li>Regola di sale e pepe a piacere. Se gradito, aggiungi un pizzico di peperoncino per un po' di piccantezza.</li>
+                </ol>
+            
+</div>
+
+<div id="content-en" class="lang-content">
+
+                <h3>📋 Ingredients</h3>
+                <ul>
+                    <li>500 g pork rinds</li>
+                    <li>300 g dried borlotti beans (or 2 cans of pre-cooked beans)</li>
+                    <li>1 bunch of Swiss chard</li>
+                    <li>1 onion</li>
+                    <li>2 garlic cloves</li>
+                    <li>2 carrots</li>
+                    <li>1 celery stalk</li>
+                    <li>400 g peeled tomatoes</li>
+                    <li>2 bay leaves</li>
+                    <li>Extra virgin olive oil</li>
+                    <li>Salt and pepper to taste</li>
+                    <li>Chili pepper (optional)</li>
+                </ul>
+            
+
+            <h4>1. Bean preparation</h4>
+                <ol>
+                    <li>If using dried beans, soak them in cold water for at least 8 hours or overnight.</li>
+                    <li>Drain and rinse. Cook them in plenty of fresh water for about 1-1.5 hours, until tender.</li>
+                    <li>Drain and set aside. If using pre-cooked beans, rinse and drain.</li>
+                </ol>
+            
+
+            <h4>2. Rind preparation</h4>
+                <ol>
+                    <li>Boil the pork rinds in water for about 30 minutes to soften them.</li>
+                    <li>Drain, let cool and cut into strips.</li>
+                </ol>
+            
+
+            <h4>3. Vegetable preparation</h4>
+                <ol>
+                    <li>Wash the Swiss chard and cut into pieces.</li>
+                    <li>Finely chop the onion, garlic, carrots and celery.</li>
+                </ol>
+            
+
+            <h4>4. Cooking</h4>
+                <ol>
+                    <li>In a large casserole, heat a drizzle of extra virgin olive oil.</li>
+                    <li>Add the onion, garlic, carrots and celery, chopped. Sauté over medium heat until the vegetables are soft.</li>
+                    <li>Add the rind strips and brown for a few minutes.</li>
+                    <li>Add the peeled tomatoes, crushing them with a fork, and the bay leaves. Cook over low heat for about 30 minutes, stirring occasionally.</li>
+                    <li>Add the cooked beans and the Swiss chard. Continue cooking for another 15-20 minutes, until the chard is tender.</li>
+                    <li>Season with salt and pepper to taste. If desired, add a pinch of chili pepper for a little heat.</li>
+                </ol>
+            
+</div>
+
+<div id="content-es" class="lang-content">
+
+                <h3>📋 Ingredientes</h3>
+                <ul>
+                    <li>500 g de corteza de cerdo</li>
+                    <li>300 g de judías borlotti secas (o 2 latas de judías precocidas)</li>
+                    <li>1 manojo de acelgas</li>
+                    <li>1 cebolla</li>
+                    <li>2 dientes de ajo</li>
+                    <li>2 zanahorias</li>
+                    <li>1 tallo de apio</li>
+                    <li>400 g de tomates pelados</li>
+                    <li>2 hojas de laurel</li>
+                    <li>Aceite de oliva virgen extra</li>
+                    <li>Sal y pimienta q.b.</li>
+                    <li>Guindilla (opcional)</li>
+                </ul>
+            
+
+            <h4>1. Preparación de las judías</h4>
+                <ol>
+                    <li>Si usas judías secas, ponlas en remojo en agua fría durante al menos 8 horas o toda la noche.</li>
+                    <li>Escúrrelas y enjuágalas. Cuécelas en abundante agua fresca durante unas 1-1,5 horas, hasta que estén tiernas.</li>
+                    <li>Escúrrelas y resérvalas. Si usas judías precocidas, enjuágalas y escúrrelas.</li>
+                </ol>
+            
+
+            <h4>2. Preparación de las cortezas</h4>
+                <ol>
+                    <li>Hierve las cortezas de cerdo en agua durante unos 30 minutos para ablandarlas.</li>
+                    <li>Escúrrelas, déjalas templar y córtalas en tiras.</li>
+                </ol>
+            
+
+            <h4>3. Preparación de las verduras</h4>
+                <ol>
+                    <li>Lava las acelgas y córtalas en trozos.</li>
+                    <li>Pica finamente la cebolla, el ajo, las zanahorias y el apio.</li>
+                </ol>
+            
+
+            <h4>4. Cocción</h4>
+                <ol>
+                    <li>En una cazuela amplia, calienta un chorrito de aceite de oliva virgen extra.</li>
+                    <li>Añade la cebolla, el ajo, las zanahorias y el apio picados. Sofríe a fuego medio hasta que las verduras estén tiernas.</li>
+                    <li>Añade las tiras de corteza y dóralas durante unos minutos.</li>
+                    <li>Incorpora los tomates pelados, aplastándolos con un tenedor, y las hojas de laurel. Cocina a fuego lento durante unos 30 minutos, removiendo de vez en cuando.</li>
+                    <li>Añade las judías cocidas y las acelgas. Continúa cocinando otros 15-20 minutos, hasta que las acelgas estén tiernas.</li>
+                    <li>Corrige de sal y pimienta al gusto. Si lo deseas, añade un poco de guindilla para un toque picante.</li>
+                </ol>
+            
+</div>
+
+<div id="content-pt" class="lang-content">
+
+                <h3>📋 Ingredientes</h3>
+                <ul>
+                    <li>500 g de couro de porco</li>
+                    <li>300 g de feijão catarino seco (ou 2 latas de feijão cozido)</li>
+                    <li>1 molho de acelgas</li>
+                    <li>1 cebola</li>
+                    <li>2 dentes de alho</li>
+                    <li>2 cenouras</li>
+                    <li>1 talo de aipo</li>
+                    <li>400 g de tomates pelados</li>
+                    <li>2 folhas de louro</li>
+                    <li>Azeite extra virgem</li>
+                    <li>Sal e pimenta q.b.</li>
+                    <li>Malagueta (opcional)</li>
+                </ul>
+            
+
+            <h4>1. Preparação do feijão</h4>
+                <ol>
+                    <li>Se usar feijão seco, deixe-o de molho em água fria durante pelo menos 8 horas ou a noite toda.</li>
+                    <li>Escorra e enxágue. Cozinhe em bastante água fresca durante cerca de 1-1,5 horas, até ficar macio.</li>
+                    <li>Escorra e reserve. Se usar feijão cozido, enxágue e escorra.</li>
+                </ol>
+            
+
+            <h4>2. Preparação do couro</h4>
+                <ol>
+                    <li>Ferva o couro de porco em água durante cerca de 30 minutos para amolecer.</li>
+                    <li>Escorra, deixe arrefecer e corte em tiras.</li>
+                </ol>
+            
+
+            <h4>3. Preparação dos legumes</h4>
+                <ol>
+                    <li>Lave as acelgas e corte em pedaços.</li>
+                    <li>Pique finamente a cebola, o alho, as cenouras e o aipo.</li>
+                </ol>
+            
+
+            <h4>4. Cozedura</h4>
+                <ol>
+                    <li>Numa panela grande, aqueça um fio de azeite extra virgem.</li>
+                    <li>Adicione a cebola, o alho, as cenouras e o aipo picados. Refogue em lume médio até os legumes ficarem macios.</li>
+                    <li>Junte as tiras de couro e doure durante alguns minutos.</li>
+                    <li>Adicione os tomates pelados, esmagando-os com um garfo, e as folhas de louro. Cozinhe em lume brando durante cerca de 30 minutos, mexendo de vez em quando.</li>
+                    <li>Junte o feijão cozido e as acelgas. Continue a cozinhar por mais 15-20 minutos, até as acelgas ficarem macias.</li>
+                    <li>Rectifique o sal e a pimenta a gosto. Se desejar, adicione um pouco de malagueta para um toque picante.</li>
+                </ol>
+            
+</div>
+
+<div id="content-de" class="lang-content">
+
+                <h3>📋 Zutaten</h3>
+                <ul>
+                    <li>500 g Schweineschwarten</li>
+                    <li>300 g getrocknete Borlottibohnen (oder 2 Dosen vorgekochte Bohnen)</li>
+                    <li>1 Bund Mangold</li>
+                    <li>1 Zwiebel</li>
+                    <li>2 Knoblauchzehen</li>
+                    <li>2 Karotten</li>
+                    <li>1 Stangensellerie</li>
+                    <li>400 g geschälte Tomaten</li>
+                    <li>2 Lorbeerblätter</li>
+                    <li>Natives Olivenöl extra</li>
+                    <li>Salz und Pfeffer nach Geschmack</li>
+                    <li>Chilischote (optional)</li>
+                </ul>
+            
+
+            <h4>1. Bohnen vorbereiten</h4>
+                <ol>
+                    <li>Wenn Sie getrocknete Bohnen verwenden, lassen Sie sie mindestens 8 Stunden oder über Nacht in kaltem Wasser einweichen.</li>
+                    <li>Abtropfen und abspülen. Kochen Sie sie in reichlich frischem Wasser etwa 1-1,5 Stunden, bis sie weich sind.</li>
+                    <li>Abtropfen und beiseitestellen. Wenn Sie vorgekochte Bohnen verwenden, abspülen und abtropfen lassen.</li>
+                </ol>
+            
+
+            <h4>2. Schwarten vorbereiten</h4>
+                <ol>
+                    <li>Kochen Sie die Schweineschwarten etwa 30 Minuten in Wasser, um sie weich zu machen.</li>
+                    <li>Abtropfen, abkühlen lassen und in Streifen schneiden.</li>
+                </ol>
+            
+
+            <h4>3. Gemüse vorbereiten</h4>
+                <ol>
+                    <li>Waschen Sie den Mangold und schneiden Sie ihn in Stücke.</li>
+                    <li>Zwiebel, Knoblauch, Karotten und Sellerie fein hacken.</li>
+                </ol>
+            
+
+            <h4>4. Kochen</h4>
+                <ol>
+                    <li>Erhitzen Sie in einem großen Topf einen Schuss natives Olivenöl extra.</li>
+                    <li>Geben Sie die gehackte Zwiebel, den Knoblauch, die Karotten und den Sellerie hinzu. Bei mittlerer Hitze dünsten, bis das Gemüse weich ist.</li>
+                    <li>Fügen Sie die Schwartenstreifen hinzu und braten Sie sie ein paar Minuten an.</li>
+                    <li>Geben Sie die geschälten Tomaten hinzu, zerdrücken Sie sie mit einer Gabel, und die Lorbeerblätter. Bei schwacher Hitze etwa 30 Minuten kochen, dabei gelegentlich umrühren.</li>
+                    <li>Fügen Sie die gekochten Bohnen und den Mangold hinzu. Weitere 15-20 Minuten kochen, bis der Mangold weich ist.</li>
+                    <li>Mit Salz und Pfeffer abschmecken. Wenn gewünscht, eine Prise Chilischote für etwas Schärfe hinzufügen.</li>
+                </ol>
+            
+</div>
+
+<div id="content-el" class="lang-content">
+
+                <h3>📋 Συστατικά</h3>
+                <ul>
+                    <li>500 γρ δέρμα χοιρινού</li>
+                    <li>300 γρ ξερά φασόλια borlotti (ή 2 κονσέρβες προμαγειρεμένα φασόλια)</li>
+                    <li>1 μάτσο σέσκουλα</li>
+                    <li>1 κρεμμύδι</li>
+                    <li>2 σκελίδες σκόρδο</li>
+                    <li>2 καρότα</li>
+                    <li>1 κοτσάνι σέλινο</li>
+                    <li>400 γρ αποφλοιωμένες ντομάτες</li>
+                    <li>2 φύλλα δάφνης</li>
+                    <li>Έξτρα παρθένο ελαιόλαδο</li>
+                    <li>Αλάτι και πιπέρι κατά βούληση</li>
+                    <li>Τσίλι (προαιρετικά)</li>
+                </ul>
+            
+
+            <h4>1. Προετοιμασία φασολιών</h4>
+                <ol>
+                    <li>Αν χρησιμοποιείτε ξερά φασόλια, βάλτε τα σε νερό για τουλάχιστον 8 ώρες ή όλη τη νύχτα.</li>
+                    <li>Στραγγίστε και ξεπλύνετε. Βράστε τα σε άφθονο νερό για περίπου 1-1,5 ώρες, μέχρι να μαλακώσουν.</li>
+                    <li>Στραγγίστε και κρατήστε στην άκρη. Αν χρησιμοποιείτε προμαγειρεμένα φασόλια, ξεπλύνετε και στραγγίστε.</li>
+                </ol>
+            
+
+            <h4>2. Προετοιμασία δέρματος</h4>
+                <ol>
+                    <li>Βράστε το δέρμα χοιρινού σε νερό για περίπου 30 λεπτά για να μαλακώσει.</li>
+                    <li>Στραγγίστε, αφήστε να κρυώσει και κόψτε σε λωρίδες.</li>
+                </ol>
+            
+
+            <h4>3. Προετοιμασία λαχανικών</h4>
+                <ol>
+                    <li>Πλύνετε τα σέσκουλα και κόψτε τα σε κομμάτια.</li>
+                    <li>Ψιλοκόψτε το κρεμμύδι, το σκόρδο, τα καρότα και το σέλινο.</li>
+                </ol>
+            
+
+            <h4>4. Μαγείρεμα</h4>
+                <ol>
+                    <li>Σε μια μεγάλη κατσαρόλα, ζεστάνετε λίγο έξτρα παρθένο ελαιόλαδο.</li>
+                    <li>Προσθέστε το ψιλοκομμένο κρεμμύδι, το σκόρδο, τα καρότα και το σέλινο. Σοτάρετε σε μέτρια φωτιά μέχρι να μαλακώσουν τα λαχανικά.</li>
+                    <li>Προσθέστε τις λωρίδες δέρματος και σοτάρετε για μερικά λεπτά.</li>
+                    <li>Προσθέστε τις αποφλοιωμένες ντομάτες, πιέζοντάς τες με ένα πιρούνι, και τα φύλλα δάφνης. Μαγειρέψτε σε χαμηλή φωτιά για περίπου 30 λεπτά, ανακατεύοντας που και που.</li>
+                    <li>Προσθέστε τα βρασμένα φασόλια και τα σέσκουλα. Συνεχίστε το μαγείρεμα για άλλα 15-20 λεπτά, μέχρι να μαλακώσουν τα σέσκουλα.</li>
+                    <li>Αλατοπιπερώστε κατά βούληση. Αν θέλετε, προσθέστε λίγο τσίλι για λίγη πικάντικη γεύση.</li>
+                </ol>
+            
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

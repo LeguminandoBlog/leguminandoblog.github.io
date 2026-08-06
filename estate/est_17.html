@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paella di mare rivisitata con quinoa e fagioli cannellini | Leguminando</title>
+<meta name="description" content="Paella di mare rivisitata con quinoa e fagioli cannellini">
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%); color: #333; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 30px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.header h1 { margin: 0; font-size: 2.2em; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+.header p { margin: 10px 0 0 0; font-size: 1.1em; opacity: 0.9; }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border: 2px solid #D2691E; background: white; color: #8B4513; border-radius: 20px; cursor: pointer; font-size: 0.85em; transition: all 0.3s; }
+.lang-tab:hover { background: #faf8f5; }
+.lang-tab.active { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; }
+.lang-content { display: none; }
+.lang-content.active { display: block; }
+.content { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.recipe-image { width: 100%; max-width: 1008px; height: 576px; object-fit: contain; border-radius: 12px; margin: 0 auto 30px auto; display: block; box-shadow: 0 4px 15px rgba(0,0,0,0.1); background: #faf8f5; }
+.section { margin-bottom: 30px; }
+.section h2 { color: #8B4513; border-bottom: 3px solid #D2691E; padding-bottom: 10px; margin-bottom: 20px; font-size: 1.5em; }
+.section h3 { color: #D2691E; margin: 20px 0 10px 0; font-size: 1.2em; }
+.ingredients-list { background: #faf8f5; padding: 20px; border-radius: 10px; border-left: 5px solid #D2691E; }
+.ingredients-list ul { list-style: none; padding: 0; }
+.ingredients-list li { padding: 8px 0; border-bottom: 1px dashed #e0d5c8; }
+.ingredients-list li:last-child { border-bottom: none; }
+.ingredients-list li:before { content: "🫘 "; margin-right: 8px; }
+.steps-list { counter-reset: step; }
+.steps-list li { counter-increment: step; padding: 15px 0 15px 50px; position: relative; border-bottom: 1px solid #eee; }
+.steps-list li:last-child { border-bottom: none; }
+.steps-list li::before { content: counter(step); position: absolute; left: 0; top: 10px; background: #8B4513; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em; }
+.footer { text-align: center; margin-top: 40px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 20px 0; padding: 12px 24px; background: linear-gradient(135deg, #8B4513, #D2691E); color: white; text-decoration: none; border-radius: 25px; font-size: 1em; transition: transform 0.2s; }
+.back-link:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.fav-btn { cursor: pointer; font-size: 1.2em; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+@media print {
+    .lang-tabs { display: none !important; }
+    .lang-content { display: block !important; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>🫘 Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<div class="content">
+<div style="text-align: center; margin: -20px 0 20px 0;">
+<span style="display: inline-block; padding: 8px 16px; background: linear-gradient(135deg, #D2691E, #8B4513); color: white; border-radius: 20px; font-size: 0.9em;">
+📅 2026-07-30 — Estate ☀️</span>
+</div>
+<img src="est_17.jpg" alt="Paella di mare rivisitata con quinoa e fagioli cannellini" class="recipe-image">
+
+<div class="fav-bar" style="text-align:center;margin:5px 0;">
+<span class="fav-btn" data-path="estate/est_17.html" data-title="Paella di mare rivisitata con quinoa e fagioli cannellini" onclick="toggleFav(this.dataset.path, this.dataset.title)">
+🤍</span> Aggiungi ai preferiti
+</div>
+
+<div class="lang-tabs">
+<span class="lang-tab active" data-lang="it" onclick="switchLang('it')">🇮🇹 IT</span>
+<span class="lang-tab" data-lang="en" onclick="switchLang('en')">🇬🇧 EN</span>
+<span class="lang-tab" data-lang="es" onclick="switchLang('es')">🇪🇸 ES</span>
+<span class="lang-tab" data-lang="pt" onclick="switchLang('pt')">🇵🇹 PT</span>
+<span class="lang-tab" data-lang="de" onclick="switchLang('de')">🇩🇪 DE</span>
+<span class="lang-tab" data-lang="el" onclick="switchLang('el')">🇬🇷 EL</span>
+</div>
+
+<div id="lang-it" class="lang-content active">
+<div class="section">
+<h2>Paella di mare rivisitata con quinoa e fagioli cannellini</h2>
+<p>Una rivisitazione estiva della classica paella spagnola: quinoa croccante, frutti di mare freschi e fagioli cannellini cremosi, tutto in un unico piatto colorato e profumato.</p>
+
+<h3>Ingredienti</h3>
+<div class="ingredients-list">
+<ul>
+<li>300 g quinoa cruda</li>
+<li>400-500 g mix frutti di mare (cozze, vongole, gamberi, calamari)</li>
+<li>400 g fagioli cannellini cotti</li>
+<li>1 cipolla (tritata)</li>
+<li>1 peperone rosso (a cubetti)</li>
+<li>2 pomodori maturi (o 200 g pelati)</li>
+<li>2 spicchi d'aglio (tritati)</li>
+<li>800 ml brodo di pesce</li>
+<li>1 cucchiaino paprika dolce</li>
+<li>½ cucchiaino zafferano (o curcuma)</li>
+<li>3 cucchiai olio extravergine d'oliva</li>
+<li>Prezzemolo fresco, sale, pepe nero</li>
+<li>Succo di ½ limone (opzionale)</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparazione</h3>
+<ol class="steps-list">
+<li>Sciacqua la quinoa sotto acqua fredda corrente per eliminare la saponina, poi scola bene.</li>
+<li>Scalda l'olio in una paellera o padella larga e soffriggere la cipolla e l'aglio a fuoco medio per 3-4 minuti.</li>
+<li>Aggiungi il peperone, la paprika e lo zafferano. Mescola e cuoci per 2 minuti per far insaporire le spezie.</li>
+<li>Unisci la quinoa e tostala per 1-2 minuti, mescolando continuamente per evitare che bruci.</li>
+<li>Versa 700 ml di brodo caldo (tenendone da parte 100 ml), copri e cuoci a fuoco basso per 12-15 minuti.</li>
+<li>A metà cottura incorpora i pomodori a pezzetti e i fagioli cannellini scolati, mescolando delicatamente.</li>
+<li>Quando la quinoa è quasi pronta (ancora leggermente al dente), distribuisci i frutti di mare sulla superficie. Copri e cuoci 4-6 minuti; scarta le cozze o vongole rimaste chiuse.</li>
+<li>Aggiusta di sale e pepe, spruzza il succo di limone se desiderato, cospargi di prezzemolo tritato e lascia riposare 2 minuti prima di servire.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-en" class="lang-content">
+<div class="section">
+<h2>Seafood Paella Revisited with Quinoa and Cannellini Beans</h2>
+<p>A summer reimagining of the classic Spanish paella: crispy quinoa, fresh seafood and creamy cannellini beans, all in one colourful and aromatic dish.</p>
+
+<h3>Ingredients</h3>
+<div class="ingredients-list">
+<ul>
+<li>300 g raw quinoa</li>
+<li>400-500 g mixed seafood (mussels, clams, prawns, squid)</li>
+<li>400 g cooked cannellini beans</li>
+<li>1 onion (chopped)</li>
+<li>1 red pepper (diced)</li>
+<li>2 ripe tomatoes (or 200 g tinned)</li>
+<li>2 garlic cloves (minced)</li>
+<li>800 ml fish stock</li>
+<li>1 teaspoon sweet paprika</li>
+<li>½ teaspoon saffron (or turmeric)</li>
+<li>3 tablespoons extra virgin olive oil</li>
+<li>Fresh parsley, salt, black pepper</li>
+<li>Juice of ½ lemon (optional)</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparation</h3>
+<ol class="steps-list">
+<li>Rinse the quinoa under cold running water to remove saponins, then drain well.</li>
+<li>Heat the oil in a paella pan or wide skillet and sauté the onion and garlic over medium heat for 3-4 minutes.</li>
+<li>Add the pepper, paprika and saffron. Stir and cook for 2 minutes to bloom the spices.</li>
+<li>Add the quinoa and toast for 1-2 minutes, stirring constantly to prevent burning.</li>
+<li>Pour in 700 ml of hot stock (keeping 100 ml aside), cover and cook over low heat for 12-15 minutes.</li>
+<li>Halfway through cooking, fold in the diced tomatoes and drained cannellini beans, stirring gently.</li>
+<li>When the quinoa is almost done (still slightly al dente), distribute the seafood over the surface. Cover and cook 4-6 minutes; discard any mussels or clams that remain closed.</li>
+<li>Season with salt and pepper, squeeze lemon juice if desired, sprinkle with chopped parsley and let rest 2 minutes before serving.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-es" class="lang-content">
+<div class="section">
+<h2>Paella de Mar Revisitada con Quinoa y Judías Cannellini</h2>
+<p>Una reimaginación veraniega de la clásica paella española: quinoa crujiente, mariscos frescos y judías cannellini cremosas, todo en un plato único colorido y aromático.</p>
+
+<h3>Ingredientes</h3>
+<div class="ingredients-list">
+<ul>
+<li>300 g quinoa cruda</li>
+<li>400-500 g mix de mariscos (mejillones, almejas, gambas, calamares)</li>
+<li>400 g judías cannellini cocidas</li>
+<li>1 cebolla (picada)</li>
+<li>1 pimiento rojo (en cubos)</li>
+<li>2 tomates maduros (o 200 g en conserva)</li>
+<li>2 dientes de ajo (picados)</li>
+<li>800 ml caldo de pescado</li>
+<li>1 cucharadita de pimentón dulce</li>
+<li>½ cucharadita de azafrán (o cúrcuma)</li>
+<li>3 cucharadas de aceite de oliva virgen extra</li>
+<li>Perejil fresco, sal, pimienta negra</li>
+<li>Zumo de ½ limón (opcional)</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparación</h3>
+<ol class="steps-list">
+<li>Enjuaga la quinoa bajo agua fría corriente para eliminar la saponina, luego escurre bien.</li>
+<li>Calienta el aceite en una paellera o sartén ancha y sofríe la cebolla y el ajo a fuego medio durante 3-4 minutos.</li>
+<li>Añade el pimiento, el pimentón y el azafrán. Remueve y cuece 2 minutos para que suelten aroma las especias.</li>
+<li>Agrega la quinoa y tóstala 1-2 minutos, removiendo continuamente para que no se queme.</li>
+<li>Vierte 700 ml de caldo caliente (reservando 100 ml), tapa y cocina a fuego lento durante 12-15 minutos.</li>
+<li>A mitad de cocción incorpora los tomates en dados y las judías cannellini escurridas, removiendo con suavidad.</li>
+<li>Cuando la quinoa esté casi lista (aún ligeramente al dente), distribuye los mariscos sobre la superficie. Tapa y cuece 4-6 minutos; descarta los mejillones o almejas que queden cerrados.</li>
+<li>Corrige de sal y pimienta, exprime limón si lo deseas, espolvorea perejil picado y deja reposar 2 minutos antes de servir.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-pt" class="lang-content">
+<div class="section">
+<h2>Paella do Mar Revisitada com Quinoa e Feijão Cannellini</h2>
+<p>Uma reimaginação verã da clássica paella espanhola: quinoa crocante, mariscos frescos e feijão cannellini cremoso, tudo num prato único colorido e aromático.</p>
+
+<h3>Ingredientes</h3>
+<div class="ingredients-list">
+<ul>
+<li>300 g quinoa crua</li>
+<li>400-500 g mix de mariscos (mexilhões, amêijoas, camarões, lulas)</li>
+<li>400 g feijão cannellini cozido</li>
+<li>1 cebola (picada)</li>
+<li>1 pimento vermelho (em cubos)</li>
+<li>2 tomates maduros (ou 200 g enlatados)</li>
+<li>2 dentes de alho (picados)</li>
+<li>800 ml caldo de peixe</li>
+<li>1 colher de chá de paprika doce</li>
+<li>½ colher de chá de açafrão (ou cúrcuma)</li>
+<li>3 colheres de sopa de azeite extra virgem</li>
+<li>Salsa fresca, sal, pimenta preta</li>
+<li>Sumo de ½ limão (opcional)</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Preparação</h3>
+<ol class="steps-list">
+<li>Lava a quinoa sob água fria corrente para remover as saponinas, depois escoa bem.</li>
+<li>Aquece o azeite numa paellera ou frigideira larga e refoga a cebola e o alho em lume médio durante 3-4 minutos.</li>
+<li>Adiciona o pimento, a paprika e o açafrão. Mexe e cozinha 2 minutos para as especiarias libertarem aroma.</li>
+<li>Junta a quinoa e tosta 1-2 minutos, mexendo continuamente para não queimar.</li>
+<li>Deita 700 ml de caldo quente (reservando 100 ml), tapa e cozinha em lume brando durante 12-15 minutos.</li>
+<li>A meio da cozedura incorpora os tomates aos cubos e o feijão cannellini escorrido, mexendo delicadamente.</li>
+<li>Quando a quinoa estiver quase pronta (ainda ligeiramente al dente), distribui os mariscos sobre a superfície. Tapa e cozinha 4-6 minutos; deita fora os mexilhões ou amêijoas que permaneçam fechados.</li>
+<li>Corrige o sal e a pimenta, espreme limão se desejares, polvilha salsa picada e deixa repousar 2 minutos antes de servir.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-de" class="lang-content">
+<div class="section">
+<h2>Meeresfrüchte-Paella neu interpretiert mit Quinoa und Cannellini-Bohnen</h2>
+<p>Eine sommerliche Neuinterpretation der klassischen spanischen Paella: knusprige Quinoa, frische Meeresfrüchte und cremige Cannellini-Bohnen, alles in einem farbenfrohen und aromatischen Gericht.</p>
+
+<h3>Zutaten</h3>
+<div class="ingredients-list">
+<ul>
+<li>300 g rohe Quinoa</li>
+<li>400-500 g Meeresfrüchte-Mix (Muscheln, Venusmuscheln, Garnelen, Tintenfisch)</li>
+<li>400 g gekochte Cannellini-Bohnen</li>
+<li>1 Zwiebel (gehackt)</li>
+<li>1 rote Paprika (gewürfelt)</li>
+<li>2 reife Tomaten (oder 200 g Dosentomaten)</li>
+<li>2 Knoblauchzehen (gehackt)</li>
+<li>800 ml Fischbrühe</li>
+<li>1 Teelöffel süßes Paprikapulver</li>
+<li>½ Teelöffel Safran (oder Kurkuma)</li>
+<li>3 Esslöffel natives Olivenöl extra</li>
+<li>Frische Petersilie, Salz, schwarzer Pfeffer</li>
+<li>Saft von ½ Zitrone (optional)</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Zubereitung</h3>
+<ol class="steps-list">
+<li>Quinoa unter kaltem fließendem Wasser abspülen, um Saponine zu entfernen, dann gut abtropfen lassen.</li>
+<li>Öl in einer Paellapfanne oder breiten Pfanne erhitzen und Zwiebel sowie Knoblauch bei mittlerer Hitze 3-4 Minuten anschwitzen.</li>
+<li>Paprika, Paprikapulver und Safran zugeben. Umrühren und 2 Minuten garen, damit die Gewürze aromatisieren.</li>
+<li>Quinoa zugeben und 1-2 Minuten rösten, dabei ständig rühren, damit nichts anbrennt.</li>
+<li>700 ml heiße Brühe angießen (100 ml zurückbehalten), zudecken und bei niedriger Hitze 12-15 Minuten kochen lassen.</li>
+<li>Nach der Hälfte der Garzeit gewürfelte Tomaten und abgetropfte Cannellini-Bohnen unterheben, dabei vorsichtig umrühren.</li>
+<li>Wenn die Quinoa fast gar ist (noch leicht bissfest), Meeresfrüchte auf der Oberfläche verteilen. Zudecken und 4-6 Minuten garen; geschlossene Muscheln oder Venusmuscheln wegwerfen.</li>
+<li>Mit Salz und Pfeffer abschmecken, Zitronensaft nach Belieben zugeben, gehackte Petersilie streuen und 2 Minuten ruhen lassen, bevor serviert wird.</li>
+</ol>
+</div>
+</div>
+
+<div id="lang-el" class="lang-content">
+<div class="section">
+<h2>Παέγια Θαλασσινών με Κινόα και Φασόλια Cannellini</h2>
+<p>Μια καλοκαιρινή επανεκτίμηση της κλασικής ισπανικής παέγιας: τραγανή κινόα, φρέσκα θαλασσινά και κρεμώδη φασόλια cannellini, όλα σε ένα πολύχρωμο και αρωματικό πιάτο.</p>
+
+<h3>Συστατικά</h3>
+<div class="ingredients-list">
+<ul>
+<li>300 g ωμή κινόα</li>
+<li>400-500 g μείγμα θαλασσινών (μύδια, αχιβάδες, γαρίδες, καλαμάρια)</li>
+<li>400 g μαγειρεμένα φασόλια cannellini</li>
+<li>1 κρεμμύδι (ψιλοκομμένο)</li>
+<li>1 κόκκινη πιπεριά (σε κύβους)</li>
+<li>2 ώριμες ντομάτες (ή 200 g κονσέρβα)</li>
+<li>2 σκελίδες σκόρδο (ψιλοκομμένες)</li>
+<li>800 ml ζωμό ψαριού</li>
+<li>1 κουταλάκι του γλυκού γλυκιά πάπρικα</li>
+<li>½ κουταλάκι του γλυκού σαφράν (ή κουρκουμάς)</li>
+<li>3 κουταλιές της σούπας εξαιρετικό παρθένο ελαιόλαδο</li>
+<li>Φρέσκο μαϊντανό, αλάτι, μαύρο πιπέρι</li>
+<li>Χυμός από ½ λεμόνι (προαιρετικά)</li>
+</ul>
+</div>
+
+<h3>👨‍🍳 Εκτέλεση</h3>
+<ol class="steps-list">
+<li>Ξεπλύνετε την κινόα κάτω από τρεχούμενο κρύο νερό για να αφαιρέσετε τις σαπωνίνες, μετά στραγγίστε καλά.</li>
+<li>Ζεστάνετε το ελαιόλαδο σε μια παέγια ή σε ένα φαρδύ τηγάνι και σοτάρετε το κρεμμύδι και το σκόρδο σε μέτρια φωτιά για 3-4 λεπτά.</li>
+<li>Προσθέστε την πιπεριά, την πάπρικα και το σαφράν. Ανακατέψτε και μαγειρέψτε 2 λεπτά για να αρωματιστούν τα μπαχαρικά.</li>
+<li>Προσθέστε την κινόα και καβουρντίστε 1-2 λεπτά, ανακατεύοντας συνεχώς για να μην καεί.</li>
+<li>Περιχύστε 700 ml ζεστό ζωμό (κρατώντας 100 ml στην άκρη), καλύψτε και μαγειρέψτε σε χαμηλή φωτιά για 12-15 λεπτά.</li>
+<li>Στη μέση του μαγειρέματος ενσωματώστε τις ντομάτες σε κύβους και τα στραγγισμένα φασόλια cannellini, ανακατεύοντας απαλά.</li>
+<li>Όταν η κινόα είναι σχεδόν έτοιμη (ακόμα ελαφρώς al dente), κατανείμετε τα θαλασσινά στην επιφάνεια. Καλύψτε και μαγειρέψτε 4-6 λεπτά· πετάξτε όσα μύδια ή αχιβάδες παραμείνουν κλειστά.</li>
+<li>Διορθώστε αλάτι και πιπέρι, πιέστε λεμόνι αν θέλετε, πασπαλίστε ψιλοκομμένο μαϊντανό και αφήστε να ξεκουραστεί 2 λεπτά πριν σερβίρετε.</li>
+</ol>
+</div>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<a href="../index.html" class="back-link">← Torna alla Home</a>
+</div>
+
+<script>
+function switchLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(c => c.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+    document.querySelector('.lang-tab[data-lang="' + lang + '"]').classList.add('active');
+    localStorage.setItem('preferredLang', lang);
+}
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vellutata di Ceci al Rosmarino | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Vellutata di Ceci al Rosmarino">
+<meta property="og:title" content="Vellutata di Ceci al Rosmarino | Leguminando">
+<meta property="og:description" content="Vellutata di Ceci al Rosmarino">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="inverno/021.html" data-title="Vellutata di Ceci al Rosmarino" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="021.jpg" alt="Vellutata di Ceci al Rosmarino" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-12-24</p>
+<p><strong>Meta:</strong> 2 porzioni | Vegetariano</p>
+<p><strong>Descrizione:</strong> Vellutata cremosa di ceci profumata al rosmarino, ideale per le fredde serate invernali.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>150 g di ceci precotti (sgocciolati)</li>
+<li>1 cucchiaio di misto per soffritto a cubetti (carota, sedano, cipolla)</li>
+<li>1 rametto di rosmarino</li>
+<li>120-150 ml di brodo vegetale</li>
+<li>Olio extravergine di oliva</li>
+<li>Sale e pepe q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparazione del soffritto:</strong> In una pentola, scalda un filo di olio e rosola il misto per soffritto a fuoco medio fino a quando le verdure diventano morbide.</p>
+<p>2. <strong>Aggiunta dei ceci:</strong> Unisci i ceci precotti nella pentola con il soffritto e mescola bene per insaporire.</p>
+<p>3. <strong>Cottura con brodo:</strong> Versa il brodo vegetale nella pentola. Aggiungi il rametto di rosmarino per aromatizzare. Porta a ebollizione, poi abbassa la fiamma e cuoci a fuoco lento per circa 10-15 minuti.</p>
+<p>4. <strong>Frullatura:</strong> Togli il rametto di rosmarino. Utilizza un frullatore a immersione per ridurre il tutto a una crema liscia e omogenea. Se necessario, aggiungi un po' di brodo per raggiungere la consistenza desiderata.</p>
+<p>5. <strong>Condimento:</strong> Regola di sale e pepe a piacere. Aggiungi un filo di olio extravergine a crudo prima di servire.</p>
+<p>6. <strong>Servizio:</strong> Versa la vellutata calda nei piatti e guarnisci con un rametto di rosmarino fresco o un filo d'olio. Ottima accompagnata da crostini di pane o cubetti di polenta fritta.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-12-24</p>
+<p><strong>Meta:</strong> 2 servings | Vegetarian</p>
+<p><strong>Description:</strong> Creamy chickpea velouté scented with rosemary, ideal for cold winter evenings.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>150 g pre-cooked chickpeas (drained)</li>
+<li>1 tablespoon diced soffritto mix (carrot, celery, onion)</li>
+<li>1 sprig rosemary</li>
+<li>120-150 ml vegetable broth</li>
+<li>Extra virgin olive oil</li>
+<li>Salt and pepper to taste</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Prepare the sauté:</strong> In a pot, heat a drizzle of oil and sauté the diced soffritto over medium heat until vegetables are soft.</p>
+<p>2. <strong>Add chickpeas:</strong> Add pre-cooked chickpeas to the pot with the sauté and stir well to flavour.</p>
+<p>3. <strong>Cook with broth:</strong> Pour in the vegetable broth. Add the rosemary sprig for aroma. Bring to a boil, then lower the heat and simmer for about 10-15 minutes.</p>
+<p>4. <strong>Blend:</strong> Remove the rosemary sprig. Use an immersion blender to reduce everything to a smooth and homogeneous cream. If necessary, add a little more broth to reach the desired consistency.</p>
+<p>5. <strong>Season:</strong> Adjust salt and pepper to taste. Add a drizzle of raw extra virgin olive oil before serving.</p>
+<p>6. <strong>Serve:</strong> Serve the hot velouté in bowls and garnish with a fresh rosemary sprig or a drizzle of oil. Excellent accompanied by bread crostini or fried polenta cubes.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-12-24</p>
+<p><strong>Meta:</strong> 2 porciones | Vegetariano</p>
+<p><strong>Descripción:</strong> Crema suave de garbanzos perfumada con romero, ideal para las frías noches de invierno.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>150 g de garbanzos precocidos (escurridos)</li>
+<li>1 cucharada de mezcla para sofrito en dados (zanahoria, apio, cebolla)</li>
+<li>1 ramita de romero</li>
+<li>120-150 ml de caldo de verduras</li>
+<li>Aceite de oliva virgen extra</li>
+<li>Sal y pimienta c.s.</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparar el sofrito:</strong> En una olla, calienta un chorrito de aceite y sofríe la mezcla para sofrito a fuego medio hasta que las verduras estén tiernas.</p>
+<p>2. <strong>Añadir garbanzos:</strong> Incorpora los garbanzos precocidos en la olla con el sofrito y remueve bien para sazonar.</p>
+<p>3. <strong>Cocción con caldo:</strong> Vierte el caldo de verduras en la olla. Añade la ramita de romero para aromatizar. Lleva a ebullición, luego baja el fuego y cuece a fuego lento unos 10-15 minutos.</p>
+<p>4. <strong>Triturar:</strong> Retira la ramita de romero. Utiliza una batidora de inmersión para reducir todo a una crema suave y homogénea. Si es necesario, añade un poco más de caldo para obtener la consistencia deseada.</p>
+<p>5. <strong>Sazonar:</strong> Ajusta de sal y pimienta al gusto. Añade un chorrito de aceite de oliva virgen extra en crudo antes de servir.</p>
+<p>6. <strong>Servir:</strong> Sirve la crema caliente en boles y decora con una ramita de romero fresco o un chorrito de aceite. Excelente acompañada de crostini de pan o cubos de polenta frita.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-12-24</p>
+<p><strong>Meta:</strong> 2 porções | Vegetariano</p>
+<p><strong>Descrição:</strong> Creme suave de grão-de-bico perfumado com alecrim, ideal para as frias noites de inverno.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>150 g de grão-de-bico pré-cozido (escorrido)</li>
+<li>1 colher de sopa de mistura para refogado em cubos (cenoura, aipo, cebola)</li>
+<li>1 ramo de alecrim</li>
+<li>120-150 ml de caldo de legumes</li>
+<li>Azeite extra virgem</li>
+<li>Sal e pimenta q.b.</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparar o refogado:</strong> Numa panela, aquece um fio de azeite e refoga a mistura em lume médio até as legumes ficarem macias.</p>
+<p>2. <strong>Adicionar grão-de-bico:</strong> Junta o grão-de-bico pré-cozido na panela com o refogado e mexe bem para temperar.</p>
+<p>3. <strong>Cozedura com caldo:</strong> Deita o caldo de legumes na panela. Adiciona o ramo de alecrim para aromatizar. Leva a lume brando e cozinha cerca de 10-15 minutos.</p>
+<p>4. <strong>Triturar:</strong> Retira o ramo de alecrim. Utiliza uma varinha mágica para reduzir tudo a um creme suave e homogéneo. Se necessário, adiciona um pouco mais de caldo para atingir a consistência desejada.</p>
+<p>5. <strong>Temperar:</strong> Ajusta o sal e a pimenta a gosto. Adiciona um fio de azeite extra virgem a cru antes de servir.</p>
+<p>6. <strong>Servir:</strong> Serve o creme quente em tigelas e guarnece com um ramo de alecrim fresco ou um fio de azeite. Excelente acompanhado de crostinis de pão ou cubos de polenta frita.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-12-24</p>
+<p><strong>Meta:</strong> 2 Portionen | Vegetarisch</p>
+<p><strong>Beschreibung:</strong> Cremige Kichererbsen-Velouté mit Rosmarin-Duft, ideal für kalte Winterabende.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>150 g vorgekochte Kichererbsen (abgetropft)</li>
+<li>1 Esslöffel gewürfeltes Soffritto-Gemisch (Karotte, Sellerie, Zwiebel)</li>
+<li>1 Rosmarinzweig</li>
+<li>120-150 ml Gemüsebrühe</li>
+<li>Natives Olivenöl extra</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Soffritto zubereiten:</strong> In einem Topf einen Schuss Öl erhitzen und das gewürfelte Soffritto-Gemisch bei mittlerer Hitze anschwitzen, bis das Gemüse weich ist.</p>
+<p>2. <strong>Kichererbsen zugeben:</strong> Die vorgekochten Kichererbsen in den Topf zum Soffritto geben und gut umrühren, damit sie Geschmack annehmen.</p>
+<p>3. <strong>Mit Brühe köcheln:</strong> Die Gemüsebrühe in den Topf gießen. Den Rosmarinzweig zur Aromatisierung zugeben. Zum Kochen bringen, dann die Hitze reduzieren und etwa 10-15 Minuten köcheln lassen.</p>
+<p>4. <strong>Pürieren:</strong> Den Rosmarinzweig entfernen. Mit einem Stabmixer alles zu einer glatten und homogenen Creme pürieren. Bei Bedarf etwas mehr Brühe zugeben, bis die gewünschte Konsistenz erreicht ist.</p>
+<p>5. <strong>Würzen:</strong> Mit Salz und Pfeffer abschmecken. Vor dem Servieren einen Schuss natives Olivenöl extra darüber träufeln.</p>
+<p>6. <strong>Servieren:</strong> Die heiße Velouté in Schüsseln anrichten und mit einem frischen Rosmarinzweig oder einem Ölschuss garnieren. Hervorragend begleitet von Brot-Crostini oder frittierten Polenta-Würfeln.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-12-24</p>
+<p><strong>Meta:</strong> 2 μερίδες | Χορτοφαγικό</p>
+<p><strong>Περιγραφή:</strong> Κρεμώδης βελουτέ ρεβιθιών με άρωμα δεντρολίβανου, ιδανική για τα κρύα χειμωνιάτικα βράδια.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>150 γρ προμαγειρεμένα ρεβίθια (στραγγισμένα)</li>
+<li>1 κουταλιά της σούπας σοτέ λαχανικών σε κύβους (καρότο, σέλινο, κρεμμύδι)</li>
+<li>1 κλωνάρι δεντρολίβανου</li>
+<li>120-150 ml ζωμός λαχανικών</li>
+<li>Ελαιόλαδο</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία σοτέ:</strong> Σε μια κατσαρόλα, ζέστανε λίγο λάδι και σοτάρε το μείγμα λαχανικών σε μέτρια φωτιά μέχρι να μαλακώσουν.</p>
+<p>2. <strong>Προσθήκη ρεβιθιών:</strong> Πρόσθεσε τα προμαγειρεμένα ρεβίθια στην κατσαρόλα με το σοτέ και ανακάτεψε καλά για να πάρουν γεύση.</p>
+<p>3. <strong>Μαγείρεμα με ζωμό:</strong> Ρίξε τον ζωμό λαχανικών στην κατσαρόλα. Πρόσθεσε το κλωνάρι δεντρολίβανου για άρωμα. Βράσε, μετά χαμήλωσε τη φωτιά και σιγοβράσε για περίπου 10-15 λεπτά.</p>
+<p>4. <strong>Πολτοποίηση:</strong> Αφαίρεσε το κλωνάρι δεντρολίβανου. Χρησιμοποίησε ράβδο μπλέντερ για να πολτοποιήσεις τα πάντα σε μια κρεμώδη και ομοιογενή σούπα. Αν χρειάζεται, πρόσθεσε λίγο ακόμη ζωμό για να πάρεις την επιθυμητή υφή.</p>
+<p>5. <strong>Καλλιέργεια γεύσης:</strong> Αλατοπιπέρωσε κατά βούληση. Πρόσθεσε λίγο ελαιόλαδο πριν σερβίρεις.</p>
+<p>6. <strong>Σερβίρισμα:</strong> Σέρβιρε τη ζεστή βελουτέ σε μπολ και γαρνίρισε με φρέσκο δεντρολίβανο ή λίγο λάδι. Εξαιρετική συνοδεία με κρουτόν ψωμιού ή τηγανισμένα κυβάκια πολέντας.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

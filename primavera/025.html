@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insalata di Ceci con Tonno e Pane Croccante | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Insalata di Ceci con Tonno e Pane Croccante">
+<meta property="og:title" content="Insalata di Ceci con Tonno e Pane Croccante | Leguminando">
+<meta property="og:description" content="Insalata di Ceci con Tonno e Pane Croccante">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="primavera/025.html" data-title="Insalata di Ceci con Tonno e Pane Croccante" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="025.jpg" alt="Insalata di Ceci con Tonno e Pane Croccante" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+
+<p><strong>Data:</strong> 2025-05-31</p>
+<p><strong>Meta:</strong> 4 porzioni | Pesce</p>
+<p><strong>Descrizione:</strong> Fresca insalata di ceci con tonno, aglio, cipolla rossa e crostini di pane tostato, perfetta come antipasto o piatto unico estivo.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>400 g di ceci lessati (in scatola o freschi)</li>
+<li>250 g di filetti di tonno in olio d'oliva (sgocciolati)</li>
+<li>2 spicchi d'aglio, tagliati a dadini</li>
+<li>1 cipolla rossa, affettata finemente</li>
+<li>150 g di pane (meglio se tipo ciabatta o baguette), tagliato a cubetti</li>
+<li>Olio extravergine d'oliva q.b.</li>
+<li>Pepe nero macinato fresco q.b.</li>
+<li>Sale q.b.</li>
+<li>Prezzemolo fresco tritato (opzionale, per guarnire)</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparare i ceci:</strong> Se usi ceci in scatola, scolali e sciacquali bene sotto acqua corrente. Se usi ceci freschi, lessali in acqua salata fino a quando sono teneri e lasciali raffreddare.</p>
+<p>2. <strong>Preparare il pane:</strong> In una padella antiaderente, scalda un filo d'olio d'oliva e aggiungi i cubetti di pane. Fai tostare a fuoco medio finché non sono dorati e croccanti. Metti da parte.</p>
+<p>3. <strong>Mescolare gli ingredienti:</strong> In una ciotola grande, unisci i ceci, i filetti di tonno sbriciolati, i dadini di aglio e le fettine di cipolla rossa.</p>
+<p>4. <strong>Condire l'insalata:</strong> Aggiungi un generoso filo d'olio d'oliva e una spolverata di pepe nero. Mescola bene per amalgamare tutti gli ingredienti. Assaggia e aggiusta di sale se necessario.</p>
+<p>5. <strong>Servire:</strong> Prima di servire, aggiungi i cubetti di pane croccante all'insalata e mescola delicatamente per non rompere il tonno. Se vuoi, guarnisci con prezzemolo fresco tritato.</p>
+<p>6. <strong>Presentazione:</strong> Servi l'insalata in piccole ciotole o su un piatto da portata, accompagnata da un ulteriore filo d'olio d'oliva e pepe a piacere.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+
+<p><strong>Date:</strong> 2025-05-31</p>
+<p><strong>Meta:</strong> 4 servings | Fish</p>
+<p><strong>Description:</strong> Fresh chickpea salad with tuna, garlic, red onion and toasted bread croutons, perfect as an appetiser or summer main dish.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>400 g boiled chickpeas (canned or fresh)</li>
+<li>250 g tuna fillets in olive oil (drained)</li>
+<li>2 garlic cloves, diced</li>
+<li>1 red onion, finely sliced</li>
+<li>150 g bread (preferably ciabatta or baguette), cut into cubes</li>
+<li>Extra virgin olive oil to taste</li>
+<li>Freshly ground black pepper to taste</li>
+<li>Salt to taste</li>
+<li>Chopped fresh parsley (optional, for garnish)</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Prepare chickpeas:</strong> If using canned chickpeas, drain and rinse well under running water. If using fresh chickpeas, boil in salted water until tender and let cool.</p>
+<p>2. <strong>Prepare bread:</strong> In a non-stick pan, heat a drizzle of olive oil and add the bread cubes. Toast over medium heat until golden and crispy. Set aside.</p>
+<p>3. <strong>Mix ingredients:</strong> In a large bowl, combine chickpeas, crumbled tuna fillets, diced garlic and red onion slices.</p>
+<p>4. <strong>Dress the salad:</strong> Add a generous drizzle of olive oil and a sprinkling of black pepper. Mix well to combine all ingredients. Taste and adjust salt if necessary.</p>
+<p>5. <strong>Serve:</strong> Just before serving, add the crispy bread cubes to the salad and mix gently so as not to break up the tuna. If desired, garnish with chopped fresh parsley.</p>
+<p>6. <strong>Presentation:</strong> Serve the salad in small bowls or on a serving plate, accompanied by an extra drizzle of olive oil and pepper to taste.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+
+<p><strong>Fecha:</strong> 2025-05-31</p>
+<p><strong>Meta:</strong> 4 porciones | Pescado</p>
+<p><strong>Descripción:</strong> Fresca ensalada de garbanzos con atún, ajo, cebolla roja y picatostes de pan tostado, perfecta como aperitivo o plato único de verano.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>400 g de garbanzos cocidos (enlatados o frescos)</li>
+<li>250 g de filetes de atún en aceite de oliva (escurridos)</li>
+<li>2 dientes de ajo, cortados en dados</li>
+<li>1 cebolla roja, en rodajas finas</li>
+<li>150 g de pan (preferiblemente ciabatta o baguette), cortado en cubos</li>
+<li>Aceite de oliva virgen extra c.s.</li>
+<li>Pimienta negra recién molida c.s.</li>
+<li>Sal c.s.</li>
+<li>Perejil fresco picado (opcional, para decorar)</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Preparar garbanzos:</strong> Si usas garbanzos enlatados, escúrrelos y enjuágalos bien bajo el grifo. Si usas garbanzos frescos, cuécelos en agua con sal hasta que estén tiernos y déjalos enfriar.</p>
+<p>2. <strong>Preparar pan:</strong> En una sartén antiadherente, calienta un chorrito de aceite de oliva y añade los cubos de pan. Tuesta a fuego medio hasta dorar y hacerlos crujientes. Reserva.</p>
+<p>3. <strong>Mezclar ingredientes:</strong> En un bol grande, mezcla los garbanzos, los filetes de atún desmenuzados, los dados de ajo y las rodajas de cebolla roja.</p>
+<p>4. <strong>Aliñar ensalada:</strong> Añade un buen chorrito de aceite de oliva y una pizca de pimienta negra. Remueve bien para mezclar todos los ingredientes. Prueba y ajusta de sal si es necesario.</p>
+<p>5. <strong>Servir:</strong> Justo antes de servir, añade los picatostes crujientes a la ensalada y remueve suavemente para no desmenuzar el atún. Si deseas, decora con perejil fresco picado.</p>
+<p>6. <strong>Presentación:</strong> Sirve la ensalada en boles pequeños o en un plato de presentación, acompañada de un chorrito extra de aceite de oliva y pimienta al gusto.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+
+<p><strong>Data:</strong> 2025-05-31</p>
+<p><strong>Meta:</strong> 4 porções | Peixe</p>
+<p><strong>Descrição:</strong> Fresca salada de grão-de-bico com atum, alho, cebola roxa e croûtons de pão tostado, perfeita como aperitivo ou prato único de verão.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>400 g de grão-de-bico cozido (enlatado ou fresco)</li>
+<li>250 g de filetes de atum em azeite (escorrido)</li>
+<li>2 dentes de alho, cortados em cubos</li>
+<li>1 cebola roxa, fatiada finamente</li>
+<li>150 g de pão (de preferência ciabatta ou baguette), cortado em cubos</li>
+<li>Azeite extra virgem q.b.</li>
+<li>Pimenta preta moída na altura q.b.</li>
+<li>Sal q.b.</li>
+<li>Salsa fresca picada (opcional, para guarnecer)</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Preparar grão-de-bico:</strong> Se usar grão-de-bico enlatado, escorre e enxágua bem sob água corrente. Se usar grão-de-bico fresco, cozinha em água com sal até ficar macio e deixa arrefecer.</p>
+<p>2. <strong>Preparar pão:</strong> Numa frigideira antiaderente, aquece um fio de azeite e adiciona os cubos de pão. Tosta em lume médio até ficarem dourados e crocantes. Reserva.</p>
+<p>3. <strong>Misturar ingredientes:</strong> Numa tigela grande, junta o grão-de-bico, os filetes de atum desfeitos, os cubos de alho e as fatias de cebola roxa.</p>
+<p>4. <strong>Temperar salada:</strong> Adiciona um generoso fio de azeite e uma pitada de pimenta preta. Mistura bem para combinar todos os ingredientes. Prova e ajusta o sal se necessário.</p>
+<p>5. <strong>Servir:</strong> Momentos antes de servir, adiciona os cubos de pão crocante à salada e mistura suavemente para não desfazer o atum. Se desejares, guarnece com salsa fresca picada.</p>
+<p>6. <strong>Apresentação:</strong> Serve a salada em pequenas tigelas ou num prato de servir, acompanhada de um fio extra de azeite e pimenta a gosto.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+
+<p><strong>Datum:</strong> 2025-05-31</p>
+<p><strong>Meta:</strong> 4 Portionen | Fisch</p>
+<p><strong>Beschreibung:</strong> Frischer Kichererbsensalat mit Thunfisch, Knoblauch, roter Zwiebel und gerösteten Brotcroutons, perfekt als Vorspeise oder Sommerhauptgericht.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>400 g gekochte Kichererbsen (Dosen oder frisch)</li>
+<li>250 g Thunfischfilets in Olivenöl (abgetropft)</li>
+<li>2 Knoblauchzehen, gewürfelt</li>
+<li>1 rote Zwiebel, in feine Scheiben</li>
+<li>150 g Brot (am besten Ciabatta oder Baguette), in Würfel geschnitten</li>
+<li>Natives Olivenöl extra nach Geschmack</li>
+<li>Frisch gemahlener schwarzer Pfeffer nach Geschmack</li>
+<li>Salz nach Geschmack</li>
+<li>Gehackte frische Petersilie (optional, zum Garnieren)</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Kichererbsen vorbereiten:</strong> Bei Dosenkichererbsen abtropfen und gut unter fließendem Wasser abspülen. Bei frischen Kichererbsen in Salzwasser weich kochen und abkühlen lassen.</p>
+<p>2. <strong>Brot vorbereiten:</strong> In einer beschichteten Pfanne einen Schuss Olivenöl erhitzen und die Brotwürfel hinzufügen. Bei mittlerer Hitze rösten, bis sie goldbraun und knusprig sind. Beiseitestellen.</p>
+<p>3. <strong>Zutaten mischen:</strong> In einer großen Schüssel Kichererbsen, zerbröselte Thunfischfilets, Knoblauchwürfel und Zwiebelscheiben vermischen.</p>
+<p>4. <strong>Salat würzen:</strong> Einen großzügigen Schuss Olivenöl und eine Prise schwarzen Pfeffer hinzufügen. Gut vermischen, damit alle Zutaten sich verbinden. Abschmecken und bei Bedarf nachsalzen.</p>
+<p>5. <strong>Servieren:</strong> Kurz vor dem Servieren die knusprigen Brotwürfel zum Salat geben und vorsichtig umrühren, damit der Thunfisch nicht zerbröselt. Optional mit gehackter frischer Petersilie garnieren.</p>
+<p>6. <strong>Präsentation:</strong> Den Salat in kleinen Schüsseln oder auf einer Servierplatte anrichten, mit einem extra Schuss Olivenöl und Pfeffer nach Geschmack servieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+
+<p><strong>Ημερομηνία:</strong> 2025-05-31</p>
+<p><strong>Meta:</strong> 4 μερίδες | Ψάρι</p>
+<p><strong>Περιγραφή:</strong> Δροσερή σαλάτα με ρεβίθια, τόνο, σκόρδο, κόκκινο κρεμμύδι και τραγανά ψητά κρουτόν, ιδανική ως ορεκτικό ή κυρίως πιάτο του καλοκαιριού.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>400 γρ βρασμένα ρεβίθια (κονσέρβα ή φρέσκα)</li>
+<li>250 γρ φιλέτα τόνου σε ελαιόλαδο (στραγγισμένα)</li>
+<li>2 σκελίδες σκόρδο, κομμένες σε κύβους</li>
+<li>1 κόκκινο κρεμμύδι, κομμένο σε λεπτές φέτες</li>
+<li>150 γρ ψωμί (κατά προτίμηση ciabatta ή baguette), κομμένο σε κύβους</li>
+<li>Ελαιόλαδο κατά βούληση</li>
+<li>Φρέσκο τριμμένο μαύρο πιπέρι κατά βούληση</li>
+<li>Αλάτι κατά βούληση</li>
+<li>Ψιλοκομμένος φρέσκος μαϊντανός (προαιρετικά, για γαρνίρισμα)</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Προετοιμασία ρεβιθιών:</strong> Αν χρησιμοποιείς ρεβίθια κονσέρβας, στράγγισέ τα και ξέπλυνέ τα καλά κάτω από τρεχούμενο νερό. Αν χρησιμοποιείς φρέσκα, βράσέ τα σε αλατισμένο νερό μέχρι να μαλακώσουν και άφησέ τα να κρυώσουν.</p>
+<p>2. <strong>Προετοιμασία ψωμιού:</strong> Σε ένα αντικολλητικό τηγάνι, ζέστανε λίγο ελαιόλαδο και πρόσθεσε τους κύβους ψωμιού. Ψήσε σε μέτρια φωτιά μέχρι να ροδίσουν και να γίνουν τραγανοί. Άφησέ τα στην άκρη.</p>
+<p>3. <strong>Ανάμειξη υλικών:</strong> Σε ένα μεγάλο μπολ, ανακάτεψε τα ρεβίθια, τα θρυμματισμένα φιλέτα τόνου, τους κύβους σκόρδου και τις φέτες κόκκινου κρεμμυδιού.</p>
+<p>4. <strong>Ντρέσινγκ σαλάτας:</strong> Πρόσθεσε γενναιόδωρο ελαιόλαδο και μια πρέζα μαύρου πιπεριού. Ανακάτεψε καλά για να ενωθούν όλα τα υλικά. Δοκίμασε και αλάτισε αν χρειάζεται.</p>
+<p>5. <strong>Σερβίρισμα:</strong> Λίγο πριν σερβίρεις, πρόσθεσε τους τραγανούς κύβους ψωμιού στη σαλάτα και ανακάτεψε απαλά για να μην διαλυθεί ο τόνος. Αν θέλεις, γαρνίρισε με ψιλοκομμένο φρέσκο μαϊντανό.</p>
+<p>6. <strong>Παρουσίαση:</strong> Σέρβιρε τη σαλάτα σε μικρά μπολ ή σε πιατέλα, συνοδευόμενη από έξτρα ελαιόλαδο και πιπέρι κατά βούληση.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+<div data-legumi="ceci" style="display:none;"></div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

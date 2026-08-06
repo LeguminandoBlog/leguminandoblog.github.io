@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tacos Vegetali con Fagioli Rossi, Porcini e Peperoni | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Tacos Vegetali con Fagioli Rossi, Porcini e Peperoni">
+<meta property="og:title" content="Tacos Vegetali con Fagioli Rossi, Porcini e Peperoni | Leguminando">
+<meta property="og:description" content="Tacos Vegetali con Fagioli Rossi, Porcini e Peperoni">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="estate/025.html" data-title="Tacos Vegetali con Fagioli Rossi, Porcini e Peperoni" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="025.jpg" alt="Tacos Vegetali con Fagioli Rossi, Porcini e Peperoni" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-08-24</p>
+<p><strong>Meta:</strong> 4 porzioni | Vegetariano</p>
+<p><strong>Descrizione:</strong> Tacos saporiti e vegetali con fagioli rossi, funghi porcini e peperoni gialli. Facili, veloci e gustosi.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>8 tortillas di mais o grano</li>
+<li>200 g fagioli rossi cotti (scolati)</li>
+<li>150 g funghi porcini freschi, affettati sottili</li>
+<li>1 peperone giallo, affettato sottilmente</li>
+<li>1 spicchio d'aglio tritato</li>
+<li>1 cucchiaio olio extravergine d'oliva</li>
+<li>1/2 cucchiaino paprica affumicata</li>
+<li>Sale, pepe, succo di lime</li>
+<li>Coriandolo o prezzemolo fresco per guarnire</li>
+<li>Salsa piccante o yogurt vegetale (facoltativo)</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Porcini:</strong> Scalda l'olio in padella, rosola l'aglio, poi aggiungi i porcini e cuoci 4-5 minuti finché rilasciano liquido e si dorano. Togli e metti da parte.</p>
+<p>2. <strong>Peperoni e fagioli:</strong> Nella stessa padella salta il peperone 3-4 minuti finché è tenero ma ancora croccante; aggiungi i fagioli, paprica, sale e pepe e scalda 2 minuti.</p>
+<p>3. <strong>Assemblaggio:</strong> Rimetti i porcini, spruzza con succo di lime e mescola. Scalda le tortillas, farciscile con il composto, guarnisci con coriandolo e salsa a piacere. Servi subito.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-08-24</p>
+<p><strong>Meta:</strong> 4 servings | Vegetarian</p>
+<p><strong>Description:</strong> Flavourful vegetarian tacos with red beans, porcini mushrooms and yellow peppers. Easy, quick and tasty.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>8 corn or wheat tortillas</li>
+<li>200 g cooked red beans (drained)</li>
+<li>150 g fresh porcini mushrooms, thinly sliced</li>
+<li>1 yellow pepper, thinly sliced</li>
+<li>1 garlic clove minced</li>
+<li>1 tablespoon extra virgin olive oil</li>
+<li>1/2 teaspoon smoked paprika</li>
+<li>Salt, pepper, lime juice</li>
+<li>Coriander or fresh parsley for garnish</li>
+<li>Hot sauce or plant-based yogurt (optional)</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Mushrooms:</strong> Heat oil in a pan, sauté garlic, then add mushrooms and cook 4-5 minutes until they release liquid and brown. Remove and set aside.</p>
+<p>2. <strong>Peppers and beans:</strong> In the same pan, toss pepper 3-4 minutes until tender but still crunchy; add beans, paprika, salt and pepper and heat 2 minutes.</p>
+<p>3. <strong>Assembly:</strong> Return mushrooms, drizzle with lime juice and mix. Warm tortillas, fill with the mixture, garnish with coriander and sauce to taste. Serve immediately.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-08-24</p>
+<p><strong>Meta:</strong> 4 porciones | Vegetariano</p>
+<p><strong>Descripción:</strong> Tacos sabrosos y vegetarianos con alubias rojas, setas porcini y pimientos amarillos. Fáciles, rápidos y deliciosos.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>8 tortillas de maíz o trigo</li>
+<li>200 g alubias rojas cocidas (escurridas)</li>
+<li>150 g setas porcini frescas, en láminas finas</li>
+<li>1 pimiento amarillo, en láminas finas</li>
+<li>1 diente de ajo picado</li>
+<li>1 cucharada aceite de oliva virgen extra</li>
+<li>1/2 cucharadita pimentón ahumado</li>
+<li>Sal, pimienta, zumo de lima</li>
+<li>Cilantro o perejil fresco para decorar</li>
+<li>Salsa picante o yogur vegetal (opcional)</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Setas:</strong> Calienta el aceite en sartén, sofríe el ajo, luego añade las setas y cocina 4-5 minutos hasta que suelten líquido y se doren. Retira y reserva.</p>
+<p>2. <strong>Pimientos y alubias:</strong> En la misma sartén, saltea el pimiento 3-4 minutos hasta que esté tierno pero crujiente; añade las alubias, pimentón, sal y pimienta y calienta 2 minutos.</p>
+<p>3. <strong>Montaje:</strong> Vuelve a poner las setas, riega con zumo de lima y mezcla. Calienta las tortillas, rellénalas con la mezcla, decora con cilantro y salsa al gusto. Sirve inmediatamente.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-08-24</p>
+<p><strong>Meta:</strong> 4 porções | Vegetariano</p>
+<p><strong>Descrição:</strong> Tacos saborosos e vegetarianos com feijão vermelho, cogumelos porcini e pimentos amarelos. Fáceis, rápidos e saborosos.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>8 tortillas de milho ou trigo</li>
+<li>200 g feijão vermelho cozido (escorrido)</li>
+<li>150 g cogumelos porcini frescos, em fatias finas</li>
+<li>1 pimento amarelo, em fatias finas</li>
+<li>1 dente de alho picado</li>
+<li>1 colher de sopa azeite extra virgem</li>
+<li>1/2 colher de chá páprica defumada</li>
+<li>Sal, pimenta, sumo de lima</li>
+<li>Coentros ou salsa fresca para guarnecer</li>
+<li>Molho picante ou iogurte vegetal (opcional)</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Cogumelos:</strong> Aquece o azeite numa frigideira, refoga o alho, depois adiciona os cogumelos e cozinha 4-5 minutos até libertarem líquido e dourarem. Retira e reserva.</p>
+<p>2. <strong>Pimentos e feijão:</strong> Na mesma frigideira, salta o pimento 3-4 minutos até ficar macio mas crocante; adiciona o feijão, páprica, sal e pimenta e aquece 2 minutos.</p>
+<p>3. <strong>Montagem:</strong> Volta a colocar os cogumelos, rega com sumo de lima e mistura. Aquece as tortillas, recheia com a mistura, guarnece com coentros e molho a gosto. Serve imediatamente.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-08-24</p>
+<p><strong>Meta:</strong> 4 Portionen | Vegetarisch</p>
+<p><strong>Beschreibung:</strong> Würzige vegetarische Tacos mit roten Bohnen, Steinpilzen und gelben Paprika. Einfach, schnell und lecker.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>8 Mais- oder Weizentortillas</li>
+<li>200 g gekochte rote Bohnen (abgetropft)</li>
+<li>150 g frische Steinpilze, dünn geschnitten</li>
+<li>1 gelbe Paprika, dünn geschnitten</li>
+<li>1 Knoblauchzehe gehackt</li>
+<li>1 Esslöffel Olivenöl extra vergine</li>
+<li>1/2 Teelöffel geräuchertes Paprikapulver</li>
+<li>Salz, Pfeffer, Limettensaft</li>
+<li>Koriander oder frische Petersilie zum Garnieren</li>
+<li>Scharfe Soße oder pflanzlicher Joghurt (optional)</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Pilze:</strong> Öl in einer Pfanne erhitzen, Knoblauch anschwitzen, dann Pilze zugeben und 4-5 Minuten braten, bis sie Flüssigkeit abgeben und bräunen. Herausnehmen und beiseitestellen.</p>
+<p>2. <strong>Paprika und Bohnen:</strong> In derselben Pfanne Paprika 3-4 Minuten anbraten, bis weich aber noch knackig; Bohnen, Paprika, Salz und Pfeffer zugeben und 2 Minuten erhitzen.</p>
+<p>3. <strong>Zusammensetzen:</strong> Pilze zurückgeben, mit Limettensaft beträufeln und mischen. Tortillas erwärmen, mit der Mischung füllen, mit Koriander und Soße garnieren. Sofort servieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-08-24</p>
+<p><strong>Meta:</strong> 4 μερίδες | Χορτοφαγικό</p>
+<p><strong>Περιγραφή:</strong> Γευστικά χορτοφαγικά tacos με κόκκινα φασόλια, μανιτάρια porcini και κίτρινες πιπεριές. Εύκολα, γρήγορα και νόστιμα.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>8 τορτίγιες καλαμποκιού ή σιταριού</li>
+<li>200 γρ βρασμένα κόκκινα φασόλια (στραγγισμένα)</li>
+<li>150 γρ φρέσκα μανιτάρια porcini, σε λεπτές φέτες</li>
+<li>1 κίτρινη πιπεριά, σε λεπτές φέτες</li>
+<li>1 σκελίδα σκόρδο ψιλοκομμένη</li>
+<li>1 κουταλιά της σούπας ελαιόλαδο</li>
+<li>1/2 κουταλάκι του γλυκού καπνιστή πάπρικα</li>
+<li>Αλάτι, πιπέρι, χυμός lime</li>
+<li>Κόλιανδρος ή φρέσκος μαϊντανός για γαρνίρισμα</li>
+<li>Καυτερή σάλτσα ή φυτικό γιαούρτι (προαιρετικά)</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Μανιτάρια:</strong> Ζέστανε το λάδι σε τηγάνι, σοτάρε το σκόρδο, μετά πρόσθεσε τα μανιτάρια και μαγείρεψέ τα 4-5 λεπτά μέχρι να βγάλουν υγρά και να ροδίσουν. Βγάλε τα και άφησέ τα στην άκρη.</p>
+<p>2. <strong>Πιπεριές και φασόλια:</strong> Στο ίδιο τηγάνι, σόταρε την πιπεριά 3-4 λεπτά μέχρι να μαλακώσει αλλά να μείνει τραγανή· πρόσθεσε τα φασόλια, πάπρικα, αλάτι και πιπέρι και ζέστανέ τα 2 λεπτά.</p>
+<p>3. <strong>Συναρμολόγηση:</strong> Επέστρεψε τα μανιτάρια, πασπάλισε με χυμό lime και ανακάτεψε. Ζέστανε τις τορτίγιες, γέμισέ τες με το μείγμα, γαρνίρισε με κόλιανδρο και σάλτσα κατά βούληση. Σέρβιρε αμέσως.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quinoa con Zucca, Porri e Melograno | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Quinoa con Zucca, Porri e Melograno">
+<meta property="og:title" content="Quinoa con Zucca, Porri e Melograno | Leguminando">
+<meta property="og:description" content="Quinoa con Zucca, Porri e Melograno">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="autunno/014.html" data-title="Quinoa con Zucca, Porri e Melograno" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="014.jpg" alt="Quinoa con Zucca, Porri e Melograno" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-10-29</p>
+<p><strong>Meta:</strong> 4 porzioni | Vegetariano</p>
+<p><strong>Descrizione:</strong> Insalata autunnale nutriente con quinoa, zucca arrostita, porri saltati e chicchi di melograno.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>200 g di quinoa, sciacquata</li>
+<li>400 ml di acqua o brodo vegetale</li>
+<li>400 g di zucca a cubetti</li>
+<li>100 g di fagioli precotti</li>
+<li>2 porri (solo parte bianca), affettati</li>
+<li>1 melograno (o 120 g di chicchi)</li>
+<li>30-40 g di pinoli o noci tostate</li>
+<li>3 cucchiai di olio extravergine d'oliva</li>
+<li>Succo di 1/2 limone</li>
+<li>1 cucchiaino di paprika dolce (opzionale)</li>
+<li>Sale, pepe e prezzemolo tritato (opzionale)</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Cuoci la quinoa in acqua o brodo salato per 12-15 minuti, sgrana con una forchetta e tieni coperta.</p>
+<p>2. Preriscalda il forno a 200 °C. Condiscila zucca con 1-2 cucchiai d'olio, paprika e sale. Cuoci per 20-30 minuti fino a doratura.</p>
+<p>3. Salta i porri in 1 cucchiaio d'olio per 6-8 minuti finché non sono morbidi. Salare.</p>
+<p>4. Tosta i pinoli in padella a secco per 2-3 minuti.</p>
+<p>5. Mescola quinoa tiepida, zucca, porri, fagioli, chicchi di melograno e pinoli. Condiscicon succo di limone, olio, sale e pepe.</p>
+<p>6. Guarnisci con prezzemolo e servi tiepida o a temperatura ambiente.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-10-29</p>
+<p><strong>Meta:</strong> 4 servings | Vegetarian</p>
+<p><strong>Description:</strong> Nutritious autumn salad with quinoa, roasted pumpkin, sautéed leeks and pomegranate seeds.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>200 g quinoa, rinsed</li>
+<li>400 ml water or vegetable broth</li>
+<li>400 g pumpkin, cubed</li>
+<li>100 g precooked beans</li>
+<li>2 leeks (white part only), sliced</li>
+<li>1 pomegranate (or 120 g seeds)</li>
+<li>30-40 g pine nuts or toasted walnuts</li>
+<li>3 tablespoons extra virgin olive oil</li>
+<li>Juice of 1/2 lemon</li>
+<li>1 teaspoon sweet paprika (optional)</li>
+<li>Salt, pepper and chopped parsley (optional)</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. Cook quinoa in salted water or broth for 12-15 minutes, fluff with a fork and keep covered.</p>
+<p>2. Preheat oven to 200 °C. Season pumpkin with 1-2 tablespoons oil, paprika and salt. Roast for 20-30 minutes until golden.</p>
+<p>3. Sauté leeks in 1 tablespoon oil for 6-8 minutes until soft. Season with salt.</p>
+<p>4. Toast pine nuts in a dry pan for 2-3 minutes.</p>
+<p>5. Mix warm quinoa, pumpkin, leeks, beans, pomegranate seeds and pine nuts. Dress with lemon juice, oil, salt and pepper.</p>
+<p>6. Garnish with parsley and serve warm or at room temperature.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-10-29</p>
+<p><strong>Meta:</strong> 4 porciones | Vegetariano</p>
+<p><strong>Descripción:</strong> Ensalada otoñal nutritiva con quinoa, calabaza asada, puerros salteados y granada.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>200 g de quinoa, enjuagada</li>
+<li>400 ml de agua o caldo de verduras</li>
+<li>400 g de calabaza en cubos</li>
+<li>100 g de alubias cocidas</li>
+<li>2 puerros (solo parte blanca), en rodajas</li>
+<li>1 granada (o 120 g de granos)</li>
+<li>30-40 g de piñones o nueces tostadas</li>
+<li>3 cucharadas de aceite de oliva virgen extra</li>
+<li>Zumo de 1/2 limón</li>
+<li>1 cucharadita de pimentón dulce (opcional)</li>
+<li>Sal, pimienta y perejil picado (opcional)</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. Cocina la quinoa en agua o caldo salado 12-15 minutos, desgrana con un tenedor y mantén tapada.</p>
+<p>2. Precalienta el horno a 200 °C. Aliña la calabaza con 1-2 cucharadas de aceite, pimentón y sal. Asa 20-30 minutos hasta dorar.</p>
+<p>3. Saltea los puerros en 1 cucharada de aceite 6-8 minutos hasta que estén tiernos. Sazona.</p>
+<p>4. Tuesta los piñones en sartén seca 2-3 minutos.</p>
+<p>5. Mezcla quinoa tibia, calabaza, puerros, alubias, granos de granada y piñones. Aliña con zumo de limón, aceite, sal y pimienta.</p>
+<p>6. Decora con perejil y sirve tibia o a temperatura ambiente.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-10-29</p>
+<p><strong>Meta:</strong> 4 porções | Vegetariano</p>
+<p><strong>Descrição:</strong> Salada outonal nutritiva com quinoa, abóbora assada, alho-frances salteado e romã.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>200 g de quinoa, enxaguada</li>
+<li>400 ml de água ou caldo de legumes</li>
+<li>400 g de abóbora em cubos</li>
+<li>100 g de feijão cozido</li>
+<li>2 talos de alho-francês (só a parte branca), fatiados</li>
+<li>1 romã (ou 120 g de grãos)</li>
+<li>30-40 g de pinhões ou nozes tostadas</li>
+<li>3 colheres de sopa de azeite extra virgem</li>
+<li>Sumo de 1/2 limão</li>
+<li>1 colher de chá de pimentão doce (opcional)</li>
+<li>Sal, pimenta e salsa picada (opcional)</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Cozinhe a quinoa em água ou caldo salgado 12-15 minutos, desfie com um garfo e mantenha tapada.</p>
+<p>2. Pré-aqueça o forno a 200 °C. Tempere a abóbora com 1-2 colheres de sopa de azeite, pimentão e sal. Asse 20-30 minutos até dourar.</p>
+<p>3. Salteie o alho-francês em 1 colher de sopa de azeite 6-8 minutos até ficar macio. Tempere.</p>
+<p>4. Toste os pinhões numa frigideira seca 2-3 minutos.</p>
+<p>5. Misture quinoa morna, abóbora, alho-francês, feijão, grãos de romã e pinhões. Tempere com sumo de limão, azeite, sal e pimenta.</p>
+<p>6. Guarneça com salsa e sirva morna ou à temperatura ambiente.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-10-29</p>
+<p><strong>Meta:</strong> 4 Portionen | Vegetarisch</p>
+<p><strong>Beschreibung:</strong> Nährstoffreicher Herbstsalat mit Quinoa, geröstetem Kürbis, geschmortem Lauch und Granatapfelkernen.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>200 g Quinoa, gespült</li>
+<li>400 ml Wasser oder Gemüsebrühe</li>
+<li>400 g Kürbis, gewürfelt</li>
+<li>100 g gekochte Bohnen</li>
+<li>2 Lauchstangen (nur weißer Teil), in Scheiben</li>
+<li>1 Granatapfel (oder 120 g Kerne)</li>
+<li>30-40 g Pinienkerne oder geröstete Walnüsse</li>
+<li>3 Esslöffel extra natives Olivenöl</li>
+<li>Saft von 1/2 Zitrone</li>
+<li>1 Teelöffel süßes Paprikapulver (optional)</li>
+<li>Salz, Pfeffer und gehackte Petersilie (optional)</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. Quinoa in Salzwasser oder Brühe 12-15 Minuten kochen, mit einer Gabel auflockern und abgedeckt warmhalten.</p>
+<p>2. Ofen auf 200 °C vorheizen. Kürbis mit 1-2 Esslöffeln Öl, Paprika und Salz würzen. 20-30 Minuten rösten, bis goldbraun.</p>
+<p>3. Lauch in 1 Esslöffel Öl 6-8 Minuten schmoren, bis weich. Mit Salz würzen.</p>
+<p>4. Pinienkerne in einer trockenen Pfanne 2-3 Minuten rösten.</p>
+<p>5. Warme Quinoa, Kürbis, Lauch, Bohnen, Granatapfelkerne und Pinienkerne mischen. Mit Zitronensaft, Öl, Salz und Pfeffer abschmecken.</p>
+<p>6. Mit Petersilie garnieren und warm oder bei Zimmertemperatur servieren.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-10-29</p>
+<p><strong>Meta:</strong> 4 μερίδες | Χορτοφαγικό</p>
+<p><strong>Περιγραφή:</strong> Θρεπτική φθινοπωρινή σαλάτα με κινόα, ψημένη κολοκύθα, σοταρισμένο πράσο και ρόδι.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>200 γρ κινόα, ξεπλυμένη</li>
+<li>400 ml νερό ή ζωμός λαχανικών</li>
+<li>400 γρ κολοκύθα σε κυβάκια</li>
+<li>100 γρ μαγειρεμένα φασόλια</li>
+<li>2 πράσα (μόνο το λευκό μέρος), σε φέτες</li>
+<li>1 ρόδι (ή 120 γρ σπόροι)</li>
+<li>30-40 γρ κουκουνάρια ή καρύδια ψημένα</li>
+<li>3 κουταλιές της σούπας ελαιόλαδο</li>
+<li>Χυμός 1/2 λεμονιού</li>
+<li>1 κουταλάκι του γλυκού γλυκιά πάπρικα (προαιρετικά)</li>
+<li>Αλάτι, πιπέρι και ψιλοκομμένος μαϊντανός (προαιρετικά)</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. Βράστε την κινόα σε αλατισμένο νερό ή ζωμό για 12-15 λεπτά, ξεφουσκώστε με πιρούνι και κρατήστε σκεπασμένη.</p>
+<p>2. Προθερμάνετε το φούρνο στους 200 °C. Αλατοπιπερώστε την κολοκύθα με 1-2 κουταλιές ελαιόλαδο, πάπρικα και αλάτι. Ψήστε για 20-30 λεπτά μέχρι να ροδίσει.</p>
+<p>3. Σοτάρετε τα πράσα σε 1 κουταλιά ελαιόλαδο για 6-8 λεπτά μέχρι να μαλακώσουν. Αλατώστε.</p>
+<p>4. Καβουρντίστε τα κουκουνάρια σε στεγνό τηγάνι για 2-3 λεπτά.</p>
+<p>5. Ανακατέψτε ζεστή κινόα, κολοκύθα, πράσο, φασόλια, σπόρους ροδιού και κουκουνάρια. Αλατοπιπερώστε με χυμό λεμονιού, ελαιόλαδο, αλάτι και πιπέρι.</p>
+<p>6. Γαρνίρετε με μαϊντανό και σερβίρετε ζεστό ή σε θερμοκρασία δωματίου.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

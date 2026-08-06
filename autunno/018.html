@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vellutata di Zucca con Lenticchie Rosse e Cavolo Nero | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Vellutata di Zucca con Lenticchie Rosse e Cavolo Nero">
+<meta property="og:title" content="Vellutata di Zucca con Lenticchie Rosse e Cavolo Nero | Leguminando">
+<meta property="og:description" content="Vellutata di Zucca con Lenticchie Rosse e Cavolo Nero">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+</div>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="autunno/018.html" data-title="Vellutata di Zucca con Lenticchie Rosse e Cavolo Nero" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="018.jpg" alt="Vellutata di Zucca con Lenticchie Rosse e Cavolo Nero" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-10-19</p>
+<p><strong>Meta:</strong> 4 porzioni | Vegetariano</p>
+<p><strong>Descrizione:</strong> Vellutata autunnale cremosa con zucca, lenticchie rosse e cavolo nero, servita con crostini.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>500 g di zucca pulita e tagliata a cubetti</li>
+<li>2 porri medi, affettati</li>
+<li>3 carote, pelate e tagliate a rondelle</li>
+<li>150 g di lenticchie rosse</li>
+<li>1 mazzetto di cavolo nero, tagliato a strisce (rimuovi le coste dure)</li>
+<li>1,5 L di brodo vegetale</li>
+<li>2 cucchiai di olio extravergine d'oliva</li>
+<li>1 spicchio d'aglio, tritato</li>
+<li>Sale e pepe q.b.</li>
+<li>1 rametto di rosmarino (opzionale)</li>
+<li>Crostini di pane per servire</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Scalda l'olio in una pentola capiente, aggiungi l'aglio tritato e i porri, soffriggi a fuoco medio finché i porri sono teneri.</p>
+<p>2. Aggiungi le carote e la zucca, mescolando per qualche minuto.</p>
+<p>3. Unisci le lenticchie e il brodo vegetale. Porta ad ebollizione, quindi abbassa la fiamma e cuoci a fuoco lento per circa 20 minuti, finché le verdure e le lenticchie sono morbide.</p>
+<p>4. Aggiungi il cavolo nero e il rosmarino (se usato), cuoci per altri 5-10 minuti fino a che il cavolo è tenero.</p>
+<p>5. Rimuovi il rametto di rosmarino e frulla la zuppa con un frullatore a immersione fino a ottenere una consistenza liscia. Aggiusta di sale e pepe.</p>
+<p>6. Servi la vellutata calda con crostini di pane e un filo d'olio a crudo.</p>
+<h3>Varianti e consigli</h3>
+<ul>
+<li>Aggiungi una patata per una consistenza ancora più cremosa.</li>
+<li>Per un sapore più ricco, aggiungi un cucchiaio di panna fresca prima di servire.</li>
+</ul>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-10-19</p>
+<p><strong>Meta:</strong> 4 servings | Vegetarian</p>
+<p><strong>Description:</strong> Creamy autumn velouté with pumpkin, red lentils and kale, served with croutons.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>500 g pumpkin, peeled and cubed</li>
+<li>2 medium leeks, sliced</li>
+<li>3 carrots, peeled and sliced</li>
+<li>150 g red lentils</li>
+<li>1 bunch kale, cut into strips (remove tough stems)</li>
+<li>1.5 L vegetable broth</li>
+<li>2 tablespoons extra virgin olive oil</li>
+<li>1 garlic clove, minced</li>
+<li>Salt and pepper to taste</li>
+<li>1 sprig rosemary (optional)</li>
+<li>Bread croutons for serving</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. Heat oil in a large pot, add minced garlic and leeks, sauté over medium heat until leeks are tender.</p>
+<p>2. Add carrots and pumpkin, stirring for a few minutes.</p>
+<p>3. Add lentils and vegetable broth. Bring to a boil, then reduce heat and simmer for about 20 minutes until vegetables and lentils are soft.</p>
+<p>4. Add kale and rosemary (if using), cook for another 5-10 minutes until kale is tender.</p>
+<p>5. Remove rosemary sprig and blend soup with an immersion blender until smooth. Season with salt and pepper.</p>
+<p>6. Serve velouté hot with bread croutons and a drizzle of raw olive oil.</p>
+<h3>Variations and tips</h3>
+<ul>
+<li>Add a potato for an even creamier consistency.</li>
+<li>For a richer flavour, add a tablespoon of fresh cream before serving.</li>
+</ul>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-10-19</p>
+<p><strong>Meta:</strong> 4 porciones | Vegetariano</p>
+<p><strong>Descripción:</strong> Crema otoñal con calabaza, lentejas rojas y kale, servida con crutones.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>500 g de calabaza limpia y cortada en cubos</li>
+<li>2 puerros medianos, en rodajas</li>
+<li>3 zanahorias, peladas y en rodajas</li>
+<li>150 g de lentejas rojas</li>
+<li>1 manojo de kale, cortado en tiras (quita los tallos duros)</li>
+<li>1,5 L de caldo de verduras</li>
+<li>2 cucharadas de aceite de oliva virgen extra</li>
+<li>1 diente de ajo, picado</li>
+<li>Sal y pimienta c.s.</li>
+<li>1 ramita de romero (opcional)</li>
+<li>Crutones de pan para servir</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. Calienta el aceite en una olla grande, añade el ajo picado y los puerros, sofríe a fuego medio hasta que estén tiernos.</p>
+<p>2. Agrega las zanahorias y la calabaza, removiendo unos minutos.</p>
+<p>3. Incorpora las lentejas y el caldo. Lleva a ebullición, luego baja el fuego y cuece a fuego lento unos 20 minutos hasta que las verduras y lentejas estén tiernas.</p>
+<p>4. Añade el kale y el romero (si usas), cuece otros 5-10 minutos hasta que el kale esté tierno.</p>
+<p>5. Retira la ramita de romero y tritura la sopa con una batidora de inmersión hasta obtener una textura lisa. Sazona con sal y pimienta.</p>
+<p>6. Sirve la crema caliente con crutones y un chorrito de aceite de oliva crudo.</p>
+<h3>Variantes y consejos</h3>
+<ul>
+<li>Añade una patata para una textura aún más cremosa.</li>
+<li>Para un sabor más intenso, agrega una cucharada de nata fresca antes de servir.</li>
+</ul>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-10-19</p>
+<p><strong>Meta:</strong> 4 porções | Vegetariano</p>
+<p><strong>Descrição:</strong> Creme de outono com abóbora, lentilhas vermelhas e couve-crespa, servido com croûtons.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>500 g de abóbora limpa e cortada em cubos</li>
+<li>2 alhos-franceses médios, fatiados</li>
+<li>3 cenouras, descascadas e em rodelas</li>
+<li>150 g de lentilhas vermelhas</li>
+<li>1 molho de couve-crespa, cortado em tiras (retira os talos duros)</li>
+<li>1,5 L de caldo de legumes</li>
+<li>2 colheres de sopa de azeite extra virgem</li>
+<li>1 dente de alho, picado</li>
+<li>Sal e pimenta q.b.</li>
+<li>1 ramo de alecrim (opcional)</li>
+<li>Croûtons de pão para servir</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. Aquece o azeite numa panela grande, junta o alho picado e os alhos-franceses, refoga em lume médio até ficarem macios.</p>
+<p>2. Adiciona as cenouras e a abóbora, mexendo uns minutos.</p>
+<p>3. Junta as lentilhas e o caldo. Leva a lume brando e cozinha cerca de 20 minutos até as legumes e lentilhas estarem macias.</p>
+<p>4. Adiciona a couve-crespa e o alecrim (se usar), cozinha mais 5-10 minutos até a couve ficar macia.</p>
+<p>5. Retira o ramo de alecrim e reduz a sopa com uma varinha mágica até ficar lisa. Tempere com sal e pimenta.</p>
+<p>6. Serve o creme quente com croûtons e um fio de azeite cru.</p>
+<h3>Variantes e dicas</h3>
+<ul>
+<li>Adiciona uma batata para uma textura ainda mais cremosa.</li>
+<li>Para um sabor mais rico, acrescenta uma colher de natas frescas antes de servir.</li>
+</ul>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-10-19</p>
+<p><strong>Meta:</strong> 4 Portionen | Vegetarisch</p>
+<p><strong>Beschreibung:</strong> Cremige Herbstsuppe mit Kürbis, roten Linsen und Grünkohl, serviert mit Croutons.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>500 g Kürbis, geschält und gewürfelt</li>
+<li>2 mittlere Lauchstangen, in Scheiben</li>
+<li>3 Karotten, geschält und in Scheiben</li>
+<li>150 g rote Linsen</li>
+<li>1 Bund Grünkohl, in Streifen (harte Stiele entfernen)</li>
+<li>1,5 L Gemüsebrühe</li>
+<li>2 Esslöffel natives Olivenöl extra</li>
+<li>1 Knoblauchzehe, gehackt</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>1 Rosmarinzweig (optional)</li>
+<li>Brotcroutons zum Servieren</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. Öl in einem großen Topf erhitzen, gehackten Knoblauch und Lauch zugeben, bei mittlerer Hitze anschwitzen, bis Lauch weich ist.</p>
+<p>2. Karotten und Kürbis zugeben, einige Minuten umrühren.</p>
+<p>3. Linsen und Gemüsebrühe zugeben. Zum Kochen bringen, dann Hitze reduzieren und etwa 20 Minuten köcheln, bis Gemüse und Linsen weich sind.</p>
+<p>4. Grünkohl und Rosmarin (falls verwendet) zugeben, weitere 5-10 Minuten garen, bis Grünkohl zart ist.</p>
+<p>5. Rosmarinzweig entfernen und Suppe mit Stabmixer pürieren, bis sie glatt ist. Mit Salz und Pfeffer abschmecken.</p>
+<p>6. Suppe heiß mit Croutons und einem Spritzer Olivenöl servieren.</p>
+<h3>Variationen und Tipps</h3>
+<ul>
+<li>Für eine noch cremigere Konsistenz eine Kartoffel zugeben.</li>
+<li>Für einen reicheren Geschmack vor dem Servieren einen Esslöffel Sahne zugeben.</li>
+</ul>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-10-19</p>
+<p><strong>Meta:</strong> 4 μερίδες | Χορτοφαγικό</p>
+<p><strong>Περιγραφή:</strong> Κρεμώδης φθινοπωρινή σούπα με κολοκύθα, κόκκινες φακές και kale, σερβιρισμένη με κρουτόν.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>500 γρ κολοκύθα, καθαρισμένη και κομμένη σε κύβους</li>
+<li>2 μεσαία πράσα, κομμένα σε φέτες</li>
+<li>3 καρότα, καθαρισμένα και κομμένα σε ροδέλες</li>
+<li>150 γρ κόκκινες φακές</li>
+<li>1 μάτσο kale, κομμένο σε λωρίδες (αφαιρέστε τα σκληρά κοτσάνια)</li>
+<li>1,5 Λ ζωμός λαχανικών</li>
+<li>2 κουταλιές της σούπας ελαιόλαδο</li>
+<li>1 σκελίδα σκόρδο, ψιλοκομμένη</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>1 κλωνάρι δεντρολίβανο (προαιρετικά)</li>
+<li>Κρουτόν ψωμιού για σερβίρισμα</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. Ζεστάνετε το λάδι σε μια μεγάλη κατσαρόλα, προσθέστε το σκόρδο και τα πράσα, σοτάρετε σε μέτρια φωτιά μέχρι να μαλακώσουν.</p>
+<p>2. Προσθέστε τα καρότα και την κολοκύθα, ανακατεύοντας για λίγα λεπτά.</p>
+<p>3. Προσθέστε τις φακές και τον ζωμό. Φέρτε σε βρασμό, μετά χαμηλώστε τη φωτιά και σιγοβράστε περίπου 20 λεπτά μέχρι να μαλακώσουν τα λαχανικά και οι φακές.</p>
+<p>4. Προσθέστε το kale και το δεντρολίβανο (αν χρησιμοποιείτε), μαγειρέψτε άλλα 5-10 λεπτά μέχρι το kale να μαλακώσει.</p>
+<p>5. Αφαιρέστε το κλωνάρι δεντρολίβανου και λιώστε τη σούπα με ράβδο μπλέντερ μέχρι να γίνει λεία. Αλατοπιπερώστε.</p>
+<p>6. Σερβίρετε τη σούπα ζεστή με κρουτόν και ένα νήμα ελαιολάδου.</p>
+<h3>Παραλλαγές και συμβουλές</h3>
+<ul>
+<li>Προσθέστε μια πατάτα για ακόμα πιο κρεμώδη υφή.</li>
+<li>Για πιο πλούσια γεύση, προσθέστε μια κουταλιά φρέσκιας κρέμας πριν το σερβίρισμα.</li>
+</ul>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

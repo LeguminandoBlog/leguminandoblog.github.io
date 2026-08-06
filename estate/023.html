@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sgombro con Piselli, Verza e Zenzero al Limone | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.content { background: white; padding: 30px; border-radius: 10px; }
+.content h1 { color: #8B4513; font-size: 1.8em; margin-bottom: 15px; }
+.content h3 { color: #D2691E; font-size: 1.3em; margin: 15px 0 10px; }
+.content p { margin: 12px 0; line-height: 1.6; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; text-decoration: none; display: inline-block; }
+.lang-tab:hover { background: #D2691E; color: white; }
+
+input[type="radio"] { display: none; }
+
+.lang-content { display: none; }
+#lang-it:checked ~ #content-it,
+#lang-en:checked ~ #content-en,
+#lang-es:checked ~ #content-es,
+#lang-pt:checked ~ #content-pt,
+#lang-de:checked ~ #content-de,
+#lang-el:checked ~ #content-el { display: block; }
+
+#lang-it:checked ~ .lang-tabs label[for="lang-it"],
+#lang-en:checked ~ .lang-tabs label[for="lang-en"],
+#lang-es:checked ~ .lang-tabs label[for="lang-es"],
+#lang-pt:checked ~ .lang-tabs label[for="lang-pt"],
+#lang-de:checked ~ .lang-tabs label[for="lang-de"],
+#lang-el:checked ~ .lang-tabs label[for="lang-el"] { background: #8B4513; color: white; }
+
+body:not(:has(input:checked)) #content-it { display: block; }
+body:not(:has(input:checked)) label[for="lang-it"] { background: #8B4513; color: white; }
+
+.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
+.fav-bar { text-align: center; margin: 5px 0; }
+
+@media print {
+    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
+    .stats, .back-link, .badge { display: none !important; }
+    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
+    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
+    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+}
+
+</style>
+<meta name="description" content="Sgombro con Piselli, Verza e Zenzero al Limone">
+<meta property="og:title" content="Sgombro con Piselli, Verza e Zenzero al Limone | Leguminando">
+<meta property="og:description" content="Sgombro con Piselli, Verza e Zenzero al Limone">
+
+</head>
+<body>
+<div class="header">
+<h1>Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="estate/023.html" data-title="Sgombro con Piselli, Verza e Zenzero al Limone" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="023.jpg" alt="Sgombro con Piselli, Verza e Zenzero al Limone" class="recipe-image">
+
+<div class="content">
+
+<input type="radio" name="lang" id="lang-it" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-pt">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-el">
+
+<div class="lang-tabs">
+    <label for="lang-it" class="lang-tab">IT</label>
+    <label for="lang-en" class="lang-tab">EN</label>
+    <label for="lang-es" class="lang-tab">ES</label>
+    <label for="lang-pt" class="lang-tab">PT</label>
+    <label for="lang-de" class="lang-tab">DE</label>
+    <label for="lang-el" class="lang-tab">EL</label>
+</div>
+
+<div id="content-it" class="lang-content">
+<p><strong>Data:</strong> 2025-08-30</p>
+<p><strong>Meta:</strong> 4 porzioni | Pesce</p>
+<p><strong>Descrizione:</strong> Filetti di sgombro con piselli, verza e zenzero al limone, un piatto leggero e profumato.</p>
+<h3>Ingredienti</h3>
+<ul>
+<li>4 filetti di sgombro freschi</li>
+<li>200 g piselli freschi o surgelati</li>
+<li>200 g verza tagliata a strisce sottili</li>
+<li>1 limone (succo e scorza)</li>
+<li>2 cm zenzero fresco grattugiato</li>
+<li>2 cucchiai olio extravergine d'oliva</li>
+<li>Sale e pepe q.b.</li>
+<li>Prezzemolo tritato per guarnire</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Verdure:</strong> In una padella capiente, scalda 1 cucchiaio d'olio e aggiungi i piselli. Cuoci a fuoco medio circa 5 minuti. Aggiungi la verza e continua la cottura per altri 5-7 minuti, mescolando di tanto in tanto, finché sono tenere ma croccanti. Aggiusta di sale e pepe.</p>
+<p>2. <strong>Sgombro:</strong> In un'altra padella, scalda l'olio rimanente. Adagia i filetti con la pelle verso il basso. Cuoci 3-4 minuti per lato finché sono dorati e cotti. Aggiungi succo di limone, scorza e zenzero grattugiato, lasciando insaporire 1-2 minuti.</p>
+<p>3. <strong>Impiattamento:</strong> Disponi un letto di piselli e verza su ogni piatto. Adagia sopra un filetto di sgombro. Irrora con la salsa di limone e zenzero. Decora con prezzemolo tritato e una fettina di limone.</p>
+<p><strong>Suggerimenti:</strong> Se preferisci un sapore più intenso, aggiungi una spolverata di peperoncino alle verdure. Servi con riso integrale per un pasto completo.</p>
+</div>
+
+<div id="content-en" class="lang-content">
+<p><strong>Date:</strong> 2025-08-30</p>
+<p><strong>Meta:</strong> 4 servings | Fish</p>
+<p><strong>Description:</strong> Mackerel fillets with peas, savoy cabbage and ginger in lemon, a light and fragrant dish.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>4 fresh mackerel fillets</li>
+<li>200 g fresh or frozen peas</li>
+<li>200 g savoy cabbage cut into thin strips</li>
+<li>1 lemon (juice and zest)</li>
+<li>2 cm fresh ginger grated</li>
+<li>2 tablespoons extra virgin olive oil</li>
+<li>Salt and pepper to taste</li>
+<li>Chopped parsley for garnish</li>
+</ul>
+<h3>Procedure</h3>
+<p>1. <strong>Vegetables:</strong> In a large pan, heat 1 tablespoon oil and add peas. Cook over medium heat about 5 minutes. Add savoy cabbage and continue cooking for another 5-7 minutes, stirring occasionally, until tender but still crunchy. Season with salt and pepper.</p>
+<p>2. <strong>Mackerel:</strong> In another pan, heat remaining oil. Place fillets skin-side down. Cook 3-4 minutes per side until golden and cooked through. Add lemon juice, zest and grated ginger, letting it flavour for 1-2 minutes.</p>
+<p>3. <strong>Plating:</strong> Arrange a bed of peas and cabbage on each plate. Lay a mackerel fillet on top. Drizzle with lemon and ginger sauce. Garnish with chopped parsley and a lemon slice.</p>
+<p><strong>Tips:</strong> If you prefer a more intense flavour, add a sprinkle of chilli powder to the vegetables. Serve with brown rice for a complete meal.</p>
+</div>
+
+<div id="content-es" class="lang-content">
+<p><strong>Fecha:</strong> 2025-08-30</p>
+<p><strong>Meta:</strong> 4 porciones | Pescado</p>
+<p><strong>Descripción:</strong> Filetes de caballa con guisantes, col rizada y jengibre al limón, un plato ligero y aromático.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>4 filetes de caballa frescos</li>
+<li>200 g guisantes frescos o congelados</li>
+<li>200 g col rizada cortada en tiras finas</li>
+<li>1 limón (zumo y ralladura)</li>
+<li>2 cm jengibre fresco rallado</li>
+<li>2 cucharadas aceite de oliva virgen extra</li>
+<li>Sal y pimienta c.s.</li>
+<li>Perejil picado para decorar</li>
+</ul>
+<h3>Procedimiento</h3>
+<p>1. <strong>Verduras:</strong> En una sartén grande, calienta 1 cucharada de aceite y añade los guisantes. Cocina a fuego medio unos 5 minutos. Añade la col rizada y sigue cocinando otros 5-7 minutos, removiendo de vez en cuando, hasta que estén tiernas pero crujientes. Salpimienta.</p>
+<p>2. <strong>Caballa:</strong> En otra sartén, calienta el aceite restante. Coloca los filetes con la piel hacia abajo. Cocina 3-4 minutos por lado hasta dorar y cocinar bien. Añade zumo de limón, ralladura y jengibre rallado, dejando aromatizar 1-2 minutos.</p>
+<p>3. <strong>Emplatado:</strong> Dispón una cama de guisantes y col en cada plato. Coloca encima un filete de caballa. Riega con la salsa de limón y jengibre. Decora con perejil picado y una rodaja de limón.</p>
+<p><strong>Sugerencias:</strong> Si prefieres un sabor más intenso, añade una pizca de guindilla en polvo a las verduras. Sirve con arroz integral para una comida completa.</p>
+</div>
+
+<div id="content-pt" class="lang-content">
+<p><strong>Data:</strong> 2025-08-30</p>
+<p><strong>Meta:</strong> 4 porções | Peixe</p>
+<p><strong>Descrição:</strong> Filetes de cavala com ervilhas, couve-lombarda e gengibre ao limão, um prato leve e aromático.</p>
+<h3>Ingredientes</h3>
+<ul>
+<li>4 filetes de cavala frescos</li>
+<li>200 g ervilhas frescas ou congeladas</li>
+<li>200 g couve-lombarda cortada em tiras finas</li>
+<li>1 limão (sumo e raspa)</li>
+<li>2 cm gengibre fresco ralado</li>
+<li>2 colheres de sopa azeite extra virgem</li>
+<li>Sal e pimenta q.b.</li>
+<li>Salsa picada para guarnecer</li>
+</ul>
+<h3>Procedimento</h3>
+<p>1. <strong>Legumes:</strong> Numa frigideira grande, aquece 1 colher de sopa de azeite e adiciona as ervilhas. Cozinha em lume médio cerca de 5 minutos. Junta a couve-lombarda e continua a cozinhar mais 5-7 minutos, mexendo de vez em quando, até ficarem macias mas crocantes. Tempira com sal e pimenta.</p>
+<p>2. <strong>Cavala:</strong> Noutra frigideira, aquece o azeite restante. Coloca os filetes com a pele para baixo. Cozinha 3-4 minutos de cada lado até dourar e cozinhar bem. Adiciona sumo de limão, raspa e gengibre ralado, deixando aromatizar 1-2 minutos.</p>
+<p>3. <strong>Empratamento:</strong> Coloca uma cama de ervilhas e couve em cada prato. Disponha por cima um filete de cavala. Rega com o molho de limão e gengibre. Guarnece com salsa picada e uma fatia de limão.</p>
+<p><strong>Sugestões:</strong> Se preferires um sabor mais intenso, adiciona uma pitada de piri-piri aos legumes. Serve com arroz integral para uma refeição completa.</p>
+</div>
+
+<div id="content-de" class="lang-content">
+<p><strong>Datum:</strong> 2025-08-30</p>
+<p><strong>Meta:</strong> 4 Portionen | Fisch</p>
+<p><strong>Beschreibung:</strong> Makrelenfilets mit Erbsen, Wirsing und Ingwer in Zitrone, ein leichtes und duftendes Gericht.</p>
+<h3>Zutaten</h3>
+<ul>
+<li>4 frische Makrelenfilets</li>
+<li>200 g frische oder gefrorene Erbsen</li>
+<li>200 g Wirsing in feine Streifen geschnitten</li>
+<li>1 Zitrone (Saft und Schale)</li>
+<li>2 cm frischer Ingwer gerieben</li>
+<li>2 Esslöffel Olivenöl extra vergine</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Gehackte Petersilie zum Garnieren</li>
+</ul>
+<h3>Zubereitung</h3>
+<p>1. <strong>Gemüse:</strong> In einer großen Pfanne 1 Esslöffel Öl erhitzen und Erbsen zugeben. Bei mittlerer Hitze etwa 5 Minuten dünsten. Wirsing zugeben und weitere 5-7 Minuten garen, dabei gelegentlich umrühren, bis es weich aber noch knackig ist. Mit Salz und Pfeffer würzen.</p>
+<p>2. <strong>Makrele:</strong> In einer weiteren Pfanne das restliche Öl erhitzen. Filets mit der Hautseite nach unten hineinlegen. 3-4 Minuten pro Seite braten, bis sie goldbraun und durchgegart sind. Zitronensaft, -schale und geriebenen Ingwer zugeben und 1-2 Minuten durchziehen lassen.</p>
+<p>3. <strong>Anrichten:</strong> Auf jeden Teller ein Bett aus Erbsen und Wirsing geben. Ein Makrelenfilet darauflegen. Mit Zitronen-Ingwer-Sauce beträufeln. Mit gehackter Petersilie und einer Zitronenscheibe garnieren.</p>
+<p><strong>Tipps:</strong> Wer es etwas schärfer mag, kann das Gemüse mit Chiliflocken würzen. Hervorragend begleitet von Vollkornreis.</p>
+</div>
+
+<div id="content-el" class="lang-content">
+<p><strong>Ημερομηνία:</strong> 2025-08-30</p>
+<p><strong>Meta:</strong> 4 μερίδες | Ψάρι</p>
+<p><strong>Περιγραφή:</strong> Φιλέτα σκουμπρί με αρακά, λάχανο savoy και τζίντζερ με λεμόνι, ένα ελαφρύ και αρωματικό πιάτο.</p>
+<h3>Συστατικά</h3>
+<ul>
+<li>4 φρέσκα φιλέτα σκουμπρί</li>
+<li>200 γρ φρέσκο ή κατεψυγμένο αρακά</li>
+<li>200 γρ λάχανο savoy κομμένο σε λεπτές λωρίδες</li>
+<li>1 λεμόνι (χυμός και ξύσμα)</li>
+<li>2 εκ φρέσκο τζίντζερ τριμμένο</li>
+<li>2 κουταλιές της σούπας ελαιόλαδο</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>Ψιλοκομμένος μαϊντανός για γαρνίρισμα</li>
+</ul>
+<h3>Διαδικασία</h3>
+<p>1. <strong>Λαχανικά:</strong> Σε ένα μεγάλο τηγάνι, ζέστανε 1 κουταλιά λάδι και πρόσθεσε τον αρακά. Μαγείρεψε σε μέτρια φωτιά περίπου 5 λεπτά. Πρόσθεσε το λάχανο savoy και συνέχισε το μαγείρεμα για άλλα 5-7 λεπτά, ανακατεύοντας που και που, μέχρι να μαλακώσει αλλά να μείνει τραγανό. Αλατοπιπέρωσε.</p>
+<p>2. <strong>Σκουμπρί:</strong> Σε άλλο τηγάνι, ζέστανε το υπόλοιπο λάδι. Βάλε τα φιλέτα με το δέρμα προς τα κάτω. Ψήσε 3-4 λεπτά από κάθε πλευρά μέχρι να ροδίσουν και ψηθούν. Πρόσθεσε χυμό λεμονιού, ξύσμα και τριμμένο τζίντζερ, άφησέ τα να πάρουν γεύση 1-2 λεπτά.</p>
+<p>3. <strong>Σερβίρισμα:</strong> Βάλε μια στρώση από αρακά και λάχανο σε κάθε πιάτο. Τοποθέτησε από πάνω ένα φιλέτο σκουμπρί. Περιέχυσε με τη σάλτσα λεμονιού και τζίντζερ. Γαρνίρισε με ψιλοκομμένο μαϊντανό και μια φέτα λεμονιού.</p>
+<p><strong>Συμβουλές:</strong> Αν προτιμάς πιο έντονη γεύση, πρόσθεσε λίγη πιπεριά καγιέν στα λαχανικά. Σέρβιρε με καστανό ρύζι για ένα πλήρες γεύμα.</p>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+</div>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+</body>
+</html>

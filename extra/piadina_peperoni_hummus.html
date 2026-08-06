@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Piadina Rustica con Peperoni Grigliati e Hummus di Ceci | Leguminando</title>
+<meta name="description" content="Piadina Rustica con Peperoni Grigliati e Hummus di Ceci">
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%); color: #333; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 30px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.header h1 { margin: 0; font-size: 2.2em; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+.header p { margin: 10px 0 0 0; font-size: 1.1em; opacity: 0.9; }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
+.lang-tab { padding: 8px 16px; border: 2px solid #D2691E; background: white; color: #8B4513; border-radius: 20px; cursor: pointer; font-size: 0.85em; transition: all 0.3s; }
+.lang-tab:hover { background: #faf8f5; }
+.lang-tab.active { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; }
+.lang-content { display: none; }
+.lang-content.active { display: block; }
+.content { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.recipe-image { width: 100%; max-width: 700px; height: 400px; object-fit: cover; border-radius: 12px; margin: 0 auto 30px auto; display: block; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.section { margin-bottom: 30px; }
+.section h2 { color: #8B4513; border-bottom: 3px solid #D2691E; padding-bottom: 10px; margin-bottom: 20px; font-size: 1.5em; }
+.section h3 { color: #D2691E; margin: 20px 0 10px 0; font-size: 1.2em; }
+.ingredients-list { background: #faf8f5; padding: 20px; border-radius: 10px; border-left: 5px solid #D2691E; }
+.ingredients-list ul { list-style: none; padding: 0; }
+.ingredients-list li { padding: 8px 0; border-bottom: 1px dashed #e0d5c8; }
+.ingredients-list li:last-child { border-bottom: none; }
+.ingredients-list li:before { content: "🫘 "; margin-right: 8px; }
+.steps-list { counter-reset: step; }
+.steps-list li { counter-increment: step; padding: 15px 0 15px 50px; position: relative; border-bottom: 1px solid #eee; }
+.steps-list li:last-child { border-bottom: none; }
+.steps-list li::before { content: counter(step); position: absolute; left: 0; top: 10px; background: #8B4513; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em; }
+.footer { text-align: center; margin-top: 40px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 20px 0; padding: 12px 24px; background: linear-gradient(135deg, #8B4513, #D2691E); color: white; text-decoration: none; border-radius: 25px; font-size: 1em; transition: transform 0.2s; }
+.back-link:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+@media print {
+    .lang-tabs { display: none !important; }
+    .lang-content { display: block !important; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>🫘 Leguminando</h1>
+<p>Ricette a base di legumi</p>
+</div>
+
+<div class="content">
+<div style="text-align: center; margin: -20px 0 20px 0;">
+<span style="display: inline-block; padding: 8px 16px; background: linear-gradient(135deg, #D2691E, #8B4513); color: white; border-radius: 20px; font-size: 0.9em;">📅 Stagione: Estate ☀️</span>
+</div>
+<img src="piadina_peperoni_hummus.jpg" alt="Piadina Rustica con Peperoni Grigliati e Hummus di Ceci" class="recipe-image">
+
+<div class="fav-bar" style="text-align:center;margin:5px 0;">
+<span class="fav-btn" data-path="extra/piadina_peperoni_hummus.html" onclick="event.stopPropagation();toggleFav('extra/piadina_peperoni_hummus.html', 'Piadina Rustica con Peperoni Grigliati e Hummus di Ceci')">🤍</span> Aggiungi ai preferiti
+</div>
+
+<div class="lang-tabs">
+<span class="lang-tab active" data-lang="it" onclick="switchLang('it')">🇮🇹 IT</span>
+<span class="lang-tab" data-lang="en" onclick="switchLang('en')">🇬🇧 EN</span>
+<span class="lang-tab" data-lang="es" onclick="switchLang('es')">🇪🇸 ES</span>
+<span class="lang-tab" data-lang="pt" onclick="switchLang('pt')">🇵🇹 PT</span>
+<span class="lang-tab" data-lang="de" onclick="switchLang('de')">🇩🇪 DE</span>
+<span class="lang-tab" data-lang="el" onclick="switchLang('el')">🇬🇷 EL</span>
+</div>
+
+<div id="lang-it" class="lang-content active">
+<div class="section">
+<h2>🌯 Piadina Rustica con Peperoni Grigliati e Hummus di Ceci</h2>
+<h3>Ingredienti per l'hummus:</h3>
+<div class="ingredients-list">
+<ul>
+<li>400g di ceci precotti (o 200g secchi)</li>
+<li>2 cucchiai di tahina</li>
+<li>1 spicchio d'aglio</li>
+<li>Succo di limone</li>
+<li>Olio extravergine d'oliva q.b.</li>
+<li>Sale e paprika q.b.</li>
+</ul>
+</div>
+<h3>Ingredienti per la piadina:</h3>
+<div class="ingredients-list">
+<ul>
+<li>2 piadine rustiche</li>
+<li>2 peperoni (uno rosso, uno giallo)</li>
+<li>1 cipolla rossa</li>
+<li>100g di radicchio</li>
+<li>Olio extravergine d'oliva</li>
+<li>Sale e pepe q.b.</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparazione</h2>
+<ol class="steps-list">
+<li>Prepara l'hummus: frulla i ceci con tahina, aglio, limone e olio fino a ottenere una crema liscia.</li>
+<li>Taglia i peperoni a strisce e la cipolla a rondelle.</li>
+<li>Griglia i peperoni e la cipolla in padella con un filo d'olio per 10 minuti.</li>
+<li>Scalda le piadine in padella antiaderente per 1 minuto per lato.</li>
+<li>Stendi l'hummus su ogni piadina.</li>
+<li>Aggiungi i peperoni grigliati, la cipolla e il radicchio fresco.</li>
+<li>Chiudi la piadina a metà e servi immediatamente.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Consigli</h2>
+<p>Questa piadina è perfetta per un pranzo veloce ma nutriente. L'hummus di ceci può essere preparato in anticipo e conservato in frigorifero per 3-4 giorni. Per una versione più piccante, aggiungi un pizzico di peperoncino all'hummus.</p>
+</div>
+</div>
+
+<div id="lang-en" class="lang-content">
+<div class="section">
+<h2>🌯 Rustic Flatbread with Grilled Peppers and Chickpea Hummus</h2>
+<h3>Ingredients for the hummus:</h3>
+<div class="ingredients-list">
+<ul>
+<li>400g precooked chickpeas (or 200g dried)</li>
+<li>2 tablespoons tahini</li>
+<li>1 garlic clove</li>
+<li>Lemon juice</li>
+<li>Extra virgin olive oil to taste</li>
+<li>Salt and paprika to taste</li>
+</ul>
+</div>
+<h3>Ingredients for the flatbread:</h3>
+<div class="ingredients-list">
+<ul>
+<li>2 rustic flatbreads</li>
+<li>2 peppers (one red, one yellow)</li>
+<li>1 red onion</li>
+<li>100g radicchio</li>
+<li>Extra virgin olive oil</li>
+<li>Salt and pepper to taste</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparation</h2>
+<ol class="steps-list">
+<li>Prepare the hummus: blend chickpeas with tahini, garlic, lemon and oil until smooth.</li>
+<li>Cut the peppers into strips and the onion into rounds.</li>
+<li>Grill the peppers and onion in a pan with a drizzle of oil for 10 minutes.</li>
+<li>Heat the flatbreads in a non-stick pan for 1 minute per side.</li>
+<li>Spread the hummus on each flatbread.</li>
+<li>Add the grilled peppers, onion and fresh radicchio.</li>
+<li>Fold the flatbread in half and serve immediately.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Tips</h2>
+<p>This flatbread is perfect for a quick but nutritious lunch. The chickpea hummus can be prepared in advance and stored in the refrigerator for 3-4 days. For a spicier version, add a pinch of chili to the hummus.</p>
+</div>
+</div>
+
+<div id="lang-es" class="lang-content">
+<div class="section">
+<h2>🌯 Piadina Rustica con Pimientos Asados y Hummus de Garbanzos</h2>
+<h3>Ingredientes para el hummus:</h3>
+<div class="ingredients-list">
+<ul>
+<li>400g de garbanzos precocidos (o 200g secos)</li>
+<li>2 cucharadas de tahina</li>
+<li>1 diente de ajo</li>
+<li>Zumo de limon</li>
+<li>Aceite de oliva virgen extra al gusto</li>
+<li>Sal y paprika al gusto</li>
+</ul>
+</div>
+<h3>Ingredientes para la piadina:</h3>
+<div class="ingredients-list">
+<ul>
+<li>2 piadinas rusticas</li>
+<li>2 pimientos (uno rojo, uno amarillo)</li>
+<li>1 cebolla roja</li>
+<li>100g de radicchio</li>
+<li>Aceite de oliva virgen extra</li>
+<li>Sal y pimienta al gusto</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparacion</h2>
+<ol class="steps-list">
+<li>Prepara el hummus: tritura los garbanzos con tahina, ajo, limon y aceite hasta obtener una crema lisa.</li>
+<li>Corta los pimientos en tiras y la cebolla en rodajas.</li>
+<li>Asa los pimientos y la cebolla en una sarten con un hilo de aceite durante 10 minutos.</li>
+<li>Calienta las piadinas en una sarten antiadherente 1 minuto por lado.</li>
+<li>Extiende el hummus sobre cada piadina.</li>
+<li>Anade los pimientos asados, la cebolla y el radicchio fresco.</li>
+<li>Cierra la piadina por la mitad y sirve inmediatamente.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Consejos</h2>
+<p>Esta piadina es perfecta para un almuerzo rapido pero nutritivo. El hummus de garbanzos se puede preparar con anticipacion y conservar en el frigorifico durante 3-4 dias. Para una version mas picante, anade una pizca de guindilla al hummus.</p>
+</div>
+</div>
+
+<div id="lang-pt" class="lang-content">
+<div class="section">
+<h2>🌯 Pita Rustica com Pimentos Grelhados e Hummus de Grao-de-Bico</h2>
+<h3>Ingredientes para o hummus:</h3>
+<div class="ingredients-list">
+<ul>
+<li>400g de grao-de-bico pre-cozido (ou 200g seco)</li>
+<li>2 colheres de sopa de tahina</li>
+<li>1 dente de alho</li>
+<li>Sumo de limão</li>
+<li>Azeite extra virgem a gosto</li>
+<li>Sal e paprika a gosto</li>
+</ul>
+</div>
+<h3>Ingredientes para a pita:</h3>
+<div class="ingredients-list">
+<ul>
+<li>2 pitas rusticas</li>
+<li>2 pimentos (um vermelho, um amarelo)</li>
+<li>1 cebola roxa</li>
+<li>100g de radicchio</li>
+<li>Azeite extra virgem</li>
+<li>Sal e pimenta a gosto</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Preparacao</h2>
+<ol class="steps-list">
+<li>Prepare o hummus: triture o grao-de-bico com tahina, alho, limao e azeite ate obter um creme liso.</li>
+<li>Corte os pimentos em tiras e a cebola em rodadas.</li>
+<li>Grelhe os pimentos e a cebola numa frigideira com um fio de azeite durante 10 minutos.</li>
+<li>Aqueca as pitas numa frigideira antiaderente 1 minuto de cada lado.</li>
+<li>Espalhe o hummus sobre cada pita.</li>
+<li>Junte os pimentos grelhados, a cebola e o radicchio fresco.</li>
+<li>Dobre a pita ao meio e sirva imediatamente.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Dicas</h2>
+<p>Esta pita e perfeita para um almoco rapido mas nutritivo. O hummus de grao-de-bico pode ser preparado antecipadamente e conservado no frigorifico durante 3-4 dias. Para uma versao mais picante, junte uma pitada de malagueta ao hummus.</p>
+</div>
+</div>
+
+<div id="lang-de" class="lang-content">
+<div class="section">
+<h2>🌯 Rustikales Fladenbrot mit gegrillten Paprikaschoten und Kichererbsen-Hummus</h2>
+<h3>Zutaten fuer den Hummus:</h3>
+<div class="ingredients-list">
+<ul>
+<li>400g vorgekochte Kichererbsen (oder 200g getrocknete)</li>
+<li>2 Esslöffel Tahini</li>
+<li>1 Knoblauchzehe</li>
+<li>Zitronensaft</li>
+<li>Natives Olivenoel extra nach Geschmack</li>
+<li>Salz und Paprika nach Geschmack</li>
+</ul>
+</div>
+<h3>Zutaten fuer das Fladenbrot:</h3>
+<div class="ingredients-list">
+<ul>
+<li>2 rustikale Fladenbrote</li>
+<li>2 Paprikaschoten (eine rot, eine gelb)</li>
+<li>1 rote Zwiebel</li>
+<li>100g Radicchio</li>
+<li>Natives Olivenoel extra</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Zubereitung</h2>
+<ol class="steps-list">
+<li>Den Hummus zubereiten: Kichererbsen mit Tahini, Knoblauch, Zitrone und Oel mixen, bis eine glatte Creme entsteht.</li>
+<li>Die Paprikaschoten in Streifen und die Zwiebel in Scheiben schneiden.</li>
+<li>Die Paprikaschoten und die Zwiebel in einer Pfanne mit einem Schuss Oel 10 Minuten grillen.</li>
+<li>Die Fladenbrote in einer beschichteten Pfanne 1 Minute pro Seite erhitzen.</li>
+<li>Den Hummus auf jedes Fladenbrot streichen.</li>
+<li>Die gegrillten Paprikaschoten, die Zwiebel und den frischen Radicchio hinzufuegen.</li>
+<li>Das Fladenbrot falten und sofort servieren.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Tipps</h2>
+<p>Dieses Fladenbrot ist perfekt fuer ein schnelles aber nahrhaftes Mittagessen. Der Kichererbsen-Hummus kann im Voraus zubereitet und 3-4 Tage im Kuehlschrank aufbewahrt werden. Fuer eine schaerfere Version eine Prise Chili zum Hummus hinzufuegen.</p>
+</div>
+</div>
+
+<div id="lang-el" class="lang-content">
+<div class="section">
+<h2>🌯 Ρουστίκ Πίτα με Ψητές Πιπεριές και Χούμους Ρεβιθιών</h2>
+<h3>Συστατικά για το χούμους:</h3>
+<div class="ingredients-list">
+<ul>
+<li>400g προψημένα ρεβίθια (ή 200g ξερά)</li>
+<li>2 κουταλιές της σούπας ταχίνι</li>
+<li>1 σκελίδα σκόρδου</li>
+<li>Χυμός λεμονιού</li>
+<li>Έξτρα παρθένο ελαιόλαδο κατά βούληση</li>
+<li>Αλάτι και πάπρικα κατά βούληση</li>
+</ul>
+</div>
+<h3>Συστατικά για την πίτα:</h3>
+<div class="ingredients-list">
+<ul>
+<li>2 ρουστίκ πίτες</li>
+<li>2 πιπεριές (μία κόκκινη, μία κίτρινη)</li>
+<li>1 κόκκινο κρεμμύδι</li>
+<li>100g ραντίτσιο</li>
+<li>Έξτρα παρθένο ελαιόλαδο</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h2>👨‍🍳 Εκτέλεση</h2>
+<ol class="steps-list">
+<li>Προετοιμάστε το χούμους: χτυπήστε τα ρεβίθια με ταχίνι, σκόρδο, λεμόνι και λάδι μέχρι να γίνει λείο.</li>
+<li>Κόψτε τις πιπεριές σε λωρίδες και το κρεμμύδι σε ροδέλες.</li>
+<li>Ψήστε τις πιπεριές και το κρεμμύδι σε ένα τηγάνι με μια σταλιά λάδι για 10 λεπτά.</li>
+<li>Ζεστάνετε τις πίτες σε ένα αντικολλητικό τηγάνι για 1 λεπτό από κάθε πλευρά.</li>
+<li>Απλώστε το χούμους σε κάθε πίτα.</li>
+<li>Προσθέστε τις ψητές πιπεριές, το κρεμμύδι και το φρέσκο ραντίτσιο.</li>
+<li>Διπλώστε την πίτα στη μέση και σερβίρετε αμέσως.</li>
+</ol>
+</div>
+<div class="section">
+<h2>💡 Συμβουλές</h2>
+<p>Αυτή η πίτα είναι τέλεια για ένα γρήγορο αλλά θρεπτικό μεσημεριανό. Το χούμους ρεβιθιών μπορεί να προετοιμαστεί από πριν και να διατηρηθεί στο ψυγείο για 3-4 ημέρες. Για μια πιο πικάντικη εκδοχή, προσθέστε μια πρέζα τσίλι στο χούμους.</p>
+</div>
+</div>
+
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette a base di legumi</p>
+<a href="../index.html" class="back-link">← Torna alla Home</a>
+</div>
+
+<script>
+function switchLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(c => c.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+    document.querySelector('.lang-tab[data-lang="' + lang + '"]').classList.add('active');
+    localStorage.setItem('preferredLang', lang);
+}
+</script>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>
