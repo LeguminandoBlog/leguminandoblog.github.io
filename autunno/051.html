@@ -3,400 +3,304 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ricetta del 2024-11-06 | Leguminando</title>
+<title>Torta di Carrube con Crema di Cachi | Leguminando</title>
 <style>
-body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
-.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.content { background: white; padding: 30px; border-radius: 10px; }
-.content h1 { color: #8B4513; }
-.content h2 { color: #D2691E; }
-.content h3 { color: #8B4513; }
-.content ul { margin: 15px 0; padding-left: 20px; }
-.content li { margin: 8px 0; }
-.content p { margin: 12px 0; line-height: 1.6; }
-.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
-.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; background: #f8f5f0; min-height: 100vh; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+.header { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 40px 20px 30px; text-align: center; border-radius: 20px; margin-bottom: 30px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+.header h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.header .tagline { font-size: 1.2em; opacity: 0.9; font-style: italic; }
+.back-link { display: inline-block; margin: 20px 0; padding: 10px 20px; background: #8B4513; color: white; text-decoration: none; border-radius: 25px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.95em; transition: background 0.3s; }
 .back-link:hover { background: #D2691E; }
-
-.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
-.fav-bar { text-align: center; margin: 5px 0; }
-
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-
-@media print {
-    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
-    .stats, .back-link, .badge { display: none !important; }
-    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
-    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
-    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
-    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
-}
-
-</style>
-<meta name="description" content="Ricetta del 2024-11-06">
-<meta property="og:title" content="Ricetta del 2024-11-06 | Leguminando">
-<meta property="og:description" content="Ricetta del 2024-11-06">
-<style>
-.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
-.lang-tab { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; transition: all 0.3s; }
-.lang-tab.active { background: #8B4513; color: white; }
-.lang-tab:hover:not(.active) { background: #D2691E; color: white; }
+.fav-bar { text-align: center; margin: 10px 0; }
+.fav-btn { cursor: pointer; font-size: 1.8em; user-select: none; display: inline-block; transition: transform 0.2s; }
+.fav-btn:hover { transform: scale(1.2); }
+.recipe-image { width: 100%; max-width: 700px; margin: 20px auto; display: block; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 30px 0; flex-wrap: wrap; }
+.lang-tab { padding: 10px 20px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; border-radius: 25px; cursor: pointer; font-size: 0.9em; transition: all 0.3s; }
+.lang-tab:hover { background: rgba(255,255,255,0.3); }
+.lang-tab.active { background: white; color: #c0392b; border-color: white; }
+.recipe-card { background: white; border-radius: 20px; padding: 40px; margin-bottom: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
 .lang-content { display: none; }
 .lang-content.active { display: block; }
+.recipe-title { font-size: 2.2em; color: #8B4513; margin-bottom: 10px; text-align: center; }
+.recipe-date { text-align: center; color: #666; font-size: 0.95em; margin-bottom: 25px; }
+.ingredients-box { background: linear-gradient(135deg, #fef9e7 0%, #fdebd0 100%); border-radius: 15px; padding: 25px; margin: 25px 0; border-left: 5px solid #D2691E; }
+.ingredients-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.ingredients-box ul { padding-left: 20px; }
+.ingredients-box li { margin: 8px 0; color: #5D4037; }
+.steps-box { margin: 25px 0; }
+.steps-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.step { display: flex; gap: 15px; margin: 15px 0; padding: 15px; background: #faf8f5; border-radius: 12px; align-items: flex-start; }
+.step-num { background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1em; flex-shrink: 0; }
+.step-text { flex: 1; color: #5D4037; line-height: 1.6; }
+.tip-box { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 15px; padding: 20px; margin: 25px 0; border-left: 5px solid #4caf50; }
+.tip-box h4 { color: #2e7d32; margin-bottom: 10px; }
+.tip-box p { color: #1b5e20; line-height: 1.6; }
+.footer { text-align: center; margin-top: 50px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+@media (max-width: 600px) { .header h1 { font-size: 2em; } .recipe-card { padding: 20px; } .recipe-title { font-size: 1.6em; } }
+@media print { .lang-tabs, .lang-tab, .fav-bar, .back-link { display: none !important; } body { background: white !important; } .recipe-card { box-shadow: none !important; break-inside: avoid; } }
 </style>
 <script>
-function showLang(lang) {
-    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
-    document.getElementById('lang-' + lang).classList.add('active');
-    event.target.classList.add('active');
-}
+function showLang(lang) { document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active')); document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active')); document.getElementById('lang-' + lang).classList.add('active'); event.target.classList.add('active'); }
+function toggleFav(path, title) { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); if (favs[path]) { delete favs[path]; } else { favs[path] = title; } localStorage.setItem('leguminando_favs', JSON.stringify(favs)); updateFavIcons(); }
+function updateFavIcons() { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); document.querySelectorAll('.fav-btn').forEach(btn => { let p = btn.getAttribute('data-path'); btn.textContent = favs[p] ? '❤️' : '🤍'; }); }
+document.addEventListener('DOMContentLoaded', updateFavIcons);
 </script>
 </head>
 <body>
+<div class="container">
 <div class="header">
-<h1>Leguminando</h1>
-<p>Ricette di stagione a base di legumi</p>
+<h1>🫘 Leguminando</h1>
+<p class="tagline">Ricette di stagione a base di legumi</p>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
-
-</div>
-
+<a href="../index.html" class="back-link">← Torna alla Home</a>
 <div class="fav-bar">
-<span class="fav-btn" data-path="autunno/051.html" data-title="Ricetta del 2024-11-06" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+<span class="fav-btn" data-path="autunno/051.html" data-title="Torta di Carrube con Crema di Cachi" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
 </div>
-
-<img src="051.jpg" alt="Ricetta del 2024-11-06" class="recipe-image">
-
-<div class="content">
+<img src="051.jpg" alt="Torta di Carrube con Crema di Cachi" class="recipe-image">
 <div class="lang-tabs">
-    <button class="lang-tab active" onclick="showLang('it')">IT</button>
-    <button class="lang-tab" onclick="showLang('en')">EN</button>
-    <button class="lang-tab" onclick="showLang('es')">ES</button>
-    <button class="lang-tab" onclick="showLang('pt')">PT</button>
-    <button class="lang-tab" onclick="showLang('de')">DE</button>
-    <button class="lang-tab" onclick="showLang('el')">EL</button>
+    <button class="lang-tab active" onclick="showLang('it')">🇮🇹 IT</button>
+    <button class="lang-tab" onclick="showLang('en')">🇬🇧 EN</button>
+    <button class="lang-tab" onclick="showLang('es')">🇪🇸 ES</button>
+    <button class="lang-tab" onclick="showLang('pt')">🇵🇹 PT</button>
+    <button class="lang-tab" onclick="showLang('de')">🇩🇪 DE</button>
+    <button class="lang-tab" onclick="showLang('el')">🇬🇷 EL</button>
 </div>
 
+<!-- ITALIANO -->
 <div id="lang-it" class="lang-content active">
-<p><strong>Data:</strong> 2024-11-06</p>
-<h3>Ingredienti</h3>
-<h4>Per la torta:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Torta di Carrube con Crema di Cachi</h2>
+<p class="recipe-date">📅 6 Novembre 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredienti</h3>
 <ul>
-<li>150 g di farina di carrube</li>
-<li>50 g di cacao in polvere</li>
-<li>200 g di zucchero</li>
+<li>150 g farina di carrube</li>
+<li>50 g cacao in polvere</li>
+<li>200 g zucchero</li>
 <li>3 uova</li>
-<li>100 ml di olio di semi</li>
-<li>200 ml di latte</li>
-<li>1 bustina di lievito per dolci</li>
+<li>100 ml olio di semi</li>
+<li>200 ml latte</li>
+<li>1 bustina lievito per dolci</li>
 <li>Un pizzico di sale</li>
-</ul>
-<h4>Per la crema di cachi:</h4>
-<ul>
 <li>2 cachi maturi</li>
-<li>100 g di zucchero</li>
-<li>200 ml di panna fresca</li>
-</ul>
-<h4>Per la decorazione:</h4>
-<ul>
-<li>Chicchi di melograno</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparare la torta</strong>:</p>
-<ul>
-<li>In una ciotola, sbatti le uova con lo zucchero fino a ottenere un composto chiaro e spumoso.</li>
-<li>Aggiungi l'olio e il latte, mescolando bene.</li>
-<li>In un'altra ciotola, setaccia la farina di carrube, il cacao, il lievito e il sale. Unisci gli ingredienti secchi a quelli umidi, mescolando fino a ottenere un impasto omogeneo.</li>
-<li>Versa l'impasto in una teglia imburrata e infarinata e cuoci in forno preriscaldato a 180°C per circa 30-35 minuti. Fai la prova dello stecchino per verificare la cottura.</li>
-</ul>
-<p>2. <strong>Preparare la crema di cachi</strong>:</p>
-<ul>
-<li>Sbuccia i cachi e frullali fino a ottenere una purea liscia.</li>
-<li>Monta la panna e incorporala delicatamente alla purea di cachi. Aggiungi lo zucchero se desideri un sapore più dolce.</li>
-</ul>
-<p>3. <strong>Assemblare la torta</strong>:</p>
-<ul>
-<li>Una volta che la torta è fredda, tagliala a metà e farciscila con la crema di cachi. Aggiungi i chicchi di melograno all'interno.</li>
-<li>Copri con l'altra metà della torta e decora la superficie con altra crema di cachi e chicchi di melograno.</li>
-</ul>
-<p>4. <strong>Servire</strong>:</p>
-<ul>
-<li>Lascia riposare in frigorifero per un'ora prima di servire per far amalgamare i sapori.</li>
+<li>100 g zucchero per crema</li>
+<li>200 ml panna fresca</li>
+<li>Chicchi di melograno per decorare</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparazione</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Impasto</strong>: sbatti le uova con lo zucchero fino a ottenere un composto chiaro e spumoso. Aggiungi olio e latte mescolando bene.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Secca</strong>: in un'altra ciotola setaccia la farina di carrube, il cacao, il lievito e il sale. Unisci gli ingredienti secchi a quelli umidi mescolando fino a ottenere un impasto omogeneo.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Cottura</strong>: versa l'impasto in una teglia imburrata e infarinata. Cuoci in forno preriscaldato a 180°C per circa 30-35 minuti. Verifica con la prova dello stecchino.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Crema</strong>: sbuccia i cachi e frullali fino a ottenere una purea liscia. Monta la panna e incorporala delicatamente alla purea con lo zucchero.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Farcitura</strong>: una volta fredda, taglia la torta a metà e farciscila con la crema di cachi e chicchi di melograno.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Servi</strong>: copri con l'altra metà e decora la superficie con crema e melograno. Lascia riposare in frigorifero un'ora prima di servire.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Suggerimento</h4>
+<p>La farina di carrube conferisce un gusto rustico e leggermente dolciastro alla torta. Perfetta per chi cerca alternative al cacao tradizionale.</p>
+</div>
+</div>
+</div>
 
+<!-- ENGLISH -->
 <div id="lang-en" class="lang-content">
-<p><strong>Date:</strong> 2024-11-06</p>
-<p><em>English translation coming soon...</em></p>
-<h3>Ingredienti</h3>
-<h4>Per la torta:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Carob Cake with Persimmon Cream</h2>
+<p class="recipe-date">📅 November 6, 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredients</h3>
 <ul>
-<li>150 g di farina di carrube</li>
-<li>50 g di cacao in polvere</li>
-<li>200 g di zucchero</li>
-<li>3 uova</li>
-<li>100 ml di olio di semi</li>
-<li>200 ml di latte</li>
-<li>1 bustina di lievito per dolci</li>
-<li>Un pizzico di sale</li>
-</ul>
-<h4>Per la crema di cachi:</h4>
-<ul>
-<li>2 cachi maturi</li>
-<li>100 g di zucchero</li>
-<li>200 ml di panna fresca</li>
-</ul>
-<h4>Per la decorazione:</h4>
-<ul>
-<li>Chicchi di melograno</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparare la torta</strong>:</p>
-<ul>
-<li>In una ciotola, sbatti le uova con lo zucchero fino a ottenere un composto chiaro e spumoso.</li>
-<li>Aggiungi l'olio e il latte, mescolando bene.</li>
-<li>In un'altra ciotola, setaccia la farina di carrube, il cacao, il lievito e il sale. Unisci gli ingredienti secchi a quelli umidi, mescolando fino a ottenere un impasto omogeneo.</li>
-<li>Versa l'impasto in una teglia imburrata e infarinata e cuoci in forno preriscaldato a 180°C per circa 30-35 minuti. Fai la prova dello stecchino per verificare la cottura.</li>
-</ul>
-<p>2. <strong>Preparare la crema di cachi</strong>:</p>
-<ul>
-<li>Sbuccia i cachi e frullali fino a ottenere una purea liscia.</li>
-<li>Monta la panna e incorporala delicatamente alla purea di cachi. Aggiungi lo zucchero se desideri un sapore più dolce.</li>
-</ul>
-<p>3. <strong>Assemblare la torta</strong>:</p>
-<ul>
-<li>Una volta che la torta è fredda, tagliala a metà e farciscila con la crema di cachi. Aggiungi i chicchi di melograno all'interno.</li>
-<li>Copri con l'altra metà della torta e decora la superficie con altra crema di cachi e chicchi di melograno.</li>
-</ul>
-<p>4. <strong>Servire</strong>:</p>
-<ul>
-<li>Lascia riposare in frigorifero per un'ora prima di servire per far amalgamare i sapori.</li>
+<li>150 g carob flour</li>
+<li>50 g cocoa powder</li>
+<li>200 g sugar</li>
+<li>3 eggs</li>
+<li>100 ml seed oil</li>
+<li>200 ml milk</li>
+<li>1 sachet baking powder</li>
+<li>Pinch of salt</li>
+<li>2 ripe persimmons</li>
+<li>100 g sugar for cream</li>
+<li>200 ml fresh cream</li>
+<li>Pomegranate seeds for decoration</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparation</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Batter</strong>: beat eggs with sugar until light and fluffy. Add oil and milk, mixing well.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Dry</strong>: in another bowl sift carob flour, cocoa, baking powder and salt. Combine dry ingredients with wet ones, stirring until smooth.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Bake</strong>: pour batter into a greased and floured tin. Bake in preheated oven at 180°C for about 30-35 minutes. Test with a toothpick.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Cream</strong>: peel persimmons and blend until smooth. Whip cream and gently fold into the purée with sugar.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Assembly</strong>: once cooled, cut cake in half and fill with persimmon cream and pomegranate seeds.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Serve</strong>: cover with top half and decorate with cream and pomegranate. Chill in refrigerator for one hour before serving.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Tip</h4>
+<p>Carob flour gives a rustic and slightly sweet flavour to the cake. Perfect for those looking for alternatives to traditional cocoa.</p>
+</div>
+</div>
+</div>
 
+<!-- SPANISH -->
 <div id="lang-es" class="lang-content">
-<p><strong>Fecha:</strong> 2024-11-06</p>
-<p><em>Traduccion al espanol proximamente...</em></p>
-<h3>Ingredienti</h3>
-<h4>Per la torta:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Torta de Algarroba con Crema de Caqui</h2>
+<p class="recipe-date">📅 6 de Noviembre de 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li>150 g di farina di carrube</li>
-<li>50 g di cacao in polvere</li>
-<li>200 g di zucchero</li>
-<li>3 uova</li>
-<li>100 ml di olio di semi</li>
-<li>200 ml di latte</li>
-<li>1 bustina di lievito per dolci</li>
-<li>Un pizzico di sale</li>
-</ul>
-<h4>Per la crema di cachi:</h4>
-<ul>
-<li>2 cachi maturi</li>
-<li>100 g di zucchero</li>
-<li>200 ml di panna fresca</li>
-</ul>
-<h4>Per la decorazione:</h4>
-<ul>
-<li>Chicchi di melograno</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparare la torta</strong>:</p>
-<ul>
-<li>In una ciotola, sbatti le uova con lo zucchero fino a ottenere un composto chiaro e spumoso.</li>
-<li>Aggiungi l'olio e il latte, mescolando bene.</li>
-<li>In un'altra ciotola, setaccia la farina di carrube, il cacao, il lievito e il sale. Unisci gli ingredienti secchi a quelli umidi, mescolando fino a ottenere un impasto omogeneo.</li>
-<li>Versa l'impasto in una teglia imburrata e infarinata e cuoci in forno preriscaldato a 180°C per circa 30-35 minuti. Fai la prova dello stecchino per verificare la cottura.</li>
-</ul>
-<p>2. <strong>Preparare la crema di cachi</strong>:</p>
-<ul>
-<li>Sbuccia i cachi e frullali fino a ottenere una purea liscia.</li>
-<li>Monta la panna e incorporala delicatamente alla purea di cachi. Aggiungi lo zucchero se desideri un sapore più dolce.</li>
-</ul>
-<p>3. <strong>Assemblare la torta</strong>:</p>
-<ul>
-<li>Una volta che la torta è fredda, tagliala a metà e farciscila con la crema di cachi. Aggiungi i chicchi di melograno all'interno.</li>
-<li>Copri con l'altra metà della torta e decora la superficie con altra crema di cachi e chicchi di melograno.</li>
-</ul>
-<p>4. <strong>Servire</strong>:</p>
-<ul>
-<li>Lascia riposare in frigorifero per un'ora prima di servire per far amalgamare i sapori.</li>
+<li>150 g harina de algarroba</li>
+<li>50 g cacao en polvo</li>
+<li>200 g azúcar</li>
+<li>3 huevos</li>
+<li>100 ml aceite de semillas</li>
+<li>200 ml leche</li>
+<li>1 sobre levadura para dulces</li>
+<li>Una pizca de sal</li>
+<li>2 caquis maduros</li>
+<li>100 g azúcar para crema</li>
+<li>200 ml nata fresca</li>
+<li>Granos de granada para decorar</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparación</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Masa</strong>: bate los huevos con el azúcar hasta obtener una mezcla clara y espumosa. Añade aceite y leche mezclando bien.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Secos</strong>: en otro bol tamiza la harina de algarroba, el cacao, la levadura y la sal. Une los ingredientes secos a los húmedos removiendo hasta obtener una masa homogénea.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Horneado</strong>: vierte la masa en un molde engrasado y enharinado. Hornea a 180°C unos 30-35 minutos. Comprueba con un palillo.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Crema</strong>: pela los caquis y tritúralos hasta obtener un puré liso. Monta la nata e incorpórala delicadamente al puré con el azúcar.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Montaje</strong>: una vez fría, corta la torta por la mitad y rellénala con crema de caqui y granos de granada.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Sirve</strong>: cubre con la otra mitad y decora con crema y granada. Deja reposar en la nevera una hora antes de servir.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Consejo</h4>
+<p>La harina de algarroba aporta un sabor rústico y ligeramente dulce a la tarta. Perfecta para quien busca alternativas al cacao tradicional.</p>
+</div>
+</div>
+</div>
 
+<!-- PORTUGUESE -->
 <div id="lang-pt" class="lang-content">
-<p><strong>Data:</strong> 2024-11-06</p>
-<p><em>Traducao em portugues em breve...</em></p>
-<h3>Ingredienti</h3>
-<h4>Per la torta:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Bolo de Alfarroba com Creme de Diospiro</h2>
+<p class="recipe-date">📅 6 de Novembro de 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li>150 g di farina di carrube</li>
-<li>50 g di cacao in polvere</li>
-<li>200 g di zucchero</li>
-<li>3 uova</li>
-<li>100 ml di olio di semi</li>
-<li>200 ml di latte</li>
-<li>1 bustina di lievito per dolci</li>
-<li>Un pizzico di sale</li>
-</ul>
-<h4>Per la crema di cachi:</h4>
-<ul>
-<li>2 cachi maturi</li>
-<li>100 g di zucchero</li>
-<li>200 ml di panna fresca</li>
-</ul>
-<h4>Per la decorazione:</h4>
-<ul>
-<li>Chicchi di melograno</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparare la torta</strong>:</p>
-<ul>
-<li>In una ciotola, sbatti le uova con lo zucchero fino a ottenere un composto chiaro e spumoso.</li>
-<li>Aggiungi l'olio e il latte, mescolando bene.</li>
-<li>In un'altra ciotola, setaccia la farina di carrube, il cacao, il lievito e il sale. Unisci gli ingredienti secchi a quelli umidi, mescolando fino a ottenere un impasto omogeneo.</li>
-<li>Versa l'impasto in una teglia imburrata e infarinata e cuoci in forno preriscaldato a 180°C per circa 30-35 minuti. Fai la prova dello stecchino per verificare la cottura.</li>
-</ul>
-<p>2. <strong>Preparare la crema di cachi</strong>:</p>
-<ul>
-<li>Sbuccia i cachi e frullali fino a ottenere una purea liscia.</li>
-<li>Monta la panna e incorporala delicatamente alla purea di cachi. Aggiungi lo zucchero se desideri un sapore più dolce.</li>
-</ul>
-<p>3. <strong>Assemblare la torta</strong>:</p>
-<ul>
-<li>Una volta che la torta è fredda, tagliala a metà e farciscila con la crema di cachi. Aggiungi i chicchi di melograno all'interno.</li>
-<li>Copri con l'altra metà della torta e decora la superficie con altra crema di cachi e chicchi di melograno.</li>
-</ul>
-<p>4. <strong>Servire</strong>:</p>
-<ul>
-<li>Lascia riposare in frigorifero per un'ora prima di servire per far amalgamare i sapori.</li>
+<li>150 g farinha de alfarroba</li>
+<li>50 g cacau em pó</li>
+<li>200 g açúcar</li>
+<li>3 ovos</li>
+<li>100 ml óleo de sementes</li>
+<li>200 ml leite</li>
+<li>1 saqueta fermento para bolos</li>
+<li>Uma pitada de sal</li>
+<li>2 diospiros maduros</li>
+<li>100 g açúcar para creme</li>
+<li>200 ml natas frescas</li>
+<li>Grãos de romã para decorar</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparação</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Massa</strong>: bata os ovos com o açúcar até obter uma mistura clara e espumosa. Adicione óleo e leite mexendo bem.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Secos</strong>: noutra tigela peneire a farinha de alfarroba, o cacau, o fermento e o sal. Una os ingredientes secos aos húmidos mexendo até obter uma massa homogénea.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Cozedura</strong>: deite a massa numa forma untada e enfarinhada. Coza em forno pré-aquecido a 180°C cerca de 30-35 minutos. Verifique com um palito.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Creme</strong>: descasque os diospiros e triture até obter um puré liso. Bata as natas e envolva delicadamente no puré com o açúcar.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Montagem</strong>: uma vez frio, corte o bolo ao meio e recheie com creme de diospiro e grãos de romã.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Sirva</strong>: cubra com a outra metade e decore com creme e romã. Deixe repousar no frigorífico uma hora antes de servir.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Sugestão</h4>
+<p>A farinha de alfarroba confere um sabor rústico e ligeiramente doce ao bolo. Perfeita para quem procura alternativas ao cacau tradicional.</p>
+</div>
+</div>
+</div>
 
+<!-- GERMAN -->
 <div id="lang-de" class="lang-content">
-<p><strong>Datum:</strong> 2024-11-06</p>
-<p><em>Deutsche Uebersetzung folgt bald...</em></p>
-<h3>Ingredienti</h3>
-<h4>Per la torta:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Johannisbrot-Kuchen mit Sharon-Creme</h2>
+<p class="recipe-date">📅 7. November 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Zutaten</h3>
 <ul>
-<li>150 g di farina di carrube</li>
-<li>50 g di cacao in polvere</li>
-<li>200 g di zucchero</li>
-<li>3 uova</li>
-<li>100 ml di olio di semi</li>
-<li>200 ml di latte</li>
-<li>1 bustina di lievito per dolci</li>
-<li>Un pizzico di sale</li>
-</ul>
-<h4>Per la crema di cachi:</h4>
-<ul>
-<li>2 cachi maturi</li>
-<li>100 g di zucchero</li>
-<li>200 ml di panna fresca</li>
-</ul>
-<h4>Per la decorazione:</h4>
-<ul>
-<li>Chicchi di melograno</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparare la torta</strong>:</p>
-<ul>
-<li>In una ciotola, sbatti le uova con lo zucchero fino a ottenere un composto chiaro e spumoso.</li>
-<li>Aggiungi l'olio e il latte, mescolando bene.</li>
-<li>In un'altra ciotola, setaccia la farina di carrube, il cacao, il lievito e il sale. Unisci gli ingredienti secchi a quelli umidi, mescolando fino a ottenere un impasto omogeneo.</li>
-<li>Versa l'impasto in una teglia imburrata e infarinata e cuoci in forno preriscaldato a 180°C per circa 30-35 minuti. Fai la prova dello stecchino per verificare la cottura.</li>
-</ul>
-<p>2. <strong>Preparare la crema di cachi</strong>:</p>
-<ul>
-<li>Sbuccia i cachi e frullali fino a ottenere una purea liscia.</li>
-<li>Monta la panna e incorporala delicatamente alla purea di cachi. Aggiungi lo zucchero se desideri un sapore più dolce.</li>
-</ul>
-<p>3. <strong>Assemblare la torta</strong>:</p>
-<ul>
-<li>Una volta che la torta è fredda, tagliala a metà e farciscila con la crema di cachi. Aggiungi i chicchi di melograno all'interno.</li>
-<li>Copri con l'altra metà della torta e decora la superficie con altra crema di cachi e chicchi di melograno.</li>
-</ul>
-<p>4. <strong>Servire</strong>:</p>
-<ul>
-<li>Lascia riposare in frigorifero per un'ora prima di servire per far amalgamare i sapori.</li>
+<li>150 g Johannisbrotmehl</li>
+<li>50 g Kakaopulver</li>
+<li>200 g Zucker</li>
+<li>3 Eier</li>
+<li>100 ml Samenöl</li>
+<li>200 ml Milch</li>
+<li>1 Päckchen Backpulver</li>
+<li>Eine Prise Salz</li>
+<li>2 reife Sharonfrüchte</li>
+<li>100 g Zucker für Creme</li>
+<li>200 ml frische Sahne</li>
+<li>Granatapfelkerne zum Garnieren</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Zubereitung</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Teig</strong>: Eier mit Zucker schaumig schlagen. Öl und Milch hinzufügen und gut verrühren.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Trockene Zutaten</strong>: Johannisbrotmehl, Kakao, Backpulver und Salz in eine andere Schüssel sieben. Trockene und feuchte Zutaten vermengen bis ein glatter Teig entsteht.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Backen</strong>: Teig in eine gefettete und bemehlte Form füllen. Im vorgeheizten Ofen bei 180°C ca. 30-35 Minuten backen. Mit Holzstäbchen prüfen.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Creme</strong>: Sharonfrüchte schälen und zu einem glatten Püree mixen. Sahne steif schlagen und vorsichtig unter das Püree mit Zucker heben.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Zusammenbauen</strong>: ausgekühlten Kuchen halbieren und mit Sharon-Creme und Granatapfelkernen füllen.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Servieren</strong>: mit der oberen Hälfte bedecken und mit Creme und Granatapfel dekorieren. Vor dem Servieren eine Stunde im Kühlschrank ruhen lassen.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Tipp</h4>
+<p>Johannisbrotmehl verleiht dem Kuchen einen rustikalen und leicht süßlichen Geschmack. Perfekt für alle, die nach Alternativen zu traditionellem Kakao suchen.</p>
+</div>
+</div>
+</div>
 
+<!-- GREEK -->
 <div id="lang-el" class="lang-content">
-<p><strong>Hmerominia:</strong> 2024-11-06</p>
-<p><em>E elliniki metafrasi erhetai syntoma...</em></p>
-<h3>Ingredienti</h3>
-<h4>Per la torta:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Κέικ από Χαρούπι με Κρέμα Λωτού</h2>
+<p class="recipe-date">📅 6 Νοεμβρίου 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Υλικά</h3>
 <ul>
-<li>150 g di farina di carrube</li>
-<li>50 g di cacao in polvere</li>
-<li>200 g di zucchero</li>
-<li>3 uova</li>
-<li>100 ml di olio di semi</li>
-<li>200 ml di latte</li>
-<li>1 bustina di lievito per dolci</li>
-<li>Un pizzico di sale</li>
-</ul>
-<h4>Per la crema di cachi:</h4>
-<ul>
-<li>2 cachi maturi</li>
-<li>100 g di zucchero</li>
-<li>200 ml di panna fresca</li>
-</ul>
-<h4>Per la decorazione:</h4>
-<ul>
-<li>Chicchi di melograno</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparare la torta</strong>:</p>
-<ul>
-<li>In una ciotola, sbatti le uova con lo zucchero fino a ottenere un composto chiaro e spumoso.</li>
-<li>Aggiungi l'olio e il latte, mescolando bene.</li>
-<li>In un'altra ciotola, setaccia la farina di carrube, il cacao, il lievito e il sale. Unisci gli ingredienti secchi a quelli umidi, mescolando fino a ottenere un impasto omogeneo.</li>
-<li>Versa l'impasto in una teglia imburrata e infarinata e cuoci in forno preriscaldato a 180°C per circa 30-35 minuti. Fai la prova dello stecchino per verificare la cottura.</li>
-</ul>
-<p>2. <strong>Preparare la crema di cachi</strong>:</p>
-<ul>
-<li>Sbuccia i cachi e frullali fino a ottenere una purea liscia.</li>
-<li>Monta la panna e incorporala delicatamente alla purea di cachi. Aggiungi lo zucchero se desideri un sapore più dolce.</li>
-</ul>
-<p>3. <strong>Assemblare la torta</strong>:</p>
-<ul>
-<li>Una volta che la torta è fredda, tagliala a metà e farciscila con la crema di cachi. Aggiungi i chicchi di melograno all'interno.</li>
-<li>Copri con l'altra metà della torta e decora la superficie con altra crema di cachi e chicchi di melograno.</li>
-</ul>
-<p>4. <strong>Servire</strong>:</p>
-<ul>
-<li>Lascia riposare in frigorifero per un'ora prima di servire per far amalgamare i sapori.</li>
+<li>150 γραμμ. αλεύρι χαρουπιού</li>
+<li>50 γραμμ. κακάο σε σκόνη</li>
+<li>200 γραμμ. ζάχαρη</li>
+<li>3 αυγά</li>
+<li>100 ml λάδι σπορέλαιο</li>
+<li>200 ml γάλα</li>
+<li>1 φακελάκι μπέικιν πάουντερ</li>
+<li>Μια πρέζα αλάτι</li>
+<li>2 ώριμοι λωτοί</li>
+<li>100 γραμμ. ζάχαρη για κρέμα</li>
+<li>200 ml φρέσκια κρέμα γάλακτος</li>
+<li>Σπόρια ροδιού για γαρνίρισμα</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Εκτέλεση</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Ζυμάρι</strong>: χτυπήστε τα αυγά με τη ζάχαρη μέχρι να γίνει αφράτο και λευκό μείγμα. Προσθέστε λάδι και γάλα ανακατεύοντας καλά.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Στεγνά υλικά</strong>: σε άλλο μπολ κοσκινίστε το αλεύρι χαρουπιού, το κακάο, το μπέικιν και το αλάτι. Αναμείξτε τα στεγνά με τα υγρά υλικά ανακατεύοντας μέχρι να γίνει λείο.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Ψήσιμο</strong>: ρίξτε το ζυμάρι σε βουτυρωμένο και αλευρωμένο ταψί. Ψήστε σε προθερμασμένο φούρνο στους 180°C για περίπου 30-35 λεπτά. Ελέγξτε με ξυλάκι.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Κρέμα</strong>: ξεφλουδίστε τους λωτούς και πολτοποιήστε τους μέχρι να γίνει λείο πουρέ. Χτυπήστε την κρέμα γάλακτος και ενσωματώστε την απαλά στο πουρέ με τη ζάχαρη.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Συναρμολόγηση</strong>: όταν κρυώσει, κόψτε το κέικ στη μέση και γεμίστε το με κρέμα λωτού και σπόρια ροδιού.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Σερβίρετε</strong>: καλύψτε με το πάνω μέρος και στολίστε με κρέμα και ρόδι. Αφήστε στο ψυγείο μια ώρα πριν το σερβίρετε.</div></div>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+<div class="tip-box">
+<h4>💡 Συμβουλή</h4>
+<p>Το αλεύρι χαρουπιού προσδίδει στο κέικ μια ρουστίκ και ελαφρώς γλυκιά γεύση. Ιδανικό για όσους αναζητούν εναλλακτικές στο παραδοσιακό κακάο.</p>
+</div>
+</div>
+</div>
 
 <div class="footer">
-<p>Leguminando - Ricette di stagione a base di legumi</p>
-<p>"Tutto e iniziato con hummus di ceci..."</p>
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<p>"Tutto è iniziato con hummus di ceci..."</p>
 </div>
-
-<script>
-function toggleFav(path, title) {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    if (favs[path]) { delete favs[path]; }
-    else { favs[path] = title; }
-    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
-    updateFavIcons();
-}
-function updateFavIcons() {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    document.querySelectorAll('.fav-btn').forEach(btn => {
-        let p = btn.getAttribute('data-path');
-        btn.textContent = favs[p] ? '❤️' : '🤍';
-    });
-}
-document.addEventListener('DOMContentLoaded', updateFavIcons);
-</script>
+</div>
 </body>
 </html>
