@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salmone Impanato con Hummus di Ceci | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.header h1 { margin: 0; font-size: 2em; }
+.lang-tabs { display: flex; gap: 5px; margin: 20px 0; flex-wrap: wrap; justify-content: center; }
+.lang-tabs button { padding: 8px 16px; border: none; border-radius: 20px; background: #8B4513; color: white; cursor: pointer; font-size: 0.9em; }
+.lang-tabs button.active { background: #D2691E; }
+.lang-tabs button:hover { background: #D2691E; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+.content { background: white; padding: 30px; border-radius: 10px; margin-bottom: 20px; }
+.content h1 { color: #8B4513; margin-top: 0; }
+.content h2 { color: #D2691E; }
+.content h3 { color: #8B4513; }
+.content h4 { color: #D2691E; }
+.content ul { margin: 15px 0; padding-left: 20px; }
+.content li { margin: 8px 0; }
+.ingredients-box { background: #fef5e6; border-left: 4px solid #D2691E; padding: 15px 20px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+.ingredients-box h4 { margin-top: 0; color: #8B4513; }
+.steps { counter-reset: step; }
+.step { margin: 15px 0; padding-left: 40px; position: relative; }
+.step::before { counter-increment: step; content: counter(step); position: absolute; left: 0; top: 0; background: #8B4513; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em; }
+.step strong { color: #8B4513; }
+.tips { background: #e8f5e9; border-left: 4px solid #4CAF50; padding: 15px 20px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+.tips h4 { margin-top: 0; color: #2E7D32; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+.back-link:hover { background: #D2691E; }
+.fav-btn { cursor: pointer; font-size: 1.5em; display: inline-block; margin: 0 8px; vertical-align: middle; transition: transform 0.2s; }
+.fav-btn:hover { transform: scale(1.2); }
+</style>
+</head>
+<body>
+<div class="header">
+<h1>🫘 Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<div class="lang-tabs">
+<button class="lang-btn active" onclick="switchLang('IT')">IT 🇮🇹</button>
+<button class="lang-btn" onclick="switchLang('EN')">EN 🇬🇧</button>
+<button class="lang-btn" onclick="switchLang('FR')">FR 🇫🇷</button>
+<button class="lang-btn" onclick="switchLang('DE')">DE 🇩🇪</button>
+<button class="lang-btn" onclick="switchLang('ES')">ES 🇪🇸</button>
+<button class="lang-btn" onclick="switchLang('EL')">EL 🇬🇷</button>
+</div>
+
+<img src="049.jpg" alt="Salmone Impanato con Hummus di Ceci" class="recipe-image">
+
+<!-- ITALIANO -->
+<div id="IT" class="tab-content active">
+<div class="content">
+<h1>Salmone Impanato con Hummus di Ceci</h1>
+<p><strong>📅 Data:</strong> 2024-11-08 | <strong>🫘 Stagione:</strong> Autunno</p>
+<div class="ingredients-box">
+<h4>📝 Per il salmone impanato:</h4>
+<ul>
+<li>4 filetti di salmone affumicato</li>
+<li>100 g di farina di lenticchie nere</li>
+<li>100 g di farina di lenticchie rosse</li>
+<li>2 uova</li>
+<li>100 g di pangrattato</li>
+<li>Sale e pepe q.b.</li>
+<li>Olio extravergine d'oliva per friggere</li>
+</ul>
+<h4>📝 Per l'hummus di ceci:</h4>
+<ul>
+<li>400 g di ceci precotti (in scatola o cotti in casa)</li>
+<li>2 cucchiai di tahini</li>
+<li>1 spicchio d'aglio</li>
+<li>Succo di 1 limone</li>
+<li>2 cucchiai di olio extravergine d'oliva</li>
+<li>Sale q.b.</li>
+<li>Acqua q.b. (per ottenere la consistenza desiderata)</li>
+<li>Paprika dolce e prezzemolo fresco per guarnire (opzionale)</li>
+</ul>
+</div>
+<div class="steps">
+<div class="step"><strong>Hummus di ceci:</strong> Scolate e risciacquate i ceci. In un frullatore, unite i ceci, il tahini, l'aglio, il succo di limone, l'olio d'oliva e un pizzico di sale. Frullate fino a ottenere una crema liscia. Se necessario, aggiungete un po' d'acqua per raggiungere la consistenza desiderata. Assaggiate e regolate di sale o limone. Trasferite l'hummus in una ciotola e guarnite con paprika dolce e prezzemolo fresco.</div>
+<div class="step"><strong>Preparare l'impanatura:</strong> In tre piatti separati, preparate la farina di lenticchie nere, le uova sbattute e il pangrattato. Condite la farina di lenticchie con sale e pepe.</div>
+<div class="step"><strong>Impanare il salmone:</strong> Prendete un filetto di salmone e passatelo nella farina di lenticchie, quindi immergetelo nelle uova sbattute e infine nel pangrattato, premendo bene per farlo aderire. Ripetete l'operazione per tutti i filetti.</div>
+<div class="step"><strong>Friggere:</strong> In una padella, scaldate l'olio extravergine d'oliva e friggete i filetti di salmone impanati fino a doratura, circa 3-4 minuti per lato. Scolate su carta assorbente per eliminare l'olio in eccesso.</div>
+<div class="step"><strong>Servire:</strong> Servite i filetti di salmone impanati su un piatto con una generosa porzione di hummus di ceci a fianco. Accompagnate con fette di limone e una spruzzata di pepe nero per un tocco di freschezza.</div>
+</div>
+</div>
+</div>
+
+<!-- ENGLISH -->
+<div id="EN" class="tab-content">
+<div class="content">
+<h1>Breaded Salmon with Chickpea Hummus</h1>
+<p><strong>📅 Date:</strong> 2024-11-08 | <strong>🫘 Season:</strong> Autumn</p>
+<div class="ingredients-box">
+<h4>📝 For the breaded salmon:</h4>
+<ul>
+<li>4 smoked salmon fillets</li>
+<li>100 g black lentil flour</li>
+<li>100 g red lentil flour</li>
+<li>2 eggs</li>
+<li>100 g breadcrumbs</li>
+<li>Salt and pepper to taste</li>
+<li>Extra virgin olive oil for frying</li>
+</ul>
+<h4>📝 For the chickpea hummus:</h4>
+<ul>
+<li>400 g pre-cooked chickpeas (canned or home-cooked)</li>
+<li>2 tablespoons tahini</li>
+<li>1 garlic clove</li>
+<li>Juice of 1 lemon</li>
+<li>2 tablespoons extra virgin olive oil</li>
+<li>Salt to taste</li>
+<li>Water as needed (to reach desired consistency)</li>
+<li>Sweet paprika and fresh parsley for garnish (optional)</li>
+</ul>
+</div>
+<div class="steps">
+<div class="step"><strong>Chickpea hummus:</strong> Drain and rinse the chickpeas. In a blender, combine chickpeas, tahini, garlic, lemon juice, olive oil and a pinch of salt. Blend until smooth. Add a little water if needed to reach desired consistency. Taste and adjust salt or lemon. Transfer hummus to a bowl and garnish with sweet paprika and fresh parsley.</div>
+<div class="step"><strong>Prepare the coating:</strong> In three separate plates, place the black lentil flour, beaten eggs and breadcrumbs. Season the lentil flour with salt and pepper.</div>
+<div class="step"><strong>Bread the salmon:</strong> Take one salmon fillet and dredge it in the lentil flour, then dip it in the beaten eggs and finally coat with breadcrumbs, pressing well to make it adhere. Repeat for all fillets.</div>
+<div class="step"><strong>Fry:</strong> In a pan, heat extra virgin olive oil and fry the breaded salmon fillets until golden, about 3-4 minutes per side. Drain on paper towels to remove excess oil.</div>
+<div class="step"><strong>Serve:</strong> Serve the breaded salmon fillets on a plate with a generous portion of chickpea hummus alongside. Accompany with lemon wedges and a sprinkle of black pepper for a touch of freshness.</div>
+</div>
+</div>
+</div>
+
+<!-- FRANÇAIS -->
+<div id="FR" class="tab-content">
+<div class="content">
+<h1>Saumon Pané avec Houmous de Pois Chiches</h1>
+<p><strong>📅 Date:</strong> 08-11-2024 | <strong>🫘 Saison:</strong> Automne</p>
+<div class="ingredients-box">
+<h4>📝 Pour le saumon pané:</h4>
+<ul>
+<li>4 filets de saumon fumé</li>
+<li>100 g de farine de lentilles noires</li>
+<li>100 g de farine de lentilles rouges</li>
+<li>2 œufs</li>
+<li>100 g de chapelure</li>
+<li>Sel et poivre q.s.</li>
+<li>Huile d'olive extra vierge pour frire</li>
+</ul>
+<h4>📝 Pour le houmous de pois chiches:</h4>
+<ul>
+<li>400 g de pois chiches précuits (en conserve ou cuits maison)</li>
+<li>2 cuillères à soupe de tahini</li>
+<li>1 gousse d'ail</li>
+<li>Jus d'1 citron</li>
+<li>2 cuillères à soupe d'huile d'olive extra vierge</li>
+<li>Sel q.s.</li>
+<li>Eau q.s. (pour obtenir la consistance désirée)</li>
+<li>Paprika douce et persil frais pour garnir (facultatif)</li>
+</ul>
+</div>
+<div class="steps">
+<div class="step"><strong>Houmous de pois chiches:</strong> Égouttez et rincez les pois chiches. Dans un mixeur, combinez les pois chiches, le tahini, l'ail, le jus de citron, l'huile d'olive et une pincée de sel. Mixez jusqu'à obtenir une crème lisse. Ajoutez un peu d'eau si nécessaire. Goûtez et ajustez le sel ou le citron. Transférez dans un bol et garnissez de paprika douce et de persil frais.</div>
+<div class="step"><strong>Préparer la panure:</strong> Dans trois assiettes séparées, placez la farine de lentilles noires, les œufs battus et la chapelure. Assaisonnez la farine de sel et de poivre.</div>
+<div class="step"><strong>Paner le saumon:</strong> Prenez un filet de saumon et passez-le dans la farine de lentilles, puis dans les œufs battus et enfin dans la chapelure, en appuyant bien pour faire adhérer. Répétez pour tous les filets.</div>
+<div class="step"><strong>Frire:</strong> Dans une poêle, faites chauffer l'huile d'olive extra vierge et faites frire les filets de saumon panés jusqu'à dorure, environ 3-4 minutes de chaque côté. Égouttez sur du papier absorbant.</div>
+<div class="step"><strong>Servir:</strong> Servez les filets de saumon panés sur une assiette avec une généreuse portion de houmous de pois chiches à côté. Accompagnez de quartiers de citron et d'une pincée de poivre noir.</div>
+</div>
+</div>
+</div>
+
+<!-- DEUTSCH -->
+<div id="DE" class="tab-content">
+<div class="content">
+<h1>Panierter Lachs mit Kichererbsenhummus</h1>
+<p><strong>📅 Datum:</strong> 08.11.2024 | <strong>🫘 Saison:</strong> Herbst</p>
+<div class="ingredients-box">
+<h4>📝 Für den panierten Lachs:</h4>
+<ul>
+<li>4 geräucherte Lachsfilets</li>
+<li>100 g schwarzes Linsenmehl</li>
+<li>100 g rotes Linsenmehl</li>
+<li>2 Eier</li>
+<li>100 g Paniermehl</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Natives Olivenöl extra zum Braten</li>
+</ul>
+<h4>📝 Für den Kichererbsenhummus:</h4>
+<ul>
+<li>400 g vorgekochte Kichererbsen (Dose oder selbst gekocht)</li>
+<li>2 Esslöffel Tahini</li>
+<li>1 Knoblauchzehe</li>
+<li>Saft von 1 Zitrone</li>
+<li>2 Esslöffel natives Olivenöl extra</li>
+<li>Salz nach Geschmack</li>
+<li>Wasser nach Bedarf (für die gewünschte Konsistenz)</li>
+<li>Süßes Paprika und frische Petersilie zum Garnieren (optional)</li>
+</ul>
+</div>
+<div class="steps">
+<div class="step"><strong>Kichererbsenhummus:</strong> Kichererbsen abtropfen und abspülen. Kichererbsen, Tahini, Knoblauch, Zitronensaft, Olivenöl und eine Prise Salz in einen Mixer geben. Mixen, bis eine glatte Creme entsteht. Bei Bedarf etwas Wasser zugeben. Abschmecken und mit süßem Paprika und frischer Petersilie garnieren.</div>
+<div class="step"><strong>Die Panade vorbereiten:</strong> Das schwarze Linsenmehl, die verquirlten Eier und das Paniermehl auf drei separaten Tellern anrichten. Das Linsenmehl mit Salz und Pfeffer würzen.</div>
+<div class="step"><strong>Den Lachs panieren:</strong> Ein Lachsfilet im Linsenmehl wenden, dann in den Eiern und zuletzt im Paniermehl wälzen, dabei gut andrücken. Für alle Filets wiederholen.</div>
+<div class="step"><strong>Braten:</strong> Olivenöl in einer Pfanne erhitzen und die panierten Lachsfilets goldbraun braten, etwa 3-4 Minuten pro Seite. Auf Küchenpapier abtropfen lassen.</div>
+<div class="step"><strong>Servieren:</strong> Die panierten Lachsfilets auf einem Teller mit einer großzügigen Portion Kichererbsenhummus servieren. Mit Zitronenspalten und einer Prise schwarzen Pfeffers garnieren.</div>
+</div>
+</div>
+</div>
+
+<!-- ESPAÑOL -->
+<div id="ES" class="tab-content">
+<div class="content">
+<h1>Salmón Empanado con Hummus de Garbanzos</h1>
+<p><strong>📅 Fecha:</strong> 08-11-2024 | <strong>🫘 Temporada:</strong> Otoño</p>
+<div class="ingredients-box">
+<h4>📝 Para el salmón empanado:</h4>
+<ul>
+<li>4 filetes de salmón ahumado</li>
+<li>100 g de harina de lentejas negras</li>
+<li>100 g de harina de lentejas rojas</li>
+<li>2 huevos</li>
+<li>100 g de pan rallado</li>
+<li>Sal y pimienta al gusto</li>
+<li>Aceite de oliva virgen extra para freír</li>
+</ul>
+<h4>📝 Para el hummus de garbanzos:</h4>
+<ul>
+<li>400 g de garbanzos precocidos (de lata o cocidos en casa)</li>
+<li>2 cucharadas de tahini</li>
+<li>1 diente de ajo</li>
+<li>Zumo de 1 limón</li>
+<li>2 cucharadas de aceite de oliva virgen extra</li>
+<li>Sal al gusto</li>
+<li>Agua según sea necesario (para obtener la consistencia deseada)</li>
+<li>Pimentón dulce y perejil fresco para decorar (opcional)</li>
+</ul>
+</div>
+<div class="steps">
+<div class="step"><strong>Hummus de garbanzos:</strong> Escurrir y enjuagar los garbanzos. En una batidora, unir garbanzos, tahini, ajo, zumo de limón, aceite de oliva y una pizca de sal. Batir hasta obtener una crema suave. Añadir un poco de agua si es necesario. Probar y ajustar de sal o limón. Transferir a un bol y decorar con pimentón dulce y perejil fresco.</div>
+<div class="step"><strong>Preparar el empanado:</strong> En tres platos separados, poner la harina de lentejas negras, los huevos batidos y el pan rallado. Sazonar la harina de lentejas con sal y pimienta.</div>
+<div class="step"><strong>Empanar el salmón:</strong> Tomar un filete de salmón y pasarlo por la harina de lentejas, luego por los huevos batidos y finalmente por el pan rallado, presionando bien para que adhiera. Repetir con todos los filetes.</div>
+<div class="step"><strong>Freír:</strong> En una sartén, calentar aceite de oliva virgen extra y freír los filetes de salmón empanados hasta que estén dorados, unos 3-4 minutos por cada lado. Escurrir sobre papel absorbente.</div>
+<div class="step"><strong>Servir:</strong> Servir los filetes de salmón empanados en un plato con una generosa porción de hummus de garbanzos al lado. Acompañar con rodajas de limón y una pizca de pimienta negra.</div>
+</div>
+</div>
+</div>
+
+<!-- ΕΛΛΗΝΙΚΑ -->
+<div id="EL" class="tab-content">
+<div class="content">
+<h1>Παναρισμένος Σολομός με Χούμους Ρεβιθιών</h1>
+<p><strong>📅 Ημερομηνία:</strong> 08-11-2024 | <strong>🫘 Εποχή:</strong> Φθινόπωρο</p>
+<div class="ingredients-box">
+<h4>📝 Για τον παναρισμένο σολομό:</h4>
+<ul>
+<li>4 φιλέτα καπνιστού σολομού</li>
+<li>100 γρ. αλεύρι μαύρης φακής</li>
+<li>100 γρ. αλεύρι κόκκινης φακής</li>
+<li>2 αυγά</li>
+<li>100 γρ. τριμμένη φρυγανιά</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>Έξτρα παρθένο ελαιόλαδο για τηγάνισμα</li>
+</ul>
+<h4>📝 Για το χούμους ρεβιθιών:</h4>
+<ul>
+<li>400 γρ. προμαγειρεμένα ρεβίθια (κονσέρβα ή σπιτικά)</li>
+<li>2 κουταλιές της σούπας ταχίνι</li>
+<li>1 σκελίδα σκόρδο</li>
+<li>Χυμός 1 λεμονιού</li>
+<li>2 κουταλιές της σούπας έξτρα παρθένο ελαιόλαδο</li>
+<li>Αλάτι κατά βούληση</li>
+<li>Νερό όσο χρειάζεται (για την επιθυμητή υφή)</li>
+<li>Γλυκιά πάπρικα και φρέσκο μαϊντανό για γαρνίρισμα (προαιρετικά)</li>
+</ul>
+</div>
+<div class="steps">
+<div class="step"><strong>Χούμους ρεβιθιών:</strong> Στραγγίστε και ξεπλύνετε τα ρεβίθια. Σε ένα μπλέντερ, βάλτε τα ρεβίθια, το ταχίνι, το σκόρδο, το χυμό λεμονιού, το ελαιόλαδο και μια πρέζα αλάτι. Χτυπήστε μέχρι να γίνει λείο. Προσθέστε λίγο νερό αν χρειάζεται. Δοκιμάστε και ρυθμίστε το αλάτι ή το λεμόνι. Μεταφέρετε σε μπολ και γαρνίρετε με γλυκιά πάπρικα και φρέσκο μαϊντανό.</div>
+<div class="step"><strong>Προετοιμάστε την επικάλυψη:</strong> Σε τρία ξεχωριστά πιάτα, βάλτε το αλεύρι μαύρης φακής, τα χτυπημένα αυγά και την τριμμένη φρυγανιά. Αλατοπιπερώστε το αλεύρι φακής.</div>
+<div class="step"><strong>Πανάρετε τον σολομό:</strong> Πάρτε ένα φιλέτο σολομού και περάστε το από το αλεύρι φακής, μετά από τα αυγά και τέλος από τη φρυγανιά, πιέζοντας καλά για να κολλήσει. Επαναλάβετε για όλα τα φιλέτα.</div>
+<div class="step"><strong>Τηγανίστε:</strong> Σε ένα τηγάνι, ζεστάνετε ελαιόλαδο και τηγανίστε τα παναρισμένα φιλέτα σολομού μέχρι να ροδίσουν, περίπου 3-4 λεπτά από κάθε πλευρά. Στραγγίστε σε απορροφητικό χαρτί.</div>
+<div class="step"><strong>Σερβίρετε:</strong> Σερβίρετε τα παναρισμένα φιλέτα σολομού σε ένα πιάτο με μια γενναιόδωρη μερίδα χούμους ρεβιθιών στο πλάι. Συνοδεύστε με φέτες λεμονιού και μια πρέζα μαύρου πιπεριού.</div>
+</div>
+</div>
+</div>
+
+<a href="../index.html" class="back-link">← Torna alla Home</a>
+<span class="fav-btn" data-path="extra/autunno/049.html" data-title="Salmone Impanato con Hummus di Ceci" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<p>"Tutto è iniziato con hummus di ceci..."</p>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById(lang).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>

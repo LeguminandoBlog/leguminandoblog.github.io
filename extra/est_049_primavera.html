@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grigliata Vegetale con Hummus di Ceci e Lenticchie | Leguminando</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
+.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+.header h1 { margin: 0; font-size: 2em; }
+.lang-tabs { display: flex; gap: 5px; margin: 20px 0; flex-wrap: wrap; justify-content: center; }
+.lang-tabs button { padding: 8px 16px; border: none; border-radius: 20px; background: #8B4513; color: white; cursor: pointer; font-size: 0.9em; }
+.lang-tabs button.active { background: #D2691E; }
+.lang-tabs button:hover { background: #D2691E; }
+.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+.content { background: white; padding: 30px; border-radius: 10px; margin-bottom: 20px; }
+.content h1 { color: #8B4513; margin-top: 0; }
+.content h2 { color: #D2691E; }
+.content h3 { color: #8B4513; }
+.content h4 { color: #D2691E; }
+.content ul { margin: 15px 0; padding-left: 20px; }
+.content li { margin: 8px 0; }
+.ingredients-box { background: #fef5e6; border-left: 4px solid #D2691E; padding: 15px 20px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+.ingredients-box h4 { margin-top: 0; color: #8B4513; }
+.steps { counter-reset: step; }
+.step { margin: 15px 0; padding-left: 40px; position: relative; }
+.step::before { counter-increment: step; content: counter(step); position: absolute; left: 0; top: 0; background: #8B4513; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em; }
+.step strong { color: #8B4513; }
+.tips { background: #e8f5e9; border-left: 4px solid #4CAF50; padding: 15px 20px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+.tips h4 { margin-top: 0; color: #2E7D32; }
+.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
+.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+.back-link:hover { background: #D2691E; }
+.fav-btn { cursor: pointer; font-size: 1.5em; display: inline-block; margin: 0 8px; vertical-align: middle; transition: transform 0.2s; }
+.fav-btn:hover { transform: scale(1.2); }
+</style>
+</head>
+<body>
+<div class="header">
+<h1>🫘 Leguminando</h1>
+<p>Ricette di stagione a base di legumi</p>
+</div>
+
+<div class="lang-tabs">
+<button class="lang-btn active" onclick="switchLang('IT')">IT 🇮🇹</button>
+<button class="lang-btn" onclick="switchLang('EN')">EN 🇬🇧</button>
+<button class="lang-btn" onclick="switchLang('FR')">FR 🇫🇷</button>
+<button class="lang-btn" onclick="switchLang('DE')">DE 🇩🇪</button>
+<button class="lang-btn" onclick="switchLang('ES')">ES 🇪🇸</button>
+<button class="lang-btn" onclick="switchLang('EL')">EL 🇬🇷</button>
+</div>
+
+<img src="049.jpg" alt="Grigliata Vegetale con Hummus di Ceci e Lenticchie" class="recipe-image">
+
+<!-- ITALIANO -->
+<div id="IT" class="tab-content active">
+<div class="content">
+<h1>Grigliata Vegetale con Hummus di Ceci e Lenticchie</h1>
+<p><strong>📅 Data:</strong> 2025-04-26 | <strong>🫘 Stagione:</strong> Primavera</p>
+<div class="ingredients-box">
+<h4>📝 Per la grigliata vegetale:</h4>
+<ul>
+<li>2 peperoni (uno rosso e uno giallo)</li>
+<li>1 melanzana</li>
+<li>2 zucchine</li>
+<li>200 g di asparagi</li>
+<li>4 cucchiai di olio extravergine d'oliva</li>
+<li>2 spicchi d'aglio</li>
+<li>1 cucchiaino di origano secco</li>
+<li>Sale e pepe q.b.</li>
+</ul>
+<h4>📝 Per l'hummus di ceci:</h4>
+<ul>
+<li>400 g di ceci (cotti e scolati)</li>
+<li>Succo di 1 limone</li>
+<li>1 pizzico di zafferano</li>
+<li>2 cucchiai di tahina (pasta di sesamo)</li>
+<li>2 cucchiai di olio extravergine d'oliva</li>
+<li>Sale q.b.</li>
+<li>Acqua q.b. (per ottenere la consistenza desiderata)</li>
+</ul>
+<h4>📝 Per l'hummus di lenticchie e funghi porcini:</h4>
+<ul>
+<li>200 g di lenticchie (cotte e scolate)</li>
+<li>100 g di funghi porcini (cotti e tritati)</li>
+<li>2 cucchiai di tahina</li>
+<li>2 cucchiai di olio extravergine d'oliva</li>
+<li>Sale e pepe q.b.</li>
+<li>1 spicchio d'aglio (facoltativo)</li>
+<li>Acqua q.b. (per ottenere la consistenza desiderata)</li>
+</ul>
+</div>
+<div class="steps">
+<div class="step"><strong>Preparare la grigliata vegetale:</strong> Lavare e tagliare i peperoni a fette larghe, la melanzana e le zucchine a fette di circa 1 cm di spessore. Pulire gli asparagi, rimuovendo la parte legnosa. In una ciotola, mescolare l'olio d'oliva, l'aglio tritato, l'origano, il sale e il pepe. Aggiungere le verdure e mescolare bene per ricoprirle con il condimento. Grigliare le verdure su una griglia ben calda per circa 4-5 minuti per lato, fino a quando sono tenere e leggermente abbrustolite.</div>
+<div class="step"><strong>Preparare l'hummus di ceci:</strong> In un frullatore, unire i ceci, il succo di limone, lo zafferano, la tahina, l'olio d'oliva e un pizzico di sale. Frullare fino a ottenere una consistenza cremosa, aggiungendo acqua poco alla volta fino a raggiungere la consistenza desiderata.</div>
+<div class="step"><strong>Preparare l'hummus di lenticchie e funghi porcini:</strong> In un frullatore, unire le lenticchie, i funghi porcini tritati, la tahina, l'olio d'oliva e, se desiderato, uno spicchio d'aglio. Frullare fino a ottenere una consistenza cremosa, aggiungendo acqua poco alla volta fino a raggiungere la consistenza desiderata. Aggiustare di sale e pepe.</div>
+<div class="step"><strong>Servire:</strong> Disporre le verdure grigliate su un piatto da portata e servire con i due tipi di hummus a lato. Decorare con un filo d'olio d'oliva e, se desiderato, erbe fresche come prezzemolo o basilico.</div>
+</div>
+</div>
+</div>
+
+<!-- ENGLISH -->
+<div id="EN" class="tab-content">
+<div class="content">
+<h1>Grilled Vegetable Platter with Chickpea and Lentil Hummus</h1>
+<p><strong>📅 Date:</strong> 2025-04-26 | <strong>🫘 Season:</strong> Spring</p>
+<div class="ingredients-box">
+<h4>📝 For the grilled vegetables:</h4>
+<ul>
+<li>2 peppers (one red, one yellow)</li>
+<li>1 eggplant</li>
+<li>2 zucchini</li>
+<li>200 g asparagus</li>
+<li>4 tablespoons extra virgin olive oil</li>
+<li>2 garlic cloves</li>
+<li>1 teaspoon dried oregano</li>
+<li>Salt and pepper to taste</li>
+</ul>
+<h4>📝 For the chickpea hummus:</h4>
+<ul>
+<li>400 g chickpeas (cooked and drained)</li>
+<li>Juice of 1 lemon</li>
+<li>1 pinch of saffron</li>
+<li>2 tablespoons tahini (sesame paste)</li>
+<li>2 tablespoons extra virgin olive oil</li>
+<li>Salt to taste</li>
+<li>Water as needed (to reach desired consistency)</li>
+</ul>
+<h4>📝 For the lentil and porcini mushroom hummus:</h4>
+<ul>
+<li>200 g lentils (cooked and drained)</li>
+<li>100 g porcini mushrooms (cooked and minced)</li>
+<li>2 tablespoons tahini</li>
+<li>2 tablespoons extra virgin olive oil</li>
+<li>Salt and pepper to taste</li>
+<li>1 garlic clove (optional)</li>
+<li>Water as needed (to reach desired consistency)</li>
+</ul>
+</div>
+<div class="steps">
+<div class="step"><strong>Prepare the grilled vegetables:</strong> Wash and cut the peppers into wide strips, the eggplant and zucchini into 1 cm thick slices. Clean the asparagus, removing the woody part. In a bowl, mix olive oil, minced garlic, oregano, salt and pepper. Add the vegetables and toss well to coat. Grill on a hot grill for about 4-5 minutes per side, until tender and lightly charred.</div>
+<div class="step"><strong>Prepare the chickpea hummus:</strong> In a blender, combine chickpeas, lemon juice, saffron, tahini, olive oil and a pinch of salt. Blend until creamy, adding water gradually to reach desired consistency.</div>
+<div class="step"><strong>Prepare the lentil and porcini hummus:</strong> In a blender, combine lentils, minced porcini mushrooms, tahini, olive oil and, if desired, a garlic clove. Blend until creamy, adding water gradually to reach desired consistency. Adjust salt and pepper.</div>
+<div class="step"><strong>Serve:</strong> Arrange the grilled vegetables on a serving platter and serve with both types of hummus on the side. Decorate with a drizzle of olive oil and, if desired, fresh herbs like parsley or basil.</div>
+</div>
+</div>
+</div>
+
+<!-- FRANÇAIS -->
+<div id="FR" class="tab-content">
+<div class="content">
+<h1>Légumes Grillés avec Houmous de Pois Chiches et Lentilles</h1>
+<p><strong>📅 Date:</strong> 26-04-2025 | <strong>🫘 Saison:</strong> Printemps</p>
+<div class="ingredients-box">
+<h4>📝 Pour les légumes grillés:</h4>
+<ul>
+<li>2 poivrons (un rouge, un jaune)</li>
+<li>1 aubergine</li>
+<li>2 courgettes</li>
+<li>200 g d'asperges</li>
+<li>4 cuillères à soupe d'huile d'olive extra vierge</li>
+<li>2 gousses d'ail</li>
+<li>1 cuillère à café d'origan séché</li>
+<li>Sel et poivre q.s.</li>
+</ul>
+<h4>📝 Pour le houmous de pois chiches:</h4>
+<ul>
+<li>400 g de pois chiches (cuits et égouttés)</li>
+<li>Jus d'1 citron</li>
+<li>1 pincée de safran</li>
+<li>2 cuillères à soupe de tahini (pâte de sésame)</li>
+<li>2 cuillères à soupe d'huile d'olive extra vierge</li>
+<li>Sel q.s.</li>
+<li>Eau q.s. (pour obtenir la consistance désirée)</li>
+</ul>
+<h4>📝 Pour le houmous de lentilles et cèpes:</h4>
+<ul>
+<li>200 g de lentilles (cuites et égouttées)</li>
+<li>100 g de cèpes (cuits et hachés)</li>
+<li>2 cuillères à soupe de tahini</li>
+<li>2 cuillères à soupe d'huile d'olive extra vierge</li>
+<li>Sel et poivre q.s.</li>
+<li>1 gousse d'ail (facultatif)</li>
+<li>Eau q.s. (pour obtenir la consistance désirée)</li>
+</ul>
+</div>
+<div class="steps">
+<div class="step"><strong>Préparer les légumes grillés:</strong> Lavez et coupez les poivrons en larges lamelles, l'aubergine et les courgettes en tranches d'environ 1 cm d'épaisseur. Nettoyez les asperges en enlevant la partie ligneuse. Dans un bol, mélangez l'huile d'olive, l'ail haché, l'origan, le sel et le poivre. Ajoutez les légumes et mélangez bien pour les enrober. Faites griller sur une grille bien chaude environ 4-5 minutes de chaque côté, jusqu'à ce qu'ils soient tendres et légèrement grillés.</div>
+<div class="step"><strong>Préparer le houmous de pois chiches:</strong> Dans un mixeur, combinez les pois chiches, le jus de citron, le safran, le tahini, l'huile d'olive et une pincée de sel. Mixez jusqu'à obtenir une consistance crémeuse, en ajoutant de l'eau progressivement.</div>
+<div class="step"><strong>Préparer le houmous de lentilles et cèpes:</strong> Dans un mixeur, combinez les lentilles, les cèpes hachés, le tahini, l'huile d'olive et, si désiré, une gousse d'ail. Mixez jusqu'à obtenir une consistance crémeuse, en ajoutant de l'eau progressivement. Ajustez le sel et le poivre.</div>
+<div class="step"><strong>Servir:</strong> Disposez les légumes grillés sur un plat de service et servez avec les deux types de houmous à côté. Décorez avec un filet d'huile d'olive et, si désiré, des herbes fraîches comme du persil ou du basilic.</div>
+</div>
+</div>
+</div>
+
+<!-- DEUTSCH -->
+<div id="DE" class="tab-content">
+<div class="content">
+<h1>Gegrilltes Gemüse mit Kichererbsen- und Linsenhummus</h1>
+<p><strong>📅 Datum:</strong> 26.04.2025 | <strong>🫘 Saison:</strong> Frühling</p>
+<div class="ingredients-box">
+<h4>📝 Für das gegrillte Gemüse:</h4>
+<ul>
+<li>2 Paprika (eine rot, eine gelb)</li>
+<li>1 Aubergine</li>
+<li>2 Zucchini</li>
+<li>200 g Spargel</li>
+<li>4 Esslöffel natives Olivenöl extra</li>
+<li>2 Knoblauchzehen</li>
+<li>1 Teelöffel getrockneter Oregano</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+</ul>
+<h4>📝 Für den Kichererbsenhummus:</h4>
+<ul>
+<li>400 g Kichererbsen (gekocht und abgetropft)</li>
+<li>Saft von 1 Zitrone</li>
+<li>1 Prise Safran</li>
+<li>2 Esslöffel Tahini (Sesampaste)</li>
+<li>2 Esslöffel natives Olivenöl extra</li>
+<li>Salz nach Geschmack</li>
+<li>Wasser nach Bedarf (für die gewünschte Konsistenz)</li>
+</ul>
+<h4>📝 Für den Linsen-Steinpilz-Hummus:</h4>
+<ul>
+<li>200 g Linsen (gekocht und abgetropft)</li>
+<li>100 g Steinpilze (gekocht und gehackt)</li>
+<li>2 Esslöffel Tahini</li>
+<li>2 Esslöffel natives Olivenöl extra</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>1 Knoblauchzehe (optional)</li>
+<li>Wasser nach Bedarf (für die gewünschte Konsistenz)</li>
+</ul>
+</div>
+<div class="steps">
+<div class="step"><strong>Das gegrillte Gemüse zubereiten:</strong> Waschen Sie das Gemüse und schneiden Sie die Paprika in breite Streifen, Aubergine und Zucchini in 1 cm dicke Scheiben. Den Spargel putzen und das holzige Ende entfernen. In einer Schüssel Olivenöl, gehackten Knoblauch, Oregano, Salz und Pfeffer vermischen. Das Gemüse hinzufügen und gut durchmischen. Auf einem heißen Grill etwa 4-5 Minuten pro Seite grillen, bis es weich und leicht angebräunt ist.</div>
+<div class="step"><strong>Den Kichererbsenhummus zubereiten:</strong> Kichererbsen, Zitronensaft, Safran, Tahini, Olivenöl und eine Prise Salz in einen Mixer geben. Mixen, bis eine cremige Konsistenz entsteht, dabei nach und nach Wasser zugeben.</div>
+<div class="step"><strong>Den Linsen-Steinpilz-Hummus zubereiten:</strong> Linsen, gehackte Steinpilze, Tahini, Olivenöl und optional eine Knoblauchzehe in einen Mixer geben. Mixen, bis eine cremige Konsistenz entsteht, dabei nach und nach Wasser zugeben. Mit Salz und Pfeffer abschmecken.</div>
+<div class="step"><strong>Servieren:</strong> Das gegrillte Gemüse auf einer Servierplatte anrichten und mit beiden Hummus-Sorten servieren. Mit einem Spritzer Olivenöl und frischen Kräutern wie Petersilie oder Basilikum garnieren.</div>
+</div>
+</div>
+</div>
+
+<!-- ESPAÑOL -->
+<div id="ES" class="tab-content">
+<div class="content">
+<h1>Verduras a la Parrilla con Hummus de Garbanzos y Lentejas</h1>
+<p><strong>📅 Fecha:</strong> 26-04-2025 | <strong>🫘 Temporada:</strong> Primavera</p>
+<div class="ingredients-box">
+<h4>📝 Para las verduras a la parrilla:</h4>
+<ul>
+<li>2 pimientos (uno rojo y uno amarillo)</li>
+<li>1 berenjena</li>
+<li>2 calabacines</li>
+<li>200 g de espárragos</li>
+<li>4 cucharadas de aceite de oliva virgen extra</li>
+<li>2 dientes de ajo</li>
+<li>1 cucharadita de orégano seco</li>
+<li>Sal y pimienta al gusto</li>
+</ul>
+<h4>📝 Para el hummus de garbanzos:</h4>
+<ul>
+<li>400 g de garbanzos (cocidos y escurridos)</li>
+<li>Zumo de 1 limón</li>
+<li>1 pizca de azafrán</li>
+<li>2 cucharadas de tahini (pasta de sésamo)</li>
+<li>2 cucharadas de aceite de oliva virgen extra</li>
+<li>Sal al gusto</li>
+<li>Agua según sea necesario (para obtener la consistencia deseada)</li>
+</ul>
+<h4>📝 Para el hummus de lentejas y boletus:</h4>
+<ul>
+<li>200 g de lentejas (cocidas y escurridas)</li>
+<li>100 g de boletus (cocidos y picados)</li>
+<li>2 cucharadas de tahini</li>
+<li>2 cucharadas de aceite de oliva virgen extra</li>
+<li>Sal y pimienta al gusto</li>
+<li>1 diente de ajo (opcional)</li>
+<li>Agua según sea necesario (para obtener la consistencia deseada)</li>
+</ul>
+</div>
+<div class="steps">
+<div class="step"><strong>Preparar las verduras a la parrilla:</strong> Lavar y cortar los pimientos en tiras anchas, la berenjena y los calabacines en rodajas de aproximadamente 1 cm de grosor. Limpiar los espárragos eliminando la parte leñosa. En un bol, mezclar el aceite de oliva, el ajo picado, el orégano, la sal y la pimienta. Añadir las verduras y mezclar bien para cubrirlas. Asar en una parrilla bien caliente durante unos 4-5 minutos por cada lado, hasta que estén tiernas y ligeramente doradas.</div>
+<div class="step"><strong>Preparar el hummus de garbanzos:</strong> En una batidora, unir los garbanzos, el zumo de limón, el azafrán, el tahini, el aceite de oliva y una pizca de sal. Batir hasta obtener una consistencia cremosa, añadiendo agua poco a poco.</div>
+<div class="step"><strong>Preparar el hummus de lentejas y boletus:</strong> En una batidora, unir las lentejas, los boletus picados, el tahini, el aceite de oliva y, si se desea, un diente de ajo. Batir hasta obtener una consistencia cremosa, añadiendo agua poco a poco. Ajustar de sal y pimienta.</div>
+<div class="step"><strong>Servir:</strong> Disponer las verduras a la parrilla en una fuente y servir con los dos tipos de hummus al lado. Decorar con un chorrito de aceite de oliva y, si se desea, hierbas frescas como perejil o albahaca.</div>
+</div>
+</div>
+</div>
+
+<!-- ΕΛΛΗΝΙΚΑ -->
+<div id="EL" class="tab-content">
+<div class="content">
+<h1>Ψητά Λαχανικά με Χούμους Ρεβιθιών και Φακής</h1>
+<p><strong>📅 Ημερομηνία:</strong> 26-04-2025 | <strong>🫘 Εποχή:</strong> Άνοιξη</p>
+<div class="ingredients-box">
+<h4>📝 Για τα ψητά λαχανικά:</h4>
+<ul>
+<li>2 πιπεριές (μία κόκκινη, μία κίτρινη)</li>
+<li>1 μελιτζάνα</li>
+<li>2 κολοκυθάκια</li>
+<li>200 γρ. σπαράγγια</li>
+<li>4 κουταλιές της σούπας έξτρα παρθένο ελαιόλαδο</li>
+<li>2 σκελίδες σκόρδο</li>
+<li>1 κουταλάκι του γλυκού αποξηραμένο ρίγανη</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+</ul>
+<h4>📝 Για το χούμους ρεβιθιών:</h4>
+<ul>
+<li>400 γρ. ρεβίθια (μαγειρεμένα και στραγγισμένα)</li>
+<li>Χυμός 1 λεμονιού</li>
+<li>1 πρέζα κρόκου Κοζάνης</li>
+<li>2 κουταλιές της σούπας ταχίνι (πάστα σουσαμιού)</li>
+<li>2 κουταλιές της σούπας έξτρα παρθένο ελαιόλαδο</li>
+<li>Αλάτι κατά βούληση</li>
+<li>Νερό όσο χρειάζεται (για την επιθυμητή υφή)</li>
+</ul>
+<h4>📝 Για το χούμους φακής και μανιταριών porcini:</h4>
+<ul>
+<li>200 γρ. φακές (μαγειρεμένες και στραγγισμένες)</li>
+<li>100 γρ. μανιτάρια porcini (μαγειρεμένα και ψιλοκομμένα)</li>
+<li>2 κουταλιές της σούπας ταχίνι</li>
+<li>2 κουταλιές της σούπας έξτρα παρθένο ελαιόλαδο</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>1 σκελίδα σκόρδο (προαιρετικά)</li>
+<li>Νερό όσο χρειάζεται (για την επιθυμητή υφή)</li>
+</ul>
+</div>
+<div class="steps">
+<div class="step"><strong>Προετοιμάστε τα ψητά λαχανικά:</strong> Πλύνετε και κόψτε τις πιπεριές σε φαρδιές λωρίδες, τη μελιτζάνα και τα κολοκυθάκια σε φέτες πάχους περίπου 1 εκ. Καθαρίστε τα σπαράγγια, αφαιρώντας το ξυλώδες μέρος. Σε ένα μπολ, αναμείξτε το ελαιόλαδο, το ψιλοκομμένο σκόρδο, τη ρίγανη, το αλάτι και το πιπέρι. Προσθέστε τα λαχανικά και ανακατέψτε καλά για να καλυφθούν. Ψήστε σε καυτή σχάρα για περίπου 4-5 λεπτά από κάθε πλευρά, μέχρι να μαλακώσουν και να ροδίσουν ελαφρά.</div>
+<div class="step"><strong>Προετοιμάστε το χούμους ρεβιθιών:</strong> Σε ένα μπλέντερ, βάλτε τα ρεβίθια, το χυμό λεμονιού, τον κρόκο Κοζάνης, το ταχίνι, το ελαιόλαδο και μια πρέζα αλάτι. Χτυπήστε μέχρι να γίνει κρεμώδες, προσθέτοντας σταδιακά νερό.</div>
+<div class="step"><strong>Προετοιμάστε το χούμους φακής και μανιταριών:</strong> Σε ένα μπλέντερ, βάλτε τις φακές, τα ψιλοκομμένα μανιτάρια, το ταχίνι, το ελαιόλαδο και, αν θέλετε, μια σκελίδα σκόρδο. Χτυπήστε μέχρι να γίνει κρεμώδες, προσθέτοντας σταδιακά νερό. Ρυθμίστε το αλάτι και το πιπέρι.</div>
+<div class="step"><strong>Σερβίρετε:</strong> Τοποθετήστε τα ψητά λαχανικά σε πιατέλα και σερβίρετε με και τα δύο είδη χούμους στο πλάι. Διακοσμήστε με λίγο ελαιόλαδο και, αν θέλετε, φρέσκα μυρωδικά όπως μαϊντανό ή βασιλικό.</div>
+</div>
+</div>
+</div>
+
+<a href="../index.html" class="back-link">← Torna alla Home</a>
+<span class="fav-btn" data-path="extra/primavera/049.html" data-title="Grigliata Vegetale con Hummus di Ceci e Lenticchie" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<p>"Tutto è iniziato con hummus di ceci..."</p>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById(lang).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+
+<script>
+function toggleFav(path, title) {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    if (favs[path]) { delete favs[path]; }
+    else { favs[path] = title; }
+    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
+    updateFavIcons();
+}
+function updateFavIcons() {
+    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        let p = btn.getAttribute('data-path');
+        btn.textContent = favs[p] ? '❤️' : '🤍';
+    });
+}
+document.addEventListener('DOMContentLoaded', updateFavIcons);
+</script>
+</body>
+</html>
