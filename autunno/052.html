@@ -3,328 +3,341 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ricetta del 2024-11-02 | Leguminando</title>
+<title>Pani Cunzatu con Baguette di Legumi | Leguminando</title>
 <style>
-body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
-.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.content { background: white; padding: 30px; border-radius: 10px; }
-.content h1 { color: #8B4513; }
-.content h2 { color: #D2691E; }
-.content h3 { color: #8B4513; }
-.content ul { margin: 15px 0; padding-left: 20px; }
-.content li { margin: 8px 0; }
-.content p { margin: 12px 0; line-height: 1.6; }
-.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
-.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; background: #f8f5f0; min-height: 100vh; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+.header { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 40px 20px 30px; text-align: center; border-radius: 20px; margin-bottom: 30px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+.header h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.header .tagline { font-size: 1.2em; opacity: 0.9; font-style: italic; }
+.back-link { display: inline-block; margin: 20px 0; padding: 10px 20px; background: #8B4513; color: white; text-decoration: none; border-radius: 25px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.95em; transition: background 0.3s; }
 .back-link:hover { background: #D2691E; }
-
-.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
-.fav-bar { text-align: center; margin: 5px 0; }
-
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-
-@media print {
-    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
-    .stats, .back-link, .badge { display: none !important; }
-    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
-    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
-    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
-    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
-}
-
-</style>
-<meta name="description" content="Ricetta del 2024-11-02">
-<meta property="og:title" content="Ricetta del 2024-11-02 | Leguminando">
-<meta property="og:description" content="Ricetta del 2024-11-02">
-<style>
-.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
-.lang-tab { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; transition: all 0.3s; }
-.lang-tab.active { background: #8B4513; color: white; }
-.lang-tab:hover:not(.active) { background: #D2691E; color: white; }
+.fav-bar { text-align: center; margin: 10px 0; }
+.fav-btn { cursor: pointer; font-size: 1.8em; user-select: none; display: inline-block; transition: transform 0.2s; }
+.fav-btn:hover { transform: scale(1.2); }
+.recipe-image { width: 100%; max-width: 700px; margin: 20px auto; display: block; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 30px 0; flex-wrap: wrap; }
+.lang-tab { padding: 10px 20px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; border-radius: 25px; cursor: pointer; font-size: 0.9em; transition: all 0.3s; }
+.lang-tab:hover { background: rgba(255,255,255,0.3); }
+.lang-tab.active { background: white; color: #c0392b; border-color: white; }
+.recipe-card { background: white; border-radius: 20px; padding: 40px; margin-bottom: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
 .lang-content { display: none; }
 .lang-content.active { display: block; }
+.recipe-title { font-size: 2.2em; color: #8B4513; margin-bottom: 10px; text-align: center; }
+.recipe-date { text-align: center; color: #666; font-size: 0.95em; margin-bottom: 25px; }
+.ingredients-box { background: linear-gradient(135deg, #fef9e7 0%, #fdebd0 100%); border-radius: 15px; padding: 25px; margin: 25px 0; border-left: 5px solid #D2691E; }
+.ingredients-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.ingredients-box h4 { color: #D2691E; margin: 15px 0 8px; }
+.ingredients-box ul { padding-left: 20px; }
+.ingredients-box li { margin: 8px 0; color: #5D4037; }
+.steps-box { margin: 25px 0; }
+.steps-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.step { display: flex; gap: 15px; margin: 15px 0; padding: 15px; background: #faf8f5; border-radius: 12px; align-items: flex-start; }
+.step-num { background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1em; flex-shrink: 0; }
+.step-text { flex: 1; color: #5D4037; line-height: 1.6; }
+.tip-box { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 15px; padding: 20px; margin: 25px 0; border-left: 5px solid #4caf50; }
+.tip-box h4 { color: #2e7d32; margin-bottom: 10px; }
+.tip-box p { color: #1b5e20; line-height: 1.6; }
+.footer { text-align: center; margin-top: 50px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+@media (max-width: 600px) { .header h1 { font-size: 2em; } .recipe-card { padding: 20px; } .recipe-title { font-size: 1.6em; } }
+@media print { .lang-tabs, .lang-tab, .fav-bar, .back-link { display: none !important; } body { background: white !important; } .recipe-card { box-shadow: none !important; break-inside: avoid; } }
 </style>
 <script>
-function showLang(lang) {
-    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
-    document.getElementById('lang-' + lang).classList.add('active');
-    event.target.classList.add('active');
-}
+function showLang(lang) { document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active')); document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active')); document.getElementById('lang-' + lang).classList.add('active'); event.target.classList.add('active'); }
+function toggleFav(path, title) { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); if (favs[path]) { delete favs[path]; } else { favs[path] = title; } localStorage.setItem('leguminando_favs', JSON.stringify(favs)); updateFavIcons(); }
+function updateFavIcons() { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); document.querySelectorAll('.fav-btn').forEach(btn => { let p = btn.getAttribute('data-path'); btn.textContent = favs[p] ? '❤️' : '🤍'; }); }
+document.addEventListener('DOMContentLoaded', updateFavIcons);
 </script>
 </head>
 <body>
+<div class="container">
 <div class="header">
-<h1>Leguminando</h1>
-<p>Ricette di stagione a base di legumi</p>
+<h1>🫘 Leguminando</h1>
+<p class="tagline">Ricette di stagione a base di legumi</p>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
-
-</div>
-
+<a href="../index.html" class="back-link">← Torna alla Home</a>
 <div class="fav-bar">
-<span class="fav-btn" data-path="autunno/052.html" data-title="Ricetta del 2024-11-02" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+<span class="fav-btn" data-path="autunno/052.html" data-title="Pani Cunzatu con Baguette di Legumi" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
 </div>
-
-<img src="052.jpg" alt="Ricetta del 2024-11-02" class="recipe-image">
-
-<div class="content">
+<img src="052.jpg" alt="Pani Cunzatu con Baguette di Legumi" class="recipe-image">
 <div class="lang-tabs">
-    <button class="lang-tab active" onclick="showLang('it')">IT</button>
-    <button class="lang-tab" onclick="showLang('en')">EN</button>
-    <button class="lang-tab" onclick="showLang('es')">ES</button>
-    <button class="lang-tab" onclick="showLang('pt')">PT</button>
-    <button class="lang-tab" onclick="showLang('de')">DE</button>
-    <button class="lang-tab" onclick="showLang('el')">EL</button>
+    <button class="lang-tab active" onclick="showLang('it')">🇮🇹 IT</button>
+    <button class="lang-tab" onclick="showLang('en')">🇬🇧 EN</button>
+    <button class="lang-tab" onclick="showLang('es')">🇪🇸 ES</button>
+    <button class="lang-tab" onclick="showLang('pt')">🇵🇹 PT</button>
+    <button class="lang-tab" onclick="showLang('de')">🇩🇪 DE</button>
+    <button class="lang-tab" onclick="showLang('el')">🇬🇷 EL</button>
 </div>
 
+<!-- ITALIANO -->
 <div id="lang-it" class="lang-content active">
-<p><strong>Data:</strong> 2024-11-02</p>
-<h3>Ingredienti per la Baguette</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Pani Cunzatu con Baguette di Legumi</h2>
+<p class="recipe-date">📅 2 Novembre 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredienti</h3>
+<h4>Per la baguette:</h4>
 <ul>
-<li>200 g di farina di ceci</li>
-<li>100 g di farina di lenticchie</li>
-<li>300 ml di acqua</li>
-<li>7 g di lievito di birra secco</li>
-<li>1 cucchiaino di sale</li>
-<li>1 cucchiaio di olio d'oliva</li>
+<li>200 g farina di ceci</li>
+<li>100 g farina di lenticchie</li>
+<li>300 ml acqua</li>
+<li>7 g lievito di birra secco</li>
+<li>1 cucchiaino sale</li>
+<li>1 cucchiaio olio d'oliva</li>
 </ul>
-<h3>Ingredienti per il Pani Cunzatu</h3>
+<h4>Per il condimento:</h4>
 <ul>
-<li>Baguette fatta in casa</li>
-<li>200 g di pomodori freschi (preferibilmente datterini)</li>
-<li>150 g di formaggio primo sale (tagliato a fette)</li>
-<li>50 g di olive nere denocciolate</li>
-<li>1 cucchiaio di capperi</li>
-<li>100 g di alici sott'olio</li>
+<li>200 g pomodori freschi (datterini)</li>
+<li>150 g formaggio primo sale</li>
+<li>50 g olive nere denocciolate</li>
+<li>1 cucchiaio capperi</li>
+<li>100 g alici sott'olio</li>
 <li>Olio d'oliva q.b.</li>
 <li>Origano secco q.b.</li>
 <li>Sale e pepe q.b.</li>
 </ul>
-<h3>Procedimento</h3>
-<h4>Preparazione della Baguette</h4>
-<p>1. <strong>Impasto</strong>: In una ciotola grande, mescola la farina di ceci, la farina di lenticchie, il sale e il lievito. Aggiungi lentamente l'acqua e l'olio d'oliva, mescolando fino a ottenere un impasto omogeneo.</p>
-<p>2. <strong>Lievitazione</strong>: Copri l'impasto con un panno e lascialo lievitare in un luogo caldo per circa 1 ora, o fino a quando non raddoppia di volume.</p>
-<p>3. <strong>Formazione</strong>: Dopo la lievitazione, trasferisci l'impasto su una superficie infarinata e forma una baguette. Posizionala su una teglia foderata di carta da forno.</p>
-<p>4. <strong>Cottura</strong>: Preriscalda il forno a 220°C. Cuoci la baguette per circa 25-30 minuti, fino a quando risulta dorata e croccante. Lascia raffreddare.</p>
-<h4>Preparazione del Pani Cunzatu</h4>
-<p>1. <strong>Tagliare la Baguette</strong>: Una volta raffreddata, taglia la baguette a metà nel senso della lunghezza.</p>
-<p>2. <strong>Condire</strong>: In una ciotola, mescola i pomodori tagliati a cubetti, le olive, i capperi, le alici e un filo d'olio d'oliva. Aggiungi origano, sale e pepe a piacere.</p>
-<p>3. <strong>Assemblare</strong>: Distribuisci uniformemente il mix di condimenti sulle metà della baguette, aggiungendo anche le fette di formaggio primo sale.</p>
-<p>4. <strong>Servire</strong>: Chiudi le metà della baguette e tagliale in porzioni. Servi il pani cunzatu a temperatura ambiente o leggermente tostato.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparazione</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Impasto</strong>: mescola le farine di ceci e lenticchie con sale e lievito. Aggiungi acqua e olio d'oliva mescolando fino a ottenere un impasto omogeneo.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Lievitazione</strong>: copri con un panno e lascia lievitare in luogo caldo circa 1 ora finché raddoppia di volume.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Forma</strong>: trasferisci su superficie infarinata e forma una baguette. Posiziona su teglia foderata di carta forno.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Cottura</strong>: cuoci in forno preriscaldato a 220°C per 25-30 minuti finché è dorata e croccante. Lascia raffreddare.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Condimento</strong>: taglia i pomodori a cubetti e mescola con olive, capperi, alici, olio, origano, sale e pepe.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Assembla</strong>: taglia la baguette a metà nel senso della lunghezza, distribuisci il condimento e aggiungi le fette di formaggio. Chiudi e taglia in porzioni.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Suggerimento</h4>
+<p>Un classico siciliano rivisitato con farine di legumi. La baguette risulta più leggera e digestiva, con un sapore rustico inconfondibile.</p>
+</div>
+</div>
 </div>
 
+<!-- ENGLISH -->
 <div id="lang-en" class="lang-content">
-<p><strong>Date:</strong> 2024-11-02</p>
-<p><em>English translation coming soon...</em></p>
-<h3>Ingredienti per la Baguette</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Pani Cunzatu with Legume Baguette</h2>
+<p class="recipe-date">📅 November 2, 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredients</h3>
+<h4>For the baguette:</h4>
 <ul>
-<li>200 g di farina di ceci</li>
-<li>100 g di farina di lenticchie</li>
-<li>300 ml di acqua</li>
-<li>7 g di lievito di birra secco</li>
-<li>1 cucchiaino di sale</li>
-<li>1 cucchiaio di olio d'oliva</li>
+<li>200 g chickpea flour</li>
+<li>100 g lentil flour</li>
+<li>300 ml water</li>
+<li>7 g dry brewer's yeast</li>
+<li>1 tsp salt</li>
+<li>1 tbsp olive oil</li>
 </ul>
-<h3>Ingredienti per il Pani Cunzatu</h3>
+<h4>For the topping:</h4>
 <ul>
-<li>Baguette fatta in casa</li>
-<li>200 g di pomodori freschi (preferibilmente datterini)</li>
-<li>150 g di formaggio primo sale (tagliato a fette)</li>
-<li>50 g di olive nere denocciolate</li>
-<li>1 cucchiaio di capperi</li>
-<li>100 g di alici sott'olio</li>
-<li>Olio d'oliva q.b.</li>
-<li>Origano secco q.b.</li>
-<li>Sale e pepe q.b.</li>
+<li>200 g fresh tomatoes (datterini)</li>
+<li>150 g primo sale cheese</li>
+<li>50 g pitted black olives</li>
+<li>1 tbsp capers</li>
+<li>100 g anchovies in oil</li>
+<li>Olive oil to taste</li>
+<li>Dried oregano to taste</li>
+<li>Salt and pepper to taste</li>
 </ul>
-<h3>Procedimento</h3>
-<h4>Preparazione della Baguette</h4>
-<p>1. <strong>Impasto</strong>: In una ciotola grande, mescola la farina di ceci, la farina di lenticchie, il sale e il lievito. Aggiungi lentamente l'acqua e l'olio d'oliva, mescolando fino a ottenere un impasto omogeneo.</p>
-<p>2. <strong>Lievitazione</strong>: Copri l'impasto con un panno e lascialo lievitare in un luogo caldo per circa 1 ora, o fino a quando non raddoppia di volume.</p>
-<p>3. <strong>Formazione</strong>: Dopo la lievitazione, trasferisci l'impasto su una superficie infarinata e forma una baguette. Posizionala su una teglia foderata di carta da forno.</p>
-<p>4. <strong>Cottura</strong>: Preriscalda il forno a 220°C. Cuoci la baguette per circa 25-30 minuti, fino a quando risulta dorata e croccante. Lascia raffreddare.</p>
-<h4>Preparazione del Pani Cunzatu</h4>
-<p>1. <strong>Tagliare la Baguette</strong>: Una volta raffreddata, taglia la baguette a metà nel senso della lunghezza.</p>
-<p>2. <strong>Condire</strong>: In una ciotola, mescola i pomodori tagliati a cubetti, le olive, i capperi, le alici e un filo d'olio d'oliva. Aggiungi origano, sale e pepe a piacere.</p>
-<p>3. <strong>Assemblare</strong>: Distribuisci uniformemente il mix di condimenti sulle metà della baguette, aggiungendo anche le fette di formaggio primo sale.</p>
-<p>4. <strong>Servire</strong>: Chiudi le metà della baguette e tagliale in porzioni. Servi il pani cunzatu a temperatura ambiente o leggermente tostato.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparation</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Dough</strong>: mix chickpea and lentil flours with salt and yeast. Add water and olive oil, stirring until a homogeneous dough forms.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Rising</strong>: cover with a cloth and let rise in a warm place for about 1 hour until doubled in volume.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Shape</strong>: transfer to a floured surface and shape into a baguette. Place on a baking tray lined with parchment paper.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Bake</strong>: bake in preheated oven at 220°C for 25-30 minutes until golden and crispy. Let cool.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Topping</strong>: dice tomatoes and mix with olives, capers, anchovies, oil, oregano, salt and pepper.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Assemble</strong>: cut baguette in half lengthwise, spread topping and add cheese slices. Close and cut into portions.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Tip</h4>
+<p>A Sicilian classic revisited with legume flours. The baguette turns out lighter and more digestible, with an unmistakable rustic flavour.</p>
+</div>
+</div>
 </div>
 
+<!-- SPANISH -->
 <div id="lang-es" class="lang-content">
-<p><strong>Fecha:</strong> 2024-11-02</p>
-<p><em>Traduccion al espanol proximamente...</em></p>
-<h3>Ingredienti per la Baguette</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Pani Cunzatu con Baguette de Legumbres</h2>
+<p class="recipe-date">📅 2 de Noviembre de 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
+<h4>Para la baguette:</h4>
 <ul>
-<li>200 g di farina di ceci</li>
-<li>100 g di farina di lenticchie</li>
-<li>300 ml di acqua</li>
-<li>7 g di lievito di birra secco</li>
-<li>1 cucchiaino di sale</li>
-<li>1 cucchiaio di olio d'oliva</li>
+<li>200 g harina de garbanzos</li>
+<li>100 g harina de lentejas</li>
+<li>300 ml agua</li>
+<li>7 g levadura de cerveza seca</li>
+<li>1 cucharadita sal</li>
+<li>1 cucharada aceite de oliva</li>
 </ul>
-<h3>Ingredienti per il Pani Cunzatu</h3>
+<h4>Para el relleno:</h4>
 <ul>
-<li>Baguette fatta in casa</li>
-<li>200 g di pomodori freschi (preferibilmente datterini)</li>
-<li>150 g di formaggio primo sale (tagliato a fette)</li>
-<li>50 g di olive nere denocciolate</li>
-<li>1 cucchiaio di capperi</li>
-<li>100 g di alici sott'olio</li>
-<li>Olio d'oliva q.b.</li>
-<li>Origano secco q.b.</li>
-<li>Sale e pepe q.b.</li>
+<li>200 g tomates frescos (datterini)</li>
+<li>150 g queso primo sale</li>
+<li>50 g aceitunas negras deshuesadas</li>
+<li>1 cucharada alcaparras</li>
+<li>100 g anchoas en aceite</li>
+<li>Aceite de oliva al gusto</li>
+<li>Orégano seco al gusto</li>
+<li>Sal y pimienta al gusto</li>
 </ul>
-<h3>Procedimento</h3>
-<h4>Preparazione della Baguette</h4>
-<p>1. <strong>Impasto</strong>: In una ciotola grande, mescola la farina di ceci, la farina di lenticchie, il sale e il lievito. Aggiungi lentamente l'acqua e l'olio d'oliva, mescolando fino a ottenere un impasto omogeneo.</p>
-<p>2. <strong>Lievitazione</strong>: Copri l'impasto con un panno e lascialo lievitare in un luogo caldo per circa 1 ora, o fino a quando non raddoppia di volume.</p>
-<p>3. <strong>Formazione</strong>: Dopo la lievitazione, trasferisci l'impasto su una superficie infarinata e forma una baguette. Posizionala su una teglia foderata di carta da forno.</p>
-<p>4. <strong>Cottura</strong>: Preriscalda il forno a 220°C. Cuoci la baguette per circa 25-30 minuti, fino a quando risulta dorata e croccante. Lascia raffreddare.</p>
-<h4>Preparazione del Pani Cunzatu</h4>
-<p>1. <strong>Tagliare la Baguette</strong>: Una volta raffreddata, taglia la baguette a metà nel senso della lunghezza.</p>
-<p>2. <strong>Condire</strong>: In una ciotola, mescola i pomodori tagliati a cubetti, le olive, i capperi, le alici e un filo d'olio d'oliva. Aggiungi origano, sale e pepe a piacere.</p>
-<p>3. <strong>Assemblare</strong>: Distribuisci uniformemente il mix di condimenti sulle metà della baguette, aggiungendo anche le fette di formaggio primo sale.</p>
-<p>4. <strong>Servire</strong>: Chiudi le metà della baguette e tagliale in porzioni. Servi il pani cunzatu a temperatura ambiente o leggermente tostato.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparación</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Masa</strong>: mezcla las harinas de garbanzo y lenteja con sal y levadura. Añade agua y aceite removiendo hasta obtener una masa homogénea.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Levadura</strong>: cubre con un paño y deja levar en lugar cálido unos 60 minutos hasta que duplique su volumen.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Forma</strong>: transfiere a superficie enharinada y forma una baguette. Coloca en bandeja forrada con papel de horno.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Horneado</strong>: hornea a 220°C unos 25-30 minutos hasta dorar. Deja enfriar.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Relleno</strong>: corta tomates en cubos y mezcla con aceitunas, alcaparras, anchoas, aceite, orégano, sal y pimienta.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Montaje</strong>: corta la baguette por la mitad a lo largo, distribuye el relleno y añade queso. Cierra y corta en porciones.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Consejo</h4>
+<p>Un clásico siciliano revisitado con harinas de legumbres. La baguette resulta más ligera y digestiva, con un sabor rústico inconfundible.</p>
+</div>
+</div>
 </div>
 
+<!-- PORTUGUESE -->
 <div id="lang-pt" class="lang-content">
-<p><strong>Data:</strong> 2024-11-02</p>
-<p><em>Traducao em portugues em breve...</em></p>
-<h3>Ingredienti per la Baguette</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Pani Cunzatu com Baguette de Leguminosas</h2>
+<p class="recipe-date">📅 2 de Novembro de 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
+<h4>Para a baguette:</h4>
 <ul>
-<li>200 g di farina di ceci</li>
-<li>100 g di farina di lenticchie</li>
-<li>300 ml di acqua</li>
-<li>7 g di lievito di birra secco</li>
-<li>1 cucchiaino di sale</li>
-<li>1 cucchiaio di olio d'oliva</li>
+<li>200 g farinha de grão-de-bico</li>
+<li>100 g farinha de lentilha</li>
+<li>300 ml água</li>
+<li>7 g fermento de cerveja seco</li>
+<li>1 colher de chá sal</li>
+<li>1 colher de sopa azeite</li>
 </ul>
-<h3>Ingredienti per il Pani Cunzatu</h3>
+<h4>Para o recheio:</h4>
 <ul>
-<li>Baguette fatta in casa</li>
-<li>200 g di pomodori freschi (preferibilmente datterini)</li>
-<li>150 g di formaggio primo sale (tagliato a fette)</li>
-<li>50 g di olive nere denocciolate</li>
-<li>1 cucchiaio di capperi</li>
-<li>100 g di alici sott'olio</li>
-<li>Olio d'oliva q.b.</li>
-<li>Origano secco q.b.</li>
-<li>Sale e pepe q.b.</li>
+<li>200 g tomates frescos (datterini)</li>
+<li>150 g queijo primo sale</li>
+<li>50 g azeitonas pretas sem caroço</li>
+<li>1 colher de sopa alcaparras</li>
+<li>100 g anchovas em azeite</li>
+<li>Azeite q.b.</li>
+<li>Orégão seco q.b.</li>
+<li>Sal e pimenta q.b.</li>
 </ul>
-<h3>Procedimento</h3>
-<h4>Preparazione della Baguette</h4>
-<p>1. <strong>Impasto</strong>: In una ciotola grande, mescola la farina di ceci, la farina di lenticchie, il sale e il lievito. Aggiungi lentamente l'acqua e l'olio d'oliva, mescolando fino a ottenere un impasto omogeneo.</p>
-<p>2. <strong>Lievitazione</strong>: Copri l'impasto con un panno e lascialo lievitare in un luogo caldo per circa 1 ora, o fino a quando non raddoppia di volume.</p>
-<p>3. <strong>Formazione</strong>: Dopo la lievitazione, trasferisci l'impasto su una superficie infarinata e forma una baguette. Posizionala su una teglia foderata di carta da forno.</p>
-<p>4. <strong>Cottura</strong>: Preriscalda il forno a 220°C. Cuoci la baguette per circa 25-30 minuti, fino a quando risulta dorata e croccante. Lascia raffreddare.</p>
-<h4>Preparazione del Pani Cunzatu</h4>
-<p>1. <strong>Tagliare la Baguette</strong>: Una volta raffreddata, taglia la baguette a metà nel senso della lunghezza.</p>
-<p>2. <strong>Condire</strong>: In una ciotola, mescola i pomodori tagliati a cubetti, le olive, i capperi, le alici e un filo d'olio d'oliva. Aggiungi origano, sale e pepe a piacere.</p>
-<p>3. <strong>Assemblare</strong>: Distribuisci uniformemente il mix di condimenti sulle metà della baguette, aggiungendo anche le fette di formaggio primo sale.</p>
-<p>4. <strong>Servire</strong>: Chiudi le metà della baguette e tagliale in porzioni. Servi il pani cunzatu a temperatura ambiente o leggermente tostato.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparação</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Massa</strong>: mistura as farinhas de grão-de-bico e lentilha com sal e fermento. Adiciona água e azeite mexendo até obter uma massa homogénea.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Fermentação</strong>: cobre com um pano e deixa levedar em local quente cerca de 1 hora até duplicar de volume.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Forma</strong>: transfere para superfície enfarinhada e forma uma baguette. Coloca num tabuleiro forrado com papel vegetal.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Cozedura</strong>: coze em forno pré-aquecido a 220°C cerca de 25-30 minutos até dourar. Deixa arrefecer.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Recheio</strong>: corta os tomates em cubos e mistura com azeitonas, alcaparras, anchovas, azeite, orégão, sal e pimenta.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Montagem</strong>: corta a baguette ao meio no sentido do comprimento, distribui o recheio e acrescenta queijo. Fecha e corta em porções.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Sugestão</h4>
+<p>Um clássico siciliano revisitado com farinhas de leguminosas. A baguette fica mais leve e digestiva, com um sabor rústico inconfundível.</p>
+</div>
+</div>
 </div>
 
+<!-- GERMAN -->
 <div id="lang-de" class="lang-content">
-<p><strong>Datum:</strong> 2024-11-02</p>
-<p><em>Deutsche Uebersetzung folgt bald...</em></p>
-<h3>Ingredienti per la Baguette</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Pani Cunzatu mit Hülsenfrüchte-Baguette</h2>
+<p class="recipe-date">📅 2. November 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Zutaten</h3>
+<h4>Für das Baguette:</h4>
 <ul>
-<li>200 g di farina di ceci</li>
-<li>100 g di farina di lenticchie</li>
-<li>300 ml di acqua</li>
-<li>7 g di lievito di birra secco</li>
-<li>1 cucchiaino di sale</li>
-<li>1 cucchiaio di olio d'oliva</li>
+<li>200 g Kichererbsenmehl</li>
+<li>100 g Linsenmehl</li>
+<li>300 ml Wasser</li>
+<li>7 g Trockenhefe</li>
+<li>1 TL Salz</li>
+<li>1 EL Olivenöl</li>
 </ul>
-<h3>Ingredienti per il Pani Cunzatu</h3>
+<h4>Für die Füllung:</h4>
 <ul>
-<li>Baguette fatta in casa</li>
-<li>200 g di pomodori freschi (preferibilmente datterini)</li>
-<li>150 g di formaggio primo sale (tagliato a fette)</li>
-<li>50 g di olive nere denocciolate</li>
-<li>1 cucchiaio di capperi</li>
-<li>100 g di alici sott'olio</li>
-<li>Olio d'oliva q.b.</li>
-<li>Origano secco q.b.</li>
-<li>Sale e pepe q.b.</li>
+<li>200 g frische Tomaten (Datterini)</li>
+<li>150 g Primo-Sale-Käse</li>
+<li>50 g entsteinte schwarze Oliven</li>
+<li>1 EL Kapern</li>
+<li>100 g Sardellen in Öl</li>
+<li>Olivenöl nach Geschmack</li>
+<li>Getrockneter Oregano nach Geschmack</li>
+<li>Salz und Pfeffer nach Geschmack</li>
 </ul>
-<h3>Procedimento</h3>
-<h4>Preparazione della Baguette</h4>
-<p>1. <strong>Impasto</strong>: In una ciotola grande, mescola la farina di ceci, la farina di lenticchie, il sale e il lievito. Aggiungi lentamente l'acqua e l'olio d'oliva, mescolando fino a ottenere un impasto omogeneo.</p>
-<p>2. <strong>Lievitazione</strong>: Copri l'impasto con un panno e lascialo lievitare in un luogo caldo per circa 1 ora, o fino a quando non raddoppia di volume.</p>
-<p>3. <strong>Formazione</strong>: Dopo la lievitazione, trasferisci l'impasto su una superficie infarinata e forma una baguette. Posizionala su una teglia foderata di carta da forno.</p>
-<p>4. <strong>Cottura</strong>: Preriscalda il forno a 220°C. Cuoci la baguette per circa 25-30 minuti, fino a quando risulta dorata e croccante. Lascia raffreddare.</p>
-<h4>Preparazione del Pani Cunzatu</h4>
-<p>1. <strong>Tagliare la Baguette</strong>: Una volta raffreddata, taglia la baguette a metà nel senso della lunghezza.</p>
-<p>2. <strong>Condire</strong>: In una ciotola, mescola i pomodori tagliati a cubetti, le olive, i capperi, le alici e un filo d'olio d'oliva. Aggiungi origano, sale e pepe a piacere.</p>
-<p>3. <strong>Assemblare</strong>: Distribuisci uniformemente il mix di condimenti sulle metà della baguette, aggiungendo anche le fette di formaggio primo sale.</p>
-<p>4. <strong>Servire</strong>: Chiudi le metà della baguette e tagliale in porzioni. Servi il pani cunzatu a temperatura ambiente o leggermente tostato.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Zubereitung</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Teig</strong>: Kichererbsen- und Linsenmehl mit Salz und Hefe vermischen. Wasser und Olivenöl zugeben und zu einem glatten Teig verrühren.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Gehen lassen</strong>: mit einem Tuch abdecken und an einem warmen Ort ca. 1 Stunde gehen lassen bis sich das Volumen verdoppelt hat.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Formen</strong>: auf eine bemehlte Fläche geben und ein Baguette formen. Auf ein mit Backpapier ausgelegtes Backblech legen.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Backen</strong>: im vorgeheizten Ofen bei 220°C ca. 25-30 Minuten goldbraun backen. Abkühlen lassen.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Füllung</strong>: Tomaten würfeln und mit Oliven, Kapern, Sardellen, Öl, Oregano, Salz und Pfeffer mischen.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Zusammenbauen</strong>: Baguette der Länge nach halbieren, Füllung verteilen und Käsescheiben hinzufügen. Zusammenklappen und in Portionen schneiden.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Tipp</h4>
+<p>Ein sizilianischer Klassiker mit Hülsenfrüchtemehl neu interpretiert. Das Baguette wird leichter und bekömmlicher, mit unverwechselbarem rustikalem Geschmack.</p>
+</div>
+</div>
 </div>
 
+<!-- GREEK -->
 <div id="lang-el" class="lang-content">
-<p><strong>Hmerominia:</strong> 2024-11-02</p>
-<p><em>E elliniki metafrasi erhetai syntoma...</em></p>
-<h3>Ingredienti per la Baguette</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Pani Cunzatu με Μπαγκέτα από Όσπρια</h2>
+<p class="recipe-date">📅 2 Νοεμβρίου 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Υλικά</h3>
+<h4>Για τη μπαγκέτα:</h4>
 <ul>
-<li>200 g di farina di ceci</li>
-<li>100 g di farina di lenticchie</li>
-<li>300 ml di acqua</li>
-<li>7 g di lievito di birra secco</li>
-<li>1 cucchiaino di sale</li>
-<li>1 cucchiaio di olio d'oliva</li>
+<li>200 γραμμ. αλεύρι ρεβιθιού</li>
+<li>100 γραμμ. αλεύρι φακής</li>
+<li>300 ml νερό</li>
+<li>7 γραμμ. ξηρή μαγιά μπύρας</li>
+<li>1 κ.γ. αλάτι</li>
+<li>1 κ.σ. ελαιόλαδο</li>
 </ul>
-<h3>Ingredienti per il Pani Cunzatu</h3>
+<h4>Για τη γέμιση:</h4>
 <ul>
-<li>Baguette fatta in casa</li>
-<li>200 g di pomodori freschi (preferibilmente datterini)</li>
-<li>150 g di formaggio primo sale (tagliato a fette)</li>
-<li>50 g di olive nere denocciolate</li>
-<li>1 cucchiaio di capperi</li>
-<li>100 g di alici sott'olio</li>
-<li>Olio d'oliva q.b.</li>
-<li>Origano secco q.b.</li>
-<li>Sale e pepe q.b.</li>
+<li>200 γραμμ. φρέσκια ντομάτα (datterini)</li>
+<li>150 γραμμ. τυρί primo sale</li>
+<li>50 γραμμ. μαύρες ελιές χωρίς κουκούτσι</li>
+<li>1 κ.σ. κάπαρη</li>
+<li>100 γραμμ. αντζούγιες σε λάδι</li>
+<li>Ελαιόλαδο κατά βούληση</li>
+<li>Ξηρό ρίγανη κατά βούληση</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
 </ul>
-<h3>Procedimento</h3>
-<h4>Preparazione della Baguette</h4>
-<p>1. <strong>Impasto</strong>: In una ciotola grande, mescola la farina di ceci, la farina di lenticchie, il sale e il lievito. Aggiungi lentamente l'acqua e l'olio d'oliva, mescolando fino a ottenere un impasto omogeneo.</p>
-<p>2. <strong>Lievitazione</strong>: Copri l'impasto con un panno e lascialo lievitare in un luogo caldo per circa 1 ora, o fino a quando non raddoppia di volume.</p>
-<p>3. <strong>Formazione</strong>: Dopo la lievitazione, trasferisci l'impasto su una superficie infarinata e forma una baguette. Posizionala su una teglia foderata di carta da forno.</p>
-<p>4. <strong>Cottura</strong>: Preriscalda il forno a 220°C. Cuoci la baguette per circa 25-30 minuti, fino a quando risulta dorata e croccante. Lascia raffreddare.</p>
-<h4>Preparazione del Pani Cunzatu</h4>
-<p>1. <strong>Tagliare la Baguette</strong>: Una volta raffreddata, taglia la baguette a metà nel senso della lunghezza.</p>
-<p>2. <strong>Condire</strong>: In una ciotola, mescola i pomodori tagliati a cubetti, le olive, i capperi, le alici e un filo d'olio d'oliva. Aggiungi origano, sale e pepe a piacere.</p>
-<p>3. <strong>Assemblare</strong>: Distribuisci uniformemente il mix di condimenti sulle metà della baguette, aggiungendo anche le fette di formaggio primo sale.</p>
-<p>4. <strong>Servire</strong>: Chiudi le metà della baguette e tagliale in porzioni. Servi il pani cunzatu a temperatura ambiente o leggermente tostato.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Εκτέλεση</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Ζυμάρι</strong>: αναμείξτε το αλεύρι ρεβιθιού και φακής με αλάτι και μαγιά. Προσθέστε νερό και ελαιόλαδο ανακατεύοντας μέχρι να γίνει λείο.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Φούσκωμα</strong>: σκεπάστε με πανί και αφήστε να φουσκώσει σε ζεστό μέρος περίπου 1 ώρα μέχρι να διπλασιαστεί.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Σχήμα</strong>: μεταφέρετε σε αλευρωμένη επιφάνεια και πλάστε μπαγκέτα. Τοποθετήστε σε ταψί με λαδόκολλα.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Ψήσιμο</strong>: ψήστε σε προθερμασμένο φούρνο στους 220°C για 25-30 λεπτά μέχρι να ροδίσει. Αφήστε να κρυώσει.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Γέμιση</strong>: κόψτε τις ντομάτες σε κύβους και αναμείξτε με ελιές, κάπαρη, αντζούγιες, λάδι, ρίγανη, αλάτι και πιπέρι.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Συναρμολόγηση</strong>: κόψτε τη μπαγκέτα στη μέση κατά μήκος, απλώστε τη γέμιση και προσθέστε φέτες τυριού. Κλείστε και κόψτε σε μερίδες.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Συμβουλή</h4>
+<p>Μια κλασική σικελική συνταγή με αλεύρι από όσπρια. Η μπαγκέτα γίνεται πιο ελαφριά και εύπεπτη, με αναγνωρίσιμη ρουστίκ γεύση.</p>
 </div>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+</div>
 
 <div class="footer">
-<p>Leguminando - Ricette di stagione a base di legumi</p>
-<p>"Tutto e iniziato con hummus di ceci..."</p>
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<p>"Tutto è iniziato con hummus di ceci..."</p>
 </div>
-
-<script>
-function toggleFav(path, title) {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    if (favs[path]) { delete favs[path]; }
-    else { favs[path] = title; }
-    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
-    updateFavIcons();
-}
-function updateFavIcons() {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    document.querySelectorAll('.fav-btn').forEach(btn => {
-        let p = btn.getAttribute('data-path');
-        btn.textContent = favs[p] ? '❤️' : '🤍';
-    });
-}
-document.addEventListener('DOMContentLoaded', updateFavIcons);
-</script>
+</div>
 </body>
 </html>

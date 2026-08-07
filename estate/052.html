@@ -3,385 +3,353 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ricetta del 2025-06-29 | Leguminando</title>
+<title>Crema di Ceci e Mandorle con Gamberetti | Leguminando</title>
 <style>
-body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
-.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.content { background: white; padding: 30px; border-radius: 10px; }
-.content h1 { color: #8B4513; }
-.content h2 { color: #D2691E; }
-.content h3 { color: #8B4513; }
-.content ul { margin: 15px 0; padding-left: 20px; }
-.content li { margin: 8px 0; }
-.content p { margin: 12px 0; line-height: 1.6; }
-.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
-.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; background: #f8f5f0; min-height: 100vh; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+.header { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 40px 20px 30px; text-align: center; border-radius: 20px; margin-bottom: 30px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+.header h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.header .tagline { font-size: 1.2em; opacity: 0.9; font-style: italic; }
+.back-link { display: inline-block; margin: 20px 0; padding: 10px 20px; background: #8B4513; color: white; text-decoration: none; border-radius: 25px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.95em; transition: background 0.3s; }
 .back-link:hover { background: #D2691E; }
-
-.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
-.fav-bar { text-align: center; margin: 5px 0; }
-
-@media print {
-    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
-    .stats, .back-link, .badge { display: none !important; }
-    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
-    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
-    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
-    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
-}
-
-</style>
-<meta name="description" content="Ricetta del 2025-06-29">
-<meta property="og:title" content="Ricetta del 2025-06-29 | Leguminando">
-<meta property="og:description" content="Ricetta del 2025-06-29">
-<style>
-.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
-.lang-tab { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; transition: all 0.3s; }
-.lang-tab.active { background: #8B4513; color: white; }
-.lang-tab:hover:not(.active) { background: #D2691E; color: white; }
+.fav-bar { text-align: center; margin: 10px 0; }
+.fav-btn { cursor: pointer; font-size: 1.8em; user-select: none; display: inline-block; transition: transform 0.2s; }
+.fav-btn:hover { transform: scale(1.2); }
+.recipe-image { width: 100%; max-width: 700px; margin: 20px auto; display: block; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 30px 0; flex-wrap: wrap; }
+.lang-tab { padding: 10px 20px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; border-radius: 25px; cursor: pointer; font-size: 0.9em; transition: all 0.3s; }
+.lang-tab:hover { background: rgba(255,255,255,0.3); }
+.lang-tab.active { background: white; color: #c0392b; border-color: white; }
+.recipe-card { background: white; border-radius: 20px; padding: 40px; margin-bottom: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
 .lang-content { display: none; }
 .lang-content.active { display: block; }
+.recipe-title { font-size: 2.2em; color: #8B4513; margin-bottom: 10px; text-align: center; }
+.recipe-date { text-align: center; color: #666; font-size: 0.95em; margin-bottom: 25px; }
+.ingredients-box { background: linear-gradient(135deg, #fef9e7 0%, #fdebd0 100%); border-radius: 15px; padding: 25px; margin: 25px 0; border-left: 5px solid #D2691E; }
+.ingredients-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.ingredients-box h4 { color: #D2691E; margin: 15px 0 8px; }
+.ingredients-box ul { padding-left: 20px; }
+.ingredients-box li { margin: 8px 0; color: #5D4037; }
+.steps-box { margin: 25px 0; }
+.steps-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.step { display: flex; gap: 15px; margin: 15px 0; padding: 15px; background: #faf8f5; border-radius: 12px; align-items: flex-start; }
+.step-num { background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1em; flex-shrink: 0; }
+.step-text { flex: 1; color: #5D4037; line-height: 1.6; }
+.tip-box { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 15px; padding: 20px; margin: 25px 0; border-left: 5px solid #4caf50; }
+.tip-box h4 { color: #2e7d32; margin-bottom: 10px; }
+.tip-box p { color: #1b5e20; line-height: 1.6; }
+.footer { text-align: center; margin-top: 50px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+@media (max-width: 600px) { .header h1 { font-size: 2em; } .recipe-card { padding: 20px; } .recipe-title { font-size: 1.6em; } }
+@media print { .lang-tabs, .lang-tab, .fav-bar, .back-link { display: none !important; } body { background: white !important; } .recipe-card { box-shadow: none !important; break-inside: avoid; } }
 </style>
 <script>
-function showLang(lang) {
-    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
-    document.getElementById('lang-' + lang).classList.add('active');
-    event.target.classList.add('active');
-}
+function showLang(lang) { document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active')); document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active')); document.getElementById('lang-' + lang).classList.add('active'); event.target.classList.add('active'); }
+function toggleFav(path, title) { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); if (favs[path]) { delete favs[path]; } else { favs[path] = title; } localStorage.setItem('leguminando_favs', JSON.stringify(favs)); updateFavIcons(); }
+function updateFavIcons() { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); document.querySelectorAll('.fav-btn').forEach(btn => { let p = btn.getAttribute('data-path'); btn.textContent = favs[p] ? '❤️' : '🤍'; }); }
+document.addEventListener('DOMContentLoaded', updateFavIcons);
 </script>
 </head>
 <body>
+<div class="container">
 <div class="header">
-<h1>Leguminando</h1>
-<p>Ricette di stagione a base di legumi</p>
+<h1>🫘 Leguminando</h1>
+<p class="tagline">Ricette di stagione a base di legumi</p>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
-
+<a href="../index.html" class="back-link">← Torna alla Home</a>
 <div class="fav-bar">
-<span class="fav-btn" data-path="estate/052.html" data-title="Ricetta del 2025-06-29" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+<span class="fav-btn" data-path="estate/052.html" data-title="Crema di Ceci e Mandorle con Gamberetti" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
 </div>
-
-<img src="052.jpg" alt="Ricetta del 2025-06-29" class="recipe-image">
-
-<div class="content">
+<img src="052.jpg" alt="Crema di Ceci e Mandorle con Gamberetti" class="recipe-image">
 <div class="lang-tabs">
-    <button class="lang-tab active" onclick="showLang('it')">IT</button>
-    <button class="lang-tab" onclick="showLang('en')">EN</button>
-    <button class="lang-tab" onclick="showLang('es')">ES</button>
-    <button class="lang-tab" onclick="showLang('pt')">PT</button>
-    <button class="lang-tab" onclick="showLang('de')">DE</button>
-    <button class="lang-tab" onclick="showLang('el')">EL</button>
+    <button class="lang-tab active" onclick="showLang('it')">🇮🇹 IT</button>
+    <button class="lang-tab" onclick="showLang('en')">🇬🇧 EN</button>
+    <button class="lang-tab" onclick="showLang('es')">🇪🇸 ES</button>
+    <button class="lang-tab" onclick="showLang('pt')">🇵🇹 PT</button>
+    <button class="lang-tab" onclick="showLang('de')">🇩🇪 DE</button>
+    <button class="lang-tab" onclick="showLang('el')">🇬🇷 EL</button>
 </div>
 
+<!-- ITALIANO -->
 <div id="lang-it" class="lang-content active">
-<p><strong>Data:</strong> 2025-06-29</p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Crema di Ceci e Mandorle con Gamberetti</h2>
+<p class="recipe-date">📅 29 Giugno 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredienti</h3>
+<h4>Per la crema:</h4>
 <ul>
-<li><strong>Per la crema di ceci e mandorle:</strong></li>
-<li>200 g di ceci cotti</li>
-<li>50 g di mandorle (preferibilmente tostate)</li>
-<li>2 cucchiai di olio d'oliva</li>
+<li>200 g ceci cotti</li>
+<li>50 g mandorle (preferibilmente tostate)</li>
+<li>2 cucchiai olio extravergine d'oliva</li>
 <li>Succo di mezzo limone</li>
 <li>Sale e pepe q.b.</li>
-<li>Qualche rametto di rosmarino (opzionale)</li>
-<li><strong>Per la schiacciata croccante:</strong></li>
-<li>200 g di farina 00</li>
-<li>100 ml di acqua</li>
-<li>2 cucchiai di olio d'oliva</li>
+<li>Rosmarino fresco (opzionale)</li>
+</ul>
+<h4>Per la schiacciata croccante:</h4>
+<ul>
+<li>200 g farina 00</li>
+<li>100 ml acqua</li>
+<li>2 cucchiai olio d'oliva</li>
 <li>Sale q.b.</li>
-<li><strong>Per la guarnizione:</strong></li>
-<li>150 g di gamberetti sgusciati</li>
+</ul>
+<h4>Per la guarnizione:</h4>
+<ul>
+<li>150 g gamberetti sgusciati</li>
 <li>1 cespo di radicchio rosso</li>
 <li>Olio d'oliva q.b.</li>
 <li>Sale e pepe q.b.</li>
 </ul>
-<h3>Preparazione</h3>
-<p>1. <strong>Preparare la crema di ceci e mandorle:</strong></p>
-<ul>
-<li>In un frullatore, unire i ceci, le mandorle, l'olio d'oliva, il succo di limone, sale e pepe. Frullare fino ad ottenere una crema liscia e omogenea. Se necessario, aggiungere un po' d'acqua per raggiungere la consistenza desiderata.</li>
-<li>Aggiungere il rosmarino tritato finemente se si desidera un tocco aromatico.</li>
-</ul>
-<p>2. <strong>Preparare la schiacciata croccante:</strong></p>
-<ul>
-<li>Mescolare la farina e il sale in una ciotola. Aggiungere l'acqua e l'olio d'oliva, impastando fino ad ottenere un impasto liscio.</li>
-<li>Dividere l'impasto in piccole palline e stenderle con un matterello fino a ottenere dei dischi sottili.</li>
-<li>Cuocere in una padella antiaderente per circa 2-3 minuti per lato, fino a che non risultano dorati e croccanti.</li>
-</ul>
-<p>3. <strong>Cuocere i gamberetti:</strong></p>
-<ul>
-<li>In una padella, scaldare un filo d'olio d'oliva e aggiungere i gamberetti. Cuocere per circa 2-3 minuti fino a quando diventano rosa e opachi. Aggiungere sale e pepe a piacere.</li>
-</ul>
-<p>4. <strong>Assemblare il piatto:</strong></p>
-<ul>
-<li>Su un piatto da portata, spalmare un generoso strato di crema di ceci e mandorle.</li>
-<li>Aggiungere sopra i gamberetti cotti e decorare con le foglie di radicchio rosso.</li>
-<li>Servire con la schiacciata croccante a lato.</li>
-</ul>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparazione</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Crema</strong>: in un frullatore unisci i ceci, le mandorle, l'olio d'oliva, il succo di limone, sale e pepe. Frulla fino ad ottenere una crema liscia. Se necessario aggiungi un po' d'acqua per la consistenza desiderata. Aggiungi rosmarino tritato per un tocco aromatico.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Schiacciata</strong>: mescola farina e sale in una ciotola. Aggiungi acqua e olio d'oliva, impasta fino a ottenere un impasto liscio. Dividi in piccole palline e stendi sottili con il matterello.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Cottura schiacciata</strong>: cuoci i dischi di impasto in padella antiaderente 2-3 minuti per lato finché sono dorati e croccanti. Tieni da parte al caldo.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Gamberetti</strong>: scalda un filo d'olio in padella e cuoci i gamberetti 2-3 minuti finché diventano rosa e opachi. Aggiusta sale e pepe.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Assembla</strong>: spalma un generoso strato di crema sui piatti, disponi i gamberetti sopra e decora con le foglie di radicchio rosso. Servi con la schiacciata croccante a lato.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Suggerimento</h4>
+<p>Perfetto come antipasto estivo elegante. La schiacciata può essere preparata in anticipo e riscaldata leggermente prima di servire.</p>
+</div>
+</div>
 </div>
 
+<!-- ENGLISH -->
 <div id="lang-en" class="lang-content">
-<p><strong>Date:</strong> 2025-06-29</p>
-<p><em>English translation coming soon...</em></p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Chickpea and Almond Cream with Shrimp</h2>
+<p class="recipe-date">📅 June 29, 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredients</h3>
+<h4>For the cream:</h4>
 <ul>
-<li><strong>Per la crema di ceci e mandorle:</strong></li>
-<li>200 g di ceci cotti</li>
-<li>50 g di mandorle (preferibilmente tostate)</li>
-<li>2 cucchiai di olio d'oliva</li>
-<li>Succo di mezzo limone</li>
-<li>Sale e pepe q.b.</li>
-<li>Qualche rametto di rosmarino (opzionale)</li>
-<li><strong>Per la schiacciata croccante:</strong></li>
-<li>200 g di farina 00</li>
-<li>100 ml di acqua</li>
-<li>2 cucchiai di olio d'oliva</li>
-<li>Sale q.b.</li>
-<li><strong>Per la guarnizione:</strong></li>
-<li>150 g di gamberetti sgusciati</li>
-<li>1 cespo di radicchio rosso</li>
-<li>Olio d'oliva q.b.</li>
-<li>Sale e pepe q.b.</li>
+<li>200 g cooked chickpeas</li>
+<li>50 g almonds (preferably toasted)</li>
+<li>2 tbsp extra virgin olive oil</li>
+<li>Juice of half a lemon</li>
+<li>Salt and pepper to taste</li>
+<li>Fresh rosemary (optional)</li>
 </ul>
-<h3>Preparazione</h3>
-<p>1. <strong>Preparare la crema di ceci e mandorle:</strong></p>
+<h4>For the crispy flatbread:</h4>
 <ul>
-<li>In un frullatore, unire i ceci, le mandorle, l'olio d'oliva, il succo di limone, sale e pepe. Frullare fino ad ottenere una crema liscia e omogenea. Se necessario, aggiungere un po' d'acqua per raggiungere la consistenza desiderata.</li>
-<li>Aggiungere il rosmarino tritato finemente se si desidera un tocco aromatico.</li>
+<li>200 g all-purpose flour</li>
+<li>100 ml water</li>
+<li>2 tbsp olive oil</li>
+<li>Salt to taste</li>
 </ul>
-<p>2. <strong>Preparare la schiacciata croccante:</strong></p>
+<h4>For garnish:</h4>
 <ul>
-<li>Mescolare la farina e il sale in una ciotola. Aggiungere l'acqua e l'olio d'oliva, impastando fino ad ottenere un impasto liscio.</li>
-<li>Dividere l'impasto in piccole palline e stenderle con un matterello fino a ottenere dei dischi sottili.</li>
-<li>Cuocere in una padella antiaderente per circa 2-3 minuti per lato, fino a che non risultano dorati e croccanti.</li>
-</ul>
-<p>3. <strong>Cuocere i gamberetti:</strong></p>
-<ul>
-<li>In una padella, scaldare un filo d'olio d'oliva e aggiungere i gamberetti. Cuocere per circa 2-3 minuti fino a quando diventano rosa e opachi. Aggiungere sale e pepe a piacere.</li>
-</ul>
-<p>4. <strong>Assemblare il piatto:</strong></p>
-<ul>
-<li>Su un piatto da portata, spalmare un generoso strato di crema di ceci e mandorle.</li>
-<li>Aggiungere sopra i gamberetti cotti e decorare con le foglie di radicchio rosso.</li>
-<li>Servire con la schiacciata croccante a lato.</li>
+<li>150 g peeled shrimp</li>
+<li>1 head of red radicchio</li>
+<li>Olive oil to taste</li>
+<li>Salt and pepper to taste</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparation</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Cream</strong>: in a blender combine chickpeas, almonds, olive oil, lemon juice, salt and pepper. Blend until smooth. Add a little water if needed for desired consistency. Add minced rosemary for an aromatic touch.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Flatbread</strong>: mix flour and salt in a bowl. Add water and olive oil, knead until smooth. Divide into small balls and roll out thin with a rolling pin.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Cook flatbread</strong>: cook the dough discs in a non-stick pan 2-3 minutes per side until golden and crispy. Keep warm.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Shrimp</strong>: heat a drizzle of oil in a pan and cook shrimp 2-3 minutes until pink and opaque. Season with salt and pepper.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Assemble</strong>: spread a generous layer of cream on plates, arrange shrimp on top and decorate with radicchio leaves. Serve with crispy flatbread on the side.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Tip</h4>
+<p>Perfect as an elegant summer appetizer. The flatbread can be made ahead and lightly reheated before serving.</p>
+</div>
+</div>
+</div>
 
+<!-- SPANISH -->
 <div id="lang-es" class="lang-content">
-<p><strong>Fecha:</strong> 2025-06-29</p>
-<p><em>Traduccion al espanol proximamente...</em></p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Crema de Garbanzos y Almendras con Gambas</h2>
+<p class="recipe-date">📅 29 de Junio de 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
+<h4>Para la crema:</h4>
 <ul>
-<li><strong>Per la crema di ceci e mandorle:</strong></li>
-<li>200 g di ceci cotti</li>
-<li>50 g di mandorle (preferibilmente tostate)</li>
-<li>2 cucchiai di olio d'oliva</li>
-<li>Succo di mezzo limone</li>
-<li>Sale e pepe q.b.</li>
-<li>Qualche rametto di rosmarino (opzionale)</li>
-<li><strong>Per la schiacciata croccante:</strong></li>
-<li>200 g di farina 00</li>
-<li>100 ml di acqua</li>
-<li>2 cucchiai di olio d'oliva</li>
-<li>Sale q.b.</li>
-<li><strong>Per la guarnizione:</strong></li>
-<li>150 g di gamberetti sgusciati</li>
-<li>1 cespo di radicchio rosso</li>
-<li>Olio d'oliva q.b.</li>
-<li>Sale e pepe q.b.</li>
+<li>200 g garbanzos cocidos</li>
+<li>50 g almendras (preferiblemente tostadas)</li>
+<li>2 cucharadas aceite de oliva virgen extra</li>
+<li>Zumo de medio limón</li>
+<li>Sal y pimienta al gusto</li>
+<li>Romero fresco (opcional)</li>
 </ul>
-<h3>Preparazione</h3>
-<p>1. <strong>Preparare la crema di ceci e mandorle:</strong></p>
+<h4>Para la tortilla crujiente:</h4>
 <ul>
-<li>In un frullatore, unire i ceci, le mandorle, l'olio d'oliva, il succo di limone, sale e pepe. Frullare fino ad ottenere una crema liscia e omogenea. Se necessario, aggiungere un po' d'acqua per raggiungere la consistenza desiderata.</li>
-<li>Aggiungere il rosmarino tritato finemente se si desidera un tocco aromatico.</li>
+<li>200 g harina de trigo</li>
+<li>100 ml agua</li>
+<li>2 cucharadas aceite de oliva</li>
+<li>Sal al gusto</li>
 </ul>
-<p>2. <strong>Preparare la schiacciata croccante:</strong></p>
+<h4>Para la guarnición:</h4>
 <ul>
-<li>Mescolare la farina e il sale in una ciotola. Aggiungere l'acqua e l'olio d'oliva, impastando fino ad ottenere un impasto liscio.</li>
-<li>Dividere l'impasto in piccole palline e stenderle con un matterello fino a ottenere dei dischi sottili.</li>
-<li>Cuocere in una padella antiaderente per circa 2-3 minuti per lato, fino a che non risultano dorati e croccanti.</li>
-</ul>
-<p>3. <strong>Cuocere i gamberetti:</strong></p>
-<ul>
-<li>In una padella, scaldare un filo d'olio d'oliva e aggiungere i gamberetti. Cuocere per circa 2-3 minuti fino a quando diventano rosa e opachi. Aggiungere sale e pepe a piacere.</li>
-</ul>
-<p>4. <strong>Assemblare il piatto:</strong></p>
-<ul>
-<li>Su un piatto da portata, spalmare un generoso strato di crema di ceci e mandorle.</li>
-<li>Aggiungere sopra i gamberetti cotti e decorare con le foglie di radicchio rosso.</li>
-<li>Servire con la schiacciata croccante a lato.</li>
+<li>150 g gambas peladas</li>
+<li>1 cogollo de rádicchio rojo</li>
+<li>Aceite de oliva al gusto</li>
+<li>Sal y pimienta al gusto</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparación</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Crema</strong>: en una batidora mezcla garbanzos, almendras, aceite, zumo de limón, sal y pimienta. Tritura hasta obtener una crema lisa. Añade un poco de agua si es necesario. Incorpora romero picado para un toque aromático.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Tortilla</strong>: mezcla harina y sal en un bol. Añade agua y aceite, amasa hasta obtener una masa lisa. Divide en bolitas y estira fina con un rodillo.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Cocción</strong>: cocina los discos de masa en sartén antiadherente 2-3 minutos por lado hasta dorar. Mantén caliente.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Gambas</strong>: calienta un chorrito de aceite en sartén y cocina las gambas 2-3 minutos hasta que estén rosas. Sazona con sal y pimienta.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Montaje</strong>: extiende una capa generosa de crema en los platos, coloca las gambas encima y decora con hojas de rádicchio. Sirve con la tortilla crujiente.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Consejo</h4>
+<p>Perfecto como aperitivo veraniego elegante. La tortilla puede prepararse con antelación y recalentarse ligeramente antes de servir.</p>
+</div>
+</div>
+</div>
 
+<!-- PORTUGUESE -->
 <div id="lang-pt" class="lang-content">
-<p><strong>Data:</strong> 2025-06-29</p>
-<p><em>Traducao em portugues em breve...</em></p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Creme de Grão-de-Bico e Amêndoas com Camarão</h2>
+<p class="recipe-date">📅 29 de Junho de 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
+<h4>Para o creme:</h4>
 <ul>
-<li><strong>Per la crema di ceci e mandorle:</strong></li>
-<li>200 g di ceci cotti</li>
-<li>50 g di mandorle (preferibilmente tostate)</li>
-<li>2 cucchiai di olio d'oliva</li>
-<li>Succo di mezzo limone</li>
-<li>Sale e pepe q.b.</li>
-<li>Qualche rametto di rosmarino (opzionale)</li>
-<li><strong>Per la schiacciata croccante:</strong></li>
-<li>200 g di farina 00</li>
-<li>100 ml di acqua</li>
-<li>2 cucchiai di olio d'oliva</li>
-<li>Sale q.b.</li>
-<li><strong>Per la guarnizione:</strong></li>
-<li>150 g di gamberetti sgusciati</li>
-<li>1 cespo di radicchio rosso</li>
-<li>Olio d'oliva q.b.</li>
-<li>Sale e pepe q.b.</li>
+<li>200 g grão-de-bico cozido</li>
+<li>50 g amêndoas (de preferência tostadas)</li>
+<li>2 colheres de sopa azeite virgem extra</li>
+<li>Sumo de meio limão</li>
+<li>Sal e pimenta q.b.</li>
+<li>Alecrim fresco (opcional)</li>
 </ul>
-<h3>Preparazione</h3>
-<p>1. <strong>Preparare la crema di ceci e mandorle:</strong></p>
+<h4>Para a tortilha crocante:</h4>
 <ul>
-<li>In un frullatore, unire i ceci, le mandorle, l'olio d'oliva, il succo di limone, sale e pepe. Frullare fino ad ottenere una crema liscia e omogenea. Se necessario, aggiungere un po' d'acqua per raggiungere la consistenza desiderata.</li>
-<li>Aggiungere il rosmarino tritato finemente se si desidera un tocco aromatico.</li>
+<li>200 g farinha de trigo</li>
+<li>100 ml água</li>
+<li>2 colheres de sopa azeite</li>
+<li>Sal q.b.</li>
 </ul>
-<p>2. <strong>Preparare la schiacciata croccante:</strong></p>
+<h4>Para guarnecer:</h4>
 <ul>
-<li>Mescolare la farina e il sale in una ciotola. Aggiungere l'acqua e l'olio d'oliva, impastando fino ad ottenere un impasto liscio.</li>
-<li>Dividere l'impasto in piccole palline e stenderle con un matterello fino a ottenere dei dischi sottili.</li>
-<li>Cuocere in una padella antiaderente per circa 2-3 minuti per lato, fino a che non risultano dorati e croccanti.</li>
-</ul>
-<p>3. <strong>Cuocere i gamberetti:</strong></p>
-<ul>
-<li>In una padella, scaldare un filo d'olio d'oliva e aggiungere i gamberetti. Cuocere per circa 2-3 minuti fino a quando diventano rosa e opachi. Aggiungere sale e pepe a piacere.</li>
-</ul>
-<p>4. <strong>Assemblare il piatto:</strong></p>
-<ul>
-<li>Su un piatto da portata, spalmare un generoso strato di crema di ceci e mandorle.</li>
-<li>Aggiungere sopra i gamberetti cotti e decorare con le foglie di radicchio rosso.</li>
-<li>Servire con la schiacciata croccante a lato.</li>
+<li>150 g camarão descascado</li>
+<li>1 pé de rádicchio vermelho</li>
+<li>Azeite q.b.</li>
+<li>Sal e pimenta q.b.</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparação</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Creme</strong>: numa liquidificadora junta grão-de-bico, amêndoas, azeite, sumo de limão, sal e pimenta. Tritura até obter um creme liso. Adiciona um pouco de água se necessário. Adiciona alecrim picado para um toque aromático.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Tortilha</strong>: mistura farinha e sal numa tigela. Adiciona água e azeite, amassa até obter uma massa lisa. Divide em bolinhas e estica fina com um rolo.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Cozedura</strong>: cozinha os discos de massa numa frigideira antiaderente 2-3 minutos de cada lado até dourar. Mantém quente.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Camarão</strong>: aquece um fio de azeite numa frigideira e cozinha o camarão 2-3 minutos até ficar rosa. Tempera com sal e pimenta.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Montagem</strong>: espalha uma camada generosa de creme nos pratos, coloca o camarão por cima e decora com folhas de rádicchio. Sirve com a tortilha crocante.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Sugestão</h4>
+<p>Perfeito como aperitivo de verão elegante. A tortilha pode ser preparada com antecedência e aquecida ligeiramente antes de servir.</p>
+</div>
+</div>
+</div>
 
+<!-- GERMAN -->
 <div id="lang-de" class="lang-content">
-<p><strong>Datum:</strong> 2025-06-29</p>
-<p><em>Deutsche Uebersetzung folgt bald...</em></p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Kichererbsen-Mandel-Creme mit Garnelen</h2>
+<p class="recipe-date">📅 29. Juni 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Zutaten</h3>
+<h4>Für die Creme:</h4>
 <ul>
-<li><strong>Per la crema di ceci e mandorle:</strong></li>
-<li>200 g di ceci cotti</li>
-<li>50 g di mandorle (preferibilmente tostate)</li>
-<li>2 cucchiai di olio d'oliva</li>
-<li>Succo di mezzo limone</li>
-<li>Sale e pepe q.b.</li>
-<li>Qualche rametto di rosmarino (opzionale)</li>
-<li><strong>Per la schiacciata croccante:</strong></li>
-<li>200 g di farina 00</li>
-<li>100 ml di acqua</li>
-<li>2 cucchiai di olio d'oliva</li>
-<li>Sale q.b.</li>
-<li><strong>Per la guarnizione:</strong></li>
-<li>150 g di gamberetti sgusciati</li>
-<li>1 cespo di radicchio rosso</li>
-<li>Olio d'oliva q.b.</li>
-<li>Sale e pepe q.b.</li>
+<li>200 g gekochte Kichererbsen</li>
+<li>50 g Mandeln (am besten geröstet)</li>
+<li>2 EL natives Olivenöl extra</li>
+<li>Saft einer halben Zitrone</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Frischer Rosmarin (optional)</li>
 </ul>
-<h3>Preparazione</h3>
-<p>1. <strong>Preparare la crema di ceci e mandorle:</strong></p>
+<h4>Für das knusprige Fladenbrot:</h4>
 <ul>
-<li>In un frullatore, unire i ceci, le mandorle, l'olio d'oliva, il succo di limone, sale e pepe. Frullare fino ad ottenere una crema liscia e omogenea. Se necessario, aggiungere un po' d'acqua per raggiungere la consistenza desiderata.</li>
-<li>Aggiungere il rosmarino tritato finemente se si desidera un tocco aromatico.</li>
+<li>200 g Weizenmehl</li>
+<li>100 ml Wasser</li>
+<li>2 EL Olivenöl</li>
+<li>Salz nach Geschmack</li>
 </ul>
-<p>2. <strong>Preparare la schiacciata croccante:</strong></p>
+<h4>Für die Garnierung:</h4>
 <ul>
-<li>Mescolare la farina e il sale in una ciotola. Aggiungere l'acqua e l'olio d'oliva, impastando fino ad ottenere un impasto liscio.</li>
-<li>Dividere l'impasto in piccole palline e stenderle con un matterello fino a ottenere dei dischi sottili.</li>
-<li>Cuocere in una padella antiaderente per circa 2-3 minuti per lato, fino a che non risultano dorati e croccanti.</li>
-</ul>
-<p>3. <strong>Cuocere i gamberetti:</strong></p>
-<ul>
-<li>In una padella, scaldare un filo d'olio d'oliva e aggiungere i gamberetti. Cuocere per circa 2-3 minuti fino a quando diventano rosa e opachi. Aggiungere sale e pepe a piacere.</li>
-</ul>
-<p>4. <strong>Assemblare il piatto:</strong></p>
-<ul>
-<li>Su un piatto da portata, spalmare un generoso strato di crema di ceci e mandorle.</li>
-<li>Aggiungere sopra i gamberetti cotti e decorare con le foglie di radicchio rosso.</li>
-<li>Servire con la schiacciata croccante a lato.</li>
+<li>150 g geschälte Garnelen</li>
+<li>1 Kopf roter Radicchio</li>
+<li>Olivenöl nach Geschmack</li>
+<li>Salz und Pfeffer nach Geschmack</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Zubereitung</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Creme</strong>: Kichererbsen, Mandeln, Olivenöl, Zitronensaft, Salz und Pfeffer im Mixer verarbeiten bis eine glatte Creme entsteht. Bei Bedarf etwas Wasser für die gewünschte Konsistenz zugeben. Gehackten Rosmarin für einen aromatischen Touch hinzufügen.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Fladenbrot</strong>: Mehl und Salz in einer Schüssel vermischen. Wasser und Olivenöl zugeben, kneten bis ein glatter Teig entsteht. In kleine Kugeln teilen und mit Nudelholz dünn ausrollen.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Backen</strong>: Teigscheiben in einer beschichteten Pfanne 2-3 Minuten pro Seite goldbraun und knusprig braten. Warm halten.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Garnelen</strong>: etwas Öl in einer Pfanne erhitzen und Garnelen 2-3 Minuten braten bis sie rosa und undurchsichtig sind. Mit Salz und Pfeffer würzen.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Anrichten</strong>: eine großzügige Schicht Creme auf Tellern verteilen, Garnelen darauf anrichten und mit Radicchioblättern dekorieren. Mit knusprigem Fladenbrot servieren.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Tipp</h4>
+<p>Perfekt als elegante Sommervorspeise. Das Fladenbrot kann vorbereitet und vor dem Servieren leicht aufgewärmt werden.</p>
+</div>
+</div>
+</div>
 
+<!-- GREEK -->
 <div id="lang-el" class="lang-content">
-<p><strong>Hmerominia:</strong> 2025-06-29</p>
-<p><em>E elliniki metafrasi erhetai syntoma...</em></p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Κρέμα Ρεβιθιών και Αμυγδάλων με Γαρίδες</h2>
+<p class="recipe-date">📅 29 Ιουνίου 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Υλικά</h3>
+<h4>Για την κρέμα:</h4>
 <ul>
-<li><strong>Per la crema di ceci e mandorle:</strong></li>
-<li>200 g di ceci cotti</li>
-<li>50 g di mandorle (preferibilmente tostate)</li>
-<li>2 cucchiai di olio d'oliva</li>
-<li>Succo di mezzo limone</li>
-<li>Sale e pepe q.b.</li>
-<li>Qualche rametto di rosmarino (opzionale)</li>
-<li><strong>Per la schiacciata croccante:</strong></li>
-<li>200 g di farina 00</li>
-<li>100 ml di acqua</li>
-<li>2 cucchiai di olio d'oliva</li>
-<li>Sale q.b.</li>
-<li><strong>Per la guarnizione:</strong></li>
-<li>150 g di gamberetti sgusciati</li>
-<li>1 cespo di radicchio rosso</li>
-<li>Olio d'oliva q.b.</li>
-<li>Sale e pepe q.b.</li>
+<li>200 γραμμ. μαγειρεμένα ρεβίθια</li>
+<li>50 γραμμ. αμύγδαλα (προτιμώτερα ψημένα)</li>
+<li>2 κ.σ. εξαιρετικό παρθένο ελαιόλαδο</li>
+<li>Χυμός μισού λεμονιού</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>Φρέσκο δενδρολίβανο (προαιρετικά)</li>
 </ul>
-<h3>Preparazione</h3>
-<p>1. <strong>Preparare la crema di ceci e mandorle:</strong></p>
+<h4>Για το τραγανό ψωμί:</h4>
 <ul>
-<li>In un frullatore, unire i ceci, le mandorle, l'olio d'oliva, il succo di limone, sale e pepe. Frullare fino ad ottenere una crema liscia e omogenea. Se necessario, aggiungere un po' d'acqua per raggiungere la consistenza desiderata.</li>
-<li>Aggiungere il rosmarino tritato finemente se si desidera un tocco aromatico.</li>
+<li>200 γραμμ. αλεύρι για όλες τις χρήσεις</li>
+<li>100 ml νερό</li>
+<li>2 κ.σ. ελαιόλαδο</li>
+<li>Αλάτι κατά βούληση</li>
 </ul>
-<p>2. <strong>Preparare la schiacciata croccante:</strong></p>
+<h4>Για το γαρνίρισμα:</h4>
 <ul>
-<li>Mescolare la farina e il sale in una ciotola. Aggiungere l'acqua e l'olio d'oliva, impastando fino ad ottenere un impasto liscio.</li>
-<li>Dividere l'impasto in piccole palline e stenderle con un matterello fino a ottenere dei dischi sottili.</li>
-<li>Cuocere in una padella antiaderente per circa 2-3 minuti per lato, fino a che non risultano dorati e croccanti.</li>
-</ul>
-<p>3. <strong>Cuocere i gamberetti:</strong></p>
-<ul>
-<li>In una padella, scaldare un filo d'olio d'oliva e aggiungere i gamberetti. Cuocere per circa 2-3 minuti fino a quando diventano rosa e opachi. Aggiungere sale e pepe a piacere.</li>
-</ul>
-<p>4. <strong>Assemblare il piatto:</strong></p>
-<ul>
-<li>Su un piatto da portata, spalmare un generoso strato di crema di ceci e mandorle.</li>
-<li>Aggiungere sopra i gamberetti cotti e decorare con le foglie di radicchio rosso.</li>
-<li>Servire con la schiacciata croccante a lato.</li>
+<li>150 γραμμ. καθαρισμένες γαρίδες</li>
+<li>1 μαρούλι κόκκινο ραδίκιο</li>
+<li>Ελαιόλαδο κατά βούληση</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Εκτέλεση</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Κρέμα</strong>: στο μπλέντερ αναμείξτε ρεβίθια, αμύγδαλα, ελαιόλαδο, χυμό λεμονιού, αλάτι και πιπέρι. Πολτοποιήστε μέχρι να γίνει λεία. Προσθέστε λίγο νερό αν χρειάζεται. Προσθέστε ψιλοκομμένο δενδρολίβανο για αρωματική νότα.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Ψωμί</strong>: αναμείξτε αλεύρι και αλάτι σε μπολ. Προσθέστε νερό και ελαιόλαδο, ζυμώστε μέχρι να γίνει λεία ζύμη. Χωρίστε σε μικρές μπαλίτσες και ανοίξτε λεπτές με πλάστη.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Ψήσιμο</strong>: ψήστε τους δίσκους ζύμης σε αντικολλητικό τηγάνι 2-3 λεπτά από κάθε πλευρά μέχρι να ροδίσουν. Κρατήστε ζεστούς.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Γαρίδες</strong>: ζεστάνετε λίγο λάδι σε τηγάνι και μαγειρέψτε τις γαρίδες 2-3 λεπτά μέχρι να γίνουν ροζ. Αλατοπιπερώστε.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Συναρμολόγηση</strong>: απλώστε μια γενναιόδωρη στρώση κρέμας στα πιάτα, τοποθετήστε τις γαρίδες από πάνω και στολίστε με φύλλα ραδίκιο. Σερβίρετε με το τραγανό ψωμί.</div></div>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+<div class="tip-box">
+<h4>💡 Συμβουλή</h4>
+<p>Ιδανικό ως κομψό καλοκαιρινό ορεκτικό. Το ψωμί μπορεί να προετοιμαστεί από πριν και να ζεσταθεί ελαφρά πριν το σερβίρετε.</p>
+</div>
+</div>
+</div>
 
 <div class="footer">
-<p>Leguminando - Ricette di stagione a base di legumi</p>
-<p>"Tutto e iniziato con hummus di ceci..."</p>
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<p>"Tutto è iniziato con hummus di ceci..."</p>
 </div>
-
-<script>
-function toggleFav(path, title) {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    if (favs[path]) { delete favs[path]; }
-    else { favs[path] = title; }
-    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
-    updateFavIcons();
-}
-function updateFavIcons() {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    document.querySelectorAll('.fav-btn').forEach(btn => {
-        let p = btn.getAttribute('data-path');
-        btn.textContent = favs[p] ? '❤️' : '🤍';
-    });
-}
-document.addEventListener('DOMContentLoaded', updateFavIcons);
-</script>
-
+</div>
 </body>
 </html>

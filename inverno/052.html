@@ -3,256 +3,292 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ricetta del 2024-12-12 | Leguminando</title>
+<title>Zuppa di Lenticchie con Acciughe | Leguminando</title>
 <style>
-body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
-.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.content { background: white; padding: 30px; border-radius: 10px; }
-.content h1 { color: #8B4513; }
-.content h2 { color: #D2691E; }
-.content h3 { color: #8B4513; }
-.content ul { margin: 15px 0; padding-left: 20px; }
-.content li { margin: 8px 0; }
-.content p { margin: 12px 0; line-height: 1.6; }
-.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
-.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; background: #f8f5f0; min-height: 100vh; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+.header { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 40px 20px 30px; text-align: center; border-radius: 20px; margin-bottom: 30px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+.header h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.header .tagline { font-size: 1.2em; opacity: 0.9; font-style: italic; }
+.back-link { display: inline-block; margin: 20px 0; padding: 10px 20px; background: #8B4513; color: white; text-decoration: none; border-radius: 25px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.95em; transition: background 0.3s; }
 .back-link:hover { background: #D2691E; }
-
-.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
-.fav-bar { text-align: center; margin: 5px 0; }
-
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-
-@media print {
-    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
-    .stats, .back-link, .badge { display: none !important; }
-    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
-    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
-    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
-    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
-}
-
-</style>
-<meta name="description" content="Ricetta del 2024-12-12">
-<meta property="og:title" content="Ricetta del 2024-12-12 | Leguminando">
-<meta property="og:description" content="Ricetta del 2024-12-12">
-<style>
-.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
-.lang-tab { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; transition: all 0.3s; }
-.lang-tab.active { background: #8B4513; color: white; }
-.lang-tab:hover:not(.active) { background: #D2691E; color: white; }
+.fav-bar { text-align: center; margin: 10px 0; }
+.fav-btn { cursor: pointer; font-size: 1.8em; user-select: none; display: inline-block; transition: transform 0.2s; }
+.fav-btn:hover { transform: scale(1.2); }
+.recipe-image { width: 100%; max-width: 700px; margin: 20px auto; display: block; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 30px 0; flex-wrap: wrap; }
+.lang-tab { padding: 10px 20px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; border-radius: 25px; cursor: pointer; font-size: 0.9em; transition: all 0.3s; }
+.lang-tab:hover { background: rgba(255,255,255,0.3); }
+.lang-tab.active { background: white; color: #c0392b; border-color: white; }
+.recipe-card { background: white; border-radius: 20px; padding: 40px; margin-bottom: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
 .lang-content { display: none; }
 .lang-content.active { display: block; }
+.recipe-title { font-size: 2.2em; color: #8B4513; margin-bottom: 10px; text-align: center; }
+.recipe-date { text-align: center; color: #666; font-size: 0.95em; margin-bottom: 25px; }
+.ingredients-box { background: linear-gradient(135deg, #fef9e7 0%, #fdebd0 100%); border-radius: 15px; padding: 25px; margin: 25px 0; border-left: 5px solid #D2691E; }
+.ingredients-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.ingredients-box ul { padding-left: 20px; }
+.ingredients-box li { margin: 8px 0; color: #5D4037; }
+.steps-box { margin: 25px 0; }
+.steps-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.step { display: flex; gap: 15px; margin: 15px 0; padding: 15px; background: #faf8f5; border-radius: 12px; align-items: flex-start; }
+.step-num { background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1em; flex-shrink: 0; }
+.step-text { flex: 1; color: #5D4037; line-height: 1.6; }
+.tip-box { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 15px; padding: 20px; margin: 25px 0; border-left: 5px solid #4caf50; }
+.tip-box h4 { color: #2e7d32; margin-bottom: 10px; }
+.tip-box p { color: #1b5e20; line-height: 1.6; }
+.footer { text-align: center; margin-top: 50px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+@media (max-width: 600px) { .header h1 { font-size: 2em; } .recipe-card { padding: 20px; } .recipe-title { font-size: 1.6em; } }
+@media print { .lang-tabs, .lang-tab, .fav-bar, .back-link { display: none !important; } body { background: white !important; } .recipe-card { box-shadow: none !important; break-inside: avoid; } }
 </style>
 <script>
-function showLang(lang) {
-    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
-    document.getElementById('lang-' + lang).classList.add('active');
-    event.target.classList.add('active');
-}
+function showLang(lang) { document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active')); document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active')); document.getElementById('lang-' + lang).classList.add('active'); event.target.classList.add('active'); }
+function toggleFav(path, title) { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); if (favs[path]) { delete favs[path]; } else { favs[path] = title; } localStorage.setItem('leguminando_favs', JSON.stringify(favs)); updateFavIcons(); }
+function updateFavIcons() { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); document.querySelectorAll('.fav-btn').forEach(btn => { let p = btn.getAttribute('data-path'); btn.textContent = favs[p] ? '❤️' : '🤍'; }); }
+document.addEventListener('DOMContentLoaded', updateFavIcons);
 </script>
 </head>
 <body>
+<div class="container">
 <div class="header">
-<h1>Leguminando</h1>
-<p>Ricette di stagione a base di legumi</p>
+<h1>🫘 Leguminando</h1>
+<p class="tagline">Ricette di stagione a base di legumi</p>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
-
-</div>
-
+<a href="../index.html" class="back-link">← Torna alla Home</a>
 <div class="fav-bar">
-<span class="fav-btn" data-path="inverno/052.html" data-title="Ricetta del 2024-12-12" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+<span class="fav-btn" data-path="inverno/052.html" data-title="Zuppa di Lenticchie con Acciughe" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
 </div>
-
-<img src="052.jpg" alt="Ricetta del 2024-12-12" class="recipe-image">
-
-<div class="content">
+<img src="052.jpg" alt="Zuppa di Lenticchie con Acciughe" class="recipe-image">
 <div class="lang-tabs">
-    <button class="lang-tab active" onclick="showLang('it')">IT</button>
-    <button class="lang-tab" onclick="showLang('en')">EN</button>
-    <button class="lang-tab" onclick="showLang('es')">ES</button>
-    <button class="lang-tab" onclick="showLang('pt')">PT</button>
-    <button class="lang-tab" onclick="showLang('de')">DE</button>
-    <button class="lang-tab" onclick="showLang('el')">EL</button>
+    <button class="lang-tab active" onclick="showLang('it')">🇮🇹 IT</button>
+    <button class="lang-tab" onclick="showLang('en')">🇬🇧 EN</button>
+    <button class="lang-tab" onclick="showLang('es')">🇪🇸 ES</button>
+    <button class="lang-tab" onclick="showLang('pt')">🇵🇹 PT</button>
+    <button class="lang-tab" onclick="showLang('de')">🇩🇪 DE</button>
+    <button class="lang-tab" onclick="showLang('el')">🇬🇷 EL</button>
 </div>
 
+<!-- ITALIANO -->
 <div id="lang-it" class="lang-content active">
-<p><strong>Data:</strong> 2024-12-12</p>
-<h1>Ingredienti:</h1>
+<div class="recipe-card">
+<h2 class="recipe-title">Zuppa di Lenticchie con Acciughe</h2>
+<p class="recipe-date">📅 12 Dicembre 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredienti</h3>
 <ul>
-<li>200 g di lenticchie (meglio se di tipo verde o marrone)</li>
+<li>200 g lenticchie (verdi o marroni)</li>
 <li>2-3 acciughe sott'olio</li>
 <li>1 cipolla</li>
 <li>1 carota</li>
 <li>1 costa di sedano</li>
 <li>2 spicchi d'aglio</li>
-<li>1 litro di brodo vegetale</li>
+<li>1 litro brodo vegetale</li>
 <li>Olio extravergine d'oliva</li>
 <li>Sale e pepe q.b.</li>
 <li>Prezzemolo fresco per guarnire</li>
 </ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione delle lenticchie</strong>: Sciacqua le lenticchie sotto acqua corrente. Se necessario, mettile a bagno per alcune ore.</p>
-<p>2. <strong>Soffritto</strong>: In una pentola capiente, scalda un po' d'olio d'oliva e aggiungi la cipolla, la carota e il sedano tritati finemente. Fai rosolare per circa 5-7 minuti, finché le verdure non diventano morbide.</p>
-<p>3. <strong>Aggiunta dell'aglio e delle acciughe</strong>: Aggiungi gli spicchi d'aglio schiacciati e le acciughe. Mescola bene fino a quando le acciughe si saranno sciolte.</p>
-<p>4. <strong>Cottura delle lenticchie</strong>: Unisci le lenticchie e il brodo vegetale. Porta a ebollizione e poi riduci il fuoco. Copri e lascia cuocere per circa 30-40 minuti, finché le lenticchie non sono tenere.</p>
-<p>5. <strong>Regola di sale e pepe</strong>: Assaggia la zuppa e aggiusta di sale e pepe secondo il tuo gusto.</p>
-<p>6. <strong>Servizio</strong>: Servi la zuppa calda, guarnita con prezzemolo fresco tritato e un filo d'olio d'oliva.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparazione</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Lenticchie</strong>: sciacqua le lenticchie sotto acqua corrente. Se necessario mettile a bagno per alcune ore.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Soffritto</strong>: in una pentola capiente scalda un po' d'olio e soffriggi cipolla, carota e sedano tritati finemente per circa 5-7 minuti finché diventano morbidi.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Acciughe</strong>: aggiungi l'aglio schiacciato e le acciughe. Mescola bene finché le acciughe si sciolgono nel soffritto.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Cottura</strong>: unisci le lenticchie e il brodo vegetale. Porta a ebollizione poi riduci il fuoco. Copri e cuoci 30-40 minuti finché le lenticchie sono tenere.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Aggusta</strong>: assaggia la zuppa e regola sale e pepe secondo il tuo gusto.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Servi</strong>: servi la zuppa calda guarnita con prezzemolo fresco tritato e un filo d'olio a crudo.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Suggerimento</h4>
+<p>Un piatto invernale rustico e confortante. Le acciughe conferiscono un sapore intenso e salato che si sposa perfettamente con la dolcezza delle lenticchie.</p>
+</div>
+</div>
 </div>
 
+<!-- ENGLISH -->
 <div id="lang-en" class="lang-content">
-<p><strong>Date:</strong> 2024-12-12</p>
-<p><em>English translation coming soon...</em></p>
-<h1>Ingredienti:</h1>
+<div class="recipe-card">
+<h2 class="recipe-title">Lentil Soup with Anchovies</h2>
+<p class="recipe-date">📅 December 12, 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredients</h3>
 <ul>
-<li>200 g di lenticchie (meglio se di tipo verde o marrone)</li>
-<li>2-3 acciughe sott'olio</li>
-<li>1 cipolla</li>
-<li>1 carota</li>
-<li>1 costa di sedano</li>
-<li>2 spicchi d'aglio</li>
-<li>1 litro di brodo vegetale</li>
-<li>Olio extravergine d'oliva</li>
-<li>Sale e pepe q.b.</li>
-<li>Prezzemolo fresco per guarnire</li>
+<li>200 g lentils (green or brown)</li>
+<li>2-3 anchovies in oil</li>
+<li>1 onion</li>
+<li>1 carrot</li>
+<li>1 celery stalk</li>
+<li>2 garlic cloves</li>
+<li>1 litre vegetable broth</li>
+<li>Extra virgin olive oil</li>
+<li>Salt and pepper to taste</li>
+<li>Fresh parsley for garnish</li>
 </ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione delle lenticchie</strong>: Sciacqua le lenticchie sotto acqua corrente. Se necessario, mettile a bagno per alcune ore.</p>
-<p>2. <strong>Soffritto</strong>: In una pentola capiente, scalda un po' d'olio d'oliva e aggiungi la cipolla, la carota e il sedano tritati finemente. Fai rosolare per circa 5-7 minuti, finché le verdure non diventano morbide.</p>
-<p>3. <strong>Aggiunta dell'aglio e delle acciughe</strong>: Aggiungi gli spicchi d'aglio schiacciati e le acciughe. Mescola bene fino a quando le acciughe si saranno sciolte.</p>
-<p>4. <strong>Cottura delle lenticchie</strong>: Unisci le lenticchie e il brodo vegetale. Porta a ebollizione e poi riduci il fuoco. Copri e lascia cuocere per circa 30-40 minuti, finché le lenticchie non sono tenere.</p>
-<p>5. <strong>Regola di sale e pepe</strong>: Assaggia la zuppa e aggiusta di sale e pepe secondo il tuo gusto.</p>
-<p>6. <strong>Servizio</strong>: Servi la zuppa calda, guarnita con prezzemolo fresco tritato e un filo d'olio d'oliva.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparation</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Lentils</strong>: rinse lentils under running water. Soak for a few hours if necessary.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Sauté</strong>: heat some oil in a large pot and sauté finely chopped onion, carrot and celery for about 5-7 minutes until soft.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Anchovies</strong>: add crushed garlic and anchovies. Stir well until anchovies dissolve into the soffritto.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Cook</strong>: add lentils and vegetable broth. Bring to a boil then reduce heat. Cover and simmer 30-40 minutes until lentils are tender.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Season</strong>: taste and adjust salt and pepper.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Serve</strong>: serve hot garnished with chopped fresh parsley and a drizzle of raw olive oil.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Tip</h4>
+<p>A rustic and comforting winter dish. Anchovies add an intense salty flavour that pairs perfectly with the sweetness of lentils.</p>
+</div>
+</div>
 </div>
 
+<!-- SPANISH -->
 <div id="lang-es" class="lang-content">
-<p><strong>Fecha:</strong> 2024-12-12</p>
-<p><em>Traduccion al espanol proximamente...</em></p>
-<h1>Ingredienti:</h1>
+<div class="recipe-card">
+<h2 class="recipe-title">Sopa de Lentejas con Anchoas</h2>
+<p class="recipe-date">📅 12 de Diciembre de 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li>200 g di lenticchie (meglio se di tipo verde o marrone)</li>
-<li>2-3 acciughe sott'olio</li>
-<li>1 cipolla</li>
-<li>1 carota</li>
-<li>1 costa di sedano</li>
-<li>2 spicchi d'aglio</li>
-<li>1 litro di brodo vegetale</li>
-<li>Olio extravergine d'oliva</li>
-<li>Sale e pepe q.b.</li>
-<li>Prezzemolo fresco per guarnire</li>
+<li>200 g lentejas (verdes o marrones)</li>
+<li>2-3 anchoas en aceite</li>
+<li>1 cebolla</li>
+<li>1 zanahoria</li>
+<li>1 tallo de apio</li>
+<li>2 dientes de ajo</li>
+<li>1 litro caldo vegetal</li>
+<li>Aceite de oliva virgen extra</li>
+<li>Sal y pimienta al gusto</li>
+<li>Perejil fresco para decorar</li>
 </ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione delle lenticchie</strong>: Sciacqua le lenticchie sotto acqua corrente. Se necessario, mettile a bagno per alcune ore.</p>
-<p>2. <strong>Soffritto</strong>: In una pentola capiente, scalda un po' d'olio d'oliva e aggiungi la cipolla, la carota e il sedano tritati finemente. Fai rosolare per circa 5-7 minuti, finché le verdure non diventano morbide.</p>
-<p>3. <strong>Aggiunta dell'aglio e delle acciughe</strong>: Aggiungi gli spicchi d'aglio schiacciati e le acciughe. Mescola bene fino a quando le acciughe si saranno sciolte.</p>
-<p>4. <strong>Cottura delle lenticchie</strong>: Unisci le lenticchie e il brodo vegetale. Porta a ebollizione e poi riduci il fuoco. Copri e lascia cuocere per circa 30-40 minuti, finché le lenticchie non sono tenere.</p>
-<p>5. <strong>Regola di sale e pepe</strong>: Assaggia la zuppa e aggiusta di sale e pepe secondo il tuo gusto.</p>
-<p>6. <strong>Servizio</strong>: Servi la zuppa calda, guarnita con prezzemolo fresco tritato e un filo d'olio d'oliva.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparación</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Lentejas</strong>: lava las lentejas bajo el grifo. Déjalas en remojo algunas horas si es necesario.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Sofrito</strong>: calienta un poco de aceite en una olla grande y sofríe cebolla, zanahoria y apio picados finamente 5-7 minutos hasta que estén tiernos.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Anchoas</strong>: añade ajo machacado y anchoas. Remueve bien hasta que las anchoas se deshagan en el sofrito.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Cocción</strong>: añade lentejas y caldo vegetal. Lleva a ebullición y luego baja el fuego. Tapa y cocina 30-40 minutos hasta que las lentejas estén tiernas.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Sazona</strong>: prueba y ajusta sal y pimienta.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Sirve</strong>: sirve caliente decorado con perejil fresco picado y un chorrito de aceite a crudo.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Consejo</h4>
+<p>Un plato invernal rústico y reconfortante. Las anchoas aportan un sabor intenso y salado que combina perfectamente con la dulzura de las lentejas.</p>
+</div>
+</div>
 </div>
 
+<!-- PORTUGUESE -->
 <div id="lang-pt" class="lang-content">
-<p><strong>Data:</strong> 2024-12-12</p>
-<p><em>Traducao em portugues em breve...</em></p>
-<h1>Ingredienti:</h1>
+<div class="recipe-card">
+<h2 class="recipe-title">Sopa de Lentilhas com Anchovas</h2>
+<p class="recipe-date">📅 12 de Dezembro de 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li>200 g di lenticchie (meglio se di tipo verde o marrone)</li>
-<li>2-3 acciughe sott'olio</li>
-<li>1 cipolla</li>
-<li>1 carota</li>
-<li>1 costa di sedano</li>
-<li>2 spicchi d'aglio</li>
-<li>1 litro di brodo vegetale</li>
-<li>Olio extravergine d'oliva</li>
-<li>Sale e pepe q.b.</li>
-<li>Prezzemolo fresco per guarnire</li>
+<li>200 g lentilhas (verdes ou castanhas)</li>
+<li>2-3 anchovas em azeite</li>
+<li>1 cebola</li>
+<li>1 cenoura</li>
+<li>1 talo de aipo</li>
+<li>2 dentes de alho</li>
+<li>1 litro caldo de legumes</li>
+<li>Azeite virgem extra</li>
+<li>Sal e pimenta q.b.</li>
+<li>Salsa fresca para guarnecer</li>
 </ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione delle lenticchie</strong>: Sciacqua le lenticchie sotto acqua corrente. Se necessario, mettile a bagno per alcune ore.</p>
-<p>2. <strong>Soffritto</strong>: In una pentola capiente, scalda un po' d'olio d'oliva e aggiungi la cipolla, la carota e il sedano tritati finemente. Fai rosolare per circa 5-7 minuti, finché le verdure non diventano morbide.</p>
-<p>3. <strong>Aggiunta dell'aglio e delle acciughe</strong>: Aggiungi gli spicchi d'aglio schiacciati e le acciughe. Mescola bene fino a quando le acciughe si saranno sciolte.</p>
-<p>4. <strong>Cottura delle lenticchie</strong>: Unisci le lenticchie e il brodo vegetale. Porta a ebollizione e poi riduci il fuoco. Copri e lascia cuocere per circa 30-40 minuti, finché le lenticchie non sono tenere.</p>
-<p>5. <strong>Regola di sale e pepe</strong>: Assaggia la zuppa e aggiusta di sale e pepe secondo il tuo gusto.</p>
-<p>6. <strong>Servizio</strong>: Servi la zuppa calda, guarnita con prezzemolo fresco tritato e un filo d'olio d'oliva.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparação</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Lentilhas</strong>: lava as lentilhas sob água corrente. Deixa de molho algumas horas se necessário.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Refogado</strong>: aquece um pouco de azeite numa panela grande e refoga cebola, cenoura e aipo picados finamente 5-7 minutos até ficarem macios.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Anchovas</strong>: adiciona alho esmagado e anchovas. Mexe bem até as anchovas se desfazerem no refogado.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Cozedura</strong>: junta lentilhas e caldo de legumes. Leva a ferver depois baixa o lume. Tampa e cozinha 30-40 minutos até as lentilhas ficarem macias.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Tempera</strong>: prova e ajusta sal e pimenta.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Sirva</strong>: sirve quente guarnecido com salsa fresca picada e um fio de azeite a cru.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Sugestão</h4>
+<p>Um prato de inverno rústico e reconfortante. As anchovas conferem um sabor intenso e salgado que combina perfeitamente com a doçura das lentilhas.</p>
+</div>
+</div>
 </div>
 
+<!-- GERMAN -->
 <div id="lang-de" class="lang-content">
-<p><strong>Datum:</strong> 2024-12-12</p>
-<p><em>Deutsche Uebersetzung folgt bald...</em></p>
-<h1>Ingredienti:</h1>
+<div class="recipe-card">
+<h2 class="recipe-title">Linsensuppe mit Sardellen</h2>
+<p class="recipe-date">📅 12. Dezember 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Zutaten</h3>
 <ul>
-<li>200 g di lenticchie (meglio se di tipo verde o marrone)</li>
-<li>2-3 acciughe sott'olio</li>
-<li>1 cipolla</li>
-<li>1 carota</li>
-<li>1 costa di sedano</li>
-<li>2 spicchi d'aglio</li>
-<li>1 litro di brodo vegetale</li>
-<li>Olio extravergine d'oliva</li>
-<li>Sale e pepe q.b.</li>
-<li>Prezzemolo fresco per guarnire</li>
+<li>200 g Linsen (grün oder braun)</li>
+<li>2-3 Sardellen in Öl</li>
+<li>1 Zwiebel</li>
+<li>1 Karotte</li>
+<li>1 Stange Sellerie</li>
+<li>2 Knoblauchzehen</li>
+<li>1 Liter Gemüsebrühe</li>
+<li>Natives Olivenöl extra</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Frische Petersilie zum Garnieren</li>
 </ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione delle lenticchie</strong>: Sciacqua le lenticchie sotto acqua corrente. Se necessario, mettile a bagno per alcune ore.</p>
-<p>2. <strong>Soffritto</strong>: In una pentola capiente, scalda un po' d'olio d'oliva e aggiungi la cipolla, la carota e il sedano tritati finemente. Fai rosolare per circa 5-7 minuti, finché le verdure non diventano morbide.</p>
-<p>3. <strong>Aggiunta dell'aglio e delle acciughe</strong>: Aggiungi gli spicchi d'aglio schiacciati e le acciughe. Mescola bene fino a quando le acciughe si saranno sciolte.</p>
-<p>4. <strong>Cottura delle lenticchie</strong>: Unisci le lenticchie e il brodo vegetale. Porta a ebollizione e poi riduci il fuoco. Copri e lascia cuocere per circa 30-40 minuti, finché le lenticchie non sono tenere.</p>
-<p>5. <strong>Regola di sale e pepe</strong>: Assaggia la zuppa e aggiusta di sale e pepe secondo il tuo gusto.</p>
-<p>6. <strong>Servizio</strong>: Servi la zuppa calda, guarnita con prezzemolo fresco tritato e un filo d'olio d'oliva.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Zubereitung</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Linsen</strong>: Linsen unter fließendem Wasser abspülen. Bei Bedarf einige Stunden einweichen.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Dünsten</strong>: etwas Öl in einem großen Topf erhitzen und fein gehackte Zwiebel, Karotte und Sellerie 5-7 Minuten dünsten bis weich.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Sardellen</strong>: zerdrückten Knoblauch und Sardellen zugeben. Gut umrühren bis die Sardellen sich im Gemüse auflösen.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Kochen</strong>: Linsen und Gemüsebrühe zugeben. Zum Kochen bringen, dann Hitze reduzieren. Zugedeckt 30-40 Minuten köcheln bis Linsen zart sind.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Würzen</strong>: abschmecken und Salz und Pfeffer anpassen.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Servieren</strong>: heiß servieren, mit gehackter Petersilie garnieren und etwas Olivenöl darüber träufeln.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Tipp</h4>
+<p>Ein rustikales und wärmendes Wintergericht. Sardellen verleihen einen intensiven salzigen Geschmack, der perfekt zur Süße der Linsen passt.</p>
+</div>
+</div>
 </div>
 
+<!-- GREEK -->
 <div id="lang-el" class="lang-content">
-<p><strong>Hmerominia:</strong> 2024-12-12</p>
-<p><em>E elliniki metafrasi erhetai syntoma...</em></p>
-<h1>Ingredienti:</h1>
+<div class="recipe-card">
+<h2 class="recipe-title">Σούπα Φακής με Αντζούγιες</h2>
+<p class="recipe-date">📅 12 Δεκεμβρίου 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Υλικά</h3>
 <ul>
-<li>200 g di lenticchie (meglio se di tipo verde o marrone)</li>
-<li>2-3 acciughe sott'olio</li>
-<li>1 cipolla</li>
-<li>1 carota</li>
-<li>1 costa di sedano</li>
-<li>2 spicchi d'aglio</li>
-<li>1 litro di brodo vegetale</li>
-<li>Olio extravergine d'oliva</li>
-<li>Sale e pepe q.b.</li>
-<li>Prezzemolo fresco per guarnire</li>
+<li>200 γραμμ. φακές (πράσινες ή καφέ)</li>
+<li>2-3 αντζούγιες σε λάδι</li>
+<li>1 κρεμμύδι</li>
+<li>1 καρότο</li>
+<li>1 κοτσάνι σέλερι</li>
+<li>2 σκελίδες σκόρδου</li>
+<li>1 λίτρο ζωμός λαχανικών</li>
+<li>Εξαιρετικό παρθένο ελαιόλαδο</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>Φρέσκος μαϊντανός για γαρνίρισμα</li>
 </ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione delle lenticchie</strong>: Sciacqua le lenticchie sotto acqua corrente. Se necessario, mettile a bagno per alcune ore.</p>
-<p>2. <strong>Soffritto</strong>: In una pentola capiente, scalda un po' d'olio d'oliva e aggiungi la cipolla, la carota e il sedano tritati finemente. Fai rosolare per circa 5-7 minuti, finché le verdure non diventano morbide.</p>
-<p>3. <strong>Aggiunta dell'aglio e delle acciughe</strong>: Aggiungi gli spicchi d'aglio schiacciati e le acciughe. Mescola bene fino a quando le acciughe si saranno sciolte.</p>
-<p>4. <strong>Cottura delle lenticchie</strong>: Unisci le lenticchie e il brodo vegetale. Porta a ebollizione e poi riduci il fuoco. Copri e lascia cuocere per circa 30-40 minuti, finché le lenticchie non sono tenere.</p>
-<p>5. <strong>Regola di sale e pepe</strong>: Assaggia la zuppa e aggiusta di sale e pepe secondo il tuo gusto.</p>
-<p>6. <strong>Servizio</strong>: Servi la zuppa calda, guarnita con prezzemolo fresco tritato e un filo d'olio d'oliva.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Εκτέλεση</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Φακές</strong>: ξεπλύνετε τις φακές κάτω από τρεχούμενο νερό. Αφήστε τις σε νερό μερικές ώρες αν χρειάζεται.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Σοτάρισμα</strong>: ζεστάνετε λίγο λάδι σε μεγάλη κατσαρόλα και σοτάρετε ψιλοκομμένο κρεμμύδι, καρότο και σέλερι 5-7 λεπτά μέχρι να μαλακώσουν.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Αντζούγιες</strong>: προσθέστε σπασμένο σκόρδο και αντζούγιες. Ανακατέψτε καλά μέχρι να λιώσουν οι αντζούγιες.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Μαγείρεμα</strong>: προσθέστε φακές και ζωμό λαχανικών. Φέρτε σε βρασμό, μετά μειώστε τη φωτιά. Σκεπάστε και σιγοβράστε 30-40 λεπτά μέχρι να μαλακώσουν οι φακές.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Νοστιμίστε</strong>: δοκιμάστε και προσαρμόστε αλάτι και πιπέρι.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Σερβίρετε</strong>: σερβίρετε ζεστή γαρνιρισμένη με φρέσκο ψιλοκομμένο μαϊντανό και λίγο ελαιόλαδο.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Συμβουλή</h4>
+<p>Ένα ρουστίκ και ζεσταντικό χειμωνιάτικο πιάτο. Οι αντζούγιες προσδίδουν έντονη αλμυρή γεύση που ταιριάζει τέλεια με τη γλυκύτητα των φακών.</p>
 </div>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+</div>
 
 <div class="footer">
-<p>Leguminando - Ricette di stagione a base di legumi</p>
-<p>"Tutto e iniziato con hummus di ceci..."</p>
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<p>"Tutto è iniziato con hummus di ceci..."</p>
 </div>
-
-<script>
-function toggleFav(path, title) {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    if (favs[path]) { delete favs[path]; }
-    else { favs[path] = title; }
-    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
-    updateFavIcons();
-}
-function updateFavIcons() {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    document.querySelectorAll('.fav-btn').forEach(btn => {
-        let p = btn.getAttribute('data-path');
-        btn.textContent = favs[p] ? '❤️' : '🤍';
-    });
-}
-document.addEventListener('DOMContentLoaded', updateFavIcons);
-</script>
+</div>
 </body>
 </html>

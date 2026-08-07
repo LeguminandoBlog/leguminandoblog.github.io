@@ -3,254 +3,292 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ricetta del 2025-04-21 | Leguminando</title>
+<title>Crema di Cavolo Cappuccio con Asparagi | Leguminando</title>
 <style>
-body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
-.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.content { background: white; padding: 30px; border-radius: 10px; }
-.content h1 { color: #8B4513; }
-.content h2 { color: #D2691E; }
-.content h3 { color: #8B4513; }
-.content ul { margin: 15px 0; padding-left: 20px; }
-.content li { margin: 8px 0; }
-.content p { margin: 12px 0; line-height: 1.6; }
-.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
-.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; background: #f8f5f0; min-height: 100vh; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+.header { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 40px 20px 30px; text-align: center; border-radius: 20px; margin-bottom: 30px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+.header h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.header .tagline { font-size: 1.2em; opacity: 0.9; font-style: italic; }
+.back-link { display: inline-block; margin: 20px 0; padding: 10px 20px; background: #8B4513; color: white; text-decoration: none; border-radius: 25px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.95em; transition: background 0.3s; }
 .back-link:hover { background: #D2691E; }
-
-.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
-.fav-bar { text-align: center; margin: 5px 0; }
-
-@media print {
-    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
-    .stats, .back-link, .badge { display: none !important; }
-    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
-    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
-    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
-    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
-}
-
-</style>
-<meta name="description" content="Ricetta del 2025-04-21">
-<meta property="og:title" content="Ricetta del 2025-04-21 | Leguminando">
-<meta property="og:description" content="Ricetta del 2025-04-21">
-<style>
-.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
-.lang-tab { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; transition: all 0.3s; }
-.lang-tab.active { background: #8B4513; color: white; }
-.lang-tab:hover:not(.active) { background: #D2691E; color: white; }
+.fav-bar { text-align: center; margin: 10px 0; }
+.fav-btn { cursor: pointer; font-size: 1.8em; user-select: none; display: inline-block; transition: transform 0.2s; }
+.fav-btn:hover { transform: scale(1.2); }
+.recipe-image { width: 100%; max-width: 700px; margin: 20px auto; display: block; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 30px 0; flex-wrap: wrap; }
+.lang-tab { padding: 10px 20px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; border-radius: 25px; cursor: pointer; font-size: 0.9em; transition: all 0.3s; }
+.lang-tab:hover { background: rgba(255,255,255,0.3); }
+.lang-tab.active { background: white; color: #c0392b; border-color: white; }
+.recipe-card { background: white; border-radius: 20px; padding: 40px; margin-bottom: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
 .lang-content { display: none; }
 .lang-content.active { display: block; }
+.recipe-title { font-size: 2.2em; color: #8B4513; margin-bottom: 10px; text-align: center; }
+.recipe-date { text-align: center; color: #666; font-size: 0.95em; margin-bottom: 25px; }
+.ingredients-box { background: linear-gradient(135deg, #fef9e7 0%, #fdebd0 100%); border-radius: 15px; padding: 25px; margin: 25px 0; border-left: 5px solid #D2691E; }
+.ingredients-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.ingredients-box ul { padding-left: 20px; }
+.ingredients-box li { margin: 8px 0; color: #5D4037; }
+.steps-box { margin: 25px 0; }
+.steps-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.step { display: flex; gap: 15px; margin: 15px 0; padding: 15px; background: #faf8f5; border-radius: 12px; align-items: flex-start; }
+.step-num { background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1em; flex-shrink: 0; }
+.step-text { flex: 1; color: #5D4037; line-height: 1.6; }
+.tip-box { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 15px; padding: 20px; margin: 25px 0; border-left: 5px solid #4caf50; }
+.tip-box h4 { color: #2e7d32; margin-bottom: 10px; }
+.tip-box p { color: #1b5e20; line-height: 1.6; }
+.footer { text-align: center; margin-top: 50px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+@media (max-width: 600px) { .header h1 { font-size: 2em; } .recipe-card { padding: 20px; } .recipe-title { font-size: 1.6em; } }
+@media print { .lang-tabs, .lang-tab, .fav-bar, .back-link { display: none !important; } body { background: white !important; } .recipe-card { box-shadow: none !important; break-inside: avoid; } }
 </style>
 <script>
-function showLang(lang) {
-    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
-    document.getElementById('lang-' + lang).classList.add('active');
-    event.target.classList.add('active');
-}
+function showLang(lang) { document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active')); document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active')); document.getElementById('lang-' + lang).classList.add('active'); event.target.classList.add('active'); }
+function toggleFav(path, title) { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); if (favs[path]) { delete favs[path]; } else { favs[path] = title; } localStorage.setItem('leguminando_favs', JSON.stringify(favs)); updateFavIcons(); }
+function updateFavIcons() { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); document.querySelectorAll('.fav-btn').forEach(btn => { let p = btn.getAttribute('data-path'); btn.textContent = favs[p] ? '❤️' : '🤍'; }); }
+document.addEventListener('DOMContentLoaded', updateFavIcons);
 </script>
 </head>
 <body>
+<div class="container">
 <div class="header">
-<h1>Leguminando</h1>
-<p>Ricette di stagione a base di legumi</p>
+<h1>🫘 Leguminando</h1>
+<p class="tagline">Ricette di stagione a base di legumi</p>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
-
+<a href="../index.html" class="back-link">← Torna alla Home</a>
 <div class="fav-bar">
-<span class="fav-btn" data-path="primavera/052.html" data-title="Ricetta del 2025-04-21" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+<span class="fav-btn" data-path="primavera/052.html" data-title="Crema di Cavolo Cappuccio con Asparagi" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
 </div>
-
-<img src="052.jpg" alt="Ricetta del 2025-04-21" class="recipe-image">
-
-<div class="content">
+<img src="052.jpg" alt="Crema di Cavolo Cappuccio con Asparagi" class="recipe-image">
 <div class="lang-tabs">
-    <button class="lang-tab active" onclick="showLang('it')">IT</button>
-    <button class="lang-tab" onclick="showLang('en')">EN</button>
-    <button class="lang-tab" onclick="showLang('es')">ES</button>
-    <button class="lang-tab" onclick="showLang('pt')">PT</button>
-    <button class="lang-tab" onclick="showLang('de')">DE</button>
-    <button class="lang-tab" onclick="showLang('el')">EL</button>
+    <button class="lang-tab active" onclick="showLang('it')">🇮🇹 IT</button>
+    <button class="lang-tab" onclick="showLang('en')">🇬🇧 EN</button>
+    <button class="lang-tab" onclick="showLang('es')">🇪🇸 ES</button>
+    <button class="lang-tab" onclick="showLang('pt')">🇵🇹 PT</button>
+    <button class="lang-tab" onclick="showLang('de')">🇩🇪 DE</button>
+    <button class="lang-tab" onclick="showLang('el')">🇬🇷 EL</button>
 </div>
 
+<!-- ITALIANO -->
 <div id="lang-it" class="lang-content active">
-<p><strong>Data:</strong> 2025-04-21</p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Crema di Cavolo Cappuccio con Asparagi</h2>
+<p class="recipe-date">📅 21 Aprile 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredienti</h3>
 <ul>
-<li>300 g di cavolo cappuccio</li>
-<li>200 g di ceci lessati</li>
-<li>150 g di asparagi</li>
+<li>300 g cavolo cappuccio</li>
+<li>200 g ceci lessati</li>
+<li>150 g asparagi</li>
 <li>4 foglie di cavolo verza</li>
 <li>1 cipolla</li>
 <li>2 spicchi d'aglio</li>
-<li>500 ml di brodo vegetale</li>
-<li>50 ml di olio extravergine d'oliva</li>
+<li>500 ml brodo vegetale</li>
+<li>50 ml olio extravergine d'oliva</li>
 <li>Sale e pepe q.b.</li>
-<li>Semi di sesamo (per decorare)</li>
+<li>Semi di sesamo per decorare</li>
 </ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparazione della crema</strong>: In una pentola, scalda un po' d'olio e soffriggi la cipolla tritata e l'aglio fino a doratura. Aggiungi il cavolo cappuccio tagliato a strisce e fai cuocere per circa 5 minuti, mescolando di tanto in tanto.</p>
-<p>2. <strong>Cottura</strong>: Versa il brodo vegetale nella pentola e porta a ebollizione. Aggiungi i ceci lessati e lascia cuocere per circa 15-20 minuti finché il cavolo non sarà tenero.</p>
-<p>3. <strong>Frullare</strong>: Utilizza un frullatore a immersione per ridurre il tutto in una crema liscia. Aggiusta di sale e pepe.</p>
-<p>4. <strong>Preparazione degli asparagi</strong>: Nel frattempo, taglia gli asparagi e saltali in padella con un filo d'olio fino a renderli teneri ma croccanti.</p>
-<p>5. <strong>Scottare le foglie di cavolo verza</strong>: Porta a ebollizione acqua salata e scotta le foglie di cavolo verza per un paio di minuti. Scolale e raffreddale in acqua ghiacciata.</p>
-<p>6. <strong>Impiattamento</strong>: Versa la crema di cavolo cappuccio nei piatti, adagia sopra gli asparagi saltati e le foglie di cavolo verza. Completa con un filo d'olio e una spolverata di semi di sesamo.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparazione</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Soffritto</strong>: in una pentola scalda un po' d'olio e soffriggi la cipolla tritata e l'aglio fino a doratura. Aggiungi il cavolo cappuccio tagliato a strisce e cuoci circa 5 minuti mescolando.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Cottura</strong>: versa il brodo vegetale e porta a ebollizione. Aggiungi i ceci lessati e cuoci 15-20 minuti finché il cavolo non è tenero.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Frulla</strong>: con un frullatore a immersione riduci il tutto in crema liscia. Aggiusta sale e pepe.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Asparagi</strong>: nel frattempo taglia gli asparagi e saltali in padella con un filo d'olio fino a renderli teneri ma croccanti.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Verza</strong>: porta a ebollizione acqua salata e scotta le foglie di verza 2 minuti. Scolale e raffreddale in acqua ghiacciata.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Impiatta</strong>: versa la crema nei piatti, adagia gli asparagi e le foglie di verza sopra. Completa con olio e semi di sesamo.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Suggerimento</h4>
+<p>Un piatto primaverile nutriente e colorato. Per una versione più leggera sostituisci il brodo con acqua.</p>
+</div>
+</div>
 </div>
 
+<!-- ENGLISH -->
 <div id="lang-en" class="lang-content">
-<p><strong>Date:</strong> 2025-04-21</p>
-<p><em>English translation coming soon...</em></p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Savoy Cabbage Cream with Asparagus</h2>
+<p class="recipe-date">📅 April 21, 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredients</h3>
 <ul>
-<li>300 g di cavolo cappuccio</li>
-<li>200 g di ceci lessati</li>
-<li>150 g di asparagi</li>
-<li>4 foglie di cavolo verza</li>
-<li>1 cipolla</li>
-<li>2 spicchi d'aglio</li>
-<li>500 ml di brodo vegetale</li>
-<li>50 ml di olio extravergine d'oliva</li>
-<li>Sale e pepe q.b.</li>
-<li>Semi di sesamo (per decorare)</li>
+<li>300 g savoy cabbage</li>
+<li>200 g cooked chickpeas</li>
+<li>150 g asparagus</li>
+<li>4 savoy cabbage leaves</li>
+<li>1 onion</li>
+<li>2 garlic cloves</li>
+<li>500 ml vegetable broth</li>
+<li>50 ml extra virgin olive oil</li>
+<li>Salt and pepper to taste</li>
+<li>Sesame seeds for garnish</li>
 </ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparazione della crema</strong>: In una pentola, scalda un po' d'olio e soffriggi la cipolla tritata e l'aglio fino a doratura. Aggiungi il cavolo cappuccio tagliato a strisce e fai cuocere per circa 5 minuti, mescolando di tanto in tanto.</p>
-<p>2. <strong>Cottura</strong>: Versa il brodo vegetale nella pentola e porta a ebollizione. Aggiungi i ceci lessati e lascia cuocere per circa 15-20 minuti finché il cavolo non sarà tenero.</p>
-<p>3. <strong>Frullare</strong>: Utilizza un frullatore a immersione per ridurre il tutto in una crema liscia. Aggiusta di sale e pepe.</p>
-<p>4. <strong>Preparazione degli asparagi</strong>: Nel frattempo, taglia gli asparagi e saltali in padella con un filo d'olio fino a renderli teneri ma croccanti.</p>
-<p>5. <strong>Scottare le foglie di cavolo verza</strong>: Porta a ebollizione acqua salata e scotta le foglie di cavolo verza per un paio di minuti. Scolale e raffreddale in acqua ghiacciata.</p>
-<p>6. <strong>Impiattamento</strong>: Versa la crema di cavolo cappuccio nei piatti, adagia sopra gli asparagi saltati e le foglie di cavolo verza. Completa con un filo d'olio e una spolverata di semi di sesamo.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparation</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Sauté</strong>: heat some oil in a pot and sauté chopped onion and garlic until golden. Add shredded savoy cabbage and cook about 5 minutes, stirring.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Cook</strong>: pour in vegetable broth and bring to a boil. Add cooked chickpeas and simmer 15-20 minutes until cabbage is tender.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Blend</strong>: use an immersion blender to puree into a smooth cream. Adjust salt and pepper.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Asparagus</strong>: meanwhile cut asparagus and sauté in a pan with a drizzle of oil until tender but crisp.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Blanch</strong>: bring salted water to a boil and blanch cabbage leaves for 2 minutes. Drain and cool in ice water.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Plate</strong>: ladle cream into bowls, top with asparagus and cabbage leaves. Finish with olive oil and sesame seeds.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Tip</h4>
+<p>A nutritious and colourful spring dish. For a lighter version replace broth with water.</p>
+</div>
+</div>
 </div>
 
+<!-- SPANISH -->
 <div id="lang-es" class="lang-content">
-<p><strong>Fecha:</strong> 2025-04-21</p>
-<p><em>Traduccion al espanol proximamente...</em></p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Crema de Col Lombarda con Espárragos</h2>
+<p class="recipe-date">📅 21 de Abril de 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li>300 g di cavolo cappuccio</li>
-<li>200 g di ceci lessati</li>
-<li>150 g di asparagi</li>
-<li>4 foglie di cavolo verza</li>
-<li>1 cipolla</li>
-<li>2 spicchi d'aglio</li>
-<li>500 ml di brodo vegetale</li>
-<li>50 ml di olio extravergine d'oliva</li>
-<li>Sale e pepe q.b.</li>
-<li>Semi di sesamo (per decorare)</li>
+<li>300 g col lombarda</li>
+<li>200 g garbanzos cocidos</li>
+<li>150 g espárragos</li>
+<li>4 hojas de col</li>
+<li>1 cebolla</li>
+<li>2 dientes de ajo</li>
+<li>500 ml caldo vegetal</li>
+<li>50 ml aceite de oliva virgen extra</li>
+<li>Sal y pimienta al gusto</li>
+<li>Semillas de sésamo para decorar</li>
 </ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparazione della crema</strong>: In una pentola, scalda un po' d'olio e soffriggi la cipolla tritata e l'aglio fino a doratura. Aggiungi il cavolo cappuccio tagliato a strisce e fai cuocere per circa 5 minuti, mescolando di tanto in tanto.</p>
-<p>2. <strong>Cottura</strong>: Versa il brodo vegetale nella pentola e porta a ebollizione. Aggiungi i ceci lessati e lascia cuocere per circa 15-20 minuti finché il cavolo non sarà tenero.</p>
-<p>3. <strong>Frullare</strong>: Utilizza un frullatore a immersione per ridurre il tutto in una crema liscia. Aggiusta di sale e pepe.</p>
-<p>4. <strong>Preparazione degli asparagi</strong>: Nel frattempo, taglia gli asparagi e saltali in padella con un filo d'olio fino a renderli teneri ma croccanti.</p>
-<p>5. <strong>Scottare le foglie di cavolo verza</strong>: Porta a ebollizione acqua salata e scotta le foglie di cavolo verza per un paio di minuti. Scolale e raffreddale in acqua ghiacciata.</p>
-<p>6. <strong>Impiattamento</strong>: Versa la crema di cavolo cappuccio nei piatti, adagia sopra gli asparagi saltati e le foglie di cavolo verza. Completa con un filo d'olio e una spolverata di semi di sesamo.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparación</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Sofrito</strong>: calienta un poco de aceite en una olla y sofríe la cebolla picada y el ajo hasta dorar. Añade la col en tiras y cocina unos 5 minutos removiendo.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Cocción</strong>: vierte el caldo vegetal y lleva a ebullición. Añade los garbanzos y cocina 15-20 minutos hasta que la col esté tierna.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Tritura</strong>: con una batidora de inmersión reduce todo a crema lisa. Sazona con sal y pimienta.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Espárragos</strong>: mientras tanto corta los espárragos y salteados en sartén con un chorrito de aceite hasta que estén tiernos pero crujientes.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Escaldado</strong>: hierve agua con sal y escaldar las hojas de col 2 minutos. Escúrrelas y refréscalas en agua con hielo.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Emplata</strong>: sirve la crema en platos hondos, coloca los espárragos y las hojas de col encima. Termina con aceite y semillas de sésamo.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Consejo</h4>
+<p>Plato primaveral nutritivo y colorido. Para una versión más ligera sustituye el caldo por agua.</p>
+</div>
+</div>
 </div>
 
+<!-- PORTUGUESE -->
 <div id="lang-pt" class="lang-content">
-<p><strong>Data:</strong> 2025-04-21</p>
-<p><em>Traducao em portugues em breve...</em></p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Creme de Couve Lombarda com Aspargos</h2>
+<p class="recipe-date">📅 21 de Abril de 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li>300 g di cavolo cappuccio</li>
-<li>200 g di ceci lessati</li>
-<li>150 g di asparagi</li>
-<li>4 foglie di cavolo verza</li>
-<li>1 cipolla</li>
-<li>2 spicchi d'aglio</li>
-<li>500 ml di brodo vegetale</li>
-<li>50 ml di olio extravergine d'oliva</li>
-<li>Sale e pepe q.b.</li>
-<li>Semi di sesamo (per decorare)</li>
+<li>300 g couve lombarda</li>
+<li>200 g grão-de-bico cozido</li>
+<li>150 g aspargos</li>
+<li>4 folhas de couve</li>
+<li>1 cebola</li>
+<li>2 dentes de alho</li>
+<li>500 ml caldo de legumes</li>
+<li>50 ml azeite virgem extra</li>
+<li>Sal e pimenta q.b.</li>
+<li>Sementes de sésamo para guarnecer</li>
 </ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparazione della crema</strong>: In una pentola, scalda un po' d'olio e soffriggi la cipolla tritata e l'aglio fino a doratura. Aggiungi il cavolo cappuccio tagliato a strisce e fai cuocere per circa 5 minuti, mescolando di tanto in tanto.</p>
-<p>2. <strong>Cottura</strong>: Versa il brodo vegetale nella pentola e porta a ebollizione. Aggiungi i ceci lessati e lascia cuocere per circa 15-20 minuti finché il cavolo non sarà tenero.</p>
-<p>3. <strong>Frullare</strong>: Utilizza un frullatore a immersione per ridurre il tutto in una crema liscia. Aggiusta di sale e pepe.</p>
-<p>4. <strong>Preparazione degli asparagi</strong>: Nel frattempo, taglia gli asparagi e saltali in padella con un filo d'olio fino a renderli teneri ma croccanti.</p>
-<p>5. <strong>Scottare le foglie di cavolo verza</strong>: Porta a ebollizione acqua salata e scotta le foglie di cavolo verza per un paio di minuti. Scolale e raffreddale in acqua ghiacciata.</p>
-<p>6. <strong>Impiattamento</strong>: Versa la crema di cavolo cappuccio nei piatti, adagia sopra gli asparagi saltati e le foglie di cavolo verza. Completa con un filo d'olio e una spolverata di semi di sesamo.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparação</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Refogado</strong>: aquece um pouco de azeite numa panela e refoga a cebola picada e o alho até dourar. Junta a couve em tiras e cozinha cerca de 5 minutos mexendo.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Cozedura</strong>: deita o caldo de legumes e leva a ferver. Junta o grão-de-bico e cozinha 15-20 minutos até a couve ficar macia.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Tritura</strong>: com uma varinha mágica reduz tudo a creme liso. Tempera com sal e pimenta.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Aspargos</strong>: entretanto corta os aspargos e salteia numa frigideira com um fio de azeite até ficarem macios mas crocantes.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Escaldar</strong>: leva água salgada a ferver e escaldar as folhas de couve 2 minutos. Escorre e arrefece em água com gelo.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Emprata</strong>: serve o creme em pratos fundos, coloca os aspargos e as folhas de couve por cima. Completa com azeite e sementes de sésamo.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Sugestão</h4>
+<p>Primaveril nutritivo e colorido. Para uma versão mais leve substitui o caldo por água.</p>
+</div>
+</div>
 </div>
 
+<!-- GERMAN -->
 <div id="lang-de" class="lang-content">
-<p><strong>Datum:</strong> 2025-04-21</p>
-<p><em>Deutsche Uebersetzung folgt bald...</em></p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Wirsingcreme mit Spargel</h2>
+<p class="recipe-date">📅 21. April 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Zutaten</h3>
 <ul>
-<li>300 g di cavolo cappuccio</li>
-<li>200 g di ceci lessati</li>
-<li>150 g di asparagi</li>
-<li>4 foglie di cavolo verza</li>
-<li>1 cipolla</li>
-<li>2 spicchi d'aglio</li>
-<li>500 ml di brodo vegetale</li>
-<li>50 ml di olio extravergine d'oliva</li>
-<li>Sale e pepe q.b.</li>
-<li>Semi di sesamo (per decorare)</li>
+<li>300 g Wirsing</li>
+<li>200 g gekochte Kichererbsen</li>
+<li>150 g Spargel</li>
+<li>4 Wirsingblätter</li>
+<li>1 Zwiebel</li>
+<li>2 Knoblauchzehen</li>
+<li>500 ml Gemüsebrühe</li>
+<li>50 ml natives Olivenöl extra</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Sesamsamen zum Garnieren</li>
 </ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparazione della crema</strong>: In una pentola, scalda un po' d'olio e soffriggi la cipolla tritata e l'aglio fino a doratura. Aggiungi il cavolo cappuccio tagliato a strisce e fai cuocere per circa 5 minuti, mescolando di tanto in tanto.</p>
-<p>2. <strong>Cottura</strong>: Versa il brodo vegetale nella pentola e porta a ebollizione. Aggiungi i ceci lessati e lascia cuocere per circa 15-20 minuti finché il cavolo non sarà tenero.</p>
-<p>3. <strong>Frullare</strong>: Utilizza un frullatore a immersione per ridurre il tutto in una crema liscia. Aggiusta di sale e pepe.</p>
-<p>4. <strong>Preparazione degli asparagi</strong>: Nel frattempo, taglia gli asparagi e saltali in padella con un filo d'olio fino a renderli teneri ma croccanti.</p>
-<p>5. <strong>Scottare le foglie di cavolo verza</strong>: Porta a ebollizione acqua salata e scotta le foglie di cavolo verza per un paio di minuti. Scolale e raffreddale in acqua ghiacciata.</p>
-<p>6. <strong>Impiattamento</strong>: Versa la crema di cavolo cappuccio nei piatti, adagia sopra gli asparagi saltati e le foglie di cavolo verza. Completa con un filo d'olio e una spolverata di semi di sesamo.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Zubereitung</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Dünsten</strong>: etwas Öl in einem Topf erhitzen und gehackte Zwiebel und Knoblauch goldbraun dünsten. Wirsing in Streifen zugeben und ca. 5 Minuten unter Rühren garen.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Kochen</strong>: Gemüsebrühe zugeben und zum Kochen bringen. Gekochte Kichererbsen hinzufügen und 15-20 Minuten köcheln lassen bis der Wirsing weich ist.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Pürieren</strong>: mit einem Stabmixer alles zu einer glatten Creme pürieren. Mit Salz und Pfeffer abschmecken.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Spargel</strong>: unterdessen Spargel schneiden und in einer Pfanne mit etwas Öl kurz anbraten, bis er zart aber bissfest ist.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Blanchieren</strong>: Salzwasser zum Kochen bringen und Wirsingblätter 2 Minuten blanchieren. Abgießen und in Eiswasser abschrecken.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Anrichten</strong>: Creme in tiefen Tellern anrichten, Spargel und Wirsingblätter daraufgeben. Mit Olivenöl und Sesamsamen garnieren.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Tipp</h4>
+<p>Ein nährstoffreiches und farbenfrohes Frühlingsgericht. Für eine leichtere Version Brühe durch Wasser ersetzen.</p>
+</div>
+</div>
 </div>
 
+<!-- GREEK -->
 <div id="lang-el" class="lang-content">
-<p><strong>Hmerominia:</strong> 2025-04-21</p>
-<p><em>E elliniki metafrasi erhetai syntoma...</em></p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Κρέμα Λάχανου με Σπαράγγια</h2>
+<p class="recipe-date">📅 21 Απριλίου 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Υλικά</h3>
 <ul>
-<li>300 g di cavolo cappuccio</li>
-<li>200 g di ceci lessati</li>
-<li>150 g di asparagi</li>
-<li>4 foglie di cavolo verza</li>
-<li>1 cipolla</li>
-<li>2 spicchi d'aglio</li>
-<li>500 ml di brodo vegetale</li>
-<li>50 ml di olio extravergine d'oliva</li>
-<li>Sale e pepe q.b.</li>
-<li>Semi di sesamo (per decorare)</li>
+<li>300 γραμμ. λάχανο savoy</li>
+<li>200 γραμμ. μαγειρεμένα ρεβίθια</li>
+<li>150 γραμμ. σπαράγγια</li>
+<li>4 φύλλα λάχανου</li>
+<li>1 κρεμμύδι</li>
+<li>2 σκελίδες σκόρδου</li>
+<li>500 ml λαχανικών ζωμός</li>
+<li>50 ml εξαιρετικό παρθένο ελαιόλαδο</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>Σπόροι σουσαμιού για γαρνίρισμα</li>
 </ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparazione della crema</strong>: In una pentola, scalda un po' d'olio e soffriggi la cipolla tritata e l'aglio fino a doratura. Aggiungi il cavolo cappuccio tagliato a strisce e fai cuocere per circa 5 minuti, mescolando di tanto in tanto.</p>
-<p>2. <strong>Cottura</strong>: Versa il brodo vegetale nella pentola e porta a ebollizione. Aggiungi i ceci lessati e lascia cuocere per circa 15-20 minuti finché il cavolo non sarà tenero.</p>
-<p>3. <strong>Frullare</strong>: Utilizza un frullatore a immersione per ridurre il tutto in una crema liscia. Aggiusta di sale e pepe.</p>
-<p>4. <strong>Preparazione degli asparagi</strong>: Nel frattempo, taglia gli asparagi e saltali in padella con un filo d'olio fino a renderli teneri ma croccanti.</p>
-<p>5. <strong>Scottare le foglie di cavolo verza</strong>: Porta a ebollizione acqua salata e scotta le foglie di cavolo verza per un paio di minuti. Scolale e raffreddale in acqua ghiacciata.</p>
-<p>6. <strong>Impiattamento</strong>: Versa la crema di cavolo cappuccio nei piatti, adagia sopra gli asparagi saltati e le foglie di cavolo verza. Completa con un filo d'olio e una spolverata di semi di sesamo.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Εκτέλεση</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Σοτάρισμα</strong>: ζεστάνετε λίγο λάδι σε κατσαρόλα και σοτάρετε το ψιλοκομμένο κρεμμύδι και το σκόρδο μέχρι να ροδίσουν. Προσθέστε το λάχανο σε λωρίδες και μαγειρέψτε περίπου 5 λεπτά ανακατεύοντας.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Μαγείρεμα</strong>: προσθέστε τον ζωμό λαχανικών και φέρτε σε βρασμό. Προσθέστε τα ρεβίθια και μαγειρέψτε 15-20 λεπτά μέχρι το λάχανο να μαλακώσει.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Πολτοποίηση</strong>: με ράβδο μπλέντερ πολτοποιήστε το περιεχόμενο μέχρι να γίνει λεία κρέμα. Αλατοπιπερώστε.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Σπαράγγια</strong>: εν τω μεταξύ κόψτε τα σπαράγγια και σοτάρετε σε τηγάνι με λίγο λάδι μέχρι να γίνουν τρυφερά αλλά τραγανά.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Ζεμάτισμα</strong>: βράστε αλατισμένο νερό και ζεματίστε τα φύλλα λάχανου για 2 λεπτά. Στραγγίστε και αφήστε τα σε παγωμένο νερό.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Σερβίρετε</strong>: σερβίρετε την κρέμα σε βαθιά πιάτα, βάλτε τα σπαράγγια και τα φύλλα λάχανου από πάνω. Ολοκληρώστε με ελαιόλαδο και σουσάμι.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Συμβουλή</h4>
+<p>Θρεπτικό και πολύχρωμο ανοιξιάτικο πιάτο. Για ελαφρύτερη εκδοχή αντικαταστήστε τον ζωμό με νερό.</p>
 </div>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+</div>
 
 <div class="footer">
-<p>Leguminando - Ricette di stagione a base di legumi</p>
-<p>"Tutto e iniziato con hummus di ceci..."</p>
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<p>"Tutto è iniziato con hummus di ceci..."</p>
 </div>
-<div data-legumi="ceci" style="display:none;"></div>
-
-<script>
-function toggleFav(path, title) {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    if (favs[path]) { delete favs[path]; }
-    else { favs[path] = title; }
-    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
-    updateFavIcons();
-}
-function updateFavIcons() {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    document.querySelectorAll('.fav-btn').forEach(btn => {
-        let p = btn.getAttribute('data-path');
-        btn.textContent = favs[p] ? '❤️' : '🤍';
-    });
-}
-document.addEventListener('DOMContentLoaded', updateFavIcons);
-</script>
-
+</div>
 </body>
 </html>
