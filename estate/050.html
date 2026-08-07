@@ -3,45 +3,177 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ricetta del 2025-07-05 | Leguminando</title>
+<title>Insalata Fredda Mediterranea | Leguminando</title>
 <style>
-body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
-.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.content { background: white; padding: 30px; border-radius: 10px; }
-.content h1 { color: #8B4513; }
-.content h2 { color: #D2691E; }
-.content h3 { color: #8B4513; }
-.content ul { margin: 15px 0; padding-left: 20px; }
-.content li { margin: 8px 0; }
-.content p { margin: 12px 0; line-height: 1.6; }
-.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
-.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Georgia', serif;
+    background: #f8f5f0;
+    min-height: 100vh;
+    padding: 20px;
+}
+.container { max-width: 900px; margin: 0 auto; }
+
+.header {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    padding: 40px 20px 30px;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+.header h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.header .tagline { font-size: 1.2em; opacity: 0.9; font-style: italic; }
+
+.back-link {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: #8B4513;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.95em;
+    transition: background 0.3s;
+}
 .back-link:hover { background: #D2691E; }
 
-.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
-.fav-bar { text-align: center; margin: 5px 0; }
+.fav-bar { text-align: center; margin: 10px 0; }
+.fav-btn { cursor: pointer; font-size: 1.8em; user-select: none; display: inline-block; transition: transform 0.2s; }
+.fav-btn:hover { transform: scale(1.2); }
 
-@media print {
-    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
-    .stats, .back-link, .badge { display: none !important; }
-    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
-    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
-    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
-    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+.recipe-image {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
 }
 
-</style>
-<meta name="description" content="Ricetta del 2025-07-05">
-<meta property="og:title" content="Ricetta del 2025-07-05 | Leguminando">
-<meta property="og:description" content="Ricetta del 2025-07-05">
-<style>
-.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
-.lang-tab { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; transition: all 0.3s; }
-.lang-tab.active { background: #8B4513; color: white; }
-.lang-tab:hover:not(.active) { background: #D2691E; color: white; }
+.lang-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+.lang-tab {
+    padding: 10px 20px;
+    border: 2px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.3s;
+}
+.lang-tab:hover { background: rgba(255,255,255,0.3); }
+.lang-tab.active { background: white; color: #c0392b; border-color: white; }
+
+.recipe-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
 .lang-content { display: none; }
 .lang-content.active { display: block; }
+
+.recipe-title {
+    font-size: 2.2em;
+    color: #8B4513;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.recipe-date {
+    text-align: center;
+    color: #666;
+    font-size: 0.95em;
+    margin-bottom: 25px;
+}
+
+.ingredients-box {
+    background: linear-gradient(135deg, #fef9e7 0%, #fdebd0 100%);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 25px 0;
+    border-left: 5px solid #D2691E;
+}
+.ingredients-box h3 {
+    color: #8B4513;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+.ingredients-box ul { padding-left: 20px; }
+.ingredients-box li { margin: 8px 0; color: #5D4037; }
+
+.steps-box {
+    margin: 25px 0;
+}
+.steps-box h3 {
+    color: #8B4513;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+.step {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+    padding: 15px;
+    background: #faf8f5;
+    border-radius: 12px;
+    align-items: flex-start;
+}
+.step-num {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    flex-shrink: 0;
+}
+.step-text { flex: 1; color: #5D4037; line-height: 1.6; }
+.step-text ul { padding-left: 20px; margin-top: 8px; }
+.step-text li { margin: 5px 0; }
+
+.tip-box {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 25px 0;
+    border-left: 5px solid #4caf50;
+}
+.tip-box h4 { color: #2e7d32; margin-bottom: 10px; }
+.tip-box p { color: #1b5e20; line-height: 1.6; }
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    color: #8B4513;
+    font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+    .header h1 { font-size: 2em; }
+    .recipe-card { padding: 20px; }
+    .recipe-title { font-size: 1.6em; }
+}
+@media print {
+    .lang-tabs, .lang-tab, .fav-bar, .back-link { display: none !important; }
+    body { background: white !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; }
+}
 </style>
 <script>
 function showLang(lang) {
@@ -50,292 +182,6 @@ function showLang(lang) {
     document.getElementById('lang-' + lang).classList.add('active');
     event.target.classList.add('active');
 }
-</script>
-</head>
-<body>
-<div class="header">
-<h1>Leguminando</h1>
-<p>Ricette di stagione a base di legumi</p>
-</div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
-
-<div class="fav-bar">
-<span class="fav-btn" data-path="estate/050.html" data-title="Ricetta del 2025-07-05" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
-</div>
-
-<img src="050.jpg" alt="Ricetta del 2025-07-05" class="recipe-image">
-
-<div class="content">
-<div class="lang-tabs">
-    <button class="lang-tab active" onclick="showLang('it')">IT</button>
-    <button class="lang-tab" onclick="showLang('en')">EN</button>
-    <button class="lang-tab" onclick="showLang('es')">ES</button>
-    <button class="lang-tab" onclick="showLang('pt')">PT</button>
-    <button class="lang-tab" onclick="showLang('de')">DE</button>
-    <button class="lang-tab" onclick="showLang('el')">EL</button>
-</div>
-
-<div id="lang-it" class="lang-content active">
-<p><strong>Data:</strong> 2025-07-05</p>
-<h3>Insalata Fredda Mediterranea</h3>
-<h4>Ingredienti:</h4>
-<ul>
-<li>2 zucchine</li>
-<li>1 peperone rosso</li>
-<li>1 peperone giallo</li>
-<li>150 g di piselli (freschi o surgelati)</li>
-<li>100 g di pomodori secchi</li>
-<li>200 g di cavolo (preferibilmente cavolo cappuccio o cavolo riccio)</li>
-<li>3 cucchiai di olio extravergine d'oliva</li>
-<li>Succo di 1 limone</li>
-<li>Sale e pepe q.b.</li>
-<li>Foglie di basilico fresco (opzionale, per decorare)</li>
-</ul>
-<h4>Procedimento:</h4>
-<p>1. <strong>Preparazione delle verdure</strong>:</p>
-<ul>
-<li>Lava le zucchine e i peperoni. Taglia le zucchine a rondelle e i peperoni a cubetti.</li>
-<li>Se usi piselli freschi, sbollentali per 2-3 minuti in acqua salata e poi scolali. Se sono surgelati, scongelali in acqua calda.</li>
-<li>Taglia i pomodori secchi a pezzetti.</li>
-</ul>
-<p>2. <strong>Preparazione del cavolo</strong>:</p>
-<ul>
-<li>Lava il cavolo e taglialo a strisce sottili. Puoi anche sbollentarlo per 2-3 minuti se preferisci una consistenza più tenera.</li>
-</ul>
-<p>3. <strong>Unire gli ingredienti</strong>:</p>
-<ul>
-<li>In una ciotola capiente, unisci le zucchine, i peperoni, i piselli, i pomodori secchi e il cavolo. Mescola bene per amalgamare gli ingredienti.</li>
-</ul>
-<p>4. <strong>Condire l'insalata</strong>:</p>
-<ul>
-<li>In una ciotolina, mescola l'olio d'oliva, il succo di limone, sale e pepe. Versa il condimento sull'insalata e mescola delicatamente.</li>
-</ul>
-<p>5. <strong>Servire</strong>:</p>
-<ul>
-<li>Lascia riposare l'insalata in frigorifero per almeno 30 minuti affinché i sapori si amalgamino. Prima di servire, guarnisci con foglie di basilico fresco, se desideri.</li>
-</ul>
-</div>
-
-<div id="lang-en" class="lang-content">
-<p><strong>Date:</strong> 2025-07-05</p>
-<p><em>English translation coming soon...</em></p>
-<h3>Insalata Fredda Mediterranea</h3>
-<h4>Ingredienti:</h4>
-<ul>
-<li>2 zucchine</li>
-<li>1 peperone rosso</li>
-<li>1 peperone giallo</li>
-<li>150 g di piselli (freschi o surgelati)</li>
-<li>100 g di pomodori secchi</li>
-<li>200 g di cavolo (preferibilmente cavolo cappuccio o cavolo riccio)</li>
-<li>3 cucchiai di olio extravergine d'oliva</li>
-<li>Succo di 1 limone</li>
-<li>Sale e pepe q.b.</li>
-<li>Foglie di basilico fresco (opzionale, per decorare)</li>
-</ul>
-<h4>Procedimento:</h4>
-<p>1. <strong>Preparazione delle verdure</strong>:</p>
-<ul>
-<li>Lava le zucchine e i peperoni. Taglia le zucchine a rondelle e i peperoni a cubetti.</li>
-<li>Se usi piselli freschi, sbollentali per 2-3 minuti in acqua salata e poi scolali. Se sono surgelati, scongelali in acqua calda.</li>
-<li>Taglia i pomodori secchi a pezzetti.</li>
-</ul>
-<p>2. <strong>Preparazione del cavolo</strong>:</p>
-<ul>
-<li>Lava il cavolo e taglialo a strisce sottili. Puoi anche sbollentarlo per 2-3 minuti se preferisci una consistenza più tenera.</li>
-</ul>
-<p>3. <strong>Unire gli ingredienti</strong>:</p>
-<ul>
-<li>In una ciotola capiente, unisci le zucchine, i peperoni, i piselli, i pomodori secchi e il cavolo. Mescola bene per amalgamare gli ingredienti.</li>
-</ul>
-<p>4. <strong>Condire l'insalata</strong>:</p>
-<ul>
-<li>In una ciotolina, mescola l'olio d'oliva, il succo di limone, sale e pepe. Versa il condimento sull'insalata e mescola delicatamente.</li>
-</ul>
-<p>5. <strong>Servire</strong>:</p>
-<ul>
-<li>Lascia riposare l'insalata in frigorifero per almeno 30 minuti affinché i sapori si amalgamino. Prima di servire, guarnisci con foglie di basilico fresco, se desideri.</li>
-</ul>
-</div>
-
-<div id="lang-es" class="lang-content">
-<p><strong>Fecha:</strong> 2025-07-05</p>
-<p><em>Traduccion al espanol proximamente...</em></p>
-<h3>Insalata Fredda Mediterranea</h3>
-<h4>Ingredienti:</h4>
-<ul>
-<li>2 zucchine</li>
-<li>1 peperone rosso</li>
-<li>1 peperone giallo</li>
-<li>150 g di piselli (freschi o surgelati)</li>
-<li>100 g di pomodori secchi</li>
-<li>200 g di cavolo (preferibilmente cavolo cappuccio o cavolo riccio)</li>
-<li>3 cucchiai di olio extravergine d'oliva</li>
-<li>Succo di 1 limone</li>
-<li>Sale e pepe q.b.</li>
-<li>Foglie di basilico fresco (opzionale, per decorare)</li>
-</ul>
-<h4>Procedimento:</h4>
-<p>1. <strong>Preparazione delle verdure</strong>:</p>
-<ul>
-<li>Lava le zucchine e i peperoni. Taglia le zucchine a rondelle e i peperoni a cubetti.</li>
-<li>Se usi piselli freschi, sbollentali per 2-3 minuti in acqua salata e poi scolali. Se sono surgelati, scongelali in acqua calda.</li>
-<li>Taglia i pomodori secchi a pezzetti.</li>
-</ul>
-<p>2. <strong>Preparazione del cavolo</strong>:</p>
-<ul>
-<li>Lava il cavolo e taglialo a strisce sottili. Puoi anche sbollentarlo per 2-3 minuti se preferisci una consistenza più tenera.</li>
-</ul>
-<p>3. <strong>Unire gli ingredienti</strong>:</p>
-<ul>
-<li>In una ciotola capiente, unisci le zucchine, i peperoni, i piselli, i pomodori secchi e il cavolo. Mescola bene per amalgamare gli ingredienti.</li>
-</ul>
-<p>4. <strong>Condire l'insalata</strong>:</p>
-<ul>
-<li>In una ciotolina, mescola l'olio d'oliva, il succo di limone, sale e pepe. Versa il condimento sull'insalata e mescola delicatamente.</li>
-</ul>
-<p>5. <strong>Servire</strong>:</p>
-<ul>
-<li>Lascia riposare l'insalata in frigorifero per almeno 30 minuti affinché i sapori si amalgamino. Prima di servire, guarnisci con foglie di basilico fresco, se desideri.</li>
-</ul>
-</div>
-
-<div id="lang-pt" class="lang-content">
-<p><strong>Data:</strong> 2025-07-05</p>
-<p><em>Traducao em portugues em breve...</em></p>
-<h3>Insalata Fredda Mediterranea</h3>
-<h4>Ingredienti:</h4>
-<ul>
-<li>2 zucchine</li>
-<li>1 peperone rosso</li>
-<li>1 peperone giallo</li>
-<li>150 g di piselli (freschi o surgelati)</li>
-<li>100 g di pomodori secchi</li>
-<li>200 g di cavolo (preferibilmente cavolo cappuccio o cavolo riccio)</li>
-<li>3 cucchiai di olio extravergine d'oliva</li>
-<li>Succo di 1 limone</li>
-<li>Sale e pepe q.b.</li>
-<li>Foglie di basilico fresco (opzionale, per decorare)</li>
-</ul>
-<h4>Procedimento:</h4>
-<p>1. <strong>Preparazione delle verdure</strong>:</p>
-<ul>
-<li>Lava le zucchine e i peperoni. Taglia le zucchine a rondelle e i peperoni a cubetti.</li>
-<li>Se usi piselli freschi, sbollentali per 2-3 minuti in acqua salata e poi scolali. Se sono surgelati, scongelali in acqua calda.</li>
-<li>Taglia i pomodori secchi a pezzetti.</li>
-</ul>
-<p>2. <strong>Preparazione del cavolo</strong>:</p>
-<ul>
-<li>Lava il cavolo e taglialo a strisce sottili. Puoi anche sbollentarlo per 2-3 minuti se preferisci una consistenza più tenera.</li>
-</ul>
-<p>3. <strong>Unire gli ingredienti</strong>:</p>
-<ul>
-<li>In una ciotola capiente, unisci le zucchine, i peperoni, i piselli, i pomodori secchi e il cavolo. Mescola bene per amalgamare gli ingredienti.</li>
-</ul>
-<p>4. <strong>Condire l'insalata</strong>:</p>
-<ul>
-<li>In una ciotolina, mescola l'olio d'oliva, il succo di limone, sale e pepe. Versa il condimento sull'insalata e mescola delicatamente.</li>
-</ul>
-<p>5. <strong>Servire</strong>:</p>
-<ul>
-<li>Lascia riposare l'insalata in frigorifero per almeno 30 minuti affinché i sapori si amalgamino. Prima di servire, guarnisci con foglie di basilico fresco, se desideri.</li>
-</ul>
-</div>
-
-<div id="lang-de" class="lang-content">
-<p><strong>Datum:</strong> 2025-07-05</p>
-<p><em>Deutsche Uebersetzung folgt bald...</em></p>
-<h3>Insalata Fredda Mediterranea</h3>
-<h4>Ingredienti:</h4>
-<ul>
-<li>2 zucchine</li>
-<li>1 peperone rosso</li>
-<li>1 peperone giallo</li>
-<li>150 g di piselli (freschi o surgelati)</li>
-<li>100 g di pomodori secchi</li>
-<li>200 g di cavolo (preferibilmente cavolo cappuccio o cavolo riccio)</li>
-<li>3 cucchiai di olio extravergine d'oliva</li>
-<li>Succo di 1 limone</li>
-<li>Sale e pepe q.b.</li>
-<li>Foglie di basilico fresco (opzionale, per decorare)</li>
-</ul>
-<h4>Procedimento:</h4>
-<p>1. <strong>Preparazione delle verdure</strong>:</p>
-<ul>
-<li>Lava le zucchine e i peperoni. Taglia le zucchine a rondelle e i peperoni a cubetti.</li>
-<li>Se usi piselli freschi, sbollentali per 2-3 minuti in acqua salata e poi scolali. Se sono surgelati, scongelali in acqua calda.</li>
-<li>Taglia i pomodori secchi a pezzetti.</li>
-</ul>
-<p>2. <strong>Preparazione del cavolo</strong>:</p>
-<ul>
-<li>Lava il cavolo e taglialo a strisce sottili. Puoi anche sbollentarlo per 2-3 minuti se preferisci una consistenza più tenera.</li>
-</ul>
-<p>3. <strong>Unire gli ingredienti</strong>:</p>
-<ul>
-<li>In una ciotola capiente, unisci le zucchine, i peperoni, i piselli, i pomodori secchi e il cavolo. Mescola bene per amalgamare gli ingredienti.</li>
-</ul>
-<p>4. <strong>Condire l'insalata</strong>:</p>
-<ul>
-<li>In una ciotolina, mescola l'olio d'oliva, il succo di limone, sale e pepe. Versa il condimento sull'insalata e mescola delicatamente.</li>
-</ul>
-<p>5. <strong>Servire</strong>:</p>
-<ul>
-<li>Lascia riposare l'insalata in frigorifero per almeno 30 minuti affinché i sapori si amalgamino. Prima di servire, guarnisci con foglie di basilico fresco, se desideri.</li>
-</ul>
-</div>
-
-<div id="lang-el" class="lang-content">
-<p><strong>Hmerominia:</strong> 2025-07-05</p>
-<p><em>E elliniki metafrasi erhetai syntoma...</em></p>
-<h3>Insalata Fredda Mediterranea</h3>
-<h4>Ingredienti:</h4>
-<ul>
-<li>2 zucchine</li>
-<li>1 peperone rosso</li>
-<li>1 peperone giallo</li>
-<li>150 g di piselli (freschi o surgelati)</li>
-<li>100 g di pomodori secchi</li>
-<li>200 g di cavolo (preferibilmente cavolo cappuccio o cavolo riccio)</li>
-<li>3 cucchiai di olio extravergine d'oliva</li>
-<li>Succo di 1 limone</li>
-<li>Sale e pepe q.b.</li>
-<li>Foglie di basilico fresco (opzionale, per decorare)</li>
-</ul>
-<h4>Procedimento:</h4>
-<p>1. <strong>Preparazione delle verdure</strong>:</p>
-<ul>
-<li>Lava le zucchine e i peperoni. Taglia le zucchine a rondelle e i peperoni a cubetti.</li>
-<li>Se usi piselli freschi, sbollentali per 2-3 minuti in acqua salata e poi scolali. Se sono surgelati, scongelali in acqua calda.</li>
-<li>Taglia i pomodori secchi a pezzetti.</li>
-</ul>
-<p>2. <strong>Preparazione del cavolo</strong>:</p>
-<ul>
-<li>Lava il cavolo e taglialo a strisce sottili. Puoi anche sbollentarlo per 2-3 minuti se preferisci una consistenza più tenera.</li>
-</ul>
-<p>3. <strong>Unire gli ingredienti</strong>:</p>
-<ul>
-<li>In una ciotola capiente, unisci le zucchine, i peperoni, i piselli, i pomodori secchi e il cavolo. Mescola bene per amalgamare gli ingredienti.</li>
-</ul>
-<p>4. <strong>Condire l'insalata</strong>:</p>
-<ul>
-<li>In una ciotolina, mescola l'olio d'oliva, il succo di limone, sale e pepe. Versa il condimento sull'insalata e mescola delicatamente.</li>
-</ul>
-<p>5. <strong>Servire</strong>:</p>
-<ul>
-<li>Lascia riposare l'insalata in frigorifero per almeno 30 minuti affinché i sapori si amalgamino. Prima di servire, guarnisci con foglie di basilico fresco, se desideri.</li>
-</ul>
-</div>
-</div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
-
-<div class="footer">
-<p>Leguminando - Ricette di stagione a base di legumi</p>
-<p>"Tutto e iniziato con hummus di ceci..."</p>
-</div>
-
-<script>
 function toggleFav(path, title) {
     let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
     if (favs[path]) { delete favs[path]; }
@@ -352,6 +198,295 @@ function updateFavIcons() {
 }
 document.addEventListener('DOMContentLoaded', updateFavIcons);
 </script>
+</head>
+<body>
+<div class="container">
 
+<div class="header">
+<h1>🫘 Leguminando</h1>
+<p class="tagline">Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">← Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="estate/050.html" data-title="Insalata Fredda Mediterranea" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="050.jpg" alt="Insalata Fredda Mediterranea" class="recipe-image">
+
+<div class="lang-tabs">
+    <button class="lang-tab active" onclick="showLang('it')">🇮🇹 IT</button>
+    <button class="lang-tab" onclick="showLang('en')">🇬🇧 EN</button>
+    <button class="lang-tab" onclick="showLang('es')">🇪🇸 ES</button>
+    <button class="lang-tab" onclick="showLang('pt')">🇵🇹 PT</button>
+    <button class="lang-tab" onclick="showLang('de')">🇩🇪 DE</button>
+    <button class="lang-tab" onclick="showLang('el')">🇬🇷 EL</button>
+</div>
+
+<!-- ITALIANO -->
+<div id="lang-it" class="lang-content active">
+<div class="recipe-card">
+<h2 class="recipe-title">Insalata Fredda Mediterranea</h2>
+<p class="recipe-date">📅 5 Luglio 2025</p>
+
+<div class="ingredients-box">
+<h3>🥗 Ingredienti</h3>
+<ul>
+<li>2 zucchine</li>
+<li>1 peperone rosso</li>
+<li>1 peperone giallo</li>
+<li>150 g di piselli (freschi o surgelati)</li>
+<li>100 g di pomodori secchi</li>
+<li>200 g di cavolo (cappuccio o riccio)</li>
+<li>3 cucchiai di olio extravergine d'oliva</li>
+<li>Succo di 1 limone</li>
+<li>Sale e pepe q.b.</li>
+<li>Foglie di basilico fresco (opzionale)</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Preparazione</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Verdure</strong>: lava zucchine e peperoni. Taglia le zucchine a rondelle e i peperoni a cubetti. Se usi piselli freschi, sbollentali 2-3 minuti in acqua salata e scolali; se surgelati, scongelali in acqua calda. Taglia i pomodori secchi a pezzetti.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Cavolo</strong>: lava il cavolo e taglialo a strisce sottili. Puoi anche sbollentarlo 2-3 minuti per una consistenza più tenera.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Unisci</strong>: in una ciotola capiente unisci zucchine, peperoni, piselli, pomodori secchi e cavolo. Mescola bene.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Condisc</strong>: mescola olio d'oliva, succo di limone, sale e pepe. Versa il condimento sull'insalata e mescola delicatamente.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Servi</strong>: lascia riposare in frigorifero almeno 30 minuti affinché i sapori si amalgamino. Guarnisci con basilico fresco prima di servire.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Suggerimento</h4>
+<p>Perfetta per pranzi estivi leggeri. Si conserva in frigorifero fino a 2 giorni.</p>
+</div>
+</div>
+</div>
+
+<!-- ENGLISH -->
+<div id="lang-en" class="lang-content">
+<div class="recipe-card">
+<h2 class="recipe-title">Mediterranean Cold Salad</h2>
+<p class="recipe-date">📅 July 5, 2025</p>
+
+<div class="ingredients-box">
+<h3>🥗 Ingredients</h3>
+<ul>
+<li>2 zucchini</li>
+<li>1 red bell pepper</li>
+<li>1 yellow bell pepper</li>
+<li>150 g peas (fresh or frozen)</li>
+<li>100 g sun-dried tomatoes</li>
+<li>200 g cabbage (green or savoy)</li>
+<li>3 tbsp extra virgin olive oil</li>
+<li>Juice of 1 lemon</li>
+<li>Salt and pepper to taste</li>
+<li>Fresh basil leaves (optional)</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Preparation</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Vegetables</strong>: wash zucchini and peppers. Slice zucchini into rounds and dice peppers. If using fresh peas, blanch 2-3 min in salted water and drain; if frozen, thaw in warm water. Chop sun-dried tomatoes.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Cabbage</strong>: wash and slice into thin strips. You may also blanch 2-3 min for a softer texture.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Combine</strong>: in a large bowl mix zucchini, peppers, peas, sun-dried tomatoes and cabbage. Stir well.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Dress</strong>: mix olive oil, lemon juice, salt and pepper. Pour over the salad and toss gently.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Serve</strong>: chill at least 30 min for flavours to meld. Garnish with fresh basil before serving.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Tip</h4>
+<p>Perfect for light summer lunches. Keeps refrigerated up to 2 days.</p>
+</div>
+</div>
+</div>
+
+<!-- SPANISH -->
+<div id="lang-es" class="lang-content">
+<div class="recipe-card">
+<h2 class="recipe-title">Ensalada Fría Mediterránea</h2>
+<p class="recipe-date">📅 5 de Julio de 2025</p>
+
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
+<ul>
+<li>2 calabacines</li>
+<li>1 pimiento rojo</li>
+<li>1 pimiento amarillo</li>
+<li>150 g de guisantes (frescos o congelados)</li>
+<li>100 g de tomates secos</li>
+<li>200 g de repollo (liso o rizado)</li>
+<li>3 cucharadas de aceite de oliva virgen extra</li>
+<li>Zumo de 1 limón</li>
+<li>Sal y pimienta al gusto</li>
+<li>Hojas de albahaca fresca (opcional)</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Preparación</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Verduras</strong>: lava calabacines y pimientos. Corta los calabacines en rodajas y los pimientos en cubos. Si usas guisantes frescos, escáldalos 2-3 min en agua con sal y escúrrelos; si son congelados, descongélalos en agua templada. Corta los tomates secos en trozos.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Repollo</strong>: lávalo y córtalo en tiras finas. También puedes escaldarlo 2-3 min para una textura más tierna.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Mezcla</strong>: en un bol grande mezcla calabacines, pimientos, guisantes, tomates secos y repollo. Remueve bien.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Aliña</strong>: mezcla aceite de oliva, zumo de limón, sal y pimienta. Vierte sobre la ensalada y remueve suavemente.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Sirve</strong>: deja reposar en la nevera al menos 30 min para que los sabores se mezclen. Adorna con albahaca fresca antes de servir.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Consejo</h4>
+<p>Perfecta para almuerzos veraniegos ligeros. Se conserva en la nevera hasta 2 días.</p>
+</div>
+</div>
+</div>
+
+<!-- PORTUGUESE -->
+<div id="lang-pt" class="lang-content">
+<div class="recipe-card">
+<h2 class="recipe-title">Salada Fria Mediterrânica</h2>
+<p class="recipe-date">📅 5 de Julho de 2025</p>
+
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
+<ul>
+<li>2 abobrinhas</li>
+<li>1 pimento vermelho</li>
+<li>1 pimento amarelo</li>
+<li>150 g de ervilhas (frescas ou congeladas)</li>
+<li>100 g de tomates secos</li>
+<li>200 g de repolho (liso ou crespo)</li>
+<li>3 colheres de sopa de azeite virgem extra</li>
+<li>Sumo de 1 limão</li>
+<li>Sal e pimenta q.b.</li>
+<li>Folhas de manjericão fresco (opcional)</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Preparação</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Legumes</strong>: lave abobrinhas e pimentos. Corte as abobrinhas em rodelas e os pimentos em cubos. Se usar ervilhas frescas, escalde 2-3 min em água salgada e escorra; se congeladas, descongele em água morna. Corte os tomates secos em pedaços.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Repolho</strong>: lave e corte em tiras finas. Também pode escaldar 2-3 min para uma textura mais macia.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Junte</strong>: numa tigela grande misture abobrinhas, pimentos, ervilhas, tomates secos e repolho. Mexa bem.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Tempere</strong>: misture azeite, sumo de limão, sal e pimenta. Verta sobre a salada e envolva delicadamente.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Sirva</strong>: deixe repousar no frigorífico pelo menos 30 min para os sabores se misturarem. Guarneça com manjericão fresco antes de servir.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Sugestão</h4>
+<p>Perfeita para almoços de verão leves. Conserva-se no frigorífico até 2 dias.</p>
+</div>
+</div>
+</div>
+
+<!-- GERMAN -->
+<div id="lang-de" class="lang-content">
+<div class="recipe-card">
+<h2 class="recipe-title">Mediterraner Kalter Salat</h2>
+<p class="recipe-date">📅 5. Juli 2025</p>
+
+<div class="ingredients-box">
+<h3>🥗 Zutaten</h3>
+<ul>
+<li>2 Zucchini</li>
+<li>1 rote Paprika</li>
+<li>1 gelbe Paprika</li>
+<li>150 g Erbsen (frisch oder tiefgekühlt)</li>
+<li>100 g getrocknete Tomaten</li>
+<li>200 g Kohl (Weiß- oder Wirsing)</li>
+<li>3 EL natives Olivenöl extra</li>
+<li>Saft von 1 Zitrone</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Frische Basilikumblätter (optional)</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Zubereitung</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Gemüse</strong>: Zucchini und Paprika waschen. Zucchini in Scheiben, Paprika in Würfel schneiden. Frische Erbsen 2-3 Min in Salzwasser blanchieren und abtropfen; tiefgekühlte in warmem Wasser auftauen. Getrocknete Tomaten würfeln.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Kohl</strong>: waschen und in feine Streifen schneiden. Optional 2-3 Min blanchieren für weichere Konsistenz.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Vermischen</strong>: in einer großen Schüssel Zucchini, Paprika, Erbsen, getrocknete Tomaten und Kohl mischen. Gut umrühren.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Anmachen</strong>: Olivenöl, Zitronensaft, Salz und Pfeffer mischen. Über den Salat geben und vorsichtig vermengen.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Servieren</strong>: mindestens 30 Min kühlen, damit die Aromen sich verbinden. Vor dem Servieren mit frischem Basilikum garnieren.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Tipp</h4>
+<p>Perfekt für leichte Sommeressen. Im Kühlschrank bis zu 2 Tage haltbar.</p>
+</div>
+</div>
+</div>
+
+<!-- GREEK -->
+<div id="lang-el" class="lang-content">
+<div class="recipe-card">
+<h2 class="recipe-title">Μεσογειακή Κρύα Σαλάτα</h2>
+<p class="recipe-date">📅 5 Ιουλίου 2025</p>
+
+<div class="ingredients-box">
+<h3>🥗 Υλικά</h3>
+<ul>
+<li>2 κολοκυθάκια</li>
+<li>1 κόκκινη πιπεριά</li>
+<li>1 κίτρινη πιπεριά</li>
+<li>150 γραμμ. αρακάς (φρέσκος ή κατεψυγμένος)</li>
+<li>100 γραμμ. λιαστές ντομάτες</li>
+<li>200 γραμμ. λάχανο (άσπρο ή σαβοΰ)</li>
+<li>3 κ.σ. εξαιρετικό παρθένο ελαιόλαδο</li>
+<li>Χυμός από 1 λεμόνι</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>Φρέσκα φύλλα βασιλικού (προαιρετικά)</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Εκτέλεση</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Λαχανικά</strong>: πλύνετε τα κολοκυθάκια και τις πιπεριές. Κόψτε τα κολοκυθάκια σε ροδέλες και τις πιπεριές σε κύβους. Αν χρησιμοποιείτε φρέσκο αρακά, βράστε τον 2-3 λεπτά σε αλατισμένο νερό και στραγγίστε· αν είναι κατεψυγμένος, ξεπαγώστε τον σε ζεστό νερό. Κόψτε τις λιαστές ντομάτες σε κομμάτια.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Λάχανο</strong>: πλύνετε και κόψτε σε λεπτές λωρίδες. Μπορείτε επίσης να το βράσετε 2-3 λεπτά για πιο μαλακή υφή.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Αναμείξτε</strong>: σε μεγάλο μπολ αναμείξτε κολοκυθάκια, πιπεριές, αρακά, λιαστές ντομάτες και λάχανο. Ανακατέψτε καλά.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Ντύστε</strong>: αναμείξτε ελαιόλαδο, χυμό λεμονιού, αλάτι και πιπέρι. Περιχύστε τη σαλάτα και ανακατέψτε απαλά.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Σερβίρετε</strong>: αφήστε στο ψυγείο τουλάχιστον 30 λεπτά για να ενωθούν οι γεύσεις. Γαρνίρετε με φρέσκο βασιλικό πριν σερβίρετε.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Συμβουλή</h4>
+<p>Ιδανική για ελαφριά καλοκαιρινά γεύματα. Διατηρείται στο ψυγείο έως 2 ημέρες.</p>
+</div>
+</div>
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<p>"Tutto è iniziato con hummus di ceci..."</p>
+</div>
+
+</div>
 </body>
 </html>

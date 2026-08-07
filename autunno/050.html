@@ -3,47 +3,177 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ricetta del 2024-11-07 | Leguminando</title>
+<title>Involtini di Farina di Ceci con Zucchine e Gorgonzola | Leguminando</title>
 <style>
-body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
-.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.content { background: white; padding: 30px; border-radius: 10px; }
-.content h1 { color: #8B4513; }
-.content h2 { color: #D2691E; }
-.content h3 { color: #8B4513; }
-.content ul { margin: 15px 0; padding-left: 20px; }
-.content li { margin: 8px 0; }
-.content p { margin: 12px 0; line-height: 1.6; }
-.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
-.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Georgia', serif;
+    background: #f8f5f0;
+    min-height: 100vh;
+    padding: 20px;
+}
+.container { max-width: 900px; margin: 0 auto; }
+
+.header {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    padding: 40px 20px 30px;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+.header h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.header .tagline { font-size: 1.2em; opacity: 0.9; font-style: italic; }
+
+.back-link {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: #8B4513;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.95em;
+    transition: background 0.3s;
+}
 .back-link:hover { background: #D2691E; }
 
-.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
-.fav-bar { text-align: center; margin: 5px 0; }
+.fav-bar { text-align: center; margin: 10px 0; }
+.fav-btn { cursor: pointer; font-size: 1.8em; user-select: none; display: inline-block; transition: transform 0.2s; }
+.fav-btn:hover { transform: scale(1.2); }
 
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-
-@media print {
-    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
-    .stats, .back-link, .badge { display: none !important; }
-    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
-    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
-    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
-    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+.recipe-image {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
 }
 
-</style>
-<meta name="description" content="Ricetta del 2024-11-07">
-<meta property="og:title" content="Ricetta del 2024-11-07 | Leguminando">
-<meta property="og:description" content="Ricetta del 2024-11-07">
-<style>
-.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
-.lang-tab { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; transition: all 0.3s; }
-.lang-tab.active { background: #8B4513; color: white; }
-.lang-tab:hover:not(.active) { background: #D2691E; color: white; }
+.lang-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+.lang-tab {
+    padding: 10px 20px;
+    border: 2px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.3s;
+}
+.lang-tab:hover { background: rgba(255,255,255,0.3); }
+.lang-tab.active { background: white; color: #c0392b; border-color: white; }
+
+.recipe-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
 .lang-content { display: none; }
 .lang-content.active { display: block; }
+
+.recipe-title {
+    font-size: 2.2em;
+    color: #8B4513;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.recipe-date {
+    text-align: center;
+    color: #666;
+    font-size: 0.95em;
+    margin-bottom: 25px;
+}
+
+.ingredients-box {
+    background: linear-gradient(135deg, #fef9e7 0%, #fdebd0 100%);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 25px 0;
+    border-left: 5px solid #D2691E;
+}
+.ingredients-box h3 {
+    color: #8B4513;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+.ingredients-box ul { padding-left: 20px; }
+.ingredients-box li { margin: 8px 0; color: #5D4037; }
+
+.steps-box {
+    margin: 25px 0;
+}
+.steps-box h3 {
+    color: #8B4513;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+.step {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+    padding: 15px;
+    background: #faf8f5;
+    border-radius: 12px;
+    align-items: flex-start;
+}
+.step-num {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    flex-shrink: 0;
+}
+.step-text { flex: 1; color: #5D4037; line-height: 1.6; }
+.step-text ul { padding-left: 20px; margin-top: 8px; }
+.step-text li { margin: 5px 0; }
+
+.tip-box {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 25px 0;
+    border-left: 5px solid #4caf50;
+}
+.tip-box h4 { color: #2e7d32; margin-bottom: 10px; }
+.tip-box p { color: #1b5e20; line-height: 1.6; }
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    color: #8B4513;
+    font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+    .header h1 { font-size: 2em; }
+    .recipe-card { padding: 20px; }
+    .recipe-title { font-size: 1.6em; }
+}
+@media print {
+    .lang-tabs, .lang-tab, .fav-bar, .back-link { display: none !important; }
+    body { background: white !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; }
+}
 </style>
 <script>
 function showLang(lang) {
@@ -52,306 +182,6 @@ function showLang(lang) {
     document.getElementById('lang-' + lang).classList.add('active');
     event.target.classList.add('active');
 }
-</script>
-</head>
-<body>
-<div class="header">
-<h1>Leguminando</h1>
-<p>Ricette di stagione a base di legumi</p>
-</div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
-
-</div>
-
-<div class="fav-bar">
-<span class="fav-btn" data-path="autunno/050.html" data-title="Ricetta del 2024-11-07" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
-</div>
-
-<img src="050.jpg" alt="Ricetta del 2024-11-07" class="recipe-image">
-
-<div class="content">
-<div class="lang-tabs">
-    <button class="lang-tab active" onclick="showLang('it')">IT</button>
-    <button class="lang-tab" onclick="showLang('en')">EN</button>
-    <button class="lang-tab" onclick="showLang('es')">ES</button>
-    <button class="lang-tab" onclick="showLang('pt')">PT</button>
-    <button class="lang-tab" onclick="showLang('de')">DE</button>
-    <button class="lang-tab" onclick="showLang('el')">EL</button>
-</div>
-
-<div id="lang-it" class="lang-content active">
-<p><strong>Data:</strong> 2024-11-07</p>
-<h3>Ingredienti</h3>
-<h4>Per gli involtini:</h4>
-<ul>
-<li>200 g di farina di ceci</li>
-<li>600 ml di acqua</li>
-<li>1 cucchiaio di olio d'oliva</li>
-<li>Sale q.b.</li>
-<li>Pepe q.b.</li>
-</ul>
-<h4>Per il ripieno:</h4>
-<ul>
-<li>2 zucchine medie</li>
-<li>100 g di gorgonzola</li>
-<li>1 spicchio d'aglio (facoltativo)</li>
-<li>Olio d'oliva q.b.</li>
-<li>Sale e pepe q.b.</li>
-<li>Prezzemolo tritato (facoltativo)</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparare la pastella</strong>:</p>
-<ul>
-<li>In una ciotola, mescola la farina di ceci con l'acqua, un cucchiaio di olio d'oliva, sale e pepe. Mescola bene fino a ottenere una pastella liscia. Lascia riposare per circa 30 minuti.</li>
-</ul>
-<p>2. <strong>Preparare il ripieno</strong>:</p>
-<ul>
-<li>Lava e taglia le zucchine a rondelle sottili. In una padella, scalda un filo d'olio d'oliva e aggiungi l'aglio, se lo usi. Cuoci le zucchine fino a farle diventare tenere, aggiustando di sale e pepe. Lascia raffreddare un po' e poi unisci il gorgonzola sbriciolato. Mescola bene.</li>
-</ul>
-<p>3. <strong>Cuocere gli involtini</strong>:</p>
-<ul>
-<li>Scalda una padella antiaderente e ungila leggermente. Versa un mestolo di pastella e distribuiscila uniformemente sul fondo della padella, formando una crepe sottile. Cuoci per 2-3 minuti per lato, fino a doratura. Ripeti il processo fino a esaurire la pastella.</li>
-</ul>
-<p>4. <strong>Assemblare gli involtini</strong>:</p>
-<ul>
-<li>Prendi una crepe, aggiungi un cucchiaio di ripieno di zucchine e gorgonzola al centro. Arrotola la crepe su se stessa per formare un involtino. Continua fino a completare tutti gli involtini.</li>
-</ul>
-<p>5. <strong>Servire</strong>:</p>
-<ul>
-<li>Puoi servire gli involtini caldi, magari accompagnati da una salsa di yogurt o da un'insalata fresca. Se vuoi, puoi anche gratinarli in forno per qualche minuto prima di servire.</li>
-</ul>
-</div>
-
-<div id="lang-en" class="lang-content">
-<p><strong>Date:</strong> 2024-11-07</p>
-<p><em>English translation coming soon...</em></p>
-<h3>Ingredienti</h3>
-<h4>Per gli involtini:</h4>
-<ul>
-<li>200 g di farina di ceci</li>
-<li>600 ml di acqua</li>
-<li>1 cucchiaio di olio d'oliva</li>
-<li>Sale q.b.</li>
-<li>Pepe q.b.</li>
-</ul>
-<h4>Per il ripieno:</h4>
-<ul>
-<li>2 zucchine medie</li>
-<li>100 g di gorgonzola</li>
-<li>1 spicchio d'aglio (facoltativo)</li>
-<li>Olio d'oliva q.b.</li>
-<li>Sale e pepe q.b.</li>
-<li>Prezzemolo tritato (facoltativo)</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparare la pastella</strong>:</p>
-<ul>
-<li>In una ciotola, mescola la farina di ceci con l'acqua, un cucchiaio di olio d'oliva, sale e pepe. Mescola bene fino a ottenere una pastella liscia. Lascia riposare per circa 30 minuti.</li>
-</ul>
-<p>2. <strong>Preparare il ripieno</strong>:</p>
-<ul>
-<li>Lava e taglia le zucchine a rondelle sottili. In una padella, scalda un filo d'olio d'oliva e aggiungi l'aglio, se lo usi. Cuoci le zucchine fino a farle diventare tenere, aggiustando di sale e pepe. Lascia raffreddare un po' e poi unisci il gorgonzola sbriciolato. Mescola bene.</li>
-</ul>
-<p>3. <strong>Cuocere gli involtini</strong>:</p>
-<ul>
-<li>Scalda una padella antiaderente e ungila leggermente. Versa un mestolo di pastella e distribuiscila uniformemente sul fondo della padella, formando una crepe sottile. Cuoci per 2-3 minuti per lato, fino a doratura. Ripeti il processo fino a esaurire la pastella.</li>
-</ul>
-<p>4. <strong>Assemblare gli involtini</strong>:</p>
-<ul>
-<li>Prendi una crepe, aggiungi un cucchiaio di ripieno di zucchine e gorgonzola al centro. Arrotola la crepe su se stessa per formare un involtino. Continua fino a completare tutti gli involtini.</li>
-</ul>
-<p>5. <strong>Servire</strong>:</p>
-<ul>
-<li>Puoi servire gli involtini caldi, magari accompagnati da una salsa di yogurt o da un'insalata fresca. Se vuoi, puoi anche gratinarli in forno per qualche minuto prima di servire.</li>
-</ul>
-</div>
-
-<div id="lang-es" class="lang-content">
-<p><strong>Fecha:</strong> 2024-11-07</p>
-<p><em>Traduccion al espanol proximamente...</em></p>
-<h3>Ingredienti</h3>
-<h4>Per gli involtini:</h4>
-<ul>
-<li>200 g di farina di ceci</li>
-<li>600 ml di acqua</li>
-<li>1 cucchiaio di olio d'oliva</li>
-<li>Sale q.b.</li>
-<li>Pepe q.b.</li>
-</ul>
-<h4>Per il ripieno:</h4>
-<ul>
-<li>2 zucchine medie</li>
-<li>100 g di gorgonzola</li>
-<li>1 spicchio d'aglio (facoltativo)</li>
-<li>Olio d'oliva q.b.</li>
-<li>Sale e pepe q.b.</li>
-<li>Prezzemolo tritato (facoltativo)</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparare la pastella</strong>:</p>
-<ul>
-<li>In una ciotola, mescola la farina di ceci con l'acqua, un cucchiaio di olio d'oliva, sale e pepe. Mescola bene fino a ottenere una pastella liscia. Lascia riposare per circa 30 minuti.</li>
-</ul>
-<p>2. <strong>Preparare il ripieno</strong>:</p>
-<ul>
-<li>Lava e taglia le zucchine a rondelle sottili. In una padella, scalda un filo d'olio d'oliva e aggiungi l'aglio, se lo usi. Cuoci le zucchine fino a farle diventare tenere, aggiustando di sale e pepe. Lascia raffreddare un po' e poi unisci il gorgonzola sbriciolato. Mescola bene.</li>
-</ul>
-<p>3. <strong>Cuocere gli involtini</strong>:</p>
-<ul>
-<li>Scalda una padella antiaderente e ungila leggermente. Versa un mestolo di pastella e distribuiscila uniformemente sul fondo della padella, formando una crepe sottile. Cuoci per 2-3 minuti per lato, fino a doratura. Ripeti il processo fino a esaurire la pastella.</li>
-</ul>
-<p>4. <strong>Assemblare gli involtini</strong>:</p>
-<ul>
-<li>Prendi una crepe, aggiungi un cucchiaio di ripieno di zucchine e gorgonzola al centro. Arrotola la crepe su se stessa per formare un involtino. Continua fino a completare tutti gli involtini.</li>
-</ul>
-<p>5. <strong>Servire</strong>:</p>
-<ul>
-<li>Puoi servire gli involtini caldi, magari accompagnati da una salsa di yogurt o da un'insalata fresca. Se vuoi, puoi anche gratinarli in forno per qualche minuto prima di servire.</li>
-</ul>
-</div>
-
-<div id="lang-pt" class="lang-content">
-<p><strong>Data:</strong> 2024-11-07</p>
-<p><em>Traducao em portugues em breve...</em></p>
-<h3>Ingredienti</h3>
-<h4>Per gli involtini:</h4>
-<ul>
-<li>200 g di farina di ceci</li>
-<li>600 ml di acqua</li>
-<li>1 cucchiaio di olio d'oliva</li>
-<li>Sale q.b.</li>
-<li>Pepe q.b.</li>
-</ul>
-<h4>Per il ripieno:</h4>
-<ul>
-<li>2 zucchine medie</li>
-<li>100 g di gorgonzola</li>
-<li>1 spicchio d'aglio (facoltativo)</li>
-<li>Olio d'oliva q.b.</li>
-<li>Sale e pepe q.b.</li>
-<li>Prezzemolo tritato (facoltativo)</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparare la pastella</strong>:</p>
-<ul>
-<li>In una ciotola, mescola la farina di ceci con l'acqua, un cucchiaio di olio d'oliva, sale e pepe. Mescola bene fino a ottenere una pastella liscia. Lascia riposare per circa 30 minuti.</li>
-</ul>
-<p>2. <strong>Preparare il ripieno</strong>:</p>
-<ul>
-<li>Lava e taglia le zucchine a rondelle sottili. In una padella, scalda un filo d'olio d'oliva e aggiungi l'aglio, se lo usi. Cuoci le zucchine fino a farle diventare tenere, aggiustando di sale e pepe. Lascia raffreddare un po' e poi unisci il gorgonzola sbriciolato. Mescola bene.</li>
-</ul>
-<p>3. <strong>Cuocere gli involtini</strong>:</p>
-<ul>
-<li>Scalda una padella antiaderente e ungila leggermente. Versa un mestolo di pastella e distribuiscila uniformemente sul fondo della padella, formando una crepe sottile. Cuoci per 2-3 minuti per lato, fino a doratura. Ripeti il processo fino a esaurire la pastella.</li>
-</ul>
-<p>4. <strong>Assemblare gli involtini</strong>:</p>
-<ul>
-<li>Prendi una crepe, aggiungi un cucchiaio di ripieno di zucchine e gorgonzola al centro. Arrotola la crepe su se stessa per formare un involtino. Continua fino a completare tutti gli involtini.</li>
-</ul>
-<p>5. <strong>Servire</strong>:</p>
-<ul>
-<li>Puoi servire gli involtini caldi, magari accompagnati da una salsa di yogurt o da un'insalata fresca. Se vuoi, puoi anche gratinarli in forno per qualche minuto prima di servire.</li>
-</ul>
-</div>
-
-<div id="lang-de" class="lang-content">
-<p><strong>Datum:</strong> 2024-11-07</p>
-<p><em>Deutsche Uebersetzung folgt bald...</em></p>
-<h3>Ingredienti</h3>
-<h4>Per gli involtini:</h4>
-<ul>
-<li>200 g di farina di ceci</li>
-<li>600 ml di acqua</li>
-<li>1 cucchiaio di olio d'oliva</li>
-<li>Sale q.b.</li>
-<li>Pepe q.b.</li>
-</ul>
-<h4>Per il ripieno:</h4>
-<ul>
-<li>2 zucchine medie</li>
-<li>100 g di gorgonzola</li>
-<li>1 spicchio d'aglio (facoltativo)</li>
-<li>Olio d'oliva q.b.</li>
-<li>Sale e pepe q.b.</li>
-<li>Prezzemolo tritato (facoltativo)</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparare la pastella</strong>:</p>
-<ul>
-<li>In una ciotola, mescola la farina di ceci con l'acqua, un cucchiaio di olio d'oliva, sale e pepe. Mescola bene fino a ottenere una pastella liscia. Lascia riposare per circa 30 minuti.</li>
-</ul>
-<p>2. <strong>Preparare il ripieno</strong>:</p>
-<ul>
-<li>Lava e taglia le zucchine a rondelle sottili. In una padella, scalda un filo d'olio d'oliva e aggiungi l'aglio, se lo usi. Cuoci le zucchine fino a farle diventare tenere, aggiustando di sale e pepe. Lascia raffreddare un po' e poi unisci il gorgonzola sbriciolato. Mescola bene.</li>
-</ul>
-<p>3. <strong>Cuocere gli involtini</strong>:</p>
-<ul>
-<li>Scalda una padella antiaderente e ungila leggermente. Versa un mestolo di pastella e distribuiscila uniformemente sul fondo della padella, formando una crepe sottile. Cuoci per 2-3 minuti per lato, fino a doratura. Ripeti il processo fino a esaurire la pastella.</li>
-</ul>
-<p>4. <strong>Assemblare gli involtini</strong>:</p>
-<ul>
-<li>Prendi una crepe, aggiungi un cucchiaio di ripieno di zucchine e gorgonzola al centro. Arrotola la crepe su se stessa per formare un involtino. Continua fino a completare tutti gli involtini.</li>
-</ul>
-<p>5. <strong>Servire</strong>:</p>
-<ul>
-<li>Puoi servire gli involtini caldi, magari accompagnati da una salsa di yogurt o da un'insalata fresca. Se vuoi, puoi anche gratinarli in forno per qualche minuto prima di servire.</li>
-</ul>
-</div>
-
-<div id="lang-el" class="lang-content">
-<p><strong>Hmerominia:</strong> 2024-11-07</p>
-<p><em>E elliniki metafrasi erhetai syntoma...</em></p>
-<h3>Ingredienti</h3>
-<h4>Per gli involtini:</h4>
-<ul>
-<li>200 g di farina di ceci</li>
-<li>600 ml di acqua</li>
-<li>1 cucchiaio di olio d'oliva</li>
-<li>Sale q.b.</li>
-<li>Pepe q.b.</li>
-</ul>
-<h4>Per il ripieno:</h4>
-<ul>
-<li>2 zucchine medie</li>
-<li>100 g di gorgonzola</li>
-<li>1 spicchio d'aglio (facoltativo)</li>
-<li>Olio d'oliva q.b.</li>
-<li>Sale e pepe q.b.</li>
-<li>Prezzemolo tritato (facoltativo)</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparare la pastella</strong>:</p>
-<ul>
-<li>In una ciotola, mescola la farina di ceci con l'acqua, un cucchiaio di olio d'oliva, sale e pepe. Mescola bene fino a ottenere una pastella liscia. Lascia riposare per circa 30 minuti.</li>
-</ul>
-<p>2. <strong>Preparare il ripieno</strong>:</p>
-<ul>
-<li>Lava e taglia le zucchine a rondelle sottili. In una padella, scalda un filo d'olio d'oliva e aggiungi l'aglio, se lo usi. Cuoci le zucchine fino a farle diventare tenere, aggiustando di sale e pepe. Lascia raffreddare un po' e poi unisci il gorgonzola sbriciolato. Mescola bene.</li>
-</ul>
-<p>3. <strong>Cuocere gli involtini</strong>:</p>
-<ul>
-<li>Scalda una padella antiaderente e ungila leggermente. Versa un mestolo di pastella e distribuiscila uniformemente sul fondo della padella, formando una crepe sottile. Cuoci per 2-3 minuti per lato, fino a doratura. Ripeti il processo fino a esaurire la pastella.</li>
-</ul>
-<p>4. <strong>Assemblare gli involtini</strong>:</p>
-<ul>
-<li>Prendi una crepe, aggiungi un cucchiaio di ripieno di zucchine e gorgonzola al centro. Arrotola la crepe su se stessa per formare un involtino. Continua fino a completare tutti gli involtini.</li>
-</ul>
-<p>5. <strong>Servire</strong>:</p>
-<ul>
-<li>Puoi servire gli involtini caldi, magari accompagnati da una salsa di yogurt o da un'insalata fresca. Se vuoi, puoi anche gratinarli in forno per qualche minuto prima di servire.</li>
-</ul>
-</div>
-</div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
-
-<div class="footer">
-<p>Leguminando - Ricette di stagione a base di legumi</p>
-<p>"Tutto e iniziato con hummus di ceci..."</p>
-</div>
-
-<script>
 function toggleFav(path, title) {
     let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
     if (favs[path]) { delete favs[path]; }
@@ -368,5 +198,289 @@ function updateFavIcons() {
 }
 document.addEventListener('DOMContentLoaded', updateFavIcons);
 </script>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>🫘 Leguminando</h1>
+<p class="tagline">Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">← Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="autunno/050.html" data-title="Involtini di Farina di Ceci con Zucchine e Gorgonzola" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="050.jpg" alt="Involtini di Farina di Ceci con Zucchine e Gorgonzola" class="recipe-image">
+
+<div class="lang-tabs">
+    <button class="lang-tab active" onclick="showLang('it')">🇮🇹 IT</button>
+    <button class="lang-tab" onclick="showLang('en')">🇬🇧 EN</button>
+    <button class="lang-tab" onclick="showLang('es')">🇪🇸 ES</button>
+    <button class="lang-tab" onclick="showLang('pt')">🇵🇹 PT</button>
+    <button class="lang-tab" onclick="showLang('de')">🇩🇪 DE</button>
+    <button class="lang-tab" onclick="showLang('el')">🇬🇷 EL</button>
+</div>
+
+<!-- ITALIANO -->
+<div id="lang-it" class="lang-content active">
+<div class="recipe-card">
+<h2 class="recipe-title">Involtini di Farina di Ceci con Zucchine e Gorgonzola</h2>
+<p class="recipe-date">📅 7 Novembre 2024</p>
+
+<div class="ingredients-box">
+<h3>🥗 Ingredienti</h3>
+<ul>
+<li>200 g di farina di ceci</li>
+<li>600 ml di acqua</li>
+<li>1 cucchiaio di olio d'oliva</li>
+<li>Sale e pepe q.b.</li>
+<li>2 zucchine medie</li>
+<li>100 g di gorgonzola</li>
+<li>1 spicchio d'aglio (facoltativo)</li>
+<li>Olio d'oliva q.b.</li>
+<li>Prezzemolo tritato (facoltativo)</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Preparazione</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Pastella</strong>: mescola la farina di ceci con l'acqua, un cucchiaio di olio d'oliva, sale e pepe. Mescola fino a ottenere una pastella liscia e lascia riposare 30 minuti.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Ripieno</strong>: lava e taglia le zucchine a rondelle sottili. In padella scalda olio e aglio, cuoci le zucchine fino a tenerle. Lascia raffreddare e unisci il gorgonzola sbriciolato.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Crepes</strong>: scalda una padella antiaderente, versa un mestolo di pastella e distribuiscila uniformemente. Cuoci 2-3 minuti per lato fino a doratura. Ripeti fino a esaurimento.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Involtini</strong>: su ogni crepe versa un cucchiaio di ripieno al centro e arrotola su se stessa per formare un involtino.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Servi</strong>: servi caldi accompagnati da salsa di yogurt o insalata fresca. Puoi anche gratinarli in forno per qualche minuto.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Suggerimento</h4>
+<p>Perfetti per un antipasto autunnale ricco e saporito. La farina di ceci conferisce un gusto rustico e originale.</p>
+</div>
+</div>
+</div>
+
+<!-- ENGLISH -->
+<div id="lang-en" class="lang-content">
+<div class="recipe-card">
+<h2 class="recipe-title">Chickpea Flour Rolls with Zucchini and Gorgonzola</h2>
+<p class="recipe-date">📅 November 7, 2024</p>
+
+<div class="ingredients-box">
+<h3>🥗 Ingredients</h3>
+<ul>
+<li>200 g chickpea flour</li>
+<li>600 ml water</li>
+<li>1 tablespoon olive oil</li>
+<li>Salt and pepper to taste</li>
+<li>2 medium zucchini</li>
+<li>100 g gorgonzola cheese</li>
+<li>1 garlic clove (optional)</li>
+<li>Olive oil as needed</li>
+<li>Chopped parsley (optional)</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Preparation</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Batter</strong>: mix chickpea flour with water, a tablespoon of olive oil, salt and pepper. Stir until smooth and let rest 30 minutes.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Filling</strong>: wash and slice zucchini into thin rounds. Heat oil and garlic in a pan, cook zucchini until tender. Cool and mix in crumbled gorgonzola.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Crepes</strong>: heat a non-stick pan, pour a ladle of batter and spread evenly. Cook 2-3 minutes per side until golden. Repeat until batter is used up.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Rolls</strong>: place a spoonful of filling in the centre of each crepe and roll up.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Serve</strong>: serve warm with yogurt sauce or fresh salad. You can also gratinée in the oven for a few minutes.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Tip</h4>
+<p>Perfect for a rich and flavourful autumn appetizer. Chickpea flour gives a rustic and original taste.</p>
+</div>
+</div>
+</div>
+
+<!-- SPANISH -->
+<div id="lang-es" class="lang-content">
+<div class="recipe-card">
+<h2 class="recipe-title">Rollitos de Harina de Garbanzos con Calabacín y Gorgonzola</h2>
+<p class="recipe-date">📅 7 de Noviembre de 2024</p>
+
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
+<ul>
+<li>200 g de harina de garbanzos</li>
+<li>600 ml de agua</li>
+<li>1 cucharada de aceite de oliva</li>
+<li>Sal y pimienta al gusto</li>
+<li>2 calabacines medianos</li>
+<li>100 g de queso gorgonzola</li>
+<li>1 diente de ajo (opcional)</li>
+<li>Aceite de oliva c.n.</li>
+<li>Perejil picado (opcional)</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Preparación</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Masa</strong>: mezcla la harina de garbanzos con el agua, una cucharada de aceite de oliva, sal y pimienta. Remueve hasta obtener una masa lisa y deja reposar 30 minutos.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Relleno</strong>: lava y corta los calabacines en rodajas finas. En sartén calienta aceite y ajo, cocina los calabacines hasta que estén tiernos. Enfría y mezcla con el gorgonzola desmenuzado.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Crepes</strong>: calienta una sartén antiadherente, vierte un cucharón de masa y extiende uniformemente. Cocina 2-3 minutos por lado hasta dorar. Repite hasta agotar la masa.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Rollitos</strong>: pon una cucharada de relleno en el centro de cada crepe y enrolla.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Sirve</strong>: sirve calientes con salsa de yogur o ensalada fresca. También puedes gratinarlos en el horno unos minutos.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Consejo</h4>
+<p>Perfectos como aperitivo otoñal rico y sabroso. La harina de garbanzos aporta un sabor rústico y original.</p>
+</div>
+</div>
+</div>
+
+<!-- PORTUGUESE -->
+<div id="lang-pt" class="lang-content">
+<div class="recipe-card">
+<h2 class="recipe-title">Rolinhos de Farinha de Grão-de-Bico com Abobrinha e Gorgonzola</h2>
+<p class="recipe-date">📅 7 de Novembro de 2024</p>
+
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
+<ul>
+<li>200 g de farinha de grão-de-bico</li>
+<li>600 ml de água</li>
+<li>1 colher de sopa de azeite</li>
+<li>Sal e pimenta q.b.</li>
+<li>2 abobrinhas médias</li>
+<li>100 g de queijo gorgonzola</li>
+<li>1 dente de alho (opcional)</li>
+<li>Azeite q.b.</li>
+<li>Salsa picada (opcional)</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Preparação</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Massa</strong>: misture a farinha de grão-de-bico com a água, uma colher de sopa de azeite, sal e pimenta. Mexa até obter uma massa lisa e deixe repousar 30 minutos.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Recheio</strong>: lave e corte as abobrinhas em rodelas finas. Na frigideira aqueça azeite e alho, cozinhe as abobrinhas até ficarem tenras. Arrefeça e misture com o gorgonzola desfeito.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Crepes</strong>: aqueça uma frigideira antiaderente, deite uma concha de massa e espalhe uniformemente. Cozinhe 2-3 minutos de cada lado até dourar. Repita até acabar a massa.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Rolinhos</strong>: coloque uma colher de recheio no centro de cada crepe e enrole.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Sirva</strong>: sirva quentes com molho de iogurte ou salada fresca. Também pode gratinar no forno por alguns minutos.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Sugestão</h4>
+<p>Perfeitos como aperitivo outonal rico e saboroso. A farinha de grão-de-bico confere um sabor rústico e original.</p>
+</div>
+</div>
+</div>
+
+<!-- GERMAN -->
+<div id="lang-de" class="lang-content">
+<div class="recipe-card">
+<h2 class="recipe-title">Kichererbsenmehl-Röllchen mit Zucchini und Gorgonzola</h2>
+<p class="recipe-date">📅 7. November 2024</p>
+
+<div class="ingredients-box">
+<h3>🥗 Zutaten</h3>
+<ul>
+<li>200 g Kichererbsenmehl</li>
+<li>600 ml Wasser</li>
+<li>1 EL Olivenöl</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>2 mittelgroße Zucchini</li>
+<li>100 g Gorgonzola</li>
+<li>1 Knoblauchzehe (optional)</li>
+<li>Olivenöl nach Bedarf</li>
+<li>Gehackte Petersilie (optional)</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Zubereitung</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Teig</strong>: Kichererbsenmehl mit Wasser, einem EL Olivenöl, Salz und Pfeffer verrühren. Glatt rühren und 30 Min ruhen lassen.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Füllung</strong>: Zucchini waschen und in dünne Scheiben schneiden. Öl und Knoblauch in Pfanne erhitzen, Zucchini bis weich braten. Abkühlen lassen und mit zerbröckeltem Gorgonzola mischen.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Crepes</strong>: beschichtete Pfanne erhitzen, eine Kelle Teig hineingeben und gleichmäßig verteilen. 2-3 Min pro Seite goldbraun braten. Wiederholen bis Teig aufgebraucht.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Röllchen</strong>: einen EL Füllung in die Mitte jeder Crepe geben und aufrollen.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Servieren</strong>: warm mit Joghurtsauce oder frischem Salat servieren. Im Ofen kurz überbacken wenn gewünscht.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Tipp</h4>
+<p>Perfekt als reichhaltige herbstliche Vorspeise. Kichererbsenmehl verleiht einen rustikalen und originellen Geschmack.</p>
+</div>
+</div>
+</div>
+
+<!-- GREEK -->
+<div id="lang-el" class="lang-content">
+<div class="recipe-card">
+<h2 class="recipe-title">Ρολάκια από Αλεύρι Ρεβιθιού με Κολοκυθάκια και Γκοργκοντζόλα</h2>
+<p class="recipe-date">📅 7 Νοεμβρίου 2024</p>
+
+<div class="ingredients-box">
+<h3>🥗 Υλικά</h3>
+<ul>
+<li>200 γραμμ. αλεύρι ρεβιθιού</li>
+<li>600 ml νερό</li>
+<li>1 κ.σ. ελαιόλαδο</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>2 κολοκυθάκια μεσαίου μεγέθους</li>
+<li>100 γραμμ. τυρί γκοργκοντζόλα</li>
+<li>1 σκελίδα σκόρδου (προαιρετικά)</li>
+<li>Ελαιόλαδο κατά βούληση</li>
+<li>Ψιλοκομμένος μαϊντανός (προαιρετικά)</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Εκτέλεση</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Ζυμάρι</strong>: αναμείξτε το αλεύρι ρεβιθιού με το νερό, μια κουταλιά ελαιόλαδο, αλάτι και πιπέρι. Ανακατέψτε μέχρι να γίνει λείο και αφήστε το να ξεκουραστεί 30 λεπτά.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Γέμιση</strong>: πλύνετε και κόψτε τα κολοκυθάκια σε λεπτές ροδέλες. Ζεστάνετε λάδι και σκόρδο σε τηγάνι, μαγειρέψτε τα κολοκυθάκια μέχρι να μαλακώσουν. Αφήστε να κρυώσουν και αναμείξτε με τριμμένη γκοργκοντζόλα.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Κρέπες</strong>: ζεστάνετε ένα αντικολλητικό τηγάνι, ρίξτε μια κουτάλα ζυμάρι και απλώστε το ομοιόμορφα. Μαγειρέψτε 2-3 λεπτά από κάθε πλευρά μέχρι να ροδίσουν. Επαναλάβετε μέχρι να τελειώσει το ζυμάρι.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Ρολάκια</strong>: βάλτε μια κουταλιά γέμιση στο κέντρο κάθε κρέπας και τυλίξτε το σε ρολό.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Σερβίρετε</strong>: σερβίρετε ζεστά με σάλτσα γιαουρτιού ή φρέσια σαλάτα. Μπορείτε επίσης να τα ψήσετε στο φούρνο για λίγα λεπτά.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Συμβουλή</h4>
+<p>Ιδανικά ως πλούσιο και γευστικό φθινοπωρινό ορεκτικό. Το αλεύρι ρεβιθιού προσδίδει μια ρουστίκ και πρωτότυπη γεύση.</p>
+</div>
+</div>
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<p>"Tutto è iniziato con hummus di ceci..."</p>
+</div>
+
+</div>
 </body>
 </html>

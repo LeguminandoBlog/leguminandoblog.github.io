@@ -3,45 +3,177 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ricetta del 2025-04-24 | Leguminando</title>
+<title>Antipasto di Porri, Fave e Radicchio Rosso | Leguminando</title>
 <style>
-body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
-.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.content { background: white; padding: 30px; border-radius: 10px; }
-.content h1 { color: #8B4513; }
-.content h2 { color: #D2691E; }
-.content h3 { color: #8B4513; }
-.content ul { margin: 15px 0; padding-left: 20px; }
-.content li { margin: 8px 0; }
-.content p { margin: 12px 0; line-height: 1.6; }
-.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
-.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Georgia', serif;
+    background: #f8f5f0;
+    min-height: 100vh;
+    padding: 20px;
+}
+.container { max-width: 900px; margin: 0 auto; }
+
+.header {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    padding: 40px 20px 30px;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+.header h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.header .tagline { font-size: 1.2em; opacity: 0.9; font-style: italic; }
+
+.back-link {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: #8B4513;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.95em;
+    transition: background 0.3s;
+}
 .back-link:hover { background: #D2691E; }
 
-.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
-.fav-bar { text-align: center; margin: 5px 0; }
+.fav-bar { text-align: center; margin: 10px 0; }
+.fav-btn { cursor: pointer; font-size: 1.8em; user-select: none; display: inline-block; transition: transform 0.2s; }
+.fav-btn:hover { transform: scale(1.2); }
 
-@media print {
-    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
-    .stats, .back-link, .badge { display: none !important; }
-    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
-    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
-    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
-    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+.recipe-image {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
 }
 
-</style>
-<meta name="description" content="Ricetta del 2025-04-24">
-<meta property="og:title" content="Ricetta del 2025-04-24 | Leguminando">
-<meta property="og:description" content="Ricetta del 2025-04-24">
-<style>
-.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
-.lang-tab { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; transition: all 0.3s; }
-.lang-tab.active { background: #8B4513; color: white; }
-.lang-tab:hover:not(.active) { background: #D2691E; color: white; }
+.lang-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+.lang-tab {
+    padding: 10px 20px;
+    border: 2px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.3s;
+}
+.lang-tab:hover { background: rgba(255,255,255,0.3); }
+.lang-tab.active { background: white; color: #c0392b; border-color: white; }
+
+.recipe-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
 .lang-content { display: none; }
 .lang-content.active { display: block; }
+
+.recipe-title {
+    font-size: 2.2em;
+    color: #8B4513;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.recipe-date {
+    text-align: center;
+    color: #666;
+    font-size: 0.95em;
+    margin-bottom: 25px;
+}
+
+.ingredients-box {
+    background: linear-gradient(135deg, #fef9e7 0%, #fdebd0 100%);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 25px 0;
+    border-left: 5px solid #D2691E;
+}
+.ingredients-box h3 {
+    color: #8B4513;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+.ingredients-box ul { padding-left: 20px; }
+.ingredients-box li { margin: 8px 0; color: #5D4037; }
+
+.steps-box {
+    margin: 25px 0;
+}
+.steps-box h3 {
+    color: #8B4513;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+.step {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+    padding: 15px;
+    background: #faf8f5;
+    border-radius: 12px;
+    align-items: flex-start;
+}
+.step-num {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    flex-shrink: 0;
+}
+.step-text { flex: 1; color: #5D4037; line-height: 1.6; }
+.step-text ul { padding-left: 20px; margin-top: 8px; }
+.step-text li { margin: 5px 0; }
+
+.tip-box {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 25px 0;
+    border-left: 5px solid #4caf50;
+}
+.tip-box h4 { color: #2e7d32; margin-bottom: 10px; }
+.tip-box p { color: #1b5e20; line-height: 1.6; }
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    color: #8B4513;
+    font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+    .header h1 { font-size: 2em; }
+    .recipe-card { padding: 20px; }
+    .recipe-title { font-size: 1.6em; }
+}
+@media print {
+    .lang-tabs, .lang-tab, .fav-bar, .back-link { display: none !important; }
+    body { background: white !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; }
+}
 </style>
 <script>
 function showLang(lang) {
@@ -50,185 +182,6 @@ function showLang(lang) {
     document.getElementById('lang-' + lang).classList.add('active');
     event.target.classList.add('active');
 }
-</script>
-</head>
-<body>
-<div class="header">
-<h1>Leguminando</h1>
-<p>Ricette di stagione a base di legumi</p>
-</div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
-
-<div class="fav-bar">
-<span class="fav-btn" data-path="primavera/050.html" data-title="Ricetta del 2025-04-24" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
-</div>
-
-<img src="050.jpg" alt="Ricetta del 2025-04-24" class="recipe-image">
-
-<div class="content">
-<div class="lang-tabs">
-    <button class="lang-tab active" onclick="showLang('it')">IT</button>
-    <button class="lang-tab" onclick="showLang('en')">EN</button>
-    <button class="lang-tab" onclick="showLang('es')">ES</button>
-    <button class="lang-tab" onclick="showLang('pt')">PT</button>
-    <button class="lang-tab" onclick="showLang('de')">DE</button>
-    <button class="lang-tab" onclick="showLang('el')">EL</button>
-</div>
-
-<div id="lang-it" class="lang-content active">
-<p><strong>Data:</strong> 2025-04-24</p>
-<h3>Antipasto di Porri, Fave e Radicchio Rosso</h3>
-<h4>Ingredienti:</h4>
-<ul>
-<li>2 porri</li>
-<li>200 g di fave fresche o surgelate</li>
-<li>1 cespo di radicchio rosso</li>
-<li>50 g di formaggio di capra (opzionale)</li>
-<li>Olio extravergine d'oliva</li>
-<li>Aceto balsamico</li>
-<li>Sale e pepe q.b.</li>
-<li>Erbe fresche (come menta o basilico) per decorare</li>
-</ul>
-<h4>Istruzioni:</h4>
-<p>1. <strong>Preparazione delle fave</strong>: Se usi fave fresche, sbollentale in acqua salata per circa 2-3 minuti, poi scolale e raffreddale in acqua ghiacciata. Se usi fave surgelate, scongelale e mettile da parte.</p>
-<p>2. <strong>Cottura dei porri</strong>: Pulisci i porri e affettali a rondelle. Scalda un po' d'olio in una padella e aggiungi i porri. Cuoci a fuoco medio per circa 5-7 minuti, finché non diventano teneri.</p>
-<p>3. <strong>Preparazione del radicchio</strong>: Lava il radicchio e taglialo a strisce. Puoi anche grigliarlo brevemente per un sapore affumicato.</p>
-<p>4. <strong>Assemblaggio del piatto</strong>: In un piatto, disponi i porri cotti, le fave e il radicchio. Se desideri, aggiungi dei pezzetti di formaggio di capra sopra.</p>
-<p>5. <strong>Condimento</strong>: Drizza un po' di aceto balsamico e un filo d'olio extravergine d'oliva. Aggiusta di sale e pepe.</p>
-<p>6. <strong>Decorazione</strong>: Guarnisci con erbe fresche per un tocco finale.</p>
-</div>
-
-<div id="lang-en" class="lang-content">
-<p><strong>Date:</strong> 2025-04-24</p>
-<p><em>English translation coming soon...</em></p>
-<h3>Antipasto di Porri, Fave e Radicchio Rosso</h3>
-<h4>Ingredienti:</h4>
-<ul>
-<li>2 porri</li>
-<li>200 g di fave fresche o surgelate</li>
-<li>1 cespo di radicchio rosso</li>
-<li>50 g di formaggio di capra (opzionale)</li>
-<li>Olio extravergine d'oliva</li>
-<li>Aceto balsamico</li>
-<li>Sale e pepe q.b.</li>
-<li>Erbe fresche (come menta o basilico) per decorare</li>
-</ul>
-<h4>Istruzioni:</h4>
-<p>1. <strong>Preparazione delle fave</strong>: Se usi fave fresche, sbollentale in acqua salata per circa 2-3 minuti, poi scolale e raffreddale in acqua ghiacciata. Se usi fave surgelate, scongelale e mettile da parte.</p>
-<p>2. <strong>Cottura dei porri</strong>: Pulisci i porri e affettali a rondelle. Scalda un po' d'olio in una padella e aggiungi i porri. Cuoci a fuoco medio per circa 5-7 minuti, finché non diventano teneri.</p>
-<p>3. <strong>Preparazione del radicchio</strong>: Lava il radicchio e taglialo a strisce. Puoi anche grigliarlo brevemente per un sapore affumicato.</p>
-<p>4. <strong>Assemblaggio del piatto</strong>: In un piatto, disponi i porri cotti, le fave e il radicchio. Se desideri, aggiungi dei pezzetti di formaggio di capra sopra.</p>
-<p>5. <strong>Condimento</strong>: Drizza un po' di aceto balsamico e un filo d'olio extravergine d'oliva. Aggiusta di sale e pepe.</p>
-<p>6. <strong>Decorazione</strong>: Guarnisci con erbe fresche per un tocco finale.</p>
-</div>
-
-<div id="lang-es" class="lang-content">
-<p><strong>Fecha:</strong> 2025-04-24</p>
-<p><em>Traduccion al espanol proximamente...</em></p>
-<h3>Antipasto di Porri, Fave e Radicchio Rosso</h3>
-<h4>Ingredienti:</h4>
-<ul>
-<li>2 porri</li>
-<li>200 g di fave fresche o surgelate</li>
-<li>1 cespo di radicchio rosso</li>
-<li>50 g di formaggio di capra (opzionale)</li>
-<li>Olio extravergine d'oliva</li>
-<li>Aceto balsamico</li>
-<li>Sale e pepe q.b.</li>
-<li>Erbe fresche (come menta o basilico) per decorare</li>
-</ul>
-<h4>Istruzioni:</h4>
-<p>1. <strong>Preparazione delle fave</strong>: Se usi fave fresche, sbollentale in acqua salata per circa 2-3 minuti, poi scolale e raffreddale in acqua ghiacciata. Se usi fave surgelate, scongelale e mettile da parte.</p>
-<p>2. <strong>Cottura dei porri</strong>: Pulisci i porri e affettali a rondelle. Scalda un po' d'olio in una padella e aggiungi i porri. Cuoci a fuoco medio per circa 5-7 minuti, finché non diventano teneri.</p>
-<p>3. <strong>Preparazione del radicchio</strong>: Lava il radicchio e taglialo a strisce. Puoi anche grigliarlo brevemente per un sapore affumicato.</p>
-<p>4. <strong>Assemblaggio del piatto</strong>: In un piatto, disponi i porri cotti, le fave e il radicchio. Se desideri, aggiungi dei pezzetti di formaggio di capra sopra.</p>
-<p>5. <strong>Condimento</strong>: Drizza un po' di aceto balsamico e un filo d'olio extravergine d'oliva. Aggiusta di sale e pepe.</p>
-<p>6. <strong>Decorazione</strong>: Guarnisci con erbe fresche per un tocco finale.</p>
-</div>
-
-<div id="lang-pt" class="lang-content">
-<p><strong>Data:</strong> 2025-04-24</p>
-<p><em>Traducao em portugues em breve...</em></p>
-<h3>Antipasto di Porri, Fave e Radicchio Rosso</h3>
-<h4>Ingredienti:</h4>
-<ul>
-<li>2 porri</li>
-<li>200 g di fave fresche o surgelate</li>
-<li>1 cespo di radicchio rosso</li>
-<li>50 g di formaggio di capra (opzionale)</li>
-<li>Olio extravergine d'oliva</li>
-<li>Aceto balsamico</li>
-<li>Sale e pepe q.b.</li>
-<li>Erbe fresche (come menta o basilico) per decorare</li>
-</ul>
-<h4>Istruzioni:</h4>
-<p>1. <strong>Preparazione delle fave</strong>: Se usi fave fresche, sbollentale in acqua salata per circa 2-3 minuti, poi scolale e raffreddale in acqua ghiacciata. Se usi fave surgelate, scongelale e mettile da parte.</p>
-<p>2. <strong>Cottura dei porri</strong>: Pulisci i porri e affettali a rondelle. Scalda un po' d'olio in una padella e aggiungi i porri. Cuoci a fuoco medio per circa 5-7 minuti, finché non diventano teneri.</p>
-<p>3. <strong>Preparazione del radicchio</strong>: Lava il radicchio e taglialo a strisce. Puoi anche grigliarlo brevemente per un sapore affumicato.</p>
-<p>4. <strong>Assemblaggio del piatto</strong>: In un piatto, disponi i porri cotti, le fave e il radicchio. Se desideri, aggiungi dei pezzetti di formaggio di capra sopra.</p>
-<p>5. <strong>Condimento</strong>: Drizza un po' di aceto balsamico e un filo d'olio extravergine d'oliva. Aggiusta di sale e pepe.</p>
-<p>6. <strong>Decorazione</strong>: Guarnisci con erbe fresche per un tocco finale.</p>
-</div>
-
-<div id="lang-de" class="lang-content">
-<p><strong>Datum:</strong> 2025-04-24</p>
-<p><em>Deutsche Uebersetzung folgt bald...</em></p>
-<h3>Antipasto di Porri, Fave e Radicchio Rosso</h3>
-<h4>Ingredienti:</h4>
-<ul>
-<li>2 porri</li>
-<li>200 g di fave fresche o surgelate</li>
-<li>1 cespo di radicchio rosso</li>
-<li>50 g di formaggio di capra (opzionale)</li>
-<li>Olio extravergine d'oliva</li>
-<li>Aceto balsamico</li>
-<li>Sale e pepe q.b.</li>
-<li>Erbe fresche (come menta o basilico) per decorare</li>
-</ul>
-<h4>Istruzioni:</h4>
-<p>1. <strong>Preparazione delle fave</strong>: Se usi fave fresche, sbollentale in acqua salata per circa 2-3 minuti, poi scolale e raffreddale in acqua ghiacciata. Se usi fave surgelate, scongelale e mettile da parte.</p>
-<p>2. <strong>Cottura dei porri</strong>: Pulisci i porri e affettali a rondelle. Scalda un po' d'olio in una padella e aggiungi i porri. Cuoci a fuoco medio per circa 5-7 minuti, finché non diventano teneri.</p>
-<p>3. <strong>Preparazione del radicchio</strong>: Lava il radicchio e taglialo a strisce. Puoi anche grigliarlo brevemente per un sapore affumicato.</p>
-<p>4. <strong>Assemblaggio del piatto</strong>: In un piatto, disponi i porri cotti, le fave e il radicchio. Se desideri, aggiungi dei pezzetti di formaggio di capra sopra.</p>
-<p>5. <strong>Condimento</strong>: Drizza un po' di aceto balsamico e un filo d'olio extravergine d'oliva. Aggiusta di sale e pepe.</p>
-<p>6. <strong>Decorazione</strong>: Guarnisci con erbe fresche per un tocco finale.</p>
-</div>
-
-<div id="lang-el" class="lang-content">
-<p><strong>Hmerominia:</strong> 2025-04-24</p>
-<p><em>E elliniki metafrasi erhetai syntoma...</em></p>
-<h3>Antipasto di Porri, Fave e Radicchio Rosso</h3>
-<h4>Ingredienti:</h4>
-<ul>
-<li>2 porri</li>
-<li>200 g di fave fresche o surgelate</li>
-<li>1 cespo di radicchio rosso</li>
-<li>50 g di formaggio di capra (opzionale)</li>
-<li>Olio extravergine d'oliva</li>
-<li>Aceto balsamico</li>
-<li>Sale e pepe q.b.</li>
-<li>Erbe fresche (come menta o basilico) per decorare</li>
-</ul>
-<h4>Istruzioni:</h4>
-<p>1. <strong>Preparazione delle fave</strong>: Se usi fave fresche, sbollentale in acqua salata per circa 2-3 minuti, poi scolale e raffreddale in acqua ghiacciata. Se usi fave surgelate, scongelale e mettile da parte.</p>
-<p>2. <strong>Cottura dei porri</strong>: Pulisci i porri e affettali a rondelle. Scalda un po' d'olio in una padella e aggiungi i porri. Cuoci a fuoco medio per circa 5-7 minuti, finché non diventano teneri.</p>
-<p>3. <strong>Preparazione del radicchio</strong>: Lava il radicchio e taglialo a strisce. Puoi anche grigliarlo brevemente per un sapore affumicato.</p>
-<p>4. <strong>Assemblaggio del piatto</strong>: In un piatto, disponi i porri cotti, le fave e il radicchio. Se desideri, aggiungi dei pezzetti di formaggio di capra sopra.</p>
-<p>5. <strong>Condimento</strong>: Drizza un po' di aceto balsamico e un filo d'olio extravergine d'oliva. Aggiusta di sale e pepe.</p>
-<p>6. <strong>Decorazione</strong>: Guarnisci con erbe fresche per un tocco finale.</p>
-</div>
-</div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
-
-<div class="footer">
-<p>Leguminando - Ricette di stagione a base di legumi</p>
-<p>"Tutto e iniziato con hummus di ceci..."</p>
-</div>
-<div data-legumi="ceci,fave" style="display:none;"></div>
-
-<script>
 function toggleFav(path, title) {
     let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
     if (favs[path]) { delete favs[path]; }
@@ -245,6 +198,295 @@ function updateFavIcons() {
 }
 document.addEventListener('DOMContentLoaded', updateFavIcons);
 </script>
+</head>
+<body>
+<div class="container">
 
+<div class="header">
+<h1>🫘 Leguminando</h1>
+<p class="tagline">Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">← Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="primavera/050.html" data-title="Antipasto di Porri, Fave e Radicchio Rosso" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="050.jpg" alt="Antipasto di Porri, Fave e Radicchio Rosso" class="recipe-image">
+
+<div class="lang-tabs">
+    <button class="lang-tab active" onclick="showLang('it')">🇮🇹 IT</button>
+    <button class="lang-tab" onclick="showLang('en')">🇬🇧 EN</button>
+    <button class="lang-tab" onclick="showLang('es')">🇪🇸 ES</button>
+    <button class="lang-tab" onclick="showLang('pt')">🇵🇹 PT</button>
+    <button class="lang-tab" onclick="showLang('de')">🇩🇪 DE</button>
+    <button class="lang-tab" onclick="showLang('el')">🇬🇷 EL</button>
+</div>
+
+<!-- ITALIANO -->
+<div id="lang-it" class="lang-content active">
+<div class="recipe-card">
+<h2 class="recipe-title">Antipasto di Porri, Fave e Radicchio Rosso</h2>
+<p class="recipe-date">📅 24 Aprile 2025</p>
+
+<div class="ingredients-box">
+<h3>🥗 Ingredienti</h3>
+<ul>
+<li>2 porri</li>
+<li>200 g di fave fresche o surgelate</li>
+<li>1 cespo di radicchio rosso</li>
+<li>50 g di formaggio di capra (opzionale)</li>
+<li>Olio extravergine d'oliva</li>
+<li>Aceto balsamico</li>
+<li>Sale e pepe q.b.</li>
+<li>Erbe fresche (menta o basilico) per decorare</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Preparazione</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Fave</strong>: se usi fave fresche, sbollentale 2-3 minuti in acqua salata, poi scolale e raffreddale in acqua ghiacciata. Se surgelate, scongelale e mettile da parte.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Porri</strong>: pulisci i porri e affettali a rondelle. Scalda un po' d'olio in padella e cuoci a fuoco medio 5-7 minuti finché diventano teneri.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Radicchio</strong>: lava e taglia a strisce. Puoi grigliarlo brevemente per un sapore affumicato.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Assembla</strong>: in un piatto disponi porri cotti, fave e radicchio. Se desideri, aggiungi pezzetti di formaggio di capra.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Condisc</strong>: drizza aceto balsamico e un filo d'olio extravergine d'oliva. Aggiusta sale e pepe.</div></div>
+
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Servi</strong>: guarnisci con erbe fresche per un tocco finale di colore e profumo.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Suggerimento</h4>
+<p>Ottimo come antipasto primaverile leggero. Servi a temperatura ambiente per esaltare i sapori.</p>
+</div>
+</div>
+</div>
+
+<!-- ENGLISH -->
+<div id="lang-en" class="lang-content">
+<div class="recipe-card">
+<h2 class="recipe-title">Leek, Fava Bean and Radicchio Appetizer</h2>
+<p class="recipe-date">📅 April 24, 2025</p>
+
+<div class="ingredients-box">
+<h3>🥗 Ingredients</h3>
+<ul>
+<li>2 leeks</li>
+<li>200 g fava beans (fresh or frozen)</li>
+<li>1 head of red radicchio</li>
+<li>50 g goat cheese (optional)</li>
+<li>Extra virgin olive oil</li>
+<li>Balsamic vinegar</li>
+<li>Salt and pepper to taste</li>
+<li>Fresh herbs (mint or basil) for garnish</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Preparation</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Fava beans</strong>: blanch fresh fava beans 2-3 min in salted water, drain and cool in ice water. If frozen, thaw and set aside.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Leeks</strong>: clean and slice into rounds. Heat oil in a pan and cook over medium heat 5-7 min until tender.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Radicchio</strong>: wash and cut into strips. You may briefly grill it for a smoky flavour.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Assemble</strong>: arrange cooked leeks, fava beans and radicchio on a plate. Add crumbled goat cheese if desired.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Dress</strong>: drizzle balsamic vinegar and olive oil. Season with salt and pepper.</div></div>
+
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Serve</strong>: garnish with fresh herbs for a final touch of colour and fragrance.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Tip</h4>
+<p>Great as a light spring appetizer. Serve at room temperature to bring out the flavours.</p>
+</div>
+</div>
+</div>
+
+<!-- SPANISH -->
+<div id="lang-es" class="lang-content">
+<div class="recipe-card">
+<h2 class="recipe-title">Aperitivo de Puerros, Habas y Radicchio Rojo</h2>
+<p class="recipe-date">📅 24 de Abril de 2025</p>
+
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
+<ul>
+<li>2 puerros</li>
+<li>200 g de habas (frescas o congeladas)</li>
+<li>1 cabeza de radicchio rojo</li>
+<li>50 g de queso de cabra (opcional)</li>
+<li>Aceite de oliva virgen extra</li>
+<li>Vinagre balsámico</li>
+<li>Sal y pimienta al gusto</li>
+<li>Hierbas frescas (menta o albahaca) para decorar</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Preparación</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Habas</strong>: escál dalas 2-3 min en agua con sal, escurre y enfría en agua con hielo. Si son congeladas, descongélalas.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Puerros</strong>: limpia y corta en rodajas. Calienta aceite en sartén y cocina a fuego medio 5-7 min hasta que estén tiernos.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Radicchio</strong>: lava y corta en tiras. Puedes asarlo brevemente para un sabor ahumado.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Monta</strong>: en un plato dispón puerros cocidos, habas y radicchio. Añade queso de cabra si lo deseas.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Aliña</strong>: riega con vinagre balsámico y aceite de oliva. Sazona con sal y pimienta.</div></div>
+
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Sirve</strong>: decora con hierbas frescas para un toque final de color y aroma.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Consejo</h4>
+<p>Excelente como aperitivo primaveral ligero. Sirve a temperatura ambiente para realzar los sabores.</p>
+</div>
+</div>
+</div>
+
+<!-- PORTUGUESE -->
+<div id="lang-pt" class="lang-content">
+<div class="recipe-card">
+<h2 class="recipe-title">Aperitivo de Alho-Francês, Favas e Radicchio Vermelho</h2>
+<p class="recipe-date">📅 24 de Abril de 2025</p>
+
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
+<ul>
+<li>2 alhos-franceses</li>
+<li>200 g de favas (frescas ou congeladas)</li>
+<li>1 cabeça de radicchio vermelho</li>
+<li>50 g de queijo de cabra (opcional)</li>
+<li>Azeite virgem extra</li>
+<li>Vinagre balsâmico</li>
+<li>Sal e pimenta q.b.</li>
+<li>Ervas frescas (menta ou manjericão) para guarnecer</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Preparação</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Favas</strong>: escalde as favas frescas 2-3 min em água salgada, escorra e arrefeça em água com gelo. Se congeladas, descongele.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Alho-francês</strong>: limpe e corte em rodelas. Aqueça azeite numa frigideira e cozinhe em lume médio 5-7 min até ficar tenro.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Radicchio</strong>: lave e corte em tiras. Pode grelhar brevemente para um sabor defumado.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Monte</strong>: num prato disponha alho-francês cozido, favas e radicchio. Adicione queijo de cabra se desejar.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Tempere</strong>: regue com vinagre balsâmico e azeite. Tempere com sal e pimenta.</div></div>
+
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Sirva</strong>: guarneça com ervas frescas para um toque final de cor e aroma.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Sugestão</h4>
+<p>Excelente como aperitivo primaveril leve. Sirva à temperatura ambiente para realçar os sabores.</p>
+</div>
+</div>
+</div>
+
+<!-- GERMAN -->
+<div id="lang-de" class="lang-content">
+<div class="recipe-card">
+<h2 class="recipe-title">Lauch, Dicke Bohnen und Radicchio Vorspeise</h2>
+<p class="recipe-date">📅 24. April 2025</p>
+
+<div class="ingredients-box">
+<h3>🥗 Zutaten</h3>
+<ul>
+<li>2 Lauchstangen</li>
+<li>200 g dicke Bohnen (frisch oder tiefgekühlt)</li>
+<li>1 Kopf roter Radicchio</li>
+<li>50 g Ziegenkäse (optional)</li>
+<li>Natives Olivenöl extra</li>
+<li>Balsamico-Essig</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Frische Kräuter (Minze oder Basilikum) zum Garnieren</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Zubereitung</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Bohnen</strong>: blanchiere frische dicke Bohnen 2-3 Min in Salzwasser, abtropfen und in Eiswasser abkühlen. Tiefgekühlte auftauen.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Lauch</strong>: putzen und in Ringe schneiden. Öl in Pfanne erhitzen und bei mittlerer Hitze 5-7 Min braten bis weich.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Radicchio</strong>: waschen und in Streifen schneiden. Kurz grillen für rauchigen Geschmack.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Anrichten</strong>: Lauch, Bohnen und Radicchio auf Teller anrichten. Optional Ziegenkäse darüber bröseln.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Anmachen</strong>: mit Balsamico und Olivenöl beträufeln. Mit Salz und Pfeffer würzen.</div></div>
+
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Servieren</strong>: mit frischen Kräutern garnieren für einen farbigen und duftenden Abschluss.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Tipp</h4>
+<p>Hervorragend als leichte Frühjahrs-Vorspeise. Bei Zimmertemperatur servieren, damit die Aromen zur Geltung kommen.</p>
+</div>
+</div>
+</div>
+
+<!-- GREEK -->
+<div id="lang-el" class="lang-content">
+<div class="recipe-card">
+<h2 class="recipe-title">Ορεκτικό με Πράσα, Κουκιά και Ραντίκιο</h2>
+<p class="recipe-date">📅 24 Απριλίου 2025</p>
+
+<div class="ingredients-box">
+<h3>🥗 Υλικά</h3>
+<ul>
+<li>2 πράσα</li>
+<li>200 γραμμ. κουκιά (φρέσκα ή κατεψυγμένα)</li>
+<li>1 κεφάλι κόκκινο ραντίκιο</li>
+<li>50 γραμμ. κατσικίσιο τυρί (προαιρετικά)</li>
+<li>Εξαιρετικό παρθένο ελαιόλαδο</li>
+<li>Βαλσαμικό ξίδι</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>Φρέσκα αρωματικά (δυόσμος ή βασιλικός) για γαρνίρισμα</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Εκτέλεση</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Κουκιά</strong>: βράστε τα φρέσκα κουκιά 2-3 λεπτά σε αλατισμένο νερό, στραγγίστε και βάλτε τα σε παγωμένο νερό. Αν είναι κατεψυγμένα, ξεπαγώστε τα.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Πράσα</strong>: καθαρίστε και κόψτε σε ροδέλες. Ζεστάνετε λίγο λάδι σε τηγάνι και μαγειρέψτε σε μέτρια φωτιά 5-7 λεπτά μέχρι να μαλακώσουν.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Ραντίκιο</strong>: πλύνετε και κόψτε σε λωρίδες. Μπορείτε να το ψήσετε ελαφρά για καπνιστή γεύση.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Συναρμολογήστε</strong>: σε ένα πιάτο τοποθετήστε τα μαγειρεμένα πράσα, τα κουκιά και το ραντίκιο. Προσθέστε τυρί αν θέλετε.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Ντύστε</strong>: περιχύστε με βαλσαμικό ξίδι και ελαιόλαδο. Αλατοπιπερώστε.</div></div>
+
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Σερβίρετε</strong>: γαρνίρετε με φρέσκα αρωματικά για τελική πινελιά χρώματος και αρώματος.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Συμβουλή</h4>
+<p>Εξαιρετικό ως ελαφρύ ανοιξιάτικο ορεκτικό. Σερβίρετε σε θερμοκρασία δωματίου για να αναδυθούν οι γεύσεις.</p>
+</div>
+</div>
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<p>"Tutto è iniziato con hummus di ceci..."</p>
+</div>
+
+</div>
 </body>
 </html>

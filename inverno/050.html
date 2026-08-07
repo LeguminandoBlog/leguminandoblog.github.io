@@ -3,47 +3,177 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ricetta del 2024-12-16 | Leguminando</title>
+<title>Hummus di Lenticchie con Finocchio e Carota | Leguminando</title>
 <style>
-body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
-.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.content { background: white; padding: 30px; border-radius: 10px; }
-.content h1 { color: #8B4513; }
-.content h2 { color: #D2691E; }
-.content h3 { color: #8B4513; }
-.content ul { margin: 15px 0; padding-left: 20px; }
-.content li { margin: 8px 0; }
-.content p { margin: 12px 0; line-height: 1.6; }
-.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
-.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Georgia', serif;
+    background: #f8f5f0;
+    min-height: 100vh;
+    padding: 20px;
+}
+.container { max-width: 900px; margin: 0 auto; }
+
+.header {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    padding: 40px 20px 30px;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+.header h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.header .tagline { font-size: 1.2em; opacity: 0.9; font-style: italic; }
+
+.back-link {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: #8B4513;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.95em;
+    transition: background 0.3s;
+}
 .back-link:hover { background: #D2691E; }
 
-.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
-.fav-bar { text-align: center; margin: 5px 0; }
+.fav-bar { text-align: center; margin: 10px 0; }
+.fav-btn { cursor: pointer; font-size: 1.8em; user-select: none; display: inline-block; transition: transform 0.2s; }
+.fav-btn:hover { transform: scale(1.2); }
 
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-
-@media print {
-    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
-    .stats, .back-link, .badge { display: none !important; }
-    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
-    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
-    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
-    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+.recipe-image {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
 }
 
-</style>
-<meta name="description" content="Ricetta del 2024-12-16">
-<meta property="og:title" content="Ricetta del 2024-12-16 | Leguminando">
-<meta property="og:description" content="Ricetta del 2024-12-16">
-<style>
-.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
-.lang-tab { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; transition: all 0.3s; }
-.lang-tab.active { background: #8B4513; color: white; }
-.lang-tab:hover:not(.active) { background: #D2691E; color: white; }
+.lang-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+.lang-tab {
+    padding: 10px 20px;
+    border: 2px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.3s;
+}
+.lang-tab:hover { background: rgba(255,255,255,0.3); }
+.lang-tab.active { background: white; color: #c0392b; border-color: white; }
+
+.recipe-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
 .lang-content { display: none; }
 .lang-content.active { display: block; }
+
+.recipe-title {
+    font-size: 2.2em;
+    color: #8B4513;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.recipe-date {
+    text-align: center;
+    color: #666;
+    font-size: 0.95em;
+    margin-bottom: 25px;
+}
+
+.ingredients-box {
+    background: linear-gradient(135deg, #fef9e7 0%, #fdebd0 100%);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 25px 0;
+    border-left: 5px solid #D2691E;
+}
+.ingredients-box h3 {
+    color: #8B4513;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+.ingredients-box ul { padding-left: 20px; }
+.ingredients-box li { margin: 8px 0; color: #5D4037; }
+
+.steps-box {
+    margin: 25px 0;
+}
+.steps-box h3 {
+    color: #8B4513;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+.step {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+    padding: 15px;
+    background: #faf8f5;
+    border-radius: 12px;
+    align-items: flex-start;
+}
+.step-num {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    flex-shrink: 0;
+}
+.step-text { flex: 1; color: #5D4037; line-height: 1.6; }
+.step-text ul { padding-left: 20px; margin-top: 8px; }
+.step-text li { margin: 5px 0; }
+
+.tip-box {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 25px 0;
+    border-left: 5px solid #4caf50;
+}
+.tip-box h4 { color: #2e7d32; margin-bottom: 10px; }
+.tip-box p { color: #1b5e20; line-height: 1.6; }
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    color: #8B4513;
+    font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+    .header h1 { font-size: 2em; }
+    .recipe-card { padding: 20px; }
+    .recipe-title { font-size: 1.6em; }
+}
+@media print {
+    .lang-tabs, .lang-tab, .fav-bar, .back-link { display: none !important; }
+    body { background: white !important; }
+    .recipe-card { box-shadow: none !important; break-inside: avoid; }
+}
 </style>
 <script>
 function showLang(lang) {
@@ -52,180 +182,6 @@ function showLang(lang) {
     document.getElementById('lang-' + lang).classList.add('active');
     event.target.classList.add('active');
 }
-</script>
-</head>
-<body>
-<div class="header">
-<h1>Leguminando</h1>
-<p>Ricette di stagione a base di legumi</p>
-</div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
-
-</div>
-
-<div class="fav-bar">
-<span class="fav-btn" data-path="inverno/050.html" data-title="Ricetta del 2024-12-16" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
-</div>
-
-<img src="050.jpg" alt="Ricetta del 2024-12-16" class="recipe-image">
-
-<div class="content">
-<div class="lang-tabs">
-    <button class="lang-tab active" onclick="showLang('it')">IT</button>
-    <button class="lang-tab" onclick="showLang('en')">EN</button>
-    <button class="lang-tab" onclick="showLang('es')">ES</button>
-    <button class="lang-tab" onclick="showLang('pt')">PT</button>
-    <button class="lang-tab" onclick="showLang('de')">DE</button>
-    <button class="lang-tab" onclick="showLang('el')">EL</button>
-</div>
-
-<div id="lang-it" class="lang-content active">
-<p><strong>Data:</strong> 2024-12-16</p>
-<h3>Ingredienti:</h3>
-<ul>
-<li>200 g di lenticchie cucinate (preferibilmente verdi o marroni)</li>
-<li>1 finocchio (circa 200 g)</li>
-<li>1 carota grande</li>
-<li>2 cucchiai di tahini</li>
-<li>2 cucchiai di olio extravergine d'oliva</li>
-<li>Succo di 1 limone</li>
-<li>1 spicchio d'aglio</li>
-<li>Sale e pepe q.b.</li>
-<li>Semi di sesamo e prezzemolo per guarnire (facoltativi)</li>
-</ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione delle verdure</strong>: Pulisci il finocchio e la carota. Taglia il finocchio a pezzi e la carota a rondelle.</p>
-<p>2. <strong>Cottura delle carote</strong>: In una pentola, porta a ebollizione dell'acqua salata e aggiungi le rondelle di carota. Cuoci per circa 5-7 minuti, finché non sono tenere. Scolale e lasciale raffreddare.</p>
-<p>3. <strong>Frullatura</strong>: In un frullatore, unisci le lenticchie cotte, il finocchio, le carote, il tahini, l'olio d'oliva, il succo di limone e l'aglio. Frulla tutto fino ad ottenere una crema liscia e omogenea.</p>
-<p>4. <strong>Regola di sapore</strong>: Assaggia e aggiusta di sale e pepe secondo il tuo gusto. Se l'hummus risulta troppo denso, puoi aggiungere un po' d'acqua o olio.</p>
-<p>5. <strong>Servizio</strong>: Trasferisci l'hummus in una ciotola e guarnisci con semi di sesamo e prezzemolo tritato, se lo desideri. Servi con pane pita, verdure crude o crostini.</p>
-</div>
-
-<div id="lang-en" class="lang-content">
-<p><strong>Date:</strong> 2024-12-16</p>
-<p><em>English translation coming soon...</em></p>
-<h3>Ingredienti:</h3>
-<ul>
-<li>200 g di lenticchie cucinate (preferibilmente verdi o marroni)</li>
-<li>1 finocchio (circa 200 g)</li>
-<li>1 carota grande</li>
-<li>2 cucchiai di tahini</li>
-<li>2 cucchiai di olio extravergine d'oliva</li>
-<li>Succo di 1 limone</li>
-<li>1 spicchio d'aglio</li>
-<li>Sale e pepe q.b.</li>
-<li>Semi di sesamo e prezzemolo per guarnire (facoltativi)</li>
-</ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione delle verdure</strong>: Pulisci il finocchio e la carota. Taglia il finocchio a pezzi e la carota a rondelle.</p>
-<p>2. <strong>Cottura delle carote</strong>: In una pentola, porta a ebollizione dell'acqua salata e aggiungi le rondelle di carota. Cuoci per circa 5-7 minuti, finché non sono tenere. Scolale e lasciale raffreddare.</p>
-<p>3. <strong>Frullatura</strong>: In un frullatore, unisci le lenticchie cotte, il finocchio, le carote, il tahini, l'olio d'oliva, il succo di limone e l'aglio. Frulla tutto fino ad ottenere una crema liscia e omogenea.</p>
-<p>4. <strong>Regola di sapore</strong>: Assaggia e aggiusta di sale e pepe secondo il tuo gusto. Se l'hummus risulta troppo denso, puoi aggiungere un po' d'acqua o olio.</p>
-<p>5. <strong>Servizio</strong>: Trasferisci l'hummus in una ciotola e guarnisci con semi di sesamo e prezzemolo tritato, se lo desideri. Servi con pane pita, verdure crude o crostini.</p>
-</div>
-
-<div id="lang-es" class="lang-content">
-<p><strong>Fecha:</strong> 2024-12-16</p>
-<p><em>Traduccion al espanol proximamente...</em></p>
-<h3>Ingredienti:</h3>
-<ul>
-<li>200 g di lenticchie cucinate (preferibilmente verdi o marroni)</li>
-<li>1 finocchio (circa 200 g)</li>
-<li>1 carota grande</li>
-<li>2 cucchiai di tahini</li>
-<li>2 cucchiai di olio extravergine d'oliva</li>
-<li>Succo di 1 limone</li>
-<li>1 spicchio d'aglio</li>
-<li>Sale e pepe q.b.</li>
-<li>Semi di sesamo e prezzemolo per guarnire (facoltativi)</li>
-</ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione delle verdure</strong>: Pulisci il finocchio e la carota. Taglia il finocchio a pezzi e la carota a rondelle.</p>
-<p>2. <strong>Cottura delle carote</strong>: In una pentola, porta a ebollizione dell'acqua salata e aggiungi le rondelle di carota. Cuoci per circa 5-7 minuti, finché non sono tenere. Scolale e lasciale raffreddare.</p>
-<p>3. <strong>Frullatura</strong>: In un frullatore, unisci le lenticchie cotte, il finocchio, le carote, il tahini, l'olio d'oliva, il succo di limone e l'aglio. Frulla tutto fino ad ottenere una crema liscia e omogenea.</p>
-<p>4. <strong>Regola di sapore</strong>: Assaggia e aggiusta di sale e pepe secondo il tuo gusto. Se l'hummus risulta troppo denso, puoi aggiungere un po' d'acqua o olio.</p>
-<p>5. <strong>Servizio</strong>: Trasferisci l'hummus in una ciotola e guarnisci con semi di sesamo e prezzemolo tritato, se lo desideri. Servi con pane pita, verdure crude o crostini.</p>
-</div>
-
-<div id="lang-pt" class="lang-content">
-<p><strong>Data:</strong> 2024-12-16</p>
-<p><em>Traducao em portugues em breve...</em></p>
-<h3>Ingredienti:</h3>
-<ul>
-<li>200 g di lenticchie cucinate (preferibilmente verdi o marroni)</li>
-<li>1 finocchio (circa 200 g)</li>
-<li>1 carota grande</li>
-<li>2 cucchiai di tahini</li>
-<li>2 cucchiai di olio extravergine d'oliva</li>
-<li>Succo di 1 limone</li>
-<li>1 spicchio d'aglio</li>
-<li>Sale e pepe q.b.</li>
-<li>Semi di sesamo e prezzemolo per guarnire (facoltativi)</li>
-</ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione delle verdure</strong>: Pulisci il finocchio e la carota. Taglia il finocchio a pezzi e la carota a rondelle.</p>
-<p>2. <strong>Cottura delle carote</strong>: In una pentola, porta a ebollizione dell'acqua salata e aggiungi le rondelle di carota. Cuoci per circa 5-7 minuti, finché non sono tenere. Scolale e lasciale raffreddare.</p>
-<p>3. <strong>Frullatura</strong>: In un frullatore, unisci le lenticchie cotte, il finocchio, le carote, il tahini, l'olio d'oliva, il succo di limone e l'aglio. Frulla tutto fino ad ottenere una crema liscia e omogenea.</p>
-<p>4. <strong>Regola di sapore</strong>: Assaggia e aggiusta di sale e pepe secondo il tuo gusto. Se l'hummus risulta troppo denso, puoi aggiungere un po' d'acqua o olio.</p>
-<p>5. <strong>Servizio</strong>: Trasferisci l'hummus in una ciotola e guarnisci con semi di sesamo e prezzemolo tritato, se lo desideri. Servi con pane pita, verdure crude o crostini.</p>
-</div>
-
-<div id="lang-de" class="lang-content">
-<p><strong>Datum:</strong> 2024-12-16</p>
-<p><em>Deutsche Uebersetzung folgt bald...</em></p>
-<h3>Ingredienti:</h3>
-<ul>
-<li>200 g di lenticchie cucinate (preferibilmente verdi o marroni)</li>
-<li>1 finocchio (circa 200 g)</li>
-<li>1 carota grande</li>
-<li>2 cucchiai di tahini</li>
-<li>2 cucchiai di olio extravergine d'oliva</li>
-<li>Succo di 1 limone</li>
-<li>1 spicchio d'aglio</li>
-<li>Sale e pepe q.b.</li>
-<li>Semi di sesamo e prezzemolo per guarnire (facoltativi)</li>
-</ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione delle verdure</strong>: Pulisci il finocchio e la carota. Taglia il finocchio a pezzi e la carota a rondelle.</p>
-<p>2. <strong>Cottura delle carote</strong>: In una pentola, porta a ebollizione dell'acqua salata e aggiungi le rondelle di carota. Cuoci per circa 5-7 minuti, finché non sono tenere. Scolale e lasciale raffreddare.</p>
-<p>3. <strong>Frullatura</strong>: In un frullatore, unisci le lenticchie cotte, il finocchio, le carote, il tahini, l'olio d'oliva, il succo di limone e l'aglio. Frulla tutto fino ad ottenere una crema liscia e omogenea.</p>
-<p>4. <strong>Regola di sapore</strong>: Assaggia e aggiusta di sale e pepe secondo il tuo gusto. Se l'hummus risulta troppo denso, puoi aggiungere un po' d'acqua o olio.</p>
-<p>5. <strong>Servizio</strong>: Trasferisci l'hummus in una ciotola e guarnisci con semi di sesamo e prezzemolo tritato, se lo desideri. Servi con pane pita, verdure crude o crostini.</p>
-</div>
-
-<div id="lang-el" class="lang-content">
-<p><strong>Hmerominia:</strong> 2024-12-16</p>
-<p><em>E elliniki metafrasi erhetai syntoma...</em></p>
-<h3>Ingredienti:</h3>
-<ul>
-<li>200 g di lenticchie cucinate (preferibilmente verdi o marroni)</li>
-<li>1 finocchio (circa 200 g)</li>
-<li>1 carota grande</li>
-<li>2 cucchiai di tahini</li>
-<li>2 cucchiai di olio extravergine d'oliva</li>
-<li>Succo di 1 limone</li>
-<li>1 spicchio d'aglio</li>
-<li>Sale e pepe q.b.</li>
-<li>Semi di sesamo e prezzemolo per guarnire (facoltativi)</li>
-</ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione delle verdure</strong>: Pulisci il finocchio e la carota. Taglia il finocchio a pezzi e la carota a rondelle.</p>
-<p>2. <strong>Cottura delle carote</strong>: In una pentola, porta a ebollizione dell'acqua salata e aggiungi le rondelle di carota. Cuoci per circa 5-7 minuti, finché non sono tenere. Scolale e lasciale raffreddare.</p>
-<p>3. <strong>Frullatura</strong>: In un frullatore, unisci le lenticchie cotte, il finocchio, le carote, il tahini, l'olio d'oliva, il succo di limone e l'aglio. Frulla tutto fino ad ottenere una crema liscia e omogenea.</p>
-<p>4. <strong>Regola di sapore</strong>: Assaggia e aggiusta di sale e pepe secondo il tuo gusto. Se l'hummus risulta troppo denso, puoi aggiungere un po' d'acqua o olio.</p>
-<p>5. <strong>Servizio</strong>: Trasferisci l'hummus in una ciotola e guarnisci con semi di sesamo e prezzemolo tritato, se lo desideri. Servi con pane pita, verdure crude o crostini.</p>
-</div>
-</div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
-
-<div class="footer">
-<p>Leguminando - Ricette di stagione a base di legumi</p>
-<p>"Tutto e iniziato con hummus di ceci..."</p>
-</div>
-
-<script>
 function toggleFav(path, title) {
     let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
     if (favs[path]) { delete favs[path]; }
@@ -242,5 +198,289 @@ function updateFavIcons() {
 }
 document.addEventListener('DOMContentLoaded', updateFavIcons);
 </script>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>🫘 Leguminando</h1>
+<p class="tagline">Ricette di stagione a base di legumi</p>
+</div>
+
+<a href="../index.html" class="back-link">← Torna alla Home</a>
+
+<div class="fav-bar">
+<span class="fav-btn" data-path="inverno/050.html" data-title="Hummus di Lenticchie con Finocchio e Carota" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+</div>
+
+<img src="050.jpg" alt="Hummus di Lenticchie con Finocchio e Carota" class="recipe-image">
+
+<div class="lang-tabs">
+    <button class="lang-tab active" onclick="showLang('it')">🇮🇹 IT</button>
+    <button class="lang-tab" onclick="showLang('en')">🇬🇧 EN</button>
+    <button class="lang-tab" onclick="showLang('es')">🇪🇸 ES</button>
+    <button class="lang-tab" onclick="showLang('pt')">🇵🇹 PT</button>
+    <button class="lang-tab" onclick="showLang('de')">🇩🇪 DE</button>
+    <button class="lang-tab" onclick="showLang('el')">🇬🇷 EL</button>
+</div>
+
+<!-- ITALIANO -->
+<div id="lang-it" class="lang-content active">
+<div class="recipe-card">
+<h2 class="recipe-title">Hummus di Lenticchie con Finocchio e Carota</h2>
+<p class="recipe-date">📅 16 Dicembre 2024</p>
+
+<div class="ingredients-box">
+<h3>🥗 Ingredienti</h3>
+<ul>
+<li>200 g di lenticchie cotte (preferibilmente verdi o marroni)</li>
+<li>1 finocchio (circa 200 g)</li>
+<li>1 carota grande</li>
+<li>2 cucchiai di tahini</li>
+<li>2 cucchiai di olio extravergine d'oliva</li>
+<li>Succo di 1 limone</li>
+<li>1 spicchio d'aglio</li>
+<li>Sale e pepe q.b.</li>
+<li>Semi di sesamo e prezzemolo per guarnire (facoltativi)</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Preparazione</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Verdure</strong>: pulisci il finocchio e la carota. Taglia il finocchio a pezzi e la carota a rondelle.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Carote</strong>: porta a ebollizione acqua salata e aggiungi le rondelle di carota. Cuoci 5-7 min finché sono tenere, poi scolale e raffreddale.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Frulla</strong>: nel frullatore unisci lenticchie cotte, finocchio, carote, tahini, olio d'oliva, succo di limone e aglio. Frulla fino a crema liscia e omogenea.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Aggusta</strong>: assaggia e regola sale e pepe secondo gusto. Se troppo denso, aggiungi un po' d'acqua o olio.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Servi</strong>: trasferisci in una ciotola e guarnisci con semi di sesamo e prezzemolo tritato. Servi con pane pita, verdure crude o crostini.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Suggerimento</h4>
+<p>Perfetto come spuntino invernale nutriente. Si conserva in frigorifero fino a 4 giorni in un contenitore ermetico.</p>
+</div>
+</div>
+</div>
+
+<!-- ENGLISH -->
+<div id="lang-en" class="lang-content">
+<div class="recipe-card">
+<h2 class="recipe-title">Lentil Hummus with Fennel and Carrot</h2>
+<p class="recipe-date">📅 December 16, 2024</p>
+
+<div class="ingredients-box">
+<h3>🥗 Ingredients</h3>
+<ul>
+<li>200 g cooked lentils (preferably green or brown)</li>
+<li>1 fennel bulb (about 200 g)</li>
+<li>1 large carrot</li>
+<li>2 tablespoons tahini</li>
+<li>2 tablespoons extra virgin olive oil</li>
+<li>Juice of 1 lemon</li>
+<li>1 garlic clove</li>
+<li>Salt and pepper to taste</li>
+<li>Sesame seeds and parsley for garnish (optional)</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Preparation</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Vegetables</strong>: clean the fennel and carrot. Cut fennel into pieces and carrot into rounds.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Carrots</strong>: bring salted water to a boil and add carrot rounds. Cook 5-7 min until tender, then drain and cool.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Blend</strong>: in a blender combine cooked lentils, fennel, carrots, tahini, olive oil, lemon juice and garlic. Blend until smooth and creamy.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Season</strong>: taste and adjust salt and pepper. If too thick, add a little water or oil.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Serve</strong>: transfer to a bowl and garnish with sesame seeds and chopped parsley. Serve with pita bread, raw vegetables or croutons.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Tip</h4>
+<p>Perfect as a nourishing winter snack. Keeps refrigerated up to 4 days in an airtight container.</p>
+</div>
+</div>
+</div>
+
+<!-- SPANISH -->
+<div id="lang-es" class="lang-content">
+<div class="recipe-card">
+<h2 class="recipe-title">Hummus de Lentejas con Hinojo y Zanahoria</h2>
+<p class="recipe-date">📅 16 de Diciembre de 2024</p>
+
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
+<ul>
+<li>200 g de lentejas cocidas (preferiblemente verdes o marrones)</li>
+<li>1 bulbo de hinojo (unos 200 g)</li>
+<li>1 zanahoria grande</li>
+<li>2 cucharadas de tahini</li>
+<li>2 cucharadas de aceite de oliva virgen extra</li>
+<li>Zumo de 1 limón</li>
+<li>1 diente de ajo</li>
+<li>Sal y pimienta al gusto</li>
+<li>Semillas de sésamo y perejil para decorar (opcional)</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Preparación</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Verduras</strong>: limpia el hinojo y la zanahoria. Corta el hinojo en trozos y la zanahoria en rodajas.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Zanahorias</strong>: hierve agua con sal y añade las rodajas de zanahoria. Cocina 5-7 min hasta que estén tiernas, escurre y enfría.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Tritura</strong>: en la batidora mezcla lentejas cocidas, hinojo, zanahorias, tahini, aceite de oliva, zumo de limón y ajo. Tritura hasta obtener una crema lisa.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Sazona</strong>: prueba y ajusta sal y pimienta. Si queda muy espeso, añade un poco de agua o aceite.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Sirve</strong>: transfiere a un bol y decora con semillas de sésamo y perejil picado. Sirve con pan pita, verduras crudas o picatostes.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Consejo</h4>
+<p>Perfecto como tentempié invernal nutritivo. Se conserva en la nevera hasta 4 días en un recipiente hermético.</p>
+</div>
+</div>
+</div>
+
+<!-- PORTUGUESE -->
+<div id="lang-pt" class="lang-content">
+<div class="recipe-card">
+<h2 class="recipe-title">Hummus de Lentilhas com Funcho e Cenoura</h2>
+<p class="recipe-date">📅 16 de Dezembro de 2024</p>
+
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
+<ul>
+<li>200 g de lentilhas cozidas (preferivelmente verdes ou castanhas)</li>
+<li>1 bulbo de funcho (cerca de 200 g)</li>
+<li>1 cenoura grande</li>
+<li>2 colheres de sopa de tahini</li>
+<li>2 colheres de sopa de azeite virgem extra</li>
+<li>Sumo de 1 limão</li>
+<li>1 dente de alho</li>
+<li>Sal e pimenta q.b.</li>
+<li>Sementes de sésamo e salsa para guarnecer (opcional)</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Preparação</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Legumes</strong>: limpe o funcho e a cenoura. Corte o funcho em pedaços e a cenoura em rodelas.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Cenouras</strong>: ferva água salgada e adicione as rodelas de cenoura. Cozinhe 5-7 min até ficarem tenras, escorra e arrefeça.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Triture</strong>: na liquidificadora junte lentilhas cozidas, funcho, cenouras, tahini, azeite, sumo de limão e alho. Triture até obter um creme liso.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Tempere</strong>: prove e ajuste sal e pimenta. Se estiver muito espesso, adicione um pouco de água ou azeite.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Sirva</strong>: transfira para uma tigela e guarneça com sementes de sésamo e salsa picada. Sirva com pão pita, vegetais crus ou croutons.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Sugestão</h4>
+<p>Perfeito como lanche de inverno nutritivo. Conserva-se no frigorífico até 4 dias num recipiente hermético.</p>
+</div>
+</div>
+</div>
+
+<!-- GERMAN -->
+<div id="lang-de" class="lang-content">
+<div class="recipe-card">
+<h2 class="recipe-title">Linsen-Hummus mit Fenchel und Karotte</h2>
+<p class="recipe-date">📅 16. Dezember 2024</p>
+
+<div class="ingredients-box">
+<h3>🥗 Zutaten</h3>
+<ul>
+<li>200 g gekochte Linsen (vorzugsweise grün oder braun)</li>
+<li>1 Fenchelknolle (ca. 200 g)</li>
+<li>1 große Karotte</li>
+<li>2 EL Tahini</li>
+<li>2 EL natives Olivenöl extra</li>
+<li>Saft von 1 Zitrone</li>
+<li>1 Knoblauchzehe</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Sesamkörner und Petersilie zum Garnieren (optional)</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Zubereitung</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Gemüse</strong>: Fenchel und Karotte putzen. Fenchel in Stücke, Karotte in Scheiben schneiden.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Karotten</strong>: Salzwasser zum Kochen bringen und Karottenscheiben hinzufügen. 5-7 Min kochen bis weich, abtropfen und abkühlen lassen.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Pürieren</strong>: gekochte Linsen, Fenchel, Karotten, Tahini, Olivenöl, Zitronensaft und Knoblauch im Mixer pürieren bis glatt und cremig.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Würzen</strong>: abschmecken und Salz und Pfeffer anpassen. Bei zu dicker Konsistenz etwas Wasser oder Öl zugeben.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Servieren</strong>: in eine Schüssel füllen und mit Sesamkörnern und gehackter Petersilie garnieren. Mit Pitabrot, rohem Gemüse oder Croutons servieren.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Tipp</h4>
+<p>Perfekt als nahrhafter Wintersnack. Im Kühlschrank bis zu 4 Tage in einem luftdichten Behälter haltbar.</p>
+</div>
+</div>
+</div>
+
+<!-- GREEK -->
+<div id="lang-el" class="lang-content">
+<div class="recipe-card">
+<h2 class="recipe-title">Χούμους από Φακές με Μάραθο και Καρότο</h2>
+<p class="recipe-date">📅 16 Δεκεμβρίου 2024</p>
+
+<div class="ingredients-box">
+<h3>🥗 Υλικά</h3>
+<ul>
+<li>200 γραμμ. μαγειρεμένες φακές (προτιμότερα πράσινες ή καφέ)</li>
+<li>1 βολβός μαράθου (περίπου 200 γραμμ.)</li>
+<li>1 μεγάλο καρότο</li>
+<li>2 κ.σ. ταχίνι</li>
+<li>2 κ.σ. εξαιρετικό παρθένο ελαιόλαδο</li>
+<li>Χυμός από 1 λεμόνι</li>
+<li>1 σκελίδα σκόρδου</li>
+<li>Αλάτι και πιπέρι κατά βούληση</li>
+<li>Σουσάμι και μαϊντανό για γαρνίρισμα (προαιρετικά)</li>
+</ul>
+</div>
+
+<div class="steps-box">
+<h3>👨‍🍳 Εκτέλεση</h3>
+
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Λαχανικά</strong>: καθαρίστε το μάραθο και το καρότο. Κόψτε το μάραθο σε κομμάτια και το καρότο σε ροδέλες.</div></div>
+
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Καρότα</strong>: βράστε αλατισμένο νερό και προσθέστε τις ροδέλες καρότου. Βράστε 5-7 λεπτά μέχρι να μαλακώσουν, στραγγίστε και αφήστε να κρυώσουν.</div></div>
+
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Χτυπήστε</strong>: στο μπλέντερ αναμείξτε μαγειρεμένες φακές, μάραθο, καρότα, ταχίνι, ελαιόλαδο, χυμό λεμονιού και σκόρδο. Χτυπήστε μέχρι να γίνει λείο και κρεμώδες.</div></div>
+
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Νοστιμίστε</strong>: δοκιμάστε και προσαρμόστε αλάτι και πιπέρι. Αν είναι πολύ πηκτό, προσθέστε λίγο νερό ή λάδι.</div></div>
+
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Σερβίρετε</strong>: μεταφέρετε σε μπολ και γαρνίρετε με σουσάμι και ψιλοκομμένο μαϊντανό. Σερβίρετε με ψωμί πίτα, ωμά λαχανικά ή κρουτόν.</div></div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Συμβουλή</h4>
+<p>Ιδανικό ως θρεπτικό χειμωνιάτικο σνακ. Διατηρείται στο ψυγείο έως 4 ημέρες σε αεροστεγές δοχείο.</p>
+</div>
+</div>
+</div>
+
+<div class="footer">
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<p>"Tutto è iniziato con hummus di ceci..."</p>
+</div>
+
+</div>
 </body>
 </html>
