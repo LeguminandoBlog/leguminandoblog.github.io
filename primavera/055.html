@@ -3,87 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ricetta del 2025-04-16 | Leguminando</title>
+<title>Antipasto di Fave e Cicerchie | Leguminando</title>
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://leguminandoblog.github.io/primavera/055.html">
+    <meta property="og:title" content="Antipasto di Fave e Cicerchie">
+    <meta property="og:description" content="Ricetta su Leguminando - Antipasto di Fave e Cicerchie">
+    <meta property="og:image" content="https://leguminandoblog.github.io/primavera/055.jpg">
+    <meta property="og:site_name" content="Leguminando">
+    <meta name="twitter:card" content="summary_large_image">
 <style>
-body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
-.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.content { background: white; padding: 30px; border-radius: 10px; }
-.content h1 { color: #8B4513; }
-.content h2 { color: #D2691E; }
-.content h3 { color: #8B4513; }
-.content ul { margin: 15px 0; padding-left: 20px; }
-.content li { margin: 8px 0; }
-.content p { margin: 12px 0; line-height: 1.6; }
-.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
-.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; background: #f8f5f0; min-height: 100vh; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+.header { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 40px 20px 30px; text-align: center; border-radius: 20px; margin-bottom: 30px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+.header h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.header .tagline { font-size: 1.2em; opacity: 0.9; font-style: italic; }
+.back-link { display: inline-block; margin: 20px 0; padding: 10px 20px; background: #8B4513; color: white; text-decoration: none; border-radius: 25px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.95em; transition: background 0.3s; }
 .back-link:hover { background: #D2691E; }
-
-.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
-.fav-bar { text-align: center; margin: 5px 0; }
-
-@media print {
-    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
-    .stats, .back-link, .badge { display: none !important; }
-    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
-    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
-    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
-    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
-}
-
-</style>
-<meta name="description" content="Ricetta del 2025-04-16">
-<meta property="og:title" content="Ricetta del 2025-04-16 | Leguminando">
-<meta property="og:description" content="Ricetta del 2025-04-16">
-<style>
-.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
-.lang-tab { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; transition: all 0.3s; }
-.lang-tab.active { background: #8B4513; color: white; }
-.lang-tab:hover:not(.active) { background: #D2691E; color: white; }
+.fav-bar { text-align: center; margin: 10px 0; }
+.fav-btn { cursor: pointer; font-size: 1.8em; user-select: none; display: inline-block; transition: transform 0.2s; }
+.fav-btn:hover { transform: scale(1.2); }
+.recipe-image { width: 100%; max-width: 700px; margin: 20px auto; display: block; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 30px 0; flex-wrap: wrap; }
+.lang-tab { padding: 10px 20px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; border-radius: 25px; cursor: pointer; font-size: 0.9em; transition: all 0.3s; }
+.lang-tab:hover { background: rgba(255,255,255,0.3); }
+.lang-tab.active { background: white; color: #c0392b; border-color: white; }
+.recipe-card { background: white; border-radius: 20px; padding: 40px; margin-bottom: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
 .lang-content { display: none; }
 .lang-content.active { display: block; }
+.recipe-title { font-size: 2.2em; color: #8B4513; margin-bottom: 10px; text-align: center; }
+.recipe-date { text-align: center; color: #666; font-size: 0.95em; margin-bottom: 25px; }
+.ingredients-box { background: linear-gradient(135deg, #fef9e7 0%, #fdebd0 100%); border-radius: 15px; padding: 25px; margin: 25px 0; border-left: 5px solid #D2691E; }
+.ingredients-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.ingredients-box ul { padding-left: 20px; }
+.ingredients-box li { margin: 8px 0; color: #5D4037; }
+.steps-box { margin: 25px 0; }
+.steps-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.step { display: flex; gap: 15px; margin: 15px 0; padding: 15px; background: #faf8f5; border-radius: 12px; align-items: flex-start; }
+.step-num { background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1em; flex-shrink: 0; }
+.step-text { flex: 1; color: #5D4037; line-height: 1.6; }
+.tip-box { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 15px; padding: 20px; margin: 25px 0; border-left: 5px solid #4caf50; }
+.tip-box h4 { color: #2e7d32; margin-bottom: 10px; }
+.tip-box p { color: #1b5e20; line-height: 1.6; }
+.footer { text-align: center; margin-top: 50px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+@media (max-width: 600px) { .header h1 { font-size: 2em; } .recipe-card { padding: 20px; } .recipe-title { font-size: 1.6em; } }
+@media print { .lang-tabs, .lang-tab, .fav-bar, .back-link { display: none !important; } body { background: white !important; } .recipe-card { box-shadow: none !important; break-inside: avoid; } }
 </style>
 <script>
-function showLang(lang) {
-    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
-    document.getElementById('lang-' + lang).classList.add('active');
-    event.target.classList.add('active');
-}
+function showLang(lang) { document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active')); document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active')); document.getElementById('lang-' + lang).classList.add('active'); event.target.classList.add('active'); }
+function toggleFav(path, title) { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); if (favs[path]) { delete favs[path]; } else { favs[path] = title; } localStorage.setItem('leguminando_favs', JSON.stringify(favs)); updateFavIcons(); }
+function updateFavIcons() { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); document.querySelectorAll('.fav-btn').forEach(btn => { let p = btn.getAttribute('data-path'); btn.textContent = favs[p] ? '❤️' : '🤍'; }); }
+document.addEventListener('DOMContentLoaded', updateFavIcons);
 </script>
 </head>
 <body>
+<div class="container">
 <div class="header">
-<h1>Leguminando</h1>
-<p>Ricette di stagione a base di legumi</p>
+<h1>🫘 Leguminando</h1>
+<p class="tagline">Ricette di stagione a base di legumi</p>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
-
+<a href="../index.html" class="back-link">← Torna alla Home</a>
 <div class="fav-bar">
-<span class="fav-btn" data-path="primavera/055.html" data-title="Ricetta del 2025-04-16" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+<span class="fav-btn" data-path="primavera/055.html" data-title="Antipasto di Fave e Cicerchie" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
 </div>
-
-<img src="055.jpg" alt="Ricetta del 2025-04-16" class="recipe-image">
-
-<div class="content">
+<img src="055.jpg" alt="Antipasto di Fave e Cicerchie" class="recipe-image">
 <div class="lang-tabs">
-    <button class="lang-tab active" onclick="showLang('it')">IT</button>
-    <button class="lang-tab" onclick="showLang('en')">EN</button>
-    <button class="lang-tab" onclick="showLang('es')">ES</button>
-    <button class="lang-tab" onclick="showLang('pt')">PT</button>
-    <button class="lang-tab" onclick="showLang('de')">DE</button>
-    <button class="lang-tab" onclick="showLang('el')">EL</button>
+    <button class="lang-tab active" onclick="showLang('it')">🇮🇹 IT</button>
+    <button class="lang-tab" onclick="showLang('en')">🇬🇧 EN</button>
+    <button class="lang-tab" onclick="showLang('es')">🇪🇸 ES</button>
+    <button class="lang-tab" onclick="showLang('pt')">🇵🇹 PT</button>
+    <button class="lang-tab" onclick="showLang('de')">🇩🇪 DE</button>
+    <button class="lang-tab" onclick="showLang('el')">🇬🇷 EL</button>
 </div>
 
+<!-- ITALIANO -->
 <div id="lang-it" class="lang-content active">
-<p><strong>Data:</strong> 2025-04-16</p>
-<h3>Antipasto di Fave e Cicerchie</h3>
-<h4>Ingredienti:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Antipasto di Fave e Cicerchie</h2>
+<p class="recipe-date">📅 16 Aprile 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredienti</h3>
 <ul>
 <li>200 g di fave fresche o surgelate</li>
 <li>200 g di cicerchie (secche o in scatola)</li>
@@ -94,168 +98,168 @@ function showLang(lang) {
 <li>Sale e pepe q.b.</li>
 <li>Prezzemolo fresco tritato</li>
 <li>Peperoncino (facoltativo)</li>
-</ul>
-<h4>Procedimento:</h4>
-<p>1. <strong>Preparazione delle cicerchie</strong>: Se utilizzi cicerchie secche, mettile a bagno in acqua per almeno 12 ore. Scolale e cuocile in acqua salata per circa 1-2 ore, fino a quando sono tenere. Se usi cicerchie in scatola, scolale e risciacquale bene.</p>
-<p>2. <strong>Cottura delle fave</strong>: Se usi fave fresche, sbucciale e cuocile in acqua salata per circa 5-7 minuti, fino a quando sono tenere. Se usi fave surgelate, cuocile direttamente secondo le istruzioni sulla confezione.</p>
-<p>3. <strong>Soffritto</strong>: In una padella, scalda l'olio d'oliva e aggiungi la cipolla tritata e gli spicchi d'aglio schiacciati. Fai soffriggere a fuoco medio finché la cipolla diventa trasparente.</p>
-<p>4. <strong>Unire gli ingredienti</strong>: Aggiungi le fave e le cicerchie nella padella. Mescola bene e cuoci per altri 5 minuti. Aggiusta di sale e pepe e, se desideri, aggiungi un pizzico di peperoncino.</p>
-<p>5. <strong>Condire</strong>: Togli dal fuoco e aggiungi il succo di limone e il prezzemolo tritato. Mescola bene per amalgamare i sapori.</p>
-<p>6. <strong>Servire</strong>: Puoi servire l'antipasto caldo o a temperatura ambiente. Presenta il piatto in una ciotola, decorando con qualche foglia di prezzemolo fresco.</p>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparazione</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Passo 1</strong>: Preparazione delle cicerchie: Se utilizzi cicerchie secche, mettile a bagno in acqua per almeno 12 ore. Scolale e cuocile in acqua salata per circa 1-2 ore, fino a quando sono tenere. Se usi cicerchie in scatola, scolale e risciacquale bene.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Passo 2</strong>: Cottura delle fave: Se usi fave fresche, sbucciale e cuocile in acqua salata per circa 5-7 minuti, fino a quando sono tenere. Se usi fave surgelate, cuocile direttamente secondo le istruzioni sulla confezione.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Passo 3</strong>: Soffritto: In una padella, scalda l'olio d'oliva e aggiungi la cipolla tritata e gli spicchi d'aglio schiacciati. Fai soffriggere a fuoco medio finché la cipolla diventa trasparente.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Passo 4</strong>: Unire gli ingredienti: Aggiungi le fave e le cicerchie nella padella. Mescola bene e cuoci per altri 5 minuti. Aggiusta di sale e pepe e, se desideri, aggiungi un pizzico di peperoncino.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Passo 5</strong>: Condire: Togli dal fuoco e aggiungi il succo di limone e il prezzemolo tritato. Mescola bene per amalgamare i sapori.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Passo 6</strong>: Servire: Puoi servire l'antipasto caldo o a temperatura ambiente. Presenta il piatto in una ciotola, decorando con qualche foglia di prezzemolo fresco.</div></div>
 </div>
+<div class="tip-box"><h4>💡 Suggerimento</h4><p>Un antipasto primaverile semplice e ricco di proteine vegetali. Servi con pane integrale tostato.</p></div>
+</div></div>
 
+<!-- ENGLISH -->
 <div id="lang-en" class="lang-content">
-<p><strong>Date:</strong> 2025-04-16</p>
-<p><em>English translation coming soon...</em></p>
-<h3>Antipasto di Fave e Cicerchie</h3>
-<h4>Ingredienti:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Broad bean and grass peas appetizer</h2>
+<p class="recipe-date">📅 April 16, 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredients</h3>
 <ul>
-<li>200 g di fave fresche o surgelate</li>
-<li>200 g di cicerchie (secche o in scatola)</li>
-<li>1 cipolla piccola</li>
-<li>2 spicchi d'aglio</li>
-<li>3 cucchiai di olio extravergine d'oliva</li>
-<li>Succo di 1 limone</li>
-<li>Sale e pepe q.b.</li>
-<li>Prezzemolo fresco tritato</li>
-<li>Peperoncino (facoltativo)</li>
-</ul>
-<h4>Procedimento:</h4>
-<p>1. <strong>Preparazione delle cicerchie</strong>: Se utilizzi cicerchie secche, mettile a bagno in acqua per almeno 12 ore. Scolale e cuocile in acqua salata per circa 1-2 ore, fino a quando sono tenere. Se usi cicerchie in scatola, scolale e risciacquale bene.</p>
-<p>2. <strong>Cottura delle fave</strong>: Se usi fave fresche, sbucciale e cuocile in acqua salata per circa 5-7 minuti, fino a quando sono tenere. Se usi fave surgelate, cuocile direttamente secondo le istruzioni sulla confezione.</p>
-<p>3. <strong>Soffritto</strong>: In una padella, scalda l'olio d'oliva e aggiungi la cipolla tritata e gli spicchi d'aglio schiacciati. Fai soffriggere a fuoco medio finché la cipolla diventa trasparente.</p>
-<p>4. <strong>Unire gli ingredienti</strong>: Aggiungi le fave e le cicerchie nella padella. Mescola bene e cuoci per altri 5 minuti. Aggiusta di sale e pepe e, se desideri, aggiungi un pizzico di peperoncino.</p>
-<p>5. <strong>Condire</strong>: Togli dal fuoco e aggiungi il succo di limone e il prezzemolo tritato. Mescola bene per amalgamare i sapori.</p>
-<p>6. <strong>Servire</strong>: Puoi servire l'antipasto caldo o a temperatura ambiente. Presenta il piatto in una ciotola, decorando con qualche foglia di prezzemolo fresco.</p>
+<li>200 g of fresh or frozen broad beans</li>
+<li>200 g of grass peas (dried or canned)</li>
+<li>1 small onion</li>
+<li>2 cloves of garlic</li>
+<li>3 tablespoons of extra virgin olive oil</li>
+<li>Juice of 1 lemon</li>
+<li>Salt and pepper to taste</li>
+<li>Chopped fresh parsley</li>
+<li>Chili pepper (optional)</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparation</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Step 1</strong>: Preparing the grass peas: If you use dried grass peas, soak them in water for at least 12 hours. Drain them and cook them in salted water for about 1-2 hours, until they are tender. If using canned grass peas, drain and rinse well.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Step 2</strong>: Cooking the broad beans: If using fresh broad beans, peel them and cook them in salted water for about 5-7 minutes, until tender. If using frozen broad beans, cook them directly according to the package instructions.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Step 3</strong>: Sauté: In a pan, heat the olive oil and add the chopped onion and crushed garlic cloves. Fry over medium heat until the onion becomes transparent.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Step 4</strong>: Combine the ingredients: Add the broad beans and grass peas to the pan. Mix well and cook for another 5 minutes. Season with salt and pepper and, if desired, add a pinch of chilli.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Step 5</strong>: Season: Remove from the heat and add the lemon juice and chopped parsley. Mix well to blend the flavors.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Step 6</strong>: Serving: You can serve the appetizer hot or at room temperature. Present the dish in a bowl, decorating with a few leaves of fresh parsley.</div></div>
 </div>
+<div class="tip-box"><h4>💡 Tip</h4><p>A simple spring appetizer rich in vegetable proteins. Serve with toasted wholemeal bread.</p></div>
+</div></div>
 
+<!-- SPANISH -->
 <div id="lang-es" class="lang-content">
-<p><strong>Fecha:</strong> 2025-04-16</p>
-<p><em>Traduccion al espanol proximamente...</em></p>
-<h3>Antipasto di Fave e Cicerchie</h3>
-<h4>Ingredienti:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Aperitivo de habas y guisantes</h2>
+<p class="recipe-date">📅 16 de abril de 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li>200 g di fave fresche o surgelate</li>
-<li>200 g di cicerchie (secche o in scatola)</li>
-<li>1 cipolla piccola</li>
-<li>2 spicchi d'aglio</li>
-<li>3 cucchiai di olio extravergine d'oliva</li>
-<li>Succo di 1 limone</li>
-<li>Sale e pepe q.b.</li>
-<li>Prezzemolo fresco tritato</li>
-<li>Peperoncino (facoltativo)</li>
-</ul>
-<h4>Procedimento:</h4>
-<p>1. <strong>Preparazione delle cicerchie</strong>: Se utilizzi cicerchie secche, mettile a bagno in acqua per almeno 12 ore. Scolale e cuocile in acqua salata per circa 1-2 ore, fino a quando sono tenere. Se usi cicerchie in scatola, scolale e risciacquale bene.</p>
-<p>2. <strong>Cottura delle fave</strong>: Se usi fave fresche, sbucciale e cuocile in acqua salata per circa 5-7 minuti, fino a quando sono tenere. Se usi fave surgelate, cuocile direttamente secondo le istruzioni sulla confezione.</p>
-<p>3. <strong>Soffritto</strong>: In una padella, scalda l'olio d'oliva e aggiungi la cipolla tritata e gli spicchi d'aglio schiacciati. Fai soffriggere a fuoco medio finché la cipolla diventa trasparente.</p>
-<p>4. <strong>Unire gli ingredienti</strong>: Aggiungi le fave e le cicerchie nella padella. Mescola bene e cuoci per altri 5 minuti. Aggiusta di sale e pepe e, se desideri, aggiungi un pizzico di peperoncino.</p>
-<p>5. <strong>Condire</strong>: Togli dal fuoco e aggiungi il succo di limone e il prezzemolo tritato. Mescola bene per amalgamare i sapori.</p>
-<p>6. <strong>Servire</strong>: Puoi servire l'antipasto caldo o a temperatura ambiente. Presenta il piatto in una ciotola, decorando con qualche foglia di prezzemolo fresco.</p>
+<li>200 g de habas frescas o congeladas</li>
+<li>200 g de guisantes (secos o enlatados)</li>
+<li>1 cebolla pequeña</li>
+<li>2 dientes de ajo</li>
+<li>3 cucharadas de aceite de oliva virgen extra</li>
+<li>Jugo de 1 limón</li>
+<li>Sal y pimienta al gusto</li>
+<li>Perejil fresco picado</li>
+<li>Ají (opcional)</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparación</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Paso 1</strong>: Preparación de los guisantes: Si utiliza guisantes secos, déjelos en remojo en agua durante al menos 12 horas. Escurrirlas y cocerlas en agua con sal durante unas 1-2 horas, hasta que estén tiernas. Si usa guisantes enlatados, escúrralos y enjuáguelos bien.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Paso 2</strong>: Cocinar las habas: Si usa habas frescas, pélelas y cocínelas en agua con sal durante unos 5-7 minutos, hasta que estén tiernas. Si usa habas congeladas, cocínelas directamente según las instrucciones del paquete.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Paso 3</strong>: Saltear: En una sartén calentar el aceite de oliva y añadir la cebolla picada y los dientes de ajo machacados. Freír a fuego medio hasta que la cebolla se vuelva transparente.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Paso 4</strong>: Combine los ingredientes: agregue las habas y los guisantes a la sartén. Mezclar bien y cocinar por otros 5 minutos. Sazone con sal y pimienta y, si lo desea, agregue una pizca de guindilla.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Paso 5</strong>: Condimentar: Retirar del fuego y agregar el jugo de limón y el perejil picado. Mezclar bien para mezclar los sabores.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Paso 6</strong>: Servicio: Puedes servir el aperitivo caliente o a temperatura ambiente. Presentar el plato en un bol decorando con unas hojas de perejil fresco.</div></div>
 </div>
+<div class="tip-box"><h4>💡 Consejo</h4><p>Un sencillo aperitivo primaveral rico en proteínas vegetales. Servir con pan integral tostado.</p></div>
+</div></div>
 
+<!-- PORTUGUESE -->
 <div id="lang-pt" class="lang-content">
-<p><strong>Data:</strong> 2025-04-16</p>
-<p><em>Traducao em portugues em breve...</em></p>
-<h3>Antipasto di Fave e Cicerchie</h3>
-<h4>Ingredienti:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Aperitivo de fava e ervilha</h2>
+<p class="recipe-date">📅 16 de abril de 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li>200 g di fave fresche o surgelate</li>
-<li>200 g di cicerchie (secche o in scatola)</li>
-<li>1 cipolla piccola</li>
-<li>2 spicchi d'aglio</li>
-<li>3 cucchiai di olio extravergine d'oliva</li>
-<li>Succo di 1 limone</li>
-<li>Sale e pepe q.b.</li>
-<li>Prezzemolo fresco tritato</li>
-<li>Peperoncino (facoltativo)</li>
-</ul>
-<h4>Procedimento:</h4>
-<p>1. <strong>Preparazione delle cicerchie</strong>: Se utilizzi cicerchie secche, mettile a bagno in acqua per almeno 12 ore. Scolale e cuocile in acqua salata per circa 1-2 ore, fino a quando sono tenere. Se usi cicerchie in scatola, scolale e risciacquale bene.</p>
-<p>2. <strong>Cottura delle fave</strong>: Se usi fave fresche, sbucciale e cuocile in acqua salata per circa 5-7 minuti, fino a quando sono tenere. Se usi fave surgelate, cuocile direttamente secondo le istruzioni sulla confezione.</p>
-<p>3. <strong>Soffritto</strong>: In una padella, scalda l'olio d'oliva e aggiungi la cipolla tritata e gli spicchi d'aglio schiacciati. Fai soffriggere a fuoco medio finché la cipolla diventa trasparente.</p>
-<p>4. <strong>Unire gli ingredienti</strong>: Aggiungi le fave e le cicerchie nella padella. Mescola bene e cuoci per altri 5 minuti. Aggiusta di sale e pepe e, se desideri, aggiungi un pizzico di peperoncino.</p>
-<p>5. <strong>Condire</strong>: Togli dal fuoco e aggiungi il succo di limone e il prezzemolo tritato. Mescola bene per amalgamare i sapori.</p>
-<p>6. <strong>Servire</strong>: Puoi servire l'antipasto caldo o a temperatura ambiente. Presenta il piatto in una ciotola, decorando con qualche foglia di prezzemolo fresco.</p>
+<li>200 g de favas frescas ou congeladas</li>
+<li>200 g de ervilhas (secas ou enlatadas)</li>
+<li>1 cebola pequena</li>
+<li>2 dentes de alho</li>
+<li>3 colheres de sopa de azeite extra virgem</li>
+<li>Suco de 1 limão</li>
+<li>Sal e pimenta a gosto</li>
+<li>Salsa fresca picada</li>
+<li>Pimenta malagueta (opcional)</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparação</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Passo 1</strong>: Preparando as ervilhas: Se você usar ervilhas secas, deixe-as de molho em água por pelo menos 12 horas. Escorra e cozinhe em água e sal por cerca de 1 a 2 horas, até ficarem macios. Se usar ervilhas enlatadas, escorra e enxágue bem.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Etapa 2</strong>: Cozinhar as favas: Se usar favas frescas, descasque-as e cozinhe-as em água e sal durante cerca de 5-7 minutos, até ficarem macias. Se usar favas congeladas, cozinhe-as diretamente de acordo com as instruções da embalagem.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Etapa 3</strong>: Refogar: Num tacho, aqueça o azeite e junte a cebola picada e os dentes de alho esmagados. Frite em fogo médio até a cebola ficar transparente.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Etapa 4</strong>: Combine os ingredientes: Adicione as favas e as ervilhas à panela. Misture bem e cozinhe por mais 5 minutos. Tempere com sal e pimenta e, se desejar, adicione uma pitada de pimenta.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Etapa 5</strong>: Temporada: Retire do fogo e acrescente o suco de limão e a salsa picada. Misture bem para misturar os sabores.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Etapa 6</strong>: Servindo: Você pode servir o aperitivo quente ou em temperatura ambiente. Apresente o prato numa tigela, decorando com algumas folhas de salsa fresca.</div></div>
 </div>
+<div class="tip-box"><h4>💡 Sugestão</h4><p>Um simples aperitivo primaveril rico em proteínas vegetais. Sirva com pão integral torrado.</p></div>
+</div></div>
 
+<!-- GERMAN -->
 <div id="lang-de" class="lang-content">
-<p><strong>Datum:</strong> 2025-04-16</p>
-<p><em>Deutsche Uebersetzung folgt bald...</em></p>
-<h3>Antipasto di Fave e Cicerchie</h3>
-<h4>Ingredienti:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Vorspeise aus Saubohnen und Graserbsen</h2>
+<p class="recipe-date">📅 16. April 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Zutaten</h3>
 <ul>
-<li>200 g di fave fresche o surgelate</li>
-<li>200 g di cicerchie (secche o in scatola)</li>
-<li>1 cipolla piccola</li>
-<li>2 spicchi d'aglio</li>
-<li>3 cucchiai di olio extravergine d'oliva</li>
-<li>Succo di 1 limone</li>
-<li>Sale e pepe q.b.</li>
-<li>Prezzemolo fresco tritato</li>
-<li>Peperoncino (facoltativo)</li>
-</ul>
-<h4>Procedimento:</h4>
-<p>1. <strong>Preparazione delle cicerchie</strong>: Se utilizzi cicerchie secche, mettile a bagno in acqua per almeno 12 ore. Scolale e cuocile in acqua salata per circa 1-2 ore, fino a quando sono tenere. Se usi cicerchie in scatola, scolale e risciacquale bene.</p>
-<p>2. <strong>Cottura delle fave</strong>: Se usi fave fresche, sbucciale e cuocile in acqua salata per circa 5-7 minuti, fino a quando sono tenere. Se usi fave surgelate, cuocile direttamente secondo le istruzioni sulla confezione.</p>
-<p>3. <strong>Soffritto</strong>: In una padella, scalda l'olio d'oliva e aggiungi la cipolla tritata e gli spicchi d'aglio schiacciati. Fai soffriggere a fuoco medio finché la cipolla diventa trasparente.</p>
-<p>4. <strong>Unire gli ingredienti</strong>: Aggiungi le fave e le cicerchie nella padella. Mescola bene e cuoci per altri 5 minuti. Aggiusta di sale e pepe e, se desideri, aggiungi un pizzico di peperoncino.</p>
-<p>5. <strong>Condire</strong>: Togli dal fuoco e aggiungi il succo di limone e il prezzemolo tritato. Mescola bene per amalgamare i sapori.</p>
-<p>6. <strong>Servire</strong>: Puoi servire l'antipasto caldo o a temperatura ambiente. Presenta il piatto in una ciotola, decorando con qualche foglia di prezzemolo fresco.</p>
+<li>200 g frische oder gefrorene Saubohnen</li>
+<li>200 g Graserbsen (getrocknet oder aus der Dose)</li>
+<li>1 kleine Zwiebel</li>
+<li>2 Knoblauchzehen</li>
+<li>3 Esslöffel natives Olivenöl extra</li>
+<li>Saft von 1 Zitrone</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Gehackte frische Petersilie</li>
+<li>Chilischote (optional)</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Zubereitung</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Schritt 1</strong>: Zubereitung der Graserbsen: Wenn Sie getrocknete Graserbsen verwenden, weichen Sie diese mindestens 12 Stunden in Wasser ein. Lassen Sie sie abtropfen und kochen Sie sie in Salzwasser etwa 1–2 Stunden lang, bis sie weich sind. Wenn Sie Graserbsen aus der Dose verwenden, lassen Sie sie abtropfen und spülen Sie sie gut aus.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Schritt 2</strong>: Kochen der Saubohnen: Wenn Sie frische Saubohnen verwenden, schälen Sie diese und kochen Sie sie in Salzwasser etwa 5–7 Minuten lang, bis sie weich sind. Wenn Sie gefrorene Saubohnen verwenden, kochen Sie diese direkt gemäß der Packungsanleitung.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Schritt 3</strong>: Anbraten: In einer Pfanne das Olivenöl erhitzen und die gehackte Zwiebel und die zerdrückten Knoblauchzehen hinzufügen. Bei mittlerer Hitze braten, bis die Zwiebel transparent wird.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Schritt 4</strong>: Kombinieren Sie die Zutaten: Geben Sie die Saubohnen und Graserbsen in die Pfanne. Gut vermischen und weitere 5 Minuten kochen lassen. Mit Salz und Pfeffer würzen und nach Belieben eine Prise Chili hinzufügen.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Schritt 5</strong>: Würzen: Vom Herd nehmen und Zitronensaft und gehackte Petersilie hinzufügen. Gut vermischen, um die Aromen zu vermischen.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Schritt 6</strong>: Servieren: Sie können die Vorspeise heiß oder bei Zimmertemperatur servieren. Das Gericht in einer Schüssel anrichten und mit ein paar Blättern frischer Petersilie dekorieren.</div></div>
 </div>
+<div class="tip-box"><h4>💡 Tipp</h4><p>Eine einfache Frühlingsvorspeise, reich an pflanzlichen Proteinen. Mit geröstetem Vollkornbrot servieren.</p></div>
+</div></div>
 
+<!-- GREEK -->
 <div id="lang-el" class="lang-content">
-<p><strong>Hmerominia:</strong> 2025-04-16</p>
-<p><em>E elliniki metafrasi erhetai syntoma...</em></p>
-<h3>Antipasto di Fave e Cicerchie</h3>
-<h4>Ingredienti:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Ορεκτικό με φασόλια και μπιζέλια</h2>
+<p class="recipe-date">📅 16 Απριλίου 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Υλικά</h3>
 <ul>
-<li>200 g di fave fresche o surgelate</li>
-<li>200 g di cicerchie (secche o in scatola)</li>
-<li>1 cipolla piccola</li>
-<li>2 spicchi d'aglio</li>
-<li>3 cucchiai di olio extravergine d'oliva</li>
-<li>Succo di 1 limone</li>
-<li>Sale e pepe q.b.</li>
-<li>Prezzemolo fresco tritato</li>
-<li>Peperoncino (facoltativo)</li>
-</ul>
-<h4>Procedimento:</h4>
-<p>1. <strong>Preparazione delle cicerchie</strong>: Se utilizzi cicerchie secche, mettile a bagno in acqua per almeno 12 ore. Scolale e cuocile in acqua salata per circa 1-2 ore, fino a quando sono tenere. Se usi cicerchie in scatola, scolale e risciacquale bene.</p>
-<p>2. <strong>Cottura delle fave</strong>: Se usi fave fresche, sbucciale e cuocile in acqua salata per circa 5-7 minuti, fino a quando sono tenere. Se usi fave surgelate, cuocile direttamente secondo le istruzioni sulla confezione.</p>
-<p>3. <strong>Soffritto</strong>: In una padella, scalda l'olio d'oliva e aggiungi la cipolla tritata e gli spicchi d'aglio schiacciati. Fai soffriggere a fuoco medio finché la cipolla diventa trasparente.</p>
-<p>4. <strong>Unire gli ingredienti</strong>: Aggiungi le fave e le cicerchie nella padella. Mescola bene e cuoci per altri 5 minuti. Aggiusta di sale e pepe e, se desideri, aggiungi un pizzico di peperoncino.</p>
-<p>5. <strong>Condire</strong>: Togli dal fuoco e aggiungi il succo di limone e il prezzemolo tritato. Mescola bene per amalgamare i sapori.</p>
-<p>6. <strong>Servire</strong>: Puoi servire l'antipasto caldo o a temperatura ambiente. Presenta il piatto in una ciotola, decorando con qualche foglia di prezzemolo fresco.</p>
+<li>200 g φρέσκα ή κατεψυγμένα κουκιά</li>
+<li>200 γραμμάρια αρακά (αποξηραμένα ή σε κονσέρβα)</li>
+<li>1 μικρό κρεμμύδι</li>
+<li>2 σκελίδες σκόρδο</li>
+<li>3 κουταλιές της σούπας έξτρα παρθένο ελαιόλαδο</li>
+<li>Χυμό από 1 λεμόνι</li>
+<li>Αλάτι και πιπέρι για γεύση</li>
+<li>Ψιλοκομμένο φρέσκο μαϊντανό</li>
+<li>Πιπεριά τσίλι (προαιρετικά)</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Εκτέλεση</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Βήμα 1</strong>: Προετοιμασία του αρακά: Εάν χρησιμοποιείτε ξερά μπιζέλια, μουλιάστε τα σε νερό για τουλάχιστον 12 ώρες. Τα στραγγίζουμε και τα βράζουμε σε αλατισμένο νερό για περίπου 1-2 ώρες, μέχρι να μαλακώσουν. Εάν χρησιμοποιείτε κονσερβοποιημένα μπιζέλια, στραγγίστε τα και ξεπλύνετε καλά.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Βήμα 2</strong>: Μαγείρεμα των κουκιών: Αν χρησιμοποιείτε φρέσκα κουκιά, ξεφλουδίστε τα και μαγειρέψτε τα σε αλατισμένο νερό για περίπου 5-7 λεπτά, μέχρι να μαλακώσουν. Εάν χρησιμοποιείτε κατεψυγμένα κουκιά, μαγειρέψτε τα απευθείας σύμφωνα με τις οδηγίες της συσκευασίας.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Βήμα 3</strong>: Σοτάρουμε: Σε ένα τηγάνι ζεσταίνουμε το ελαιόλαδο και προσθέτουμε το ψιλοκομμένο κρεμμύδι και τις σκελίδες σκόρδο ψιλοκομμένες. Τηγανίζουμε σε μέτρια φωτιά μέχρι το κρεμμύδι να γίνει διάφανο.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Βήμα 4</strong>: Ανακατέψτε τα υλικά: Προσθέστε τα κουκιά και τον αρακά στο τηγάνι. Ανακατεύουμε καλά και μαγειρεύουμε για άλλα 5 λεπτά. Αλατοπιπερώνουμε και αν θέλουμε προσθέτουμε μια πρέζα τσίλι.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Βήμα 5</strong>: Εποχή: Αποσύρουμε από τη φωτιά και προσθέτουμε το χυμό λεμονιού και τον ψιλοκομμένο μαϊντανό. Ανακατεύουμε καλά να ενωθούν οι γεύσεις.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Βήμα 6</strong>: Σερβίρισμα: Μπορείτε να σερβίρετε το ορεκτικό ζεστό ή σε θερμοκρασία δωματίου. Παρουσιάζουμε το πιάτο σε ένα μπολ, διακοσμώντας με λίγα φύλλα φρέσκου μαϊντανού.</div></div>
 </div>
-</div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+<div class="tip-box"><h4>💡 Συμβουλή</h4><p>Ένα απλό ανοιξιάτικο ορεκτικό πλούσιο σε φυτικές πρωτεΐνες. Σερβίρουμε με φρυγανισμένο ψωμί ολικής αλέσεως.</p></div>
+</div></div>
 
 <div class="footer">
-<p>Leguminando - Ricette di stagione a base di legumi</p>
-<p>"Tutto e iniziato con hummus di ceci..."</p>
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<p>"Tutto è iniziato con hummus di ceci..."</p>
 </div>
-<div data-legumi="ceci,fave,cicerchie" style="display:none;"></div>
-
-<script>
-function toggleFav(path, title) {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    if (favs[path]) { delete favs[path]; }
-    else { favs[path] = title; }
-    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
-    updateFavIcons();
-}
-function updateFavIcons() {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    document.querySelectorAll('.fav-btn').forEach(btn => {
-        let p = btn.getAttribute('data-path');
-        btn.textContent = favs[p] ? '❤️' : '🤍';
-    });
-}
-document.addEventListener('DOMContentLoaded', updateFavIcons);
-</script>
-
+</div>
 
 
 <div style="text-align:center; margin:30px 0; padding:20px;">
@@ -281,7 +285,6 @@ function condividiRicetta() {
     }
 }
 </script>
-
 
 </body>
 </html>

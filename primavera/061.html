@@ -3,87 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ricetta del 2025-04-10 | Leguminando</title>
+<title>Pizza con Farina di Carrube e Pomodoro | Leguminando</title>
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://leguminandoblog.github.io/primavera/061.html">
+    <meta property="og:title" content="Pizza con Farina di Carrube e Pomodoro">
+    <meta property="og:description" content="Ricetta su Leguminando - Pizza con Farina di Carrube e Pomodoro">
+    <meta property="og:image" content="https://leguminandoblog.github.io/primavera/061.jpg">
+    <meta property="og:site_name" content="Leguminando">
+    <meta name="twitter:card" content="summary_large_image">
 <style>
-body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
-.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.content { background: white; padding: 30px; border-radius: 10px; }
-.content h1 { color: #8B4513; }
-.content h2 { color: #D2691E; }
-.content h3 { color: #8B4513; }
-.content ul { margin: 15px 0; padding-left: 20px; }
-.content li { margin: 8px 0; }
-.content p { margin: 12px 0; line-height: 1.6; }
-.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
-.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; background: #f8f5f0; min-height: 100vh; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+.header { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 40px 20px 30px; text-align: center; border-radius: 20px; margin-bottom: 30px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+.header h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.header .tagline { font-size: 1.2em; opacity: 0.9; font-style: italic; }
+.back-link { display: inline-block; margin: 20px 0; padding: 10px 20px; background: #8B4513; color: white; text-decoration: none; border-radius: 25px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.95em; transition: background 0.3s; }
 .back-link:hover { background: #D2691E; }
-
-.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
-.fav-bar { text-align: center; margin: 5px 0; }
-
-@media print {
-    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
-    .stats, .back-link, .badge { display: none !important; }
-    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
-    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
-    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
-    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
-}
-
-</style>
-<meta name="description" content="Ricetta del 2025-04-10">
-<meta property="og:title" content="Ricetta del 2025-04-10 | Leguminando">
-<meta property="og:description" content="Ricetta del 2025-04-10">
-<style>
-.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
-.lang-tab { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; transition: all 0.3s; }
-.lang-tab.active { background: #8B4513; color: white; }
-.lang-tab:hover:not(.active) { background: #D2691E; color: white; }
+.fav-bar { text-align: center; margin: 10px 0; }
+.fav-btn { cursor: pointer; font-size: 1.8em; user-select: none; display: inline-block; transition: transform 0.2s; }
+.fav-btn:hover { transform: scale(1.2); }
+.recipe-image { width: 100%; max-width: 700px; margin: 20px auto; display: block; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 30px 0; flex-wrap: wrap; }
+.lang-tab { padding: 10px 20px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; border-radius: 25px; cursor: pointer; font-size: 0.9em; transition: all 0.3s; }
+.lang-tab:hover { background: rgba(255,255,255,0.3); }
+.lang-tab.active { background: white; color: #c0392b; border-color: white; }
+.recipe-card { background: white; border-radius: 20px; padding: 40px; margin-bottom: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
 .lang-content { display: none; }
 .lang-content.active { display: block; }
+.recipe-title { font-size: 2.2em; color: #8B4513; margin-bottom: 10px; text-align: center; }
+.recipe-date { text-align: center; color: #666; font-size: 0.95em; margin-bottom: 25px; }
+.ingredients-box { background: linear-gradient(135deg, #fef9e7 0%, #fdebd0 100%); border-radius: 15px; padding: 25px; margin: 25px 0; border-left: 5px solid #D2691E; }
+.ingredients-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.ingredients-box ul { padding-left: 20px; }
+.ingredients-box li { margin: 8px 0; color: #5D4037; }
+.steps-box { margin: 25px 0; }
+.steps-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.step { display: flex; gap: 15px; margin: 15px 0; padding: 15px; background: #faf8f5; border-radius: 12px; align-items: flex-start; }
+.step-num { background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1em; flex-shrink: 0; }
+.step-text { flex: 1; color: #5D4037; line-height: 1.6; }
+.tip-box { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 15px; padding: 20px; margin: 25px 0; border-left: 5px solid #4caf50; }
+.tip-box h4 { color: #2e7d32; margin-bottom: 10px; }
+.tip-box p { color: #1b5e20; line-height: 1.6; }
+.footer { text-align: center; margin-top: 50px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+@media (max-width: 600px) { .header h1 { font-size: 2em; } .recipe-card { padding: 20px; } .recipe-title { font-size: 1.6em; } }
+@media print { .lang-tabs, .lang-tab, .fav-bar, .back-link { display: none !important; } body { background: white !important; } .recipe-card { box-shadow: none !important; break-inside: avoid; } }
 </style>
 <script>
-function showLang(lang) {
-    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
-    document.getElementById('lang-' + lang).classList.add('active');
-    event.target.classList.add('active');
-}
+function showLang(lang) { document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active')); document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active')); document.getElementById('lang-' + lang).classList.add('active'); event.target.classList.add('active'); }
+function toggleFav(path, title) { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); if (favs[path]) { delete favs[path]; } else { favs[path] = title; } localStorage.setItem('leguminando_favs', JSON.stringify(favs)); updateFavIcons(); }
+function updateFavIcons() { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); document.querySelectorAll('.fav-btn').forEach(btn => { let p = btn.getAttribute('data-path'); btn.textContent = favs[p] ? '❤️' : '🤍'; }); }
+document.addEventListener('DOMContentLoaded', updateFavIcons);
 </script>
 </head>
 <body>
+<div class="container">
 <div class="header">
-<h1>Leguminando</h1>
-<p>Ricette di stagione a base di legumi</p>
+<h1>🫘 Leguminando</h1>
+<p class="tagline">Ricette di stagione a base di legumi</p>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
-
+<a href="../index.html" class="back-link">← Torna alla Home</a>
 <div class="fav-bar">
-<span class="fav-btn" data-path="primavera/061.html" data-title="Ricetta del 2025-04-10" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+<span class="fav-btn" data-path="primavera/061.html" data-title="Pizza con Farina di Carrube e Pomodoro" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
 </div>
-
-<img src="061.jpg" alt="Ricetta del 2025-04-10" class="recipe-image">
-
-<div class="content">
+<img src="061.jpg" alt="Pizza con Farina di Carrube e Pomodoro" class="recipe-image">
 <div class="lang-tabs">
-    <button class="lang-tab active" onclick="showLang('it')">IT</button>
-    <button class="lang-tab" onclick="showLang('en')">EN</button>
-    <button class="lang-tab" onclick="showLang('es')">ES</button>
-    <button class="lang-tab" onclick="showLang('pt')">PT</button>
-    <button class="lang-tab" onclick="showLang('de')">DE</button>
-    <button class="lang-tab" onclick="showLang('el')">EL</button>
+    <button class="lang-tab active" onclick="showLang('it')">🇮🇹 IT</button>
+    <button class="lang-tab" onclick="showLang('en')">🇬🇧 EN</button>
+    <button class="lang-tab" onclick="showLang('es')">🇪🇸 ES</button>
+    <button class="lang-tab" onclick="showLang('pt')">🇵🇹 PT</button>
+    <button class="lang-tab" onclick="showLang('de')">🇩🇪 DE</button>
+    <button class="lang-tab" onclick="showLang('el')">🇬🇷 EL</button>
 </div>
 
+<!-- ITALIANO -->
 <div id="lang-it" class="lang-content active">
-<p><strong>Data:</strong> 2025-04-10</p>
-<h3>Ingredienti</h3>
-<h4>Per l'impasto:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Pizza con Farina di Carrube e Pomodoro</h2>
+<p class="recipe-date">📅 10 Aprile 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredienti</h3>
 <ul>
 <li>250 g di farina di carrube</li>
 <li>150 ml di acqua tiepida</li>
@@ -91,9 +95,6 @@ function showLang(lang) {
 <li>1 cucchiaino di zucchero</li>
 <li>1 cucchiaino di sale</li>
 <li>2 cucchiai di olio extravergine d'oliva</li>
-</ul>
-<h4>Per la farcitura:</h4>
-<ul>
 <li>200 g di pomodoro passato</li>
 <li>2 cucchiai di concentrato di pomodoro</li>
 <li>1 spicchio d'aglio (facoltativo)</li>
@@ -101,269 +102,230 @@ function showLang(lang) {
 <li>Origano secco q.b.</li>
 <li>Mozzarella (o alternativa vegana) a piacere</li>
 <li>Basilico fresco per guarnire</li>
-</ul>
-<h3>Istruzioni</h3>
-<h4>Preparazione dell'impasto:</h4>
-<p>1. In una ciotola, sciogliere il lievito di birra secco e lo zucchero nell'acqua tiepida. Lascia riposare per circa 10 minuti, finché non si forma una schiuma.</p>
-<p>2. In un'altra ciotola, mescolare la farina di carrube e il sale.</p>
-<p>3. Aggiungere il mix di lievito e olio alla farina e impastare fino a ottenere un composto liscio e omogeneo. Se l'impasto risulta troppo appiccicoso, aggiungere un po' di farina.</p>
-<p>4. Formare una palla e lasciarla lievitare in un luogo caldo per circa 1 ora, coperta con un canovaccio.</p>
-<h4>Preparazione della salsa:</h4>
-<p>1. In una padella, scaldare un filo d'olio e, se desiderato, soffriggere lo spicchio d'aglio tritato per qualche minuto.</p>
-<p>2. Aggiungere il pomodoro passato e il concentrato di pomodoro. Mescolare bene e cuocere a fuoco medio per circa 10-15 minuti, fino a quando la salsa si addensa. Aggiungere sale, pepe e origano a piacere.</p>
-<h4>Assemblaggio della pizza:</h4>
-<p>1. Preriscaldare il forno a 220°C.</p>
-<p>2. Stendere l'impasto lievitato su una teglia foderata con carta da forno, formando un disco.</p>
-<p>3. Distribuire uniformemente la salsa di pomodoro sulla base.</p>
-<p>4. Aggiungere la mozzarella a pezzetti sopra la salsa.</p>
-<p>5. Infornare per 15-20 minuti, fino a quando la pizza è dorata e croccante.</p>
-<h4>Servizio:</h4>
-<p>1. Sfornare la pizza e guarnire con basilico fresco.</p>
-<p>2. Lasciare raffreddare leggermente prima di tagliare e servire.</p>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparazione</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Passo</strong>: In una ciotola, sciogliere il lievito di birra secco e lo zucchero nell'acqua tiepida. Lascia riposare per circa 10 minuti, finché non si forma una schiuma.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Passo</strong>: In un'altra ciotola, mescolare la farina di carrube e il sale.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Passo</strong>: Aggiungere il mix di lievito e olio alla farina e impastare fino a ottenere un composto liscio e omogeneo. Se l'impasto risulta troppo appiccicoso, aggiungere un po' di farina.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Passo</strong>: Formare una palla e lasciarla lievitare in un luogo caldo per circa 1 ora, coperta con un canovaccio.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Passo</strong>: In una padella, scaldare un filo d'olio e, se desiderato, soffriggere lo spicchio d'aglio tritato per qualche minuto.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Passo</strong>: Aggiungere il pomodoro passato e il concentrato di pomodoro. Mescolare bene e cuocere a fuoco medio per circa 10-15 minuti, fino a quando la salsa si addensa. Aggiungere sale, pepe e origano a piacere.</div></div>
+<div class="step"><div class="step-num">7</div><div class="step-text"><strong>Passo</strong>: Preriscaldare il forno a 220°C.</div></div>
+<div class="step"><div class="step-num">8</div><div class="step-text"><strong>Passo</strong>: Stendere l'impasto lievitato su una teglia foderata con carta da forno, formando un disco.</div></div>
+<div class="step"><div class="step-num">9</div><div class="step-text"><strong>Passo</strong>: Distribuire uniformemente la salsa di pomodoro sulla base.</div></div>
+<div class="step"><div class="step-num">10</div><div class="step-text"><strong>Passo</strong>: Aggiungere la mozzarella a pezzetti sopra la salsa.</div></div>
+<div class="step"><div class="step-num">11</div><div class="step-text"><strong>Passo</strong>: Infornare per 15-20 minuti, fino a quando la pizza è dorata e croccante.</div></div>
+<div class="step"><div class="step-num">12</div><div class="step-text"><strong>Passo</strong>: Sfornare la pizza e guarnire con basilico fresco.</div></div>
+<div class="step"><div class="step-num">13</div><div class="step-text"><strong>Passo</strong>: Lasciare raffreddare leggermente prima di tagliare e servire.</div></div>
 </div>
+<div class="tip-box"><h4>💡 Suggerimento</h4><p>La farina di carrube dà un colore bruno e un sapore leggermente dolce alla pizza. Croccante e nutriente.</p></div>
+</div></div>
 
+<!-- ENGLISH -->
 <div id="lang-en" class="lang-content">
-<p><strong>Date:</strong> 2025-04-10</p>
-<p><em>English translation coming soon...</em></p>
-<h3>Ingredienti</h3>
-<h4>Per l'impasto:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Pizza with Carob Flour and Tomato</h2>
+<p class="recipe-date">📅 April 10, 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredients</h3>
 <ul>
-<li>250 g di farina di carrube</li>
-<li>150 ml di acqua tiepida</li>
-<li>5 g di lievito di birra secco</li>
-<li>1 cucchiaino di zucchero</li>
-<li>1 cucchiaino di sale</li>
-<li>2 cucchiai di olio extravergine d'oliva</li>
-</ul>
-<h4>Per la farcitura:</h4>
-<ul>
-<li>200 g di pomodoro passato</li>
-<li>2 cucchiai di concentrato di pomodoro</li>
-<li>1 spicchio d'aglio (facoltativo)</li>
-<li>Sale e pepe q.b.</li>
-<li>Origano secco q.b.</li>
-<li>Mozzarella (o alternativa vegana) a piacere</li>
-<li>Basilico fresco per guarnire</li>
-</ul>
-<h3>Istruzioni</h3>
-<h4>Preparazione dell'impasto:</h4>
-<p>1. In una ciotola, sciogliere il lievito di birra secco e lo zucchero nell'acqua tiepida. Lascia riposare per circa 10 minuti, finché non si forma una schiuma.</p>
-<p>2. In un'altra ciotola, mescolare la farina di carrube e il sale.</p>
-<p>3. Aggiungere il mix di lievito e olio alla farina e impastare fino a ottenere un composto liscio e omogeneo. Se l'impasto risulta troppo appiccicoso, aggiungere un po' di farina.</p>
-<p>4. Formare una palla e lasciarla lievitare in un luogo caldo per circa 1 ora, coperta con un canovaccio.</p>
-<h4>Preparazione della salsa:</h4>
-<p>1. In una padella, scaldare un filo d'olio e, se desiderato, soffriggere lo spicchio d'aglio tritato per qualche minuto.</p>
-<p>2. Aggiungere il pomodoro passato e il concentrato di pomodoro. Mescolare bene e cuocere a fuoco medio per circa 10-15 minuti, fino a quando la salsa si addensa. Aggiungere sale, pepe e origano a piacere.</p>
-<h4>Assemblaggio della pizza:</h4>
-<p>1. Preriscaldare il forno a 220°C.</p>
-<p>2. Stendere l'impasto lievitato su una teglia foderata con carta da forno, formando un disco.</p>
-<p>3. Distribuire uniformemente la salsa di pomodoro sulla base.</p>
-<p>4. Aggiungere la mozzarella a pezzetti sopra la salsa.</p>
-<p>5. Infornare per 15-20 minuti, fino a quando la pizza è dorata e croccante.</p>
-<h4>Servizio:</h4>
-<p>1. Sfornare la pizza e guarnire con basilico fresco.</p>
-<p>2. Lasciare raffreddare leggermente prima di tagliare e servire.</p>
+<li>250 g of carob flour</li>
+<li>150 ml of warm water</li>
+<li>5 g of dry brewer's yeast</li>
+<li>1 teaspoon of sugar</li>
+<li>1 teaspoon of salt</li>
+<li>2 tablespoons extra virgin olive oil</li>
+<li>200 g of pureed tomatoes</li>
+<li>2 tablespoons of tomato paste</li>
+<li>1 clove of garlic (optional)</li>
+<li>Salt and pepper to taste</li>
+<li>Dried oregano to taste</li>
+<li>Mozzarella (or vegan alternative) to taste</li>
+<li>Fresh basil for garnish</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparation</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Over</strong>: In a bowl, dissolve the dry brewer's yeast and the sugar in the warm water. Let it rest for about 10 minutes, until a foam forms.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Over</strong>: In another bowl, mix the carob flour and salt.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Over</strong>: Add the yeast and oil mix to the flour and knead until the mixture is smooth and homogeneous. If the dough is too sticky, add a little flour.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Over</strong>: Form a ball and let it rise in a warm place for about 1 hour, covered with a cloth.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Over</strong>: In a pan, heat a drizzle of oil and, if desired, fry the chopped garlic clove for a few minutes.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Over</strong>: Add the pureed tomato and tomato paste. Mix well and cook over medium heat for about 10-15 minutes, until the sauce thickens. Add salt, pepper and oregano to taste.</div></div>
+<div class="step"><div class="step-num">7</div><div class="step-text"><strong>Over</strong>: Preheat the oven to 220°C.</div></div>
+<div class="step"><div class="step-num">8</div><div class="step-text"><strong>Over</strong>: Spread the leavened dough on a baking tray lined with baking paper, forming a disc.</div></div>
+<div class="step"><div class="step-num">9</div><div class="step-text"><strong>Over</strong>: Distribute the tomato sauce evenly over the base.</div></div>
+<div class="step"><div class="step-num">10</div><div class="step-text"><strong>Over</strong>: Add the shredded mozzarella on top of the sauce.</div></div>
+<div class="step"><div class="step-num">11</div><div class="step-text"><strong>Over</strong>: Bake for 15-20 minutes, until the pizza is golden and crispy.</div></div>
+<div class="step"><div class="step-num">12</div><div class="step-text"><strong>Over</strong>: Remove the pizza from the oven and garnish with fresh basil.</div></div>
+<div class="step"><div class="step-num">13</div><div class="step-text"><strong>Over</strong>: Leave to cool slightly before cutting and serving.</div></div>
 </div>
+<div class="tip-box"><h4>💡 Tip</h4><p>Carob flour gives a brown color and a slightly sweet flavor to pizza. Crunchy and nutritious.</p></div>
+</div></div>
 
+<!-- SPANISH -->
 <div id="lang-es" class="lang-content">
-<p><strong>Fecha:</strong> 2025-04-10</p>
-<p><em>Traduccion al espanol proximamente...</em></p>
-<h3>Ingredienti</h3>
-<h4>Per l'impasto:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Pizza con Harina de Algarroba y Tomate</h2>
+<p class="recipe-date">📅 10 de abril de 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li>250 g di farina di carrube</li>
-<li>150 ml di acqua tiepida</li>
-<li>5 g di lievito di birra secco</li>
-<li>1 cucchiaino di zucchero</li>
-<li>1 cucchiaino di sale</li>
-<li>2 cucchiai di olio extravergine d'oliva</li>
-</ul>
-<h4>Per la farcitura:</h4>
-<ul>
-<li>200 g di pomodoro passato</li>
-<li>2 cucchiai di concentrato di pomodoro</li>
-<li>1 spicchio d'aglio (facoltativo)</li>
-<li>Sale e pepe q.b.</li>
-<li>Origano secco q.b.</li>
-<li>Mozzarella (o alternativa vegana) a piacere</li>
-<li>Basilico fresco per guarnire</li>
-</ul>
-<h3>Istruzioni</h3>
-<h4>Preparazione dell'impasto:</h4>
-<p>1. In una ciotola, sciogliere il lievito di birra secco e lo zucchero nell'acqua tiepida. Lascia riposare per circa 10 minuti, finché non si forma una schiuma.</p>
-<p>2. In un'altra ciotola, mescolare la farina di carrube e il sale.</p>
-<p>3. Aggiungere il mix di lievito e olio alla farina e impastare fino a ottenere un composto liscio e omogeneo. Se l'impasto risulta troppo appiccicoso, aggiungere un po' di farina.</p>
-<p>4. Formare una palla e lasciarla lievitare in un luogo caldo per circa 1 ora, coperta con un canovaccio.</p>
-<h4>Preparazione della salsa:</h4>
-<p>1. In una padella, scaldare un filo d'olio e, se desiderato, soffriggere lo spicchio d'aglio tritato per qualche minuto.</p>
-<p>2. Aggiungere il pomodoro passato e il concentrato di pomodoro. Mescolare bene e cuocere a fuoco medio per circa 10-15 minuti, fino a quando la salsa si addensa. Aggiungere sale, pepe e origano a piacere.</p>
-<h4>Assemblaggio della pizza:</h4>
-<p>1. Preriscaldare il forno a 220°C.</p>
-<p>2. Stendere l'impasto lievitato su una teglia foderata con carta da forno, formando un disco.</p>
-<p>3. Distribuire uniformemente la salsa di pomodoro sulla base.</p>
-<p>4. Aggiungere la mozzarella a pezzetti sopra la salsa.</p>
-<p>5. Infornare per 15-20 minuti, fino a quando la pizza è dorata e croccante.</p>
-<h4>Servizio:</h4>
-<p>1. Sfornare la pizza e guarnire con basilico fresco.</p>
-<p>2. Lasciare raffreddare leggermente prima di tagliare e servire.</p>
+<li>250 g de harina de algarroba</li>
+<li>150 ml de agua tibia</li>
+<li>5 g de levadura de cerveza seca</li>
+<li>1 cucharadita de azúcar</li>
+<li>1 cucharadita de sal</li>
+<li>2 cucharadas de aceite de oliva virgen extra</li>
+<li>200 g de puré de tomates</li>
+<li>2 cucharadas de pasta de tomate</li>
+<li>1 diente de ajo (opcional)</li>
+<li>Sal y pimienta al gusto</li>
+<li>Orégano seco al gusto</li>
+<li>Mozzarella (o alternativa vegana) al gusto</li>
+<li>Albahaca fresca para decorar</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparación</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Más</strong>: En un bol disolver la levadura de cerveza seca y el azúcar en el agua tibia. Déjalo reposar unos 10 minutos, hasta que se forme una espuma.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Más</strong>: En otro bol mezclar la harina de algarroba y la sal.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Más</strong>: Agrega la mezcla de levadura y aceite a la harina y amasa hasta que la mezcla esté suave y homogénea. Si la masa queda demasiado pegajosa, añade un poco de harina.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Más</strong>: Forma una bola y déjala reposar en un lugar cálido durante 1 hora aproximadamente, tapada con un paño.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Más</strong>: En una sartén calentar un chorrito de aceite y, si se desea, sofreír unos minutos el diente de ajo picado.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Más</strong>: Agrega el puré de tomate y la pasta de tomate. Mezclar bien y cocinar a fuego medio durante unos 10-15 minutos, hasta que la salsa espese. Agrega sal, pimienta y orégano al gusto.</div></div>
+<div class="step"><div class="step-num">7</div><div class="step-text"><strong>Más</strong>: Precalienta el horno a 220°C.</div></div>
+<div class="step"><div class="step-num">8</div><div class="step-text"><strong>Más</strong>: Extender la masa leudada sobre una bandeja de horno forrada con papel de horno formando un disco.</div></div>
+<div class="step"><div class="step-num">9</div><div class="step-text"><strong>Más</strong>: Distribuye la salsa de tomate uniformemente sobre la base.</div></div>
+<div class="step"><div class="step-num">10</div><div class="step-text"><strong>Más</strong>: Agrega la mozzarella rallada encima de la salsa.</div></div>
+<div class="step"><div class="step-num">11</div><div class="step-text"><strong>Más</strong>: Hornee durante 15-20 minutos, hasta que la pizza esté dorada y crujiente.</div></div>
+<div class="step"><div class="step-num">12</div><div class="step-text"><strong>Más</strong>: Retire la pizza del horno y decore con albahaca fresca.</div></div>
+<div class="step"><div class="step-num">13</div><div class="step-text"><strong>Más</strong>: Dejar enfriar un poco antes de cortar y servir.</div></div>
 </div>
+<div class="tip-box"><h4>💡 Consejo</h4><p>La harina de algarroba le da un color marrón y un sabor ligeramente dulce a la pizza. Crujientes y nutritivos.</p></div>
+</div></div>
 
+<!-- PORTUGUESE -->
 <div id="lang-pt" class="lang-content">
-<p><strong>Data:</strong> 2025-04-10</p>
-<p><em>Traducao em portugues em breve...</em></p>
-<h3>Ingredienti</h3>
-<h4>Per l'impasto:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Pizza com Farinha de Alfarroba e Tomate</h2>
+<p class="recipe-date">📅 10 de abril de 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li>250 g di farina di carrube</li>
-<li>150 ml di acqua tiepida</li>
-<li>5 g di lievito di birra secco</li>
-<li>1 cucchiaino di zucchero</li>
-<li>1 cucchiaino di sale</li>
-<li>2 cucchiai di olio extravergine d'oliva</li>
-</ul>
-<h4>Per la farcitura:</h4>
-<ul>
-<li>200 g di pomodoro passato</li>
-<li>2 cucchiai di concentrato di pomodoro</li>
-<li>1 spicchio d'aglio (facoltativo)</li>
-<li>Sale e pepe q.b.</li>
-<li>Origano secco q.b.</li>
-<li>Mozzarella (o alternativa vegana) a piacere</li>
-<li>Basilico fresco per guarnire</li>
-</ul>
-<h3>Istruzioni</h3>
-<h4>Preparazione dell'impasto:</h4>
-<p>1. In una ciotola, sciogliere il lievito di birra secco e lo zucchero nell'acqua tiepida. Lascia riposare per circa 10 minuti, finché non si forma una schiuma.</p>
-<p>2. In un'altra ciotola, mescolare la farina di carrube e il sale.</p>
-<p>3. Aggiungere il mix di lievito e olio alla farina e impastare fino a ottenere un composto liscio e omogeneo. Se l'impasto risulta troppo appiccicoso, aggiungere un po' di farina.</p>
-<p>4. Formare una palla e lasciarla lievitare in un luogo caldo per circa 1 ora, coperta con un canovaccio.</p>
-<h4>Preparazione della salsa:</h4>
-<p>1. In una padella, scaldare un filo d'olio e, se desiderato, soffriggere lo spicchio d'aglio tritato per qualche minuto.</p>
-<p>2. Aggiungere il pomodoro passato e il concentrato di pomodoro. Mescolare bene e cuocere a fuoco medio per circa 10-15 minuti, fino a quando la salsa si addensa. Aggiungere sale, pepe e origano a piacere.</p>
-<h4>Assemblaggio della pizza:</h4>
-<p>1. Preriscaldare il forno a 220°C.</p>
-<p>2. Stendere l'impasto lievitato su una teglia foderata con carta da forno, formando un disco.</p>
-<p>3. Distribuire uniformemente la salsa di pomodoro sulla base.</p>
-<p>4. Aggiungere la mozzarella a pezzetti sopra la salsa.</p>
-<p>5. Infornare per 15-20 minuti, fino a quando la pizza è dorata e croccante.</p>
-<h4>Servizio:</h4>
-<p>1. Sfornare la pizza e guarnire con basilico fresco.</p>
-<p>2. Lasciare raffreddare leggermente prima di tagliare e servire.</p>
+<li>250 g de farinha de alfarroba</li>
+<li>150 ml de água morna</li>
+<li>5 g de fermento de cerveja seco</li>
+<li>1 colher de chá de açúcar</li>
+<li>1 colher de chá de sal</li>
+<li>2 colheres de sopa de azeite extra virgem</li>
+<li>200 g de purê de tomate</li>
+<li>2 colheres de sopa de pasta de tomate</li>
+<li>1 dente de alho (opcional)</li>
+<li>Sal e pimenta a gosto</li>
+<li>Orégano seco a gosto</li>
+<li>Mussarela (ou alternativa vegana) a gosto</li>
+<li>Manjericão fresco para enfeitar</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparação</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Acabou</strong>: Em uma tigela, dissolva o fermento de cerveja seco e o açúcar na água morna. Deixe descansar por cerca de 10 minutos, até formar uma espuma.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Acabou</strong>: Em outra tigela, misture a farinha de alfarroba e o sal.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Acabou</strong>: Adicione a mistura de fermento e óleo à farinha e amasse até obter uma mistura lisa e homogênea. Se a massa ficar muito pegajosa, adicione um pouco de farinha.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Acabou</strong>: Forme uma bola e deixe crescer em local aquecido por cerca de 1 hora, coberto com um pano.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Acabou</strong>: Numa frigideira aqueça um fio de azeite e, se desejar, frite o dente de alho picado durante alguns minutos.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Acabou</strong>: Adicione o purê de tomate e a pasta de tomate. Misture bem e cozinhe em fogo médio por cerca de 10-15 minutos, até o molho engrossar. Adicione sal, pimenta e orégano a gosto.</div></div>
+<div class="step"><div class="step-num">7</div><div class="step-text"><strong>Acabou</strong>: Pré-aqueça o forno a 220°C.</div></div>
+<div class="step"><div class="step-num">8</div><div class="step-text"><strong>Acabou</strong>: Espalhe a massa levedada num tabuleiro forrado com papel manteiga, formando um disco.</div></div>
+<div class="step"><div class="step-num">9</div><div class="step-text"><strong>Acabou</strong>: Distribua o molho de tomate uniformemente sobre a base.</div></div>
+<div class="step"><div class="step-num">10</div><div class="step-text"><strong>Acabou</strong>: Adicione a mussarela ralada por cima do molho.</div></div>
+<div class="step"><div class="step-num">11</div><div class="step-text"><strong>Acabou</strong>: Asse por 15-20 minutos, até a pizza ficar dourada e crocante.</div></div>
+<div class="step"><div class="step-num">12</div><div class="step-text"><strong>Acabou</strong>: Retire a pizza do forno e decore com manjericão fresco.</div></div>
+<div class="step"><div class="step-num">13</div><div class="step-text"><strong>Acabou</strong>: Deixe esfriar um pouco antes de cortar e servir.</div></div>
 </div>
+<div class="tip-box"><h4>💡 Sugestão</h4><p>A farinha de alfarroba confere uma cor marrom e um sabor levemente adocicado à pizza. Crocante e nutritivo.</p></div>
+</div></div>
 
+<!-- GERMAN -->
 <div id="lang-de" class="lang-content">
-<p><strong>Datum:</strong> 2025-04-10</p>
-<p><em>Deutsche Uebersetzung folgt bald...</em></p>
-<h3>Ingredienti</h3>
-<h4>Per l'impasto:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Pizza mit Johannisbrotmehl und Tomate</h2>
+<p class="recipe-date">📅 10. April 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Zutaten</h3>
 <ul>
-<li>250 g di farina di carrube</li>
-<li>150 ml di acqua tiepida</li>
-<li>5 g di lievito di birra secco</li>
-<li>1 cucchiaino di zucchero</li>
-<li>1 cucchiaino di sale</li>
-<li>2 cucchiai di olio extravergine d'oliva</li>
-</ul>
-<h4>Per la farcitura:</h4>
-<ul>
-<li>200 g di pomodoro passato</li>
-<li>2 cucchiai di concentrato di pomodoro</li>
-<li>1 spicchio d'aglio (facoltativo)</li>
-<li>Sale e pepe q.b.</li>
-<li>Origano secco q.b.</li>
-<li>Mozzarella (o alternativa vegana) a piacere</li>
-<li>Basilico fresco per guarnire</li>
-</ul>
-<h3>Istruzioni</h3>
-<h4>Preparazione dell'impasto:</h4>
-<p>1. In una ciotola, sciogliere il lievito di birra secco e lo zucchero nell'acqua tiepida. Lascia riposare per circa 10 minuti, finché non si forma una schiuma.</p>
-<p>2. In un'altra ciotola, mescolare la farina di carrube e il sale.</p>
-<p>3. Aggiungere il mix di lievito e olio alla farina e impastare fino a ottenere un composto liscio e omogeneo. Se l'impasto risulta troppo appiccicoso, aggiungere un po' di farina.</p>
-<p>4. Formare una palla e lasciarla lievitare in un luogo caldo per circa 1 ora, coperta con un canovaccio.</p>
-<h4>Preparazione della salsa:</h4>
-<p>1. In una padella, scaldare un filo d'olio e, se desiderato, soffriggere lo spicchio d'aglio tritato per qualche minuto.</p>
-<p>2. Aggiungere il pomodoro passato e il concentrato di pomodoro. Mescolare bene e cuocere a fuoco medio per circa 10-15 minuti, fino a quando la salsa si addensa. Aggiungere sale, pepe e origano a piacere.</p>
-<h4>Assemblaggio della pizza:</h4>
-<p>1. Preriscaldare il forno a 220°C.</p>
-<p>2. Stendere l'impasto lievitato su una teglia foderata con carta da forno, formando un disco.</p>
-<p>3. Distribuire uniformemente la salsa di pomodoro sulla base.</p>
-<p>4. Aggiungere la mozzarella a pezzetti sopra la salsa.</p>
-<p>5. Infornare per 15-20 minuti, fino a quando la pizza è dorata e croccante.</p>
-<h4>Servizio:</h4>
-<p>1. Sfornare la pizza e guarnire con basilico fresco.</p>
-<p>2. Lasciare raffreddare leggermente prima di tagliare e servire.</p>
+<li>250 g Johannisbrotmehl</li>
+<li>150 ml warmes Wasser</li>
+<li>5 g trockene Bierhefe</li>
+<li>1 Teelöffel Zucker</li>
+<li>1 Teelöffel Salz</li>
+<li>2 Esslöffel natives Olivenöl extra</li>
+<li>200 g pürierte Tomaten</li>
+<li>2 Esslöffel Tomatenmark</li>
+<li>1 Knoblauchzehe (optional)</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Getrockneter Oregano nach Geschmack</li>
+<li>Mozzarella (oder vegane Alternative) nach Geschmack</li>
+<li>Frischer Basilikum zum Garnieren</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Zubereitung</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Vorbei</strong>: In einer Schüssel die trockene Bierhefe und den Zucker im warmen Wasser auflösen. Etwa 10 Minuten ruhen lassen, bis sich ein Schaum bildet.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Vorbei</strong>: In einer anderen Schüssel Johannisbrotmehl und Salz vermischen.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Vorbei</strong>: Die Hefe-Öl-Mischung zum Mehl geben und verkneten, bis die Mischung glatt und homogen ist. Wenn der Teig zu klebrig ist, etwas Mehl hinzufügen.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Vorbei</strong>: Eine Kugel formen und an einem warmen Ort, abgedeckt mit einem Tuch, etwa 1 Stunde gehen lassen.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Vorbei</strong>: In einer Pfanne einen Schuss Öl erhitzen und die gehackte Knoblauchzehe nach Belieben einige Minuten anbraten.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Vorbei</strong>: Die pürierte Tomate und das Tomatenmark hinzufügen. Gut vermischen und bei mittlerer Hitze etwa 10–15 Minuten kochen, bis die Sauce eindickt. Mit Salz, Pfeffer und Oregano abschmecken.</div></div>
+<div class="step"><div class="step-num">7</div><div class="step-text"><strong>Vorbei</strong>: Den Backofen auf 220°C vorheizen.</div></div>
+<div class="step"><div class="step-num">8</div><div class="step-text"><strong>Vorbei</strong>: Den Hefeteig auf einem mit Backpapier ausgelegten Backblech verteilen und eine Scheibe formen.</div></div>
+<div class="step"><div class="step-num">9</div><div class="step-text"><strong>Vorbei</strong>: Die Tomatensauce gleichmäßig auf dem Boden verteilen.</div></div>
+<div class="step"><div class="step-num">10</div><div class="step-text"><strong>Vorbei</strong>: Den geriebenen Mozzarella über die Soße geben.</div></div>
+<div class="step"><div class="step-num">11</div><div class="step-text"><strong>Vorbei</strong>: 15–20 Minuten backen, bis die Pizza goldbraun und knusprig ist.</div></div>
+<div class="step"><div class="step-num">12</div><div class="step-text"><strong>Vorbei</strong>: Die Pizza aus dem Ofen nehmen und mit frischem Basilikum garnieren.</div></div>
+<div class="step"><div class="step-num">13</div><div class="step-text"><strong>Vorbei</strong>: Vor dem Schneiden und Servieren etwas abkühlen lassen.</div></div>
 </div>
+<div class="tip-box"><h4>💡 Tipp</h4><p>Johannisbrotmehl verleiht der Pizza eine braune Farbe und einen leicht süßlichen Geschmack. Knusprig und nahrhaft.</p></div>
+</div></div>
 
+<!-- GREEK -->
 <div id="lang-el" class="lang-content">
-<p><strong>Hmerominia:</strong> 2025-04-10</p>
-<p><em>E elliniki metafrasi erhetai syntoma...</em></p>
-<h3>Ingredienti</h3>
-<h4>Per l'impasto:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Πίτσα με χαρουπάλευρο και ντομάτα</h2>
+<p class="recipe-date">📅 10 Απριλίου 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Υλικά</h3>
 <ul>
-<li>250 g di farina di carrube</li>
-<li>150 ml di acqua tiepida</li>
-<li>5 g di lievito di birra secco</li>
-<li>1 cucchiaino di zucchero</li>
-<li>1 cucchiaino di sale</li>
-<li>2 cucchiai di olio extravergine d'oliva</li>
-</ul>
-<h4>Per la farcitura:</h4>
-<ul>
-<li>200 g di pomodoro passato</li>
-<li>2 cucchiai di concentrato di pomodoro</li>
-<li>1 spicchio d'aglio (facoltativo)</li>
-<li>Sale e pepe q.b.</li>
-<li>Origano secco q.b.</li>
-<li>Mozzarella (o alternativa vegana) a piacere</li>
-<li>Basilico fresco per guarnire</li>
-</ul>
-<h3>Istruzioni</h3>
-<h4>Preparazione dell'impasto:</h4>
-<p>1. In una ciotola, sciogliere il lievito di birra secco e lo zucchero nell'acqua tiepida. Lascia riposare per circa 10 minuti, finché non si forma una schiuma.</p>
-<p>2. In un'altra ciotola, mescolare la farina di carrube e il sale.</p>
-<p>3. Aggiungere il mix di lievito e olio alla farina e impastare fino a ottenere un composto liscio e omogeneo. Se l'impasto risulta troppo appiccicoso, aggiungere un po' di farina.</p>
-<p>4. Formare una palla e lasciarla lievitare in un luogo caldo per circa 1 ora, coperta con un canovaccio.</p>
-<h4>Preparazione della salsa:</h4>
-<p>1. In una padella, scaldare un filo d'olio e, se desiderato, soffriggere lo spicchio d'aglio tritato per qualche minuto.</p>
-<p>2. Aggiungere il pomodoro passato e il concentrato di pomodoro. Mescolare bene e cuocere a fuoco medio per circa 10-15 minuti, fino a quando la salsa si addensa. Aggiungere sale, pepe e origano a piacere.</p>
-<h4>Assemblaggio della pizza:</h4>
-<p>1. Preriscaldare il forno a 220°C.</p>
-<p>2. Stendere l'impasto lievitato su una teglia foderata con carta da forno, formando un disco.</p>
-<p>3. Distribuire uniformemente la salsa di pomodoro sulla base.</p>
-<p>4. Aggiungere la mozzarella a pezzetti sopra la salsa.</p>
-<p>5. Infornare per 15-20 minuti, fino a quando la pizza è dorata e croccante.</p>
-<h4>Servizio:</h4>
-<p>1. Sfornare la pizza e guarnire con basilico fresco.</p>
-<p>2. Lasciare raffreddare leggermente prima di tagliare e servire.</p>
+<li>250 γρ χαρουπάλευρο</li>
+<li>150 ml ζεστό νερό</li>
+<li>5 g ξηρή μαγιά μπύρας</li>
+<li>1 κουταλάκι του γλυκού ζάχαρη</li>
+<li>1 κουταλάκι του γλυκού αλάτι</li>
+<li>2 κουταλιές της σούπας εξαιρετικό παρθένο ελαιόλαδο</li>
+<li>200 γραμμάρια πολτοποιημένες ντομάτες</li>
+<li>2 κουταλιές της σούπας πελτέ ντομάτας</li>
+<li>1 σκελίδα σκόρδο (προαιρετικά)</li>
+<li>Αλάτι και πιπέρι για γεύση</li>
+<li>Αποξηραμένη ρίγανη για γεύση</li>
+<li>Μοτσαρέλα (ή vegan εναλλακτική) για γεύση</li>
+<li>Φρέσκος βασιλικός για γαρνίρισμα</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Εκτέλεση</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Πάνω</strong>: Σε ένα μπολ διαλύουμε την ξηρή μαγιά μπύρας και τη ζάχαρη στο χλιαρό νερό. Αφήστε το να ξεκουραστεί για περίπου 10 λεπτά, μέχρι να σχηματιστεί ένας αφρός.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Πάνω</strong>: Σε ένα άλλο μπολ ανακατεύουμε το χαρουπάλευρο και το αλάτι.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Πάνω</strong>: Προσθέστε τη μαγιά και το λάδι στο αλεύρι και ζυμώστε μέχρι το μείγμα να γίνει λείο και ομοιογενές. Εάν η ζύμη είναι πολύ κολλώδης, προσθέστε λίγο αλεύρι.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Πάνω</strong>: Σχηματίζουμε μια μπάλα και την αφήνουμε να φουσκώσει σε ζεστό μέρος για 1 ώρα περίπου, σκεπασμένη με ένα πανί.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Πάνω</strong>: Σε ένα τηγάνι ζεσταίνουμε λίγο λάδι και αν θέλουμε τηγανίζουμε την ψιλοκομμένη σκελίδα σκόρδου για λίγα λεπτά.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Πάνω</strong>: Προσθέστε τον πολτό και τον πολτό ντομάτας. Ανακατεύουμε καλά και βράζουμε σε μέτρια φωτιά για περίπου 10-15 λεπτά, μέχρι να δέσει η σάλτσα. Προσθέστε αλάτι, πιπέρι και ρίγανη κατά βούληση.</div></div>
+<div class="step"><div class="step-num">7</div><div class="step-text"><strong>Πάνω</strong>: Προθερμαίνουμε τον φούρνο στους 220°C.</div></div>
+<div class="step"><div class="step-num">8</div><div class="step-text"><strong>Πάνω</strong>: Απλώνουμε τη ζύμη που έχουμε ζυμώσει σε ένα ταψί στρωμένο με χαρτί ψησίματος, σχηματίζοντας ένα δίσκο.</div></div>
+<div class="step"><div class="step-num">9</div><div class="step-text"><strong>Πάνω</strong>: Μοιράζουμε ομοιόμορφα τη σάλτσα ντομάτας στη βάση.</div></div>
+<div class="step"><div class="step-num">10</div><div class="step-text"><strong>Πάνω</strong>: Προσθέστε την τριμμένη μοτσαρέλα πάνω από τη σάλτσα.</div></div>
+<div class="step"><div class="step-num">11</div><div class="step-text"><strong>Πάνω</strong>: Ψήνουμε για 15-20 λεπτά, μέχρι η πίτσα να ροδίσει και να γίνει τραγανή.</div></div>
+<div class="step"><div class="step-num">12</div><div class="step-text"><strong>Πάνω</strong>: Βγάζουμε την πίτσα από το φούρνο και γαρνίρουμε με φρέσκο βασιλικό.</div></div>
+<div class="step"><div class="step-num">13</div><div class="step-text"><strong>Πάνω</strong>: Αφήνουμε να κρυώσει λίγο πριν κόψουμε και σερβίρουμε.</div></div>
 </div>
-</div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+<div class="tip-box"><h4>💡 Συμβουλή</h4><p>Το χαρουπάλευρο δίνει ένα καφέ χρώμα και μια ελαφρώς γλυκιά γεύση στην πίτσα. Τραγανό και θρεπτικό.</p></div>
+</div></div>
 
 <div class="footer">
-<p>Leguminando - Ricette di stagione a base di legumi</p>
-<p>"Tutto e iniziato con hummus di ceci..."</p>
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<p>"Tutto è iniziato con hummus di ceci..."</p>
 </div>
-<div data-legumi="ceci,carrube" style="display:none;"></div>
-
-<script>
-function toggleFav(path, title) {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    if (favs[path]) { delete favs[path]; }
-    else { favs[path] = title; }
-    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
-    updateFavIcons();
-}
-function updateFavIcons() {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    document.querySelectorAll('.fav-btn').forEach(btn => {
-        let p = btn.getAttribute('data-path');
-        btn.textContent = favs[p] ? '❤️' : '🤍';
-    });
-}
-document.addEventListener('DOMContentLoaded', updateFavIcons);
-</script>
-
+</div>
 
 
 <div style="text-align:center; margin:30px 0; padding:20px;">
@@ -389,7 +351,6 @@ function condividiRicetta() {
     }
 }
 </script>
-
 
 </body>
 </html>

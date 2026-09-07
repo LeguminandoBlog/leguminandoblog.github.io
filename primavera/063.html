@@ -3,93 +3,96 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ricetta del 2025-04-08 | Leguminando</title>
+<title>Capesante su Crema di Piselli | Leguminando</title>
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://leguminandoblog.github.io/primavera/063.html">
+    <meta property="og:title" content="Capesante su Crema di Piselli">
+    <meta property="og:description" content="Ricetta su Leguminando - Capesante su Crema di Piselli">
+    <meta property="og:image" content="https://leguminandoblog.github.io/primavera/063.jpg">
+    <meta property="og:site_name" content="Leguminando">
+    <meta name="twitter:card" content="summary_large_image">
 <style>
-body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
-.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.content { background: white; padding: 30px; border-radius: 10px; }
-.content h1 { color: #8B4513; }
-.content h2 { color: #D2691E; }
-.content h3 { color: #8B4513; }
-.content ul { margin: 15px 0; padding-left: 20px; }
-.content li { margin: 8px 0; }
-.content p { margin: 12px 0; line-height: 1.6; }
-.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
-.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; background: #f8f5f0; min-height: 100vh; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+.header { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 40px 20px 30px; text-align: center; border-radius: 20px; margin-bottom: 30px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+.header h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.header .tagline { font-size: 1.2em; opacity: 0.9; font-style: italic; }
+.back-link { display: inline-block; margin: 20px 0; padding: 10px 20px; background: #8B4513; color: white; text-decoration: none; border-radius: 25px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.95em; transition: background 0.3s; }
 .back-link:hover { background: #D2691E; }
-
-.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
-.fav-bar { text-align: center; margin: 5px 0; }
-
-@media print {
-    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
-    .stats, .back-link, .badge { display: none !important; }
-    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
-    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
-    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
-    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
-}
-
-</style>
-<meta name="description" content="Ricetta del 2025-04-08">
-<meta property="og:title" content="Ricetta del 2025-04-08 | Leguminando">
-<meta property="og:description" content="Ricetta del 2025-04-08">
-<style>
-.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
-.lang-tab { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; transition: all 0.3s; }
-.lang-tab.active { background: #8B4513; color: white; }
-.lang-tab:hover:not(.active) { background: #D2691E; color: white; }
+.fav-bar { text-align: center; margin: 10px 0; }
+.fav-btn { cursor: pointer; font-size: 1.8em; user-select: none; display: inline-block; transition: transform 0.2s; }
+.fav-btn:hover { transform: scale(1.2); }
+.recipe-image { width: 100%; max-width: 700px; margin: 20px auto; display: block; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 30px 0; flex-wrap: wrap; }
+.lang-tab { padding: 10px 20px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; border-radius: 25px; cursor: pointer; font-size: 0.9em; transition: all 0.3s; }
+.lang-tab:hover { background: rgba(255,255,255,0.3); }
+.lang-tab.active { background: white; color: #c0392b; border-color: white; }
+.recipe-card { background: white; border-radius: 20px; padding: 40px; margin-bottom: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
 .lang-content { display: none; }
 .lang-content.active { display: block; }
+.recipe-title { font-size: 2.2em; color: #8B4513; margin-bottom: 10px; text-align: center; }
+.recipe-date { text-align: center; color: #666; font-size: 0.95em; margin-bottom: 25px; }
+.ingredients-box { background: linear-gradient(135deg, #fef9e7 0%, #fdebd0 100%); border-radius: 15px; padding: 25px; margin: 25px 0; border-left: 5px solid #D2691E; }
+.ingredients-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.ingredients-box ul { padding-left: 20px; }
+.ingredients-box li { margin: 8px 0; color: #5D4037; }
+.steps-box { margin: 25px 0; }
+.steps-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.step { display: flex; gap: 15px; margin: 15px 0; padding: 15px; background: #faf8f5; border-radius: 12px; align-items: flex-start; }
+.step-num { background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1em; flex-shrink: 0; }
+.step-text { flex: 1; color: #5D4037; line-height: 1.6; }
+.tip-box { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 15px; padding: 20px; margin: 25px 0; border-left: 5px solid #4caf50; }
+.tip-box h4 { color: #2e7d32; margin-bottom: 10px; }
+.tip-box p { color: #1b5e20; line-height: 1.6; }
+.footer { text-align: center; margin-top: 50px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+@media (max-width: 600px) { .header h1 { font-size: 2em; } .recipe-card { padding: 20px; } .recipe-title { font-size: 1.6em; } }
+@media print { .lang-tabs, .lang-tab, .fav-bar, .back-link { display: none !important; } body { background: white !important; } .recipe-card { box-shadow: none !important; break-inside: avoid; } }
 </style>
 <script>
-function showLang(lang) {
-    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
-    document.getElementById('lang-' + lang).classList.add('active');
-    event.target.classList.add('active');
-}
+function showLang(lang) { document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active')); document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active')); document.getElementById('lang-' + lang).classList.add('active'); event.target.classList.add('active'); }
+function toggleFav(path, title) { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); if (favs[path]) { delete favs[path]; } else { favs[path] = title; } localStorage.setItem('leguminando_favs', JSON.stringify(favs)); updateFavIcons(); }
+function updateFavIcons() { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); document.querySelectorAll('.fav-btn').forEach(btn => { let p = btn.getAttribute('data-path'); btn.textContent = favs[p] ? '❤️' : '🤍'; }); }
+document.addEventListener('DOMContentLoaded', updateFavIcons);
 </script>
 </head>
 <body>
+<div class="container">
 <div class="header">
-<h1>Leguminando</h1>
-<p>Ricette di stagione a base di legumi</p>
+<h1>🫘 Leguminando</h1>
+<p class="tagline">Ricette di stagione a base di legumi</p>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
-
+<a href="../index.html" class="back-link">← Torna alla Home</a>
 <div class="fav-bar">
-<span class="fav-btn" data-path="primavera/063.html" data-title="Ricetta del 2025-04-08" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+<span class="fav-btn" data-path="primavera/063.html" data-title="Capesante su Crema di Piselli" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
 </div>
-
-<img src="063.jpg" alt="Ricetta del 2025-04-08" class="recipe-image">
-
-<div class="content">
+<img src="063.jpg" alt="Capesante su Crema di Piselli" class="recipe-image">
 <div class="lang-tabs">
-    <button class="lang-tab active" onclick="showLang('it')">IT</button>
-    <button class="lang-tab" onclick="showLang('en')">EN</button>
-    <button class="lang-tab" onclick="showLang('es')">ES</button>
-    <button class="lang-tab" onclick="showLang('pt')">PT</button>
-    <button class="lang-tab" onclick="showLang('de')">DE</button>
-    <button class="lang-tab" onclick="showLang('el')">EL</button>
+    <button class="lang-tab active" onclick="showLang('it')">🇮🇹 IT</button>
+    <button class="lang-tab" onclick="showLang('en')">🇬🇧 EN</button>
+    <button class="lang-tab" onclick="showLang('es')">🇪🇸 ES</button>
+    <button class="lang-tab" onclick="showLang('pt')">🇵🇹 PT</button>
+    <button class="lang-tab" onclick="showLang('de')">🇩🇪 DE</button>
+    <button class="lang-tab" onclick="showLang('el')">🇬🇷 EL</button>
 </div>
 
+<!-- ITALIANO -->
 <div id="lang-it" class="lang-content active">
-<p><strong>Data:</strong> 2025-04-08</p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Capesante su Crema di Piselli</h2>
+<p class="recipe-date">📅 8 Aprile 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredienti</h3>
 <ul>
-<li><strong>Per le capesante:</strong></li>
 <li>8 capesante fresche</li>
 <li>2 cucchiai di olio d'oliva</li>
 <li>Sale q.b.</li>
 <li>Pepe nero q.b.</li>
-<li><strong>Per la crema di piselli:</strong></li>
 <li>300 g di piselli freschi o surgelati</li>
 <li>1 cipolla piccola, tritata</li>
 <li>1 patata media, pelata e tagliata a cubetti</li>
@@ -97,297 +100,184 @@ function showLang(lang) {
 <li>2 cucchiai di olio d'oliva</li>
 <li>Sale e pepe q.b.</li>
 <li>Succo di limone (facoltativo)</li>
-<li><strong>Per le foglie di cavolo verza:</strong></li>
 <li>4 foglie di cavolo verza</li>
 <li>1 spicchio d'aglio, tritato</li>
 <li>1 cucchiaio di olio d'oliva</li>
 <li>Sale q.b.</li>
-</ul>
-<h3>Preparazione</h3>
-<p>1. <strong>Crema di piselli:</strong></p>
-<ul>
-<li>In una pentola, scalda 2 cucchiai di olio d'oliva e aggiungi la cipolla tritata. Fai soffriggere fino a quando diventa trasparente.</li>
-<li>Aggiungi la patata e i piselli, poi versa il brodo vegetale. Porta a ebollizione e cuoci per circa 15-20 minuti, finché i piselli e la patata sono teneri.</li>
-<li>Frulla il tutto con un frullatore a immersione fino a ottenere una crema liscia. Aggiusta di sale, pepe e, se vuoi, aggiungi un goccio di succo di limone per dare freschezza.</li>
-</ul>
-<p>2. <strong>Foglie di cavolo verza:</strong></p>
-<ul>
-<li>Porta a ebollizione una pentola d'acqua salata e sbollenta le foglie di cavolo verza per circa 2-3 minuti. Scolale e mettile in acqua fredda per fermare la cottura.</li>
-<li>In una padella, scalda 1 cucchiaio di olio d'oliva e aggiungi l'aglio tritato. Fai soffriggere fino a doratura, poi aggiungi le foglie di cavolo verza e cuoci per circa 5 minuti, regolando di sale.</li>
-</ul>
-<p>3. <strong>Capesante:</strong></p>
-<ul>
-<li>Asciuga le capesante con carta da cucina e condisci con sale e pepe.</li>
-<li>Scalda l'olio d'oliva in una padella antiaderente a fuoco alto. Quando è ben caldo, aggiungi le capesante e scottale per circa 1-2 minuti per lato, finché non sono dorate e opache all'interno.</li>
-</ul>
-<h3>Impiattamento</h3>
-<ul>
-<li>Distribuisci la crema di piselli sul piatto, adagiando sopra le foglie di cavolo verza. Posiziona le capesante scottate sopra la crema. Puoi decorare con un filo d'olio d'oliva e, se desideri, qualche pisello fresco per un tocco di colore.</li>
-</ul>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparazione</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Passo</strong>: Crema di piselli:</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Passo</strong>: Foglie di cavolo verza:</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Passo</strong>: Capesante:</div></div>
 </div>
+<div class="tip-box"><h4>💡 Suggerimento</h4><p>Piatto elegante per cene speciali. Capesante fresche fanno la differenza: non cuocere più di 2 minuti per lato.</p></div>
+</div></div>
 
+<!-- ENGLISH -->
 <div id="lang-en" class="lang-content">
-<p><strong>Date:</strong> 2025-04-08</p>
-<p><em>English translation coming soon...</em></p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Scallops on Pea Cream</h2>
+<p class="recipe-date">📅 8 Aprile 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredients</h3>
 <ul>
-<li><strong>Per le capesante:</strong></li>
 <li>8 capesante fresche</li>
 <li>2 cucchiai di olio d'oliva</li>
 <li>Sale q.b.</li>
 <li>Pepe nero q.b.</li>
-<li><strong>Per la crema di piselli:</strong></li>
-<li>300 g di piselli freschi o surgelati</li>
-<li>1 cipolla piccola, tritata</li>
+<li>300 g of fresh or frozen peas</li>
+<li>1 small onion, chopped</li>
 <li>1 patata media, pelata e tagliata a cubetti</li>
-<li>300 ml di brodo vegetale</li>
+<li>300 ml of vegetable broth</li>
 <li>2 cucchiai di olio d'oliva</li>
 <li>Sale e pepe q.b.</li>
 <li>Succo di limone (facoltativo)</li>
-<li><strong>Per le foglie di cavolo verza:</strong></li>
-<li>4 foglie di cavolo verza</li>
-<li>1 spicchio d'aglio, tritato</li>
+<li>4 savoy cabbage leaves</li>
+<li>1 clove garlic, minced</li>
 <li>1 cucchiaio di olio d'oliva</li>
-<li>Sale q.b.</li>
-</ul>
-<h3>Preparazione</h3>
-<p>1. <strong>Crema di piselli:</strong></p>
-<ul>
-<li>In una pentola, scalda 2 cucchiai di olio d'oliva e aggiungi la cipolla tritata. Fai soffriggere fino a quando diventa trasparente.</li>
-<li>Aggiungi la patata e i piselli, poi versa il brodo vegetale. Porta a ebollizione e cuoci per circa 15-20 minuti, finché i piselli e la patata sono teneri.</li>
-<li>Frulla il tutto con un frullatore a immersione fino a ottenere una crema liscia. Aggiusta di sale, pepe e, se vuoi, aggiungi un goccio di succo di limone per dare freschezza.</li>
-</ul>
-<p>2. <strong>Foglie di cavolo verza:</strong></p>
-<ul>
-<li>Porta a ebollizione una pentola d'acqua salata e sbollenta le foglie di cavolo verza per circa 2-3 minuti. Scolale e mettile in acqua fredda per fermare la cottura.</li>
-<li>In una padella, scalda 1 cucchiaio di olio d'oliva e aggiungi l'aglio tritato. Fai soffriggere fino a doratura, poi aggiungi le foglie di cavolo verza e cuoci per circa 5 minuti, regolando di sale.</li>
-</ul>
-<p>3. <strong>Capesante:</strong></p>
-<ul>
-<li>Asciuga le capesante con carta da cucina e condisci con sale e pepe.</li>
-<li>Scalda l'olio d'oliva in una padella antiaderente a fuoco alto. Quando è ben caldo, aggiungi le capesante e scottale per circa 1-2 minuti per lato, finché non sono dorate e opache all'interno.</li>
-</ul>
-<h3>Impiattamento</h3>
-<ul>
-<li>Distribuisci la crema di piselli sul piatto, adagiando sopra le foglie di cavolo verza. Posiziona le capesante scottate sopra la crema. Puoi decorare con un filo d'olio d'oliva e, se desideri, qualche pisello fresco per un tocco di colore.</li>
-</ul>
+<li>Salt to taste</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparation</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Over</strong>: Pea cream:</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Over</strong>: Savoy cabbage leaves:</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Over</strong>: Scallops:</div></div>
 </div>
+<div class="tip-box"><h4>💡 Tip</h4><p>Elegant dish for special dinners. Fresh scallops make a difference - don't cook more than 2 minutes per side.</p></div>
+</div></div>
 
+<!-- SPANISH -->
 <div id="lang-es" class="lang-content">
-<p><strong>Fecha:</strong> 2025-04-08</p>
-<p><em>Traduccion al espanol proximamente...</em></p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Vieiras sobre Crema de Guisantes</h2>
+<p class="recipe-date">📅 8 de abril de 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li><strong>Per le capesante:</strong></li>
-<li>8 capesante fresche</li>
-<li>2 cucchiai di olio d'oliva</li>
-<li>Sale q.b.</li>
-<li>Pepe nero q.b.</li>
-<li><strong>Per la crema di piselli:</strong></li>
-<li>300 g di piselli freschi o surgelati</li>
-<li>1 cipolla piccola, tritata</li>
-<li>1 patata media, pelata e tagliata a cubetti</li>
-<li>300 ml di brodo vegetale</li>
-<li>2 cucchiai di olio d'oliva</li>
-<li>Sale e pepe q.b.</li>
-<li>Succo di limone (facoltativo)</li>
-<li><strong>Per le foglie di cavolo verza:</strong></li>
-<li>4 foglie di cavolo verza</li>
-<li>1 spicchio d'aglio, tritato</li>
-<li>1 cucchiaio di olio d'oliva</li>
-<li>Sale q.b.</li>
-</ul>
-<h3>Preparazione</h3>
-<p>1. <strong>Crema di piselli:</strong></p>
-<ul>
-<li>In una pentola, scalda 2 cucchiai di olio d'oliva e aggiungi la cipolla tritata. Fai soffriggere fino a quando diventa trasparente.</li>
-<li>Aggiungi la patata e i piselli, poi versa il brodo vegetale. Porta a ebollizione e cuoci per circa 15-20 minuti, finché i piselli e la patata sono teneri.</li>
-<li>Frulla il tutto con un frullatore a immersione fino a ottenere una crema liscia. Aggiusta di sale, pepe e, se vuoi, aggiungi un goccio di succo di limone per dare freschezza.</li>
-</ul>
-<p>2. <strong>Foglie di cavolo verza:</strong></p>
-<ul>
-<li>Porta a ebollizione una pentola d'acqua salata e sbollenta le foglie di cavolo verza per circa 2-3 minuti. Scolale e mettile in acqua fredda per fermare la cottura.</li>
-<li>In una padella, scalda 1 cucchiaio di olio d'oliva e aggiungi l'aglio tritato. Fai soffriggere fino a doratura, poi aggiungi le foglie di cavolo verza e cuoci per circa 5 minuti, regolando di sale.</li>
-</ul>
-<p>3. <strong>Capesante:</strong></p>
-<ul>
-<li>Asciuga le capesante con carta da cucina e condisci con sale e pepe.</li>
-<li>Scalda l'olio d'oliva in una padella antiaderente a fuoco alto. Quando è ben caldo, aggiungi le capesante e scottale per circa 1-2 minuti per lato, finché non sono dorate e opache all'interno.</li>
-</ul>
-<h3>Impiattamento</h3>
-<ul>
-<li>Distribuisci la crema di piselli sul piatto, adagiando sopra le foglie di cavolo verza. Posiziona le capesante scottate sopra la crema. Puoi decorare con un filo d'olio d'oliva e, se desideri, qualche pisello fresco per un tocco di colore.</li>
-</ul>
+<li>8 vieiras frescas</li>
+<li>2 cucharadas de aceite de oliva</li>
+<li>sal al gusto</li>
+<li>Pimienta negra al gusto</li>
+<li>300 g de guisantes frescos o congelados</li>
+<li>1 cebolla pequeña, picada</li>
+<li>1 papa mediana, pelada y cortada en cubitos</li>
+<li>300 ml de caldo de verduras</li>
+<li>2 cucharadas de aceite de oliva</li>
+<li>Sal y pimienta al gusto</li>
+<li>Jugo de limón (opcional)</li>
+<li>4 hojas de col rizada</li>
+<li>1 diente de ajo, picado</li>
+<li>1 cucharada de aceite de oliva</li>
+<li>sal al gusto</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparación</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Más</strong>: Crema de guisantes:</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Más</strong>: Hojas de col de Saboya:</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Más</strong>: Vieiras:</div></div>
 </div>
+<div class="tip-box"><h4>💡 Consejo</h4><p>Plato elegante para cenas especiales. Las vieiras frescas marcan la diferencia: no las cocines más de 2 minutos por lado.</p></div>
+</div></div>
 
+<!-- PORTUGUESE -->
 <div id="lang-pt" class="lang-content">
-<p><strong>Data:</strong> 2025-04-08</p>
-<p><em>Traducao em portugues em breve...</em></p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Vieiras com creme de ervilha</h2>
+<p class="recipe-date">📅 8 de abril de 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li><strong>Per le capesante:</strong></li>
-<li>8 capesante fresche</li>
-<li>2 cucchiai di olio d'oliva</li>
-<li>Sale q.b.</li>
-<li>Pepe nero q.b.</li>
-<li><strong>Per la crema di piselli:</strong></li>
-<li>300 g di piselli freschi o surgelati</li>
-<li>1 cipolla piccola, tritata</li>
-<li>1 patata media, pelata e tagliata a cubetti</li>
-<li>300 ml di brodo vegetale</li>
-<li>2 cucchiai di olio d'oliva</li>
-<li>Sale e pepe q.b.</li>
-<li>Succo di limone (facoltativo)</li>
-<li><strong>Per le foglie di cavolo verza:</strong></li>
-<li>4 foglie di cavolo verza</li>
-<li>1 spicchio d'aglio, tritato</li>
-<li>1 cucchiaio di olio d'oliva</li>
-<li>Sale q.b.</li>
-</ul>
-<h3>Preparazione</h3>
-<p>1. <strong>Crema di piselli:</strong></p>
-<ul>
-<li>In una pentola, scalda 2 cucchiai di olio d'oliva e aggiungi la cipolla tritata. Fai soffriggere fino a quando diventa trasparente.</li>
-<li>Aggiungi la patata e i piselli, poi versa il brodo vegetale. Porta a ebollizione e cuoci per circa 15-20 minuti, finché i piselli e la patata sono teneri.</li>
-<li>Frulla il tutto con un frullatore a immersione fino a ottenere una crema liscia. Aggiusta di sale, pepe e, se vuoi, aggiungi un goccio di succo di limone per dare freschezza.</li>
-</ul>
-<p>2. <strong>Foglie di cavolo verza:</strong></p>
-<ul>
-<li>Porta a ebollizione una pentola d'acqua salata e sbollenta le foglie di cavolo verza per circa 2-3 minuti. Scolale e mettile in acqua fredda per fermare la cottura.</li>
-<li>In una padella, scalda 1 cucchiaio di olio d'oliva e aggiungi l'aglio tritato. Fai soffriggere fino a doratura, poi aggiungi le foglie di cavolo verza e cuoci per circa 5 minuti, regolando di sale.</li>
-</ul>
-<p>3. <strong>Capesante:</strong></p>
-<ul>
-<li>Asciuga le capesante con carta da cucina e condisci con sale e pepe.</li>
-<li>Scalda l'olio d'oliva in una padella antiaderente a fuoco alto. Quando è ben caldo, aggiungi le capesante e scottale per circa 1-2 minuti per lato, finché non sono dorate e opache all'interno.</li>
-</ul>
-<h3>Impiattamento</h3>
-<ul>
-<li>Distribuisci la crema di piselli sul piatto, adagiando sopra le foglie di cavolo verza. Posiziona le capesante scottate sopra la crema. Puoi decorare con un filo d'olio d'oliva e, se desideri, qualche pisello fresco per un tocco di colore.</li>
-</ul>
+<li>8 vieiras frescas</li>
+<li>2 colheres de sopa de azeite</li>
+<li>Sal a gosto</li>
+<li>Pimenta preta a gosto</li>
+<li>300 g de ervilhas frescas ou congeladas</li>
+<li>1 cebola pequena picada</li>
+<li>1 batata média, descascada e cortada em cubos</li>
+<li>300 ml de caldo de legumes</li>
+<li>2 colheres de sopa de azeite</li>
+<li>Sal e pimenta a gosto</li>
+<li>Suco de limão (opcional)</li>
+<li>4 folhas de couve lombarda</li>
+<li>1 dente de alho picado</li>
+<li>1 colher de sopa de azeite</li>
+<li>Sal a gosto</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparação</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Acabou</strong>: Creme de ervilha:</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Acabou</strong>: Folhas de couve lombarda:</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Acabou</strong>: Vieiras:</div></div>
 </div>
+<div class="tip-box"><h4>💡 Sugestão</h4><p>Prato elegante para jantares especiais. Vieiras frescas fazem a diferença - não cozinhe mais de 2 minutos de cada lado.</p></div>
+</div></div>
 
+<!-- GERMAN -->
 <div id="lang-de" class="lang-content">
-<p><strong>Datum:</strong> 2025-04-08</p>
-<p><em>Deutsche Uebersetzung folgt bald...</em></p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Jakobsmuscheln auf Erbsencreme</h2>
+<p class="recipe-date">📅 8. April 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Zutaten</h3>
 <ul>
-<li><strong>Per le capesante:</strong></li>
-<li>8 capesante fresche</li>
-<li>2 cucchiai di olio d'oliva</li>
-<li>Sale q.b.</li>
-<li>Pepe nero q.b.</li>
-<li><strong>Per la crema di piselli:</strong></li>
-<li>300 g di piselli freschi o surgelati</li>
-<li>1 cipolla piccola, tritata</li>
-<li>1 patata media, pelata e tagliata a cubetti</li>
-<li>300 ml di brodo vegetale</li>
-<li>2 cucchiai di olio d'oliva</li>
-<li>Sale e pepe q.b.</li>
-<li>Succo di limone (facoltativo)</li>
-<li><strong>Per le foglie di cavolo verza:</strong></li>
-<li>4 foglie di cavolo verza</li>
-<li>1 spicchio d'aglio, tritato</li>
-<li>1 cucchiaio di olio d'oliva</li>
-<li>Sale q.b.</li>
-</ul>
-<h3>Preparazione</h3>
-<p>1. <strong>Crema di piselli:</strong></p>
-<ul>
-<li>In una pentola, scalda 2 cucchiai di olio d'oliva e aggiungi la cipolla tritata. Fai soffriggere fino a quando diventa trasparente.</li>
-<li>Aggiungi la patata e i piselli, poi versa il brodo vegetale. Porta a ebollizione e cuoci per circa 15-20 minuti, finché i piselli e la patata sono teneri.</li>
-<li>Frulla il tutto con un frullatore a immersione fino a ottenere una crema liscia. Aggiusta di sale, pepe e, se vuoi, aggiungi un goccio di succo di limone per dare freschezza.</li>
-</ul>
-<p>2. <strong>Foglie di cavolo verza:</strong></p>
-<ul>
-<li>Porta a ebollizione una pentola d'acqua salata e sbollenta le foglie di cavolo verza per circa 2-3 minuti. Scolale e mettile in acqua fredda per fermare la cottura.</li>
-<li>In una padella, scalda 1 cucchiaio di olio d'oliva e aggiungi l'aglio tritato. Fai soffriggere fino a doratura, poi aggiungi le foglie di cavolo verza e cuoci per circa 5 minuti, regolando di sale.</li>
-</ul>
-<p>3. <strong>Capesante:</strong></p>
-<ul>
-<li>Asciuga le capesante con carta da cucina e condisci con sale e pepe.</li>
-<li>Scalda l'olio d'oliva in una padella antiaderente a fuoco alto. Quando è ben caldo, aggiungi le capesante e scottale per circa 1-2 minuti per lato, finché non sono dorate e opache all'interno.</li>
-</ul>
-<h3>Impiattamento</h3>
-<ul>
-<li>Distribuisci la crema di piselli sul piatto, adagiando sopra le foglie di cavolo verza. Posiziona le capesante scottate sopra la crema. Puoi decorare con un filo d'olio d'oliva e, se desideri, qualche pisello fresco per un tocco di colore.</li>
-</ul>
+<li>8 frische Jakobsmuscheln</li>
+<li>2 Esslöffel Olivenöl</li>
+<li>Salz nach Geschmack</li>
+<li>Schwarzer Pfeffer nach Geschmack</li>
+<li>300 g frische oder gefrorene Erbsen</li>
+<li>1 kleine Zwiebel, gehackt</li>
+<li>1 mittelgroße Kartoffel, geschält und in Würfel geschnitten</li>
+<li>300 ml Gemüsebrühe</li>
+<li>2 Esslöffel Olivenöl</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Zitronensaft (optional)</li>
+<li>4 Wirsingblätter</li>
+<li>1 Knoblauchzehe, gehackt</li>
+<li>1 Esslöffel Olivenöl</li>
+<li>Salz nach Geschmack</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Zubereitung</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Vorbei</strong>: Erbsencreme:</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Vorbei</strong>: Wirsingblätter:</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Vorbei</strong>: Jakobsmuscheln:</div></div>
 </div>
+<div class="tip-box"><h4>💡 Tipp</h4><p>Elegantes Gericht für besondere Abendessen. Frische Jakobsmuscheln machen einen Unterschied – kochen Sie sie nicht länger als 2 Minuten pro Seite.</p></div>
+</div></div>
 
+<!-- GREEK -->
 <div id="lang-el" class="lang-content">
-<p><strong>Hmerominia:</strong> 2025-04-08</p>
-<p><em>E elliniki metafrasi erhetai syntoma...</em></p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Χτένια σε κρέμα μπιζελιού</h2>
+<p class="recipe-date">📅 8 Απριλίου 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Υλικά</h3>
 <ul>
-<li><strong>Per le capesante:</strong></li>
-<li>8 capesante fresche</li>
-<li>2 cucchiai di olio d'oliva</li>
-<li>Sale q.b.</li>
-<li>Pepe nero q.b.</li>
-<li><strong>Per la crema di piselli:</strong></li>
-<li>300 g di piselli freschi o surgelati</li>
-<li>1 cipolla piccola, tritata</li>
-<li>1 patata media, pelata e tagliata a cubetti</li>
-<li>300 ml di brodo vegetale</li>
-<li>2 cucchiai di olio d'oliva</li>
-<li>Sale e pepe q.b.</li>
-<li>Succo di limone (facoltativo)</li>
-<li><strong>Per le foglie di cavolo verza:</strong></li>
-<li>4 foglie di cavolo verza</li>
-<li>1 spicchio d'aglio, tritato</li>
-<li>1 cucchiaio di olio d'oliva</li>
-<li>Sale q.b.</li>
-</ul>
-<h3>Preparazione</h3>
-<p>1. <strong>Crema di piselli:</strong></p>
-<ul>
-<li>In una pentola, scalda 2 cucchiai di olio d'oliva e aggiungi la cipolla tritata. Fai soffriggere fino a quando diventa trasparente.</li>
-<li>Aggiungi la patata e i piselli, poi versa il brodo vegetale. Porta a ebollizione e cuoci per circa 15-20 minuti, finché i piselli e la patata sono teneri.</li>
-<li>Frulla il tutto con un frullatore a immersione fino a ottenere una crema liscia. Aggiusta di sale, pepe e, se vuoi, aggiungi un goccio di succo di limone per dare freschezza.</li>
-</ul>
-<p>2. <strong>Foglie di cavolo verza:</strong></p>
-<ul>
-<li>Porta a ebollizione una pentola d'acqua salata e sbollenta le foglie di cavolo verza per circa 2-3 minuti. Scolale e mettile in acqua fredda per fermare la cottura.</li>
-<li>In una padella, scalda 1 cucchiaio di olio d'oliva e aggiungi l'aglio tritato. Fai soffriggere fino a doratura, poi aggiungi le foglie di cavolo verza e cuoci per circa 5 minuti, regolando di sale.</li>
-</ul>
-<p>3. <strong>Capesante:</strong></p>
-<ul>
-<li>Asciuga le capesante con carta da cucina e condisci con sale e pepe.</li>
-<li>Scalda l'olio d'oliva in una padella antiaderente a fuoco alto. Quando è ben caldo, aggiungi le capesante e scottale per circa 1-2 minuti per lato, finché non sono dorate e opache all'interno.</li>
-</ul>
-<h3>Impiattamento</h3>
-<ul>
-<li>Distribuisci la crema di piselli sul piatto, adagiando sopra le foglie di cavolo verza. Posiziona le capesante scottate sopra la crema. Puoi decorare con un filo d'olio d'oliva e, se desideri, qualche pisello fresco per un tocco di colore.</li>
-</ul>
+<li>8 φρέσκα χτένια</li>
+<li>2 κουταλιές της σούπας ελαιόλαδο</li>
+<li>Αλάτι για γεύση</li>
+<li>Μαύρο πιπέρι για γεύση</li>
+<li>300 γραμμάρια φρέσκου ή κατεψυγμένου αρακά</li>
+<li>1 μικρό κρεμμύδι, ψιλοκομμένο</li>
+<li>1 μέτρια πατάτα, καθαρισμένη και κομμένη σε κύβους</li>
+<li>300 ml ζωμό λαχανικών</li>
+<li>2 κουταλιές της σούπας ελαιόλαδο</li>
+<li>Αλάτι και πιπέρι για γεύση</li>
+<li>Χυμός λεμονιού (προαιρετικά)</li>
+<li>4 φύλλα λάχανου σαβαγιάρ</li>
+<li>1 σκελίδα σκόρδο, ψιλοκομμένη</li>
+<li>1 κουταλιά της σούπας ελαιόλαδο</li>
+<li>Αλάτι για γεύση</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Εκτέλεση</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Πάνω</strong>: Κρέμα αρακά:</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Πάνω</strong>: Φύλλα λάχανου Savoy:</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Πάνω</strong>: Χτένια:</div></div>
 </div>
-</div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+<div class="tip-box"><h4>💡 Συμβουλή</h4><p>Κομψό πιάτο για ιδιαίτερα δείπνα. Τα φρέσκα χτένια κάνουν τη διαφορά - μην μαγειρεύετε περισσότερο από 2 λεπτά ανά πλευρά.</p></div>
+</div></div>
 
 <div class="footer">
-<p>Leguminando - Ricette di stagione a base di legumi</p>
-<p>"Tutto e iniziato con hummus di ceci..."</p>
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<p>"Tutto è iniziato con hummus di ceci..."</p>
 </div>
-<div data-legumi="ceci,piselli" style="display:none;"></div>
-
-<script>
-function toggleFav(path, title) {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    if (favs[path]) { delete favs[path]; }
-    else { favs[path] = title; }
-    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
-    updateFavIcons();
-}
-function updateFavIcons() {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    document.querySelectorAll('.fav-btn').forEach(btn => {
-        let p = btn.getAttribute('data-path');
-        btn.textContent = favs[p] ? '❤️' : '🤍';
-    });
-}
-document.addEventListener('DOMContentLoaded', updateFavIcons);
-</script>
-
+</div>
 
 
 <div style="text-align:center; margin:30px 0; padding:20px;">
@@ -413,7 +303,6 @@ function condividiRicetta() {
     }
 }
 </script>
-
 
 </body>
 </html>

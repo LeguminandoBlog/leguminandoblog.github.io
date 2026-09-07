@@ -3,88 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ricetta del 2025-04-11 | Leguminando</title>
+<title>Zuppa di Lenticchie e Vongole | Leguminando</title>
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://leguminandoblog.github.io/primavera/060.html">
+    <meta property="og:title" content="Zuppa di Lenticchie e Vongole">
+    <meta property="og:description" content="Ricetta su Leguminando - Zuppa di Lenticchie e Vongole">
+    <meta property="og:image" content="https://leguminandoblog.github.io/primavera/060.jpg">
+    <meta property="og:site_name" content="Leguminando">
+    <meta name="twitter:card" content="summary_large_image">
 <style>
-body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
-.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.content { background: white; padding: 30px; border-radius: 10px; }
-.content h1 { color: #8B4513; }
-.content h2 { color: #D2691E; }
-.content h3 { color: #8B4513; }
-.content ul { margin: 15px 0; padding-left: 20px; }
-.content li { margin: 8px 0; }
-.content p { margin: 12px 0; line-height: 1.6; }
-.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
-.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; background: #f8f5f0; min-height: 100vh; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+.header { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 40px 20px 30px; text-align: center; border-radius: 20px; margin-bottom: 30px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+.header h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.header .tagline { font-size: 1.2em; opacity: 0.9; font-style: italic; }
+.back-link { display: inline-block; margin: 20px 0; padding: 10px 20px; background: #8B4513; color: white; text-decoration: none; border-radius: 25px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.95em; transition: background 0.3s; }
 .back-link:hover { background: #D2691E; }
-
-.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
-.fav-bar { text-align: center; margin: 5px 0; }
-
-@media print {
-    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
-    .stats, .back-link, .badge { display: none !important; }
-    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
-    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
-    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
-    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
-}
-
-</style>
-<meta name="description" content="Ricetta del 2025-04-11">
-<meta property="og:title" content="Ricetta del 2025-04-11 | Leguminando">
-<meta property="og:description" content="Ricetta del 2025-04-11">
-<style>
-.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
-.lang-tab { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; transition: all 0.3s; }
-.lang-tab.active { background: #8B4513; color: white; }
-.lang-tab:hover:not(.active) { background: #D2691E; color: white; }
+.fav-bar { text-align: center; margin: 10px 0; }
+.fav-btn { cursor: pointer; font-size: 1.8em; user-select: none; display: inline-block; transition: transform 0.2s; }
+.fav-btn:hover { transform: scale(1.2); }
+.recipe-image { width: 100%; max-width: 700px; margin: 20px auto; display: block; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 30px 0; flex-wrap: wrap; }
+.lang-tab { padding: 10px 20px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; border-radius: 25px; cursor: pointer; font-size: 0.9em; transition: all 0.3s; }
+.lang-tab:hover { background: rgba(255,255,255,0.3); }
+.lang-tab.active { background: white; color: #c0392b; border-color: white; }
+.recipe-card { background: white; border-radius: 20px; padding: 40px; margin-bottom: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
 .lang-content { display: none; }
 .lang-content.active { display: block; }
+.recipe-title { font-size: 2.2em; color: #8B4513; margin-bottom: 10px; text-align: center; }
+.recipe-date { text-align: center; color: #666; font-size: 0.95em; margin-bottom: 25px; }
+.ingredients-box { background: linear-gradient(135deg, #fef9e7 0%, #fdebd0 100%); border-radius: 15px; padding: 25px; margin: 25px 0; border-left: 5px solid #D2691E; }
+.ingredients-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.ingredients-box ul { padding-left: 20px; }
+.ingredients-box li { margin: 8px 0; color: #5D4037; }
+.steps-box { margin: 25px 0; }
+.steps-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.step { display: flex; gap: 15px; margin: 15px 0; padding: 15px; background: #faf8f5; border-radius: 12px; align-items: flex-start; }
+.step-num { background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1em; flex-shrink: 0; }
+.step-text { flex: 1; color: #5D4037; line-height: 1.6; }
+.tip-box { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 15px; padding: 20px; margin: 25px 0; border-left: 5px solid #4caf50; }
+.tip-box h4 { color: #2e7d32; margin-bottom: 10px; }
+.tip-box p { color: #1b5e20; line-height: 1.6; }
+.footer { text-align: center; margin-top: 50px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+@media (max-width: 600px) { .header h1 { font-size: 2em; } .recipe-card { padding: 20px; } .recipe-title { font-size: 1.6em; } }
+@media print { .lang-tabs, .lang-tab, .fav-bar, .back-link { display: none !important; } body { background: white !important; } .recipe-card { box-shadow: none !important; break-inside: avoid; } }
 </style>
 <script>
-function showLang(lang) {
-    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
-    document.getElementById('lang-' + lang).classList.add('active');
-    event.target.classList.add('active');
-}
+function showLang(lang) { document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active')); document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active')); document.getElementById('lang-' + lang).classList.add('active'); event.target.classList.add('active'); }
+function toggleFav(path, title) { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); if (favs[path]) { delete favs[path]; } else { favs[path] = title; } localStorage.setItem('leguminando_favs', JSON.stringify(favs)); updateFavIcons(); }
+function updateFavIcons() { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); document.querySelectorAll('.fav-btn').forEach(btn => { let p = btn.getAttribute('data-path'); btn.textContent = favs[p] ? '❤️' : '🤍'; }); }
+document.addEventListener('DOMContentLoaded', updateFavIcons);
 </script>
 </head>
 <body>
+<div class="container">
 <div class="header">
-<h1>Leguminando</h1>
-<p>Ricette di stagione a base di legumi</p>
+<h1>🫘 Leguminando</h1>
+<p class="tagline">Ricette di stagione a base di legumi</p>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
-
+<a href="../index.html" class="back-link">← Torna alla Home</a>
 <div class="fav-bar">
-<span class="fav-btn" data-path="primavera/060.html" data-title="Ricetta del 2025-04-11" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+<span class="fav-btn" data-path="primavera/060.html" data-title="Zuppa di Lenticchie e Vongole" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
 </div>
-
-<img src="060.jpg" alt="Ricetta del 2025-04-11" class="recipe-image">
-
-<div class="content">
+<img src="060.jpg" alt="Zuppa di Lenticchie e Vongole" class="recipe-image">
 <div class="lang-tabs">
-    <button class="lang-tab active" onclick="showLang('it')">IT</button>
-    <button class="lang-tab" onclick="showLang('en')">EN</button>
-    <button class="lang-tab" onclick="showLang('es')">ES</button>
-    <button class="lang-tab" onclick="showLang('pt')">PT</button>
-    <button class="lang-tab" onclick="showLang('de')">DE</button>
-    <button class="lang-tab" onclick="showLang('el')">EL</button>
+    <button class="lang-tab active" onclick="showLang('it')">🇮🇹 IT</button>
+    <button class="lang-tab" onclick="showLang('en')">🇬🇧 EN</button>
+    <button class="lang-tab" onclick="showLang('es')">🇪🇸 ES</button>
+    <button class="lang-tab" onclick="showLang('pt')">🇵🇹 PT</button>
+    <button class="lang-tab" onclick="showLang('de')">🇩🇪 DE</button>
+    <button class="lang-tab" onclick="showLang('el')">🇬🇷 EL</button>
 </div>
 
+<!-- ITALIANO -->
 <div id="lang-it" class="lang-content active">
-<p><strong>Data:</strong> 2025-04-11</p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Zuppa di Lenticchie e Vongole</h2>
+<p class="recipe-date">📅 11 Aprile 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredienti</h3>
 <ul>
-<li><strong>Per la zuppa:</strong></li>
 <li>300 g di lenticchie (preferibilmente verdi o marroni)</li>
 <li>500 g di vongole fresche</li>
 <li>1 cipolla media, tritata</li>
@@ -98,188 +102,188 @@ function showLang(lang) {
 <li>Olio extravergine d'oliva q.b.</li>
 <li>Sale e pepe q.b.</li>
 <li>Prezzemolo fresco tritato per guarnire</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparazione delle vongole:</strong> Assicurati che le vongole siano ben pulite. Mettile in una ciotola con acqua salata per almeno un'ora per farle spurgare.</p>
-<p>2. <strong>Cottura delle lenticchie:</strong> In una pentola, scalda un po' d'olio extravergine d'oliva. Aggiungi la cipolla, l'aglio, la carota e il sedano. Fai rosolare per circa 5 minuti, finché le verdure non sono morbide.</p>
-<p>3. <strong>Aggiungi le lenticchie:</strong> Unisci le lenticchie sciacquate e mescola bene. Aggiungi il pomodoro, il rosmarino, le foglie di alloro e il brodo vegetale. Porta a ebollizione, poi riduci la fiamma e lascia cuocere per circa 25-30 minuti, finché le lenticchie sono tenere.</p>
-<p>4. <strong>Cottura delle vongole:</strong> In un'altra pentola, aggiungi un filo d'olio e scalda. Aggiungi le vongole, copri e cuoci a fuoco medio-alto fino a quando si aprono (circa 5-7 minuti). Scarta le vongole non aperte.</p>
-<p>5. <strong>Unire tutto:</strong> Una volta cotte le lenticchie, aggiungi le vongole alla zuppa. Mescola delicatamente e cuoci per ulteriori 5 minuti. Aggiusta di sale e pepe.</p>
-<p>6. <strong>Servire:</strong> Rimuovi il rosmarino e le foglie di alloro. Servi la zuppa calda, guarnita con prezzemolo fresco tritato e un filo d'olio.</p>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparazione</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Passo</strong>: Preparazione delle vongole: Assicurati che le vongole siano ben pulite. Mettile in una ciotola con acqua salata per almeno un'ora per farle spurgare.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Passo</strong>: Cottura delle lenticchie: In una pentola, scalda un po' d'olio extravergine d'oliva. Aggiungi la cipolla, l'aglio, la carota e il sedano. Fai rosolare per circa 5 minuti, finché le verdure non sono morbide.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Passo</strong>: Aggiungi le lenticchie: Unisci le lenticchie sciacquate e mescola bene. Aggiungi il pomodoro, il rosmarino, le foglie di alloro e il brodo vegetale. Porta a ebollizione, poi riduci la fiamma e lascia cuocere per circa 25-30 minuti, finché le lenticchie sono tenere.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Passo</strong>: Cottura delle vongole: In un'altra pentola, aggiungi un filo d'olio e scalda. Aggiungi le vongole, copri e cuoci a fuoco medio-alto fino a quando si aprono (circa 5-7 minuti). Scarta le vongole non aperte.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Passo</strong>: Unire tutto: Una volta cotte le lenticchie, aggiungi le vongole alla zuppa. Mescola delicatamente e cuoci per ulteriori 5 minuti. Aggiusta di sale e pepe.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Passo</strong>: Servire: Rimuovi il rosmarino e le foglie di alloro. Servi la zuppa calda, guarnita con prezzemolo fresco tritato e un filo d'olio.</div></div>
 </div>
+<div class="tip-box"><h4>💡 Suggerimento</h4><p>Zuppa di mare e terra sorprendente. Le vongole si aprono in pochi minuti: non cuocerle troppo.</p></div>
+</div></div>
 
+<!-- ENGLISH -->
 <div id="lang-en" class="lang-content">
-<p><strong>Date:</strong> 2025-04-11</p>
-<p><em>English translation coming soon...</em></p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Lentil and clam soup</h2>
+<p class="recipe-date">📅 April 11, 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredients</h3>
 <ul>
-<li><strong>Per la zuppa:</strong></li>
-<li>300 g di lenticchie (preferibilmente verdi o marroni)</li>
-<li>500 g di vongole fresche</li>
-<li>1 cipolla media, tritata</li>
-<li>2 spicchi d'aglio, tritati</li>
-<li>2 carote, a dadini</li>
-<li>2 gambi di sedano, a dadini</li>
-<li>1 pomodoro maturo, pelato e tritato (o 200 g di pomodori pelati)</li>
-<li>1 litro di brodo vegetale o acqua</li>
-<li>1 rametto di rosmarino</li>
-<li>2 foglie di alloro</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Sale e pepe q.b.</li>
-<li>Prezzemolo fresco tritato per guarnire</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparazione delle vongole:</strong> Assicurati che le vongole siano ben pulite. Mettile in una ciotola con acqua salata per almeno un'ora per farle spurgare.</p>
-<p>2. <strong>Cottura delle lenticchie:</strong> In una pentola, scalda un po' d'olio extravergine d'oliva. Aggiungi la cipolla, l'aglio, la carota e il sedano. Fai rosolare per circa 5 minuti, finché le verdure non sono morbide.</p>
-<p>3. <strong>Aggiungi le lenticchie:</strong> Unisci le lenticchie sciacquate e mescola bene. Aggiungi il pomodoro, il rosmarino, le foglie di alloro e il brodo vegetale. Porta a ebollizione, poi riduci la fiamma e lascia cuocere per circa 25-30 minuti, finché le lenticchie sono tenere.</p>
-<p>4. <strong>Cottura delle vongole:</strong> In un'altra pentola, aggiungi un filo d'olio e scalda. Aggiungi le vongole, copri e cuoci a fuoco medio-alto fino a quando si aprono (circa 5-7 minuti). Scarta le vongole non aperte.</p>
-<p>5. <strong>Unire tutto:</strong> Una volta cotte le lenticchie, aggiungi le vongole alla zuppa. Mescola delicatamente e cuoci per ulteriori 5 minuti. Aggiusta di sale e pepe.</p>
-<p>6. <strong>Servire:</strong> Rimuovi il rosmarino e le foglie di alloro. Servi la zuppa calda, guarnita con prezzemolo fresco tritato e un filo d'olio.</p>
+<li>300 g lentils (preferably green or brown)</li>
+<li>500 g of fresh clams</li>
+<li>1 medium onion, chopped</li>
+<li>2 cloves garlic, minced</li>
+<li>2 carrots, diced</li>
+<li>2 stalks celery, diced</li>
+<li>1 ripe tomato, peeled and chopped (or 200 g of peeled tomatoes)</li>
+<li>1 liter of vegetable broth or water</li>
+<li>1 sprig of rosemary</li>
+<li>2 bay leaves</li>
+<li>Extra virgin olive oil to taste</li>
+<li>Salt and pepper to taste</li>
+<li>Chopped fresh parsley for garnish</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparation</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Over</strong>: Preparing the clams: Make sure the clams are thoroughly cleaned. Place them in a bowl of salted water for at least an hour to drain.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Over</strong>: Cooking the lentils: In a pan, heat a little extra virgin olive oil. Add the onion, garlic, carrot and celery. Sauté for about 5 minutes, until the vegetables are soft.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Over</strong>: Add the lentils: Add the rinsed lentils and mix well. Add the tomato, rosemary, bay leaves and vegetable broth. Bring to the boil, then reduce the heat and cook for about 25-30 minutes, until the lentils are tender.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Over</strong>: Cooking clams: In another pan, add a drizzle of oil and heat. Add the clams, cover and cook over medium-high heat until they open (about 5-7 minutes). Discard unopened clams.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Over</strong>: Combine everything: Once the lentils are cooked, add the clams to the soup. Stir gently and cook for a further 5 minutes. Season with salt and pepper.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Over</strong>: Serve: Remove the rosemary and bay leaves. Serve the soup hot, garnished with chopped fresh parsley and a drizzle of oil.</div></div>
 </div>
+<div class="tip-box"><h4>💡 Tip</h4><p>Surprising sea and land soup. The clams open in a few minutes: do not overcook them.</p></div>
+</div></div>
 
+<!-- SPANISH -->
 <div id="lang-es" class="lang-content">
-<p><strong>Fecha:</strong> 2025-04-11</p>
-<p><em>Traduccion al espanol proximamente...</em></p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Sopa de lentejas y almejas</h2>
+<p class="recipe-date">📅 11 de abril de 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li><strong>Per la zuppa:</strong></li>
-<li>300 g di lenticchie (preferibilmente verdi o marroni)</li>
-<li>500 g di vongole fresche</li>
-<li>1 cipolla media, tritata</li>
-<li>2 spicchi d'aglio, tritati</li>
-<li>2 carote, a dadini</li>
-<li>2 gambi di sedano, a dadini</li>
-<li>1 pomodoro maturo, pelato e tritato (o 200 g di pomodori pelati)</li>
-<li>1 litro di brodo vegetale o acqua</li>
-<li>1 rametto di rosmarino</li>
-<li>2 foglie di alloro</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Sale e pepe q.b.</li>
-<li>Prezzemolo fresco tritato per guarnire</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparazione delle vongole:</strong> Assicurati che le vongole siano ben pulite. Mettile in una ciotola con acqua salata per almeno un'ora per farle spurgare.</p>
-<p>2. <strong>Cottura delle lenticchie:</strong> In una pentola, scalda un po' d'olio extravergine d'oliva. Aggiungi la cipolla, l'aglio, la carota e il sedano. Fai rosolare per circa 5 minuti, finché le verdure non sono morbide.</p>
-<p>3. <strong>Aggiungi le lenticchie:</strong> Unisci le lenticchie sciacquate e mescola bene. Aggiungi il pomodoro, il rosmarino, le foglie di alloro e il brodo vegetale. Porta a ebollizione, poi riduci la fiamma e lascia cuocere per circa 25-30 minuti, finché le lenticchie sono tenere.</p>
-<p>4. <strong>Cottura delle vongole:</strong> In un'altra pentola, aggiungi un filo d'olio e scalda. Aggiungi le vongole, copri e cuoci a fuoco medio-alto fino a quando si aprono (circa 5-7 minuti). Scarta le vongole non aperte.</p>
-<p>5. <strong>Unire tutto:</strong> Una volta cotte le lenticchie, aggiungi le vongole alla zuppa. Mescola delicatamente e cuoci per ulteriori 5 minuti. Aggiusta di sale e pepe.</p>
-<p>6. <strong>Servire:</strong> Rimuovi il rosmarino e le foglie di alloro. Servi la zuppa calda, guarnita con prezzemolo fresco tritato e un filo d'olio.</p>
+<li>300 g de lentejas (preferiblemente verdes o marrones)</li>
+<li>500 g de almejas frescas</li>
+<li>1 cebolla mediana, picada</li>
+<li>2 dientes de ajo, picados</li>
+<li>2 zanahorias, cortadas en cubitos</li>
+<li>2 tallos de apio, cortados en cubitos</li>
+<li>1 tomate maduro, pelado y troceado (o 200 g de tomates pelados)</li>
+<li>1 litro de caldo de verduras o agua</li>
+<li>1 ramita de romero</li>
+<li>2 hojas de laurel</li>
+<li>Aceite de oliva virgen extra al gusto</li>
+<li>Sal y pimienta al gusto</li>
+<li>Perejil fresco picado para decorar</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparación</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Más</strong>: Preparación de las almejas: Asegúrate de que las almejas estén bien limpias. Colóquelos en un recipiente con agua con sal durante al menos una hora para que escurran.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Más</strong>: Cocer las lentejas: En una sartén calentar un poco de aceite de oliva virgen extra. Agrega la cebolla, el ajo, la zanahoria y el apio. Saltee durante unos 5 minutos, hasta que las verduras estén suaves.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Más</strong>: Agrega las lentejas: Agrega las lentejas enjuagadas y mezcla bien. Agrega el tomate, el romero, las hojas de laurel y el caldo de verduras. Llevar a ebullición, luego reducir el fuego y cocinar durante unos 25-30 minutos, hasta que las lentejas estén tiernas.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Más</strong>: Cocinar las almejas: En otra sartén añadir un chorrito de aceite y calentar. Agrega las almejas, tapa y cocina a fuego medio-alto hasta que se abran (unos 5-7 minutos). Deseche las almejas sin abrir.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Más</strong>: Combina todo: Una vez cocidas las lentejas, agrega las almejas a la sopa. Revuelva suavemente y cocine por 5 minutos más. Sazone con sal y pimienta.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Más</strong>: Servir: Retire el romero y las hojas de laurel. Servir la sopa caliente, adornada con perejil fresco picado y un chorrito de aceite.</div></div>
 </div>
+<div class="tip-box"><h4>💡 Consejo</h4><p>Sorprendente sopa de mar y tierra. Las almejas se abren en unos minutos: no las cocines demasiado.</p></div>
+</div></div>
 
+<!-- PORTUGUESE -->
 <div id="lang-pt" class="lang-content">
-<p><strong>Data:</strong> 2025-04-11</p>
-<p><em>Traducao em portugues em breve...</em></p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Sopa de lentilha e amêijoas</h2>
+<p class="recipe-date">📅 11 de abril de 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li><strong>Per la zuppa:</strong></li>
-<li>300 g di lenticchie (preferibilmente verdi o marroni)</li>
-<li>500 g di vongole fresche</li>
-<li>1 cipolla media, tritata</li>
-<li>2 spicchi d'aglio, tritati</li>
-<li>2 carote, a dadini</li>
-<li>2 gambi di sedano, a dadini</li>
-<li>1 pomodoro maturo, pelato e tritato (o 200 g di pomodori pelati)</li>
-<li>1 litro di brodo vegetale o acqua</li>
-<li>1 rametto di rosmarino</li>
-<li>2 foglie di alloro</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Sale e pepe q.b.</li>
-<li>Prezzemolo fresco tritato per guarnire</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparazione delle vongole:</strong> Assicurati che le vongole siano ben pulite. Mettile in una ciotola con acqua salata per almeno un'ora per farle spurgare.</p>
-<p>2. <strong>Cottura delle lenticchie:</strong> In una pentola, scalda un po' d'olio extravergine d'oliva. Aggiungi la cipolla, l'aglio, la carota e il sedano. Fai rosolare per circa 5 minuti, finché le verdure non sono morbide.</p>
-<p>3. <strong>Aggiungi le lenticchie:</strong> Unisci le lenticchie sciacquate e mescola bene. Aggiungi il pomodoro, il rosmarino, le foglie di alloro e il brodo vegetale. Porta a ebollizione, poi riduci la fiamma e lascia cuocere per circa 25-30 minuti, finché le lenticchie sono tenere.</p>
-<p>4. <strong>Cottura delle vongole:</strong> In un'altra pentola, aggiungi un filo d'olio e scalda. Aggiungi le vongole, copri e cuoci a fuoco medio-alto fino a quando si aprono (circa 5-7 minuti). Scarta le vongole non aperte.</p>
-<p>5. <strong>Unire tutto:</strong> Una volta cotte le lenticchie, aggiungi le vongole alla zuppa. Mescola delicatamente e cuoci per ulteriori 5 minuti. Aggiusta di sale e pepe.</p>
-<p>6. <strong>Servire:</strong> Rimuovi il rosmarino e le foglie di alloro. Servi la zuppa calda, guarnita con prezzemolo fresco tritato e un filo d'olio.</p>
+<li>300 g de lentilhas (de preferência verdes ou marrons)</li>
+<li>500 g de amêijoas frescas</li>
+<li>1 cebola média picada</li>
+<li>2 dentes de alho picados</li>
+<li>2 cenouras em cubos</li>
+<li>2 talos de aipo em cubos</li>
+<li>1 tomate maduro, descascado e picado (ou 200 g de tomate pelado)</li>
+<li>1 litro de caldo de legumes ou água</li>
+<li>1 raminho de alecrim</li>
+<li>2 folhas de louro</li>
+<li>Azeite extra virgem a gosto</li>
+<li>Sal e pimenta a gosto</li>
+<li>Salsa fresca picada para enfeitar</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparação</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Acabou</strong>: Preparação das amêijoas: Certifique-se de que as amêijoas estão bem limpas. Coloque-os em uma tigela com água e sal por pelo menos uma hora para escorrer.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Acabou</strong>: Cozinhando as lentilhas: Em uma panela, aqueça um pouco de azeite virgem extra. Adicione a cebola, o alho, a cenoura e o aipo. Refogue por cerca de 5 minutos, até os legumes ficarem macios.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Acabou</strong>: Adicione as lentilhas: Adicione as lentilhas enxaguadas e misture bem. Adicione o tomate, o alecrim, o louro e o caldo de legumes. Deixe ferver, reduza o fogo e cozinhe por cerca de 25-30 minutos, até que as lentilhas estejam macias.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Acabou</strong>: Cozinhar amêijoas: Em outra panela, adicione um fiozinho de azeite e aqueça. Adicione as amêijoas, tampe e cozinhe em fogo médio-alto até abrirem (cerca de 5-7 minutos). Descarte as amêijoas fechadas.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Acabou</strong>: Combine tudo: Depois de as lentilhas estarem cozidas, junte as amêijoas à sopa. Mexa delicadamente e cozinhe por mais 5 minutos. Tempere com sal e pimenta.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Acabou</strong>: Servir: Retire o alecrim e as folhas de louro. Sirva a sopa quente, guarnecida com salsa fresca picada e um fio de azeite.</div></div>
 </div>
+<div class="tip-box"><h4>💡 Sugestão</h4><p>Surpreendente sopa de mar e terra. As amêijoas abrem em poucos minutos: não as cozinhe demais.</p></div>
+</div></div>
 
+<!-- GERMAN -->
 <div id="lang-de" class="lang-content">
-<p><strong>Datum:</strong> 2025-04-11</p>
-<p><em>Deutsche Uebersetzung folgt bald...</em></p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Linsen- und Muschelsuppe</h2>
+<p class="recipe-date">📅 11. April 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Zutaten</h3>
 <ul>
-<li><strong>Per la zuppa:</strong></li>
-<li>300 g di lenticchie (preferibilmente verdi o marroni)</li>
-<li>500 g di vongole fresche</li>
-<li>1 cipolla media, tritata</li>
-<li>2 spicchi d'aglio, tritati</li>
-<li>2 carote, a dadini</li>
-<li>2 gambi di sedano, a dadini</li>
-<li>1 pomodoro maturo, pelato e tritato (o 200 g di pomodori pelati)</li>
-<li>1 litro di brodo vegetale o acqua</li>
-<li>1 rametto di rosmarino</li>
-<li>2 foglie di alloro</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Sale e pepe q.b.</li>
-<li>Prezzemolo fresco tritato per guarnire</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparazione delle vongole:</strong> Assicurati che le vongole siano ben pulite. Mettile in una ciotola con acqua salata per almeno un'ora per farle spurgare.</p>
-<p>2. <strong>Cottura delle lenticchie:</strong> In una pentola, scalda un po' d'olio extravergine d'oliva. Aggiungi la cipolla, l'aglio, la carota e il sedano. Fai rosolare per circa 5 minuti, finché le verdure non sono morbide.</p>
-<p>3. <strong>Aggiungi le lenticchie:</strong> Unisci le lenticchie sciacquate e mescola bene. Aggiungi il pomodoro, il rosmarino, le foglie di alloro e il brodo vegetale. Porta a ebollizione, poi riduci la fiamma e lascia cuocere per circa 25-30 minuti, finché le lenticchie sono tenere.</p>
-<p>4. <strong>Cottura delle vongole:</strong> In un'altra pentola, aggiungi un filo d'olio e scalda. Aggiungi le vongole, copri e cuoci a fuoco medio-alto fino a quando si aprono (circa 5-7 minuti). Scarta le vongole non aperte.</p>
-<p>5. <strong>Unire tutto:</strong> Una volta cotte le lenticchie, aggiungi le vongole alla zuppa. Mescola delicatamente e cuoci per ulteriori 5 minuti. Aggiusta di sale e pepe.</p>
-<p>6. <strong>Servire:</strong> Rimuovi il rosmarino e le foglie di alloro. Servi la zuppa calda, guarnita con prezzemolo fresco tritato e un filo d'olio.</p>
+<li>300 g Linsen (vorzugsweise grün oder braun)</li>
+<li>500 g frische Muscheln</li>
+<li>1 mittelgroße Zwiebel, gehackt</li>
+<li>2 Knoblauchzehen, gehackt</li>
+<li>2 Karotten, gewürfelt</li>
+<li>2 Stangen Sellerie, gewürfelt</li>
+<li>1 reife Tomate, geschält und gehackt (oder 200 g geschälte Tomaten)</li>
+<li>1 Liter Gemüsebrühe oder Wasser</li>
+<li>1 Zweig Rosmarin</li>
+<li>2 Lorbeerblätter</li>
+<li>Extra natives Olivenöl nach Geschmack</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Gehackte frische Petersilie zum Garnieren</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Zubereitung</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Vorbei</strong>: Zubereitung der Muscheln: Stellen Sie sicher, dass die Muscheln gründlich gereinigt sind. Legen Sie sie zum Abtropfen mindestens eine Stunde lang in eine Schüssel mit Salzwasser.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Vorbei</strong>: Linsen kochen: In einer Pfanne etwas natives Olivenöl extra erhitzen. Zwiebel, Knoblauch, Karotte und Sellerie hinzufügen. Etwa 5 Minuten anbraten, bis das Gemüse weich ist.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Vorbei</strong>: Linsen hinzufügen: Die abgespülten Linsen hinzufügen und gut vermischen. Tomate, Rosmarin, Lorbeerblätter und Gemüsebrühe hinzufügen. Zum Kochen bringen, dann die Hitze reduzieren und etwa 25–30 Minuten kochen, bis die Linsen weich sind.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Vorbei</strong>: Muscheln kochen: In einer anderen Pfanne etwas Öl hinzufügen und erhitzen. Die Muscheln hinzufügen, abdecken und bei mittlerer Hitze kochen, bis sie sich öffnen (ca. 5–7 Minuten). Ungeöffnete Muscheln wegwerfen.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Vorbei</strong>: Alles vermischen: Sobald die Linsen gar sind, die Muscheln in die Suppe geben. Vorsichtig umrühren und weitere 5 Minuten kochen lassen. Mit Salz und Pfeffer würzen.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Vorbei</strong>: Servieren: Rosmarin und Lorbeerblätter entfernen. Die Suppe heiß servieren, garniert mit gehackter frischer Petersilie und einem Schuss Öl.</div></div>
 </div>
+<div class="tip-box"><h4>💡 Tipp</h4><p>Überraschende Meer- und Landsuppe. Die Muscheln öffnen sich in wenigen Minuten. Kochen Sie sie nicht zu lange.</p></div>
+</div></div>
 
+<!-- GREEK -->
 <div id="lang-el" class="lang-content">
-<p><strong>Hmerominia:</strong> 2025-04-11</p>
-<p><em>E elliniki metafrasi erhetai syntoma...</em></p>
-<h3>Ingredienti</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Σούπα με φακές και αχιβάδα</h2>
+<p class="recipe-date">📅 11 Απριλίου 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Υλικά</h3>
 <ul>
-<li><strong>Per la zuppa:</strong></li>
-<li>300 g di lenticchie (preferibilmente verdi o marroni)</li>
-<li>500 g di vongole fresche</li>
-<li>1 cipolla media, tritata</li>
-<li>2 spicchi d'aglio, tritati</li>
-<li>2 carote, a dadini</li>
-<li>2 gambi di sedano, a dadini</li>
-<li>1 pomodoro maturo, pelato e tritato (o 200 g di pomodori pelati)</li>
-<li>1 litro di brodo vegetale o acqua</li>
-<li>1 rametto di rosmarino</li>
-<li>2 foglie di alloro</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Sale e pepe q.b.</li>
-<li>Prezzemolo fresco tritato per guarnire</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparazione delle vongole:</strong> Assicurati che le vongole siano ben pulite. Mettile in una ciotola con acqua salata per almeno un'ora per farle spurgare.</p>
-<p>2. <strong>Cottura delle lenticchie:</strong> In una pentola, scalda un po' d'olio extravergine d'oliva. Aggiungi la cipolla, l'aglio, la carota e il sedano. Fai rosolare per circa 5 minuti, finché le verdure non sono morbide.</p>
-<p>3. <strong>Aggiungi le lenticchie:</strong> Unisci le lenticchie sciacquate e mescola bene. Aggiungi il pomodoro, il rosmarino, le foglie di alloro e il brodo vegetale. Porta a ebollizione, poi riduci la fiamma e lascia cuocere per circa 25-30 minuti, finché le lenticchie sono tenere.</p>
-<p>4. <strong>Cottura delle vongole:</strong> In un'altra pentola, aggiungi un filo d'olio e scalda. Aggiungi le vongole, copri e cuoci a fuoco medio-alto fino a quando si aprono (circa 5-7 minuti). Scarta le vongole non aperte.</p>
-<p>5. <strong>Unire tutto:</strong> Una volta cotte le lenticchie, aggiungi le vongole alla zuppa. Mescola delicatamente e cuoci per ulteriori 5 minuti. Aggiusta di sale e pepe.</p>
-<p>6. <strong>Servire:</strong> Rimuovi il rosmarino e le foglie di alloro. Servi la zuppa calda, guarnita con prezzemolo fresco tritato e un filo d'olio.</p>
+<li>300 γρ φακές (κατά προτίμηση πράσινες ή καφέ)</li>
+<li>500 γραμμάρια φρέσκα μύδια</li>
+<li>1 μέτριο κρεμμύδι, ψιλοκομμένο</li>
+<li>2 σκελίδες σκόρδο, ψιλοκομμένες</li>
+<li>2 καρότα, κομμένα σε κύβους</li>
+<li>2 κοτσάνια σέλινο, κομμένο σε κύβους</li>
+<li>1 ώριμη ντομάτα, ξεφλουδισμένη και ψιλοκομμένη (ή 200 γρ ντομάτες καθαρισμένες)</li>
+<li>1 λίτρο ζωμό λαχανικών ή νερό</li>
+<li>1 κλωνάρι δεντρολίβανο</li>
+<li>2 φύλλα δάφνης</li>
+<li>Εξαιρετικό παρθένο ελαιόλαδο για γεύση</li>
+<li>Αλάτι και πιπέρι για γεύση</li>
+<li>Ψιλοκομμένος φρέσκος μαϊντανός για γαρνίρισμα</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Εκτέλεση</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Πάνω</strong>: Προετοιμασία των αχιβάδων: Βεβαιωθείτε ότι τα μύδια έχουν καθαριστεί καλά. Τα βάζουμε σε ένα μπολ με αλατισμένο νερό για τουλάχιστον μία ώρα να στραγγίσουν.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Πάνω</strong>: Μαγείρεμα των φακών: Σε ένα τηγάνι ζεσταίνουμε λίγο έξτρα παρθένο ελαιόλαδο. Προσθέστε το κρεμμύδι, το σκόρδο, το καρότο και το σέλινο. Σοτάρουμε για περίπου 5 λεπτά, μέχρι να μαλακώσουν τα λαχανικά.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Πάνω</strong>: Προσθέτουμε τις φακές: Προσθέτουμε τις φακές που έχουν ξεπλυθεί και ανακατεύουμε καλά. Προσθέστε τη ντομάτα, το δεντρολίβανο, τα φύλλα δάφνης και το ζωμό λαχανικών. Αφήνουμε να πάρει βράση, στη συνέχεια χαμηλώνουμε τη φωτιά και μαγειρεύουμε για περίπου 25-30 λεπτά, μέχρι να μαλακώσουν οι φακές.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Πάνω</strong>: Μύδια μαγειρικής: Σε άλλο τηγάνι ρίχνουμε λίγο λάδι και ζεσταίνουμε. Προσθέστε τις αχιβάδες, σκεπάστε και μαγειρέψτε σε μέτρια προς δυνατή φωτιά μέχρι να ανοίξουν (περίπου 5-7 λεπτά). Απορρίψτε τις αχιβάδες που δεν έχουν ανοιχτεί.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Πάνω</strong>: Ανακατέψτε τα πάντα: Μόλις ψηθούν οι φακές, προσθέστε τις αχιβάδες στη σούπα. Ανακατεύουμε απαλά και μαγειρεύουμε για άλλα 5 λεπτά. Αλατοπιπερώνουμε.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Πάνω</strong>: Σερβίρουμε: Αφαιρούμε το δεντρολίβανο και τα φύλλα δάφνης. Σερβίρετε τη σούπα ζεστή, γαρνίροντας με ψιλοκομμένο φρέσκο ​​μαϊντανό και λίγο λάδι.</div></div>
 </div>
-</div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+<div class="tip-box"><h4>💡 Συμβουλή</h4><p>Εκπληκτική σούπα θάλασσας και ξηράς. Οι αχιβάδες ανοίγουν σε λίγα λεπτά: μην τις παραψήσετε.</p></div>
+</div></div>
 
 <div class="footer">
-<p>Leguminando - Ricette di stagione a base di legumi</p>
-<p>"Tutto e iniziato con hummus di ceci..."</p>
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<p>"Tutto è iniziato con hummus di ceci..."</p>
 </div>
-<div data-legumi="ceci,lenticchie" style="display:none;"></div>
-
-<script>
-function toggleFav(path, title) {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    if (favs[path]) { delete favs[path]; }
-    else { favs[path] = title; }
-    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
-    updateFavIcons();
-}
-function updateFavIcons() {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    document.querySelectorAll('.fav-btn').forEach(btn => {
-        let p = btn.getAttribute('data-path');
-        btn.textContent = favs[p] ? '❤️' : '🤍';
-    });
-}
-document.addEventListener('DOMContentLoaded', updateFavIcons);
-</script>
-
+</div>
 
 
 <div style="text-align:center; margin:30px 0; padding:20px;">
@@ -305,7 +309,6 @@ function condividiRicetta() {
     }
 }
 </script>
-
 
 </body>
 </html>

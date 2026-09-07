@@ -3,90 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ricetta del 2024-12-02 | Leguminando</title>
+<title>Dolce al Cacao con Farina di Ceci | Leguminando</title>
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://leguminandoblog.github.io/inverno/058.html">
+    <meta property="og:title" content="Dolce al Cacao con Farina di Ceci">
+    <meta property="og:description" content="Ricetta su Leguminando - Dolce al Cacao con Farina di Ceci">
+    <meta property="og:image" content="https://leguminandoblog.github.io/inverno/058.jpg">
+    <meta property="og:site_name" content="Leguminando">
+    <meta name="twitter:card" content="summary_large_image">
 <style>
-body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
-.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.content { background: white; padding: 30px; border-radius: 10px; }
-.content h1 { color: #8B4513; }
-.content h2 { color: #D2691E; }
-.content h3 { color: #8B4513; }
-.content ul { margin: 15px 0; padding-left: 20px; }
-.content li { margin: 8px 0; }
-.content p { margin: 12px 0; line-height: 1.6; }
-.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
-.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; background: #f8f5f0; min-height: 100vh; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+.header { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 40px 20px 30px; text-align: center; border-radius: 20px; margin-bottom: 30px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+.header h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.header .tagline { font-size: 1.2em; opacity: 0.9; font-style: italic; }
+.back-link { display: inline-block; margin: 20px 0; padding: 10px 20px; background: #8B4513; color: white; text-decoration: none; border-radius: 25px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.95em; transition: background 0.3s; }
 .back-link:hover { background: #D2691E; }
-
-.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
-.fav-bar { text-align: center; margin: 5px 0; }
-
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-
-@media print {
-    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
-    .stats, .back-link, .badge { display: none !important; }
-    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
-    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
-    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
-    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
-}
-
-</style>
-<meta name="description" content="Ricetta del 2024-12-02">
-<meta property="og:title" content="Ricetta del 2024-12-02 | Leguminando">
-<meta property="og:description" content="Ricetta del 2024-12-02">
-<style>
-.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
-.lang-tab { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; transition: all 0.3s; }
-.lang-tab.active { background: #8B4513; color: white; }
-.lang-tab:hover:not(.active) { background: #D2691E; color: white; }
+.fav-bar { text-align: center; margin: 10px 0; }
+.fav-btn { cursor: pointer; font-size: 1.8em; user-select: none; display: inline-block; transition: transform 0.2s; }
+.fav-btn:hover { transform: scale(1.2); }
+.recipe-image { width: 100%; max-width: 700px; margin: 20px auto; display: block; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 30px 0; flex-wrap: wrap; }
+.lang-tab { padding: 10px 20px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; border-radius: 25px; cursor: pointer; font-size: 0.9em; transition: all 0.3s; }
+.lang-tab:hover { background: rgba(255,255,255,0.3); }
+.lang-tab.active { background: white; color: #c0392b; border-color: white; }
+.recipe-card { background: white; border-radius: 20px; padding: 40px; margin-bottom: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
 .lang-content { display: none; }
 .lang-content.active { display: block; }
+.recipe-title { font-size: 2.2em; color: #8B4513; margin-bottom: 10px; text-align: center; }
+.recipe-date { text-align: center; color: #666; font-size: 0.95em; margin-bottom: 25px; }
+.ingredients-box { background: linear-gradient(135deg, #fef9e7 0%, #fdebd0 100%); border-radius: 15px; padding: 25px; margin: 25px 0; border-left: 5px solid #D2691E; }
+.ingredients-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.ingredients-box ul { padding-left: 20px; }
+.ingredients-box li { margin: 8px 0; color: #5D4037; }
+.steps-box { margin: 25px 0; }
+.steps-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.step { display: flex; gap: 15px; margin: 15px 0; padding: 15px; background: #faf8f5; border-radius: 12px; align-items: flex-start; }
+.step-num { background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1em; flex-shrink: 0; }
+.step-text { flex: 1; color: #5D4037; line-height: 1.6; }
+.tip-box { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 15px; padding: 20px; margin: 25px 0; border-left: 5px solid #4caf50; }
+.tip-box h4 { color: #2e7d32; margin-bottom: 10px; }
+.tip-box p { color: #1b5e20; line-height: 1.6; }
+.footer { text-align: center; margin-top: 50px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+@media (max-width: 600px) { .header h1 { font-size: 2em; } .recipe-card { padding: 20px; } .recipe-title { font-size: 1.6em; } }
+@media print { .lang-tabs, .lang-tab, .fav-bar, .back-link { display: none !important; } body { background: white !important; } .recipe-card { box-shadow: none !important; break-inside: avoid; } }
 </style>
 <script>
-function showLang(lang) {
-    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
-    document.getElementById('lang-' + lang).classList.add('active');
-    event.target.classList.add('active');
-}
+function showLang(lang) { document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active')); document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active')); document.getElementById('lang-' + lang).classList.add('active'); event.target.classList.add('active'); }
+function toggleFav(path, title) { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); if (favs[path]) { delete favs[path]; } else { favs[path] = title; } localStorage.setItem('leguminando_favs', JSON.stringify(favs)); updateFavIcons(); }
+function updateFavIcons() { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); document.querySelectorAll('.fav-btn').forEach(btn => { let p = btn.getAttribute('data-path'); btn.textContent = favs[p] ? '❤️' : '🤍'; }); }
+document.addEventListener('DOMContentLoaded', updateFavIcons);
 </script>
 </head>
 <body>
+<div class="container">
 <div class="header">
-<h1>Leguminando</h1>
-<p>Ricette di stagione a base di legumi</p>
+<h1>🫘 Leguminando</h1>
+<p class="tagline">Ricette di stagione a base di legumi</p>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
-
-</div>
-
+<a href="../index.html" class="back-link">← Torna alla Home</a>
 <div class="fav-bar">
-<span class="fav-btn" data-path="inverno/058.html" data-title="Ricetta del 2024-12-02" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+<span class="fav-btn" data-path="inverno/058.html" data-title="Dolce al Cacao con Farina di Ceci" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
 </div>
-
-<img src="058.jpg" alt="Ricetta del 2024-12-02" class="recipe-image">
-
-<div class="content">
+<img src="058.jpg" alt="Dolce al Cacao con Farina di Ceci" class="recipe-image">
 <div class="lang-tabs">
-    <button class="lang-tab active" onclick="showLang('it')">IT</button>
-    <button class="lang-tab" onclick="showLang('en')">EN</button>
-    <button class="lang-tab" onclick="showLang('es')">ES</button>
-    <button class="lang-tab" onclick="showLang('pt')">PT</button>
-    <button class="lang-tab" onclick="showLang('de')">DE</button>
-    <button class="lang-tab" onclick="showLang('el')">EL</button>
+    <button class="lang-tab active" onclick="showLang('it')">🇮🇹 IT</button>
+    <button class="lang-tab" onclick="showLang('en')">🇬🇧 EN</button>
+    <button class="lang-tab" onclick="showLang('es')">🇪🇸 ES</button>
+    <button class="lang-tab" onclick="showLang('pt')">🇵🇹 PT</button>
+    <button class="lang-tab" onclick="showLang('de')">🇩🇪 DE</button>
+    <button class="lang-tab" onclick="showLang('el')">🇬🇷 EL</button>
 </div>
 
+<!-- ITALIANO -->
 <div id="lang-it" class="lang-content active">
-<p><strong>Data:</strong> 2024-12-02</p>
-<h3>Ingredienti:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Dolce al Cacao con Farina di Ceci</h2>
+<p class="recipe-date">📅 2 Dicembre 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredienti</h3>
 <ul>
 <li>200 g di farina di ceci</li>
 <li>50 g di cacao amaro in polvere</li>
@@ -97,287 +98,168 @@ function showLang(lang) {
 <li>200 ml di acqua (o latte vegetale)</li>
 <li>1 cucchiaino di estratto di vaniglia (opzionale)</li>
 <li>Noci o nocciole tritate (opzionale, per guarnire)</li>
-</ul>
-<h3>Istruzioni:</h3>
-<p>1. <strong>Preparazione dell'impasto</strong>:</p>
-<ul>
-<li>In una ciotola grande, setacciare la farina di ceci, il cacao in polvere, lo zucchero, il lievito e il sale. Mescolare bene gli ingredienti secchi.</li>
-</ul>
-<p>2. <strong>Ingredienti liquidi</strong>:</p>
-<ul>
-<li>In un'altra ciotola, unire l'olio, l'acqua (o latte vegetale) e l'estratto di vaniglia. Mescolare fino a ottenere un composto omogeneo.</li>
-</ul>
-<p>3. <strong>Unire i composti</strong>:</p>
-<ul>
-<li>Versare gli ingredienti liquidi nella ciotola con gli ingredienti secchi. Mescolare bene fino a ottenere un impasto liscio e senza grumi.</li>
-</ul>
-<p>4. <strong>Preparazione della teglia</strong>:</p>
-<ul>
-<li>Preriscaldare il forno a 180°C. Ungere una teglia da forno con un po' di olio e infarinarla con farina di ceci.</li>
-</ul>
-<p>5. <strong>Cottura</strong>:</p>
-<ul>
-<li>Versare l'impasto nella teglia e livellare la superficie. Infornare per circa 30-35 minuti, o fino a quando un stecchino inserito al centro esce pulito.</li>
-</ul>
-<p>6. <strong>Raffreddamento e decorazione</strong>:</p>
-<ul>
-<li>Una volta cotta, lasciare raffreddare la torta nella teglia per 10 minuti, poi trasferirla su una griglia per raffreddarla completamente.</li>
-<li>Se desiderato, guarnire con noci o nocciole tritate prima di servire.</li>
-</ul>
-<h3>Servizio:</h3>
-<p>Tagliare a fette e servire. Questa torta è ottima sia tiepida che fredda e può essere accompagnata con una spolverata di zucchero a velo o una salsa di frutta.</p>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparazione</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Passo</strong>: Preparazione dell'impasto:</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Passo</strong>: Ingredienti liquidi:</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Passo</strong>: Unire i composti:</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Passo</strong>: Preparazione della teglia:</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Passo</strong>: Cottura:</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Passo</strong>: Raffreddamento e decorazione:</div></div>
 </div>
+<div class="tip-box"><h4>💡 Suggerimento</h4><p>La farina di ceci dà una consistenza particolare: prova a sostituire il burro con olio EVO.</p></div>
+</div></div>
 
+<!-- ENGLISH -->
 <div id="lang-en" class="lang-content">
-<p><strong>Date:</strong> 2024-12-02</p>
-<p><em>English translation coming soon...</em></p>
-<h3>Ingredienti:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Cocoa Cake with Chickpea Flour</h2>
+<p class="recipe-date">📅 December 2, 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredients</h3>
 <ul>
-<li>200 g di farina di ceci</li>
-<li>50 g di cacao amaro in polvere</li>
-<li>150 g di zucchero di canna</li>
-<li>1 bustina di lievito per dolci</li>
-<li>1 pizzico di sale</li>
-<li>100 ml di olio di semi (o olio di oliva leggero)</li>
-<li>200 ml di acqua (o latte vegetale)</li>
-<li>1 cucchiaino di estratto di vaniglia (opzionale)</li>
-<li>Noci o nocciole tritate (opzionale, per guarnire)</li>
-</ul>
-<h3>Istruzioni:</h3>
-<p>1. <strong>Preparazione dell'impasto</strong>:</p>
-<ul>
-<li>In una ciotola grande, setacciare la farina di ceci, il cacao in polvere, lo zucchero, il lievito e il sale. Mescolare bene gli ingredienti secchi.</li>
-</ul>
-<p>2. <strong>Ingredienti liquidi</strong>:</p>
-<ul>
-<li>In un'altra ciotola, unire l'olio, l'acqua (o latte vegetale) e l'estratto di vaniglia. Mescolare fino a ottenere un composto omogeneo.</li>
-</ul>
-<p>3. <strong>Unire i composti</strong>:</p>
-<ul>
-<li>Versare gli ingredienti liquidi nella ciotola con gli ingredienti secchi. Mescolare bene fino a ottenere un impasto liscio e senza grumi.</li>
-</ul>
-<p>4. <strong>Preparazione della teglia</strong>:</p>
-<ul>
-<li>Preriscaldare il forno a 180°C. Ungere una teglia da forno con un po' di olio e infarinarla con farina di ceci.</li>
-</ul>
-<p>5. <strong>Cottura</strong>:</p>
-<ul>
-<li>Versare l'impasto nella teglia e livellare la superficie. Infornare per circa 30-35 minuti, o fino a quando un stecchino inserito al centro esce pulito.</li>
-</ul>
-<p>6. <strong>Raffreddamento e decorazione</strong>:</p>
-<ul>
-<li>Una volta cotta, lasciare raffreddare la torta nella teglia per 10 minuti, poi trasferirla su una griglia per raffreddarla completamente.</li>
-<li>Se desiderato, guarnire con noci o nocciole tritate prima di servire.</li>
-</ul>
-<h3>Servizio:</h3>
-<p>Tagliare a fette e servire. Questa torta è ottima sia tiepida che fredda e può essere accompagnata con una spolverata di zucchero a velo o una salsa di frutta.</p>
+<li>200 g of chickpea flour</li>
+<li>50 g of bitter cocoa powder</li>
+<li>150 g of cane sugar</li>
+<li>1 sachet of baking powder</li>
+<li>1 pinch of salt</li>
+<li>100 ml seed oil (or light olive oil)</li>
+<li>200 ml of water (or vegetable milk)</li>
+<li>1 teaspoon vanilla extract (optional)</li>
+<li>Chopped walnuts or hazelnuts (optional, for garnish)</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparation</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Over</strong>: Preparation of the dough:</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Over</strong>: Liquid ingredients:</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Over</strong>: Joining the compounds:</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Over</strong>: Preparing the tray:</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Over</strong>: Cooking:</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Over</strong>: Cooling and decoration:</div></div>
 </div>
+<div class="tip-box"><h4>💡 Tip</h4><p>Chickpea flour gives a particular consistency: try replacing the butter with EVO oil.</p></div>
+</div></div>
 
+<!-- SPANISH -->
 <div id="lang-es" class="lang-content">
-<p><strong>Fecha:</strong> 2024-12-02</p>
-<p><em>Traduccion al espanol proximamente...</em></p>
-<h3>Ingredienti:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Tarta De Cacao Con Harina De Garbanzos</h2>
+<p class="recipe-date">📅 2 de diciembre de 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li>200 g di farina di ceci</li>
-<li>50 g di cacao amaro in polvere</li>
-<li>150 g di zucchero di canna</li>
-<li>1 bustina di lievito per dolci</li>
-<li>1 pizzico di sale</li>
-<li>100 ml di olio di semi (o olio di oliva leggero)</li>
-<li>200 ml di acqua (o latte vegetale)</li>
-<li>1 cucchiaino di estratto di vaniglia (opzionale)</li>
-<li>Noci o nocciole tritate (opzionale, per guarnire)</li>
-</ul>
-<h3>Istruzioni:</h3>
-<p>1. <strong>Preparazione dell'impasto</strong>:</p>
-<ul>
-<li>In una ciotola grande, setacciare la farina di ceci, il cacao in polvere, lo zucchero, il lievito e il sale. Mescolare bene gli ingredienti secchi.</li>
-</ul>
-<p>2. <strong>Ingredienti liquidi</strong>:</p>
-<ul>
-<li>In un'altra ciotola, unire l'olio, l'acqua (o latte vegetale) e l'estratto di vaniglia. Mescolare fino a ottenere un composto omogeneo.</li>
-</ul>
-<p>3. <strong>Unire i composti</strong>:</p>
-<ul>
-<li>Versare gli ingredienti liquidi nella ciotola con gli ingredienti secchi. Mescolare bene fino a ottenere un impasto liscio e senza grumi.</li>
-</ul>
-<p>4. <strong>Preparazione della teglia</strong>:</p>
-<ul>
-<li>Preriscaldare il forno a 180°C. Ungere una teglia da forno con un po' di olio e infarinarla con farina di ceci.</li>
-</ul>
-<p>5. <strong>Cottura</strong>:</p>
-<ul>
-<li>Versare l'impasto nella teglia e livellare la superficie. Infornare per circa 30-35 minuti, o fino a quando un stecchino inserito al centro esce pulito.</li>
-</ul>
-<p>6. <strong>Raffreddamento e decorazione</strong>:</p>
-<ul>
-<li>Una volta cotta, lasciare raffreddare la torta nella teglia per 10 minuti, poi trasferirla su una griglia per raffreddarla completamente.</li>
-<li>Se desiderato, guarnire con noci o nocciole tritate prima di servire.</li>
-</ul>
-<h3>Servizio:</h3>
-<p>Tagliare a fette e servire. Questa torta è ottima sia tiepida che fredda e può essere accompagnata con una spolverata di zucchero a velo o una salsa di frutta.</p>
+<li>200 g de harina de garbanzos</li>
+<li>50 g de cacao amargo en polvo</li>
+<li>150 g de azúcar de caña</li>
+<li>1 sobre de levadura en polvo</li>
+<li>1 pizca de sal</li>
+<li>100 ml de aceite de semillas (o aceite de oliva ligero)</li>
+<li>200 ml de agua (o leche vegetal)</li>
+<li>1 cucharadita de extracto de vainilla (opcional)</li>
+<li>Nueces o avellanas picadas (opcional, para decorar)</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparación</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Más</strong>: Preparación de la masa:</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Más</strong>: Ingredientes líquidos:</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Más</strong>: Uniendo los compuestos:</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Más</strong>: Preparando la bandeja:</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Más</strong>: Cocinar:</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Más</strong>: Refrigeración y decoración:</div></div>
 </div>
+<div class="tip-box"><h4>💡 Consejo</h4><p>La harina de garbanzos le da una consistencia particular: prueba a sustituir la mantequilla por aceite EVO.</p></div>
+</div></div>
 
+<!-- PORTUGUESE -->
 <div id="lang-pt" class="lang-content">
-<p><strong>Data:</strong> 2024-12-02</p>
-<p><em>Traducao em portugues em breve...</em></p>
-<h3>Ingredienti:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Bolo De Cacau Com Farinha De Grão De Bico</h2>
+<p class="recipe-date">📅 2 de dezembro de 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li>200 g di farina di ceci</li>
-<li>50 g di cacao amaro in polvere</li>
-<li>150 g di zucchero di canna</li>
-<li>1 bustina di lievito per dolci</li>
-<li>1 pizzico di sale</li>
-<li>100 ml di olio di semi (o olio di oliva leggero)</li>
-<li>200 ml di acqua (o latte vegetale)</li>
-<li>1 cucchiaino di estratto di vaniglia (opzionale)</li>
-<li>Noci o nocciole tritate (opzionale, per guarnire)</li>
-</ul>
-<h3>Istruzioni:</h3>
-<p>1. <strong>Preparazione dell'impasto</strong>:</p>
-<ul>
-<li>In una ciotola grande, setacciare la farina di ceci, il cacao in polvere, lo zucchero, il lievito e il sale. Mescolare bene gli ingredienti secchi.</li>
-</ul>
-<p>2. <strong>Ingredienti liquidi</strong>:</p>
-<ul>
-<li>In un'altra ciotola, unire l'olio, l'acqua (o latte vegetale) e l'estratto di vaniglia. Mescolare fino a ottenere un composto omogeneo.</li>
-</ul>
-<p>3. <strong>Unire i composti</strong>:</p>
-<ul>
-<li>Versare gli ingredienti liquidi nella ciotola con gli ingredienti secchi. Mescolare bene fino a ottenere un impasto liscio e senza grumi.</li>
-</ul>
-<p>4. <strong>Preparazione della teglia</strong>:</p>
-<ul>
-<li>Preriscaldare il forno a 180°C. Ungere una teglia da forno con un po' di olio e infarinarla con farina di ceci.</li>
-</ul>
-<p>5. <strong>Cottura</strong>:</p>
-<ul>
-<li>Versare l'impasto nella teglia e livellare la superficie. Infornare per circa 30-35 minuti, o fino a quando un stecchino inserito al centro esce pulito.</li>
-</ul>
-<p>6. <strong>Raffreddamento e decorazione</strong>:</p>
-<ul>
-<li>Una volta cotta, lasciare raffreddare la torta nella teglia per 10 minuti, poi trasferirla su una griglia per raffreddarla completamente.</li>
-<li>Se desiderato, guarnire con noci o nocciole tritate prima di servire.</li>
-</ul>
-<h3>Servizio:</h3>
-<p>Tagliare a fette e servire. Questa torta è ottima sia tiepida che fredda e può essere accompagnata con una spolverata di zucchero a velo o una salsa di frutta.</p>
+<li>200 g de farinha de grão de bico</li>
+<li>50 g de cacau amargo em pó</li>
+<li>150 g de açúcar de cana</li>
+<li>1 sachê de fermento em pó</li>
+<li>1 pitada de sal</li>
+<li>100 ml de óleo de semente (ou azeite light)</li>
+<li>200 ml de água (ou leite vegetal)</li>
+<li>1 colher de chá de extrato de baunilha (opcional)</li>
+<li>Nozes ou avelãs picadas (opcional, para enfeitar)</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparação</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Acabou</strong>: Preparação da massa:</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Acabou</strong>: Ingredientes líquidos:</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Acabou</strong>: Juntando os compostos:</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Acabou</strong>: Preparando a bandeja:</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Acabou</strong>: Cozinhar:</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Acabou</strong>: Resfriamento e decoração:</div></div>
 </div>
+<div class="tip-box"><h4>💡 Sugestão</h4><p>A farinha de grão de bico dá uma consistência particular: experimente substituir a manteiga por óleo EVO.</p></div>
+</div></div>
 
+<!-- GERMAN -->
 <div id="lang-de" class="lang-content">
-<p><strong>Datum:</strong> 2024-12-02</p>
-<p><em>Deutsche Uebersetzung folgt bald...</em></p>
-<h3>Ingredienti:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Kakaokuchen mit Kichererbsenmehl</h2>
+<p class="recipe-date">📅 2. Dezember 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Zutaten</h3>
 <ul>
-<li>200 g di farina di ceci</li>
-<li>50 g di cacao amaro in polvere</li>
-<li>150 g di zucchero di canna</li>
-<li>1 bustina di lievito per dolci</li>
-<li>1 pizzico di sale</li>
-<li>100 ml di olio di semi (o olio di oliva leggero)</li>
-<li>200 ml di acqua (o latte vegetale)</li>
-<li>1 cucchiaino di estratto di vaniglia (opzionale)</li>
-<li>Noci o nocciole tritate (opzionale, per guarnire)</li>
-</ul>
-<h3>Istruzioni:</h3>
-<p>1. <strong>Preparazione dell'impasto</strong>:</p>
-<ul>
-<li>In una ciotola grande, setacciare la farina di ceci, il cacao in polvere, lo zucchero, il lievito e il sale. Mescolare bene gli ingredienti secchi.</li>
-</ul>
-<p>2. <strong>Ingredienti liquidi</strong>:</p>
-<ul>
-<li>In un'altra ciotola, unire l'olio, l'acqua (o latte vegetale) e l'estratto di vaniglia. Mescolare fino a ottenere un composto omogeneo.</li>
-</ul>
-<p>3. <strong>Unire i composti</strong>:</p>
-<ul>
-<li>Versare gli ingredienti liquidi nella ciotola con gli ingredienti secchi. Mescolare bene fino a ottenere un impasto liscio e senza grumi.</li>
-</ul>
-<p>4. <strong>Preparazione della teglia</strong>:</p>
-<ul>
-<li>Preriscaldare il forno a 180°C. Ungere una teglia da forno con un po' di olio e infarinarla con farina di ceci.</li>
-</ul>
-<p>5. <strong>Cottura</strong>:</p>
-<ul>
-<li>Versare l'impasto nella teglia e livellare la superficie. Infornare per circa 30-35 minuti, o fino a quando un stecchino inserito al centro esce pulito.</li>
-</ul>
-<p>6. <strong>Raffreddamento e decorazione</strong>:</p>
-<ul>
-<li>Una volta cotta, lasciare raffreddare la torta nella teglia per 10 minuti, poi trasferirla su una griglia per raffreddarla completamente.</li>
-<li>Se desiderato, guarnire con noci o nocciole tritate prima di servire.</li>
-</ul>
-<h3>Servizio:</h3>
-<p>Tagliare a fette e servire. Questa torta è ottima sia tiepida che fredda e può essere accompagnata con una spolverata di zucchero a velo o una salsa di frutta.</p>
+<li>200 g Kichererbsenmehl</li>
+<li>50 g bitteres Kakaopulver</li>
+<li>150 g Rohrzucker</li>
+<li>1 Päckchen Backpulver</li>
+<li>1 Prise Salz</li>
+<li>100 ml Samenöl (oder leichtes Olivenöl)</li>
+<li>200 ml Wasser (oder Pflanzenmilch)</li>
+<li>1 Teelöffel Vanilleextrakt (optional)</li>
+<li>Gehackte Walnüsse oder Haselnüsse (optional, zum Garnieren)</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Zubereitung</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Passo</strong>: Zubereitung des Teiges:</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Passo</strong>: Flüssige Zutaten:</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Schritt</strong>: Zusammenfügen der Verbindungen:</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Schritt</strong>: Vorbereiten des Tabletts:</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Schritt</strong>: Kochen:</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Schritt</strong>: Kühlung und Dekoration:</div></div>
 </div>
+<div class="tip-box"><h4>💡 Tipp</h4><p>Kichererbsenmehl sorgt für eine besondere Konsistenz: Versuchen Sie, die Butter durch EVO-Öl zu ersetzen.</p></div>
+</div></div>
 
+<!-- GREEK -->
 <div id="lang-el" class="lang-content">
-<p><strong>Hmerominia:</strong> 2024-12-02</p>
-<p><em>E elliniki metafrasi erhetai syntoma...</em></p>
-<h3>Ingredienti:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Κέικ κακάο με αλεύρι ρεβιθιού</h2>
+<p class="recipe-date">📅 2 Δεκεμβρίου 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Υλικά</h3>
 <ul>
-<li>200 g di farina di ceci</li>
-<li>50 g di cacao amaro in polvere</li>
-<li>150 g di zucchero di canna</li>
-<li>1 bustina di lievito per dolci</li>
-<li>1 pizzico di sale</li>
-<li>100 ml di olio di semi (o olio di oliva leggero)</li>
-<li>200 ml di acqua (o latte vegetale)</li>
-<li>1 cucchiaino di estratto di vaniglia (opzionale)</li>
-<li>Noci o nocciole tritate (opzionale, per guarnire)</li>
-</ul>
-<h3>Istruzioni:</h3>
-<p>1. <strong>Preparazione dell'impasto</strong>:</p>
-<ul>
-<li>In una ciotola grande, setacciare la farina di ceci, il cacao in polvere, lo zucchero, il lievito e il sale. Mescolare bene gli ingredienti secchi.</li>
-</ul>
-<p>2. <strong>Ingredienti liquidi</strong>:</p>
-<ul>
-<li>In un'altra ciotola, unire l'olio, l'acqua (o latte vegetale) e l'estratto di vaniglia. Mescolare fino a ottenere un composto omogeneo.</li>
-</ul>
-<p>3. <strong>Unire i composti</strong>:</p>
-<ul>
-<li>Versare gli ingredienti liquidi nella ciotola con gli ingredienti secchi. Mescolare bene fino a ottenere un impasto liscio e senza grumi.</li>
-</ul>
-<p>4. <strong>Preparazione della teglia</strong>:</p>
-<ul>
-<li>Preriscaldare il forno a 180°C. Ungere una teglia da forno con un po' di olio e infarinarla con farina di ceci.</li>
-</ul>
-<p>5. <strong>Cottura</strong>:</p>
-<ul>
-<li>Versare l'impasto nella teglia e livellare la superficie. Infornare per circa 30-35 minuti, o fino a quando un stecchino inserito al centro esce pulito.</li>
-</ul>
-<p>6. <strong>Raffreddamento e decorazione</strong>:</p>
-<ul>
-<li>Una volta cotta, lasciare raffreddare la torta nella teglia per 10 minuti, poi trasferirla su una griglia per raffreddarla completamente.</li>
-<li>Se desiderato, guarnire con noci o nocciole tritate prima di servire.</li>
-</ul>
-<h3>Servizio:</h3>
-<p>Tagliare a fette e servire. Questa torta è ottima sia tiepida che fredda e può essere accompagnata con una spolverata di zucchero a velo o una salsa di frutta.</p>
+<li>200 γρ αλεύρι ρεβιθιού</li>
+<li>50 γραμμάρια πικρή σκόνη κακάο</li>
+<li>150 γραμμάρια ζαχαροκάλαμου</li>
+<li>1 φακελάκι μπέικιν πάουντερ</li>
+<li>1 πρέζα αλάτι</li>
+<li>100 ml σπορέλαιο (ή ελαφρύ ελαιόλαδο)</li>
+<li>200 ml νερό (ή φυτικό γάλα)</li>
+<li>1 κουταλάκι του γλυκού εκχύλισμα βανίλιας (προαιρετικά)</li>
+<li>Ψιλοκομμένα καρύδια ή φουντούκια (προαιρετικά, για γαρνίρισμα)</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Εκτέλεση</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Πάνω</strong>: Προετοιμασία της ζύμης:</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Πάνω</strong>: Υγρά συστατικά:</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Πάνω</strong>: Συνένωση των ενώσεων:</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Πάνω</strong>: Προετοιμασία του δίσκου:</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Πάνω</strong>: Μαγείρεμα:</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Πάνω</strong>: Ψύξη και διακόσμηση:</div></div>
 </div>
-</div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+<div class="tip-box"><h4>💡 Συμβουλή</h4><p>Το αλεύρι ρεβιθιού δίνει μια ιδιαίτερη συνοχή: δοκιμάστε να αντικαταστήσετε το βούτυρο με λάδι EVO.</p></div>
+</div></div>
 
 <div class="footer">
-<p>Leguminando - Ricette di stagione a base di legumi</p>
-<p>"Tutto e iniziato con hummus di ceci..."</p>
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<p>"Tutto è iniziato con hummus di ceci..."</p>
 </div>
-
-<script>
-function toggleFav(path, title) {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    if (favs[path]) { delete favs[path]; }
-    else { favs[path] = title; }
-    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
-    updateFavIcons();
-}
-function updateFavIcons() {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    document.querySelectorAll('.fav-btn').forEach(btn => {
-        let p = btn.getAttribute('data-path');
-        btn.textContent = favs[p] ? '❤️' : '🤍';
-    });
-}
-document.addEventListener('DOMContentLoaded', updateFavIcons);
-</script>
+</div>
 
 
 <div style="text-align:center; margin:30px 0; padding:20px;">

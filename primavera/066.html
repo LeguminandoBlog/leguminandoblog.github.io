@@ -3,86 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ricetta del 2025-04-03 | Leguminando</title>
+<title>Sarde al Forno con Ceci Marroni | Leguminando</title>
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://leguminandoblog.github.io/primavera/066.html">
+    <meta property="og:title" content="Sarde al Forno con Ceci Marroni">
+    <meta property="og:description" content="Ricetta su Leguminando - Sarde al Forno con Ceci Marroni">
+    <meta property="og:image" content="https://leguminandoblog.github.io/primavera/066.jpg">
+    <meta property="og:site_name" content="Leguminando">
+    <meta name="twitter:card" content="summary_large_image">
 <style>
-body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
-.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.content { background: white; padding: 30px; border-radius: 10px; }
-.content h1 { color: #8B4513; }
-.content h2 { color: #D2691E; }
-.content h3 { color: #8B4513; }
-.content ul { margin: 15px 0; padding-left: 20px; }
-.content li { margin: 8px 0; }
-.content p { margin: 12px 0; line-height: 1.6; }
-.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
-.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; background: #f8f5f0; min-height: 100vh; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+.header { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 40px 20px 30px; text-align: center; border-radius: 20px; margin-bottom: 30px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+.header h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.header .tagline { font-size: 1.2em; opacity: 0.9; font-style: italic; }
+.back-link { display: inline-block; margin: 20px 0; padding: 10px 20px; background: #8B4513; color: white; text-decoration: none; border-radius: 25px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.95em; transition: background 0.3s; }
 .back-link:hover { background: #D2691E; }
-
-.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
-.fav-bar { text-align: center; margin: 5px 0; }
-
-@media print {
-    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
-    .stats, .back-link, .badge { display: none !important; }
-    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
-    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
-    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
-    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
-}
-
-</style>
-<meta name="description" content="Ricetta del 2025-04-03">
-<meta property="og:title" content="Ricetta del 2025-04-03 | Leguminando">
-<meta property="og:description" content="Ricetta del 2025-04-03">
-<style>
-.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
-.lang-tab { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; transition: all 0.3s; }
-.lang-tab.active { background: #8B4513; color: white; }
-.lang-tab:hover:not(.active) { background: #D2691E; color: white; }
+.fav-bar { text-align: center; margin: 10px 0; }
+.fav-btn { cursor: pointer; font-size: 1.8em; user-select: none; display: inline-block; transition: transform 0.2s; }
+.fav-btn:hover { transform: scale(1.2); }
+.recipe-image { width: 100%; max-width: 700px; margin: 20px auto; display: block; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 30px 0; flex-wrap: wrap; }
+.lang-tab { padding: 10px 20px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; border-radius: 25px; cursor: pointer; font-size: 0.9em; transition: all 0.3s; }
+.lang-tab:hover { background: rgba(255,255,255,0.3); }
+.lang-tab.active { background: white; color: #c0392b; border-color: white; }
+.recipe-card { background: white; border-radius: 20px; padding: 40px; margin-bottom: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
 .lang-content { display: none; }
 .lang-content.active { display: block; }
+.recipe-title { font-size: 2.2em; color: #8B4513; margin-bottom: 10px; text-align: center; }
+.recipe-date { text-align: center; color: #666; font-size: 0.95em; margin-bottom: 25px; }
+.ingredients-box { background: linear-gradient(135deg, #fef9e7 0%, #fdebd0 100%); border-radius: 15px; padding: 25px; margin: 25px 0; border-left: 5px solid #D2691E; }
+.ingredients-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.ingredients-box ul { padding-left: 20px; }
+.ingredients-box li { margin: 8px 0; color: #5D4037; }
+.steps-box { margin: 25px 0; }
+.steps-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.step { display: flex; gap: 15px; margin: 15px 0; padding: 15px; background: #faf8f5; border-radius: 12px; align-items: flex-start; }
+.step-num { background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1em; flex-shrink: 0; }
+.step-text { flex: 1; color: #5D4037; line-height: 1.6; }
+.tip-box { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 15px; padding: 20px; margin: 25px 0; border-left: 5px solid #4caf50; }
+.tip-box h4 { color: #2e7d32; margin-bottom: 10px; }
+.tip-box p { color: #1b5e20; line-height: 1.6; }
+.footer { text-align: center; margin-top: 50px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+@media (max-width: 600px) { .header h1 { font-size: 2em; } .recipe-card { padding: 20px; } .recipe-title { font-size: 1.6em; } }
+@media print { .lang-tabs, .lang-tab, .fav-bar, .back-link { display: none !important; } body { background: white !important; } .recipe-card { box-shadow: none !important; break-inside: avoid; } }
 </style>
 <script>
-function showLang(lang) {
-    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
-    document.getElementById('lang-' + lang).classList.add('active');
-    event.target.classList.add('active');
-}
+function showLang(lang) { document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active')); document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active')); document.getElementById('lang-' + lang).classList.add('active'); event.target.classList.add('active'); }
+function toggleFav(path, title) { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); if (favs[path]) { delete favs[path]; } else { favs[path] = title; } localStorage.setItem('leguminando_favs', JSON.stringify(favs)); updateFavIcons(); }
+function updateFavIcons() { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); document.querySelectorAll('.fav-btn').forEach(btn => { let p = btn.getAttribute('data-path'); btn.textContent = favs[p] ? '❤️' : '🤍'; }); }
+document.addEventListener('DOMContentLoaded', updateFavIcons);
 </script>
 </head>
 <body>
+<div class="container">
 <div class="header">
-<h1>Leguminando</h1>
-<p>Ricette di stagione a base di legumi</p>
+<h1>🫘 Leguminando</h1>
+<p class="tagline">Ricette di stagione a base di legumi</p>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
-
+<a href="../index.html" class="back-link">← Torna alla Home</a>
 <div class="fav-bar">
-<span class="fav-btn" data-path="primavera/066.html" data-title="Ricetta del 2025-04-03" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+<span class="fav-btn" data-path="primavera/066.html" data-title="Sarde al Forno con Ceci Marroni" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
 </div>
-
-<img src="066.jpg" alt="Ricetta del 2025-04-03" class="recipe-image">
-
-<div class="content">
+<img src="066.jpg" alt="Sarde al Forno con Ceci Marroni" class="recipe-image">
 <div class="lang-tabs">
-    <button class="lang-tab active" onclick="showLang('it')">IT</button>
-    <button class="lang-tab" onclick="showLang('en')">EN</button>
-    <button class="lang-tab" onclick="showLang('es')">ES</button>
-    <button class="lang-tab" onclick="showLang('pt')">PT</button>
-    <button class="lang-tab" onclick="showLang('de')">DE</button>
-    <button class="lang-tab" onclick="showLang('el')">EL</button>
+    <button class="lang-tab active" onclick="showLang('it')">🇮🇹 IT</button>
+    <button class="lang-tab" onclick="showLang('en')">🇬🇧 EN</button>
+    <button class="lang-tab" onclick="showLang('es')">🇪🇸 ES</button>
+    <button class="lang-tab" onclick="showLang('pt')">🇵🇹 PT</button>
+    <button class="lang-tab" onclick="showLang('de')">🇩🇪 DE</button>
+    <button class="lang-tab" onclick="showLang('el')">🇬🇷 EL</button>
 </div>
 
+<!-- ITALIANO -->
 <div id="lang-it" class="lang-content active">
-<p><strong>Data:</strong> 2025-04-03</p>
-<h2>Ingredienti</h2>
+<div class="recipe-card">
+<h2 class="recipe-title">Sarde al Forno con Ceci Marroni</h2>
+<p class="recipe-date">📅 3 Aprile 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredienti</h3>
 <ul>
 <li>400 g di sarde fresche</li>
 <li>200 g di ceci marroni (già cotti o in scatola)</li>
@@ -93,157 +98,162 @@ function showLang(lang) {
 <li>Pepe nero q.b.</li>
 <li>Prezzemolo fresco tritato (per guarnire)</li>
 <li>Limone (per servire)</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparazione delle sarde</strong>: Se le sarde non sono già pulite, rimuovi le interiora e le teste, quindi lavale sotto acqua corrente e asciugale delicatamente.</p>
-<p>2. <strong>Cottura dei porri</strong>: Affetta i porri a rondelle sottili e trita finemente gli spicchi d'aglio. In una padella grande, scalda un filo d'olio extravergine d'oliva e aggiungi i porri e l'aglio. Fai soffriggere a fuoco medio fino a quando i porri diventano teneri e trasparenti.</p>
-<p>3. <strong>Aggiunta dei ceci</strong>: Aggiungi i ceci marroni nella padella con i porri e l'aglio. Mescola bene e lascia cuocere per circa 5-7 minuti, aggiustando di sale e pepe.</p>
-<p>4. <strong>Cottura delle sarde</strong>: In un'altra padella, scalda un po' d'olio e aggiungi le sarde. Cuoci a fuoco medio per circa 2-3 minuti per lato, fino a quando sono dorate e cotte. Puoi aggiungere un pizzico di sale e pepe.</p>
-<p>5. <strong>Assemblaggio del piatto</strong>: Una volta che le sarde sono pronte, disponile sopra il letto di ceci e porri. Guarnisci con prezzemolo fresco tritato e serve con spicchi di limone a lato.</p>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparazione</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Passo</strong>: Preparazione delle sarde: Se le sarde non sono già pulite, rimuovi le interiora e le teste, quindi lavale sotto acqua corrente e asciugale delicatamente.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Passo</strong>: Cottura dei porri: Affetta i porri a rondelle sottili e trita finemente gli spicchi d'aglio. In una padella grande, scalda un filo d'olio extravergine d'oliva e aggiungi i porri e l'aglio. Fai soffriggere a fuoco medio fino a quando i porri diventano teneri e trasparenti.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Passo</strong>: Aggiunta dei ceci: Aggiungi i ceci marroni nella padella con i porri e l'aglio. Mescola bene e lascia cuocere per circa 5-7 minuti, aggiustando di sale e pepe.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Passo</strong>: Cottura delle sarde: In un'altra padella, scalda un po' d'olio e aggiungi le sarde. Cuoci a fuoco medio per circa 2-3 minuti per lato, fino a quando sono dorate e cotte. Puoi aggiungere un pizzico di sale e pepe.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Passo</strong>: Assemblaggio del piatto: Una volta che le sarde sono pronte, disponile sopra il letto di ceci e porri. Guarnisci con prezzemolo fresco tritato e serve con spicchi di limone a lato.</div></div>
 </div>
+<div class="tip-box"><h4>💡 Suggerimento</h4><p>Piatto di mare semplice e saporito. Sarde fresche fanno la differenza.</p></div>
+</div></div>
 
+<!-- ENGLISH -->
 <div id="lang-en" class="lang-content">
-<p><strong>Date:</strong> 2025-04-03</p>
-<p><em>English translation coming soon...</em></p>
-<h2>Ingredienti</h2>
+<div class="recipe-card">
+<h2 class="recipe-title">Baked Sardines with Brown Chickpeas</h2>
+<p class="recipe-date">📅 April 3, 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredients</h3>
 <ul>
-<li>400 g di sarde fresche</li>
-<li>200 g di ceci marroni (già cotti o in scatola)</li>
-<li>2 porri</li>
-<li>2 spicchi d'aglio</li>
-<li>Olio extravergine d'oliva</li>
-<li>Sale q.b.</li>
-<li>Pepe nero q.b.</li>
-<li>Prezzemolo fresco tritato (per guarnire)</li>
-<li>Limone (per servire)</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparazione delle sarde</strong>: Se le sarde non sono già pulite, rimuovi le interiora e le teste, quindi lavale sotto acqua corrente e asciugale delicatamente.</p>
-<p>2. <strong>Cottura dei porri</strong>: Affetta i porri a rondelle sottili e trita finemente gli spicchi d'aglio. In una padella grande, scalda un filo d'olio extravergine d'oliva e aggiungi i porri e l'aglio. Fai soffriggere a fuoco medio fino a quando i porri diventano teneri e trasparenti.</p>
-<p>3. <strong>Aggiunta dei ceci</strong>: Aggiungi i ceci marroni nella padella con i porri e l'aglio. Mescola bene e lascia cuocere per circa 5-7 minuti, aggiustando di sale e pepe.</p>
-<p>4. <strong>Cottura delle sarde</strong>: In un'altra padella, scalda un po' d'olio e aggiungi le sarde. Cuoci a fuoco medio per circa 2-3 minuti per lato, fino a quando sono dorate e cotte. Puoi aggiungere un pizzico di sale e pepe.</p>
-<p>5. <strong>Assemblaggio del piatto</strong>: Una volta che le sarde sono pronte, disponile sopra il letto di ceci e porri. Guarnisci con prezzemolo fresco tritato e serve con spicchi di limone a lato.</p>
+<li>400 g of fresh sardines</li>
+<li>200 g brown chickpeas (already cooked or canned)</li>
+<li>2 leeks</li>
+<li>2 cloves of garlic</li>
+<li>Extra virgin olive oil</li>
+<li>Salt to taste</li>
+<li>Black pepper to taste</li>
+<li>Chopped fresh parsley (for garnish)</li>
+<li>Lemon (for serving)</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparation</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Over</strong>: Preparing the sardines: If the sardines are not already clean, remove the innards and heads, then wash them under running water and dry them gently.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Over</strong>: Cooking the leeks: Slice the leeks into thin slices and finely chop the garlic cloves. In a large pan, heat a drizzle of extra virgin olive oil and add the leeks and garlic. Fry over medium heat until the leeks become tender and translucent.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Over</strong>: Adding the chickpeas: Add the brown chickpeas to the pan with the leeks and garlic. Mix well and leave to cook for about 5-7 minutes, adding salt and pepper to taste.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Over</strong>: Cooking the sardines: In another pan, heat a little oil and add the sardines. Cook over medium heat for about 2-3 minutes per side, until golden and cooked through. You can add a pinch of salt and pepper.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Over</strong>: Assembling the dish: Once the sardines are ready, arrange them on top of the bed of chickpeas and leeks. Garnish with chopped fresh parsley and serve with lemon wedges on the side.</div></div>
 </div>
+<div class="tip-box"><h4>💡 Tip</h4><p>Simple and tasty seafood dish. Fresh sardines make the difference.</p></div>
+</div></div>
 
+<!-- SPANISH -->
 <div id="lang-es" class="lang-content">
-<p><strong>Fecha:</strong> 2025-04-03</p>
-<p><em>Traduccion al espanol proximamente...</em></p>
-<h2>Ingredienti</h2>
+<div class="recipe-card">
+<h2 class="recipe-title">Sardinas Al Horno Con Garbanzos Morenos</h2>
+<p class="recipe-date">📅 3 de abril de 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li>400 g di sarde fresche</li>
-<li>200 g di ceci marroni (già cotti o in scatola)</li>
-<li>2 porri</li>
-<li>2 spicchi d'aglio</li>
-<li>Olio extravergine d'oliva</li>
-<li>Sale q.b.</li>
-<li>Pepe nero q.b.</li>
-<li>Prezzemolo fresco tritato (per guarnire)</li>
-<li>Limone (per servire)</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparazione delle sarde</strong>: Se le sarde non sono già pulite, rimuovi le interiora e le teste, quindi lavale sotto acqua corrente e asciugale delicatamente.</p>
-<p>2. <strong>Cottura dei porri</strong>: Affetta i porri a rondelle sottili e trita finemente gli spicchi d'aglio. In una padella grande, scalda un filo d'olio extravergine d'oliva e aggiungi i porri e l'aglio. Fai soffriggere a fuoco medio fino a quando i porri diventano teneri e trasparenti.</p>
-<p>3. <strong>Aggiunta dei ceci</strong>: Aggiungi i ceci marroni nella padella con i porri e l'aglio. Mescola bene e lascia cuocere per circa 5-7 minuti, aggiustando di sale e pepe.</p>
-<p>4. <strong>Cottura delle sarde</strong>: In un'altra padella, scalda un po' d'olio e aggiungi le sarde. Cuoci a fuoco medio per circa 2-3 minuti per lato, fino a quando sono dorate e cotte. Puoi aggiungere un pizzico di sale e pepe.</p>
-<p>5. <strong>Assemblaggio del piatto</strong>: Una volta che le sarde sono pronte, disponile sopra il letto di ceci e porri. Guarnisci con prezzemolo fresco tritato e serve con spicchi di limone a lato.</p>
+<li>400 g de sardinas frescas</li>
+<li>200 g de garbanzos morenos (ya cocidos o enlatados)</li>
+<li>2 puerros</li>
+<li>2 dientes de ajo</li>
+<li>Aceite de oliva virgen extra</li>
+<li>sal al gusto</li>
+<li>Pimienta negra al gusto</li>
+<li>Perejil fresco picado (para decorar)</li>
+<li>Limón (para servir)</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparación</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Más</strong>: Preparación de las sardinas: Si las sardinas aún no están limpias, quítales las entrañas y las cabezas, luego lávalas con agua corriente y sécalas suavemente.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Más</strong>: Cocinar los puerros: Cortar los puerros en rodajas finas y picar finamente los dientes de ajo. En una sartén grande calentar un chorrito de aceite de oliva virgen extra y añadir los puerros y los ajos. Freír a fuego medio hasta que los puerros estén tiernos y traslúcidos.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Más</strong>: Añadir los garbanzos: Añade los garbanzos dorados a la sartén con los puerros y el ajo. Mezclar bien y dejar cocer unos 5-7 minutos, añadiendo sal y pimienta al gusto.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Más</strong>: Cocer las sardinas: En otra sartén calentar un poco de aceite y añadir las sardinas. Cocine a fuego medio durante unos 2-3 minutos por lado, hasta que estén dorados y bien cocidos. Puedes añadir una pizca de sal y pimienta.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Más</strong>: Montaje del plato: Una vez listas las sardinas las disponemos sobre la cama de garbanzos y puerros. Adorne con perejil fresco picado y sirva con rodajas de limón a un lado.</div></div>
 </div>
+<div class="tip-box"><h4>💡 Consejo</h4><p>Plato de marisco sencillo y sabroso. Las sardinas frescas marcan la diferencia.</p></div>
+</div></div>
 
+<!-- PORTUGUESE -->
 <div id="lang-pt" class="lang-content">
-<p><strong>Data:</strong> 2025-04-03</p>
-<p><em>Traducao em portugues em breve...</em></p>
-<h2>Ingredienti</h2>
+<div class="recipe-card">
+<h2 class="recipe-title">Sardinhas Assadas com Grão de Bico Marrom</h2>
+<p class="recipe-date">📅 3 de abril de 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li>400 g di sarde fresche</li>
-<li>200 g di ceci marroni (già cotti o in scatola)</li>
-<li>2 porri</li>
-<li>2 spicchi d'aglio</li>
-<li>Olio extravergine d'oliva</li>
-<li>Sale q.b.</li>
-<li>Pepe nero q.b.</li>
-<li>Prezzemolo fresco tritato (per guarnire)</li>
-<li>Limone (per servire)</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparazione delle sarde</strong>: Se le sarde non sono già pulite, rimuovi le interiora e le teste, quindi lavale sotto acqua corrente e asciugale delicatamente.</p>
-<p>2. <strong>Cottura dei porri</strong>: Affetta i porri a rondelle sottili e trita finemente gli spicchi d'aglio. In una padella grande, scalda un filo d'olio extravergine d'oliva e aggiungi i porri e l'aglio. Fai soffriggere a fuoco medio fino a quando i porri diventano teneri e trasparenti.</p>
-<p>3. <strong>Aggiunta dei ceci</strong>: Aggiungi i ceci marroni nella padella con i porri e l'aglio. Mescola bene e lascia cuocere per circa 5-7 minuti, aggiustando di sale e pepe.</p>
-<p>4. <strong>Cottura delle sarde</strong>: In un'altra padella, scalda un po' d'olio e aggiungi le sarde. Cuoci a fuoco medio per circa 2-3 minuti per lato, fino a quando sono dorate e cotte. Puoi aggiungere un pizzico di sale e pepe.</p>
-<p>5. <strong>Assemblaggio del piatto</strong>: Una volta che le sarde sono pronte, disponile sopra il letto di ceci e porri. Guarnisci con prezzemolo fresco tritato e serve con spicchi di limone a lato.</p>
+<li>400 g de sardinha fresca</li>
+<li>200 g de grão de bico marrom (já cozido ou enlatado)</li>
+<li>2 alho-poró</li>
+<li>2 dentes de alho</li>
+<li>Azeite virgem extra</li>
+<li>Sal a gosto</li>
+<li>Pimenta preta a gosto</li>
+<li>Salsa fresca picada (para enfeitar)</li>
+<li>Limão (para servir)</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Preparação</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Acabou</strong>: Preparação das sardinhas: Se as sardinhas ainda não estiverem limpas, retire as vísceras e as cabeças, depois lave-as em água corrente e seque-as delicadamente.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Acabou</strong>: Cozinhar o alho-poró: Corte o alho-poró em rodelas finas e pique finamente os dentes de alho. Em uma panela grande, aqueça um fio de azeite virgem extra e acrescente o alho-poró e o alho. Frite em fogo médio até que o alho-poró fique macio e translúcido.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Acabou</strong>: Adicionando o grão de bico: Adicione o grão de bico marrom à panela com o alho-poró e o alho. Misture bem e deixe cozinhar por cerca de 5-7 minutos, acrescentando sal e pimenta a gosto.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Acabou</strong>: Cozinhar as sardinhas: Noutra panela, aqueça um pouco de azeite e junte as sardinhas. Cozinhe em fogo médio por cerca de 2-3 minutos de cada lado, até dourar e estar cozido. Você pode adicionar uma pitada de sal e pimenta.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Acabou</strong>: Montagem do prato: Quando as sardinhas estiverem prontas, arrume-as em cima da cama de grão de bico e alho-poró. Decore com salsa fresca picada e sirva com rodelas de limão ao lado.</div></div>
 </div>
+<div class="tip-box"><h4>💡 Sugestão</h4><p>Prato simples e saboroso de frutos do mar. Sardinhas frescas fazem a diferença.</p></div>
+</div></div>
 
+<!-- GERMAN -->
 <div id="lang-de" class="lang-content">
-<p><strong>Datum:</strong> 2025-04-03</p>
-<p><em>Deutsche Uebersetzung folgt bald...</em></p>
-<h2>Ingredienti</h2>
+<div class="recipe-card">
+<h2 class="recipe-title">Gebackene Sardinen mit braunen Kichererbsen</h2>
+<p class="recipe-date">📅 3. April 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Zutaten</h3>
 <ul>
-<li>400 g di sarde fresche</li>
-<li>200 g di ceci marroni (già cotti o in scatola)</li>
-<li>2 porri</li>
-<li>2 spicchi d'aglio</li>
-<li>Olio extravergine d'oliva</li>
-<li>Sale q.b.</li>
-<li>Pepe nero q.b.</li>
-<li>Prezzemolo fresco tritato (per guarnire)</li>
-<li>Limone (per servire)</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparazione delle sarde</strong>: Se le sarde non sono già pulite, rimuovi le interiora e le teste, quindi lavale sotto acqua corrente e asciugale delicatamente.</p>
-<p>2. <strong>Cottura dei porri</strong>: Affetta i porri a rondelle sottili e trita finemente gli spicchi d'aglio. In una padella grande, scalda un filo d'olio extravergine d'oliva e aggiungi i porri e l'aglio. Fai soffriggere a fuoco medio fino a quando i porri diventano teneri e trasparenti.</p>
-<p>3. <strong>Aggiunta dei ceci</strong>: Aggiungi i ceci marroni nella padella con i porri e l'aglio. Mescola bene e lascia cuocere per circa 5-7 minuti, aggiustando di sale e pepe.</p>
-<p>4. <strong>Cottura delle sarde</strong>: In un'altra padella, scalda un po' d'olio e aggiungi le sarde. Cuoci a fuoco medio per circa 2-3 minuti per lato, fino a quando sono dorate e cotte. Puoi aggiungere un pizzico di sale e pepe.</p>
-<p>5. <strong>Assemblaggio del piatto</strong>: Una volta che le sarde sono pronte, disponile sopra il letto di ceci e porri. Guarnisci con prezzemolo fresco tritato e serve con spicchi di limone a lato.</p>
+<li>400 g frische Sardinen</li>
+<li>200 g braune Kichererbsen (bereits gekocht oder aus der Dose)</li>
+<li>2 Lauch</li>
+<li>2 Knoblauchzehen</li>
+<li>Extra natives Olivenöl</li>
+<li>Salz nach Geschmack</li>
+<li>Schwarzer Pfeffer nach Geschmack</li>
+<li>Gehackte frische Petersilie (zum Garnieren)</li>
+<li>Zitrone (zum Servieren)</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Zubereitung</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Vorbei</strong>: Vorbereitung der Sardinen: Wenn die Sardinen noch nicht sauber sind, entfernen Sie die Innereien und Köpfe, waschen Sie sie anschließend unter fließendem Wasser und trocknen Sie sie vorsichtig ab.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Vorbei</strong>: Den Lauch kochen: Den Lauch in dünne Scheiben schneiden und die Knoblauchzehen fein hacken. In einer großen Pfanne einen Schuss natives Olivenöl extra erhitzen und den Lauch und den Knoblauch hinzufügen. Bei mittlerer Hitze braten, bis der Lauch zart und glasig wird.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Vorbei</strong>: Kichererbsen hinzufügen: Die braunen Kichererbsen mit dem Lauch und dem Knoblauch in die Pfanne geben. Gut vermischen und etwa 5-7 Minuten kochen lassen, dabei mit Salz und Pfeffer abschmecken.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Vorbei</strong>: Sardinen zubereiten: In einer anderen Pfanne etwas Öl erhitzen und die Sardinen hineingeben. Bei mittlerer Hitze etwa 2-3 Minuten pro Seite braten, bis es goldbraun und durchgegart ist. Sie können eine Prise Salz und Pfeffer hinzufügen.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Vorbei</strong>: Zusammenstellen des Gerichts: Sobald die Sardinen fertig sind, legen Sie sie auf das Bett aus Kichererbsen und Lauch. Mit gehackter frischer Petersilie garnieren und mit Zitronenspalten als Beilage servieren.</div></div>
 </div>
+<div class="tip-box"><h4>💡 Tipp</h4><p>Einfaches und leckeres Meeresfrüchtegericht. Frische Sardinen machen den Unterschied.</p></div>
+</div></div>
 
+<!-- GREEK -->
 <div id="lang-el" class="lang-content">
-<p><strong>Hmerominia:</strong> 2025-04-03</p>
-<p><em>E elliniki metafrasi erhetai syntoma...</em></p>
-<h2>Ingredienti</h2>
+<div class="recipe-card">
+<h2 class="recipe-title">Σαρδέλες φούρνου με καστανά ρεβίθια</h2>
+<p class="recipe-date">📅 3 Απριλίου 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Υλικά</h3>
 <ul>
-<li>400 g di sarde fresche</li>
-<li>200 g di ceci marroni (già cotti o in scatola)</li>
-<li>2 porri</li>
-<li>2 spicchi d'aglio</li>
-<li>Olio extravergine d'oliva</li>
-<li>Sale q.b.</li>
-<li>Pepe nero q.b.</li>
-<li>Prezzemolo fresco tritato (per guarnire)</li>
-<li>Limone (per servire)</li>
-</ul>
-<h3>Procedimento</h3>
-<p>1. <strong>Preparazione delle sarde</strong>: Se le sarde non sono già pulite, rimuovi le interiora e le teste, quindi lavale sotto acqua corrente e asciugale delicatamente.</p>
-<p>2. <strong>Cottura dei porri</strong>: Affetta i porri a rondelle sottili e trita finemente gli spicchi d'aglio. In una padella grande, scalda un filo d'olio extravergine d'oliva e aggiungi i porri e l'aglio. Fai soffriggere a fuoco medio fino a quando i porri diventano teneri e trasparenti.</p>
-<p>3. <strong>Aggiunta dei ceci</strong>: Aggiungi i ceci marroni nella padella con i porri e l'aglio. Mescola bene e lascia cuocere per circa 5-7 minuti, aggiustando di sale e pepe.</p>
-<p>4. <strong>Cottura delle sarde</strong>: In un'altra padella, scalda un po' d'olio e aggiungi le sarde. Cuoci a fuoco medio per circa 2-3 minuti per lato, fino a quando sono dorate e cotte. Puoi aggiungere un pizzico di sale e pepe.</p>
-<p>5. <strong>Assemblaggio del piatto</strong>: Una volta che le sarde sono pronte, disponile sopra il letto di ceci e porri. Guarnisci con prezzemolo fresco tritato e serve con spicchi di limone a lato.</p>
+<li>400 γρ φρέσκια σαρδέλα</li>
+<li>200 γρ καστανά ρεβίθια (ήδη μαγειρεμένα ή σε κονσέρβα)</li>
+<li>2 πράσα</li>
+<li>2 σκελίδες σκόρδο</li>
+<li>Εξαιρετικό παρθένο ελαιόλαδο</li>
+<li>Αλάτι για γεύση</li>
+<li>Μαύρο πιπέρι για γεύση</li>
+<li>Φρέσκος μαϊντανός ψιλοκομμένος (για γαρνίρισμα)</li>
+<li>Λεμόνι (για το σερβίρισμα)</li>
+</ul></div>
+<div class="steps-box"><h3>👨‍🍳 Εκτέλεση</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Πάνω</strong>: Προετοιμασία της σαρδέλας: Εάν οι σαρδέλες δεν είναι ήδη καθαρές, αφαιρέστε τα μύχια και τα κεφάλια, στη συνέχεια πλύνετε με τρεχούμενο νερό και στεγνώστε τις απαλά.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Πάνω</strong>: Μαγείρεμα του πράσου: Κόψτε τα πράσα σε λεπτές φέτες και ψιλοκόψτε τις σκελίδες σκόρδου. Σε ένα μεγάλο τηγάνι ζεσταίνουμε λίγο έξτρα παρθένο ελαιόλαδο και προσθέτουμε τα πράσα και το σκόρδο. Τηγανίζουμε σε μέτρια φωτιά μέχρι τα πράσα να γίνουν τρυφερά και διάφανα.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Πάνω</strong>: Προσθέτοντας τα ρεβίθια: Προσθέστε τα καστανά ρεβίθια στο τηγάνι με τα πράσα και το σκόρδο. Ανακατεύουμε καλά και αφήνουμε να ψηθεί για περίπου 5-7 λεπτά, προσθέτοντας αλάτι και πιπέρι κατά βούληση.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Πάνω</strong>: Μαγείρεμα της σαρδέλας: Σε άλλο τηγάνι ζεσταίνουμε λίγο λάδι και προσθέτουμε τις σαρδέλες. Μαγειρέψτε σε μέτρια φωτιά για περίπου 2-3 ​​λεπτά ανά πλευρά, μέχρι να ροδίσουν και να ψηθούν. Μπορείτε να προσθέσετε μια πρέζα αλάτι και πιπέρι.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Πάνω</strong>: Συναρμολόγηση του πιάτου: Μόλις είναι έτοιμες οι σαρδέλες, τις απλώνουμε πάνω από το κρεβάτι με ρεβίθια και πράσα. Γαρνίρουμε με ψιλοκομμένο φρέσκο ​​μαϊντανό και σερβίρουμε με φέτες λεμονιού στο πλάι.</div></div>
 </div>
-</div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+<div class="tip-box"><h4>💡 Συμβουλή</h4><p>Απλό και νόστιμο πιάτο με θαλασσινά. Οι φρέσκες σαρδέλες κάνουν τη διαφορά.</p></div>
+</div></div>
 
 <div class="footer">
-<p>Leguminando - Ricette di stagione a base di legumi</p>
-<p>"Tutto e iniziato con hummus di ceci..."</p>
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<p>"Tutto è iniziato con hummus di ceci..."</p>
 </div>
-<div data-legumi="ceci" style="display:none;"></div>
-
-<script>
-function toggleFav(path, title) {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    if (favs[path]) { delete favs[path]; }
-    else { favs[path] = title; }
-    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
-    updateFavIcons();
-}
-function updateFavIcons() {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    document.querySelectorAll('.fav-btn').forEach(btn => {
-        let p = btn.getAttribute('data-path');
-        btn.textContent = favs[p] ? '❤️' : '🤍';
-    });
-}
-document.addEventListener('DOMContentLoaded', updateFavIcons);
-</script>
-
+</div>
 
 
 <div style="text-align:center; margin:30px 0; padding:20px;">
@@ -269,7 +279,6 @@ function condividiRicetta() {
     }
 }
 </script>
-
 
 </body>
 </html>
