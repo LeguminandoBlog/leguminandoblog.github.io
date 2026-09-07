@@ -1,0 +1,4 @@
+*_backup/
+*.py
+.rss_sync_state.json
+icona_bozzetto.*
