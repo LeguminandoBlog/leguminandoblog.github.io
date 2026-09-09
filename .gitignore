@@ -2,3 +2,14 @@
 *.py
 .rss_sync_state.json
 icona_bozzetto.*
+
+# File di lavoro traduzioni (JSON, log, backup HTML)
+_traduci_*.json
+_traduzioni_*.json
+_translate_*.log
+_extract_*.py
+_converti_*.py
+_build_*.py
+_fix_*.py
+*.html.bak_*
+salvataggio_*.zip
