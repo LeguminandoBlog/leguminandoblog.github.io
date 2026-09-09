@@ -8,81 +8,86 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://leguminandoblog.github.io/primavera/072.html">
+    <meta property="og:title" content="Ricetta del 2025-03-25">
+    <meta property="og:description" content="Ricetta su Leguminando - Ricetta del 2025-03-25">
+    <meta property="og:image" content="https://leguminandoblog.github.io/primavera/072.jpg">
+    <meta property="og:site_name" content="Leguminando">
+    <meta name="twitter:card" content="summary_large_image">
 <style>
-body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
-.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.content { background: white; padding: 30px; border-radius: 10px; }
-.content h1 { color: #8B4513; }
-.content h2 { color: #D2691E; }
-.content h3 { color: #8B4513; }
-.content ul { margin: 15px 0; padding-left: 20px; }
-.content li { margin: 8px 0; }
-.content p { margin: 12px 0; line-height: 1.6; }
-.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
-.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; background: #f8f5f0; min-height: 100vh; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+.header { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 40px 20px 30px; text-align: center; border-radius: 20px; margin-bottom: 30px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+.header h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.header .tagline { font-size: 1.2em; opacity: 0.9; font-style: italic; }
+.back-link { display: inline-block; margin: 20px 0; padding: 10px 20px; background: #8B4513; color: white; text-decoration: none; border-radius: 25px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.95em; transition: background 0.3s; }
 .back-link:hover { background: #D2691E; }
-
-.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
-.fav-bar { text-align: center; margin: 5px 0; }
-
-@media print {
-    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
-    .stats, .back-link, .badge { display: none !important; }
-    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
-    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
-    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
-    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
-}
-
-</style>
-<meta name="description" content="Ricetta del 2025-03-25">
-<meta property="og:title" content="Ricetta del 2025-03-25 | Leguminando">
-<meta property="og:description" content="Ricetta del 2025-03-25">
-<style>
-.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
-.lang-tab { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; transition: all 0.3s; }
-.lang-tab.active { background: #8B4513; color: white; }
-.lang-tab:hover:not(.active) { background: #D2691E; color: white; }
+.fav-bar { text-align: center; margin: 10px 0; }
+.fav-btn { cursor: pointer; font-size: 1.8em; user-select: none; display: inline-block; transition: transform 0.2s; }
+.fav-btn:hover { transform: scale(1.2); }
+.recipe-image { width: 100%; max-width: 700px; margin: 20px auto; display: block; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 30px 0; flex-wrap: wrap; }
+.lang-tab { padding: 10px 20px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; border-radius: 25px; cursor: pointer; font-size: 0.9em; transition: all 0.3s; }
+.lang-tab:hover { background: rgba(255,255,255,0.3); }
+.lang-tab.active { background: white; color: #c0392b; border-color: white; }
+.recipe-card { background: white; border-radius: 20px; padding: 40px; margin-bottom: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
 .lang-content { display: none; }
 .lang-content.active { display: block; }
+.recipe-title { font-size: 2.2em; color: #8B4513; margin-bottom: 10px; text-align: center; }
+.recipe-date { text-align: center; color: #666; font-size: 0.95em; margin-bottom: 25px; }
+.ingredients-box { background: linear-gradient(135deg, #fef9e7 0%, #fdebd0 100%); border-radius: 15px; padding: 25px; margin: 25px 0; border-left: 5px solid #D2691E; }
+.ingredients-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.ingredients-box ul { padding-left: 20px; }
+.ingredients-box li { margin: 8px 0; color: #5D4037; }
+.steps-box { margin: 25px 0; }
+.steps-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.step { display: flex; gap: 15px; margin: 15px 0; padding: 15px; background: #faf8f5; border-radius: 12px; align-items: flex-start; }
+.step-num { background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1em; flex-shrink: 0; }
+.step-text { flex: 1; color: #5D4037; line-height: 1.6; }
+.tip-box { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 15px; padding: 20px; margin: 25px 0; border-left: 5px solid #4caf50; }
+.tip-box h4 { color: #2e7d32; margin-bottom: 10px; }
+.tip-box p { color: #1b5e20; line-height: 1.6; }
+.footer { text-align: center; margin-top: 50px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+@media (max-width: 600px) { .header h1 { font-size: 2em; } .recipe-card { padding: 20px; } .recipe-title { font-size: 1.6em; } }
+@media print { .lang-tabs, .lang-tab, .fav-bar, .back-link { display: none !important; } body { background: white !important; } .recipe-card { box-shadow: none !important; break-inside: avoid; } }
 </style>
 <script>
-function showLang(lang) {
-    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
-    document.getElementById('lang-' + lang).classList.add('active');
-    event.target.classList.add('active');
-}
+function showLang(lang) { document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active')); document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active')); document.getElementById('lang-' + lang).classList.add('active'); event.target.classList.add('active'); }
+function toggleFav(path, title) { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); if (favs[path]) { delete favs[path]; } else { favs[path] = title; } localStorage.setItem('leguminando_favs', JSON.stringify(favs)); updateFavIcons(); }
+function updateFavIcons() { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); document.querySelectorAll('.fav-btn').forEach(btn => { let p = btn.getAttribute('data-path'); btn.textContent = favs[p] ? '❤️' : '🤍'; }); }
+document.addEventListener('DOMContentLoaded', updateFavIcons);
 </script>
 </head>
 <body>
+<div class="container">
 <div class="header">
-<h1>Leguminando</h1>
-<p>Ricette di stagione a base di legumi</p>
+<h1>🫘 Leguminando</h1>
+<p class="tagline">Ricette di stagione a base di legumi</p>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
-
+<a href="../index.html" class="back-link">← Torna alla Home</a>
 <div class="fav-bar">
 <span class="fav-btn" data-path="primavera/072.html" data-title="Ricetta del 2025-03-25" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
 </div>
-
 <img src="072.jpg" alt="Ricetta del 2025-03-25" class="recipe-image">
-
-<div class="content">
 <div class="lang-tabs">
-    <button class="lang-tab active" onclick="showLang('it')">IT</button>
-    <button class="lang-tab" onclick="showLang('en')">EN</button>
-    <button class="lang-tab" onclick="showLang('es')">ES</button>
-    <button class="lang-tab" onclick="showLang('pt')">PT</button>
-    <button class="lang-tab" onclick="showLang('de')">DE</button>
-    <button class="lang-tab" onclick="showLang('el')">EL</button>
+    <button class="lang-tab active" onclick="showLang('it')">🇮🇹 IT</button>
+    <button class="lang-tab" onclick="showLang('en')">🇬🇧 EN</button>
+    <button class="lang-tab" onclick="showLang('es')">🇪🇸 ES</button>
+    <button class="lang-tab" onclick="showLang('pt')">🇵🇹 PT</button>
+    <button class="lang-tab" onclick="showLang('de')">🇩🇪 DE</button>
+    <button class="lang-tab" onclick="showLang('el')">🇬🇷 EL</button>
 </div>
 
+<!-- ITALIANO -->
 <div id="lang-it" class="lang-content active">
-<p><strong>Data:</strong> 2025-03-25</p>
-<h3>Ingredienti:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Ricetta del 2025-03-25</h2>
+<p class="recipe-date">📅 25 Marzo 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredienti</h3>
 <ul>
 <li>200 g di cavolo cappuccio</li>
 <li>150 g di radicchio rosso</li>
@@ -91,195 +96,207 @@ function showLang(lang) {
 <li>1 carota (grattugiata)</li>
 <li>50 g di noci (tritate grossolanamente)</li>
 <li>50 g di formaggio feta (opzionale, sbriciolato)</li>
-<li>Olio extravergine d'oliva q.b.</li>
+<li>Olio extravergine d&#x27;oliva q.b.</li>
 <li>Aceto balsamico q.b.</li>
 <li>Sale e pepe q.b.</li>
 </ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione delle verdure</strong>: Lava il cavolo cappuccio e il radicchio rosso. Taglia il cavolo a strisce sottili e il radicchio a pezzetti.</p>
-<p>2. <strong>Mescolare gli ingredienti</strong>: In una ciotola grande, unisci il cavolo cappuccio, il radicchio, i fagioli borlotti, le rape rosse e la carota grattugiata. Mescola bene per amalgamare tutti gli ingredienti.</p>
-<p>3. <strong>Condire l'insalata</strong>: In una ciotolina a parte, prepara un condimento mescolando olio extravergine d'oliva, aceto balsamico, sale e pepe. Versa il condimento sull'insalata e mescola delicatamente.</p>
-<p>4. <strong>Aggiungere le noci e la feta</strong>: Prima di servire, aggiungi le noci tritate e, se desideri, la feta sbriciolata. Mescola leggermente.</p>
-<p>5. <strong>Servire</strong>: Lascia riposare l'insalata per qualche minuto affinché i sapori si amalgamino, poi servi fresca.</p>
-<h3>Consigli:</h3>
-<ul>
-<li>Puoi arricchire ulteriormente l'insalata con ingredienti come semi di girasole o avocado.</li>
-<li>Questa insalata è perfetta anche come contorno per piatti di carne o pesce.</li>
-</ul>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparazione</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Preparazione delle verdure</strong>: Lava il cavolo cappuccio e il radicchio rosso. Taglia il cavolo a strisce sottili e il radicchio a pezzetti.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Mescolare gli ingredienti</strong>: In una ciotola grande, unisci il cavolo cappuccio, il radicchio, i fagioli borlotti, le rape rosse e la carota grattugiata. Mescola bene per amalgamare tutti gli ingredienti.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Condire l&#x27;insalata</strong>: In una ciotolina a parte, prepara un condimento mescolando olio extravergine d&#x27;oliva, aceto balsamico, sale e pepe. Versa il condimento sull&#x27;insalata e mescola delicatamente.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Aggiungere le noci e la feta</strong>: Prima di servire, aggiungi le noci tritate e, se desideri, la feta sbriciolata. Mescola leggermente.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Servire</strong>: Lascia riposare l&#x27;insalata per qualche minuto affinché i sapori si amalgamino, poi servi fresca.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Suggerimento</h4>
+<p>Puoi arricchire ulteriormente l&#x27;insalata con ingredienti come semi di girasole o avocado.</p>
+<p>Questa insalata è perfetta anche come contorno per piatti di carne o pesce.</p>
+</div>
+</div>
 </div>
 
+<!-- ENGLISH -->
 <div id="lang-en" class="lang-content">
-<p><strong>Date:</strong> 2025-03-25</p>
-<p><em>English translation coming soon...</em></p>
-<h3>Ingredienti:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Ricetta del 2025-03-25</h2>
+<p class="recipe-date">📅 March 25, 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredients</h3>
 <ul>
-<li>200 g di cavolo cappuccio</li>
-<li>150 g di radicchio rosso</li>
-<li>200 g di fagioli borlotti (cotti)</li>
-<li>150 g di rape rosse (già cotte e tagliate a cubetti)</li>
-<li>1 carota (grattugiata)</li>
-<li>50 g di noci (tritate grossolanamente)</li>
-<li>50 g di formaggio feta (opzionale, sbriciolato)</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Aceto balsamico q.b.</li>
-<li>Sale e pepe q.b.</li>
-</ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione delle verdure</strong>: Lava il cavolo cappuccio e il radicchio rosso. Taglia il cavolo a strisce sottili e il radicchio a pezzetti.</p>
-<p>2. <strong>Mescolare gli ingredienti</strong>: In una ciotola grande, unisci il cavolo cappuccio, il radicchio, i fagioli borlotti, le rape rosse e la carota grattugiata. Mescola bene per amalgamare tutti gli ingredienti.</p>
-<p>3. <strong>Condire l'insalata</strong>: In una ciotolina a parte, prepara un condimento mescolando olio extravergine d'oliva, aceto balsamico, sale e pepe. Versa il condimento sull'insalata e mescola delicatamente.</p>
-<p>4. <strong>Aggiungere le noci e la feta</strong>: Prima di servire, aggiungi le noci tritate e, se desideri, la feta sbriciolata. Mescola leggermente.</p>
-<p>5. <strong>Servire</strong>: Lascia riposare l'insalata per qualche minuto affinché i sapori si amalgamino, poi servi fresca.</p>
-<h3>Consigli:</h3>
-<ul>
-<li>Puoi arricchire ulteriormente l'insalata con ingredienti come semi di girasole o avocado.</li>
-<li>Questa insalata è perfetta anche come contorno per piatti di carne o pesce.</li>
+<li>200 g of cabbage</li>
+<li>150 g of red radicchio</li>
+<li>200 g of borlotti beans (cooked)</li>
+<li>150 g of red turnips (already cooked and cut into cubes)</li>
+<li>1 carrot (grated)</li>
+<li>50 g of walnuts (coarsely chopped)</li>
+<li>50 g feta cheese (optional, crumbled)</li>
+<li>Extra virgin olive oil to taste</li>
+<li>Balsamic vinegar to taste</li>
+<li>Salt and pepper to taste</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparation</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Preparation of the vegetables</strong>: Wash the cabbage and the red radicchio. Cut the cabbage into thin strips and the radicchio into small pieces.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Mix the ingredients</strong>: In a large bowl, combine the cabbage, radicchio, pinto beans, red turnips and grated carrot. Mix well to combine all the ingredients.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Condiment the salad</strong>: In a separate bowl, prepare a dressing by mixing extra virgin olive oil, balsamic vinegar, salt and pepper. Pour the dressing over the salad and mix gently.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Add walnuts and feta</strong>: Before serving, add chopped walnuts and, if desired, crumbled feta. Mix lightly.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Serve</strong>: Let the salad rest for a few minutes to let the flavors blend, then serve fresh.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Tip</h4>
+<p>You can further enrich the salad with ingredients such as sunflower seeds or avocado.</p>
+<p>This salad is also perfect as a side dish for meat or fish dishes.</p>
+</div>
+</div>
+</div>
 
+<!-- SPANISH -->
 <div id="lang-es" class="lang-content">
-<p><strong>Fecha:</strong> 2025-03-25</p>
-<p><em>Traduccion al espanol proximamente...</em></p>
-<h3>Ingredienti:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Ricetta del 2025-03-25</h2>
+<p class="recipe-date">📅 25 de marzo de 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li>200 g di cavolo cappuccio</li>
-<li>150 g di radicchio rosso</li>
-<li>200 g di fagioli borlotti (cotti)</li>
-<li>150 g di rape rosse (già cotte e tagliate a cubetti)</li>
-<li>1 carota (grattugiata)</li>
-<li>50 g di noci (tritate grossolanamente)</li>
-<li>50 g di formaggio feta (opzionale, sbriciolato)</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Aceto balsamico q.b.</li>
-<li>Sale e pepe q.b.</li>
-</ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione delle verdure</strong>: Lava il cavolo cappuccio e il radicchio rosso. Taglia il cavolo a strisce sottili e il radicchio a pezzetti.</p>
-<p>2. <strong>Mescolare gli ingredienti</strong>: In una ciotola grande, unisci il cavolo cappuccio, il radicchio, i fagioli borlotti, le rape rosse e la carota grattugiata. Mescola bene per amalgamare tutti gli ingredienti.</p>
-<p>3. <strong>Condire l'insalata</strong>: In una ciotolina a parte, prepara un condimento mescolando olio extravergine d'oliva, aceto balsamico, sale e pepe. Versa il condimento sull'insalata e mescola delicatamente.</p>
-<p>4. <strong>Aggiungere le noci e la feta</strong>: Prima di servire, aggiungi le noci tritate e, se desideri, la feta sbriciolata. Mescola leggermente.</p>
-<p>5. <strong>Servire</strong>: Lascia riposare l'insalata per qualche minuto affinché i sapori si amalgamino, poi servi fresca.</p>
-<h3>Consigli:</h3>
-<ul>
-<li>Puoi arricchire ulteriormente l'insalata con ingredienti come semi di girasole o avocado.</li>
-<li>Questa insalata è perfetta anche come contorno per piatti di carne o pesce.</li>
+<li>200 g de col</li>
+<li>150 g de achicoria roja</li>
+<li>200 g de judías borlotti (cocidas)</li>
+<li>150 g de nabos rojos (ya cocidos y cortados en dados)</li>
+<li>1 zanahoria (rallada)</li>
+<li>50 g de nueces (picadas en trozos grandes)</li>
+<li>50 g de queso feta (opcional, desmenuzado)</li>
+<li>Aceite de oliva virgen extra al gusto</li>
+<li>Vinagre balsámico al gusto</li>
+<li>Sal y pimienta al gusto</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparación</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Preparación de las verduras</strong>: Lavar la col y la achicoria roja. Cortar la col en tiras finas y la achicoria en trozos pequeños.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Mezclar los ingredientes</strong>: En un tazón grande, combine el repollo, la achicoria, los frijoles pintos, los nabos rojos y la zanahoria rallada. Mezclar bien para combinar todos los ingredientes.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Condimenta la ensalada</strong>: En un recipiente aparte, prepara un aderezo mezclando aceite de oliva virgen extra, vinagre balsámico, sal y pimienta. Vierta el aderezo sobre la ensalada y mezcle suavemente.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Agregue nueces y queso feta</strong>: Antes de servir, agregue nueces picadas y, si lo desea, queso feta desmenuzado. Mezclar ligeramente.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Servir</strong>: Deje reposar la ensalada durante unos minutos para que los sabores se mezclen y luego sirva fresca.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Consejo</h4>
+<p>Puedes enriquecer aún más la ensalada con ingredientes como pipas de girasol o aguacate.</p>
+<p>Esta ensalada también es perfecta como guarnición de platos de carne o pescado.</p>
+</div>
+</div>
+</div>
 
+<!-- PORTUGUESE -->
 <div id="lang-pt" class="lang-content">
-<p><strong>Data:</strong> 2025-03-25</p>
-<p><em>Traducao em portugues em breve...</em></p>
-<h3>Ingredienti:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Ricetta del 2025-03-25</h2>
+<p class="recipe-date">📅 25 de março de 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li>200 g di cavolo cappuccio</li>
-<li>150 g di radicchio rosso</li>
-<li>200 g di fagioli borlotti (cotti)</li>
-<li>150 g di rape rosse (già cotte e tagliate a cubetti)</li>
-<li>1 carota (grattugiata)</li>
-<li>50 g di noci (tritate grossolanamente)</li>
-<li>50 g di formaggio feta (opzionale, sbriciolato)</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Aceto balsamico q.b.</li>
-<li>Sale e pepe q.b.</li>
-</ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione delle verdure</strong>: Lava il cavolo cappuccio e il radicchio rosso. Taglia il cavolo a strisce sottili e il radicchio a pezzetti.</p>
-<p>2. <strong>Mescolare gli ingredienti</strong>: In una ciotola grande, unisci il cavolo cappuccio, il radicchio, i fagioli borlotti, le rape rosse e la carota grattugiata. Mescola bene per amalgamare tutti gli ingredienti.</p>
-<p>3. <strong>Condire l'insalata</strong>: In una ciotolina a parte, prepara un condimento mescolando olio extravergine d'oliva, aceto balsamico, sale e pepe. Versa il condimento sull'insalata e mescola delicatamente.</p>
-<p>4. <strong>Aggiungere le noci e la feta</strong>: Prima di servire, aggiungi le noci tritate e, se desideri, la feta sbriciolata. Mescola leggermente.</p>
-<p>5. <strong>Servire</strong>: Lascia riposare l'insalata per qualche minuto affinché i sapori si amalgamino, poi servi fresca.</p>
-<h3>Consigli:</h3>
-<ul>
-<li>Puoi arricchire ulteriormente l'insalata con ingredienti come semi di girasole o avocado.</li>
-<li>Questa insalata è perfetta anche come contorno per piatti di carne o pesce.</li>
+<li>200g de repolho</li>
+<li>150 g de radicchio vermelho</li>
+<li>200 g de feijão borlotti (cozido)</li>
+<li>150 g de nabos vermelhos (já cozidos e cortados em cubos)</li>
+<li>1 cenoura (ralada)</li>
+<li>50 g de nozes (picadas grosseiramente)</li>
+<li>50 g de queijo feta (opcional, esfarelado)</li>
+<li>Azeite extra virgem a gosto</li>
+<li>Vinagre balsâmico a gosto</li>
+<li>Sal e pimenta a gosto</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparação</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Preparo dos legumes</strong>: Lave o repolho e o radicchio vermelho. Corte o repolho em tiras finas e o radicchio em pedaços pequenos.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Misture os ingredientes</strong>: Em uma tigela grande, misture o repolho, o radicchio, o feijão, o nabo vermelho e a cenoura ralada. Misture bem para combinar todos os ingredientes.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Condure a salada</strong>: Em uma tigela separada, prepare um molho misturando azeite de oliva extra virgem, vinagre balsâmico, sal e pimenta. Despeje o molho sobre a salada e misture delicadamente.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Adicione nozes e queijo feta</strong>: Antes de servir, adicione as nozes picadas e, se desejar, o queijo feta esfarelado. Misture levemente.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Servir</strong>: Deixe a salada descansar por alguns minutos para que os sabores se misturem e depois sirva fresca. - Você pode enriquecer ainda mais a salada com ingredientes como sementes de girassol ou abacate. - Esta salada também é perfeita como acompanhamento de pratos de carne ou peixe.</div></div>
+</div>
+</div>
+</div>
 
+<!-- GERMAN -->
 <div id="lang-de" class="lang-content">
-<p><strong>Datum:</strong> 2025-03-25</p>
-<p><em>Deutsche Uebersetzung folgt bald...</em></p>
-<h3>Ingredienti:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Ricetta del 2025-03-25</h2>
+<p class="recipe-date">📅 25. März 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Zutaten</h3>
 <ul>
-<li>200 g di cavolo cappuccio</li>
-<li>150 g di radicchio rosso</li>
-<li>200 g di fagioli borlotti (cotti)</li>
-<li>150 g di rape rosse (già cotte e tagliate a cubetti)</li>
-<li>1 carota (grattugiata)</li>
-<li>50 g di noci (tritate grossolanamente)</li>
-<li>50 g di formaggio feta (opzionale, sbriciolato)</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Aceto balsamico q.b.</li>
-<li>Sale e pepe q.b.</li>
-</ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione delle verdure</strong>: Lava il cavolo cappuccio e il radicchio rosso. Taglia il cavolo a strisce sottili e il radicchio a pezzetti.</p>
-<p>2. <strong>Mescolare gli ingredienti</strong>: In una ciotola grande, unisci il cavolo cappuccio, il radicchio, i fagioli borlotti, le rape rosse e la carota grattugiata. Mescola bene per amalgamare tutti gli ingredienti.</p>
-<p>3. <strong>Condire l'insalata</strong>: In una ciotolina a parte, prepara un condimento mescolando olio extravergine d'oliva, aceto balsamico, sale e pepe. Versa il condimento sull'insalata e mescola delicatamente.</p>
-<p>4. <strong>Aggiungere le noci e la feta</strong>: Prima di servire, aggiungi le noci tritate e, se desideri, la feta sbriciolata. Mescola leggermente.</p>
-<p>5. <strong>Servire</strong>: Lascia riposare l'insalata per qualche minuto affinché i sapori si amalgamino, poi servi fresca.</p>
-<h3>Consigli:</h3>
-<ul>
-<li>Puoi arricchire ulteriormente l'insalata con ingredienti come semi di girasole o avocado.</li>
-<li>Questa insalata è perfetta anche come contorno per piatti di carne o pesce.</li>
+<li>200 g Kohl</li>
+<li>150 g roter Radicchio</li>
+<li>200 g Borlottibohnen (gekocht)</li>
+<li>150 g rote Rüben (bereits gekocht und in Würfel geschnitten)</li>
+<li>1 Karotte (gerieben)</li>
+<li>50 g Walnüsse (grob gehackt)</li>
+<li>50 g Feta-Käse (optional, zerbröckelt)</li>
+<li>Extra natives Olivenöl nach Geschmack</li>
+<li>Balsamico-Essig nach Geschmack</li>
+<li>Salz und Pfeffer nach Geschmack</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Zubereitung</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Zubereitung des Gemüses</strong>: Den Kohl und den roten Radicchio waschen. Den Kohl in dünne Streifen und den Radicchio in kleine Stücke schneiden.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Zutaten mischen</strong>: In einer großen Schüssel Kohl, Radicchio, Pintobohnen, rote Rüben und geriebene Karotten vermischen. Gut vermischen, um alle Zutaten zu vereinen.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Den Salat würzen</strong>: Bereiten Sie in einer separaten Schüssel ein Dressing zu, indem Sie natives Olivenöl extra, Balsamico-Essig, Salz und Pfeffer vermischen. Das Dressing über den Salat gießen und vorsichtig vermischen.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Walnüsse und Feta hinzufügen</strong>: Vor dem Servieren gehackte Walnüsse und, falls gewünscht, zerbröselten Feta hinzufügen. Leicht mischen.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Servieren</strong>: Lassen Sie den Salat einige Minuten ruhen, damit sich die Aromen vermischen, und servieren Sie ihn dann frisch.</div></div>
+</div>
+<div class="tip-box">
+<h4>💡 Tipp</h4>
+<p>Sie können den Salat noch mit Zutaten wie Sonnenblumenkernen oder Avocado anreichern.</p>
+<p>Dieser Salat eignet sich auch hervorragend als Beilage zu Fleisch- oder Fischgerichten.</p>
+</div>
+</div>
+</div>
 
+<!-- GREEK -->
 <div id="lang-el" class="lang-content">
-<p><strong>Hmerominia:</strong> 2025-03-25</p>
-<p><em>E elliniki metafrasi erhetai syntoma...</em></p>
-<h3>Ingredienti:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Ricetta del 2025-03-25</h2>
+<p class="recipe-date">📅 25 Μαρτίου 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Υλικά</h3>
 <ul>
-<li>200 g di cavolo cappuccio</li>
-<li>150 g di radicchio rosso</li>
-<li>200 g di fagioli borlotti (cotti)</li>
-<li>150 g di rape rosse (già cotte e tagliate a cubetti)</li>
-<li>1 carota (grattugiata)</li>
-<li>50 g di noci (tritate grossolanamente)</li>
-<li>50 g di formaggio feta (opzionale, sbriciolato)</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Aceto balsamico q.b.</li>
-<li>Sale e pepe q.b.</li>
-</ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione delle verdure</strong>: Lava il cavolo cappuccio e il radicchio rosso. Taglia il cavolo a strisce sottili e il radicchio a pezzetti.</p>
-<p>2. <strong>Mescolare gli ingredienti</strong>: In una ciotola grande, unisci il cavolo cappuccio, il radicchio, i fagioli borlotti, le rape rosse e la carota grattugiata. Mescola bene per amalgamare tutti gli ingredienti.</p>
-<p>3. <strong>Condire l'insalata</strong>: In una ciotolina a parte, prepara un condimento mescolando olio extravergine d'oliva, aceto balsamico, sale e pepe. Versa il condimento sull'insalata e mescola delicatamente.</p>
-<p>4. <strong>Aggiungere le noci e la feta</strong>: Prima di servire, aggiungi le noci tritate e, se desideri, la feta sbriciolata. Mescola leggermente.</p>
-<p>5. <strong>Servire</strong>: Lascia riposare l'insalata per qualche minuto affinché i sapori si amalgamino, poi servi fresca.</p>
-<h3>Consigli:</h3>
-<ul>
-<li>Puoi arricchire ulteriormente l'insalata con ingredienti come semi di girasole o avocado.</li>
-<li>Questa insalata è perfetta anche come contorno per piatti di carne o pesce.</li>
+<li>200 γραμμάρια λάχανου</li>
+<li>150 γραμμάρια κόκκινο ραντίτσιο</li>
+<li>200 γραμμάρια φασόλια borlotti (μαγειρεμένα)</li>
+<li>150 γραμμάρια κόκκινα γογγύλια (ήδη ψημένα και κομμένα σε κύβους)</li>
+<li>1 καρότο (τριμμένο)</li>
+<li>50 γρ καρύδια (χοντροκομμένα)</li>
+<li>50 γρ τυρί φέτα (προαιρετικά, θρυμματισμένη)</li>
+<li>Εξαιρετικό παρθένο ελαιόλαδο για γεύση</li>
+<li>Βαλσάμικο για γεύση</li>
+<li>Αλάτι και πιπέρι για γεύση</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Εκτέλεση</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Προετοιμασία των λαχανικών</strong>: Πλένουμε το λάχανο και το κόκκινο ραντίτσιο. Κόβουμε το λάχανο σε λεπτές λωρίδες και το ραντίτσιο σε μικρά κομμάτια.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Ανακατεύουμε τα υλικά</strong>: Σε ένα μεγάλο μπολ ανακατεύουμε το λάχανο, το ραντίτσιο, τα φασόλια pinto, τα κόκκινα γογγύλια και το τριμμένο καρότο. Ανακατεύουμε καλά να ενωθούν όλα τα υλικά.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Καχαρικά τη σαλάτα</strong>: Σε ένα ξεχωριστό μπολ ετοιμάζετε ένα dressing ανακατεύοντας έξτρα παρθένο ελαιόλαδο, βαλσάμικο ξύδι, αλάτι και πιπέρι. Περιχύνουμε με το dressing τη σαλάτα και ανακατεύουμε απαλά.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Προσθέστε καρύδια και φέτα</strong>: Πριν σερβίρετε, προσθέστε ψιλοκομμένα καρύδια και, αν θέλετε, θρυμματισμένη φέτα. Ανακατεύουμε ελαφρά.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Σερβίρετε</strong>: Αφήστε τη σαλάτα να ξεκουραστεί για λίγα λεπτά για να ενωθούν οι γεύσεις και μετά σερβίρετε φρέσκια.</div></div>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+<div class="tip-box">
+<h4>💡 Συμβουλή</h4>
+<p>Μπορείτε να εμπλουτίσετε περαιτέρω τη σαλάτα με υλικά όπως ηλιόσπορους ή αβοκάντο.</p>
+<p>Αυτή η σαλάτα είναι επίσης τέλεια ως συνοδευτικό για πιάτα με κρέας ή ψάρι.</p>
+</div>
+</div>
+</div>
 
 <div class="footer">
-<p>Leguminando - Ricette di stagione a base di legumi</p>
-<p>"Tutto e iniziato con hummus di ceci..."</p>
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<p>"Tutto è iniziato con hummus di ceci..."</p>
 </div>
-<div data-legumi="ceci,fagioli" style="display:none;"></div>
-
-<script>
-function toggleFav(path, title) {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    if (favs[path]) { delete favs[path]; }
-    else { favs[path] = title; }
-    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
-    updateFavIcons();
-}
-function updateFavIcons() {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    document.querySelectorAll('.fav-btn').forEach(btn => {
-        let p = btn.getAttribute('data-path');
-        btn.textContent = favs[p] ? '❤️' : '🤍';
-    });
-}
-document.addEventListener('DOMContentLoaded', updateFavIcons);
-</script>
-
+</div>
 
 
 <div style="text-align:center; margin:30px 0; padding:20px;">
@@ -305,7 +322,6 @@ function condividiRicetta() {
     }
 }
 </script>
-
 
 </body>
 </html>

@@ -8,75 +8,86 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://leguminandoblog.github.io/primavera/048.html">
+    <meta property="og:title" content="Risotto Primaverile agli Asparagi e Funghi Porcini">
+    <meta property="og:description" content="Ricetta su Leguminando - Risotto Primaverile agli Asparagi e Funghi Porcini">
+    <meta property="og:image" content="https://leguminandoblog.github.io/primavera/048.jpg">
+    <meta property="og:site_name" content="Leguminando">
+    <meta name="twitter:card" content="summary_large_image">
 <style>
-body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
-.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.content { background: white; padding: 30px; border-radius: 10px; }
-.content h1 { color: #8B4513; }
-.content h2 { color: #D2691E; }
-.content h3 { color: #8B4513; }
-.content ul { margin: 15px 0; padding-left: 20px; }
-.content li { margin: 8px 0; }
-.content p { margin: 12px 0; line-height: 1.6; }
-.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
-.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; background: #f8f5f0; min-height: 100vh; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+.header { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 40px 20px 30px; text-align: center; border-radius: 20px; margin-bottom: 30px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+.header h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.header .tagline { font-size: 1.2em; opacity: 0.9; font-style: italic; }
+.back-link { display: inline-block; margin: 20px 0; padding: 10px 20px; background: #8B4513; color: white; text-decoration: none; border-radius: 25px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.95em; transition: background 0.3s; }
 .back-link:hover { background: #D2691E; }
-.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
-.fav-bar { text-align: center; margin: 5px 0; }
-@media print {
-    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
-    .stats, .back-link, .badge { display: none !important; }
-    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
-    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
-    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
-    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
-}
-</style>
-<meta name="description" content="Risotto primaverile con asparagi, funghi porcini e piselli">
-<meta property="og:title" content="Risotto Primaverile agli Asparagi e Funghi Porcini | Leguminando">
-<meta property="og:description" content="Risotto primaverile con asparagi, funghi porcini e piselli">
-<style>
-.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
-.lang-tab { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; transition: all 0.3s; }
-.lang-tab.active { background: #8B4513; color: white; }
-.lang-tab:hover:not(.active) { background: #D2691E; color: white; }
+.fav-bar { text-align: center; margin: 10px 0; }
+.fav-btn { cursor: pointer; font-size: 1.8em; user-select: none; display: inline-block; transition: transform 0.2s; }
+.fav-btn:hover { transform: scale(1.2); }
+.recipe-image { width: 100%; max-width: 700px; margin: 20px auto; display: block; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 30px 0; flex-wrap: wrap; }
+.lang-tab { padding: 10px 20px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; border-radius: 25px; cursor: pointer; font-size: 0.9em; transition: all 0.3s; }
+.lang-tab:hover { background: rgba(255,255,255,0.3); }
+.lang-tab.active { background: white; color: #c0392b; border-color: white; }
+.recipe-card { background: white; border-radius: 20px; padding: 40px; margin-bottom: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
 .lang-content { display: none; }
 .lang-content.active { display: block; }
+.recipe-title { font-size: 2.2em; color: #8B4513; margin-bottom: 10px; text-align: center; }
+.recipe-date { text-align: center; color: #666; font-size: 0.95em; margin-bottom: 25px; }
+.ingredients-box { background: linear-gradient(135deg, #fef9e7 0%, #fdebd0 100%); border-radius: 15px; padding: 25px; margin: 25px 0; border-left: 5px solid #D2691E; }
+.ingredients-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.ingredients-box ul { padding-left: 20px; }
+.ingredients-box li { margin: 8px 0; color: #5D4037; }
+.steps-box { margin: 25px 0; }
+.steps-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.step { display: flex; gap: 15px; margin: 15px 0; padding: 15px; background: #faf8f5; border-radius: 12px; align-items: flex-start; }
+.step-num { background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1em; flex-shrink: 0; }
+.step-text { flex: 1; color: #5D4037; line-height: 1.6; }
+.tip-box { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 15px; padding: 20px; margin: 25px 0; border-left: 5px solid #4caf50; }
+.tip-box h4 { color: #2e7d32; margin-bottom: 10px; }
+.tip-box p { color: #1b5e20; line-height: 1.6; }
+.footer { text-align: center; margin-top: 50px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+@media (max-width: 600px) { .header h1 { font-size: 2em; } .recipe-card { padding: 20px; } .recipe-title { font-size: 1.6em; } }
+@media print { .lang-tabs, .lang-tab, .fav-bar, .back-link { display: none !important; } body { background: white !important; } .recipe-card { box-shadow: none !important; break-inside: avoid; } }
 </style>
 <script>
-function showLang(lang) {
-    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
-    document.getElementById('lang-' + lang).classList.add('active');
-    event.target.classList.add('active');
-}
+function showLang(lang) { document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active')); document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active')); document.getElementById('lang-' + lang).classList.add('active'); event.target.classList.add('active'); }
+function toggleFav(path, title) { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); if (favs[path]) { delete favs[path]; } else { favs[path] = title; } localStorage.setItem('leguminando_favs', JSON.stringify(favs)); updateFavIcons(); }
+function updateFavIcons() { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); document.querySelectorAll('.fav-btn').forEach(btn => { let p = btn.getAttribute('data-path'); btn.textContent = favs[p] ? '❤️' : '🤍'; }); }
+document.addEventListener('DOMContentLoaded', updateFavIcons);
 </script>
 </head>
 <body>
+<div class="container">
 <div class="header">
-<h1>Leguminando</h1>
-<p>Ricette di stagione a base di legumi</p>
+<h1>🫘 Leguminando</h1>
+<p class="tagline">Ricette di stagione a base di legumi</p>
 </div>
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+<a href="../index.html" class="back-link">← Torna alla Home</a>
 <div class="fav-bar">
 <span class="fav-btn" data-path="primavera/048.html" data-title="Risotto Primaverile agli Asparagi e Funghi Porcini" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
 </div>
 <img src="048.jpg" alt="Risotto Primaverile agli Asparagi e Funghi Porcini" class="recipe-image">
-<div class="content">
 <div class="lang-tabs">
-    <button class="lang-tab active" onclick="showLang('it')">IT</button>
-    <button class="lang-tab" onclick="showLang('en')">EN</button>
-    <button class="lang-tab" onclick="showLang('es')">ES</button>
-    <button class="lang-tab" onclick="showLang('pt')">PT</button>
-    <button class="lang-tab" onclick="showLang('de')">DE</button>
-    <button class="lang-tab" onclick="showLang('el')">EL</button>
+    <button class="lang-tab active" onclick="showLang('it')">🇮🇹 IT</button>
+    <button class="lang-tab" onclick="showLang('en')">🇬🇧 EN</button>
+    <button class="lang-tab" onclick="showLang('es')">🇪🇸 ES</button>
+    <button class="lang-tab" onclick="showLang('pt')">🇵🇹 PT</button>
+    <button class="lang-tab" onclick="showLang('de')">🇩🇪 DE</button>
+    <button class="lang-tab" onclick="showLang('el')">🇬🇷 EL</button>
 </div>
 
+<!-- ITALIANO -->
 <div id="lang-it" class="lang-content active">
-<p><strong>Data:</strong> 2025-04-27</p>
-<h2>Risotto Primaverile agli Asparagi e Funghi Porcini</h2>
-<h3>Ingredienti:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Risotto Primaverile agli Asparagi e Funghi Porcini</h2>
+<p class="recipe-date">📅 27 Aprile 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredienti</h3>
 <ul>
 <li>300 g di riso Arborio</li>
 <li>200 g di funghi porcini freschi (o secchi)</li>
@@ -90,20 +101,27 @@ function showLang(lang) {
 <li>Sale e pepe q.b.</li>
 <li>Prezzemolo fresco per guarnire</li>
 </ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione degli ingredienti</strong>: Se usi funghi porcini secchi, mettili in ammollo in acqua calda per circa 30 minuti. Taglia i funghi porcini freschi a fette. Pulisci e affetta il porro. Lava gli asparagi e tagliali a pezzi di circa 3-4 cm.</p>
-<p>2. <strong>Cottura dei funghi e porri</strong>: In una pentola, scalda 2 cucchiai d'olio e aggiungi il porro. Fai soffriggere a fuoco medio fino a quando diventa trasparente. Aggiungi i funghi e cuoci per altri 5-7 minuti.</p>
-<p>3. <strong>Cottura del riso</strong>: Aggiungi il riso nella pentola e fallo tostare per un paio di minuti. Sfuma con il vino bianco e lascia evaporare.</p>
-<p>4. <strong>Aggiunta del brodo</strong>: Inizia ad aggiungere il brodo vegetale caldo, un mestolo alla volta, mescolando frequentemente. Aggiungi gli asparagi e i piselli dopo circa 5 minuti.</p>
-<p>5. <strong>Cottura finale</strong>: Continua a cuocere il risotto per circa 15-18 minuti, fino a quando il riso è al dente. Regola di sale e pepe a piacere.</p>
-<p>6. <strong>Mantecatura</strong>: Togli il risotto dal fuoco e aggiungi il parmigiano grattugiato e un cucchiaio d'olio restante. Mescola bene fino a ottenere una consistenza cremosa.</p>
-<p>7. <strong>Servizio</strong>: Lascia riposare il risotto per un paio di minuti, poi servi caldo, guarnito con prezzemolo fresco tritato.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparazione</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Preparazione degli ingredienti</strong>: Se usi funghi porcini secchi, mettili in ammollo in acqua calda per circa 30 minuti. Taglia i funghi porcini freschi a fette. Pulisci e affetta il porro. Lava gli asparagi e tagliali a pezzi di circa 3-4 cm.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Cottura dei funghi e porri</strong>: In una pentola, scalda 2 cucchiai d'olio e aggiungi il porro. Fai soffriggere a fuoco medio fino a quando diventa trasparente. Aggiungi i funghi e cuoci per altri 5-7 minuti.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Cottura del riso</strong>: Aggiungi il riso nella pentola e fallo tostare per un paio di minuti. Sfuma con il vino bianco e lascia evaporare.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Aggiunta del brodo</strong>: Inizia ad aggiungere il brodo vegetale caldo, un mestolo alla volta, mescolando frequentemente. Aggiungi gli asparagi e i piselli dopo circa 5 minuti.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Cottura finale</strong>: Continua a cuocere il risotto per circa 15-18 minuti, fino a quando il riso è al dente. Regola di sale e pepe a piacere.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Mantecatura</strong>: Togli il risotto dal fuoco e aggiungi il parmigiano grattugiato e un cucchiaio d'olio restante. Mescola bene fino a ottenere una consistenza cremosa.</div></div>
+<div class="step"><div class="step-num">7</div><div class="step-text"><strong>Servizio</strong>: Lascia riposare il risotto per un paio di minuti, poi servi caldo, guarnito con prezzemolo fresco tritato.</div></div>
+</div>
+</div>
 </div>
 
+<!-- ENGLISH -->
 <div id="lang-en" class="lang-content">
-<p><strong>Date:</strong> 2025-04-27</p>
-<h2>Spring Risotto with Asparagus and Porcini Mushrooms</h2>
-<h3>Ingredients:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Risotto Primaverile agli Asparagi e Funghi Porcini</h2>
+<p class="recipe-date">📅 </p>
+<div class="ingredients-box">
+<h3>🥗 Ingredients</h3>
 <ul>
 <li>300 g Arborio rice</li>
 <li>200 g fresh porcini mushrooms (or dried)</li>
@@ -117,20 +135,27 @@ function showLang(lang) {
 <li>Salt and pepper to taste</li>
 <li>Fresh parsley for garnish</li>
 </ul>
-<h3>Instructions:</h3>
-<p>1. <strong>Preparation</strong>: If using dried porcini, soak them in warm water for about 30 minutes. Slice fresh porcini. Clean and chop the leek. Wash asparagus and cut into 3-4 cm pieces.</p>
-<p>2. <strong>Cooking mushrooms and leeks</strong>: Heat 2 tablespoons of oil in a pot, add the leek and sauté over medium heat until translucent. Add mushrooms and cook for another 5-7 minutes.</p>
-<p>3. <strong>Toasting rice</strong>: Add rice to the pot and toast for a couple of minutes. Deglaze with white wine and let it evaporate.</p>
-<p>4. <strong>Adding broth</strong>: Begin adding hot vegetable broth one ladle at a time, stirring frequently. Add asparagus and peas after about 5 minutes.</p>
-<p>5. <strong>Final cooking</strong>: Continue cooking the risotto for about 15-18 minutes, until the rice is al dente. Season with salt and pepper to taste.</p>
-<p>6. <strong>Creaming</strong>: Remove from heat, add grated Parmesan and the remaining tablespoon of oil. Stir well until creamy.</p>
-<p>7. <strong>Serving</strong>: Let the risotto rest for a couple of minutes, then serve hot, garnished with chopped fresh parsley.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparation</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Passo</strong>: If using dried porcini, soak them in warm water for about 30 minutes. Slice fresh porcini. Clean and chop the leek. Wash asparagus and cut into 3-4 cm pieces.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Cooking mushrooms and leeks</strong>: Heat 2 tablespoons of oil in a pot, add the leek and sauté over medium heat until translucent. Add mushrooms and cook for another 5-7 minutes.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Toasting rice</strong>: Add rice to the pot and toast for a couple of minutes. Deglaze with white wine and let it evaporate.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Adding broth</strong>: Begin adding hot vegetable broth one ladle at a time, stirring frequently. Add asparagus and peas after about 5 minutes.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Final cooking</strong>: Continue cooking the risotto for about 15-18 minutes, until the rice is al dente. Season with salt and pepper to taste.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Creaming</strong>: Remove from heat, add grated Parmesan and the remaining tablespoon of oil. Stir well until creamy.</div></div>
+<div class="step"><div class="step-num">7</div><div class="step-text"><strong>Serving</strong>: Let the risotto rest for a couple of minutes, then serve hot, garnished with chopped fresh parsley.</div></div>
+</div>
+</div>
 </div>
 
+<!-- SPANISH -->
 <div id="lang-es" class="lang-content">
-<p><strong>Fecha:</strong> 2025-04-27</p>
-<h2>Risotto Primaveral con Espárragos y Setas Porcini</h2>
-<h3>Ingredientes:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Risotto Primaverile agli Asparagi e Funghi Porcini</h2>
+<p class="recipe-date">📅 </p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
 <li>300 g de arroz Arborio</li>
 <li>200 g de setas porcini frescas (o secas)</li>
@@ -144,20 +169,27 @@ function showLang(lang) {
 <li>Sal y pimienta al gusto</li>
 <li>Perejil fresco para decorar</li>
 </ul>
-<h3>Preparación:</h3>
-<p>1. <strong>Preparación de los ingredientes</strong>: Si usas porcini secos, ponlos en remojo en agua caliente unos 30 minutos. Corta las setas frescas en láminas. Limpia y corta el puerro. Lava los espárragos y córtalos en trozos de 3-4 cm.</p>
-<p>2. <strong>Cocción de setas y puerros</strong>: En una olla, calienta 2 cucharadas de aceite y añade el puerro. Sofríe a fuego medio hasta que esté transparente. Añade las setas y cuece 5-7 minutos más.</p>
-<p>3. <strong>Tostado del arroz</strong>: Añade el arroz a la olla y tóstalo un par de minutos. Desglasa con el vino blanco y deja que evapore.</p>
-<p>4. <strong>Añadir el caldo</strong>: Empieza a añadir el caldo de verduras caliente, un cucharón cada vez, removiendo frecuentemente. Añade los espárragos y los guisantes tras unos 5 minutos.</p>
-<p>5. <strong>Cocción final</strong>: Sigue cocinando el risotto unos 15-18 minutos, hasta que el arroz esté al dente. Corrige de sal y pimienta.</p>
-<p>6. <strong>Mantecado</strong>: Retira del fuego, añade el parmesano rallado y la cucharada de aceite restante. Remueve bien hasta obtener una consistencia cremosa.</p>
-<p>7. <strong>Emplatado</strong>: Deja reposar el risotto un par de minutos y sírvelo caliente, decorado con perejil fresco picado.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparación</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Preparación de los ingredientes</strong>: Si usas porcini secos, ponlos en remojo en agua caliente unos 30 minutos. Corta las setas frescas en láminas. Limpia y corta el puerro. Lava los espárragos y córtalos en trozos de 3-4 cm.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Cocción de setas y puerros</strong>: En una olla, calienta 2 cucharadas de aceite y añade el puerro. Sofríe a fuego medio hasta que esté transparente. Añade las setas y cuece 5-7 minutos más.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Tostado del arroz</strong>: Añade el arroz a la olla y tóstalo un par de minutos. Desglasa con el vino blanco y deja que evapore.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Añadir el caldo</strong>: Empieza a añadir el caldo de verduras caliente, un cucharón cada vez, removiendo frecuentemente. Añade los espárragos y los guisantes tras unos 5 minutos.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Cocción final</strong>: Sigue cocinando el risotto unos 15-18 minutos, hasta que el arroz esté al dente. Corrige de sal y pimienta.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Mantecado</strong>: Retira del fuego, añade el parmesano rallado y la cucharada de aceite restante. Remueve bien hasta obtener una consistencia cremosa.</div></div>
+<div class="step"><div class="step-num">7</div><div class="step-text"><strong>Emplatado</strong>: Deja reposar el risotto un par de minutos y sírvelo caliente, decorado con perejil fresco picado.</div></div>
+</div>
+</div>
 </div>
 
+<!-- PORTUGUESE -->
 <div id="lang-pt" class="lang-content">
-<p><strong>Data:</strong> 2025-04-27</p>
-<h2>Risotto Primaveril com Espargos e Cogumelos Porcini</h2>
-<h3>Ingredientes:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Risotto Primaverile agli Asparagi e Funghi Porcini</h2>
+<p class="recipe-date">📅 27 de abril de 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
 <li>300 g de arroz Arborio</li>
 <li>200 g de cogumelos porcini frescos (ou secos)</li>
@@ -171,20 +203,27 @@ function showLang(lang) {
 <li>Sal e pimenta a gosto</li>
 <li>Salsa fresca para decorar</li>
 </ul>
-<h3>Preparação:</h3>
-<p>1. <strong>Preparação dos ingredientes</strong>: Se usar porcini secos, coloque-os de molho em água quente cerca de 30 minutos. Corte os cogumelos frescos em fatias. Limpe e corte o alho-porro. Lave os espargos e corte-os em pedaços de 3-4 cm.</p>
-<p>2. <strong>Cozinhar cogumelos e alho-porro</strong>: Numa panela, aqueça 2 colheres de azeite e adicione o alho-porro. Refogue em lume médio até ficar transparente. Adicione os cogumelos e cozinhe mais 5-7 minutos.</p>
-<p>3. <strong>Torrar o arroz</strong>: Adicione o arroz na panela e deixe tostar uns minutos. Desengordure com o vinho branco e deixe evaporar.</p>
-<p>4. <strong>Adicionar o caldo</strong>: Comece a adicionar o caldo de legumes quente, uma concha de cada vez, mexendo frequentemente. Adicione os espargos e as ervilhas após cerca de 5 minutos.</p>
-<p>5. <strong>Cozedura final</strong>: Continue a cozinhar o risotto cerca de 15-18 minutos, até o arroz ficar al dente. Tempere com sal e pimenta a gosto.</p>
-<p>6. <strong>Manteigação</strong>: Retire do lume, adicione o parmesão ralado e a colher de azeite restante. Mexa bem até obter uma consistência cremosa.</p>
-<p>7. <strong>Servir</strong>: Deixe o risotto repousar uns minutos e sirva quente, decorado com salsa fresca picada.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparação</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Preparação dos ingredientes</strong>: Se usar porcini secos, coloque-os de molho em água quente cerca de 30 minutos. Corte os cogumelos frescos em fatias. Limpe e corte o alho-porro. Lave os espargos e corte-os em pedaços de 3-4 cm.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Cozinhar cogumelos e alho-porro</strong>: Numa panela, aqueça 2 colheres de azeite e adicione o alho-porro. Refogue em lume médio até ficar transparente. Adicione os cogumelos e cozinhe mais 5-7 minutos.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Torrar o arroz</strong>: Adicione o arroz na panela e deixe tostar uns minutos. Desengordure com o vinho branco e deixe evaporar.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Adicionar o caldo</strong>: Comece a adicionar o caldo de legumes quente, uma concha de cada vez, mexendo frequentemente. Adicione os espargos e as ervilhas após cerca de 5 minutos.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Cozedura final</strong>: Continue a cozinhar o risotto cerca de 15-18 minutos, até o arroz ficar al dente. Tempere com sal e pimenta a gosto.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Manteigação</strong>: Retire do lume, adicione o parmesão ralado e a colher de azeite restante. Mexa bem até obter uma consistência cremosa.</div></div>
+<div class="step"><div class="step-num">7</div><div class="step-text"><strong>Servir</strong>: Deixe o risotto repousar uns minutos e sirva quente, decorado com salsa fresca picada.</div></div>
+</div>
+</div>
 </div>
 
+<!-- GERMAN -->
 <div id="lang-de" class="lang-content">
-<p><strong>Datum:</strong> 2025-04-27</p>
-<h2>Frühlingsrisotto mit Spargel und Steinpilzen</h2>
-<h3>Zutaten:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Risotto Primaverile agli Asparagi e Funghi Porcini</h2>
+<p class="recipe-date">📅 </p>
+<div class="ingredients-box">
+<h3>🥗 Zutaten</h3>
 <ul>
 <li>300 g Arborio-Reis</li>
 <li>200 g frische Steinpilze (oder getrocknete)</li>
@@ -198,20 +237,27 @@ function showLang(lang) {
 <li>Salz und Pfeffer nach Geschmack</li>
 <li>Frische Petersilie zum Garnieren</li>
 </ul>
-<h3>Zubereitung:</h3>
-<p>1. <strong>Zubereitung</strong>: Trockene Steinpilze ca. 30 Minuten in warmem Wasser einweichen. Frische Pilze in Scheiben schneiden. Lauch putzen und schneiden. Spargel waschen und in 3-4 cm große Stücke schneiden.</p>
-<p>2. <strong>Pilze und Lauch anbraten</strong>: 2 Esslöffel Öl im Topf erhitzen, Lauch zugeben und bei mittlerer Hitze andünsten bis glasig. Pilze zugeben und 5-7 Minuten weiterkochen.</p>
-<p>3. <strong>Reis anschwitzen</strong>: Reis in den Topf geben und 1-2 Minuten anschwitzen. Mit Weißwein ablöschen und verdampfen lassen.</p>
-<p>4. <strong>Brühe zugeben</span>: Heiße Gemüsebrühe nach und nach mit einer Kelle zugeben, dabei ständig umrühren. Spargel und Erbsen nach ca. 5 Minuten zugeben.</p>
-<p>5. <strong>Endgare</strong>: Risotto ca. 15-18 Minuten weiterkochen, bis der Reis bissfest ist. Mit Salz und Pfeffer abschmecken.</p>
-<p>6. <strong>Cremig ziehen lassen</strong>: Vom Herd nehmen, Parmesan und restlichen Öl zugeben. Gut umrühren, bis eine cremige Konsistenz entsteht.</p>
-<p>7. <strong>Servieren</strong>: Risotto 2 Minuten ruhen lassen, dann heiß servieren, garniert mit gehackter frischer Petersilie.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Zubereitung</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Passo</strong>: Trockene Steinpilze ca. 30 Minuten in warmem Wasser einweichen. Frische Pilze in Scheiben schneiden. Lauch putzen und schneiden. Spargel waschen und in 3-4 cm große Stücke schneiden.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Pilze und Lauch anbraten</strong>: 2 Esslöffel Öl im Topf erhitzen, Lauch zugeben und bei mittlerer Hitze andünsten bis glasig. Pilze zugeben und 5-7 Minuten weiterkochen.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Reis anschwitzen</strong>: Reis in den Topf geben und 1-2 Minuten anschwitzen. Mit Weißwein ablöschen und verdampfen lassen.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Brühe zugeben</strong>: Heiße Gemüsebrühe nach und nach mit einer Kelle zugeben, dabei ständig umrühren. Spargel und Erbsen nach ca. 5 Minuten zugeben.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Endgare</strong>: Risotto ca. 15-18 Minuten weiterkochen, bis der Reis bissfest ist. Mit Salz und Pfeffer abschmecken.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Cremig ziehen lassen</strong>: Vom Herd nehmen, Parmesan und restlichen Öl zugeben. Gut umrühren, bis eine cremige Konsistenz entsteht.</div></div>
+<div class="step"><div class="step-num">7</div><div class="step-text"><strong>Servieren</strong>: Risotto 2 Minuten ruhen lassen, dann heiß servieren, garniert mit gehackter frischer Petersilie.</div></div>
+</div>
+</div>
 </div>
 
+<!-- GREEK -->
 <div id="lang-el" class="lang-content">
-<p><strong>Hmerominia:</strong> 2025-04-27</p>
-<h2>Ριζότο Άνοιξης με Σπαράγγια και Μανιτάρια Πορτσίνι</h2>
-<h3>Συστατικά:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Risotto Primaverile agli Asparagi e Funghi Porcini</h2>
+<p class="recipe-date">📅 </p>
+<div class="ingredients-box">
+<h3>🥗 Systatika</h3>
 <ul>
 <li>300 g ρύζι Arborio</li>
 <li>200 g φρέσκα μανιτάρια πορτσίνι (ή αποξηραμένα)</li>
@@ -225,40 +271,25 @@ function showLang(lang) {
 <li>Αλάτι και πιπέρι κατά βούληση</li>
 <li>Φρέσκο μαϊντανό για γαρνίρισμα</li>
 </ul>
-<h3>Εκτέλεση:</h3>
-<p>1. <strong>Προετοιμασία</strong>: Αν χρησιμοποιείτε αποξηραμένα πορτσίνι, μουλιάστε τα σε ζεστό νερό περίπου 30 λεπτά. Κόψτε τα φρέσκα σε φέτες. Καθαρίστε και κόψτε το πράσο. Πλύντε τα σπαράγγια και κόψτε τα σε κομμάτια 3-4 cm.</p>
-<p>2. <strong>Μαγείρεμα μανιταριών και πράσου</strong>: Ζεστάνετε 2 κουταλιές ελαιόλαδο σε κατσαρόλα, προσθέστε το πράσο και σοτάρετε σε μέτρια φωτιά μέχρι να γίνει διάφανο. Προσθέστε τα μανιτάρια και μαγειρέψτε για ακόμα 5-7 λεπτά.</p>
-<p>3. <strong>Καβουρδισμα ρυζιού</strong>: Προσθέστε το ρύζι στην κατσαρόλα και καβουρντίστε για 1-2 λεπτά. Σβηστε με το κρασί και αφήστε να εξατμιστεί.</p>
-<p>4. <strong>Προσθήκη ζωμού</strong>: Αρχίστε να προσθέτετε ζεστό ζωμό λαχανικών κουτάλα-κουτάλα, ανακατεύοντας συχνά. Προσθέστε σπαράγγια και μπιζέλια μετά από περίπου 5 λεπτά.</p>
-<p>5. <strong>Τελικό μαγείρεμα</strong>: Συνεχίστε το μαγείρεμα για 15-18 λεπτά, μέχρι το ρύζι να είναι al dente. Αλατοπιπερώστε κατά βούληση.</p>
-<p>6. <strong>Κρέμασμα</strong>: Βγάλτε από τη φωτιά, προσθέστε την παρμεζάνα και την υπόλοιπη κουταλιά ελαιόλαδο. Ανακατέψτε καλά μέχρι να γίνει κρεμώδες.</p>
-<p>7. <strong>Σερβίρισμα</strong>: Αφήστε το ριζότο να ξεκουραστεί 2 λεπτά, μετά σερβίρετε ζεστό γαρνιρισμένο με ψιλοκομμένο φρέσκο μαϊντανό.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Ekdhlwsh</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Προετοιμασία</strong>: Αν χρησιμοποιείτε αποξηραμένα πορτσίνι, μουλιάστε τα σε ζεστό νερό περίπου 30 λεπτά. Κόψτε τα φρέσκα σε φέτες. Καθαρίστε και κόψτε το πράσο. Πλύντε τα σπαράγγια και κόψτε τα σε κομμάτια 3-4 cm.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Μαγείρεμα μανιταριών και πράσου</strong>: Ζεστάνετε 2 κουταλιές ελαιόλαδο σε κατσαρόλα, προσθέστε το πράσο και σοτάρετε σε μέτρια φωτιά μέχρι να γίνει διάφανο. Προσθέστε τα μανιτάρια και μαγειρέψτε για ακόμα 5-7 λεπτά.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Καβουρδισμα ρυζιού</strong>: Προσθέστε το ρύζι στην κατσαρόλα και καβουρντίστε για 1-2 λεπτά. Σβηστε με το κρασί και αφήστε να εξατμιστεί.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Προσθήκη ζωμού</strong>: Αρχίστε να προσθέτετε ζεστό ζωμό λαχανικών κουτάλα-κουτάλα, ανακατεύοντας συχνά. Προσθέστε σπαράγγια και μπιζέλια μετά από περίπου 5 λεπτά.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Τελικό μαγείρεμα</strong>: Συνεχίστε το μαγείρεμα για 15-18 λεπτά, μέχρι το ρύζι να είναι al dente. Αλατοπιπερώστε κατά βούληση.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Κρέμασμα</strong>: Βγάλτε από τη φωτιά, προσθέστε την παρμεζάνα και την υπόλοιπη κουταλιά ελαιόλαδο. Ανακατέψτε καλά μέχρι να γίνει κρεμώδες.</div></div>
+<div class="step"><div class="step-num">7</div><div class="step-text"><strong>Σερβίρισμα</strong>: Αφήστε το ριζότο να ξεκουραστεί 2 λεπτά, μετά σερβίρετε ζεστό γαρνιρισμένο με ψιλοκομμένο φρέσκο μαϊντανό.</div></div>
+</div>
 </div>
 </div>
 
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
 <div class="footer">
-<p>Leguminando - Ricette di stagione a base di legumi</p>
-<p>"Tutto e iniziato con hummus di ceci..."</p>
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<p>"Tutto è iniziato con hummus di ceci..."</p>
 </div>
-<div data-legumi="ceci,piselli" style="display:none;"></div>
-<script>
-function toggleFav(path, title) {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    if (favs[path]) { delete favs[path]; }
-    else { favs[path] = title; }
-    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
-    updateFavIcons();
-}
-function updateFavIcons() {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    document.querySelectorAll('.fav-btn').forEach(btn => {
-        let p = btn.getAttribute('data-path');
-        btn.textContent = favs[p] ? '❤️' : '🤍';
-    });
-}
-document.addEventListener('DOMContentLoaded', updateFavIcons);
-</script>
+</div>
 
 
 <div style="text-align:center; margin:30px 0; padding:20px;">

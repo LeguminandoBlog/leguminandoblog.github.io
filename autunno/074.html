@@ -3,177 +3,221 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ricetta del 2024-09-29 | Leguminando</title>
+<title>Insalata di Cavolo Nero e Ceci | Leguminando</title>
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://leguminandoblog.github.io/autunno/074.html">
+    <meta property="og:title" content="Insalata di Cavolo Nero e Ceci">
+    <meta property="og:description" content="Ricetta su Leguminando - Insalata di Cavolo Nero e Ceci">
+    <meta property="og:image" content="https://leguminandoblog.github.io/autunno/074.jpg">
+    <meta property="og:site_name" content="Leguminando">
+    <meta name="twitter:card" content="summary_large_image">
 <style>
-body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
-.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.content { background: white; padding: 30px; border-radius: 10px; }
-.content h1 { color: #8B4513; }
-.content h2 { color: #D2691E; }
-.content h3 { color: #8B4513; }
-.content ul { margin: 15px 0; padding-left: 20px; }
-.content li { margin: 8px 0; }
-.content p { margin: 12px 0; line-height: 1.6; }
-.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
-.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; background: #f8f5f0; min-height: 100vh; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+.header { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 40px 20px 30px; text-align: center; border-radius: 20px; margin-bottom: 30px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+.header h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.header .tagline { font-size: 1.2em; opacity: 0.9; font-style: italic; }
+.back-link { display: inline-block; margin: 20px 0; padding: 10px 20px; background: #8B4513; color: white; text-decoration: none; border-radius: 25px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.95em; transition: background 0.3s; }
 .back-link:hover { background: #D2691E; }
-
-.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
-.fav-bar { text-align: center; margin: 5px 0; }
-
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-
-@media print {
-    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
-    .stats, .back-link, .badge { display: none !important; }
-    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
-    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
-    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
-    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
-}
-
-</style>
-<meta name="description" content="Ricetta del 2024-09-29">
-<meta property="og:title" content="Ricetta del 2024-09-29 | Leguminando">
-<meta property="og:description" content="Ricetta del 2024-09-29">
-<style>
-.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
-.lang-tab { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; transition: all 0.3s; }
-.lang-tab.active { background: #8B4513; color: white; }
-.lang-tab:hover:not(.active) { background: #D2691E; color: white; }
+.fav-bar { text-align: center; margin: 10px 0; }
+.fav-btn { cursor: pointer; font-size: 1.8em; user-select: none; display: inline-block; transition: transform 0.2s; }
+.fav-btn:hover { transform: scale(1.2); }
+.recipe-image { width: 100%; max-width: 700px; margin: 20px auto; display: block; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 30px 0; flex-wrap: wrap; }
+.lang-tab { padding: 10px 20px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; border-radius: 25px; cursor: pointer; font-size: 0.9em; transition: all 0.3s; }
+.lang-tab:hover { background: rgba(255,255,255,0.3); }
+.lang-tab.active { background: white; color: #c0392b; border-color: white; }
+.recipe-card { background: white; border-radius: 20px; padding: 40px; margin-bottom: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
 .lang-content { display: none; }
 .lang-content.active { display: block; }
+.recipe-title { font-size: 2.2em; color: #8B4513; margin-bottom: 10px; text-align: center; }
+.recipe-date { text-align: center; color: #666; font-size: 0.95em; margin-bottom: 25px; }
+.ingredients-box { background: linear-gradient(135deg, #fef9e7 0%, #fdebd0 100%); border-radius: 15px; padding: 25px; margin: 25px 0; border-left: 5px solid #D2691E; }
+.ingredients-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.ingredients-box ul { padding-left: 20px; }
+.ingredients-box li { margin: 8px 0; color: #5D4037; }
+.steps-box { margin: 25px 0; }
+.steps-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.step { display: flex; gap: 15px; margin: 15px 0; padding: 15px; background: #faf8f5; border-radius: 12px; align-items: flex-start; }
+.step-num { background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1em; flex-shrink: 0; }
+.step-text { flex: 1; color: #5D4037; line-height: 1.6; }
+.tip-box { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 15px; padding: 20px; margin: 25px 0; border-left: 5px solid #4caf50; }
+.tip-box h4 { color: #2e7d32; margin-bottom: 10px; }
+.tip-box p { color: #1b5e20; line-height: 1.6; }
+.footer { text-align: center; margin-top: 50px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+@media (max-width: 600px) { .header h1 { font-size: 2em; } .recipe-card { padding: 20px; } .recipe-title { font-size: 1.6em; } }
+@media print { .lang-tabs, .lang-tab, .fav-bar, .back-link { display: none !important; } body { background: white !important; } .recipe-card { box-shadow: none !important; break-inside: avoid; } }
 </style>
 <script>
-function showLang(lang) {
-    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
-    document.getElementById('lang-' + lang).classList.add('active');
-    event.target.classList.add('active');
-}
+function showLang(lang) { document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active')); document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active')); document.getElementById('lang-' + lang).classList.add('active'); event.target.classList.add('active'); }
+function toggleFav(path, title) { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); if (favs[path]) { delete favs[path]; } else { favs[path] = title; } localStorage.setItem('leguminando_favs', JSON.stringify(favs)); updateFavIcons(); }
+function updateFavIcons() { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); document.querySelectorAll('.fav-btn').forEach(btn => { let p = btn.getAttribute('data-path'); btn.textContent = favs[p] ? '❤️' : '🤍'; }); }
+document.addEventListener('DOMContentLoaded', updateFavIcons);
 </script>
 </head>
 <body>
+<div class="container">
 <div class="header">
-<h1>Leguminando</h1>
-<p>Ricette di stagione a base di legumi</p>
+<h1>🫘 Leguminando</h1>
+<p class="tagline">Ricette di stagione a base di legumi</p>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
-
-</div>
-
+<a href="../index.html" class="back-link">← Torna alla Home</a>
 <div class="fav-bar">
-<span class="fav-btn" data-path="autunno/074.html" data-title="Ricetta del 2024-09-29" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+<span class="fav-btn" data-path="autunno/074.html" data-title="Insalata di Cavolo Nero e Ceci" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
 </div>
-
-<img src="074.jpg" alt="Ricetta del 2024-09-29" class="recipe-image">
-
-<div class="content">
+<img src="074.jpg" alt="Insalata di Cavolo Nero e Ceci" class="recipe-image">
 <div class="lang-tabs">
-    <button class="lang-tab active" onclick="showLang('it')">IT</button>
-    <button class="lang-tab" onclick="showLang('en')">EN</button>
-    <button class="lang-tab" onclick="showLang('es')">ES</button>
-    <button class="lang-tab" onclick="showLang('pt')">PT</button>
-    <button class="lang-tab" onclick="showLang('de')">DE</button>
-    <button class="lang-tab" onclick="showLang('el')">EL</button>
+    <button class="lang-tab active" onclick="showLang('it')">🇮🇹 IT</button>
+    <button class="lang-tab" onclick="showLang('en')">🇬🇧 EN</button>
+    <button class="lang-tab" onclick="showLang('es')">🇪🇸 ES</button>
+    <button class="lang-tab" onclick="showLang('pt')">🇵🇹 PT</button>
+    <button class="lang-tab" onclick="showLang('de')">🇩🇪 DE</button>
+    <button class="lang-tab" onclick="showLang('el')">🇬🇷 EL</button>
 </div>
 
+<!-- ITALIANO -->
 <div id="lang-it" class="lang-content active">
-<p><strong>Data:</strong> 2024-09-29</p>
-<p><strong>Insalata di Cavolo Nero e Ceci</strong></p>
+<div class="recipe-card">
+<h2 class="recipe-title">Insalata di Cavolo Nero e Ceci</h2>
+<p class="recipe-date">📅 29 Settembre 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredienti</h3>
 <ul>
-<li>Ingredienti: cavolo nero, ceci lessati, pinoli tostati, olio d'oliva, limone, sale e pepe.</li>
-<li>Preparazione: mescolare il cavolo nero tagliato a strisce con i ceci, aggiungere pinoli tostati e condire con olio, limone, sale e pepe.</li>
+<li>cavolo nero</li>
+<li>ceci lessati</li>
+<li>pinoli tostati</li>
+<li>olio d&#x27;oliva</li>
+<li>limone</li>
+<li>sale e pepe</li>
 </ul>
-<p><strong>Preparazione</strong>: Tagliare il cavolo nero a strisce sottili. In una ciotola grande, unire i ceci lessati e il cavolo. Tostare i pinoli in una padella senza olio fino a doratura. Aggiungere i pinoli all'insalata. Condire con olio d'oliva, succo di limone, sale e pepe. Mescolare bene e servire.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparazione</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Preparazione</strong>: mescolare il cavolo nero tagliato a strisce con i ceci, aggiungere pinoli tostati e condire con olio, limone, sale e pepe.</div></div>
+</div>
+</div>
 </div>
 
+<!-- ENGLISH -->
 <div id="lang-en" class="lang-content">
-<p><strong>Date:</strong> 2024-09-29</p>
-<p><em>English translation coming soon...</em></p>
-<p><strong>Insalata di Cavolo Nero e Ceci</strong></p>
+<div class="recipe-card">
+<h2 class="recipe-title">Black Cabbage and Chickpea Salad</h2>
+<p class="recipe-date">📅 September 29, 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredients</h3>
 <ul>
-<li>Ingredienti: cavolo nero, ceci lessati, pinoli tostati, olio d'oliva, limone, sale e pepe.</li>
-<li>Preparazione: mescolare il cavolo nero tagliato a strisce con i ceci, aggiungere pinoli tostati e condire con olio, limone, sale e pepe.</li>
+<li>black cabbage</li>
+<li>boiled chickpeas</li>
+<li>toasted pine nuts</li>
+<li>olive oil</li>
+<li>lemon</li>
+<li>salt and pepper</li>
 </ul>
-<p><strong>Preparazione</strong>: Tagliare il cavolo nero a strisce sottili. In una ciotola grande, unire i ceci lessati e il cavolo. Tostare i pinoli in una padella senza olio fino a doratura. Aggiungere i pinoli all'insalata. Condire con olio d'oliva, succo di limone, sale e pepe. Mescolare bene e servire.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparation</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Preparazione</strong>: mix the black cabbage cut into strips with the chickpeas, add toasted pine nuts and season with oil, lemon, salt and pepper.</div></div>
+</div>
+</div>
 </div>
 
+<!-- SPANISH -->
 <div id="lang-es" class="lang-content">
-<p><strong>Fecha:</strong> 2024-09-29</p>
-<p><em>Traduccion al espanol proximamente...</em></p>
-<p><strong>Insalata di Cavolo Nero e Ceci</strong></p>
+<div class="recipe-card">
+<h2 class="recipe-title">Ensalada de col negra y garbanzos</h2>
+<p class="recipe-date">📅 29 de septiembre de 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li>Ingredienti: cavolo nero, ceci lessati, pinoli tostati, olio d'oliva, limone, sale e pepe.</li>
-<li>Preparazione: mescolare il cavolo nero tagliato a strisce con i ceci, aggiungere pinoli tostati e condire con olio, limone, sale e pepe.</li>
+<li>col negra</li>
+<li>garbanzos cocidos</li>
+<li>piñones tostados</li>
+<li>aceite de oliva</li>
+<li>limón</li>
+<li>sal y pimienta</li>
+<li>Elaboración: mezclar la col negra cortada en tiras con los garbanzos, añadir los piñones tostados y condimentar con aceite, limón, sal y pimienta.</li>
 </ul>
-<p><strong>Preparazione</strong>: Tagliare il cavolo nero a strisce sottili. In una ciotola grande, unire i ceci lessati e il cavolo. Tostare i pinoli in una padella senza olio fino a doratura. Aggiungere i pinoli all'insalata. Condire con olio d'oliva, succo di limone, sale e pepe. Mescolare bene e servire.</p>
+</div>
+</div>
 </div>
 
+<!-- PORTUGUESE -->
 <div id="lang-pt" class="lang-content">
-<p><strong>Data:</strong> 2024-09-29</p>
-<p><em>Traducao em portugues em breve...</em></p>
-<p><strong>Insalata di Cavolo Nero e Ceci</strong></p>
+<div class="recipe-card">
+<h2 class="recipe-title">Salada de Repolho Preto e Grão de Bico</h2>
+<p class="recipe-date">📅 29 de setembro de 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li>Ingredienti: cavolo nero, ceci lessati, pinoli tostati, olio d'oliva, limone, sale e pepe.</li>
-<li>Preparazione: mescolare il cavolo nero tagliato a strisce con i ceci, aggiungere pinoli tostati e condire con olio, limone, sale e pepe.</li>
+<li>couve preta</li>
+<li>grão de bico cozido</li>
+<li>pinhões torrados</li>
+<li>azeite</li>
+<li>limão</li>
+<li>sal e pimenta</li>
 </ul>
-<p><strong>Preparazione</strong>: Tagliare il cavolo nero a strisce sottili. In una ciotola grande, unire i ceci lessati e il cavolo. Tostare i pinoli in una padella senza olio fino a doratura. Aggiungere i pinoli all'insalata. Condire con olio d'oliva, succo di limone, sale e pepe. Mescolare bene e servire.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparação</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Preparazione</strong>: misture a couve preta cortada em tiras com o grão de bico, junte os pinhões torrados e tempere com azeite, limão, sal e pimenta. Preparo: Corte o repolho preto em tiras finas. Em uma tigela grande, misture o grão de bico cozido e o repolho. Torre os pinhões numa frigideira sem óleo até dourarem. Adicione os pinhões à salada. Tempere com azeite, sumo de limão, sal e pimenta. Misture bem e sirva.</div></div>
+</div>
+</div>
 </div>
 
+<!-- GERMAN -->
 <div id="lang-de" class="lang-content">
-<p><strong>Datum:</strong> 2024-09-29</p>
-<p><em>Deutsche Uebersetzung folgt bald...</em></p>
-<p><strong>Insalata di Cavolo Nero e Ceci</strong></p>
+<div class="recipe-card">
+<h2 class="recipe-title">Schwarzkohl-Kichererbsen-Salat</h2>
+<p class="recipe-date">📅 29. September 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Zutaten</h3>
 <ul>
-<li>Ingredienti: cavolo nero, ceci lessati, pinoli tostati, olio d'oliva, limone, sale e pepe.</li>
-<li>Preparazione: mescolare il cavolo nero tagliato a strisce con i ceci, aggiungere pinoli tostati e condire con olio, limone, sale e pepe.</li>
+<li>Schwarzkohl</li>
+<li>gekochte Kichererbsen</li>
+<li>geröstete Pinienkerne</li>
+<li>Olivenöl</li>
+<li>Zitrone</li>
+<li>Salz und Pfeffer</li>
 </ul>
-<p><strong>Preparazione</strong>: Tagliare il cavolo nero a strisce sottili. In una ciotola grande, unire i ceci lessati e il cavolo. Tostare i pinoli in una padella senza olio fino a doratura. Aggiungere i pinoli all'insalata. Condire con olio d'oliva, succo di limone, sale e pepe. Mescolare bene e servire.</p>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Zubereitung</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Preparazione</strong>: Den in Streifen geschnittenen Schwarzkohl mit den Kichererbsen vermischen, geröstete Pinienkerne dazugeben und mit Öl, Zitrone, Salz und Pfeffer würzen.</div></div>
+</div>
+</div>
 </div>
 
+<!-- GREEK -->
 <div id="lang-el" class="lang-content">
-<p><strong>Hmerominia:</strong> 2024-09-29</p>
-<p><em>E elliniki metafrasi erhetai syntoma...</em></p>
-<p><strong>Insalata di Cavolo Nero e Ceci</strong></p>
+<div class="recipe-card">
+<h2 class="recipe-title">Σαλάτα μαύρο λάχανο και ρεβίθια</h2>
+<p class="recipe-date">📅 29 Σεπτεμβρίου 2024</p>
+<div class="ingredients-box">
+<h3>🥗 Υλικά</h3>
 <ul>
-<li>Ingredienti: cavolo nero, ceci lessati, pinoli tostati, olio d'oliva, limone, sale e pepe.</li>
-<li>Preparazione: mescolare il cavolo nero tagliato a strisce con i ceci, aggiungere pinoli tostati e condire con olio, limone, sale e pepe.</li>
+<li>μαύρο λάχανο</li>
+<li>βραστά ρεβίθια</li>
+<li>φρυγανισμένο κουκουνάρι</li>
+<li>ελαιόλαδο</li>
+<li>λεμόνι</li>
+<li>αλάτι και πιπέρι</li>
+<li>Προετοιμασία: ανακατεύουμε το μαύρο λάχανο κομμένο σε λωρίδες με τα ρεβίθια, προσθέτουμε το καβουρδισμένο κουκουνάρι και αλατοπιπερώνουμε με λάδι, λεμόνι.</li>
 </ul>
-<p><strong>Preparazione</strong>: Tagliare il cavolo nero a strisce sottili. In una ciotola grande, unire i ceci lessati e il cavolo. Tostare i pinoli in una padella senza olio fino a doratura. Aggiungere i pinoli all'insalata. Condire con olio d'oliva, succo di limone, sale e pepe. Mescolare bene e servire.</p>
 </div>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+</div>
 
 <div class="footer">
-<p>Leguminando - Ricette di stagione a base di legumi</p>
-<p>"Tutto e iniziato con hummus di ceci..."</p>
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<p>"Tutto è iniziato con hummus di ceci..."</p>
 </div>
-
-<script>
-function toggleFav(path, title) {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    if (favs[path]) { delete favs[path]; }
-    else { favs[path] = title; }
-    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
-    updateFavIcons();
-}
-function updateFavIcons() {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    document.querySelectorAll('.fav-btn').forEach(btn => {
-        let p = btn.getAttribute('data-path');
-        btn.textContent = favs[p] ? '❤️' : '🤍';
-    });
-}
-document.addEventListener('DOMContentLoaded', updateFavIcons);
-</script>
+</div>
 
 
 <div style="text-align:center; margin:30px 0; padding:20px;">

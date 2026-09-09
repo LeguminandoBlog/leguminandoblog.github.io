@@ -3,427 +3,332 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ricetta del 2025-03-24 | Leguminando</title>
+<title>Per le polpette | Leguminando</title>
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://leguminandoblog.github.io/primavera/073.html">
+    <meta property="og:title" content="Per le polpette">
+    <meta property="og:description" content="Ricetta su Leguminando - Per le polpette">
+    <meta property="og:image" content="https://leguminandoblog.github.io/primavera/073.jpg">
+    <meta property="og:site_name" content="Leguminando">
+    <meta name="twitter:card" content="summary_large_image">
 <style>
-body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
-.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.content { background: white; padding: 30px; border-radius: 10px; }
-.content h1 { color: #8B4513; }
-.content h2 { color: #D2691E; }
-.content h3 { color: #8B4513; }
-.content ul { margin: 15px 0; padding-left: 20px; }
-.content li { margin: 8px 0; }
-.content p { margin: 12px 0; line-height: 1.6; }
-.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
-.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; background: #f8f5f0; min-height: 100vh; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+.header { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 40px 20px 30px; text-align: center; border-radius: 20px; margin-bottom: 30px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+.header h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.header .tagline { font-size: 1.2em; opacity: 0.9; font-style: italic; }
+.back-link { display: inline-block; margin: 20px 0; padding: 10px 20px; background: #8B4513; color: white; text-decoration: none; border-radius: 25px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.95em; transition: background 0.3s; }
 .back-link:hover { background: #D2691E; }
-
-.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
-.fav-bar { text-align: center; margin: 5px 0; }
-
-@media print {
-    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
-    .stats, .back-link, .badge { display: none !important; }
-    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
-    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
-    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
-    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
-}
-
-</style>
-<meta name="description" content="Ricetta del 2025-03-24">
-<meta property="og:title" content="Ricetta del 2025-03-24 | Leguminando">
-<meta property="og:description" content="Ricetta del 2025-03-24">
-<style>
-.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
-.lang-tab { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; transition: all 0.3s; }
-.lang-tab.active { background: #8B4513; color: white; }
-.lang-tab:hover:not(.active) { background: #D2691E; color: white; }
+.fav-bar { text-align: center; margin: 10px 0; }
+.fav-btn { cursor: pointer; font-size: 1.8em; user-select: none; display: inline-block; transition: transform 0.2s; }
+.fav-btn:hover { transform: scale(1.2); }
+.recipe-image { width: 100%; max-width: 700px; margin: 20px auto; display: block; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 30px 0; flex-wrap: wrap; }
+.lang-tab { padding: 10px 20px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; border-radius: 25px; cursor: pointer; font-size: 0.9em; transition: all 0.3s; }
+.lang-tab:hover { background: rgba(255,255,255,0.3); }
+.lang-tab.active { background: white; color: #c0392b; border-color: white; }
+.recipe-card { background: white; border-radius: 20px; padding: 40px; margin-bottom: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
 .lang-content { display: none; }
 .lang-content.active { display: block; }
+.recipe-title { font-size: 2.2em; color: #8B4513; margin-bottom: 10px; text-align: center; }
+.recipe-date { text-align: center; color: #666; font-size: 0.95em; margin-bottom: 25px; }
+.ingredients-box { background: linear-gradient(135deg, #fef9e7 0%, #fdebd0 100%); border-radius: 15px; padding: 25px; margin: 25px 0; border-left: 5px solid #D2691E; }
+.ingredients-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.ingredients-box ul { padding-left: 20px; }
+.ingredients-box li { margin: 8px 0; color: #5D4037; }
+.steps-box { margin: 25px 0; }
+.steps-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.step { display: flex; gap: 15px; margin: 15px 0; padding: 15px; background: #faf8f5; border-radius: 12px; align-items: flex-start; }
+.step-num { background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1em; flex-shrink: 0; }
+.step-text { flex: 1; color: #5D4037; line-height: 1.6; }
+.tip-box { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 15px; padding: 20px; margin: 25px 0; border-left: 5px solid #4caf50; }
+.tip-box h4 { color: #2e7d32; margin-bottom: 10px; }
+.tip-box p { color: #1b5e20; line-height: 1.6; }
+.footer { text-align: center; margin-top: 50px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+@media (max-width: 600px) { .header h1 { font-size: 2em; } .recipe-card { padding: 20px; } .recipe-title { font-size: 1.6em; } }
+@media print { .lang-tabs, .lang-tab, .fav-bar, .back-link { display: none !important; } body { background: white !important; } .recipe-card { box-shadow: none !important; break-inside: avoid; } }
 </style>
 <script>
-function showLang(lang) {
-    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
-    document.getElementById('lang-' + lang).classList.add('active');
-    event.target.classList.add('active');
-}
+function showLang(lang) { document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active')); document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active')); document.getElementById('lang-' + lang).classList.add('active'); event.target.classList.add('active'); }
+function toggleFav(path, title) { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); if (favs[path]) { delete favs[path]; } else { favs[path] = title; } localStorage.setItem('leguminando_favs', JSON.stringify(favs)); updateFavIcons(); }
+function updateFavIcons() { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); document.querySelectorAll('.fav-btn').forEach(btn => { let p = btn.getAttribute('data-path'); btn.textContent = favs[p] ? '❤️' : '🤍'; }); }
+document.addEventListener('DOMContentLoaded', updateFavIcons);
 </script>
 </head>
 <body>
+<div class="container">
 <div class="header">
-<h1>Leguminando</h1>
-<p>Ricette di stagione a base di legumi</p>
+<h1>🫘 Leguminando</h1>
+<p class="tagline">Ricette di stagione a base di legumi</p>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
-
+<a href="../index.html" class="back-link">← Torna alla Home</a>
 <div class="fav-bar">
-<span class="fav-btn" data-path="primavera/073.html" data-title="Ricetta del 2025-03-24" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+<span class="fav-btn" data-path="primavera/073.html" data-title="Per le polpette" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
 </div>
-
-<img src="073.jpg" alt="Ricetta del 2025-03-24" class="recipe-image">
-
-<div class="content">
+<img src="073.jpg" alt="Per le polpette" class="recipe-image">
 <div class="lang-tabs">
-    <button class="lang-tab active" onclick="showLang('it')">IT</button>
-    <button class="lang-tab" onclick="showLang('en')">EN</button>
-    <button class="lang-tab" onclick="showLang('es')">ES</button>
-    <button class="lang-tab" onclick="showLang('pt')">PT</button>
-    <button class="lang-tab" onclick="showLang('de')">DE</button>
-    <button class="lang-tab" onclick="showLang('el')">EL</button>
+    <button class="lang-tab active" onclick="showLang('it')">🇮🇹 IT</button>
+    <button class="lang-tab" onclick="showLang('en')">🇬🇧 EN</button>
+    <button class="lang-tab" onclick="showLang('es')">🇪🇸 ES</button>
+    <button class="lang-tab" onclick="showLang('pt')">🇵🇹 PT</button>
+    <button class="lang-tab" onclick="showLang('de')">🇩🇪 DE</button>
+    <button class="lang-tab" onclick="showLang('el')">🇬🇷 EL</button>
 </div>
 
+<!-- ITALIANO -->
 <div id="lang-it" class="lang-content active">
-<p><strong>Data:</strong> 2025-03-24</p>
-<h3>Per le polpette:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Per le polpette</h2>
+<p class="recipe-date">📅 24 Marzo 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredienti</h3>
+<p><strong>Per le polpette</strong></p>
 <ul>
 <li>200 g di ceci secchi (o una lattina di ceci già cotti)</li>
 <li>200 g di carne macinata (manzo o pollo)</li>
 <li>1 radicchio rosso piccolo, cotto e tritato</li>
-<li>2 spicchi d'aglio, tritati</li>
+<li>2 spicchi d&#x27;aglio, tritati</li>
 <li>1 uovo</li>
 <li>100 g di pangrattato</li>
 <li>50 g di parmigiano grattugiato (opzionale)</li>
 <li>Sale e pepe q.b.</li>
-<li>Olio extravergine d'oliva q.b.</li>
+<li>Olio extravergine d&#x27;oliva q.b.</li>
 <li>Prezzemolo tritato (opzionale)</li>
 </ul>
-<h4>Per i broccoli e barbe rosse:</h4>
+<p><strong>Per i broccoli e barbe rosse</strong></p>
 <ul>
 <li>300 g di broccoli</li>
 <li>200 g di barbe rosse</li>
 <li>Sale q.b.</li>
-<li>Olio extravergine d'oliva q.b.</li>
+<li>Olio extravergine d&#x27;oliva q.b.</li>
 <li>Limone (per servire, opzionale)</li>
 </ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione dei ceci</strong>: Se utilizzi ceci secchi, mettili a bagno per almeno 8 ore e poi lessali fino a quando sono teneri. Se usi ceci in scatola, scolali e sciacquali.</p>
-<p>2. <strong>Preparazione delle polpette</strong>:</p>
-<ul>
-<li>In una ciotola grande, unisci i ceci macinati (puoi usare un frullatore per ottenere una consistenza fine), la carne macinata, il radicchio cotto, l'aglio tritato, l'uovo, il pangrattato e il parmigiano (se lo usi).</li>
-<li>Mescola bene fino a ottenere un composto omogeneo. Aggiusta di sale e pepe.</li>
-<li>Forma delle polpette della dimensione di una pallina da golf.</li>
-</ul>
-<p>3. <strong>Impanatura</strong>:</p>
-<ul>
-<li>Passa le polpette nel pangrattato per ricoprirle uniformemente.</li>
-</ul>
-<p>4. <strong>Cottura</strong>:</p>
-<ul>
-<li>Pre-riscalda il forno a 200°C. Fodera una teglia con carta da forno e spennella leggermente con olio d'oliva.</li>
-<li>Disponi le polpette sulla teglia e spennellale con un po' d'olio.</li>
-<li>Cuoci in forno per circa 25-30 minuti, girandole a metà cottura, fino a quando sono dorate e croccanti.</li>
-</ul>
-<p>5. <strong>Preparazione dei broccoli e barbe rosse</strong>:</p>
-<ul>
-<li>Porta a ebollizione una pentola d'acqua salata e lessa i broccoli per circa 5-7 minuti, fino a quando sono teneri ma ancora croccanti. Scolali e mettili da parte.</li>
-<li>In un'altra pentola, lessa le barbe rosse per circa 10-15 minuti finché non sono tenere. Scolale e condiscile con un filo d'olio d'oliva e un pizzico di sale.</li>
-</ul>
-<p>6. <strong>Impiattamento</strong>:</p>
-<ul>
-<li>Servi le polpette calde accompagnate dai broccoli lessi e dalle barbe rosse. Puoi aggiungere una spruzzata di limone per un tocco di freschezza.</li>
-</ul>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparazione</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Preparazione dei ceci</strong>: Se utilizzi ceci secchi, mettili a bagno per almeno 8 ore e poi lessali fino a quando sono teneri. Se usi ceci in scatola, scolali e sciacquali.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Preparazione delle polpette</strong>:  - In una ciotola grande, unisci i ceci macinati (puoi usare un frullatore per ottenere una consistenza fine), la carne macinata, il radicchio cotto, l&#x27;aglio tritato, l&#x27;uovo, il pangrattato e il parmigiano (se lo usi). - Mescola bene fino a ottenere un composto omogeneo. Aggiusta di sale e pepe. - Forma delle polpette della dimensione di una pallina da golf.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Impanatura</strong>:  - Passa le polpette nel pangrattato per ricoprirle uniformemente.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Cottura</strong>:  - Pre-riscalda il forno a 200°C. Fodera una teglia con carta da forno e spennella leggermente con olio d&#x27;oliva. - Disponi le polpette sulla teglia e spennellale con un po&#x27; d&#x27;olio. - Cuoci in forno per circa 25-30 minuti, girandole a metà cottura, fino a quando sono dorate e croccanti.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Preparazione dei broccoli e barbe rosse</strong>:  - Porta a ebollizione una pentola d&#x27;acqua salata e lessa i broccoli per circa 5-7 minuti, fino a quando sono teneri ma ancora croccanti. Scolali e mettili da parte. - In un&#x27;altra pentola, lessa le barbe rosse per circa 10-15 minuti finché non sono tenere. Scolale e condiscile con un filo d&#x27;olio d&#x27;oliva e un pizzico di sale.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Impiattamento</strong>:  - Servi le polpette calde accompagnate dai broccoli lessi e dalle barbe rosse. Puoi aggiungere una spruzzata di limone per un tocco di freschezza.</div></div>
+</div>
+</div>
 </div>
 
+<!-- ENGLISH -->
 <div id="lang-en" class="lang-content">
-<p><strong>Date:</strong> 2025-03-24</p>
-<p><em>English translation coming soon...</em></p>
-<h3>Per le polpette:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Per le polpette</h2>
+<p class="recipe-date">📅 March 24, 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredients</h3>
+<p><strong>For the meatballs</strong></p>
 <ul>
-<li>200 g di ceci secchi (o una lattina di ceci già cotti)</li>
-<li>200 g di carne macinata (manzo o pollo)</li>
-<li>1 radicchio rosso piccolo, cotto e tritato</li>
-<li>2 spicchi d'aglio, tritati</li>
-<li>1 uovo</li>
-<li>100 g di pangrattato</li>
-<li>50 g di parmigiano grattugiato (opzionale)</li>
-<li>Sale e pepe q.b.</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Prezzemolo tritato (opzionale)</li>
-</ul>
-<h4>Per i broccoli e barbe rosse:</h4>
-<ul>
-<li>300 g di broccoli</li>
-<li>200 g di barbe rosse</li>
-<li>Sale q.b.</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Limone (per servire, opzionale)</li>
-</ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione dei ceci</strong>: Se utilizzi ceci secchi, mettili a bagno per almeno 8 ore e poi lessali fino a quando sono teneri. Se usi ceci in scatola, scolali e sciacquali.</p>
-<p>2. <strong>Preparazione delle polpette</strong>:</p>
-<ul>
-<li>In una ciotola grande, unisci i ceci macinati (puoi usare un frullatore per ottenere una consistenza fine), la carne macinata, il radicchio cotto, l'aglio tritato, l'uovo, il pangrattato e il parmigiano (se lo usi).</li>
-<li>Mescola bene fino a ottenere un composto omogeneo. Aggiusta di sale e pepe.</li>
-<li>Forma delle polpette della dimensione di una pallina da golf.</li>
-</ul>
-<p>3. <strong>Impanatura</strong>:</p>
-<ul>
-<li>Passa le polpette nel pangrattato per ricoprirle uniformemente.</li>
-</ul>
-<p>4. <strong>Cottura</strong>:</p>
-<ul>
-<li>Pre-riscalda il forno a 200°C. Fodera una teglia con carta da forno e spennella leggermente con olio d'oliva.</li>
-<li>Disponi le polpette sulla teglia e spennellale con un po' d'olio.</li>
-<li>Cuoci in forno per circa 25-30 minuti, girandole a metà cottura, fino a quando sono dorate e croccanti.</li>
-</ul>
-<p>5. <strong>Preparazione dei broccoli e barbe rosse</strong>:</p>
-<ul>
-<li>Porta a ebollizione una pentola d'acqua salata e lessa i broccoli per circa 5-7 minuti, fino a quando sono teneri ma ancora croccanti. Scolali e mettili da parte.</li>
-<li>In un'altra pentola, lessa le barbe rosse per circa 10-15 minuti finché non sono tenere. Scolale e condiscile con un filo d'olio d'oliva e un pizzico di sale.</li>
-</ul>
-<p>6. <strong>Impiattamento</strong>:</p>
-<ul>
-<li>Servi le polpette calde accompagnate dai broccoli lessi e dalle barbe rosse. Puoi aggiungere una spruzzata di limone per un tocco di freschezza.</li>
+<li>200 g of dried chickpeas (or a can of already cooked chickpeas)</li>
+<li>200 g of minced meat (beef or chicken)</li>
+<li>1 small red radicchio, cooked and chopped</li>
+<li>2 cloves of garlic, chopped</li>
+<li>1 egg</li>
+<li>100 g of breadcrumbs</li>
+<li>50 g of grated parmesan (optional)</li>
+<li>Salt and pepper to taste</li>
+<li>Extra virgin olive oil to taste</li>
+<li>Chopped parsley (optional)</li>
+<li>300 g of broccoli</li>
+<li>200 g of red beards</li>
+<li>Salt to taste</li>
+<li>Extra virgin olive oil to taste</li>
+<li>Lemon (for serving, optional)</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparation</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Preparation of chickpeas</strong>: If using dried chickpeas, soak them for at least 8 hours and then boil them until tender. If using canned chickpeas, drain and rinse them.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Preparation of the meatballs</strong>:  - In a large bowl, combine the ground chickpeas (you can use a blender to get a fine consistency), ground meat, cooked radicchio, minced garlic, egg, breadcrumbs and parmesan (if using). - Mix well until you obtain a homogeneous mixture. Season with salt and pepper. - Shape into golf ball size meatballs.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Breading</strong>:  - Dip the meatballs in breadcrumbs to coat them evenly.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Cooking</strong>:  - Pre-heat the oven to 200°C. Line a baking tray with baking paper and brush lightly with olive oil. - Place the meatballs on the baking tray and brush them with a little oil. - Bake in the oven for about 25-30 minutes, turning them halfway through cooking, until they are golden and crispy.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Preparation of broccoli and red beards</strong>:  - Bring a pan of salted water to the boil and boil the broccoli for about 5-7 minutes, until tender but still crunchy. Drain them and set them aside. - In another pan, boil the red beards for about 10-15 minutes until they are tender. Drain them and season them with a drizzle of olive oil and a pinch of salt.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Plating</strong>:  - Serve the meatballs hot accompanied by boiled broccoli and red beards. You can add a squeeze of lemon for a touch of freshness.</div></div>
+</div>
+</div>
+</div>
 
+<!-- SPANISH -->
 <div id="lang-es" class="lang-content">
-<p><strong>Fecha:</strong> 2025-03-24</p>
-<p><em>Traduccion al espanol proximamente...</em></p>
-<h3>Per le polpette:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Per le polpette</h2>
+<p class="recipe-date">📅 24 de marzo de 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
+<p><strong>Para las albóndigas</strong></p>
 <ul>
-<li>200 g di ceci secchi (o una lattina di ceci già cotti)</li>
-<li>200 g di carne macinata (manzo o pollo)</li>
-<li>1 radicchio rosso piccolo, cotto e tritato</li>
-<li>2 spicchi d'aglio, tritati</li>
-<li>1 uovo</li>
-<li>100 g di pangrattato</li>
-<li>50 g di parmigiano grattugiato (opzionale)</li>
-<li>Sale e pepe q.b.</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Prezzemolo tritato (opzionale)</li>
+<li>200 g de garbanzos secos (o una lata de garbanzos ya cocidos)</li>
+<li>200 g de carne picada (ternera o pollo)</li>
+<li>1 achicoria roja pequeña, cocida y picada</li>
+<li>2 dientes de ajo, picados</li>
+<li>1 huevo</li>
+<li>100 g de pan rallado</li>
+<li>50 g de parmesano rallado (opcional)</li>
+<li>Sal y pimienta al gusto</li>
+<li>Aceite de oliva virgen extra al gusto</li>
+<li>Perejil picado (opcional)</li>
 </ul>
-<h4>Per i broccoli e barbe rosse:</h4>
+<p><strong>Para brócoli y barbas rojas</strong></p>
 <ul>
-<li>300 g di broccoli</li>
-<li>200 g di barbe rosse</li>
-<li>Sale q.b.</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Limone (per servire, opzionale)</li>
-</ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione dei ceci</strong>: Se utilizzi ceci secchi, mettili a bagno per almeno 8 ore e poi lessali fino a quando sono teneri. Se usi ceci in scatola, scolali e sciacquali.</p>
-<p>2. <strong>Preparazione delle polpette</strong>:</p>
-<ul>
-<li>In una ciotola grande, unisci i ceci macinati (puoi usare un frullatore per ottenere una consistenza fine), la carne macinata, il radicchio cotto, l'aglio tritato, l'uovo, il pangrattato e il parmigiano (se lo usi).</li>
-<li>Mescola bene fino a ottenere un composto omogeneo. Aggiusta di sale e pepe.</li>
-<li>Forma delle polpette della dimensione di una pallina da golf.</li>
-</ul>
-<p>3. <strong>Impanatura</strong>:</p>
-<ul>
-<li>Passa le polpette nel pangrattato per ricoprirle uniformemente.</li>
-</ul>
-<p>4. <strong>Cottura</strong>:</p>
-<ul>
-<li>Pre-riscalda il forno a 200°C. Fodera una teglia con carta da forno e spennella leggermente con olio d'oliva.</li>
-<li>Disponi le polpette sulla teglia e spennellale con un po' d'olio.</li>
-<li>Cuoci in forno per circa 25-30 minuti, girandole a metà cottura, fino a quando sono dorate e croccanti.</li>
-</ul>
-<p>5. <strong>Preparazione dei broccoli e barbe rosse</strong>:</p>
-<ul>
-<li>Porta a ebollizione una pentola d'acqua salata e lessa i broccoli per circa 5-7 minuti, fino a quando sono teneri ma ancora croccanti. Scolali e mettili da parte.</li>
-<li>In un'altra pentola, lessa le barbe rosse per circa 10-15 minuti finché non sono tenere. Scolale e condiscile con un filo d'olio d'oliva e un pizzico di sale.</li>
-</ul>
-<p>6. <strong>Impiattamento</strong>:</p>
-<ul>
-<li>Servi le polpette calde accompagnate dai broccoli lessi e dalle barbe rosse. Puoi aggiungere una spruzzata di limone per un tocco di freschezza.</li>
+<li>300 g de brócoli</li>
+<li>200 g de barbas rojas</li>
+<li>Sal al gusto</li>
+<li>Aceite de oliva virgen extra al gusto</li>
+<li>Limón (para servir, opcional)</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparación</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Preparación de garbanzos</strong>: Si usas garbanzos secos, déjalos en remojo durante al menos 8 horas y luego hiérvelos hasta que estén tiernos. Si usas garbanzos enlatados, escúrrelos y enjuágalos.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Preparación de las albóndigas</strong>:  - En un tazón grande, combine los garbanzos molidos (puede usar una licuadora para obtener una consistencia fina), la carne molida, la achicoria cocida, el ajo picado, el huevo, el pan rallado y el parmesano (si lo usa). - Mezclar bien hasta obtener una mezcla homogénea. Sazone con sal y pimienta. - Forme albóndigas del tamaño de una pelota de golf.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Empanado</strong>:  - Pasar las albóndigas por pan rallado para cubrirlas uniformemente.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Cocinar</strong>:  - Precalentar el horno a 200°C. Forre una bandeja para hornear con papel de horno y unte ligeramente con aceite de oliva. - Colocar las albóndigas en la bandeja del horno y untarlas con un poco de aceite. - Hornear en el horno durante unos 25-30 minutos, dándoles la vuelta a mitad de cocción, hasta que estén dorados y crujientes.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Preparación de brócoli y barbas rojas</strong>:  - Ponga a hervir una cacerola con agua con sal y hierva el brócoli durante unos 5-7 minutos, hasta que esté tierno pero aún crujiente. Escurrirlas y reservarlas. - En otra cacerola hervir las barbas rojas durante unos 10-15 minutos hasta que estén tiernas. Escurrirlas y condimentarlas con un chorrito de aceite de oliva y una pizca de sal.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Revestimiento</strong>:  - Servir las albóndigas calientes acompañadas de brócoli hervido y barbas rojas. Puedes agregar un chorrito de limón para darle un toque de frescura.</div></div>
+</div>
+</div>
+</div>
 
+<!-- PORTUGUESE -->
 <div id="lang-pt" class="lang-content">
-<p><strong>Data:</strong> 2025-03-24</p>
-<p><em>Traducao em portugues em breve...</em></p>
-<h3>Per le polpette:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Per le polpette</h2>
+<p class="recipe-date">📅 24 de março de 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
+<p><strong>Para as almôndegas</strong></p>
 <ul>
-<li>200 g di ceci secchi (o una lattina di ceci già cotti)</li>
-<li>200 g di carne macinata (manzo o pollo)</li>
-<li>1 radicchio rosso piccolo, cotto e tritato</li>
-<li>2 spicchi d'aglio, tritati</li>
-<li>1 uovo</li>
-<li>100 g di pangrattato</li>
-<li>50 g di parmigiano grattugiato (opzionale)</li>
-<li>Sale e pepe q.b.</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Prezzemolo tritato (opzionale)</li>
+<li>200 g de grão de bico seco (ou uma lata de grão de bico já cozido)</li>
+<li>200 g de carne picada (bovina ou frango)</li>
+<li>1 radicchio vermelho pequeno, cozido e picado</li>
+<li>2 dentes de alho picados</li>
+<li>1 ovo</li>
+<li>100 g de pão ralado</li>
+<li>50 g de parmesão ralado (opcional)</li>
+<li>Sal e pimenta a gosto</li>
+<li>Azeite extra virgem a gosto</li>
+<li>Salsa picada (opcional)</li>
 </ul>
-<h4>Per i broccoli e barbe rosse:</h4>
+<p><strong>Para brócolis e barbas ruivas</strong></p>
 <ul>
-<li>300 g di broccoli</li>
-<li>200 g di barbe rosse</li>
-<li>Sale q.b.</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Limone (per servire, opzionale)</li>
-</ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione dei ceci</strong>: Se utilizzi ceci secchi, mettili a bagno per almeno 8 ore e poi lessali fino a quando sono teneri. Se usi ceci in scatola, scolali e sciacquali.</p>
-<p>2. <strong>Preparazione delle polpette</strong>:</p>
-<ul>
-<li>In una ciotola grande, unisci i ceci macinati (puoi usare un frullatore per ottenere una consistenza fine), la carne macinata, il radicchio cotto, l'aglio tritato, l'uovo, il pangrattato e il parmigiano (se lo usi).</li>
-<li>Mescola bene fino a ottenere un composto omogeneo. Aggiusta di sale e pepe.</li>
-<li>Forma delle polpette della dimensione di una pallina da golf.</li>
-</ul>
-<p>3. <strong>Impanatura</strong>:</p>
-<ul>
-<li>Passa le polpette nel pangrattato per ricoprirle uniformemente.</li>
-</ul>
-<p>4. <strong>Cottura</strong>:</p>
-<ul>
-<li>Pre-riscalda il forno a 200°C. Fodera una teglia con carta da forno e spennella leggermente con olio d'oliva.</li>
-<li>Disponi le polpette sulla teglia e spennellale con un po' d'olio.</li>
-<li>Cuoci in forno per circa 25-30 minuti, girandole a metà cottura, fino a quando sono dorate e croccanti.</li>
-</ul>
-<p>5. <strong>Preparazione dei broccoli e barbe rosse</strong>:</p>
-<ul>
-<li>Porta a ebollizione una pentola d'acqua salata e lessa i broccoli per circa 5-7 minuti, fino a quando sono teneri ma ancora croccanti. Scolali e mettili da parte.</li>
-<li>In un'altra pentola, lessa le barbe rosse per circa 10-15 minuti finché non sono tenere. Scolale e condiscile con un filo d'olio d'oliva e un pizzico di sale.</li>
-</ul>
-<p>6. <strong>Impiattamento</strong>:</p>
-<ul>
-<li>Servi le polpette calde accompagnate dai broccoli lessi e dalle barbe rosse. Puoi aggiungere una spruzzata di limone per un tocco di freschezza.</li>
+<li>300 g de brócolis</li>
+<li>200 g de barbas ruivas</li>
+<li>Sal a gosto</li>
+<li>Azeite extra virgem a gosto</li>
+<li>Limão (para servir, opcional)</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparação</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Preparo do grão de bico</strong>: Se usar grão de bico seco, deixe-o de molho por pelo menos 8 horas e depois ferva até ficar macio. Se usar grão de bico enlatado, escorra e enxágue.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Preparo das almôndegas</strong>:  - Em uma tigela grande, misture o grão de bico moído (pode usar um liquidificador para obter uma consistência fina), a carne moída, o radicchio cozido, o alho picado, o ovo, o pão ralado e o parmesão (se for usar). - Misture bem até obter uma mistura homogênea. Tempere com sal e pimenta. - Molde almôndegas do tamanho de bolas de golfe.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Empanado</strong>:  - Mergulhe as almôndegas na farinha de rosca para cobri-las uniformemente.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Cozinhar</strong>:  - Pré-aqueça o forno a 200°C. Forre uma assadeira com papel manteiga e pincele levemente com azeite. - Coloque as almôndegas no tabuleiro e pincele-as com um pouco de azeite. - Leve ao forno cerca de 25-30 minutos, virando-os a meio da cozedura, até ficarem dourados e crocantes.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Preparo de brócolis e barbas ruivas</strong>:  - Leve uma panela com água e sal para ferver e ferva os brócolis por cerca de 5-7 minutos, até ficarem macios, mas ainda crocantes. Escorra-os e reserve. - Em outra panela, ferva as barbas ruivas por cerca de 10-15 minutos até ficarem macias. Escorra-os e tempere-os com um fio de azeite e uma pitada de sal.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Chapeamento</strong>:  - Sirva as almôndegas quentes acompanhadas de brócolis cozido e barbas ruivas. Você pode adicionar um pouco de limão para dar um toque de frescor.</div></div>
+</div>
+</div>
+</div>
 
+<!-- GERMAN -->
 <div id="lang-de" class="lang-content">
-<p><strong>Datum:</strong> 2025-03-24</p>
-<p><em>Deutsche Uebersetzung folgt bald...</em></p>
-<h3>Per le polpette:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Per le polpette</h2>
+<p class="recipe-date">📅 24. März 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Zutaten</h3>
+<p><strong>Für die Fleischbällchen</strong></p>
 <ul>
-<li>200 g di ceci secchi (o una lattina di ceci già cotti)</li>
-<li>200 g di carne macinata (manzo o pollo)</li>
-<li>1 radicchio rosso piccolo, cotto e tritato</li>
-<li>2 spicchi d'aglio, tritati</li>
-<li>1 uovo</li>
-<li>100 g di pangrattato</li>
-<li>50 g di parmigiano grattugiato (opzionale)</li>
-<li>Sale e pepe q.b.</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Prezzemolo tritato (opzionale)</li>
+<li>200 g getrocknete Kichererbsen (oder eine Dose bereits gekochte Kichererbsen)</li>
+<li>200 g Hackfleisch (Rind oder Huhn)</li>
+<li>1 kleiner roter Radicchio, gekocht und gehackt</li>
+<li>2 Knoblauchzehen, gehackt</li>
+<li>1 Ei</li>
+<li>100 g Semmelbrösel</li>
+<li>50 g geriebener Parmesan (optional)</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Extra natives Olivenöl nach Geschmack</li>
+<li>Gehackte Petersilie (optional)</li>
 </ul>
-<h4>Per i broccoli e barbe rosse:</h4>
+<p><strong>Für Brokkoli und rote Bärte</strong></p>
 <ul>
-<li>300 g di broccoli</li>
-<li>200 g di barbe rosse</li>
-<li>Sale q.b.</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Limone (per servire, opzionale)</li>
-</ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione dei ceci</strong>: Se utilizzi ceci secchi, mettili a bagno per almeno 8 ore e poi lessali fino a quando sono teneri. Se usi ceci in scatola, scolali e sciacquali.</p>
-<p>2. <strong>Preparazione delle polpette</strong>:</p>
-<ul>
-<li>In una ciotola grande, unisci i ceci macinati (puoi usare un frullatore per ottenere una consistenza fine), la carne macinata, il radicchio cotto, l'aglio tritato, l'uovo, il pangrattato e il parmigiano (se lo usi).</li>
-<li>Mescola bene fino a ottenere un composto omogeneo. Aggiusta di sale e pepe.</li>
-<li>Forma delle polpette della dimensione di una pallina da golf.</li>
-</ul>
-<p>3. <strong>Impanatura</strong>:</p>
-<ul>
-<li>Passa le polpette nel pangrattato per ricoprirle uniformemente.</li>
-</ul>
-<p>4. <strong>Cottura</strong>:</p>
-<ul>
-<li>Pre-riscalda il forno a 200°C. Fodera una teglia con carta da forno e spennella leggermente con olio d'oliva.</li>
-<li>Disponi le polpette sulla teglia e spennellale con un po' d'olio.</li>
-<li>Cuoci in forno per circa 25-30 minuti, girandole a metà cottura, fino a quando sono dorate e croccanti.</li>
-</ul>
-<p>5. <strong>Preparazione dei broccoli e barbe rosse</strong>:</p>
-<ul>
-<li>Porta a ebollizione una pentola d'acqua salata e lessa i broccoli per circa 5-7 minuti, fino a quando sono teneri ma ancora croccanti. Scolali e mettili da parte.</li>
-<li>In un'altra pentola, lessa le barbe rosse per circa 10-15 minuti finché non sono tenere. Scolale e condiscile con un filo d'olio d'oliva e un pizzico di sale.</li>
-</ul>
-<p>6. <strong>Impiattamento</strong>:</p>
-<ul>
-<li>Servi le polpette calde accompagnate dai broccoli lessi e dalle barbe rosse. Puoi aggiungere una spruzzata di limone per un tocco di freschezza.</li>
+<li>300 g Brokkoli</li>
+<li>200 g rote Bärte</li>
+<li>Salz nach Geschmack</li>
+<li>Extra natives Olivenöl nach Geschmack</li>
+<li>Zitrone (zum Servieren, optional)</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Zubereitung</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Zubereitung von Kichererbsen</strong>: Wenn Sie getrocknete Kichererbsen verwenden, weichen Sie diese mindestens 8 Stunden ein und kochen Sie sie dann, bis sie weich sind. Wenn Sie Kichererbsen aus der Dose verwenden, lassen Sie diese abtropfen und spülen Sie sie ab.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Zubereitung der Fleischbällchen</strong>:  - In einer großen Schüssel die gemahlenen Kichererbsen (für eine feinere Konsistenz können Sie einen Mixer verwenden), das Hackfleisch, den gekochten Radicchio, den gehackten Knoblauch, das Ei, die Semmelbrösel und den Parmesan (falls verwendet) vermischen. - Gut vermischen, bis eine homogene Mischung entsteht. Mit Salz und Pfeffer würzen. - Fleischbällchen in Golfballgröße formen.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Panieren</strong>:  - Tauchen Sie die Fleischbällchen in Semmelbrösel, um sie gleichmäßig zu bedecken.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Kochen</strong>:  - Den Backofen auf 200°C vorheizen. Ein Backblech mit Backpapier auslegen und leicht mit Olivenöl bestreichen. - Legen Sie die Fleischbällchen auf das Backblech und bestreichen Sie sie mit etwas Öl. - Im Ofen etwa 25–30 Minuten backen und nach der Hälfte der Garzeit wenden, bis sie goldbraun und knusprig sind.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Zubereitung von Brokkoli und Rotbärten</strong>:  - Bringen Sie einen Topf mit Salzwasser zum Kochen und kochen Sie den Brokkoli etwa 5–7 Minuten lang, bis er weich, aber noch knusprig ist. Lassen Sie sie abtropfen und legen Sie sie beiseite. - In einer anderen Pfanne die roten Bärte etwa 10–15 Minuten kochen, bis sie weich sind. Lassen Sie sie abtropfen und würzen Sie sie mit einem Schuss Olivenöl und einer Prise Salz.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Beschichtung</strong>:  - Servieren Sie die Fleischbällchen heiß, begleitet von gekochtem Brokkoli und roten Bärten. Für einen Hauch Frische können Sie einen Spritzer Zitrone hinzufügen.</div></div>
+</div>
+</div>
+</div>
 
+<!-- GREEK -->
 <div id="lang-el" class="lang-content">
-<p><strong>Hmerominia:</strong> 2025-03-24</p>
-<p><em>E elliniki metafrasi erhetai syntoma...</em></p>
-<h3>Per le polpette:</h3>
+<div class="recipe-card">
+<h2 class="recipe-title">Per le polpette</h2>
+<p class="recipe-date">📅 24 Μαρτίου 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Υλικά</h3>
+<p><strong>Για τα κεφτεδάκια</strong></p>
 <ul>
-<li>200 g di ceci secchi (o una lattina di ceci già cotti)</li>
-<li>200 g di carne macinata (manzo o pollo)</li>
-<li>1 radicchio rosso piccolo, cotto e tritato</li>
-<li>2 spicchi d'aglio, tritati</li>
-<li>1 uovo</li>
-<li>100 g di pangrattato</li>
-<li>50 g di parmigiano grattugiato (opzionale)</li>
-<li>Sale e pepe q.b.</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Prezzemolo tritato (opzionale)</li>
+<li>200 γραμμάρια αποξηραμένα ρεβίθια (ή μια κονσέρβα ήδη μαγειρεμένα ρεβίθια)</li>
+<li>200 γραμμάρια κιμά (μοσχάρι ή κοτόπουλο)</li>
+<li>1 μικρό κόκκινο ραντίτσιο, μαγειρεμένο και ψιλοκομμένο</li>
+<li>2 σκελίδες σκόρδο, ψιλοκομμένες</li>
+<li>1 αυγό</li>
+<li>100 γρ τριμμένη φρυγανιά</li>
+<li>50 γρ τριμμένη παρμεζάνα (προαιρετικά)</li>
+<li>Αλάτι και πιπέρι για γεύση</li>
+<li>Εξαιρετικό παρθένο ελαιόλαδο για γεύση</li>
+<li>Μαϊντανός ψιλοκομμένος (προαιρετικά)</li>
 </ul>
-<h4>Per i broccoli e barbe rosse:</h4>
+<p><strong>Για μπρόκολο και κόκκινα γένια</strong></p>
 <ul>
-<li>300 g di broccoli</li>
-<li>200 g di barbe rosse</li>
-<li>Sale q.b.</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Limone (per servire, opzionale)</li>
-</ul>
-<h3>Procedimento:</h3>
-<p>1. <strong>Preparazione dei ceci</strong>: Se utilizzi ceci secchi, mettili a bagno per almeno 8 ore e poi lessali fino a quando sono teneri. Se usi ceci in scatola, scolali e sciacquali.</p>
-<p>2. <strong>Preparazione delle polpette</strong>:</p>
-<ul>
-<li>In una ciotola grande, unisci i ceci macinati (puoi usare un frullatore per ottenere una consistenza fine), la carne macinata, il radicchio cotto, l'aglio tritato, l'uovo, il pangrattato e il parmigiano (se lo usi).</li>
-<li>Mescola bene fino a ottenere un composto omogeneo. Aggiusta di sale e pepe.</li>
-<li>Forma delle polpette della dimensione di una pallina da golf.</li>
-</ul>
-<p>3. <strong>Impanatura</strong>:</p>
-<ul>
-<li>Passa le polpette nel pangrattato per ricoprirle uniformemente.</li>
-</ul>
-<p>4. <strong>Cottura</strong>:</p>
-<ul>
-<li>Pre-riscalda il forno a 200°C. Fodera una teglia con carta da forno e spennella leggermente con olio d'oliva.</li>
-<li>Disponi le polpette sulla teglia e spennellale con un po' d'olio.</li>
-<li>Cuoci in forno per circa 25-30 minuti, girandole a metà cottura, fino a quando sono dorate e croccanti.</li>
-</ul>
-<p>5. <strong>Preparazione dei broccoli e barbe rosse</strong>:</p>
-<ul>
-<li>Porta a ebollizione una pentola d'acqua salata e lessa i broccoli per circa 5-7 minuti, fino a quando sono teneri ma ancora croccanti. Scolali e mettili da parte.</li>
-<li>In un'altra pentola, lessa le barbe rosse per circa 10-15 minuti finché non sono tenere. Scolale e condiscile con un filo d'olio d'oliva e un pizzico di sale.</li>
-</ul>
-<p>6. <strong>Impiattamento</strong>:</p>
-<ul>
-<li>Servi le polpette calde accompagnate dai broccoli lessi e dalle barbe rosse. Puoi aggiungere una spruzzata di limone per un tocco di freschezza.</li>
+<li>300 γραμμάρια μπρόκολο</li>
+<li>200 γραμμάρια κόκκινα γένια</li>
+<li>Αλάτι για γεύση</li>
+<li>Εξαιρετικό παρθένο ελαιόλαδο για γεύση</li>
+<li>Λεμόνι (για το σερβίρισμα, προαιρετικά)</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Εκτέλεση</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Προετοιμασία ρεβιθιών</strong>: Εάν χρησιμοποιείτε αποξηραμένα ρεβίθια, μουλιάστε τα για τουλάχιστον 8 ώρες και στη συνέχεια βράστε τα μέχρι να μαλακώσουν. Εάν χρησιμοποιείτε ρεβίθια σε κονσέρβα, τα στραγγίζετε και τα ξεπλένετε.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Προετοιμασία των κεφτεδών</strong>:  - Σε ένα μεγάλο μπολ, ανακατέψτε τα αλεσμένα ρεβίθια (μπορείτε να χρησιμοποιήσετε ένα μπλέντερ για να πάρετε μια λεπτή σύσταση), τον κιμά, το μαγειρεμένο ραντίτσιο, το ψιλοκομμένο σκόρδο, το αυγό, τη φρυγανιά και την παρμεζάνα (αν χρησιμοποιείτε). - Ανακατεύουμε καλά μέχρι να έχουμε ένα ομοιογενές μείγμα. Αλατοπιπερώνουμε. - Πλάθουμε κεφτεδάκια σε μέγεθος μπάλας του γκολφ.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Ψωμί</strong>:  - Βουτήξτε τα κεφτεδάκια σε τριμμένη φρυγανιά για να καλυφθούν ομοιόμορφα.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Μαγείρεμα</strong>:  - Προθερμαίνουμε τον φούρνο στους 200°C. Στρώνουμε ένα ταψί με χαρτί ψησίματος και αλείφουμε ελαφρά με ελαιόλαδο. - Τοποθετούμε τα κεφτεδάκια στο ταψί και τα αλείφουμε με λίγο λάδι. - Ψήνετε στο φούρνο για περίπου 25-30 λεπτά, γυρίζοντάς τα μέχρι τη μέση του ψησίματος, μέχρι να ροδίσουν και να γίνουν τραγανά.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Προετοιμασία μπρόκολου και κόκκινων γενειάδων</strong>:  - Βράστε ένα τηγάνι με αλατισμένο νερό και βράστε το μπρόκολο για περίπου 5-7 λεπτά, μέχρι να μαλακώσουν αλλά να γίνουν ακόμα τραγανά. Τα στραγγίζουμε και τα αφήνουμε στην άκρη. - Σε άλλο τηγάνι βράζουμε τα κόκκινα γένια για περίπου 10-15 λεπτά μέχρι να μαλακώσουν. Τα στραγγίζουμε και τα αλατοπιπερώνουμε με λίγο ελαιόλαδο και μια πρέζα αλάτι.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Επιμετάλλωση</strong>:  - Σερβίρετε τα κεφτεδάκια ζεστά συνοδευόμενα με βραστό μπρόκολο και κόκκινα γένια. Μπορείτε να προσθέσετε μια στύψιμο λεμονιού για μια νότα φρεσκάδας.</div></div>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+</div>
+</div>
 
 <div class="footer">
-<p>Leguminando - Ricette di stagione a base di legumi</p>
-<p>"Tutto e iniziato con hummus di ceci..."</p>
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<p>"Tutto è iniziato con hummus di ceci..."</p>
 </div>
-<div data-legumi="ceci" style="display:none;"></div>
-
-<script>
-function toggleFav(path, title) {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    if (favs[path]) { delete favs[path]; }
-    else { favs[path] = title; }
-    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
-    updateFavIcons();
-}
-function updateFavIcons() {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    document.querySelectorAll('.fav-btn').forEach(btn => {
-        let p = btn.getAttribute('data-path');
-        btn.textContent = favs[p] ? '❤️' : '🤍';
-    });
-}
-document.addEventListener('DOMContentLoaded', updateFavIcons);
-</script>
-
+</div>
 
 
 <div style="text-align:center; margin:30px 0; padding:20px;">
@@ -449,7 +354,6 @@ function condividiRicetta() {
     }
 }
 </script>
-
 
 </body>
 </html>

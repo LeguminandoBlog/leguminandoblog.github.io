@@ -3,87 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ricetta del 2025-03-02 | Leguminando</title>
+<title>Minestra di Pane con Verdure e Legumi | Leguminando</title>
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://leguminandoblog.github.io/primavera/081.html">
+    <meta property="og:title" content="Minestra di Pane con Verdure e Legumi">
+    <meta property="og:description" content="Ricetta su Leguminando - Minestra di Pane con Verdure e Legumi">
+    <meta property="og:image" content="https://leguminandoblog.github.io/primavera/081.jpg">
+    <meta property="og:site_name" content="Leguminando">
+    <meta name="twitter:card" content="summary_large_image">
 <style>
-body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f0; }
-.header { background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
-.recipe-image { width: 100%; max-width: 600px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.content { background: white; padding: 30px; border-radius: 10px; }
-.content h1 { color: #8B4513; }
-.content h2 { color: #D2691E; }
-.content h3 { color: #8B4513; }
-.content ul { margin: 15px 0; padding-left: 20px; }
-.content li { margin: 8px 0; }
-.content p { margin: 12px 0; line-height: 1.6; }
-.footer { text-align: center; margin-top: 40px; color: #8B4513; font-size: 0.9em; }
-.back-link { display: inline-block; margin: 10px 0; padding: 8px 16px; background: #8B4513; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; background: #f8f5f0; min-height: 100vh; padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+.header { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 40px 20px 30px; text-align: center; border-radius: 20px; margin-bottom: 30px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+.header h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.header .tagline { font-size: 1.2em; opacity: 0.9; font-style: italic; }
+.back-link { display: inline-block; margin: 20px 0; padding: 10px 20px; background: #8B4513; color: white; text-decoration: none; border-radius: 25px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.95em; transition: background 0.3s; }
 .back-link:hover { background: #D2691E; }
-
-.fav-btn { cursor: pointer; font-size: 1.2em; margin-left: 10px; user-select: none; display: inline-block; }
-.fav-bar { text-align: center; margin: 5px 0; }
-
-@media print {
-    .lang-tabs, .lang-tab, input[type="radio"], .view-counter,
-    .stats, .back-link, .badge { display: none !important; }
-    body { background: white !important; margin: 0 !important; padding: 20px !important; font-size: 12pt; }
-    .header { background: none !important; color: black !important; padding: 10px 0 !important; }
-    .content { padding: 0 !important; box-shadow: none !important; border: none !important; }
-    .recipe-card { box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
-}
-
-</style>
-<meta name="description" content="Ricetta del 2025-03-02">
-<meta property="og:title" content="Ricetta del 2025-03-02 | Leguminando">
-<meta property="og:description" content="Ricetta del 2025-03-02">
-<style>
-.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
-.lang-tab { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; background: #e0e0e0; color: #333; font-size: 0.9em; transition: all 0.3s; }
-.lang-tab.active { background: #8B4513; color: white; }
-.lang-tab:hover:not(.active) { background: #D2691E; color: white; }
+.fav-bar { text-align: center; margin: 10px 0; }
+.fav-btn { cursor: pointer; font-size: 1.8em; user-select: none; display: inline-block; transition: transform 0.2s; }
+.fav-btn:hover { transform: scale(1.2); }
+.recipe-image { width: 100%; max-width: 700px; margin: 20px auto; display: block; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.lang-tabs { display: flex; justify-content: center; gap: 8px; margin: 30px 0; flex-wrap: wrap; }
+.lang-tab { padding: 10px 20px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; border-radius: 25px; cursor: pointer; font-size: 0.9em; transition: all 0.3s; }
+.lang-tab:hover { background: rgba(255,255,255,0.3); }
+.lang-tab.active { background: white; color: #c0392b; border-color: white; }
+.recipe-card { background: white; border-radius: 20px; padding: 40px; margin-bottom: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
 .lang-content { display: none; }
 .lang-content.active { display: block; }
+.recipe-title { font-size: 2.2em; color: #8B4513; margin-bottom: 10px; text-align: center; }
+.recipe-date { text-align: center; color: #666; font-size: 0.95em; margin-bottom: 25px; }
+.ingredients-box { background: linear-gradient(135deg, #fef9e7 0%, #fdebd0 100%); border-radius: 15px; padding: 25px; margin: 25px 0; border-left: 5px solid #D2691E; }
+.ingredients-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.ingredients-box ul { padding-left: 20px; }
+.ingredients-box li { margin: 8px 0; color: #5D4037; }
+.steps-box { margin: 25px 0; }
+.steps-box h3 { color: #8B4513; font-size: 1.4em; margin-bottom: 15px; }
+.step { display: flex; gap: 15px; margin: 15px 0; padding: 15px; background: #faf8f5; border-radius: 12px; align-items: flex-start; }
+.step-num { background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1em; flex-shrink: 0; }
+.step-text { flex: 1; color: #5D4037; line-height: 1.6; }
+.tip-box { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 15px; padding: 20px; margin: 25px 0; border-left: 5px solid #4caf50; }
+.tip-box h4 { color: #2e7d32; margin-bottom: 10px; }
+.tip-box p { color: #1b5e20; line-height: 1.6; }
+.footer { text-align: center; margin-top: 50px; padding: 20px; color: #8B4513; font-size: 0.9em; }
+@media (max-width: 600px) { .header h1 { font-size: 2em; } .recipe-card { padding: 20px; } .recipe-title { font-size: 1.6em; } }
+@media print { .lang-tabs, .lang-tab, .fav-bar, .back-link { display: none !important; } body { background: white !important; } .recipe-card { box-shadow: none !important; break-inside: avoid; } }
 </style>
 <script>
-function showLang(lang) {
-    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
-    document.getElementById('lang-' + lang).classList.add('active');
-    event.target.classList.add('active');
-}
+function showLang(lang) { document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active')); document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active')); document.getElementById('lang-' + lang).classList.add('active'); event.target.classList.add('active'); }
+function toggleFav(path, title) { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); if (favs[path]) { delete favs[path]; } else { favs[path] = title; } localStorage.setItem('leguminando_favs', JSON.stringify(favs)); updateFavIcons(); }
+function updateFavIcons() { let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}'); document.querySelectorAll('.fav-btn').forEach(btn => { let p = btn.getAttribute('data-path'); btn.textContent = favs[p] ? '❤️' : '🤍'; }); }
+document.addEventListener('DOMContentLoaded', updateFavIcons);
 </script>
 </head>
 <body>
+<div class="container">
 <div class="header">
-<h1>Leguminando</h1>
-<p>Ricette di stagione a base di legumi</p>
+<h1>🫘 Leguminando</h1>
+<p class="tagline">Ricette di stagione a base di legumi</p>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
-
+<a href="../index.html" class="back-link">← Torna alla Home</a>
 <div class="fav-bar">
-<span class="fav-btn" data-path="primavera/081.html" data-title="Ricetta del 2025-03-02" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
+<span class="fav-btn" data-path="primavera/081.html" data-title="Minestra di Pane con Verdure e Legumi" onclick="toggleFav(this.dataset.path, this.dataset.title)">🤍</span>
 </div>
-
-<img src="081.jpg" alt="Ricetta del 2025-03-02" class="recipe-image">
-
-<div class="content">
+<img src="081.jpg" alt="Minestra di Pane con Verdure e Legumi" class="recipe-image">
 <div class="lang-tabs">
-    <button class="lang-tab active" onclick="showLang('it')">IT</button>
-    <button class="lang-tab" onclick="showLang('en')">EN</button>
-    <button class="lang-tab" onclick="showLang('es')">ES</button>
-    <button class="lang-tab" onclick="showLang('pt')">PT</button>
-    <button class="lang-tab" onclick="showLang('de')">DE</button>
-    <button class="lang-tab" onclick="showLang('el')">EL</button>
+    <button class="lang-tab active" onclick="showLang('it')">🇮🇹 IT</button>
+    <button class="lang-tab" onclick="showLang('en')">🇬🇧 EN</button>
+    <button class="lang-tab" onclick="showLang('es')">🇪🇸 ES</button>
+    <button class="lang-tab" onclick="showLang('pt')">🇵🇹 PT</button>
+    <button class="lang-tab" onclick="showLang('de')">🇩🇪 DE</button>
+    <button class="lang-tab" onclick="showLang('el')">🇬🇷 EL</button>
 </div>
 
+<!-- ITALIANO -->
 <div id="lang-it" class="lang-content active">
-<p><strong>Data:</strong> 2025-03-02</p>
-<h3>Minestra di Pane con Verdure e Legumi</h3>
-<h4>Ingredienti:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Minestra di Pane con Verdure e Legumi</h2>
+<p class="recipe-date">📅 2 Marzo 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredienti</h3>
 <ul>
 <li>300 g di pane raffermo (meglio se di tipo toscano)</li>
 <li>200 g di fagioli (cannellini o borlotti), già cotti</li>
@@ -92,350 +96,212 @@ function showLang(lang) {
 <li>1 zucchina</li>
 <li>1 cipolla</li>
 <li>2 pomodori maturi</li>
-<li>2 spicchi d'aglio</li>
+<li>2 spicchi d&#x27;aglio</li>
 <li>1 rametto di rosmarino</li>
 <li>1 rametto di timo</li>
-<li>Olio extravergine d'oliva q.b.</li>
+<li>Olio extravergine d&#x27;oliva q.b.</li>
 <li>Sale e pepe q.b.</li>
 <li>Parmigiano grattugiato (facoltativo)</li>
 </ul>
-<h4>Procedimento:</h4>
-<p>1. <strong>Preparazione delle Verdure</strong>:</p>
-<ul>
-<li>Inizia a pulire e tagliare le carote, la zucchina e i pomodori a cubetti. Tritare finemente la cipolla e l'aglio.</li>
-</ul>
-<p>2. <strong>Soffritto</strong>:</p>
-<ul>
-<li>In una pentola capiente, scalda un filo d'olio d'oliva e aggiungi la cipolla e l'aglio tritati. Fai soffriggere a fuoco medio fino a quando la cipolla diventa trasparente.</li>
-</ul>
-<p>3. <strong>Cottura delle Verdure</strong>:</p>
-<ul>
-<li>Aggiungi le carote e la zucchina al soffritto e fai cuocere per circa 5-7 minuti, mescolando di tanto in tanto. Aggiungi i pomodori e continua a cuocere per altri 5 minuti.</li>
-</ul>
-<p>4. <strong>Aggiunta dei Legumi e del Brodo</strong>:</p>
-<ul>
-<li>Unisci i fagioli già cotti e versa il brodo vegetale. Aggiungi il rosmarino e il timo. Porta a ebollizione e poi abbassa la fiamma, lasciando sobbollire per circa 15-20 minuti.</li>
-</ul>
-<p>5. <strong>Preparazione del Pane</strong>:</p>
-<ul>
-<li>Nel frattempo, taglia il pane raffermo a cubetti. Puoi tostarli leggermente in una padella con un filo d'olio se desideri una consistenza croccante.</li>
-</ul>
-<p>6. <strong>Unione degli Ingredienti</strong>:</p>
-<ul>
-<li>Quando le verdure sono cotte, aggiungi i cubetti di pane nella pentola e mescola bene. Lascia cuocere per altri 5-10 minuti, in modo che il pane assorba parte del brodo.</li>
-</ul>
-<p>7. <strong>Regolazione di Sale e Pepe</strong>:</p>
-<ul>
-<li>Assaggia e regola di sale e pepe secondo il tuo gusto.</li>
-</ul>
-<p>8. <strong>Servizio</strong>:</p>
-<ul>
-<li>Servi la minestra di pane calda, guarnita con un filo d'olio d'oliva a crudo e, se desideri, con del parmigiano grattugiato.</li>
-</ul>
+</div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparazione</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Preparazione delle Verdure</strong>:  - Inizia a pulire e tagliare le carote, la zucchina e i pomodori a cubetti. Tritare finemente la cipolla e l&#x27;aglio.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Soffritto</strong>:  - In una pentola capiente, scalda un filo d&#x27;olio d&#x27;oliva e aggiungi la cipolla e l&#x27;aglio tritati. Fai soffriggere a fuoco medio fino a quando la cipolla diventa trasparente.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Cottura delle Verdure</strong>:  - Aggiungi le carote e la zucchina al soffritto e fai cuocere per circa 5-7 minuti, mescolando di tanto in tanto. Aggiungi i pomodori e continua a cuocere per altri 5 minuti.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Aggiunta dei Legumi e del Brodo</strong>:  - Unisci i fagioli già cotti e versa il brodo vegetale. Aggiungi il rosmarino e il timo. Porta a ebollizione e poi abbassa la fiamma, lasciando sobbollire per circa 15-20 minuti.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Preparazione del Pane</strong>:  - Nel frattempo, taglia il pane raffermo a cubetti. Puoi tostarli leggermente in una padella con un filo d&#x27;olio se desideri una consistenza croccante.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Unione degli Ingredienti</strong>:  - Quando le verdure sono cotte, aggiungi i cubetti di pane nella pentola e mescola bene. Lascia cuocere per altri 5-10 minuti, in modo che il pane assorba parte del brodo.</div></div>
+<div class="step"><div class="step-num">7</div><div class="step-text"><strong>Regolazione di Sale e Pepe</strong>:  - Assaggia e regola di sale e pepe secondo il tuo gusto.</div></div>
+<div class="step"><div class="step-num">8</div><div class="step-text"><strong>Servizio</strong>:  - Servi la minestra di pane calda, guarnita con un filo d&#x27;olio d&#x27;oliva a crudo e, se desideri, con del parmigiano grattugiato.</div></div>
+</div>
+</div>
 </div>
 
+<!-- ENGLISH -->
 <div id="lang-en" class="lang-content">
-<p><strong>Date:</strong> 2025-03-02</p>
-<p><em>English translation coming soon...</em></p>
-<h3>Minestra di Pane con Verdure e Legumi</h3>
-<h4>Ingredienti:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Minestra di Pane con Verdure e Legumi</h2>
+<p class="recipe-date">📅 March 2, 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredients</h3>
 <ul>
-<li>300 g di pane raffermo (meglio se di tipo toscano)</li>
-<li>200 g di fagioli (cannellini o borlotti), già cotti</li>
-<li>1 litro di brodo vegetale</li>
-<li>2 carote</li>
-<li>1 zucchina</li>
-<li>1 cipolla</li>
-<li>2 pomodori maturi</li>
-<li>2 spicchi d'aglio</li>
-<li>1 rametto di rosmarino</li>
-<li>1 rametto di timo</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Sale e pepe q.b.</li>
-<li>Parmigiano grattugiato (facoltativo)</li>
-</ul>
-<h4>Procedimento:</h4>
-<p>1. <strong>Preparazione delle Verdure</strong>:</p>
-<ul>
-<li>Inizia a pulire e tagliare le carote, la zucchina e i pomodori a cubetti. Tritare finemente la cipolla e l'aglio.</li>
-</ul>
-<p>2. <strong>Soffritto</strong>:</p>
-<ul>
-<li>In una pentola capiente, scalda un filo d'olio d'oliva e aggiungi la cipolla e l'aglio tritati. Fai soffriggere a fuoco medio fino a quando la cipolla diventa trasparente.</li>
-</ul>
-<p>3. <strong>Cottura delle Verdure</strong>:</p>
-<ul>
+<li>300 g of stale bread (preferably Tuscan type)</li>
+<li>200 g of beans (cannellini or borlotti), already cooked</li>
+<li>1 liter of vegetable broth</li>
+<li>2 carrots</li>
+<li>1 courgette</li>
+<li>1 onion</li>
+<li>2 ripe tomatoes</li>
+<li>2 cloves of garlic</li>
+<li>1 sprig of rosemary</li>
+<li>1 sprig of thyme</li>
+<li>Extra virgin olive oil to taste</li>
+<li>Salt and pepper to taste</li>
+<li>Grated Parmesan (optional)</li>
+<li>Start cleaning and cutting the carrots, courgettes and tomatoes into cubes. Finely chop the onion and garlic.</li>
+<li>In a large pot, heat a drizzle of olive oil and add the chopped onion and garlic. Fry over medium heat until the onion becomes transparent.</li>
 <li>Aggiungi le carote e la zucchina al soffritto e fai cuocere per circa 5-7 minuti, mescolando di tanto in tanto. Aggiungi i pomodori e continua a cuocere per altri 5 minuti.</li>
-</ul>
-<p>4. <strong>Aggiunta dei Legumi e del Brodo</strong>:</p>
-<ul>
 <li>Unisci i fagioli già cotti e versa il brodo vegetale. Aggiungi il rosmarino e il timo. Porta a ebollizione e poi abbassa la fiamma, lasciando sobbollire per circa 15-20 minuti.</li>
-</ul>
-<p>5. <strong>Preparazione del Pane</strong>:</p>
-<ul>
-<li>Nel frattempo, taglia il pane raffermo a cubetti. Puoi tostarli leggermente in una padella con un filo d'olio se desideri una consistenza croccante.</li>
-</ul>
-<p>6. <strong>Unione degli Ingredienti</strong>:</p>
-<ul>
-<li>Quando le verdure sono cotte, aggiungi i cubetti di pane nella pentola e mescola bene. Lascia cuocere per altri 5-10 minuti, in modo che il pane assorba parte del brodo.</li>
-</ul>
-<p>7. <strong>Regolazione di Sale e Pepe</strong>:</p>
-<ul>
-<li>Assaggia e regola di sale e pepe secondo il tuo gusto.</li>
-</ul>
-<p>8. <strong>Servizio</strong>:</p>
-<ul>
-<li>Servi la minestra di pane calda, guarnita con un filo d'olio d'oliva a crudo e, se desideri, con del parmigiano grattugiato.</li>
+<li>Nel frattempo, taglia il pane raffermo a cubetti. Puoi tostarli leggermente in una padella con un filo d&#x27;olio se desideri una consistenza croccante.</li>
+<li>When the vegetables are cooked, add the bread cubes to the pot and mix well. Let it cook for another 5-10 minutes, so that the bread absorbs some of the broth.</li>
+<li>Taste and adjust salt and pepper according to your taste.</li>
+<li>Serve the bread soup hot, garnished with a drizzle of raw olive oil and, if desired, with grated parmesan.</li>
 </ul>
 </div>
+</div>
+</div>
 
+<!-- SPANISH -->
 <div id="lang-es" class="lang-content">
-<p><strong>Fecha:</strong> 2025-03-02</p>
-<p><em>Traduccion al espanol proximamente...</em></p>
-<h3>Minestra di Pane con Verdure e Legumi</h3>
-<h4>Ingredienti:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Minestra di Pane con Verdure e Legumi</h2>
+<p class="recipe-date">📅 2 de marzo de 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li>300 g di pane raffermo (meglio se di tipo toscano)</li>
-<li>200 g di fagioli (cannellini o borlotti), già cotti</li>
-<li>1 litro di brodo vegetale</li>
-<li>2 carote</li>
-<li>1 zucchina</li>
-<li>1 cipolla</li>
-<li>2 pomodori maturi</li>
-<li>2 spicchi d'aglio</li>
-<li>1 rametto di rosmarino</li>
-<li>1 rametto di timo</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Sale e pepe q.b.</li>
-<li>Parmigiano grattugiato (facoltativo)</li>
-</ul>
-<h4>Procedimento:</h4>
-<p>1. <strong>Preparazione delle Verdure</strong>:</p>
-<ul>
-<li>Inizia a pulire e tagliare le carote, la zucchina e i pomodori a cubetti. Tritare finemente la cipolla e l'aglio.</li>
-</ul>
-<p>2. <strong>Soffritto</strong>:</p>
-<ul>
-<li>In una pentola capiente, scalda un filo d'olio d'oliva e aggiungi la cipolla e l'aglio tritati. Fai soffriggere a fuoco medio fino a quando la cipolla diventa trasparente.</li>
-</ul>
-<p>3. <strong>Cottura delle Verdure</strong>:</p>
-<ul>
+<li>300 g de pan duro (preferiblemente tipo toscano)</li>
+<li>200 g de judías (cannellini o borlotti), ya cocidas</li>
+<li>1 litro de caldo de verduras</li>
+<li>2 zanahorias</li>
+<li>1 calabacín</li>
+<li>1 cebolla</li>
+<li>2 tomates maduros</li>
+<li>2 dientes de ajo</li>
+<li>1 ramita de romero</li>
+<li>1 ramita de tomillo</li>
+<li>Aceite de oliva virgen extra al gusto</li>
+<li>Sal y pimienta al gusto</li>
+<li>Parmesano rallado (opcional)</li>
+<li>Empezar a limpiar y cortar las zanahorias, los calabacines y los tomates en dados. Picar finamente la cebolla y el ajo.</li>
+<li>En una olla grande, calentar un chorrito de aceite de oliva y añadir la cebolla y el ajo picados. Freír a fuego medio hasta que la cebolla se vuelva transparente.</li>
 <li>Aggiungi le carote e la zucchina al soffritto e fai cuocere per circa 5-7 minuti, mescolando di tanto in tanto. Aggiungi i pomodori e continua a cuocere per altri 5 minuti.</li>
-</ul>
-<p>4. <strong>Aggiunta dei Legumi e del Brodo</strong>:</p>
-<ul>
 <li>Unisci i fagioli già cotti e versa il brodo vegetale. Aggiungi il rosmarino e il timo. Porta a ebollizione e poi abbassa la fiamma, lasciando sobbollire per circa 15-20 minuti.</li>
-</ul>
-<p>5. <strong>Preparazione del Pane</strong>:</p>
-<ul>
-<li>Nel frattempo, taglia il pane raffermo a cubetti. Puoi tostarli leggermente in una padella con un filo d'olio se desideri una consistenza croccante.</li>
-</ul>
-<p>6. <strong>Unione degli Ingredienti</strong>:</p>
-<ul>
-<li>Quando le verdure sono cotte, aggiungi i cubetti di pane nella pentola e mescola bene. Lascia cuocere per altri 5-10 minuti, in modo che il pane assorba parte del brodo.</li>
-</ul>
-<p>7. <strong>Regolazione di Sale e Pepe</strong>:</p>
-<ul>
-<li>Assaggia e regola di sale e pepe secondo il tuo gusto.</li>
-</ul>
-<p>8. <strong>Servizio</strong>:</p>
-<ul>
-<li>Servi la minestra di pane calda, guarnita con un filo d'olio d'oliva a crudo e, se desideri, con del parmigiano grattugiato.</li>
+<li>Mientras tanto, corta el pan duro en dados. Puedes tostarlas ligeramente en una sartén con un poco de aceite si quieres que queden una textura crujiente.</li>
+<li>Cuando las verduras estén cocidas, añade los cubitos de pan a la olla y mezcla bien. Deja que se cocine otros 5-10 minutos, para que el pan absorba parte del caldo.</li>
+<li>Probar y rectificar de sal y pimienta al gusto.</li>
+<li>Servir la sopa de pan caliente, adornada con un chorrito de aceite de oliva crudo y, si se desea, con parmesano rallado.</li>
 </ul>
 </div>
+</div>
+</div>
 
+<!-- PORTUGUESE -->
 <div id="lang-pt" class="lang-content">
-<p><strong>Data:</strong> 2025-03-02</p>
-<p><em>Traducao em portugues em breve...</em></p>
-<h3>Minestra di Pane con Verdure e Legumi</h3>
-<h4>Ingredienti:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Minestra di Pane con Verdure e Legumi</h2>
+<p class="recipe-date">📅 2 de março de 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Ingredientes</h3>
 <ul>
-<li>300 g di pane raffermo (meglio se di tipo toscano)</li>
-<li>200 g di fagioli (cannellini o borlotti), già cotti</li>
-<li>1 litro di brodo vegetale</li>
-<li>2 carote</li>
-<li>1 zucchina</li>
-<li>1 cipolla</li>
-<li>2 pomodori maturi</li>
-<li>2 spicchi d'aglio</li>
-<li>1 rametto di rosmarino</li>
-<li>1 rametto di timo</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Sale e pepe q.b.</li>
-<li>Parmigiano grattugiato (facoltativo)</li>
-</ul>
-<h4>Procedimento:</h4>
-<p>1. <strong>Preparazione delle Verdure</strong>:</p>
-<ul>
-<li>Inizia a pulire e tagliare le carote, la zucchina e i pomodori a cubetti. Tritare finemente la cipolla e l'aglio.</li>
-</ul>
-<p>2. <strong>Soffritto</strong>:</p>
-<ul>
-<li>In una pentola capiente, scalda un filo d'olio d'oliva e aggiungi la cipolla e l'aglio tritati. Fai soffriggere a fuoco medio fino a quando la cipolla diventa trasparente.</li>
-</ul>
-<p>3. <strong>Cottura delle Verdure</strong>:</p>
-<ul>
-<li>Aggiungi le carote e la zucchina al soffritto e fai cuocere per circa 5-7 minuti, mescolando di tanto in tanto. Aggiungi i pomodori e continua a cuocere per altri 5 minuti.</li>
-</ul>
-<p>4. <strong>Aggiunta dei Legumi e del Brodo</strong>:</p>
-<ul>
-<li>Unisci i fagioli già cotti e versa il brodo vegetale. Aggiungi il rosmarino e il timo. Porta a ebollizione e poi abbassa la fiamma, lasciando sobbollire per circa 15-20 minuti.</li>
-</ul>
-<p>5. <strong>Preparazione del Pane</strong>:</p>
-<ul>
-<li>Nel frattempo, taglia il pane raffermo a cubetti. Puoi tostarli leggermente in una padella con un filo d'olio se desideri una consistenza croccante.</li>
-</ul>
-<p>6. <strong>Unione degli Ingredienti</strong>:</p>
-<ul>
-<li>Quando le verdure sono cotte, aggiungi i cubetti di pane nella pentola e mescola bene. Lascia cuocere per altri 5-10 minuti, in modo che il pane assorba parte del brodo.</li>
-</ul>
-<p>7. <strong>Regolazione di Sale e Pepe</strong>:</p>
-<ul>
-<li>Assaggia e regola di sale e pepe secondo il tuo gusto.</li>
-</ul>
-<p>8. <strong>Servizio</strong>:</p>
-<ul>
-<li>Servi la minestra di pane calda, guarnita con un filo d'olio d'oliva a crudo e, se desideri, con del parmigiano grattugiato.</li>
+<li>300 g de pão amanhecido (melhor se for do tipo toscano)</li>
+<li>200 g de feijão (cannellini ou borlotti), já cozido</li>
+<li>1 litro de caldo de legumes</li>
+<li>2 cenouras</li>
+<li>1 abobrinha</li>
+<li>1 cebola</li>
+<li>2 tomates maduros</li>
+<li>2 dentes de alho</li>
+<li>1 raminho de alecrim</li>
+<li>1 raminho de tomilho</li>
+<li>Azeite extra virgem a gosto</li>
+<li>Sal e pimenta a gosto</li>
+<li>Parmesão ralado (opcional)</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Preparação</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Preparação de Legumes</strong>:  - Comece a limpar e a cortar as cenouras, as abobrinhas e os tomates em cubos. Pique finamente a cebola e o alho.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Refogado</strong>:  - Num tacho grande, aqueça um fio de azeite e junte a cebola picada e o alho. Frite em fogo médio até a cebola ficar transparente.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Cozinhar Legumes</strong>:  - Adicione a cenoura e a curgete ao molho e cozinhe durante cerca de 5-7 minutos, mexendo de vez em quando. Adicione os tomates e continue cozinhando por mais 5 minutos.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Adição de Legumes e Caldo</strong>:  - Adicione o feijão já cozido e despeje o caldo de legumes. Adicione o alecrim e o tomilho. Deixe ferver e abaixe o fogo, deixando ferver por cerca de 15-20 minutos.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Preparação do Pão</strong>:  - Entretanto, corte o pão amanhecido em cubos. Você pode torrá-los levemente em uma frigideira com um pouco de óleo se quiser uma textura crocante.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>União de Ingredientes</strong>:  - Quando le verdure sono cotte, aggiungi i cubetti di pane nella pentola e mescola bene. Lascia cuocere per altri 5-10 minuti, in modo che il pane assorba parte del brodo.</div></div>
+<div class="step"><div class="step-num">7</div><div class="step-text"><strong>Regolazione di Sale e Pepe</strong>:  - Assaggia e regola di sale e pepe secondo il tuo gusto.</div></div>
+<div class="step"><div class="step-num">8</div><div class="step-text"><strong>Servizio</strong>:  - Sirva a sopa de pão quente, guarnecida com um fio de azeite cru e, se desejar, com parmesão ralado.</div></div>
+</div>
+</div>
+</div>
 
+<!-- GERMAN -->
 <div id="lang-de" class="lang-content">
-<p><strong>Datum:</strong> 2025-03-02</p>
-<p><em>Deutsche Uebersetzung folgt bald...</em></p>
-<h3>Minestra di Pane con Verdure e Legumi</h3>
-<h4>Ingredienti:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Minestra di Pane con Verdure e Legumi</h2>
+<p class="recipe-date">📅 2. März 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Zutaten</h3>
 <ul>
-<li>300 g di pane raffermo (meglio se di tipo toscano)</li>
-<li>200 g di fagioli (cannellini o borlotti), già cotti</li>
-<li>1 litro di brodo vegetale</li>
-<li>2 carote</li>
-<li>1 zucchina</li>
-<li>1 cipolla</li>
-<li>2 pomodori maturi</li>
-<li>2 spicchi d'aglio</li>
-<li>1 rametto di rosmarino</li>
-<li>1 rametto di timo</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Sale e pepe q.b.</li>
-<li>Parmigiano grattugiato (facoltativo)</li>
-</ul>
-<h4>Procedimento:</h4>
-<p>1. <strong>Preparazione delle Verdure</strong>:</p>
-<ul>
-<li>Inizia a pulire e tagliare le carote, la zucchina e i pomodori a cubetti. Tritare finemente la cipolla e l'aglio.</li>
-</ul>
-<p>2. <strong>Soffritto</strong>:</p>
-<ul>
-<li>In una pentola capiente, scalda un filo d'olio d'oliva e aggiungi la cipolla e l'aglio tritati. Fai soffriggere a fuoco medio fino a quando la cipolla diventa trasparente.</li>
-</ul>
-<p>3. <strong>Cottura delle Verdure</strong>:</p>
-<ul>
-<li>Aggiungi le carote e la zucchina al soffritto e fai cuocere per circa 5-7 minuti, mescolando di tanto in tanto. Aggiungi i pomodori e continua a cuocere per altri 5 minuti.</li>
-</ul>
-<p>4. <strong>Aggiunta dei Legumi e del Brodo</strong>:</p>
-<ul>
-<li>Unisci i fagioli già cotti e versa il brodo vegetale. Aggiungi il rosmarino e il timo. Porta a ebollizione e poi abbassa la fiamma, lasciando sobbollire per circa 15-20 minuti.</li>
-</ul>
-<p>5. <strong>Preparazione del Pane</strong>:</p>
-<ul>
-<li>Nel frattempo, taglia il pane raffermo a cubetti. Puoi tostarli leggermente in una padella con un filo d'olio se desideri una consistenza croccante.</li>
-</ul>
-<p>6. <strong>Unione degli Ingredienti</strong>:</p>
-<ul>
-<li>Quando le verdure sono cotte, aggiungi i cubetti di pane nella pentola e mescola bene. Lascia cuocere per altri 5-10 minuti, in modo che il pane assorba parte del brodo.</li>
-</ul>
-<p>7. <strong>Regolazione di Sale e Pepe</strong>:</p>
-<ul>
-<li>Assaggia e regola di sale e pepe secondo il tuo gusto.</li>
-</ul>
-<p>8. <strong>Servizio</strong>:</p>
-<ul>
-<li>Servi la minestra di pane calda, guarnita con un filo d'olio d'oliva a crudo e, se desideri, con del parmigiano grattugiato.</li>
+<li>300 g altbackenes Brot (vorzugsweise toskanisches Brot)</li>
+<li>200 g Bohnen (Cannellini oder Borlotti), bereits gekocht</li>
+<li>1 Liter Gemüsebrühe</li>
+<li>2 Karotten</li>
+<li>1 Zucchini</li>
+<li>1 Zwiebel</li>
+<li>2 reife Tomaten</li>
+<li>2 Knoblauchzehen</li>
+<li>1 Zweig Rosmarin</li>
+<li>1 Zweig Thymian</li>
+<li>Extra natives Olivenöl nach Geschmack</li>
+<li>Salz und Pfeffer nach Geschmack</li>
+<li>Geriebener Parmesan (optional)</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Zubereitung</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Zubereitung von Gemüse</strong>:  - Beginnen Sie mit dem Reinigen und Schneiden der Karotten, Zucchini und Tomaten in Würfel. Zwiebel und Knoblauch fein hacken.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Sautiert</strong>:  - In einem großen Topf einen Schuss Olivenöl erhitzen und die gehackte Zwiebel und den Knoblauch hinzufügen. Bei mittlerer Hitze braten, bis die Zwiebel transparent wird.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Gemüse kochen</strong>:  - Karotten und Zucchini in die Soße geben und etwa 5-7 Minuten kochen lassen, dabei gelegentlich umrühren. Die Tomaten hinzufügen und weitere 5 Minuten kochen lassen.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Zugabe von Hülsenfrüchten und Brühe</strong>:  - Die bereits gekochten Bohnen dazugeben und mit der Gemüsebrühe aufgießen. Rosmarin und Thymian hinzufügen. Zum Kochen bringen, dann die Hitze reduzieren und etwa 15–20 Minuten köcheln lassen.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Brotzubereitung</strong>:  - In der Zwischenzeit das altbackene Brot in Würfel schneiden. Wenn Sie eine knusprige Konsistenz wünschen, können Sie sie in einer Pfanne mit etwas Öl leicht rösten.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Zusammensetzung der Zutaten</strong>:  - Wenn das Gemüse gar ist, die Brotwürfel in den Topf geben und gut vermischen. Nochmals 5-10 Minuten kochen lassen, damit das Brot einen Teil der Brühe aufnimmt.</div></div>
+<div class="step"><div class="step-num">7</div><div class="step-text"><strong>Anpassung von Salz und Pfeffer</strong>:  - Schmecken Sie ab und passen Sie Salz und Pfeffer nach Ihrem Geschmack an.</div></div>
+<div class="step"><div class="step-num">8</div><div class="step-text"><strong>Service</strong>:  - Servieren Sie die Brotsuppe heiß, garniert mit einem Schuss rohem Olivenöl und, falls gewünscht, mit geriebenem Parmesan.</div></div>
+</div>
+</div>
+</div>
 
+<!-- GREEK -->
 <div id="lang-el" class="lang-content">
-<p><strong>Hmerominia:</strong> 2025-03-02</p>
-<p><em>E elliniki metafrasi erhetai syntoma...</em></p>
-<h3>Minestra di Pane con Verdure e Legumi</h3>
-<h4>Ingredienti:</h4>
+<div class="recipe-card">
+<h2 class="recipe-title">Minestra di Pane con Verdure e Legumi</h2>
+<p class="recipe-date">📅 2 Μαρτίου 2025</p>
+<div class="ingredients-box">
+<h3>🥗 Υλικά</h3>
 <ul>
-<li>300 g di pane raffermo (meglio se di tipo toscano)</li>
-<li>200 g di fagioli (cannellini o borlotti), già cotti</li>
-<li>1 litro di brodo vegetale</li>
-<li>2 carote</li>
+<li>300 γραμμάρια μπαγιάτικο ψωμί (κατά προτίμηση τύπου Τοσκάνης)</li>
+<li>200 γρ φασόλια (κανελίνια ή μπορλότι), ήδη ψημένα</li>
+<li>1 λίτρο ζωμό λαχανικών</li>
+<li>2 καρότα</li>
 <li>1 zucchina</li>
 <li>1 cipolla</li>
-<li>2 pomodori maturi</li>
-<li>2 spicchi d'aglio</li>
-<li>1 rametto di rosmarino</li>
-<li>1 rametto di timo</li>
-<li>Olio extravergine d'oliva q.b.</li>
-<li>Sale e pepe q.b.</li>
-<li>Parmigiano grattugiato (facoltativo)</li>
-</ul>
-<h4>Procedimento:</h4>
-<p>1. <strong>Preparazione delle Verdure</strong>:</p>
-<ul>
-<li>Inizia a pulire e tagliare le carote, la zucchina e i pomodori a cubetti. Tritare finemente la cipolla e l'aglio.</li>
-</ul>
-<p>2. <strong>Soffritto</strong>:</p>
-<ul>
-<li>In una pentola capiente, scalda un filo d'olio d'oliva e aggiungi la cipolla e l'aglio tritati. Fai soffriggere a fuoco medio fino a quando la cipolla diventa trasparente.</li>
-</ul>
-<p>3. <strong>Cottura delle Verdure</strong>:</p>
-<ul>
-<li>Aggiungi le carote e la zucchina al soffritto e fai cuocere per circa 5-7 minuti, mescolando di tanto in tanto. Aggiungi i pomodori e continua a cuocere per altri 5 minuti.</li>
-</ul>
-<p>4. <strong>Aggiunta dei Legumi e del Brodo</strong>:</p>
-<ul>
-<li>Unisci i fagioli già cotti e versa il brodo vegetale. Aggiungi il rosmarino e il timo. Porta a ebollizione e poi abbassa la fiamma, lasciando sobbollire per circa 15-20 minuti.</li>
-</ul>
-<p>5. <strong>Preparazione del Pane</strong>:</p>
-<ul>
-<li>Nel frattempo, taglia il pane raffermo a cubetti. Puoi tostarli leggermente in una padella con un filo d'olio se desideri una consistenza croccante.</li>
-</ul>
-<p>6. <strong>Unione degli Ingredienti</strong>:</p>
-<ul>
-<li>Quando le verdure sono cotte, aggiungi i cubetti di pane nella pentola e mescola bene. Lascia cuocere per altri 5-10 minuti, in modo che il pane assorba parte del brodo.</li>
-</ul>
-<p>7. <strong>Regolazione di Sale e Pepe</strong>:</p>
-<ul>
-<li>Assaggia e regola di sale e pepe secondo il tuo gusto.</li>
-</ul>
-<p>8. <strong>Servizio</strong>:</p>
-<ul>
-<li>Servi la minestra di pane calda, guarnita con un filo d'olio d'oliva a crudo e, se desideri, con del parmigiano grattugiato.</li>
+<li>2 ώριμες ντομάτες</li>
+<li>2 σκελίδες σκόρδο</li>
+<li>1 κλωνάρι δεντρολίβανο</li>
+<li>1 κλωνάρι θυμάρι</li>
+<li>Εξαιρετικό παρθένο ελαιόλαδο για γεύση</li>
+<li>Αλάτι και πιπέρι για γεύση</li>
+<li>τριμμένη παρμεζάνα (προαιρετικά)</li>
 </ul>
 </div>
+<div class="steps-box">
+<h3>👨‍🍳 Εκτέλεση</h3>
+<div class="step"><div class="step-num">1</div><div class="step-text"><strong>Προετοιμασία λαχανικών</strong>:  - Ξεκινήστε να καθαρίζετε και να κόβετε τα καρότα, το κολοκυθάκι και τις ντομάτες σε κύβους. Ψιλοκόβουμε το κρεμμύδι και το σκόρδο.</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><strong>Σοταρισμένα</strong>:  - Σε μια μεγάλη κατσαρόλα ζεσταίνουμε λίγο ελαιόλαδο και προσθέτουμε το ψιλοκομμένο κρεμμύδι και το σκόρδο. Τηγανίζουμε σε μέτρια φωτιά μέχρι το κρεμμύδι να γίνει διάφανο.</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><strong>Μαγείρεμα λαχανικών</strong>:  - Προσθέστε τα καρότα και το κολοκυθάκι στη σάλτσα και μαγειρέψτε για περίπου 5-7 λεπτά, ανακατεύοντας κατά διαστήματα. Προσθέτουμε τις ντομάτες και συνεχίζουμε το ψήσιμο για άλλα 5 λεπτά.</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text"><strong>Προσθήκη οσπρίων και ζωμού</strong>:  - Προσθέτουμε τα ήδη ψημένα φασόλια και ρίχνουμε μέσα τον ζωμό λαχανικών. Προσθέστε το δεντρολίβανο και το θυμάρι. Αφήνουμε να πάρει βράση και στη συνέχεια χαμηλώνουμε τη φωτιά αφήνοντας να σιγοβράσει για περίπου 15-20 λεπτά.</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text"><strong>Προετοιμασία ψωμιού</strong>:  - Στο μεταξύ κόψτε το μπαγιάτικο ψωμί σε κύβους. Μπορείτε να τα φρυγανίσετε ελαφρά σε ένα τηγάνι με λίγο λάδι αν θέλετε τραγανή υφή.</div></div>
+<div class="step"><div class="step-num">6</div><div class="step-text"><strong>Ένωση Συστατικών</strong>:  - Όταν ψηθούν τα λαχανικά, προσθέτουμε στην κατσαρόλα τους κύβους ψωμιού και ανακατεύουμε καλά. Αφήστε το να ψηθεί για άλλα 5-10 λεπτά, ώστε το ψωμί να απορροφήσει λίγο από τον ζωμό.</div></div>
+<div class="step"><div class="step-num">7</div><div class="step-text"><strong>Ρύθμιση αλατιού και πιπεριού</strong>:  - Δοκιμάζουμε και προσαρμόζουμε αλάτι και πιπέρι ανάλογα με το γούστο σας.</div></div>
+<div class="step"><div class="step-num">8</div><div class="step-text"><strong>Υπηρεσία</strong>:  - Σερβίρετε τη σούπα ψωμιού ζεστή, γαρνίροντας με λίγο ωμό ελαιόλαδο και, αν θέλετε, με τριμμένη παρμεζάνα.</div></div>
 </div>
-
-<a href="../index.html" class="back-link">&larr; Torna alla Home</a>
+</div>
+</div>
 
 <div class="footer">
-<p>Leguminando - Ricette di stagione a base di legumi</p>
-<p>"Tutto e iniziato con hummus di ceci..."</p>
+<p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
+<p>"Tutto è iniziato con hummus di ceci..."</p>
 </div>
-<div data-legumi="ceci,fagioli" style="display:none;"></div>
-
-<script>
-function toggleFav(path, title) {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    if (favs[path]) { delete favs[path]; }
-    else { favs[path] = title; }
-    localStorage.setItem('leguminando_favs', JSON.stringify(favs));
-    updateFavIcons();
-}
-function updateFavIcons() {
-    let favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    document.querySelectorAll('.fav-btn').forEach(btn => {
-        let p = btn.getAttribute('data-path');
-        btn.textContent = favs[p] ? '❤️' : '🤍';
-    });
-}
-document.addEventListener('DOMContentLoaded', updateFavIcons);
-</script>
-
+</div>
 
 
 <div style="text-align:center; margin:30px 0; padding:20px;">
@@ -461,7 +327,6 @@ function condividiRicetta() {
     }
 }
 </script>
-
 
 </body>
 </html>
