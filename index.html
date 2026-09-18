@@ -482,8 +482,8 @@
             <a href="chatbot.html" class="season-card chatbot" data-season="chatbot">
                 <div class="season-icon">🤖</div>
                 <div class="season-content">
-                    <h3 class="season-title" data-it="Chatbot" data-en="Chatbot" data-es="Chatbot" data-pt="Chatbot" data-de="Chatbot" data-el="Chatbot">Chatbot</h3>
-                    <p class="season-desc">Chiedi a LegumAI</p>
+                    <h3 class="season-title" data-it="LegumAI" data-en="LegumAI" data-es="LegumAI" data-pt="LegumAI" data-de="LegumAI" data-el="LegumAI">LegumAI</h3>
+                    <p class="season-desc" data-it="Chiedi a LegumAI" data-en="Ask LegumAI" data-es="Pregunta a LegumAI" data-pt="Pergunte ao LegumAI" data-de="Frag LegumAI" data-el="Ρωτήστε το LegumAI">Chiedi a LegumAI</p>
                 </div>
             </a>
         </div>
@@ -582,8 +582,8 @@
             document.getElementById('lang-' + lang).classList.add('active');
             event.target.classList.add('active');
 
-            document.querySelectorAll('.season-name, .season-title').forEach(el => {
-                el.textContent = el.getAttribute('data-' + lang);
+            document.querySelectorAll('.season-name, .season-title, .season-desc').forEach(el => {
+                el.textContent = el.getAttribute('data-' + lang) || el.textContent;
             });
 
             // Aggiorna anche la stagione nello slideshow
@@ -866,7 +866,11 @@ function condividiBlog() {
 </style>
 <button id="legumai-widget-btn" onclick="toggleLegumAI()" title="Chiedi a LegumAI">🤖</button>
 <div id="legumai-widget">
-  <div class="lw-header">🍝 LegumAI <span style="margin-left:auto;font-size:11px;opacity:.8">Assistente Culinario</span></div>
+  <div class="lw-header">
+    🍝 LegumAI
+    <span id="lw-subtitle" style="margin-left:auto;font-size:11px;opacity:.8">Assistente Culinario</span>
+  </div>
+  <div id="lw-version" style="text-align:center;font-size:10px;color:#888;padding:3px 0;background:#f0f0eb;border-bottom:1px solid #e5e5e0;">Versione 1.0 - in prova</div>
   <div class="lw-lang">
     <button class="lw-lang-btn active" data-lang="it" onclick="setLWLang(this)">🇮🇹</button>
     <button class="lw-lang-btn" data-lang="en" onclick="setLWLang(this)">🇬🇧</button>
@@ -876,7 +880,7 @@ function condividiBlog() {
     <button class="lw-lang-btn" data-lang="el" onclick="setLWLang(this)">🇬🇷</button>
   </div>
   <div class="lw-messages" id="lw-messages">
-    <div class="lw-msg bot">Ciao! Sono LegumAI. Chiedimi una ricetta!</div>
+    <div class="lw-msg bot" id="lw-welcome">Ciao! Sono LegumAI. Chiedimi una ricetta!</div>
   </div>
   <div class="lw-input">
     <input type="text" id="lw-input" placeholder="Dammi una ricetta..." maxlength="80" onkeypress="if(event.key==='Enter') sendLW()">
@@ -886,13 +890,33 @@ function condividiBlog() {
 <script>
 const LW_URL = 'https://pippomike791.pythonanywhere.com/chat';
 let lwCurrentLang = 'it';
+const LW_UI = {
+  it: { subtitle: "Assistente Culinario", version: "Versione 1.0 - in prova", welcome: "Ciao! Sono LegumAI. Chiedimi una ricetta!", placeholder: "Dammi una ricetta...", loading: "Sto cercando...", error: "Errore di connessione." },
+  en: { subtitle: "Culinary Assistant", version: "Version 1.0 - beta", welcome: "Hello! I'm LegumAI. Ask me a recipe!", placeholder: "Give me a recipe...", loading: "Searching...", error: "Connection error." },
+  es: { subtitle: "Asistente Culinario", version: "Versión 1.0 - en prueba", welcome: "Hola! Soy LegumAI. Pideme una receta!", placeholder: "Dame una receta...", loading: "Buscando...", error: "Error de conexion." },
+  pt: { subtitle: "Assistente Culinário", version: "Versão 1.0 - em teste", welcome: "Ola! Sou LegumAI. Peca-me uma receita!", placeholder: "Diga-me uma receita...", loading: "Procurando...", error: "Erro de conexao." },
+  de: { subtitle: "Küchenassistent", version: "Version 1.0 - im Test", welcome: "Hallo! Ich bin LegumAI. Fragen Sie mich nach einem Rezept!", placeholder: "Gib mir ein Rezept...", loading: "Suche...", error: "Verbindungsfehler." },
+  el: { subtitle: "Μαγειρικός Βοηθός", version: "Έκδοση 1.0 - σε δοκιμή", welcome: "Γεια σας! Είμαι ο LegumAI. Ζητήστε μου μια συνταγή!", placeholder: "Δώσε μου μια συνταγή...", loading: "Αναζήτηση...", error: "Σφάλμα σύνδεσης." }
+};
 function toggleLegumAI() {
   document.getElementById('legumai-widget').classList.toggle('open');
+}
+function applyLWLang() {
+  const t = LW_UI[lwCurrentLang];
+  const sub = document.getElementById('lw-subtitle');
+  if (sub) sub.textContent = t.subtitle;
+  const ver = document.getElementById('lw-version');
+  if (ver) ver.textContent = t.version;
+  const wel = document.getElementById('lw-welcome');
+  if (wel) wel.textContent = t.welcome;
+  const inp = document.getElementById('lw-input');
+  if (inp) inp.placeholder = t.placeholder;
 }
 function setLWLang(btn) {
   document.querySelectorAll('.lw-lang-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   lwCurrentLang = btn.dataset.lang;
+  applyLWLang();
 }
 async function sendLW() {
   const input = document.getElementById('lw-input');
@@ -902,7 +926,8 @@ async function sendLW() {
   msgDiv.innerHTML += '<div class="lw-msg user">' + escapeLW(text) + '</div>';
   input.value = '';
   const loadingId = 'lw-' + Date.now();
-  msgDiv.innerHTML += '<div class="lw-msg bot" id="' + loadingId + '"">Sto cercando...</div>';
+  const t = LW_UI[lwCurrentLang];
+  msgDiv.innerHTML += '<div class="lw-msg bot" id="' + loadingId + '"">' + t.loading + '</div>';
   msgDiv.scrollTop = msgDiv.scrollHeight;
   try {
     const res = await fetch(LW_URL, {
@@ -918,12 +943,15 @@ async function sendLW() {
     }
   } catch (e) {
     document.getElementById(loadingId).remove();
-    msgDiv.innerHTML += '<div class="lw-msg bot"><strong>Errore di connessione.</strong></div>';
+    const t2 = LW_UI[lwCurrentLang];
+    msgDiv.innerHTML += '<div class="lw-msg bot"><strong>' + t2.error + '</strong></div>';
   }
   msgDiv.scrollTop = msgDiv.scrollHeight;
 }
 function escapeLW(t) { const d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
 function formatLW(t) { return t.replace(/\n/g, '<br>').replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>'); }
+// Applica lingua all'avvio
+document.addEventListener('DOMContentLoaded', applyLWLang);
 </script>
 
 </body>

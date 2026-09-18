@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LegumAI - Assistente Culinario | Leguminando</title>
+<title>LegumAI | Leguminando</title>
 <link rel="icon" type="image/png" href="favicon.png">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -121,7 +121,9 @@
 
 <div class="top-bar">
   <h1>🍝 LegumAI</h1>
-  <p>Assistente Culinario del blog <a href="index.html">Leguminando</a></p>
+  <p id="chatbot-subtitle">Assistente Culinario del blog <a href="index.html">Leguminando</a></p>
+  <p id="chatbot-version" style="font-size:0.9em;opacity:0.8;margin-top:4px;">Versione 1.0 - in prova</p>
+  <a href="index.html" id="chatbot-home" style="display:inline-block;margin-top:12px;padding:8px 18px;background:rgba(255,255,255,0.2);border:2px solid white;border-radius:25px;color:white;text-decoration:none;font-size:0.95em;transition:all 0.3s;">← Torna alla Home</a>
 </div>
 
 <div class="chat-wrap">
@@ -179,7 +181,10 @@ const UI = {
     badgeCreative: "✨ Proposta di LegumAI",
     error: "Errore di connessione. Riprova piu' tardi.",
     counter: "0 / 80",
-    loading: "Sto cercando la ricetta..."
+    loading: "Sto cercando la ricetta...",
+    subtitle: "Assistente Culinario del blog Leguminando",
+    version: "Versione 1.0 - in prova",
+    home: "← Torna alla Home"
   },
   en: {
     labelLang: "Language:",
@@ -190,7 +195,10 @@ const UI = {
     badgeCreative: "✨ LegumAI suggestion",
     error: "Connection error. Please try again later.",
     counter: "0 / 80",
-    loading: "Searching the recipe..."
+    loading: "Searching the recipe...",
+    subtitle: "Culinary Assistant of Leguminando blog",
+    version: "Version 1.0 - beta",
+    home: "← Back to Home"
   },
   es: {
     labelLang: "Idioma:",
@@ -201,7 +209,10 @@ const UI = {
     badgeCreative: "✨ Propuesta de LegumAI",
     error: "Error de conexion. Intenta mas tarde.",
     counter: "0 / 80",
-    loading: "Buscando la receta..."
+    loading: "Buscando la receta...",
+    subtitle: "Asistente Culinario del blog Leguminando",
+    version: "Versión 1.0 - en prueba",
+    home: "← Volver al Inicio"
   },
   pt: {
     labelLang: "Idioma:",
@@ -212,7 +223,10 @@ const UI = {
     badgeCreative: "✨ Sugestao de LegumAI",
     error: "Erro de conexao. Tente novamente mais tarde.",
     counter: "0 / 80",
-    loading: "Procurando a receita..."
+    loading: "Procurando a receita...",
+    subtitle: "Assistente Culinário do blog Leguminando",
+    version: "Versão 1.0 - em teste",
+    home: "← Voltar ao Início"
   },
   de: {
     labelLang: "Sprache:",
@@ -223,7 +237,10 @@ const UI = {
     badgeCreative: "✨ LegumAI-Vorschlag",
     error: "Verbindungsfehler. Bitte versuchen Sie es spaeter erneut.",
     counter: "0 / 80",
-    loading: "Rezept wird gesucht..."
+    loading: "Rezept wird gesucht...",
+    subtitle: "Küchenassistent des Leguminando Blogs",
+    version: "Version 1.0 - im Test",
+    home: "← Zurück zur Startseite"
   },
   el: {
     labelLang: "Γλώσσα:",
@@ -234,7 +251,10 @@ const UI = {
     badgeCreative: "✨ Πρόταση LegumAI",
     error: "Σφάλμα σύνδεσης. Δοκιμάστε ξανά αργότερα.",
     counter: "0 / 80",
-    loading: "Αναζήτηση συνταγής..."
+    loading: "Αναζήτηση συνταγής...",
+    subtitle: "Μαγειρικός Βοηθός του blog Leguminando",
+    version: "Έκδοση 1.0 - σε δοκιμή",
+    home: "← Επιστροφή στην Αρχική"
   }
 };
 
@@ -265,6 +285,13 @@ function applyUILang() {
       chip.setAttribute('onclick', `fillAndSend('${t.examples[i]}')`);
     }
   });
+  // Subtitle e versione nella top-bar
+  const sub = document.getElementById('chatbot-subtitle');
+  if (sub) sub.innerHTML = t.subtitle + ' <a href="index.html">Leguminando</a>';
+  const ver = document.getElementById('chatbot-version');
+  if (ver) ver.textContent = t.version;
+  const home = document.getElementById('chatbot-home');
+  if (home) home.textContent = t.home;
   // Contatore
   updateCounter();
 }
