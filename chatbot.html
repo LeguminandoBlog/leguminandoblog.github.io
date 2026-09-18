@@ -169,10 +169,104 @@
 const BACKEND_URL = 'https://pippomike791.pythonanywhere.com/chat';
 let currentLang = 'it';
 
+const UI = {
+  it: {
+    labelLang: "Lingua:",
+    welcome: "Ciao! Sono LegumAI, il tuo assistente culinario. Chiedimi una ricetta italiana o dimmi che ingredienti hai! 🇮🇹",
+    placeholder: "Dammi la ricetta della carbonara...",
+    examples: ["pasta e fagioli", "ribollita", "minestrone", "crea con ceci"],
+    badgeCookbook: "🍳 Dal ricettario",
+    badgeCreative: "✨ Proposta di LegumAI",
+    error: "Errore di connessione. Riprova piu' tardi.",
+    counter: "0 / 80",
+    loading: "Sto cercando la ricetta..."
+  },
+  en: {
+    labelLang: "Language:",
+    welcome: "Hello! I'm LegumAI, your culinary assistant. Ask me an Italian recipe or tell me what ingredients you have! 🇬🇧",
+    placeholder: "Give me the carbonara recipe...",
+    examples: ["pasta e fagioli", "ribollita", "minestrone", "create with chickpeas"],
+    badgeCookbook: "🍳 From the cookbook",
+    badgeCreative: "✨ LegumAI suggestion",
+    error: "Connection error. Please try again later.",
+    counter: "0 / 80",
+    loading: "Searching the recipe..."
+  },
+  es: {
+    labelLang: "Idioma:",
+    welcome: "Hola! Soy LegumAI, tu asistente culinario. Pideme una receta italiana o dime que ingredientes tienes! 🇪🇸",
+    placeholder: "Dame la receta de la carbonara...",
+    examples: ["pasta e fagioli", "ribollita", "minestrone", "crea con garbanzos"],
+    badgeCookbook: "🍳 Del recetario",
+    badgeCreative: "✨ Propuesta de LegumAI",
+    error: "Error de conexion. Intenta mas tarde.",
+    counter: "0 / 80",
+    loading: "Buscando la receta..."
+  },
+  pt: {
+    labelLang: "Idioma:",
+    welcome: "Ola! Sou LegumAI, seu assistente culinario. Peca-me uma receita italiana ou diga-me que ingredientes tem! 🇵🇹",
+    placeholder: "Diga-me a receita da carbonara...",
+    examples: ["pasta e fagioli", "ribollita", "minestrone", "crie com grao-de-bico"],
+    badgeCookbook: "🍳 Do livro de receitas",
+    badgeCreative: "✨ Sugestao de LegumAI",
+    error: "Erro de conexao. Tente novamente mais tarde.",
+    counter: "0 / 80",
+    loading: "Procurando a receita..."
+  },
+  de: {
+    labelLang: "Sprache:",
+    welcome: "Hallo! Ich bin LegumAI, Ihr kulinarischer Assistent. Fragen Sie mich nach einem italienischen Rezept oder sagen Sie mir, welche Zutaten Sie haben! 🇩🇪",
+    placeholder: "Gib mir das Carbonara-Rezept...",
+    examples: ["pasta e fagioli", "ribollita", "minestrone", "mit Kichererbsen kreieren"],
+    badgeCookbook: "🍳 Aus dem Kochbuch",
+    badgeCreative: "✨ LegumAI-Vorschlag",
+    error: "Verbindungsfehler. Bitte versuchen Sie es spaeter erneut.",
+    counter: "0 / 80",
+    loading: "Rezept wird gesucht..."
+  },
+  el: {
+    labelLang: "Γλώσσα:",
+    welcome: "Γεια σας! Είμαι ο LegumAI, ο γευσιγνωστικός σας βοηθός. Ζητήστε μου μια ιταλική συνταγή ή πείτε μου τι υλικά έχετε! 🇬🇷",
+    placeholder: "Δώσε μου τη συνταγή για καρμπονάρα...",
+    examples: ["pasta e fagioli", "ribollita", "minestrone", "δημιούργησε με ρεβίθια"],
+    badgeCookbook: "🍳 Από το βιβλίο συνταγών",
+    badgeCreative: "✨ Πρόταση LegumAI",
+    error: "Σφάλμα σύνδεσης. Δοκιμάστε ξανά αργότερα.",
+    counter: "0 / 80",
+    loading: "Αναζήτηση συνταγής..."
+  }
+};
+
 function setLang(btn) {
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   currentLang = btn.dataset.lang;
+  applyUILang();
+}
+
+function applyUILang() {
+  const t = UI[currentLang];
+  // Label Lingua
+  const label = document.querySelector('.lang-bar label');
+  if (label) label.textContent = t.labelLang;
+  // Welcome message (primo msg bot)
+  const msgs = document.querySelectorAll('.chat-messages .msg.bot');
+  if (msgs.length > 0) {
+    msgs[0].textContent = t.welcome;
+  }
+  // Placeholder
+  document.getElementById('chatInput').placeholder = t.placeholder;
+  // Esempi
+  const chips = document.querySelectorAll('.example-chip');
+  chips.forEach((chip, i) => {
+    if (t.examples[i]) {
+      chip.textContent = t.examples[i];
+      chip.setAttribute('onclick', `fillAndSend('${t.examples[i]}')`);
+    }
+  });
+  // Contatore
+  updateCounter();
 }
 
 function updateCounter() {
@@ -203,8 +297,9 @@ async function sendMessage() {
   updateCounter();
   btn.disabled = true;
 
+  const t = UI[currentLang];
   const loadingId = 'loading-' + Date.now();
-  messages.innerHTML += `<div class="msg loading" id="${loadingId}">Sto cercando la ricetta...</div>`;
+  messages.innerHTML += `<div class="msg loading" id="${loadingId}">${t.loading}</div>`;
   messages.scrollTop = messages.scrollHeight;
 
   try {
@@ -222,9 +317,9 @@ async function sendMessage() {
     } else {
       let html = `<div class="msg bot">`;
       if (data.mode === 'cookbook') {
-        html += `<div class="badge badge-cookbook">🍳 Dal ricettario</div>`;
+        html += `<div class="badge badge-cookbook">${t.badgeCookbook}</div>`;
       } else if (data.mode === 'creative' || data.mode === 'creative_soft') {
-        html += `<div class="badge badge-creative">✨ Proposta di LegumAI</div>`;
+        html += `<div class="badge badge-creative">${t.badgeCreative}</div>`;
       }
       html += formatResponse(data.reply);
       if (data.sources && data.sources.length > 0) {
@@ -236,7 +331,7 @@ async function sendMessage() {
     }
   } catch (err) {
     document.getElementById(loadingId).remove();
-    messages.innerHTML += `<div class="msg bot"><strong>Errore di connessione.</strong> Riprova più tardi.</div>`;
+    messages.innerHTML += `<div class="msg bot"><strong>${t.error}</strong></div>`;
   }
 
   btn.disabled = false;
@@ -255,6 +350,9 @@ function formatResponse(text) {
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/^#+\s+(.+)$/gm, '<h4>$1</h4>');
 }
+
+// Applica lingua all'avvio (default IT)
+document.addEventListener('DOMContentLoaded', applyUILang);
 </script>
 
 </body>
