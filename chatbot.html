@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LegumAI - Assistente Culinario | Leguminando</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Georgia', serif; background: #f8f5f0; min-height: 100vh; }
+
+  .top-bar {
+    background: linear-gradient(135deg, #8B4513 0%, #D2691E 50%, #F4A460 100%);
+    color: white; text-align: center; padding: 20px;
+  }
+  .top-bar h1 { font-size: 2em; }
+  .top-bar a { color: white; text-decoration: underline; }
+
+  .chat-wrap {
+    max-width: 700px; margin: 30px auto; padding: 0 16px;
+  }
+
+  .chat-card {
+    background: #fff; border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    display: flex; flex-direction: column;
+    height: calc(100vh - 160px); min-height: 500px;
+    overflow: hidden;
+  }
+
+  .chat-header {
+    background: #2d5016; color: #fff;
+    padding: 14px 20px; display: flex;
+    align-items: center; gap: 12px;
+  }
+  .chat-header h3 { font-size: 16px; font-weight: 600; }
+  .chat-header .status {
+    width: 8px; height: 8px; background: #4ade80;
+    border-radius: 50%; margin-left: auto;
+  }
+
+  .lang-bar {
+    display: flex; gap: 8px; padding: 8px 16px;
+    background: #f0f0eb; border-bottom: 1px solid #e5e5e0;
+    align-items: center;
+  }
+  .lang-bar label { font-size: 12px; color: #666; }
+  .lang-btn {
+    border: 1px solid #ccc; background: #fff;
+    border-radius: 4px; padding: 4px 8px;
+    font-size: 13px; cursor: pointer;
+  }
+  .lang-btn.active { background: #2d5016; color: #fff; border-color: #2d5016; }
+
+  .chat-messages {
+    flex: 1; overflow-y: auto; padding: 16px;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .msg { max-width: 85%; padding: 12px 16px;
+    border-radius: 12px; font-size: 14px; line-height: 1.5;
+  }
+  .msg.user { align-self: flex-end; background: #2d5016; color: #fff; }
+  .msg.bot { align-self: flex-start; background: #f0f0eb; color: #333; }
+  .msg.bot .sources {
+    margin-top: 10px; padding-top: 8px;
+    border-top: 1px dashed #ccc;
+    font-size: 12px; color: #888; font-style: italic;
+  }
+  .msg.loading { background: #f0f0eb; color: #888; font-style: italic; }
+
+  .chat-footer {
+    padding: 12px 16px;
+    border-top: 1px solid #e5e5e0;
+  }
+  .input-wrap {
+    display: flex; gap: 8px; align-items: center;
+    border: 1px solid #d5d5d0; border-radius: 20px;
+    padding: 4px 4px 4px 14px;
+  }
+  .input-wrap input {
+    flex: 1; border: none; outline: none;
+    font-size: 14px; background: transparent;
+  }
+  .input-wrap button {
+    width: 40px; height: 40px;
+    border: none; border-radius: 50%;
+    background: #2d5016; color: #fff;
+    cursor: pointer;
+  }
+  .input-wrap button:disabled { background: #999; cursor: not-allowed; }
+
+  .counter {
+    text-align: right; font-size: 11px; margin-top: 4px;
+    color: #999;
+  }
+  .counter.warn { color: #e67e22; }
+  .counter.danger { color: #c0392b; }
+
+  .badge {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    padding: 3px 10px; border-radius: 10px;
+    margin-bottom: 8px; letter-spacing: 0.3px;
+  }
+  .badge-cookbook { background: #e8f5e9; color: #2d5016; border: 1px solid #a5d6a7; }
+  .badge-creative { background: #fff8e1; color: #8d6e00; border: 1px solid #ffe082; }
+
+  .examples {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    padding: 8px 16px; background: #fafaf8;
+    border-bottom: 1px solid #e5e5e0;
+  }
+  .example-chip {
+    background: #fff; border: 1px solid #ddd;
+    border-radius: 12px; padding: 4px 10px;
+    font-size: 12px; cursor: pointer; color: #2d5016;
+  }
+  .example-chip:hover { background: #f0f0eb; }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <h1>🍝 LegumAI</h1>
+  <p>Assistente Culinario del blog <a href="index.html">Leguminando</a></p>
+</div>
+
+<div class="chat-wrap">
+  <div class="chat-card">
+    <div class="chat-header">
+      <span>🤖</span>
+      <h3>LegumAI</h3>
+      <span class="status" title="Online"></span>
+    </div>
+
+    <div class="lang-bar">
+      <label>Lingua:</label>
+      <button class="lang-btn active" data-lang="it" onclick="setLang(this)">🇮🇹 IT</button>
+      <button class="lang-btn" data-lang="en" onclick="setLang(this)">🇬🇧 EN</button>
+      <button class="lang-btn" data-lang="es" onclick="setLang(this)">🇪🇸 ES</button>
+      <button class="lang-btn" data-lang="pt" onclick="setLang(this)">🇵🇹 PT</button>
+      <button class="lang-btn" data-lang="de" onclick="setLang(this)">🇩🇪 DE</button>
+      <button class="lang-btn" data-lang="el" onclick="setLang(this)">🇬🇷 EL</button>
+    </div>
+
+    <div class="examples" id="examples">
+      <span class="example-chip" onclick="fillAndSend('pasta e fagioli')">pasta e fagioli</span>
+      <span class="example-chip" onclick="fillAndSend('ribollita')">ribollita</span>
+      <span class="example-chip" onclick="fillAndSend('minestrone')">minestrone</span>
+      <span class="example-chip" onclick="fillAndSend('crea una ricetta con ceci')">crea con ceci</span>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+      <div class="msg bot">
+        Ciao! Sono LegumAI, il tuo assistente culinario. Chiedimi una ricetta italiana o dimmi che ingredienti hai! 🇮🇹
+      </div>
+    </div>
+
+    <div class="chat-footer">
+      <div class="input-wrap">
+        <input type="text" id="chatInput" placeholder="Dammi la ricetta della carbonara..." maxlength="80" onkeypress="if(event.key==='Enter') sendMessage()" oninput="updateCounter()">
+        <button id="sendBtn" onclick="sendMessage()">➤</button>
+      </div>
+      <div class="counter" id="charCounter">0 / 80</div>
+    </div>
+  </div>
+</div>
+
+<script>
+const BACKEND_URL = 'https://pippomike791.pythonanywhere.com/chat';
+let currentLang = 'it';
+
+function setLang(btn) {
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentLang = btn.dataset.lang;
+}
+
+function updateCounter() {
+  const input = document.getElementById('chatInput');
+  const counter = document.getElementById('charCounter');
+  const len = input.value.length;
+  counter.textContent = len + ' / 80';
+  counter.className = 'counter' + (len > 75 ? ' danger' : len > 60 ? ' warn' : '');
+}
+
+function fillAndSend(text) {
+  document.getElementById('chatInput').value = text;
+  updateCounter();
+  sendMessage();
+}
+
+async function sendMessage() {
+  const input = document.getElementById('chatInput');
+  const btn = document.getElementById('sendBtn');
+  const messages = document.getElementById('chatMessages');
+  const text = input.value.trim();
+
+  if (!text) return;
+  if (text.length > 80) return;
+
+  messages.innerHTML += `<div class="msg user">${escapeHtml(text)}</div>`;
+  input.value = '';
+  updateCounter();
+  btn.disabled = true;
+
+  const loadingId = 'loading-' + Date.now();
+  messages.innerHTML += `<div class="msg loading" id="${loadingId}">Sto cercando la ricetta...</div>`;
+  messages.scrollTop = messages.scrollHeight;
+
+  try {
+    const res = await fetch(BACKEND_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: text, lang: currentLang })
+    });
+
+    const data = await res.json();
+    document.getElementById(loadingId).remove();
+
+    if (data.error) {
+      messages.innerHTML += `<div class="msg bot"><strong>Errore:</strong> ${escapeHtml(data.error)}</div>`;
+    } else {
+      let html = `<div class="msg bot">`;
+      if (data.mode === 'cookbook') {
+        html += `<div class="badge badge-cookbook">🍳 Dal ricettario</div>`;
+      } else if (data.mode === 'creative' || data.mode === 'creative_soft') {
+        html += `<div class="badge badge-creative">✨ Proposta di LegumAI</div>`;
+      }
+      html += formatResponse(data.reply);
+      if (data.sources && data.sources.length > 0) {
+        const uniqueSources = [...new Set(data.sources)];
+        html += `<div class="sources">📖 Fonti: ${uniqueSources.map(escapeHtml).join(", ")}</div>`;
+      }
+      html += `</div>`;
+      messages.innerHTML += html;
+    }
+  } catch (err) {
+    document.getElementById(loadingId).remove();
+    messages.innerHTML += `<div class="msg bot"><strong>Errore di connessione.</strong> Riprova più tardi.</div>`;
+  }
+
+  btn.disabled = false;
+  messages.scrollTop = messages.scrollHeight;
+}
+
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+function formatResponse(text) {
+  return text
+    .replace(/\n/g, '<br>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/^#+\s+(.+)$/gm, '<h4>$1</h4>');
+}
+</script>
+
+</body>
+</html>
