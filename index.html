@@ -855,10 +855,26 @@ function condividiBlog() {
     border: none; border-radius: 50%; background: #2d5016; color: #fff;
     cursor: pointer; font-size: 16px;
   }
+  .lw-lang { display: flex; gap: 6px; padding: 6px 12px;
+    background: #f0f0eb; border-bottom: 1px solid #e5e5e0;
+    align-items: center; justify-content: center;
+  }
+  .lw-lang-btn { border: 1px solid #ccc; background: #fff;
+    border-radius: 4px; padding: 2px 6px; font-size: 12px; cursor: pointer;
+  }
+  .lw-lang-btn.active { background: #2d5016; color: #fff; border-color: #2d5016; }
 </style>
 <button id="legumai-widget-btn" onclick="toggleLegumAI()" title="Chiedi a LegumAI">🤖</button>
 <div id="legumai-widget">
   <div class="lw-header">🍝 LegumAI <span style="margin-left:auto;font-size:11px;opacity:.8">Assistente Culinario</span></div>
+  <div class="lw-lang">
+    <button class="lw-lang-btn active" data-lang="it" onclick="setLWLang(this)">🇮🇹</button>
+    <button class="lw-lang-btn" data-lang="en" onclick="setLWLang(this)">🇬🇧</button>
+    <button class="lw-lang-btn" data-lang="es" onclick="setLWLang(this)">🇪🇸</button>
+    <button class="lw-lang-btn" data-lang="pt" onclick="setLWLang(this)">🇵🇹</button>
+    <button class="lw-lang-btn" data-lang="de" onclick="setLWLang(this)">🇩🇪</button>
+    <button class="lw-lang-btn" data-lang="el" onclick="setLWLang(this)">🇬🇷</button>
+  </div>
   <div class="lw-messages" id="lw-messages">
     <div class="lw-msg bot">Ciao! Sono LegumAI. Chiedimi una ricetta!</div>
   </div>
@@ -869,8 +885,14 @@ function condividiBlog() {
 </div>
 <script>
 const LW_URL = 'https://pippomike791.pythonanywhere.com/chat';
+let lwCurrentLang = 'it';
 function toggleLegumAI() {
   document.getElementById('legumai-widget').classList.toggle('open');
+}
+function setLWLang(btn) {
+  document.querySelectorAll('.lw-lang-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  lwCurrentLang = btn.dataset.lang;
 }
 async function sendLW() {
   const input = document.getElementById('lw-input');
@@ -880,12 +902,12 @@ async function sendLW() {
   msgDiv.innerHTML += '<div class="lw-msg user">' + escapeLW(text) + '</div>';
   input.value = '';
   const loadingId = 'lw-' + Date.now();
-  msgDiv.innerHTML += '<div class="lw-msg bot" id="' + loadingId + '">Sto cercando...</div>';
+  msgDiv.innerHTML += '<div class="lw-msg bot" id="' + loadingId + '"">Sto cercando...</div>';
   msgDiv.scrollTop = msgDiv.scrollHeight;
   try {
     const res = await fetch(LW_URL, {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: text, lang: 'it' })
+      body: JSON.stringify({ message: text, lang: lwCurrentLang })
     });
     const data = await res.json();
     document.getElementById(loadingId).remove();
