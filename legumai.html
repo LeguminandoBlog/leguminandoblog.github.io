@@ -190,6 +190,51 @@
     border-bottom: 1px solid #e5e5e0;
     background: #f0f0eb;
   }
+  .info-box .rules-box {
+    padding: 14px 18px;
+    background: #fff;
+    border-bottom: none;
+    max-height: none;
+    overflow-y: visible;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+  }
+  .info-box .rules-box::-webkit-scrollbar { width: 6px; }
+  .info-box .rules-box::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+  .rules-title {
+    font-weight: 700;
+    font-size: 18px;
+    color: #2d5016;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .rules-section {
+    margin-bottom: 14px;
+  }
+  .rules-section:last-child { margin-bottom: 0; }
+  .rules-label {
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  .rules-box ul {
+    margin: 4px 0 4px 18px;
+    padding: 0;
+  }
+  .rules-box li { margin-bottom: 2px; }
+  .rules-box p { margin: 3px 0; }
+  .rules-example {
+    font-style: italic;
+    color: #666;
+    margin: 4px 0;
+    font-size: 15px;
+  }
+  .rules-example::before { content: "💡 "; }
 
   .chat-card {
     background: #fff; border-radius: 16px;
@@ -486,6 +531,29 @@
       <button class="lang-btn" data-lang="de" onclick="setLang(this)">🇩🇪 DE</button>
       <button class="lang-btn" data-lang="el" onclick="setLang(this)">🇬🇷 EL</button>
     </div>
+
+    <div class="rules-box" id="rulesBox">
+      <div class="rules-title">📋 Come funziona LegumAI</div>
+      <div class="rules-section">
+        <span class="rules-label">Regole</span>
+        <ul>
+          <li>Massimo <strong>8 ricette</strong> per conversazione</li>
+          <li>Ogni messaggio: massimo <strong>80 caratteri</strong></li>
+        </ul>
+      </div>
+      <div class="rules-section">
+        <span class="rules-label">1. Cerca una ricetta</span>
+        <p>Scrivi il nome di una ricetta o gli ingredienti che hai in casa. LegumAI cerca prima nel ricettario del blog.</p>
+        <p class="rules-example">"pasta e fagioli" oppure "cosa cucino con ceci e spinaci?"</p>
+      </div>
+      <div class="rules-section">
+        <span class="rules-label">2. Modifica o crea una ricetta</span>
+        <p>Vuoi adattare una ricetta esistente o inventarne una nuova? Usa frasi dirette:</p>
+        <p class="rules-example">"Modifica la pasta e fagioli senza lardo"</p>
+        <p class="rules-example">"Crea una ricetta con ceci, zucca e rosmarino"</p>
+        <p class="rules-example">"Riduci le dosi della ribollita per 2 persone"</p>
+      </div>
+    </div>
   </div>
 
   <div class="chat-card">
@@ -580,7 +648,25 @@ const UI = {
     howTitle: "Come funziona",
     how1: "Cerca prima nel ricettario del blog",
     how2: "Se non trova nulla, interviene l'AI",
-    how3: "Puoi chiedere fino a <strong>8 ricette</strong> per conversazione"
+    how3: "Puoi chiedere fino a <strong>8 ricette</strong> per conversazione",
+    rules: `
+      <div class="rules-title">📋 Come funziona LegumAI</div>
+      <div class="rules-section">
+        <span class="rules-label">Regole</span>
+        <ul><li>Massimo <strong>8 ricette</strong> per conversazione</li><li>Ogni messaggio: massimo <strong>80 caratteri</strong></li></ul>
+      </div>
+      <div class="rules-section">
+        <span class="rules-label">1. Cerca una ricetta</span>
+        <p>Scrivi il nome di una ricetta o gli ingredienti che hai in casa. LegumAI cerca prima nel ricettario del blog.</p>
+        <p class="rules-example">"pasta e fagioli" oppure "cosa cucino con ceci e spinaci?"</p>
+      </div>
+      <div class="rules-section">
+        <span class="rules-label">2. Modifica o crea una ricetta</span>
+        <p>Vuoi adattare una ricetta esistente o inventarne una nuova? Usa frasi dirette:</p>
+        <p class="rules-example">"Modifica la pasta e fagioli senza lardo"</p>
+        <p class="rules-example">"Crea una ricetta con ceci, zucca e rosmarino"</p>
+        <p class="rules-example">"Riduci le dosi della ribollita per 2 persone"</p>
+      </div>`
   },
   en: {
     labelLang: "Language:",
@@ -615,7 +701,25 @@ const UI = {
     howTitle: "How it works",
     how1: "It first searches the blog cookbook",
     how2: "If nothing is found, AI steps in",
-    how3: "You can ask up to <strong>8 recipes</strong> per conversation"
+    how3: "You can ask up to <strong>8 recipes</strong> per conversation",
+    rules: `
+      <div class="rules-title">📋 How LegumAI works</div>
+      <div class="rules-section">
+        <span class="rules-label">Rules</span>
+        <ul><li>Maximum <strong>8 recipes</strong> per conversation</li><li>Each message: maximum <strong>80 characters</strong></li></ul>
+      </div>
+      <div class="rules-section">
+        <span class="rules-label">1. Search a recipe</span>
+        <p>Write the name of a recipe or the ingredients you have at home. LegumAI searches the blog cookbook first.</p>
+        <p class="rules-example">"pasta e fagioli" or "what can I cook with chickpeas and spinach?"</p>
+      </div>
+      <div class="rules-section">
+        <span class="rules-label">2. Modify or create a recipe</span>
+        <p>Want to adapt an existing recipe or invent a new one? Use direct phrases:</p>
+        <p class="rules-example">"Modify pasta e fagioli without lardo"</p>
+        <p class="rules-example">"Create a recipe with chickpeas, pumpkin and rosemary"</p>
+        <p class="rules-example">"Reduce ribollita servings for 2 people"</p>
+      </div>`
   },
   es: {
     labelLang: "Idioma:",
@@ -650,7 +754,25 @@ const UI = {
     howTitle: "Cómo funciona",
     how1: "Busca primero en el recetario del blog",
     how2: "Si no encuentra nada, interviene la IA",
-    how3: "Puedes pedir hasta <strong>8 recetas</strong> por conversación"
+    how3: "Puedes pedir hasta <strong>8 recetas</strong> por conversación",
+    rules: `
+      <div class="rules-title">📋 Cómo funciona LegumAI</div>
+      <div class="rules-section">
+        <span class="rules-label">Reglas</span>
+        <ul><li>Máximo <strong>8 recetas</strong> por conversación</li><li>Cada mensaje: máximo <strong>80 caracteres</strong></li></ul>
+      </div>
+      <div class="rules-section">
+        <span class="rules-label">1. Busca una receta</span>
+        <p>Escribe el nombre de una receta o los ingredientes que tienes en casa. LegumAI busca primero en el recetario del blog.</p>
+        <p class="rules-example">"pasta e fagioli" o "¿qué puedo cocinar con garbanzos y espinacas?"</p>
+      </div>
+      <div class="rules-section">
+        <span class="rules-label">2. Modifica o crea una receta</span>
+        <p>¿Quieres adaptar una receta existente o inventar una nueva? Usa frases directas:</p>
+        <p class="rules-example">"Modifica la pasta e fagioli sin lardo"</p>
+        <p class="rules-example">"Crea una receta con garbanzos, calabaza y romero"</p>
+        <p class="rules-example">"Reduce las raciones de ribollita para 2 personas"</p>
+      </div>`
   },
   pt: {
     labelLang: "Idioma:",
@@ -685,7 +807,25 @@ const UI = {
     howTitle: "Como funciona",
     how1: "Procura primeiro no livro de receitas do blog",
     how2: "Se não encontrar nada, a IA intervém",
-    how3: "Podes pedir até <strong>8 receitas</strong> por conversa"
+    how3: "Podes pedir até <strong>8 receitas</strong> por conversa",
+    rules: `
+      <div class="rules-title">📋 Como funciona o LegumAI</div>
+      <div class="rules-section">
+        <span class="rules-label">Regras</span>
+        <ul><li>Máximo <strong>8 receitas</strong> por conversa</li><li>Cada mensagem: máximo <strong>80 caracteres</strong></li></ul>
+      </div>
+      <div class="rules-section">
+        <span class="rules-label">1. Procure uma receita</span>
+        <p>Escreva o nome de uma receita ou os ingredientes que tem em casa. O LegumAI procura primeiro no livro de receitas do blog.</p>
+        <p class="rules-example">"pasta e fagioli" ou "o que posso cozinhar com grao-de-bico e espinafres?"</p>
+      </div>
+      <div class="rules-section">
+        <span class="rules-label">2. Modifique ou crie uma receita</span>
+        <p>Quer adaptar uma receita existente ou inventar uma nova? Use frases diretas:</p>
+        <p class="rules-example">"Modifica a pasta e fagioli sem lardo"</p>
+        <p class="rules-example">"Cria uma receita com grao-de-bico, abobora e alecrim"</p>
+        <p class="rules-example">"Reduz as doses da ribollita para 2 pessoas"</p>
+      </div>`
   },
   de: {
     labelLang: "Sprache:",
@@ -720,7 +860,25 @@ const UI = {
     howTitle: "So funktioniert es",
     how1: "Zuerst im Blog-Kochbuch suchen",
     how2: "Wenn nichts gefunden wird, greift die KI ein",
-    how3: "Sie können bis zu <strong>8 Rezepte</strong> pro Gespräch anfragen"
+    how3: "Sie können bis zu <strong>8 Rezepte</strong> pro Gespräch anfragen",
+    rules: `
+      <div class="rules-title">📋 So funktioniert LegumAI</div>
+      <div class="rules-section">
+        <span class="rules-label">Regeln</span>
+        <ul><li>Maximal <strong>8 Rezepte</strong> pro Gespräch</li><li>Jede Nachricht: maximal <strong>80 Zeichen</strong></li></ul>
+      </div>
+      <div class="rules-section">
+        <span class="rules-label">1. Rezept suchen</span>
+        <p>Schreiben Sie den Namen eines Rezepts oder die Zutaten, die Sie zu Hause haben. LegumAI sucht zuerst im Blog-Kochbuch.</p>
+        <p class="rules-example">"pasta e fagioli" oder "was kann ich mit Kichererbsen und Spinat kochen?"</p>
+      </div>
+      <div class="rules-section">
+        <span class="rules-label">2. Rezept ändern oder erstellen</span>
+        <p>Möchten Sie ein vorhandenes Rezept anpassen oder ein neues erfinden? Verwenden Sie direkte Sätze:</p>
+        <p class="rules-example">"Ändere pasta e fagioli ohne lardo"</p>
+        <p class="rules-example">"Erstelle ein Rezept mit Kichererbsen, Kürbis und Rosmarin"</p>
+        <p class="rules-example">"Reduziere die Ribollita-Portionen für 2 Personen"</p>
+      </div>`
   },
   el: {
     labelLang: "Γλώσσα:",
@@ -755,7 +913,25 @@ const UI = {
     howTitle: "Πώς λειτουργεί",
     how1: "Ψάχνει πρώτα στο βιβλίο συνταγών του ιστολογίου",
     how2: "Αν δεν βρει τίποτα, παρεμβαίνει η ΤΝ",
-    how3: "Μπορείτε να ζητήσετε έως <strong>8 συνταγές</strong> ανά συνομιλία"
+    how3: "Μπορείτε να ζητήσετε έως <strong>8 συνταγές</strong> ανά συνομιλία",
+    rules: `
+      <div class="rules-title">📋 Πώς λειτουργεί το LegumAI</div>
+      <div class="rules-section">
+        <span class="rules-label">Κανόνες</span>
+        <ul><li>Μέγιστο <strong>8 συνταγές</strong> ανά συνομιλία</li><li>Κάθε μήνυμα: μέγιστο <strong>80 χαρακτήρες</strong></li></ul>
+      </div>
+      <div class="rules-section">
+        <span class="rules-label">1. Αναζήτηση συνταγής</span>
+        <p>Γράψτε το όνομα μιας συνταγής ή τα υλικά που έχετε στο σπίτι. Το LegumAI ψάχνει πρώτα στο βιβλίο συνταγών του ιστολογίου.</p>
+        <p class="rules-example">"pasta e fagioli" ή "τι μπορώ να μαγειρέψω με ρεβίθια και σπανάκι;"</p>
+      </div>
+      <div class="rules-section">
+        <span class="rules-label">2. Τροποποίηση ή δημιουργία συνταγής</span>
+        <p>Θέλετε να προσαρμόσετε μια υπάρχουσα συνταγή ή να εφεύρετε μια καινούρια; Χρησιμοποιήστε άμεσες φράσεις:</p>
+        <p class="rules-example">"Τροποποίησε το pasta e fagioli χωρίς λαρδό"</p>
+        <p class="rules-example">"Δημιούργησε μια συνταγή με ρεβίθια, κολοκύθα και δενδρολίβανο"</p>
+        <p class="rules-example">"Μείωσε τις μερίδες ribollita για 2 άτομα"</p>
+      </div>`
   }
 };
 
@@ -815,6 +991,9 @@ function applyUILang() {
   if (obSearch && t.onboardSearch) obSearch.textContent = t.onboardSearch;
   if (obAdapt && t.onboardAdapt) obAdapt.textContent = t.onboardAdapt;
   if (obCreate && t.onboardCreate) obCreate.textContent = t.onboardCreate;
+  // Rules box
+  const rulesBox = document.getElementById('rulesBox');
+  if (rulesBox && t.rules) rulesBox.innerHTML = t.rules;
   // Right sidebar
   const trustTitle = document.getElementById('trustTitle');
   const trustText = document.getElementById('trustText');
