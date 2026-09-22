@@ -350,13 +350,80 @@
 
   /* Responsive sidebars */
   @media (max-width: 1650px) {
-    .right-sidebar { display: none; }
+    .right-sidebar {
+      position: fixed;
+      right: -540px;
+      top: 0; bottom: 0;
+      width: 520px;
+      z-index: 10000;
+      transition: right 0.35s ease;
+      padding-right: 0;
+      gap: 0;
+    }
+    .right-sidebar.open { right: 0; }
+    .right-book {
+      border-radius: 0;
+      border-left: none;
+      box-shadow: -4px 0 20px rgba(0,0,0,0.25);
+    }
     .chat-wrap { margin-right: 30px !important; }
+    .recipe-toggle { display: inline-flex !important; }
+    .close-drawer { display: block !important; }
+    .drawer-overlay {
+      display: block;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 9999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+    .drawer-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
   }
   @media (max-width: 768px) {
     .sidebar-seasons { display: none; }
+    .right-sidebar { width: 100%; right: -105%; }
     .chat-wrap { margin-left: 30px !important; margin-right: 30px !important; }
+    .recipe-toggle { display: inline-flex !important; }
   }
+  @media (min-width: 1651px) {
+    .recipe-toggle { display: none !important; }
+    .close-drawer { display: none !important; }
+  }
+  .recipe-toggle {
+    display: none;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border: 2px solid rgba(255,255,255,0.6);
+    border-radius: 25px;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    font-family: inherit;
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-left: 12px;
+  }
+  .recipe-toggle:hover { background: rgba(255,255,255,0.3); }
+  .close-drawer {
+    display: none;
+    position: absolute;
+    top: 10px; right: 14px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 1;
+  }
+  .close-drawer { display: none; }
+  .drawer-overlay { display: none; }
+  .right-book-header { position: relative; }
 
   .chat-wrap {
     max-width: 1020px;
@@ -687,10 +754,13 @@
   </a>
 </div>
 
+<div class="drawer-overlay" id="drawerOverlay" onclick="toggleRecipeDrawer(false)"></div>
+
 <!-- RIGHT SIDEBAR — RICETTARIO INTERATTIVO -->
 <div class="right-sidebar" id="rightSidebar">
   <div class="right-book">
     <div class="right-book-header">
+      <button class="close-drawer" onclick="toggleRecipeDrawer()" aria-label="Chiudi">✕</button>
       <h3>📖 Ricettario Leguminando</h3>
       <p>6.350 ricette italiane</p>
     </div>
@@ -800,6 +870,7 @@
   <p id="chatbot-subtitle">Assistente Culinario del blog <a href="index.html">Leguminando</a></p>
   <p id="chatbot-version" style="font-size:0.9em;opacity:0.8;margin-top:4px;">Versione 2.0 - in prova</p>
   <a href="index.html" id="chatbot-home" style="display:inline-block;margin-top:12px;padding:8px 18px;background:rgba(255,255,255,0.2);border:2px solid white;border-radius:25px;color:white;text-decoration:none;font-size:0.95em;transition:all 0.3s;">← Torna alla Home</a>
+  <button class="recipe-toggle" onclick="toggleRecipeDrawer()" id="recipeToggle">📖 Ricettario</button>
 </div>
 
 <div class="chat-wrap">
@@ -1814,6 +1885,8 @@ function importToChatbot() {
   fillAndSend(query);
   const chat = document.querySelector('.chat-card');
   if (chat) chat.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  // Chiudi drawer su mobile dopo import
+  if (window.innerWidth < 1651) toggleRecipeDrawer(false);
 }
 
 function selectRecipe(idx) {
@@ -1907,6 +1980,21 @@ function exportRecipe(format) {
 
 // Inizializza
 updateSelectedFilters();
+
+function toggleRecipeDrawer(force) {
+  const drawer = document.getElementById('rightSidebar');
+  const overlay = document.getElementById('drawerOverlay');
+  if (!drawer) return;
+  const isOpen = drawer.classList.contains('open');
+  const next = (typeof force === 'boolean') ? force : !isOpen;
+  if (next) {
+    drawer.classList.add('open');
+    if (overlay) overlay.classList.add('active');
+  } else {
+    drawer.classList.remove('open');
+    if (overlay) overlay.classList.remove('active');
+  }
+}
 
 /* ===== FIFO STAGIONI SINISTRA ===== */
 let currentSeason = 'primavera';
