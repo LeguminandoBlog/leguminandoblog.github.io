@@ -89,63 +89,267 @@
   .right-sidebar {
     position: fixed;
     right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 185px;
+    bottom: 30px;
     z-index: 9997;
-    width: 270px;
+    width: 520px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    padding-right: 8px;
+    gap: 12px;
+    padding-right: 0;
   }
-  .right-box {
+  .right-book {
     background: #fff;
     border-radius: 16px 0 0 16px;
-    box-shadow: -4px 4px 16px rgba(0,0,0,0.12);
-    padding: 18px;
-    border-left: 4px solid #2d5016;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #444;
+    box-shadow: -6px 6px 24px rgba(0,0,0,0.15);
+    border-left: 5px solid #2d5016;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
   }
-  .right-box h4 {
-    font-size: 15px;
+  .right-book-header {
+    background: linear-gradient(135deg, #2d5016 0%, #4a9c5c 100%);
+    color: #fff;
+    padding: 14px 18px;
+    text-align: center;
+  }
+  .right-book-header h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.5px;
+  }
+  .right-book-header p {
+    font-size: 12px;
+    margin: 4px 0 0;
+    opacity: 0.9;
+  }
+  .right-book-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .right-book-body::-webkit-scrollbar { width: 5px; }
+  .right-book-body::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+
+  /* FILTRO SEZIONI */
+  .filter-section {
+    border: 1px solid #e5e5e0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .filter-section-header {
+    background: #f5f5f0;
+    padding: 10px 12px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #2d5016;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+  .filter-section-header:hover { background: #e8f5e9; }
+  .filter-section-header .arrow { transition: transform 0.2s; font-size: 11px; }
+  .filter-section.open .filter-section-header .arrow { transform: rotate(90deg); }
+  .filter-section-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 12px;
+  }
+  .filter-section.open .filter-section-body {
+    max-height: 220px;
+    overflow-y: auto;
+    padding: 8px 12px 10px;
+  }
+
+  .filter-chip {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 3px;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+    background: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    color: #555;
+    transition: all 0.2s;
+  }
+  .filter-chip:hover { background: #e8f5e9; border-color: #4a9c5c; color: #2d5016; }
+  .filter-chip.active {
+    background: #2d5016;
+    color: #fff;
+    border-color: #2d5016;
+  }
+
+  /* RECIPE LIST BOX */
+  .recipe-list-box {
+    flex: 1;
+    min-height: 120px;
+    max-height: 360px;
+    overflow-y: auto;
+    border: 1px solid #e5e5e0;
+    border-radius: 10px;
+    background: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .recipe-list-box .list-header {
+    font-weight: 600;
+    font-size: 13px;
     color: #2d5016;
     margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #eee;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 6px;
+    flex-shrink: 0;
   }
-  .right-box p { margin-bottom: 8px; }
-  .right-box a { color: #8B4513; }
-  .right-box ol { margin-left: 16px; }
-  .right-box li { margin-bottom: 4px; }
-  .right-box input[type="text"] {
-    width: 100%;
+  .recipe-list-box .list-content {
+    overflow-y: auto;
+    flex: 1;
+  }
+  .recipe-list-item {
     padding: 8px 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-bottom: 8px;
-    font-size: 13px;
-    font-family: inherit;
+    margin-bottom: 6px;
+    border-radius: 0 8px 8px 0;
+    background: #fafaf8;
+    transition: background 0.2s;
+    cursor: pointer;
+    border-left: 3px solid #2d5016;
   }
-  .right-box button {
+  .recipe-list-item:hover { background: #e8f5e9; }
+  .recipe-list-item .rl-title {
+    font-weight: 600;
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 2px;
+  }
+  .recipe-list-item .rl-season {
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 3px;
+  }
+  .recipe-list-item .rl-ingr {
+    font-size: 11px;
+    color: #666;
+    line-height: 1.4;
+  }
+  .recipe-list-item .rl-action {
+    font-size: 11px;
+    color: #2d5016;
+    margin-top: 4px;
+    font-weight: 500;
+  }
+  .recipe-list-item.ai {
+    border-left-color: #ccc;
+    cursor: default;
+  }
+  .recipe-list-item.ai:hover { background: #fafaf8; }
+  .recipe-list-item.ai .rl-action { color: #888; }
+  .recipe-list-item.selected {
+    background: #d4edda !important;
+    border-left-color: #28a745 !important;
+  }
+
+  /* RISULTATI RICETTA */
+  .recipe-preview {
+    background: #fafaf8;
+    border-radius: 10px;
+    padding: 10px 12px;
+    border: 1px solid #e5e5e0;
+  }
+  .recipe-preview-title {
+    font-weight: 600;
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .recipe-preview-meta {
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 6px;
+  }
+  .recipe-preview-ingr {
+    font-size: 11px;
+    color: #666;
+    margin-bottom: 6px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .recipe-preview-link {
+    display: inline-block;
+    font-size: 12px;
+    color: #2d5016;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .recipe-preview-link:hover { text-decoration: underline; }
+
+  /* IMPORT BUTTON */
+  .import-btn {
     width: 100%;
     padding: 10px;
     border: none;
-    border-radius: 8px;
-    background: #2d5016;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
     color: #fff;
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: 600;
     cursor: pointer;
     font-family: inherit;
-    transition: background 0.2s;
+    transition: all 0.2s;
+    margin-top: 4px;
   }
-  .right-box button:hover { background: #1e3a0f; }
-  .right-box .thanks { color: #4a9c5c; font-weight: 600; margin-top: 6px; }
+  .import-btn:hover { background: linear-gradient(135deg, #6d370f 0%, #a85a18 100%); transform: translateY(-1px); }
+  .import-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+  /* BOTTOM ACTIONS */
+  .right-book-footer {
+    padding: 12px 14px;
+    border-top: 1px solid #e5e5e0;
+    background: #fafaf8;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .right-book-footer .selected-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    min-height: 20px;
+  }
+  .right-book-footer .selected-filters .sf-chip {
+    background: #e8f5e9;
+    color: #2d5016;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .right-book-footer .sf-chip .remove {
+    cursor: pointer;
+    font-weight: bold;
+  }
 
   /* Responsive sidebars */
-  @media (max-width: 1300px) {
+  @media (max-width: 1650px) {
     .right-sidebar { display: none; }
     .chat-wrap { margin-right: 30px !important; }
   }
@@ -155,8 +359,8 @@
   }
 
   .chat-wrap {
-    max-width: 1120px;
-    margin: 30px 300px 30px 380px;
+    max-width: 1020px;
+    margin: 30px 550px 30px 380px;
     padding: 0 16px;
   }
 
@@ -483,28 +687,111 @@
   </a>
 </div>
 
-<!-- RIGHT SIDEBAR -->
+<!-- RIGHT SIDEBAR — RICETTARIO INTERATTIVO -->
 <div class="right-sidebar" id="rightSidebar">
-  <div class="right-box">
-    <h4>🤝 <span id="trustTitle">Chi siamo</span></h4>
-    <p id="trustText">LegumAI è l'assistente culinario del blog <a href="index.html">Leguminando</a>.</p>
-    <p id="trustRecipes">Nella memoria ci sono <strong>6.350 ricette</strong> della tradizione italiana.</p>
-    <hr style="border:0;border-top:1px solid #eee;margin:10px 0;">
-    <h4>⚙️ <span id="howTitle">Come funziona</span></h4>
-    <ol id="howList">
-      <li id="how1">Cerca prima nel ricettario del blog</li>
-      <li id="how2">Se non trova nulla, interviene l'AI</li>
-      <li id="how3">Puoi chiedere fino a <strong>8 ricette</strong> per conversazione</li>
-    </ol>
-  </div>
+  <div class="right-book">
+    <div class="right-book-header">
+      <h3>📖 Ricettario Leguminando</h3>
+      <p>6.350 ricette italiane</p>
+    </div>
+    <div class="right-book-body">
 
-  <div class="right-box" id="proposeBox" style="display:none;">
-    <h4>📤 <span id="proposeTitle">Proponi a Leguminando</span></h4>
-    <p id="proposeDesc">Hai creato una ricetta nuova? Condividila con noi!</p>
-    <input type="hidden" id="proposeText">
-    <input type="text" id="proposeIg" placeholder="@tuo_account Instagram">
-    <button onclick="proposeRecipe()" id="proposeBtn">Invia proposta</button>
-    <div class="thanks" id="proposeThanks" style="display:none;">Grazie! Valuteremo la tua ricetta.</div>
+      <!-- INFO BOX COMPATTO -->
+      <div style="background:#f5f5f0;border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.6;color:#444;border:1px solid #e5e5e0;">
+        <strong style="color:#2d5016;font-size:15px;">🤝 Chi siamo</strong>
+        <p style="margin:6px 0 0;">LegumAI è l'assistente del blog <a href="index.html" style="color:#8B4513;">Leguminando</a>.
+        <strong>6.350 ricette</strong> nella memoria.</p>
+        <div style="margin-top:10px;padding-top:10px;border-top:1px solid #ddd;">
+          <strong style="color:#2d5016;font-size:15px;">⚙️ Come funziona</strong>
+          <ol style="margin:6px 0 0 18px;padding:0;font-size:14px;">
+            <li>Cerca nel ricettario del blog</li>
+            <li>Se non trova, interviene l'AI</li>
+            <li>Max <strong>8 ricette</strong> per chat</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- FILTRO LEGUMI -->
+      <div class="filter-section open" data-filter="legumi">
+        <div class="filter-section-header" onclick="toggleFilter(this)">
+          <span>🫘 Ingredienti principali</span><span class="arrow">▶</span>
+        </div>
+        <div class="filter-section-body">
+          <span class="filter-chip" data-val="ceci" onclick="toggleChip(this)">Ceci</span>
+          <span class="filter-chip" data-val="fave" onclick="toggleChip(this)">Fave</span>
+          <span class="filter-chip" data-val="fagioli" onclick="toggleChip(this)">Fagioli</span>
+          <span class="filter-chip" data-val="lenticchie" onclick="toggleChip(this)">Lenticchie</span>
+          <span class="filter-chip" data-val="piselli" onclick="toggleChip(this)">Piselli</span>
+          <span class="filter-chip" data-val="borlotti" onclick="toggleChip(this)">Borlotti</span>
+          <span class="filter-chip" data-val="cannellini" onclick="toggleChip(this)">Cannellini</span>
+          <span class="filter-chip" data-val="lupini" onclick="toggleChip(this)">Lupini</span>
+        </div>
+      </div>
+
+      <!-- FILTRO CATEGORIE -->
+      <div class="filter-section" data-filter="categorie">
+        <div class="filter-section-header" onclick="toggleFilter(this)">
+          <span>🍽️ Tipologia</span><span class="arrow">▶</span>
+        </div>
+        <div class="filter-section-body">
+          <span class="filter-chip" data-val="zuppa" onclick="toggleChip(this)">Zuppe &amp; Minestre</span>
+          <span class="filter-chip" data-val="insalata" onclick="toggleChip(this)">Insalate</span>
+          <span class="filter-chip" data-val="pasta" onclick="toggleChip(this)">Pasta &amp; Risotti</span>
+          <span class="filter-chip" data-val="hummus" onclick="toggleChip(this)">Creme &amp; Hummus</span>
+          <span class="filter-chip" data-val="frittura" onclick="toggleChip(this)">Fritture</span>
+          <span class="filter-chip" data-val="pane" onclick="toggleChip(this)">Pane &amp; Focacce</span>
+          <span class="filter-chip" data-val="dolce" onclick="toggleChip(this)">Dolci</span>
+          <span class="filter-chip" data-val="bevanda" onclick="toggleChip(this)">Bevande</span>
+        </div>
+      </div>
+
+      <!-- FILTRO ALTRO -->
+      <div class="filter-section" data-filter="altro">
+        <div class="filter-section-header" onclick="toggleFilter(this)">
+          <span>🌿 Altre parole chiave</span><span class="arrow">▶</span>
+        </div>
+        <div class="filter-section-body">
+          <span class="filter-chip" data-val="zucca" onclick="toggleChip(this)">Zucca</span>
+          <span class="filter-chip" data-val="spinaci" onclick="toggleChip(this)">Spinaci</span>
+          <span class="filter-chip" data-val="asparagi" onclick="toggleChip(this)">Asparagi</span>
+          <span class="filter-chip" data-val="cipolla" onclick="toggleChip(this)">Cipolla</span>
+          <span class="filter-chip" data-val="aglio" onclick="toggleChip(this)">Aglio</span>
+          <span class="filter-chip" data-val="rosmarino" onclick="toggleChip(this)">Rosmarino</span>
+          <span class="filter-chip" data-val="limone" onclick="toggleChip(this)">Limone</span>
+          <span class="filter-chip" data-val="farina" onclick="toggleChip(this)">Farina</span>
+          <span class="filter-chip" data-val="uova" onclick="toggleChip(this)">Uova</span>
+          <span class="filter-chip" data-val="formaggio" onclick="toggleChip(this)">Formaggio</span>
+        </div>
+      </div>
+
+      <!-- RISULTATI SCROLLABILI -->
+      <div id="recipeListBox" class="recipe-list-box" style="display:none;">
+        <div class="list-header">
+          <span>📜 Ricette trovate</span>
+          <span id="recipeCount"></span>
+        </div>
+        <div id="recipeListContent" class="list-content">
+          <!-- le ricette vengono generate qui -->
+        </div>
+      </div>
+
+      <div id="noResults" style="display:none; text-align:center; color:#888; font-size:13px; padding:12px 0;">
+        Nessuna ricetta trovata nel blog. Chiedi a LegumAI!
+      </div>
+
+    </div>
+
+    <div class="right-book-footer">
+      <div class="selected-filters" id="selectedFilters"></div>
+      <div style="display:flex; gap:6px; margin-bottom:8px;">
+        <button class="export-btn" id="exportTxtBtn" onclick="exportRecipe('txt')" title="Esporta ricetta come testo" disabled style="flex:1; padding:8px; font-size:12px; border-radius:8px; border:1px solid #ddd; background:#fff; cursor:pointer; opacity:0.5;">📄 TXT</button>
+        <button class="export-btn" id="exportMdBtn" onclick="exportRecipe('md')" title="Esporta ricetta come Markdown" disabled style="flex:1; padding:8px; font-size:12px; border-radius:8px; border:1px solid #ddd; background:#fff; cursor:pointer; opacity:0.5;">📝 MD</button>
+        <button class="export-btn" id="exportPdfBtn" onclick="exportRecipe('pdf')" title="Esporta ricetta come PDF" disabled style="flex:1; padding:8px; font-size:12px; border-radius:8px; border:1px solid #ddd; background:#fff; cursor:pointer; opacity:0.5;">📕 PDF</button>
+      </div>
+      <button class="import-btn" id="importBtn" onclick="importToChatbot()" disabled>
+        ➕ Invia a LegumAI
+      </button>
+    </div>
   </div>
 </div>
 
@@ -607,6 +894,9 @@
     </div>
   </div>
 </div>
+
+<!-- INDICE RICETTE INLINE (fallback per file://) -->
+<script src="recipes-index.js"></script>
 
 <script>
 const BACKEND_URL = 'https://pippomike791.pythonanywhere.com/chat';
@@ -1312,7 +1602,315 @@ function downloadBlob(content, mimeType, filename) {
   URL.revokeObjectURL(url);
 }
 
+/* ===== RICETTARIO INTERATTIVO ===== */
+let searchIndex = [];
+let activeFilters = new Set();
+let currentPreviewRecipe = null;
+let selectedRecipe = null;
+let lastMatches = [];
+
+// Carica l'indice ricerche con cache-buster
+fetch('search-index.json?v=' + Date.now())
+  .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+  .then(data => {
+    searchIndex = data;
+    if (activeFilters.size > 0) searchRecipes();
+  })
+  .catch(err => {
+    console.warn('search-index non caricato, uso fallback inline:', err);
+    // Fallback: usa l'indice inline (per file://)
+    if (typeof FALLBACK_INDEX !== 'undefined' && FALLBACK_INDEX.length > 0) {
+      searchIndex = FALLBACK_INDEX;
+      if (activeFilters.size > 0) searchRecipes();
+    } else {
+      searchIndex = [];
+      const listContent = document.getElementById('recipeListContent');
+      if (listContent) {
+        listContent.innerHTML = '<div style="color:#c0392b; font-size:12px; text-align:center; padding:10px;">⚠️ Indice ricette non disponibile.<br>Usa un server web o naviga online.</div>';
+      }
+    }
+  });
+
+/* ===== SINONIMI RICERCA ===== */
+const SYNONYMS = {
+  zuppa:   ['zuppa','minestr','brodo','vellutata','vellutat','crema calda','soup'],
+  insalata: ['insalata','condimento','freddo','crudo'],
+  pasta:    ['pasta','spaghetti','penne','riso','risotto','tagliatelle'],
+  hummus:   ['hummus','crema','dip','spread','tzatziki','tahina'],
+  frittura: ['frittura','fritto','frittella','crocchette','impanato','pastella'],
+  pane:     ['pane','focaccia','schiacciata','grissini','ciabatta','focaccina'],
+  dolce:    ['dolce','torta','biscotto','cioccolato','miele','dessert','crostat','muffin'],
+  bevanda:  ['bevanda','drink','cocktail','smoothie','mocktail','succo'],
+  ceci:     ['ceci','chickpea','ceci neri'],
+  fave:     ['fave','fava','broad bean'],
+  fagioli:  ['fagioli','borlotti','cannellini','fagiolo'],
+  lenticchie: ['lenticchie','lenticchia','lentil'],
+  piselli:  ['piselli','pisello','pea'],
+  lupini:   ['lupini','lupino'],
+  zucca:    ['zucca','zucche','pumpkin','butternut'],
+  spinaci:  ['spinaci','spinacio'],
+  asparagi: ['asparagi','asparago'],
+  cipolla:  ['cipolla','cipolle'],
+  aglio:    ['aglio','agli'],
+  rosmarino: ['rosmarino'],
+  limone:   ['limone','limoni'],
+  farina:   ['farina','farine'],
+  uova:     ['uova','uovo','egg'],
+  formaggio: ['formaggio','parmigiano','pecorino','mozzarella','ricotta','feta','gorgonzola']
+};
+
+function expandFilters(filters) {
+  const expanded = new Set(filters);
+  filters.forEach(f => {
+    const syns = SYNONYMS[f];
+    if (syns) syns.forEach(s => expanded.add(s.toLowerCase()));
+  });
+  return Array.from(expanded);
+}
+
+function toggleFilter(header) {
+  const section = header.parentElement;
+  section.classList.toggle('open');
+}
+
+function toggleChip(chip) {
+  const val = chip.dataset.val;
+  if (activeFilters.has(val)) {
+    activeFilters.delete(val);
+    chip.classList.remove('active');
+  } else {
+    activeFilters.add(val);
+    chip.classList.add('active');
+  }
+  updateSelectedFilters();
+  searchRecipes();
+}
+
+function removeFilter(val) {
+  activeFilters.delete(val);
+  document.querySelectorAll('.filter-chip[data-val="' + val + '"]').forEach(c => c.classList.remove('active'));
+  updateSelectedFilters();
+  searchRecipes();
+}
+
+function updateSelectedFilters() {
+  const box = document.getElementById('selectedFilters');
+  if (!box) return;
+  if (activeFilters.size === 0) {
+    box.innerHTML = '<span style="color:#aaa;font-size:11px;">Nessun filtro selezionato</span>';
+    document.getElementById('importBtn').disabled = true;
+    return;
+  }
+  box.innerHTML = '';
+  activeFilters.forEach(val => {
+    const chip = document.createElement('span');
+    chip.className = 'sf-chip';
+    chip.innerHTML = val + ' <span class="remove" onclick="removeFilter(\'' + val + '\')">×</span>';
+    box.appendChild(chip);
+  });
+}
+
+function searchRecipes() {
+  const listBox = document.getElementById('recipeListBox');
+  const listContent = document.getElementById('recipeListContent');
+  const recipeCount = document.getElementById('recipeCount');
+  const noResults = document.getElementById('noResults');
+  const importBtn = document.getElementById('importBtn');
+
+  if (activeFilters.size === 0) {
+    listBox.style.display = 'none';
+    noResults.style.display = 'none';
+    currentPreviewRecipe = null;
+    importBtn.disabled = true;
+    return;
+  }
+
+  const rawFilters = Array.from(activeFilters).map(f => f.toLowerCase());
+  const filters = expandFilters(rawFilters);
+  
+  // Prima prova con AND (tutti i filtri devono matchare)
+  let matches = searchIndex.filter(r => {
+    const hay = ((r.ingredients || '') + ' ' + (r.text || '') + ' ' + (r.title || '')).toLowerCase();
+    return rawFilters.every(f => hay.includes(f));
+  });
+  
+  let mode = 'and';
+  // Se non trova nulla, prova con OR espanso (sinonimi inclusi)
+  if (matches.length === 0) {
+    matches = searchIndex.filter(r => {
+      const hay = ((r.ingredients || '') + ' ' + (r.text || '') + ' ' + (r.title || '')).toLowerCase();
+      return filters.some(f => hay.includes(f));
+    });
+    mode = 'or';
+  }
+
+  if (matches.length === 0) {
+    listBox.style.display = 'none';
+    noResults.style.display = 'block';
+    currentPreviewRecipe = null;
+    importBtn.disabled = true;
+    return;
+  }
+
+  noResults.style.display = 'none';
+  listBox.style.display = 'flex';
+
+  // Genera la lista scrollabile
+  let html = '';
+  matches.forEach((rec, idx) => {
+    const season = rec.season ? rec.season.charAt(0).toUpperCase() + rec.season.slice(1) : 'Extra';
+    const ingr = (rec.ingredients || '').substring(0, 120);
+    const hasPath = rec.path && rec.path.length > 0;
+    const itemClass = hasPath ? 'recipe-list-item' : 'recipe-list-item ai';
+    const icon = hasPath ? '📖' : '🤖';
+    const label = hasPath ? 'Clicca per selezionare →' : 'Chiedi a LegumAI →';
+
+    html += `<div class="${itemClass}" data-idx="${idx}" onclick="selectRecipe(${idx})">`;
+    html += `<div style="display:flex; justify-content:space-between; align-items:center;">`;
+    html += `<div class="rl-title">${icon} ${escapeHtml(rec.title || 'Ricetta senza titolo')}</div>`;
+    if (hasPath) html += `<a href="${rec.path}" target="_blank" onclick="event.stopPropagation();" style="font-size:11px; color:#2d5016; text-decoration:none;">Apri ↗</a>`;
+    html += `</div>`;
+    html += `<div class="rl-season">${season}</div>`;
+    if (ingr) html += `<div class="rl-ingr">${escapeHtml(ingr)}...</div>`;
+    html += `<div class="rl-action">${label}</div>`;
+    html += `</div>`;
+  });
+
+  listContent.innerHTML = html;
+  const countLabel = mode === 'and' ? ' trovate (tutti i filtri)' : ' trovate (almeno un filtro)';
+  recipeCount.textContent = matches.length + countLabel;
+
+  // Salva matches per selectRecipe
+  lastMatches = matches;
+
+  // Reset selezione
+  selectedRecipe = null;
+  updateExportButtons();
+
+  importBtn.disabled = false;
+}
+
+function importToChatbot() {
+  const rec = selectedRecipe || currentPreviewRecipe;
+  if (!rec) return;
+
+  let query = '';
+  const title = (rec.title || '').replace(/\| Leguminando/g, '').trim();
+
+  // Se titolo decente e breve
+  if (title && title.length < 50 && !title.match(/^Ricetta del \d/)) {
+    query = 'Cucina: ' + title;
+  } else if (activeFilters.size > 0) {
+    // Usa i filtri attivi
+    const terms = Array.from(activeFilters).slice(0, 4);
+    query = 'Cucina con ' + terms.join(', ');
+  } else {
+    query = 'Cucina ricetta';
+  }
+
+  // Assicurati < 80 char
+  if (query.length > 75) query = query.substring(0, 72) + '...';
+
+  fillAndSend(query);
+  const chat = document.querySelector('.chat-card');
+  if (chat) chat.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function selectRecipe(idx) {
+  const listBox = document.getElementById('recipeListBox');
+  if (!listBox) return;
+  const items = listBox.querySelectorAll('.recipe-list-item');
+  items.forEach(el => el.classList.remove('selected'));
+  const item = listBox.querySelector('.recipe-list-item[data-idx="' + idx + '"]');
+  if (item) item.classList.add('selected');
+  
+  selectedRecipe = lastMatches[idx] || null;
+  updateExportButtons();
+}
+
+function updateExportButtons() {
+  const hasSelection = !!selectedRecipe;
+  ['exportTxtBtn','exportMdBtn','exportPdfBtn'].forEach(id => {
+    const btn = document.getElementById(id);
+    if (btn) {
+      btn.disabled = !hasSelection;
+      btn.style.opacity = hasSelection ? '1' : '0.5';
+      btn.style.cursor = hasSelection ? 'pointer' : 'not-allowed';
+    }
+  });
+}
+
+function exportRecipe(format) {
+  if (!selectedRecipe) return;
+  const rec = selectedRecipe;
+  const now = new Date();
+  const dateStr = now.toLocaleString('it-IT');
+  const isoDate = now.toISOString().slice(0,19).replace(/:/g,'-');
+  const title = rec.title || 'Ricetta';
+  const season = rec.season ? rec.season.charAt(0).toUpperCase() + rec.season.slice(1) : 'Extra';
+  const ingr = rec.ingredients || '';
+  const text = rec.text || '';
+
+  if (format === 'txt') {
+    let content = '🍳 ' + title + '\n';
+    content += 'Stagione: ' + season + '\n';
+    content += 'Data esportazione: ' + dateStr + '\n';
+    content += '='.repeat(40) + '\n\n';
+    if (ingr) content += '🥬 Ingredienti:\n' + ingr + '\n\n';
+    if (text) content += '📝 Testo:\n' + text.substring(0, 2000) + '\n';
+    if (rec.path) content += '\n🔗 Link: ' + rec.path + '\n';
+    downloadBlob(content, 'text/plain;charset=utf-8', 'ricetta-' + isoDate + '.txt');
+  }
+
+  else if (format === 'md') {
+    let content = '# 🍳 ' + title + '\n\n';
+    content += '- **Stagione:** ' + season + '\n';
+    content += '- **Data:** ' + dateStr + '\n';
+    if (rec.path) content += '- **Link:** ' + rec.path + '\n';
+    content += '\n---\n\n';
+    if (ingr) content += '## 🥬 Ingredienti\n\n' + ingr + '\n\n';
+    if (text) content += '## 📝 Testo\n\n' + text.substring(0, 2000) + '\n';
+    downloadBlob(content, 'text/plain;charset=utf-8', 'ricetta-' + isoDate + '.md');
+  }
+
+  else if (format === 'pdf') {
+    const win = window.open('', '_blank');
+    let html = `<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>${escapeHtml(title)}</title>
+<style>
+  body { font-family: Georgia, serif; margin: 40px; color: #333; line-height: 1.6; }
+  h1 { color: #2d5016; border-bottom: 2px solid #2d5016; padding-bottom: 8px; }
+  .meta { color: #666; font-size: 0.95em; margin-bottom: 24px; }
+  .section { margin-bottom: 16px; }
+  .section h2 { color: #2d5016; font-size: 1.2em; }
+  .section p { white-space: pre-wrap; }
+</style>
+</head>
+<body>
+  <h1>🍳 ${escapeHtml(title)}</h1>
+  <div class="meta">
+    <strong>Stagione:</strong> ${season}<br>
+    <strong>Data:</strong> ${dateStr}<br>
+    ${rec.path ? '<strong>Link:</strong> ' + rec.path + '<br>' : ''}
+  </div>
+  ${ingr ? '<div class="section"><h2>🥬 Ingredienti</h2><p>' + escapeHtml(ingr).replace(/\n/g, '<br>') + '</p></div>' : ''}
+  ${text ? '<div class="section"><h2>📝 Testo</h2><p>' + escapeHtml(text.substring(0, 2000)).replace(/\n/g, '<br>') + '</p></div>' : ''}
+</body></html>`;
+    win.document.write(html);
+    win.document.close();
+    setTimeout(() => win.print(), 300);
+  }
+}
+
+// Inizializza
+updateSelectedFilters();
+
 /* ===== FIFO STAGIONI SINISTRA ===== */
+let currentSeason = 'primavera';
+
 function reorderSeasons() {
     const sidebar = document.querySelector('.sidebar-seasons');
     if (!sidebar) return;
@@ -1321,10 +1919,19 @@ function reorderSeasons() {
     const d = new Date().getDate();
 
     let current;
-    if ((m === 3 && d >= 21) || m === 4 || m === 5 || (m === 6 && d < 21)) current = 'spring';
-    else if ((m === 6 && d >= 21) || m === 7 || m === 8 || (m === 9 && d < 21)) current = 'summer';
-    else if ((m === 9 && d >= 21) || m === 10 || m === 11 || (m === 12 && d < 21)) current = 'autumn';
+    if ((m === 3 && d >= 20) || m === 4 || m === 5 || (m === 6 && d < 21)) current = 'spring';
+    else if ((m === 6 && d >= 21) || m === 7 || m === 8 || (m === 9 && d < 23)) current = 'summer';
+    else if ((m === 9 && d >= 23) || m === 10 || m === 11 || (m === 12 && d < 21)) current = 'autumn';
     else current = 'winter';
+
+    // Mappa per i colori
+    const seasonMap = {
+        spring: 'primavera',
+        summer: 'estate',
+        autumn: 'autunno',
+        winter: 'inverno'
+    };
+    currentSeason = seasonMap[current] || 'primavera';
 
     const cycle = ['spring','summer','autumn','winter'];
     const idx = cycle.indexOf(current);
@@ -1346,19 +1953,33 @@ function reorderSeasons() {
         if (cards[s]) sidebar.appendChild(cards[s]);
     });
 
-    ['extra','preferiti','chatbot'].forEach(s => {
+    ['extra','preferiti'].forEach(s => {
         if (cards[s]) sidebar.appendChild(cards[s]);
     });
+}
+
+function updateSeasonColors() {
+    const seasonGradients = {
+        primavera: 'linear-gradient(135deg, #88d498 0%, #4a9c5c 100%)',
+        estate:    'linear-gradient(135deg, #f7b731 0%, #e58e26 100%)',
+        autunno:   'linear-gradient(135deg, #e17055 0%, #d63031 100%)',
+        inverno:   'linear-gradient(135deg, #74b9ff 0%, #0984e3 100%)'
+    };
+    const gradient = seasonGradients[currentSeason] || seasonGradients.primavera;
+    const topBar = document.querySelector('.top-bar');
+    if (topBar) topBar.style.background = gradient;
 }
 
 // Applica lingua + ordine stagioni all'avvio
 document.addEventListener('DOMContentLoaded', function() {
     reorderSeasons();
+    updateSeasonColors();
     applyUILang();
 });
 
 if (document.readyState === 'complete' || document.readyState === 'interactive') {
     reorderSeasons();
+    updateSeasonColors();
 }
 </script>
 
