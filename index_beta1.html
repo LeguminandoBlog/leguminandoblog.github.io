@@ -245,51 +245,10 @@
             font-size: 1.3em;
             font-weight: bold;
         }
-        .email-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            margin: 30px 0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        .email-box p { font-size: 1.1em; margin-bottom: 10px; }
-        .email-box a {
-            color: white;
-            font-size: 1.3em;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .email-box a:hover { text-decoration: underline; }
-        .newsletter-box {
-            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            margin: 30px 0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        .newsletter-box h3 { font-size: 1.6em; margin-bottom: 12px; }
-        .newsletter-box p { font-size: 1em; margin-bottom: 15px; opacity: 0.95; }
-        .newsletter-box a {
-            display: inline-block;
-            padding: 12px 30px;
-            background: white;
-            color: #11998e;
-            text-decoration: none;
-            border-radius: 25px;
-            font-size: 1.1em;
-            font-weight: bold;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .newsletter-box a:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
+        .instagram-box a:hover { text-decoration: underline; }
 
         footer {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 50%, #F4A460 100%);
             color: white;
             text-align: center;
             padding: 40px;
@@ -721,22 +680,17 @@
             <a href="https://instagram.com/leguminando" target="_blank">@leguminando</a>
         </div>
 
-        <div class="email-box">
-            <p>📧 Per informazioni o curiosità scrivici a:</p>
-            <a href="mailto:leguminando@protonmail.ch">leguminando@protonmail.ch</a>
-        </div>
-
-        <div class="newsletter-box">
-            <h3>📬 Newsletter di Leguminando</h3>
-            <p>Ricevi le novità direttamente nella tua casella di posta!</p>
-            <a href="https://buttondown.email/leguminando" target="_blank">✉️ Iscriviti con Buttondown</a>
-        </div>
-
         <footer>
             <p>🫘 Leguminando - Ricette di stagione a base di legumi</p>
             <div class="footer-links">
                 <a href="https://instagram.com/leguminando" target="_blank">📷 Instagram</a>
                 <a href="feed.xml">📡 RSS Feed</a>
+            </div>
+            <div id="newsletter-form" style="margin-top:20px;text-align:center;">
+                <p style="color:#8B4513;font-size:0.9em;opacity:0.8;margin-bottom:10px;">📬 Newsletter di Leguminando</p>
+                <a href="https://buttondown.email/leguminando" target="_blank" style="display:inline-block;padding:10px 24px;background:linear-gradient(135deg,#8B4513,#D2691E);color:white;text-decoration:none;border-radius:25px;font-size:0.95em;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;transition:opacity 0.3s;"
+                   onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'"
+                >✉️ Iscriviti con Buttondown</a>
             </div>
             <p style="margin-top: 20px; opacity: 0.7;">© 2026 Leguminando</p>
         </footer>
@@ -746,14 +700,12 @@
 
     <!-- Bottom Bar: NTP Time + View Counter -->
     <div class="bottom-bar">
-    <div class="ntp-time">
-        <span class="sync-dot"></span>
-        <span id="ntp-server">NTP: INRIM</span>
-        <span id="current-time">--:--:--</span>
-        <span id="current-date">📅 --/--/----</span>
-        <span class="season-badge" id="season-badge">--</span>
-        <span id="sun-times" title="Alba e tramonto (Roma)">Alba 🌄 --:-- | Tramonto 🌃 --:--</span>
-    </div>
+        <div class="ntp-time">
+            <span class="sync-dot"></span>
+            <span id="ntp-server">NTP: INRIM</span>
+            <span id="current-time">--:--:--</span>
+            <span class="season-badge" id="season-badge">--</span>
+        </div>
         <div class="view-counter" title="Visualizzazioni totali del sito">
             <span class="eye-icon">👁</span>
             <span class="counter-value" id="view-counter">--</span>
@@ -784,17 +736,12 @@
         }
 
         // Determine current season based on date
-        function getAstronomicalSeason(date) {
-            const month = date.getMonth() + 1;
-            const day = date.getDate();
-            if ((month === 3 && day >= 20) || month === 4 || month === 5 || (month === 6 && day < 21)) return 'primavera';
-            if ((month === 6 && day >= 21) || month === 7 || month === 8 || (month === 9 && day < 23)) return 'estate';
-            if ((month === 9 && day >= 23) || month === 10 || month === 11 || (month === 12 && day < 21)) return 'autunno';
-            return 'inverno';
-        }
-
         function getCurrentSeason() {
-            return getAstronomicalSeason(new Date());
+            const month = new Date().getMonth() + 1;
+            if (month >= 3 && month <= 5) return 'spring';
+            if (month >= 6 && month <= 8) return 'summer';
+            if (month >= 9 && month <= 11) return 'autumn';
+            return 'winter';
         }
 
         // Get season name in current language
@@ -820,115 +767,43 @@
                 const localTime = new Date();
                 ntpOffset = serverTime - localTime;
 
-                const seasonKey = getAstronomicalSeason(serverTime);
-                const seasonBadges = {
-                    primavera: '🌸 Primavera',
-                    estate: '🌞 Estate',
-                    autunno: '🍂 Autunno',
-                    inverno: '❄️ Inverno'
-                };
-                const seasonBadge = seasonBadges[seasonKey] || '📅';
-                currentSeason = seasonKey;
+                const month = serverTime.getMonth() + 1;
+                let seasonBadge = '';
+                if (month >= 3 && month <= 5) { seasonBadge = '🌸 Primavera'; currentSeason = 'primavera'; }
+                else if (month >= 6 && month <= 8) { seasonBadge = '🌞 Estate'; currentSeason = 'estate'; }
+                else if (month >= 9 && month <= 11) { seasonBadge = '🍂 Autunno'; currentSeason = 'autunno'; }
+                else { seasonBadge = '❄️ Inverno'; currentSeason = 'inverno'; }
 
                 document.getElementById('ntp-server').textContent = 'NTP: INRIM';
                 document.getElementById('season-badge').textContent = seasonBadge;
                 return serverTime;
             } catch (e) {
                 const now = new Date();
-                const seasonKey = getAstronomicalSeason(now);
-                const seasonBadges = {
-                    primavera: '🌸 Primavera',
-                    estate: '🌞 Estate',
-                    autunno: '🍂 Autunno',
-                    inverno: '❄️ Inverno'
-                };
-                currentSeason = seasonKey;
+                const month = now.getMonth() + 1;
+                if (month >= 3 && month <= 5) currentSeason = 'primavera';
+                else if (month >= 6 && month <= 8) currentSeason = 'estate';
+                else if (month >= 9 && month <= 11) currentSeason = 'autunno';
+                else currentSeason = 'inverno';
 
                 document.getElementById('ntp-server').textContent = 'NTP: locale';
-                document.getElementById('season-badge').textContent = seasonBadges[seasonKey] || '📅';
+                document.getElementById('season-badge').textContent = '📅';
                 return now;
             }
         }
 
         function updateClock() {
             const now = new Date(Date.now() + ntpOffset);
-            const dateStr = now.toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' });
             const timeStr = now.toLocaleTimeString('it-IT', { hour12: false });
-            document.getElementById('current-time').textContent = timeStr;
-            document.getElementById('current-date').textContent = '📅 ' + dateStr;
-        }
 
-        // ===== AGGIORNA COLORI HEADER/FOOTER IN BASE ALLA STAGIONE =====
-        function updateSeasonColors() {
-            const seasonGradients = {
-                primavera: 'linear-gradient(135deg, #88d498 0%, #4a9c5c 100%)',
-                estate:    'linear-gradient(135deg, #f7b731 0%, #e58e26 100%)',
-                autunno:   'linear-gradient(135deg, #e17055 0%, #d63031 100%)',
-                inverno:   'linear-gradient(135deg, #74b9ff 0%, #0984e3 100%)'
-            };
-            const gradient = seasonGradients[currentSeason] || seasonGradients.primavera;
-            const topBar = document.querySelector('.top-bar');
-            const footer = document.querySelector('footer');
-            if (topBar) topBar.style.background = gradient;
-            if (footer) footer.style.background = gradient;
-        }
+            // Stagione
+            const month = now.getMonth() + 1;
+            let season = '';
+            if (month >= 3 && month <= 5) season = '🌸 Primavera';
+            else if (month >= 6 && month <= 8) season = '🌞 Estate';
+            else if (month >= 9 && month <= 11) season = '🍂 Autunno';
+            else season = '❄️ Inverno';
 
-        // ===== ALBA E TRAMONTO (Roma) =====
-        // Usa API sunrise-sunset.org (gratuita, nessuna key)
-        let cachedSunTimes = { dawn: null, dusk: null, date: null };
-
-        async function fetchSunTimes(date) {
-            const yyyy = date.getFullYear();
-            const mm = String(date.getMonth() + 1).padStart(2, '0');
-            const dd = String(date.getDate()).padStart(2, '0');
-            const url = 'https://api.sunrise-sunset.org/json?lat=41.9028&lng=12.4964&formatted=0&date=' + yyyy + '-' + mm + '-' + dd;
-            try {
-                const resp = await fetch(url);
-                const data = await resp.json();
-                if (data.status === 'OK') {
-                    return {
-                        dawn: new Date(data.results.sunrise),
-                        dusk: new Date(data.results.sunset)
-                    };
-                }
-            } catch (e) {
-                console.log('API alba/tramonto non disponibile');
-            }
-            return { dawn: null, dusk: null };
-        }
-
-        function formatTimeFromDate(d) {
-            if (!d) return '--:--';
-            const h = String(d.getHours()).padStart(2, '0');
-            const m = String(d.getMinutes()).padStart(2, '0');
-            return h + ':' + m;
-        }
-
-        function getTargetSunDate() {
-            const now = new Date(Date.now() + ntpOffset);
-            const hour = now.getHours();
-            // Se sono le 22:00 o successive, mostra alba/tramonto di DOMANI
-            if (hour >= 22) {
-                const tomorrow = new Date(now);
-                tomorrow.setDate(tomorrow.getDate() + 1);
-                return tomorrow;
-            }
-            return now;
-        }
-
-        async function updateSunTimes() {
-            const targetDate = getTargetSunDate();
-            const dateKey = targetDate.toDateString();
-
-            if (cachedSunTimes.date !== dateKey) {
-                const times = await fetchSunTimes(targetDate);
-                cachedSunTimes = { dawn: times.dawn, dusk: times.dusk, date: dateKey };
-            }
-
-            const dawnStr = formatTimeFromDate(cachedSunTimes.dawn);
-            const duskStr = formatTimeFromDate(cachedSunTimes.dusk);
-            const el = document.getElementById('sun-times');
-            if (el) el.textContent = 'Alba 🌄 ' + dawnStr + ' | Tramonto 🌃 ' + duskStr;
+            document.getElementById('current-time').textContent = timeStr + ' | ' + season;
         }
 
         // ===== CONTATORE VISUALIZZAZIONI GLOBALE =====
@@ -1036,17 +911,10 @@
             // Carica un'immagine random della stagione attuale
             loadHeroImage();
 
-            // Aggiorna colori header/footer in base alla stagione
-            updateSeasonColors();
-
             // Clock
             updateClock();
             setInterval(updateClock, 1000);
             setInterval(syncNTPTime, 5 * 60 * 1000); // re-sync ogni 5 min
-
-            // Alba e tramonto
-            updateSunTimes();
-            setInterval(updateSunTimes, 60 * 1000); // aggiorna ogni minuto
 
             // Counter
             initViewCounter();
@@ -1228,17 +1096,19 @@ function formatLW(t) { return t.replace(/\n/g, '<br>').replace(/\*\*(.+?)\*\*/g,
 document.addEventListener('DOMContentLoaded', applyLWLang);
 
 /* SIDEBAR PREFERITI */
-async function renderSidebarFav() {
+function renderSidebarFav() {
     try {
         const container = document.getElementById('sidebarFav');
-        if (!container) return;
+        if (!container) { console.log('SIDEBAR: container non trovato'); return; }
         container.innerHTML = '';
         const raw = localStorage.getItem('leguminando_favs');
+        console.log('SIDEBAR raw:', raw);
         const favs = raw ? JSON.parse(raw) : {};
         const paths = Object.keys(favs);
+        console.log('SIDEBAR paths:', paths.length, paths);
         if (paths.length === 0) {
-            container.classList.remove('hidden');
-            await loadRandomSeasonRecipes(container);
+            container.classList.add('hidden');
+            console.log('SIDEBAR: nessun preferito, nascosta');
             return;
         }
         container.classList.remove('hidden');
@@ -1256,126 +1126,42 @@ async function renderSidebarFav() {
             `;
             container.appendChild(card);
         }
+        console.log('SIDEBAR: renderizzati', max, 'card');
     } catch (e) {
         console.error('Sidebar fav error:', e);
     }
 }
 
-function seededRandom(seed) {
-    const x = Math.sin(seed) * 10000;
-    return x - Math.floor(x);
-}
-
-function shuffleWithSeed(array, seed) {
-    const arr = array.slice();
-    for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(seededRandom(seed + i) * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
-    return arr;
-}
-
-async function loadRandomSeasonRecipes(container) {
-    try {
-        const seasonName = getCurrentSeason();
-        const resp = await fetch('search-index.json');
-        const data = await resp.json();
-        const recipes = data.filter(r => r.season === seasonName);
-        if (recipes.length === 0) {
-            container.classList.add('hidden');
-            return;
-        }
-        // Seed basato sull'anno-mese-giorno: stesse 4 ricette per tutto il giorno
-        const now = new Date();
-        const seed = now.getFullYear() * 10000 + (now.getMonth() + 1) * 100 + now.getDate();
-        const shuffled = shuffleWithSeed(recipes, seed);
-        const selected = shuffled.slice(0, 4);
-        selected.forEach(recipe => {
-            const imgPath = recipe.path.replace(/\.html$/, '.jpg');
-            const card = document.createElement('a');
-            card.href = recipe.path;
-            card.className = 'fav-card';
-            card.innerHTML = `
-                <img src="${imgPath}" alt="${recipe.title}" onerror="this.style.display='none'">
-                <div class="fav-info">${recipe.title}</div>
-            `;
-            container.appendChild(card);
-        });
-    } catch (e) {
-        console.error('Random recipes error:', e);
-        container.classList.add('hidden');
-    }
-}
-
+// Esegui subito se il DOM e' gia' pronto
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('SIDEBAR DOMContentLoaded');
     setTimeout(renderSidebarFav, 50);
 });
 
+// Se lo script e' gia' dopo il body, esegui subito
 if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    console.log('SIDEBAR esecuzione immediata');
     renderSidebarFav();
 }
 
+// Quando il browser ripristina la pagina dal cache (tasto indietro)
 window.addEventListener('pageshow', function(event) {
+    console.log('SIDEBAR pageshow persisted=', event.persisted);
     renderSidebarFav();
 });
 
+// Quando l'utente torna su questa tab
 document.addEventListener('visibilitychange', function() {
-    if (!document.hidden) renderSidebarFav();
+    if (!document.hidden) {
+        console.log('SIDEBAR visibilitychange visibile');
+        renderSidebarFav();
+    }
 });
 
-/* ===== FIFO STAGIONI SINISTRA ===== */
-function reorderSeasons() {
-    const sidebar = document.querySelector('.sidebar-seasons');
-    if (!sidebar) return;
-
-    const m = new Date().getMonth() + 1;
-    const d = new Date().getDate();
-
-    // Calcola stagione corrente (emisfero Nord)
-    let current;
-    if ((m === 3 && d >= 21) || m === 4 || m === 5 || (m === 6 && d < 21)) current = 'spring';
-    else if ((m === 6 && d >= 21) || m === 7 || m === 8 || (m === 9 && d < 21)) current = 'summer';
-    else if ((m === 9 && d >= 21) || m === 10 || m === 11 || (m === 12 && d < 21)) current = 'autumn';
-    else current = 'winter';
-
-    // Ordine ciclico: corrente → successiva → etc.
-    const cycle = ['spring','summer','autumn','winter'];
-    const idx = cycle.indexOf(current);
-    const order4 = [
-        cycle[idx],
-        cycle[(idx + 1) % 4],
-        cycle[(idx + 2) % 4],
-        cycle[(idx + 3) % 4]
-    ];
-
-    // Estrai i 7 card
-    const cards = {};
-    sidebar.querySelectorAll('.season-card').forEach(el => {
-        cards[el.dataset.season] = el;
-    });
-
-    // Svuota sidebar
-    sidebar.innerHTML = '';
-
-    // Reinserisci in ordine FIFO
-    order4.forEach(s => {
-        if (cards[s]) sidebar.appendChild(cards[s]);
-    });
-
-    // Appendi i fissi
-    ['extra','preferiti','chatbot'].forEach(s => {
-        if (cards[s]) sidebar.appendChild(cards[s]);
-    });
-}
-
-// Applica al caricamento
-document.addEventListener('DOMContentLoaded', function() {
-    reorderSeasons();
-});
-// Se il DOM e' gia' pronto, esegui subito
-if (document.readyState === 'complete' || document.readyState === 'interactive') {
-    reorderSeasons();
-}
+// Polling ogni secondo
+setInterval(function() {
+    renderSidebarFav();
+}, 1000);
 </script>
 
 </body>
