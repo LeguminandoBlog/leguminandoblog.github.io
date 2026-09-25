@@ -1028,7 +1028,7 @@
       <button class="lang-btn" data-lang="el" onclick="setLang(this)">🇬🇷 EL</button>
     </div>
 
-    <div class="rules-box" id="rulesBox">
+    <div class="rules-box" id="rulesBox" style="display:none;">
       <div class="rules-title">📋 Come funziona LegumAI</div>
       <div class="rules-section">
         <span class="rules-label">Regole</span>
@@ -1058,6 +1058,7 @@
       <h3>LegumAI</h3>
       <span class="status" title="Online"></span>
       <div class="export-group">
+        <button onclick="toggleInfoBox()" title="Informazioni" style="background:none;border:none;font-size:1.1em;cursor:pointer;margin-right:6px;">ℹ️</button>
         <span class="export-label" id="exportLabel">Esporta:</span>
         <button class="export-btn" onclick="exportChat('txt')" title="Esporta come testo">📄 TXT</button>
         <button class="export-btn" onclick="exportChat('md')" title="Esporta come Markdown">📝 MD</button>
@@ -2118,6 +2119,11 @@ function exportRecipe(format) {
 
 // Inizializza
 updateSelectedFilters();
+
+function toggleInfoBox() {
+  const el = document.getElementById('rulesBox');
+  if (el) el.style.display = (el.style.display === 'none') ? 'block' : 'none';
+}
 
 function toggleRecipeDrawer(force) {
   const drawer = document.getElementById('rightSidebar');
