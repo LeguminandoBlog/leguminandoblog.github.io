@@ -160,6 +160,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
     }
     .container { padding-left: 0 !important; }
 }
+
+
 </style>
 <meta property="og:title" content="Inverno | Leguminando">
 <meta property="og:description" content="Ricetta a base di legumi da Leguminando">
@@ -168,9 +170,51 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 <meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" type="application/rss+xml" title="Leguminando — RSS Feed" href="../feed.xml">
+<link rel="stylesheet" href="../responsive.css?v=2">
 
 </head>
 <body>
+<!-- HAMBURGER MENU (mobile solo) -->
+<button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">☰</button>
+<div class="hamburger-overlay" id="hamburgerOverlay"></div>
+<div class="hamburger-menu" id="hamburgerMenu">
+    <button class="hm-close" id="hamburgerClose" aria-label="Chiudi menu">✕</button>
+    <div class="hm-title">Esplora</div>
+    <a href="../primavera/index.html" class="hm-item">
+        <span class="hm-emoji">🌸</span>
+        <span>Primavera<br><span class="hm-desc">Fave, asparagi, piselli freschi</span></span>
+    </a>
+    <a href="../estate/index.html" class="hm-item">
+        <span class="hm-emoji">☀️</span>
+        <span>Estate<br><span class="hm-desc">Insalate fresche, hummus freddi</span></span>
+    </a>
+    <a href="../autunno/index.html" class="hm-item">
+        <span class="hm-emoji">🍂</span>
+        <span>Autunno<br><span class="hm-desc">Zucche, funghi, zuppe calde</span></span>
+    </a>
+    <a href="../inverno/index.html" class="hm-item">
+        <span class="hm-emoji">❄️</span>
+        <span>Inverno<br><span class="hm-desc">Zuppe nutrienti, stufati ricchi</span></span>
+    </a>
+    <a href="../extra/index.html" class="hm-item">
+        <span class="hm-emoji">✨</span>
+        <span>Extra<br><span class="hm-desc">Ricette speciali e fuori stagione</span></span>
+    </a>
+    <div class="hm-divider"></div>
+    <div class="hm-title">Preferiti</div>
+    <a href="../preferiti.html" class="hm-item">
+        <span class="hm-emoji">❤️</span>
+        <span>Preferiti<br><span class="hm-desc">Le tue ricette salvate</span></span>
+    </a>
+    <div class="hm-divider"></div>
+    <div class="hm-title">AI</div>
+    <a href="../legumai.html" class="hm-item">
+        <span class="hm-emoji">🧠</span>
+        <span>LegumAI<br><span class="hm-desc">Chiedi al nostro assistente</span></span>
+    </a>
+</div>
+
+
 
 <!-- SIDEBAR STAGIONI -->
 <div class="sidebar-seasons">
@@ -242,6 +286,33 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 </div>
 <p>Ricette di Inverno</p>
 </div>
+<!-- TOP BAR STAGIONI (mobile/tablet: barra orizzontale scrollabile) -->
+<div class="top-bar-seasons">
+    <a href="../primavera/index.html" class="ts-card">
+        <span class="ts-emoji">🌸</span><span>Primavera</span>
+    </a>
+    <a href="../estate/index.html" class="ts-card">
+        <span class="ts-emoji">☀️</span><span>Estate</span>
+    </a>
+    <a href="../autunno/index.html" class="ts-card">
+        <span class="ts-emoji">🍂</span><span>Autunno</span>
+    </a>
+    <a href="../inverno/index.html" class="ts-card">
+        <span class="ts-emoji">❄️</span><span>Inverno</span>
+    </a>
+    <a href="../extra/index.html" class="ts-card">
+        <span class="ts-emoji">✨</span><span>Extra</span>
+    </a>
+    <a href="../preferiti.html" class="ts-card" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: #222 !important;">
+        <span class="ts-emoji">❤️</span>
+        <span>Preferiti</span>
+    </a>
+    <a href="../legumai.html" class="ts-card" style="background: linear-gradient(135deg, #2d5016 0%, #4a8c2a 100%); color: #222 !important;">
+        <span class="ts-emoji">🧠</span>
+        <span>LegumAI</span>
+    </a>
+</div>
+
 
 <a href="../index.html" class="back-link">← Torna alla Home</a>
 
@@ -753,6 +824,29 @@ function condividiRicetta() {
         });
     }
 }
+</script>
+
+<script>
+// Hamburger menu
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const hamburgerClose = document.getElementById('hamburgerClose');
+const hamburgerMenu = document.getElementById('hamburgerMenu');
+const hamburgerOverlay = document.getElementById('hamburgerOverlay');
+
+function openHamburger() {
+    hamburgerMenu.classList.add('open');
+    hamburgerOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+function closeHamburger() {
+    hamburgerMenu.classList.remove('open');
+    hamburgerOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+if (hamburgerBtn) hamburgerBtn.addEventListener('click', openHamburger);
+if (hamburgerClose) hamburgerClose.addEventListener('click', closeHamburger);
+if (hamburgerOverlay) hamburgerOverlay.addEventListener('click', closeHamburger);
 </script>
 
 </body>

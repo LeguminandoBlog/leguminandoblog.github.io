@@ -1,0 +1,741 @@
+/* ============================================================
+   RESPONSIVE LEGUMINANDO — Mobile First
+   ============================================================ */
+
+/* ----------------------------------------------------------------
+   MOBILE BASE (< 600px) — Layout a colonna singola
+   ---------------------------------------------------------------- */
+
+/* Nascondi sidebar fisse su mobile */
+@media (max-width: 599px) {
+    .sidebar-seasons,
+    .sidebar-fav {
+        display: none !important;
+    }
+
+    /* Top bar molto compatta */
+    .top-bar {
+        padding: 20px 10px 15px !important;
+    }
+    .top-bar .logo {
+        font-size: 2.5em !important;
+    }
+    .top-bar h1 {
+        font-size: 2em !important;
+    }
+    .top-bar .tagline {
+        font-size: 1em !important;
+    }
+
+    /* Slideshow ridotto */
+    .slideshow-container {
+        margin: 15px auto !important;
+        border-radius: 12px !important;
+    }
+    .slideshow-image {
+        height: 200px !important;
+    }
+    .slideshow-overlay {
+        padding: 20px 10px 12px !important;
+    }
+    .slideshow-title {
+        font-size: 1.1em !important;
+    }
+
+    /* Tab lingua scrollabile orizzontale */
+    .lang-tabs {
+        gap: 6px !important;
+        margin: 15px 0 !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+        padding-bottom: 5px !important;
+        justify-content: flex-start !important;
+        padding-left: 10px !important;
+    }
+    .lang-tabs::-webkit-scrollbar {
+        display: none !important;
+    }
+    .lang-tab {
+        padding: 8px 14px !important;
+        font-size: 0.85em !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Box descrizione compatta */
+    .description-box {
+        padding: 20px !important;
+        border-radius: 14px !important;
+        margin-bottom: 20px !important;
+    }
+    .lang-content h2 {
+        font-size: 1.5em !important;
+    }
+    .lang-content p {
+        font-size: 1em !important;
+    }
+
+    /* Main content full width */
+    .main-content {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Tabella ricette → Card verticali */
+    .stats-table-container {
+        padding: 20px !important;
+    }
+    .stats-title {
+        font-size: 1.5em !important;
+    }
+    .stats-table thead {
+        display: none !important;
+    }
+    .stats-table tbody tr {
+        display: block !important;
+        margin-bottom: 15px !important;
+        background: #fff !important;
+        border-radius: 12px !important;
+        padding: 15px !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+        border: 1px solid #eee !important;
+    }
+    .stats-table tbody td {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 8px 0 !important;
+        border-bottom: 1px solid #f0f0f0 !important;
+        font-size: 0.95em !important;
+    }
+    .stats-table tbody td:last-child {
+        border-bottom: none !important;
+    }
+    .stats-table tbody td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #8B4513;
+        font-size: 0.85em;
+    }
+    .stats-table tbody td:first-child::before {
+        content: '📂 Stagione';
+    }
+    .stats-table tbody td:nth-child(2)::before {
+        content: '📝 Ricette';
+    }
+    .stats-table tbody td:nth-child(3)::before {
+        content: '📊 Percentuale';
+    }
+    .bar-container {
+        justify-content: flex-end !important;
+    }
+    .total-row {
+        background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%) !important;
+        border: 2px solid #f093fb !important;
+    }
+
+    /* Instagram / Email / Newsletter più compatti */
+    .instagram-box,
+    .email-box,
+    .newsletter-box {
+        padding: 20px !important;
+        margin: 20px 0 !important;
+        border-radius: 14px !important;
+    }
+    .instagram-box h3,
+    .email-box p,
+    .newsletter-box h3 {
+        font-size: 1.3em !important;
+    }
+    .newsletter-box a {
+        padding: 10px 24px !important;
+        font-size: 1em !important;
+    }
+
+    /* Footer compatta */
+    footer {
+        padding: 20px !important;
+    }
+    .footer-links a {
+        display: inline-block !important;
+        margin: 5px 8px !important;
+    }
+
+    /* Bottom bar compatta */
+    .bottom-bar {
+        padding: 8px 10px !important;
+        font-size: 0.75em !important;
+    }
+    #sun-times {
+        display: none !important;
+    }
+
+    body {
+        padding: 10px !important;
+    }
+}
+
+/* ----------------------------------------------------------------
+   SMALL TABLET (600px - 899px) — Sidebar trasformate
+   ---------------------------------------------------------------- */
+@media (min-width: 600px) and (max-width: 899px) {
+    .sidebar-seasons,
+    .sidebar-fav {
+        display: none !important;
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .slideshow-image {
+        height: 280px !important;
+    }
+
+    .lang-tabs {
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+    }
+
+    .stats-table-container {
+        padding: 25px !important;
+    }
+
+    .stats-table {
+        font-size: 0.9em !important;
+    }
+    .stats-table th,
+    .stats-table td {
+        padding: 10px !important;
+    }
+
+    body {
+        padding: 15px !important;
+    }
+}
+
+/* ----------------------------------------------------------------
+   TABLET / LAPTOP (900px - 1199px) — Sidebar compatta o drawer
+   ---------------------------------------------------------------- */
+@media (min-width: 900px) and (max-width: 1199px) {
+    /* Sidebar sinistra: compatta, senza descrizioni */
+    .sidebar-seasons {
+        left: 0 !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        gap: 12px !important;
+    }
+    .sidebar-seasons .season-card {
+        width: 80px !important;
+        height: 80px !important;
+        border-radius: 0 12px 12px 0 !important;
+    }
+    .sidebar-seasons .season-icon {
+        width: 80px !important;
+        height: 80px !important;
+        font-size: 2em !important;
+    }
+    .sidebar-seasons .season-content {
+        display: none !important; /* nascondi testo, lascia solo emoji */
+    }
+
+    /* Sidebar preferiti: nascosta */
+    .sidebar-fav {
+        display: none !important;
+    }
+
+    .main-content {
+        margin-left: 90px !important;
+        margin-right: 0 !important;
+    }
+
+    .slideshow-image {
+        height: 320px !important;
+    }
+}
+
+/* ----------------------------------------------------------------
+   DESKTOP GRANDE (1200px - 1499px) — Tutto visibile, sidebar normali
+   ---------------------------------------------------------------- */
+@media (min-width: 1200px) and (max-width: 1499px) {
+    .sidebar-seasons {
+        left: 0 !important;
+    }
+    .sidebar-seasons .season-card {
+        width: 260px !important;
+        height: 100px !important;
+    }
+    .sidebar-seasons .season-icon {
+        width: 100px !important;
+        height: 100px !important;
+        font-size: 2.2em !important;
+    }
+    .sidebar-seasons .season-title {
+        font-size: 1.2em !important;
+    }
+    .sidebar-seasons .season-desc {
+        font-size: 0.9em !important;
+    }
+
+    .sidebar-fav {
+        width: 220px !important;
+        top: 115px !important;
+    }
+    .sidebar-fav .fav-card {
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    .main-content {
+        margin-left: 110px !important;
+        margin-right: 240px !important;
+    }
+}
+
+/* ----------------------------------------------------------------
+   DESKTOP MOLTO GRANDE (> 1500px) — Layout originale a tutto spazio
+   ---------------------------------------------------------------- */
+@media (min-width: 1500px) {
+    /* Lascia i valori originali, non serve modificare nulla */
+}
+
+/* ============================================================
+   COMPONENTI MOBILE AGGIUNTIVI
+   ============================================================ */
+
+/* Header "Proposte del mese" sopra la sidebar destra (solo desktop) */
+.fav-header-desktop {
+    display: none;
+}
+@media (min-width: 1200px) {
+    .fav-header-desktop {
+        display: block;
+        position: fixed;
+        right: 20px;
+        top: 60px;
+        z-index: 9998;
+        font-size: 0.95em;
+        color: #222;
+        font-weight: 600;
+        text-align: center;
+        width: 220px;
+    }
+}
+@media (min-width: 1500px) {
+    .fav-header-desktop {
+        right: 20px;
+        width: 260px;
+    }
+    .sidebar-fav {
+        top: 95px !important;
+    }
+}
+
+/* ----------------------------------------------------------------
+   TOP BAR MOBILE — Stagioni orizzontali scrollabili
+   ---------------------------------------------------------------- */
+.top-bar-seasons {
+    display: none;
+}
+
+/* Solo su schermi piccoli */
+@media (max-width: 899px) {
+    .top-bar-seasons {
+        display: flex !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 8px !important;
+        padding: 10px 0 !important;
+        margin: 0 -10px !important;
+        padding-left: 10px !important;
+        scrollbar-width: none !important;
+    }
+    .top-bar-seasons::-webkit-scrollbar {
+        display: none !important;
+    }
+    .top-bar-seasons .ts-card {
+        flex-shrink: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 2px !important;
+        padding: 8px 14px !important;
+        background: white !important;
+        border-radius: 20px !important;
+        text-decoration: none !important;
+        color: #333 !important;
+        font-size: 0.85em !important;
+        font-weight: 600 !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+        transition: transform 0.2s, box-shadow 0.2s !important;
+        min-width: 80px !important;
+        text-align: center !important;
+    }
+    .top-bar-seasons .ts-card .ts-emoji {
+        font-size: 1.4em !important;
+    }
+    .top-bar-seasons .ts-card .ts-desc {
+        font-size: 0.7em !important;
+        font-weight: 400 !important;
+        color: #888;
+        max-width: 100px !important;
+        line-height: 1.2 !important;
+    }
+    .top-bar-seasons .ts-card:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+    }
+}
+
+/* ----------------------------------------------------------------
+   BOTTONE "PROPOSTE DEL MESE" + DRAWER MOBILE
+   ---------------------------------------------------------------- */
+.proposte-btn {
+    display: none;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 9995;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.proposte-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.5);
+}
+.proposte-btn .label {
+    display: none;
+    position: absolute;
+    right: 55px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.75em;
+    white-space: nowrap;
+}
+.proposte-btn:hover .label {
+    display: block;
+}
+
+/* Drawer "Proposte del mese" */
+.proposte-drawer {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: white;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+    padding: 20px;
+    max-height: 70vh;
+    overflow-y: auto;
+    transform: translateY(100%);
+    transition: transform 0.35s ease;
+}
+.proposte-drawer.open {
+    transform: translateY(0);
+}
+.proposte-drawer .pd-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+.proposte-drawer .pd-header h3 {
+    font-size: 1.2em;
+    color: #e74c3c;
+    margin: 0;
+}
+.proposte-drawer .pd-close {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #666;
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+.proposte-drawer .pd-close:hover {
+    background: #f0f0f0;
+}
+.proposte-drawer .pd-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+}
+.proposte-drawer .pd-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.2s;
+}
+.proposte-drawer .pd-card:hover {
+    transform: translateY(-3px);
+}
+.proposte-drawer .pd-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+}
+.proposte-drawer .pd-card .pd-title {
+    padding: 8px;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.proposte-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 9998;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+.proposte-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Mostra bottone e drawer solo su mobile/tablet piccolo */
+@media (max-width: 899px) {
+    .proposte-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .proposte-drawer {
+        display: block;
+    }
+    .proposte-overlay {
+        display: block;
+    }
+}
+
+/* ----------------------------------------------------------------
+   SEZIONE "PROPOSTE DEL MESE" VISIBILE IN FLUSSO (tablet)
+   ---------------------------------------------------------------- */
+.proposte-sezione {
+    display: none;
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    margin: 25px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.proposte-sezione h3 {
+    color: #e74c3c;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    text-align: center;
+}
+.proposte-sezione .ps-scroll {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 10px;
+}
+.proposte-sezione .ps-scroll::-webkit-scrollbar {
+    display: none;
+}
+.proposte-sezione .ps-card {
+    flex-shrink: 0;
+    width: 180px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.2s;
+}
+.proposte-sezione .ps-card:hover {
+    transform: translateY(-4px);
+}
+.proposte-sezione .ps-card img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    display: block;
+}
+.proposte-sezione .ps-card .ps-title {
+    padding: 10px;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Mostra su tablet */
+@media (min-width: 600px) and (max-width: 899px) {
+    .proposte-sezione {
+        display: block;
+    }
+}
+
+/* ----------------------------------------------------------------
+   HAMBURGER MENU (solo mobile < 600px per le stagioni)
+   ---------------------------------------------------------------- */
+.hamburger-btn {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 10000;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+    border: none;
+    color: white;
+    font-size: 1.4em;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+.hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    max-width: 80vw;
+    z-index: 10001;
+    background: white;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.2);
+    padding: 60px 20px 20px;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.35s ease;
+}
+.hamburger-menu.open {
+    transform: translateX(0);
+}
+.hamburger-menu .hm-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #666;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.hamburger-menu .hm-close:hover {
+    background: #f0f0f0;
+}
+.hamburger-menu .hm-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.05em;
+    font-weight: 500;
+}
+.hamburger-menu .hm-item:last-child {
+    border-bottom: none;
+}
+.hamburger-menu .hm-item .hm-emoji {
+    font-size: 1.5em;
+    width: 36px;
+    text-align: center;
+}
+.hamburger-menu .hm-item .hm-desc {
+    font-size: 0.8em;
+    color: #888;
+    font-weight: 400;
+}
+.hamburger-menu .hm-divider {
+    margin: 15px 0;
+    height: 1px;
+    background: #eee;
+}
+.hamburger-menu .hm-title {
+    font-size: 0.8em;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 599px) {
+    .hamburger-btn {
+        display: flex;
+    }
+    .hamburger-menu {
+        display: block;
+    }
+    .hamburger-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.45);
+        z-index: 10000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.35s ease;
+    }
+    .hamburger-overlay.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+/* ----------------------------------------------------------------
+   UTILITA RESPONSIVE
+   ---------------------------------------------------------------- */
+.hide-mobile { }
+@media (max-width: 599px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+.show-desktop { }
+@media (max-width: 899px) {
+    .show-desktop {
+        display: none !important;
+    }
+}

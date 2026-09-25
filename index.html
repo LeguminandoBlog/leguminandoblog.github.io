@@ -527,6 +527,7 @@
 .sidebar-fav.hidden { display: none; }
 
 </style>
+<link rel="stylesheet" href="responsive.css">
 <meta property="og:title" content="Leguminando - Ricette di Stagione">
 <meta property="og:description" content="Ricetta a base di legumi da Leguminando">
 <meta property="og:image" content="https://leguminandoblog.github.io/">
@@ -537,6 +538,48 @@
 
 </head>
 <body>
+    <!-- HAMBURGER MENU (mobile solo) -->
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+        ☰
+    </button>
+    <div class="hamburger-overlay" id="hamburgerOverlay"></div>
+    <div class="hamburger-menu" id="hamburgerMenu">
+        <button class="hm-close" id="hamburgerClose" aria-label="Chiudi menu">✕</button>
+        <div class="hm-title">Esplora</div>
+        <a href="primavera/index.html" class="hm-item">
+            <span class="hm-emoji">🌸</span>
+            <span>Primavera<br><span class="hm-desc">Fave, asparagi, piselli freschi</span></span>
+        </a>
+        <a href="estate/index.html" class="hm-item">
+            <span class="hm-emoji">☀️</span>
+            <span>Estate<br><span class="hm-desc">Insalate fresche, hummus freddi</span></span>
+        </a>
+        <a href="autunno/index.html" class="hm-item">
+            <span class="hm-emoji">🍂</span>
+            <span>Autunno<br><span class="hm-desc">Zucche, funghi, zuppe calde</span></span>
+        </a>
+        <a href="inverno/index.html" class="hm-item">
+            <span class="hm-emoji">❄️</span>
+            <span>Inverno<br><span class="hm-desc">Zuppe nutrienti, stufati ricchi</span></span>
+        </a>
+        <a href="extra/index.html" class="hm-item">
+            <span class="hm-emoji">✨</span>
+            <span>Extra<br><span class="hm-desc">Ricette speciali e fuori stagione</span></span>
+        </a>
+        <div class="hm-divider"></div>
+        <div class="hm-title">Preferiti</div>
+        <a href="preferiti.html" class="hm-item">
+            <span class="hm-emoji">❤️</span>
+            <span>Preferiti<br><span class="hm-desc">Le tue ricette salvate</span></span>
+        </a>
+        <div class="hm-divider"></div>
+        <div class="hm-title">AI</div>
+        <a href="legumai.html" class="hm-item">
+            <span class="hm-emoji">🧠</span>
+            <span>LegumAI<br><span class="hm-desc">Chiedi al nostro assistente</span></span>
+        </a>
+    </div>
+
     <div class="top-bar">
         <div class="logo">🫘</div>
         <h1>Leguminando</h1>
@@ -545,6 +588,33 @@
     </div>
 
     <div class="container">
+
+        <!-- TOP BAR STAGIONI (mobile/tablet: barra orizzontale scrollabile) -->
+        <div class="top-bar-seasons">
+            <a href="primavera/index.html" class="ts-card">
+                <span class="ts-emoji">🌸</span><span>Primavera</span>
+            </a>
+            <a href="estate/index.html" class="ts-card">
+                <span class="ts-emoji">☀️</span><span>Estate</span>
+            </a>
+            <a href="autunno/index.html" class="ts-card">
+                <span class="ts-emoji">🍂</span><span>Autunno</span>
+            </a>
+            <a href="inverno/index.html" class="ts-card">
+                <span class="ts-emoji">❄️</span><span>Inverno</span>
+            </a>
+            <a href="extra/index.html" class="ts-card">
+                <span class="ts-emoji">✨</span><span>Extra</span>
+            </a>
+            <a href="preferiti.html" class="ts-card" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: #222 !important;">
+                <span class="ts-emoji">❤️</span>
+                <span>Preferiti</span>
+            </a>
+            <a href="legumai.html" class="ts-card" style="background: linear-gradient(135deg, #2d5016 0%, #4a8c2a 100%); color: #222 !important;">
+                <span class="ts-emoji">🧠</span>
+                <span>LegumAI</span>
+            </a>
+        </div>
 
         <div class="slideshow-container">
             <img id="slideshow-img" src="" class="slideshow-image" alt="Ricetta in evidenza">
@@ -601,6 +671,17 @@
                 <p>Πολλές συνταγές είναι εντελώς vegan, άλλες περιλαμβάνουν κρέας ή ψάρι ως συνοδευτικό: το κοινό νήμα είναι πάντα ένα όσπριο στο κέντρο του πιάτου.</p>
             </div>
         </div>
+
+        <!-- SEZIONE PROPOSTE DEL MESE (tablet: visibile nel flusso) -->
+        <div class="proposte-sezione" id="proposteSezione">
+            <h3>❤️ Proposte del Mese</h3>
+            <div class="ps-scroll" id="proposteScroll">
+                <!-- Popolato da JS -->
+            </div>
+        </div>
+
+        <!-- TITOLO SIDEBAR PREFERITI (desktop) -->
+        <div class="fav-header-desktop">❤️ Proposte del mese</div>
 
         <!-- SIDEBAR PREFERITI A DX -->
         <div class="sidebar-fav" id="sidebarFav"></div>
@@ -1228,36 +1309,51 @@ function formatLW(t) { return t.replace(/\n/g, '<br>').replace(/\*\*(.+?)\*\*/g,
 document.addEventListener('DOMContentLoaded', applyLWLang);
 
 /* SIDEBAR PREFERITI */
+/* SIDEBAR PREFERITI — max 4 ricette, niente duplicati.
+   Priorita': preferiti della stagione attuale; se < 4, completa con random dalla stagione attuale. */
+let sidebarFavRendering = false;
 async function renderSidebarFav() {
+    if (sidebarFavRendering) return;
+    sidebarFavRendering = true;
     try {
         const container = document.getElementById('sidebarFav');
         if (!container) return;
         container.innerHTML = '';
+
+        const seasonName = getCurrentSeason(); // 'primavera' | 'estate' | 'autunno' | 'inverno'
+
+        // 1. Cerca preferiti della stagione attuale
         const raw = localStorage.getItem('leguminando_favs');
         const favs = raw ? JSON.parse(raw) : {};
-        const paths = Object.keys(favs);
-        if (paths.length === 0) {
+        const favPaths = Object.keys(favs);
+        const favsOfSeason = favPaths.filter(p => p.startsWith(seasonName + '/'));
+
+        // 2. Se ce ne sono, prendi max 4 (senza duplicati — le chiavi di localStorage sono gia uniche)
+        if (favsOfSeason.length > 0) {
             container.classList.remove('hidden');
-            await loadRandomSeasonRecipes(container);
+            const selected = favsOfSeason.slice(0, 4);
+            selected.forEach(path => {
+                const title = favs[path];
+                const imgPath = path.replace(/\.html$/, '.jpg');
+                const card = document.createElement('a');
+                card.href = path;
+                card.className = 'fav-card';
+                card.innerHTML = `
+                    <img src="${imgPath}" alt="${title}" onerror="this.style.display='none'">
+                    <div class="fav-info">${title}</div>
+                `;
+                container.appendChild(card);
+            });
             return;
         }
+
+        // 3. Nessun preferito della stagione: carica 4 random dalla stagione attuale
         container.classList.remove('hidden');
-        const max = Math.min(paths.length, 5);
-        for (let i = 0; i < max; i++) {
-            const path = paths[i];
-            const title = favs[path];
-            const imgPath = path.replace(/\.html$/, '.jpg');
-            const card = document.createElement('a');
-            card.href = path;
-            card.className = 'fav-card';
-            card.innerHTML = `
-                <img src="${imgPath}" alt="${title}" onerror="this.style.display='none'">
-                <div class="fav-info">${title}</div>
-            `;
-            container.appendChild(card);
-        }
+        await loadRandomSeasonRecipes(container, 4);
     } catch (e) {
         console.error('Sidebar fav error:', e);
+    } finally {
+        sidebarFavRendering = false;
     }
 }
 
@@ -1275,7 +1371,7 @@ function shuffleWithSeed(array, seed) {
     return arr;
 }
 
-async function loadRandomSeasonRecipes(container) {
+async function loadRandomSeasonRecipes(container, count = 4) {
     try {
         const seasonName = getCurrentSeason();
         const resp = await fetch('search-index.json');
@@ -1285,11 +1381,11 @@ async function loadRandomSeasonRecipes(container) {
             container.classList.add('hidden');
             return;
         }
-        // Seed basato sull'anno-mese-giorno: stesse 4 ricette per tutto il giorno
+        // Seed basato sull'anno-mese-giorno: stesse ricette per tutto il giorno
         const now = new Date();
         const seed = now.getFullYear() * 10000 + (now.getMonth() + 1) * 100 + now.getDate();
         const shuffled = shuffleWithSeed(recipes, seed);
-        const selected = shuffled.slice(0, 4);
+        const selected = shuffled.slice(0, count);
         selected.forEach(recipe => {
             const imgPath = recipe.path.replace(/\.html$/, '.jpg');
             const card = document.createElement('a');
@@ -1375,6 +1471,130 @@ document.addEventListener('DOMContentLoaded', function() {
 // Se il DOM e' gia' pronto, esegui subito
 if (document.readyState === 'complete' || document.readyState === 'interactive') {
     reorderSeasons();
+}
+
+/* ==========================================================
+   RESPONSIVE: Hamburger + Proposte del Mese
+   ========================================================== */
+
+// Hamburger menu
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const hamburgerClose = document.getElementById('hamburgerClose');
+const hamburgerMenu = document.getElementById('hamburgerMenu');
+const hamburgerOverlay = document.getElementById('hamburgerOverlay');
+
+function openHamburger() {
+    hamburgerMenu.classList.add('open');
+    hamburgerOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+function closeHamburger() {
+    hamburgerMenu.classList.remove('open');
+    hamburgerOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+if (hamburgerBtn) hamburgerBtn.addEventListener('click', openHamburger);
+if (hamburgerClose) hamburgerClose.addEventListener('click', closeHamburger);
+if (hamburgerOverlay) hamburgerOverlay.addEventListener('click', closeHamburger);
+
+// Proposte del Mese — Drawer mobile
+const proposteBtn = document.createElement('button');
+proposteBtn.className = 'proposte-btn';
+proposteBtn.innerHTML = '❤️<span class="label">Proposte del mese</span>';
+proposteBtn.id = 'proposteBtn';
+document.body.appendChild(proposteBtn);
+
+const proposteDrawer = document.createElement('div');
+proposteDrawer.className = 'proposte-drawer';
+proposteDrawer.id = 'proposteDrawer';
+proposteDrawer.innerHTML = `
+    <div class="pd-header">
+        <h3>❤️ Proposte del Mese</h3>
+        <button class="pd-close" id="proposteClose" aria-label="Chiudi">✕</button>
+    </div>
+    <div class="pd-grid" id="proposteGrid"></div>
+`;
+document.body.appendChild(proposteDrawer);
+
+const proposteOverlay = document.createElement('div');
+proposteOverlay.className = 'proposte-overlay';
+proposteOverlay.id = 'proposteOverlay';
+document.body.appendChild(proposteOverlay);
+
+function openProposte() {
+    proposteDrawer.classList.add('open');
+    proposteOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+function closeProposte() {
+    proposteDrawer.classList.remove('open');
+    proposteOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+proposteBtn.addEventListener('click', openProposte);
+document.getElementById('proposteClose').addEventListener('click', closeProposte);
+proposteOverlay.addEventListener('click', closeProposte);
+
+// Riempi Proposte del Mese (usa gli stessi dati della sidebar preferiti se presenti, altrimenti ricette di default)
+function riempiProposte() {
+    const favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
+    const paths = Object.keys(favs);
+    
+    // Ricette di default se non ci sono preferiti
+    const defaultProposte = [
+        { path: 'estate/001.html', img: 'estate/001.jpg', title: 'Hummus di ceci' },
+        { path: 'autunno/001.html', img: 'autunno/001.jpg', title: 'Zuppa di lenticchie' },
+        { path: 'primavera/001.html', img: 'primavera/001.jpg', title: 'Pasta e fave' },
+        { path: 'inverno/001.html', img: 'inverno/001.jpg', title: 'Zuppa di ceci' },
+        { path: 'estate/002.html', img: 'estate/002.jpg', title: 'Insalata di ceci' },
+        { path: 'autunno/002.html', img: 'autunno/002.jpg', title: 'Curry di lenticchie' }
+    ];
+    
+    let proposte = [];
+    if (paths.length > 0) {
+        paths.slice(0, 6).forEach(path => {
+            const season = path.split('/')[0];
+            const num = path.match(/(\d+)/)?.[0] || '001';
+            proposte.push({
+                path: path,
+                img: `${season}/${num}.jpg`,
+                title: favs[path] || 'Ricetta'
+            });
+        });
+    } else {
+        proposte = defaultProposte;
+    }
+    
+    // Riempi sezione tablet
+    const psScroll = document.getElementById('proposteScroll');
+    if (psScroll) {
+        psScroll.innerHTML = proposte.map(p => `
+            <a href="${p.path}" class="ps-card">
+                <img src="${p.img}" alt="${p.title}" onerror="this.style.display='none'">
+                <div class="ps-title">${p.title}</div>
+            </a>
+        `).join('');
+    }
+    
+    // Riempi drawer mobile
+    const pdGrid = document.getElementById('proposteGrid');
+    if (pdGrid) {
+        pdGrid.innerHTML = proposte.map(p => `
+            <a href="${p.path}" class="pd-card">
+                <img src="${p.img}" alt="${p.title}" onerror="this.style.display='none'">
+                <div class="pd-title">${p.title}</div>
+            </a>
+        `).join('');
+    }
+}
+
+// Inizializza proposte al caricamento
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', riempiProposte);
+} else {
+    riempiProposte();
 }
 </script>
 

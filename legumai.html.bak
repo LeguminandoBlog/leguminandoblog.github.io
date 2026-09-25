@@ -348,123 +348,32 @@
     font-weight: bold;
   }
 
-  /* ============================================================
-     RESPONSIVE LEGUMAI — delega .sidebar-seasons a responsive.css
-     ============================================================ */
-
-  /* Mobile base (< 600px) */
-  @media (max-width: 599px) {
-    body { padding: 8px !important; }
-    .top-bar { padding: 16px 12px !important; }
-    .top-bar h1 { font-size: 1.6em !important; }
-    .top-bar p { font-size: 0.85em !important; }
-    .top-bar a#chatbot-home { padding: 6px 14px !important; font-size: 0.85em !important; }
-    .recipe-toggle { display: inline-flex !important; padding: 6px 12px !important; font-size: 0.85em !important; margin-left: 8px !important; }
-
-    .chat-wrap { margin: 15px 8px !important; padding: 0 !important; }
-    .chat-card { border-radius: 12px !important; }
-    .value-stat { font-size: 1.1em !important; }
-    .value-note { font-size: 0.85em !important; }
-    .lang-bar { flex-wrap: nowrap !important; overflow-x: auto !important; gap: 6px !important; padding: 10px !important; scrollbar-width: none; }
-    .lang-bar::-webkit-scrollbar { display: none; }
-    .lang-btn { padding: 6px 10px !important; font-size: 0.8em !important; flex-shrink: 0; }
-    .rules-box { padding: 12px 14px !important; font-size: 0.9em !important; }
-    .rules-title { font-size: 1.1em !important; }
-    .quick-actions { flex-wrap: nowrap !important; overflow-x: auto !important; gap: 6px !important; padding: 10px !important; scrollbar-width: none; }
-    .quick-actions::-webkit-scrollbar { display: none; }
-    .quick-chip { padding: 8px 12px !important; font-size: 0.8em !important; flex-shrink: 0; }
-    .examples { flex-wrap: wrap !important; gap: 6px !important; padding: 10px !important; }
-    .example-chip { padding: 6px 10px !important; font-size: 0.8em !important; }
-    .chat-messages { padding: 12px !important; }
-    .msg { max-width: 92% !important; padding: 10px 14px !important; font-size: 0.95em !important; }
-    .chat-footer { padding: 10px 12px !important; }
-    #chatInput { padding: 10px 12px !important; font-size: 0.95em !important; }
-    #sendBtn { width: 40px !important; height: 40px !important; }
-    .export-group { display: none !important; }
-    .onboarding-grid { flex-direction: column !important; gap: 8px !important; }
-    .onboarding-grid button { width: 100% !important; }
-
-    .right-sidebar { width: 100%; right: -105%; top: 0; bottom: 0; z-index: 10000; }
-    .right-sidebar.open { right: 0; }
-    .right-book { border-radius: 0 !important; border-left: none !important; }
-    .right-book-header { padding: 12px 14px !important; }
-    .right-book-header h3 { font-size: 1.1em !important; }
-    .right-book-body { padding: 10px !important; }
-  }
-
-  /* Small tablet (600-899px) */
-  @media (min-width: 600px) and (max-width: 899px) {
-    body { padding: 12px !important; }
-    .chat-wrap { margin: 20px 12px !important; padding: 0 !important; }
-    .right-sidebar { width: 100%; right: -105%; top: 0; bottom: 0; z-index: 10000; }
-    .right-sidebar.open { right: 0; }
-    .right-book { border-radius: 0 !important; border-left: none !important; }
-    .recipe-toggle { display: inline-flex !important; }
-    .close-drawer { display: block !important; }
-    .drawer-overlay {
-      display: block; position: fixed; inset: 0;
-      background: rgba(0,0,0,0.45); z-index: 9999;
-      opacity: 0; pointer-events: none; transition: opacity 0.35s ease;
-    }
-    .drawer-overlay.active { opacity: 1; pointer-events: auto; }
-  }
-
-  /* Tablet / Laptop (900-1199px) */
-  @media (min-width: 900px) and (max-width: 1199px) {
-    .chat-wrap { margin-left: 100px !important; margin-right: 30px !important; }
+  /* Responsive sidebars */
+  @media (max-width: 1650px) {
     .right-sidebar {
-      position: fixed; right: -540px; top: 0; bottom: 0;
-      width: 520px; z-index: 10000;
-      transition: right 0.35s ease; padding-right: 0; gap: 0;
+      position: fixed;
+      right: -540px;
+      top: 0; bottom: 0;
+      width: 520px;
+      z-index: 10000;
+      transition: right 0.35s ease;
+      padding-right: 0;
     }
     .right-sidebar.open { right: 0; }
-    .right-book { border-radius: 0 !important; border-left: none !important; box-shadow: -4px 0 20px rgba(0,0,0,0.25) !important; }
+    .chat-wrap { margin-right: 30px !important; }
     .recipe-toggle { display: inline-flex !important; }
     .close-drawer { display: block !important; }
-    .drawer-overlay {
-      display: block; position: fixed; inset: 0;
-      background: rgba(0,0,0,0.45); z-index: 9999;
-      opacity: 0; pointer-events: none; transition: opacity 0.35s ease;
-    }
-    .drawer-overlay.active { opacity: 1; pointer-events: auto; }
   }
-
-  /* Desktop (1200-1499px) */
-  @media (min-width: 1200px) and (max-width: 1499px) {
-    .chat-wrap { margin-left: 280px !important; margin-right: 30px !important; }
-    .right-sidebar {
-      position: fixed; right: -540px; top: 0; bottom: 0;
-      width: 520px; z-index: 10000;
-      transition: right 0.35s ease; padding-right: 0; gap: 0;
-    }
-    .right-sidebar.open { right: 0; }
-    .right-book { border-radius: 0 !important; border-left: none !important; box-shadow: -4px 0 20px rgba(0,0,0,0.25) !important; }
+  @media (max-width: 768px) {
+    .sidebar-seasons { display: none; }
+    .right-sidebar { width: 100%; right: -105%; }
+    .chat-wrap { margin-left: 30px !important; margin-right: 30px !important; }
     .recipe-toggle { display: inline-flex !important; }
-    .close-drawer { display: block !important; }
-    .drawer-overlay {
-      display: block; position: fixed; inset: 0;
-      background: rgba(0,0,0,0.45); z-index: 9999;
-      opacity: 0; pointer-events: none; transition: opacity 0.35s ease;
-    }
-    .drawer-overlay.active { opacity: 1; pointer-events: auto; }
   }
-
-  /* Large desktop (>= 1500px) */
-  @media (min-width: 1500px) {
-    .chat-wrap { margin-left: 360px !important; margin-right: 540px !important; }
-    .right-sidebar { right: 0 !important; z-index: 9997 !important; }
+  @media (min-width: 1651px) {
     .recipe-toggle { display: none !important; }
     .close-drawer { display: none !important; }
   }
-
-  /* Override per legumai.html — sidebar sempre sotto l'header, mai sopra */
-  body.page-legumai .sidebar-seasons {
-    top: auto !important;
-    bottom: 30px !important;
-    transform: none !important;
-  }
-
-  /* Default styles (mobile-first base, overridden by media queries above) */
   .recipe-toggle {
     display: none;
     align-items: center;
@@ -492,7 +401,6 @@
     cursor: pointer;
     line-height: 1;
   }
-  .drawer-overlay { display: none; }
   .right-book-header { position: relative; }
 
   .chat-wrap {
@@ -771,53 +679,12 @@
   }
   .example-chip:hover { background: #f0f0eb; }
 </style>
-<link rel="stylesheet" href="responsive.css">
 </head>
-<body class="page-legumai">
-
-<!-- HAMBURGER MENU (mobile solo) -->
-<button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">☰</button>
-<div class="hamburger-overlay" id="hamburgerOverlay"></div>
-<div class="hamburger-menu" id="hamburgerMenu">
-    <button class="hm-close" id="hamburgerClose" aria-label="Chiudi menu">✕</button>
-    <div class="hm-title">Esplora</div>
-    <a href="primavera/index.html" class="hm-item">
-        <span class="hm-emoji">🌸</span>
-        <span>Primavera<br><span class="hm-desc">Fave, asparagi, piselli freschi</span></span>
-    </a>
-    <a href="estate/index.html" class="hm-item">
-        <span class="hm-emoji">☀️</span>
-        <span>Estate<br><span class="hm-desc">Insalate fresche, hummus freddi</span></span>
-    </a>
-    <a href="autunno/index.html" class="hm-item">
-        <span class="hm-emoji">🍂</span>
-        <span>Autunno<br><span class="hm-desc">Zucche, funghi, zuppe calde</span></span>
-    </a>
-    <a href="inverno/index.html" class="hm-item">
-        <span class="hm-emoji">❄️</span>
-        <span>Inverno<br><span class="hm-desc">Zuppe nutrienti, stufati ricchi</span></span>
-    </a>
-    <a href="extra/index.html" class="hm-item">
-        <span class="hm-emoji">✨</span>
-        <span>Extra<br><span class="hm-desc">Ricette speciali e fuori stagione</span></span>
-    </a>
-    <div class="hm-divider"></div>
-    <div class="hm-title">Preferiti</div>
-    <a href="preferiti.html" class="hm-item">
-        <span class="hm-emoji">❤️</span>
-        <span>Preferiti<br><span class="hm-desc">Le tue ricette salvate</span></span>
-    </a>
-    <div class="hm-divider"></div>
-    <div class="hm-title">AI</div>
-    <a href="legumai.html" class="hm-item">
-        <span class="hm-emoji">🧠</span>
-        <span>LegumAI<br><span class="hm-desc">Chiedi al nostro assistente</span></span>
-    </a>
-</div>
+<body>
 
 <!-- BANNER LAVORI IN CORSO -->
 <!-- <div style="background: linear-gradient(90deg, #ff9800, #f44336); color: white; text-align: center; padding: 12px; font-weight: bold; font-size: 1.1em; position: sticky; top: 0; z-index: 9999; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
-  SITO IN COSTRUZIONE — Versione 2.0 in prova
+  🚧 SITO IN COSTRUZIONE — Versione 2.0 in prova 🚧
 </div> -->
 
 <div class="sidebar-seasons">
@@ -864,8 +731,6 @@
     </div>
   </a>
 </div>
-
-<div class="drawer-overlay" id="drawerOverlay" onclick="toggleRecipeDrawer(false)"></div>
 
 <!-- RIGHT SIDEBAR — RICETTARIO INTERATTIVO -->
 <div class="right-sidebar" id="rightSidebar">
@@ -981,34 +846,6 @@
   <p id="chatbot-subtitle">Assistente Culinario del blog <a href="index.html">Leguminando</a></p>
   <p id="chatbot-version" style="font-size:0.9em;opacity:0.8;margin-top:4px;">Versione 2.0 - in prova</p>
   <a href="index.html" id="chatbot-home" style="display:inline-block;margin-top:12px;padding:8px 18px;background:rgba(255,255,255,0.2);border:2px solid white;border-radius:25px;color:white;text-decoration:none;font-size:0.95em;transition:all 0.3s;">← Torna alla Home</a>
-  <button class="recipe-toggle" onclick="toggleRecipeDrawer()" id="recipeToggle">📖 Ricettario</button>
-</div>
-
-<!-- TOP BAR STAGIONI (mobile/tablet: barra orizzontale scrollabile) -->
-<div class="top-bar-seasons">
-    <a href="primavera/index.html" class="ts-card">
-        <span class="ts-emoji">🌸</span><span>Primavera</span>
-    </a>
-    <a href="estate/index.html" class="ts-card">
-        <span class="ts-emoji">☀️</span><span>Estate</span>
-    </a>
-    <a href="autunno/index.html" class="ts-card">
-        <span class="ts-emoji">🍂</span><span>Autunno</span>
-    </a>
-    <a href="inverno/index.html" class="ts-card">
-        <span class="ts-emoji">❄️</span><span>Inverno</span>
-    </a>
-    <a href="extra/index.html" class="ts-card">
-        <span class="ts-emoji">✨</span><span>Extra</span>
-    </a>
-    <a href="preferiti.html" class="ts-card" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: #222 !important;">
-        <span class="ts-emoji">❤️</span>
-        <span>Preferiti</span>
-    </a>
-    <a href="legumai.html" class="ts-card" style="background: linear-gradient(135deg, #2d5016 0%, #4a8c2a 100%); color: #222 !important;">
-        <span class="ts-emoji">🧠</span>
-        <span>LegumAI</span>
-    </a>
 </div>
 
 <div class="chat-wrap">
@@ -2023,8 +1860,6 @@ function importToChatbot() {
   fillAndSend(query);
   const chat = document.querySelector('.chat-card');
   if (chat) chat.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  // Chiudi drawer su mobile dopo import
-  if (window.innerWidth < 1651) toggleRecipeDrawer(false);
 }
 
 function selectRecipe(idx) {
@@ -2119,21 +1954,6 @@ function exportRecipe(format) {
 // Inizializza
 updateSelectedFilters();
 
-function toggleRecipeDrawer(force) {
-  const drawer = document.getElementById('rightSidebar');
-  const overlay = document.getElementById('drawerOverlay');
-  if (!drawer) return;
-  const isOpen = drawer.classList.contains('open');
-  const next = (typeof force === 'boolean') ? force : !isOpen;
-  if (next) {
-    drawer.classList.add('open');
-    if (overlay) overlay.classList.add('active');
-  } else {
-    drawer.classList.remove('open');
-    if (overlay) overlay.classList.remove('active');
-  }
-}
-
 /* ===== FIFO STAGIONI SINISTRA ===== */
 let currentSeason = 'primavera';
 
@@ -2196,49 +2016,6 @@ function updateSeasonColors() {
     if (topBar) topBar.style.background = gradient;
 }
 
-/* ===== HAMBURGER MENU ===== */
-const hamburgerBtn = document.getElementById('hamburgerBtn');
-const hamburgerMenu = document.getElementById('hamburgerMenu');
-const hamburgerClose = document.getElementById('hamburgerClose');
-const hamburgerOverlay = document.getElementById('hamburgerOverlay');
-
-function toggleHamburger(show) {
-  if (show) {
-    hamburgerMenu.classList.add('open');
-    if (hamburgerOverlay) hamburgerOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  } else {
-    hamburgerMenu.classList.remove('open');
-    if (hamburgerOverlay) hamburgerOverlay.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-}
-
-if (hamburgerBtn) {
-  hamburgerBtn.addEventListener('click', function(e) {
-    e.stopPropagation();
-    toggleHamburger(!hamburgerMenu.classList.contains('open'));
-  });
-}
-if (hamburgerClose) {
-  hamburgerClose.addEventListener('click', function(e) {
-    e.stopPropagation();
-    toggleHamburger(false);
-  });
-}
-if (hamburgerOverlay) {
-  hamburgerOverlay.addEventListener('click', function() {
-    toggleHamburger(false);
-  });
-}
-if (hamburgerMenu) {
-  hamburgerMenu.querySelectorAll('a').forEach(function(link) {
-    link.addEventListener('click', function() {
-      toggleHamburger(false);
-    });
-  });
-}
-
 // Applica lingua + ordine stagioni all'avvio
 document.addEventListener('DOMContentLoaded', function() {
     reorderSeasons();
@@ -2251,5 +2028,6 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
     updateSeasonColors();
 }
 </script>
+
 </body>
 </html>
