@@ -1153,7 +1153,7 @@
 <script src="recipes-index.js"></script>
 
 <script>
-const BACKEND_URL = 'https://pippomike791.pythonanywhere.com/chat';
+
 let currentLang = 'it';
 let msgCounter = 0;
 const messageStore = {};
@@ -2133,6 +2133,12 @@ function updateSelectedFilters() {
   });
 }
 
+function wordMatch(text, word) {
+  // Ricerca con word boundary: evita match parziali (es. "fritto" in "soffritto")
+  const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return new RegExp('\\b' + escaped + '\\b', 'i').test(text);
+}
+
 function searchRecipes() {
   const listBox = document.getElementById('recipeListBox');
   const listContent = document.getElementById('recipeListContent');
@@ -2151,18 +2157,19 @@ function searchRecipes() {
   const rawFilters = Array.from(activeFilters).map(f => f.toLowerCase());
   const filters = expandFilters(rawFilters);
   
-  // Prima prova con AND (tutti i filtri devono matchare)
+  // Cerca solo in titolo e ingredienti, mai nel testo completo delle istruzioni
+  // Usa wordMatch per evitare match parziali (es. "fritto" dentro "soffritto")
   let matches = searchIndex.filter(r => {
-    const hay = ((r.ingredients || '') + ' ' + (r.text || '') + ' ' + (r.title || '')).toLowerCase();
-    return rawFilters.every(f => hay.includes(f));
+    const hay = ((r.title || '') + ' ' + (r.ingredients || '')).toLowerCase();
+    return rawFilters.every(f => wordMatch(hay, f));
   });
   
   let mode = 'and';
   // Se non trova nulla, prova con OR espanso (sinonimi inclusi)
   if (matches.length === 0) {
     matches = searchIndex.filter(r => {
-      const hay = ((r.ingredients || '') + ' ' + (r.text || '') + ' ' + (r.title || '')).toLowerCase();
-      return filters.some(f => hay.includes(f));
+      const hay = ((r.title || '') + ' ' + (r.ingredients || '')).toLowerCase();
+      return filters.some(f => wordMatch(hay, f));
     });
     mode = 'or';
   }
