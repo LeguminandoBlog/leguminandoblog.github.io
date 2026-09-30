@@ -228,6 +228,7 @@
         .winter .season-icon { background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); }
         .extra .season-icon { background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%); }
         .preferiti .season-icon { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); }
+        .ricettario .season-icon { background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%); }
         .chatbot .season-icon { background: linear-gradient(135deg, #2d5016 0%, #4a8c2a 100%); }
 
         .instagram-box {
@@ -743,6 +744,14 @@
                 <div class="season-content">
                     <h3 class="season-title" data-it="LegumAI" data-en="LegumAI" data-es="LegumAI" data-pt="LegumAI" data-de="LegumAI" data-el="LegumAI">LegumAI</h3>
                     <p class="season-desc" data-it="Chiedi a LegumAI" data-en="Ask LegumAI" data-es="Pregunta a LegumAI" data-pt="Pergunte ao LegumAI" data-de="Frag LegumAI" data-el="Ρωτήστε το LegumAI">Chiedi a LegumAI</p>
+                </div>
+            </a>
+
+            <a href="ricettario.html" class="season-card ricettario" data-season="ricettario">
+                <div class="season-icon">📖</div>
+                <div class="season-content">
+                    <h3 class="season-title">Ricettario</h3>
+                    <p class="season-desc">Sfoglia il ricettario</p>
                 </div>
             </a>
         </div>
@@ -1459,7 +1468,7 @@ function reorderSeasons() {
     });
 
     // Appendi i fissi
-    ['extra','preferiti','chatbot'].forEach(s => {
+    ['extra','preferiti','chatbot','ricettario'].forEach(s => {
         if (cards[s]) sidebar.appendChild(cards[s]);
     });
 }

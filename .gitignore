@@ -15,3 +15,7 @@ _build_*.py
 _fix_*.py
 *.html.bak_*
 salvataggio_*.zip
+# Backup e test
+*_backup*.html
+*test*.html
+*beta*.html
