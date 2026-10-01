@@ -332,7 +332,6 @@
     .chat-footer { padding: 10px 12px !important; }
     #chatInput { padding: 10px 12px !important; font-size: 0.95em !important; }
     #sendBtn { width: 40px !important; height: 40px !important; }
-    .export-group { display: none !important; }
     .onboarding-grid { flex-direction: column !important; gap: 8px !important; }
     .onboarding-grid button { width: 100% !important; }
 
@@ -533,10 +532,13 @@
   .export-btn:hover { background: rgba(255,255,255,0.25); }
   .export-btn:disabled { opacity: 0.4; cursor: not-allowed; }
   .export-group {
-    display: flex;
+    display: none;
     gap: 8px;
     margin-left: auto;
     align-items: center;
+  }
+  .export-group.visible {
+    display: flex;
   }
   .export-label {
     color: rgba(255,255,255,0.85);
@@ -607,6 +609,57 @@
   }
   .action-btn:hover { background: #f0f0eb; border-color: #bbb; }
   .action-btn.saved { color: #e74c3c; border-color: #e74c3c; }
+
+  /* SHOPPING LIST */
+  .shopping-list-btn {
+    background: #2d5016;
+    color: #fff;
+    border: 1px solid #2d5016;
+  }
+  .shopping-list-btn:hover { background: #1a300a; }
+  .shopping-list-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 10001;
+    align-items: center;
+    justify-content: center;
+  }
+  .shopping-list-overlay.active { display: flex; }
+  .shopping-list-modal {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    max-width: 480px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.25);
+  }
+  .shopping-list-modal h3 {
+    color: #2d5016;
+    margin-bottom: 14px;
+    font-size: 1.25em;
+  }
+  .shopping-list-modal ul {
+    margin: 0 0 16px 0;
+    padding: 0;
+    list-style: none;
+  }
+  .shopping-list-modal li {
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95em;
+  }
+  .shopping-list-modal .sl-close {
+    background: #f0f0eb;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
 
   /* ONBOARDING */
   .onboarding {
@@ -1429,6 +1482,7 @@ async function sendMessage() {
       if (data.mode === 'creative' || data.mode === 'creative_soft') {
         html += `<button class="action-btn" onclick="showProposeForm('${msgId}')">${t.propose}</button>`;
       }
+      html += `<button class="action-btn shopping-list-btn" onclick="showShoppingList('${msgId}')">🛒 Lista della spesa</button>`;
       html += `</div>`;
       html += `</div>`;
       messages.innerHTML += html;
@@ -1440,6 +1494,7 @@ async function sendMessage() {
 
   btn.disabled = false;
   messages.scrollTop = messages.scrollHeight;
+  updateExportVisibility();
 }
 
 function escapeHtml(text) {
@@ -1514,10 +1569,92 @@ function proposeRecipe() {
   }, 4000);
 }
 
+/* ===== LISTA DELLA SPESA ===== */
+function extractIngredients(text) {
+  const lines = text.split('\n');
+  const ingredients = [];
+  let inIngredients = false;
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (!trimmed) continue;
+    const low = trimmed.toLowerCase();
+    if (/ingredienti|ingredients|ingredientes|zutaten|ingredientes|συστατικά/.test(low)) {
+      inIngredients = true;
+      continue;
+    }
+    if (/procedimento|preparazione|istruzioni|instructions|preparation|preparación|preparação|zubereitung|οδηγίες/.test(low)) {
+      inIngredients = false;
+      continue;
+    }
+    if (inIngredients) {
+      const clean = trimmed.replace(/^[-•\*\)\s]+/, '').trim();
+      if (clean && clean.length > 2) ingredients.push(clean);
+    }
+  }
+  if (ingredients.length === 0) {
+    for (const line of lines) {
+      const trimmed = line.trim();
+      if (!trimmed) continue;
+      const low = trimmed.toLowerCase();
+      if (/ingredienti|procedimento|preparazione|istruzioni/.test(low)) continue;
+      const clean = trimmed.replace(/^[-•\*\)\s]+/, '').trim();
+      if (clean && clean.length > 2 && clean.length < 80) ingredients.push(clean);
+      if (ingredients.length >= 12) break;
+    }
+  }
+  return ingredients;
+}
+
+function showShoppingList(msgId) {
+  const data = messageStore[msgId];
+  if (!data) return;
+  const ingredients = extractIngredients(data.text);
+  let html = '';
+  if (ingredients.length === 0) {
+    html = '<p>Non sono riuscito a estrarre gli ingredienti automaticamente. Prova a copiarli manualmente.</p>';
+  } else {
+    html = '<ul>' + ingredients.map(i => '<li>' + escapeHtml(i) + '</li>').join('') + '</ul>';
+  }
+  document.getElementById('shoppingListContent').innerHTML = html;
+  document.getElementById('shoppingListOverlay').classList.add('active');
+}
+
+function closeShoppingList() {
+  document.getElementById('shoppingListOverlay').classList.remove('active');
+}
+
+function updateExportVisibility() {
+  const messages = document.getElementById('chatMessages');
+  const exportGroup = document.querySelector('.export-group');
+  if (!messages || !exportGroup) return;
+  const hasBotReply = Array.from(messages.children).some(
+    m => m.classList.contains('bot') && m.id !== 'welcomeMsg'
+  );
+  if (hasBotReply) {
+    exportGroup.classList.add('visible');
+  } else {
+    exportGroup.classList.remove('visible');
+  }
+}
+
 function exportChat(format) {
   const messages = document.getElementById('chatMessages');
   if (!messages || messages.children.length === 0) {
     alert('Nessun messaggio da esportare.');
+    return;
+  }
+
+  // Trova l'ULTIMO messaggio bot (ultima ricetta generata)
+  const allMsgs = Array.from(messages.children);
+  let lastBotMsg = null;
+  for (let i = allMsgs.length - 1; i >= 0; i--) {
+    if (allMsgs[i].classList.contains('bot') && allMsgs[i].id !== 'welcomeMsg') {
+      lastBotMsg = allMsgs[i];
+      break;
+    }
+  }
+  if (!lastBotMsg) {
+    alert('Nessuna ricetta da esportare.');
     return;
   }
 
@@ -1528,77 +1665,51 @@ function exportChat(format) {
   const dateStr = now.toLocaleString();
   const isoDate = now.toISOString().slice(0,19).replace(/:/g,'-');
 
-  // Estrai i messaggi
-  const lines = [];
-  for (const msg of messages.children) {
-    const isUser = msg.classList.contains('user');
-    const isBot = msg.classList.contains('bot');
-    if (!isUser && !isBot) continue;
-    const clone = msg.cloneNode(true);
-    clone.querySelectorAll('.badge, .sources, .msg-actions').forEach(b => b.remove());
-    const text = clone.textContent.trim();
-    if (text) lines.push({ isUser, text });
-  }
+  // Estrai il testo pulito dell'ultimo messaggio bot
+  const clone = lastBotMsg.cloneNode(true);
+  clone.querySelectorAll('.badge, .sources, .msg-actions').forEach(b => b.remove());
+  const text = clone.textContent.trim();
 
   if (format === 'txt') {
-    let content = '🧠 LegumAI Chat Export\n';
+    let content = '🧠 LegumAI - Ricetta\n';
     content += 'Data: ' + dateStr + '\n';
     content += 'Lingua: ' + currentLang.toUpperCase() + '\n';
     content += '='.repeat(40) + '\n\n';
-    for (const line of lines) {
-      const prefix = line.isUser ? '👤 Tu: ' : '🧠 LegumAI: ';
-      content += prefix + line.text + '\n\n';
-    }
-    downloadBlob(content, 'text/plain;charset=utf-8', 'legumai-chat-' + isoDate + '.txt');
+    content += text + '\n';
+    downloadBlob(content, 'text/plain;charset=utf-8', 'legumai-ricetta-' + isoDate + '.txt');
   }
 
   else if (format === 'md') {
-    let content = '# 🧠 LegumAI Chat Export\n\n';
+    let content = '# 🧠 LegumAI - Ricetta\n\n';
     content += '- **Data:** ' + dateStr + '\n';
     content += '- **Lingua:** ' + currentLang.toUpperCase() + '\n\n';
     content += '---\n\n';
-    for (const line of lines) {
-      const prefix = line.isUser ? '**👤 Tu**' : '**🧠 LegumAI**';
-      content += prefix + ':\n';
-      content += line.text + '\n\n---\n\n';
-    }
-    downloadBlob(content, 'text/plain;charset=utf-8', 'legumai-chat-' + isoDate + '.md');
+    content += text + '\n';
+    downloadBlob(content, 'text/plain;charset=utf-8', 'legumai-ricetta-' + isoDate + '.md');
   }
 
   else if (format === 'pdf') {
-    // Apre una finestra di stampa con formattazione pulita
     const win = window.open('', '_blank');
     let html = `<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>LegumAI Chat</title>
+<title>LegumAI - Ricetta</title>
 <style>
   body { font-family: Georgia, serif; margin: 40px; color: #333; line-height: 1.6; }
   h1 { color: #2d5016; border-bottom: 2px solid #2d5016; padding-bottom: 8px; }
   .meta { color: #666; font-size: 0.95em; margin-bottom: 24px; }
-  .msg { margin-bottom: 16px; padding: 12px 16px; border-radius: 8px; }
-  .user { background: #e8f5e9; border-left: 4px solid #2d5016; }
-  .bot { background: #f5f5f5; border-left: 4px solid #888; }
-  .label { font-weight: bold; margin-bottom: 4px; }
   .text { white-space: pre-wrap; }
 </style>
 </head>
 <body>
-  <h1>🧠 LegumAI Chat</h1>
+  <h1>🧠 LegumAI - Ricetta</h1>
   <div class="meta">
     <strong>Data:</strong> ${dateStr}<br>
     <strong>Lingua:</strong> ${currentLang.toUpperCase()}
   </div>
-`;
-    for (const line of lines) {
-      const cls = line.isUser ? 'user' : 'bot';
-      const label = line.isUser ? '👤 Tu' : '🧠 LegumAI';
-      // Convert newlines to <br>
-      const safeText = escapeHtml(line.text).replace(/\n/g, '<br>');
-      html += `  <div class="msg ${cls}"><div class="label">${label}</div><div class="text">${safeText}</div></div>\n`;
-    }
-    html += `</body></html>`;
+  <div class="text">${escapeHtml(text).replace(/\\n/g, '<br>')}</div>
+</body></html>`;
     win.document.write(html);
     win.document.close();
     setTimeout(() => win.print(), 300);
@@ -2070,5 +2181,15 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
     updateSeasonColors();
 }
 </script>
+
+<!-- MODAL LISTA DELLA SPESA -->
+<div class="shopping-list-overlay" id="shoppingListOverlay" onclick="if(event.target===this)closeShoppingList()">
+  <div class="shopping-list-modal">
+    <h3>🛒 Lista della spesa</h3>
+    <div id="shoppingListContent"></div>
+    <button class="sl-close" onclick="closeShoppingList()">Chiudi</button>
+  </div>
+</div>
+
 </body>
 </html>
