@@ -307,11 +307,11 @@
   /* Mobile base (< 600px) */
   @media (max-width: 599px) {
     body { padding: 8px !important; }
+    .sidebar-seasons { display: none !important; } /* NASCONDI sidebar laterale su mobile */
     .top-bar { padding: 16px 12px !important; }
     .top-bar h1 { font-size: 1.6em !important; }
     .top-bar p { font-size: 0.85em !important; }
     .top-bar a#chatbot-home { padding: 6px 14px !important; font-size: 0.85em !important; }
-    .recipe-toggle { display: inline-flex !important; padding: 6px 12px !important; font-size: 0.85em !important; margin-left: 8px !important; }
 
     .chat-wrap { margin: 15px 8px !important; padding: 0 !important; }
     .chat-card { border-radius: 12px !important; }
@@ -346,6 +346,7 @@
   /* Small tablet (600-899px) */
   @media (min-width: 600px) and (max-width: 899px) {
     body { padding: 12px !important; }
+    .sidebar-seasons { display: none !important; } /* NASCONDI sidebar laterale su tablet piccolo */
     .chat-wrap { margin: 20px 12px !important; padding: 0 !important; }
     .right-sidebar { width: 100%; right: -105%; top: 0; bottom: 0; z-index: 10000; }
     .right-sidebar.open { right: 0; }
@@ -362,7 +363,8 @@
 
   /* Tablet / Laptop (900-1199px) */
   @media (min-width: 900px) and (max-width: 1199px) {
-    .chat-wrap { margin-left: 100px !important; margin-right: 30px !important; }
+    .sidebar-seasons { display: none !important; } /* NASCONDI sidebar laterale su tablet grande */
+    .chat-wrap { margin: 20px 30px !important; padding: 0 !important; }
     .right-sidebar {
       position: fixed; right: -540px; top: 0; bottom: 0;
       width: 520px; z-index: 10000;
@@ -838,6 +840,13 @@
     <div class="season-content">
       <h3 class="season-title" data-it="Preferiti" data-en="Favorites" data-es="Favoritos" data-pt="Favoritos" data-de="Favoriten" data-el="Αγαπημένα">Preferiti</h3>
       <p class="season-desc" data-it="Le tue ricette preferite" data-en="Your favorite recipes" data-es="Tus recetas favoritas" data-pt="As tuas receitas favoritas" data-de="Deine Lieblingsrezepte" data-el="Οι αγαπημένες σου συνταγές">Le tue ricette preferite</p>
+    </div>
+  </a>
+  <a href="ricettario.html" class="season-card ricettario" data-season="ricettario">
+    <div class="season-icon">📖</div>
+    <div class="season-content">
+      <h3 class="season-title" data-it="Ricettario" data-en="Cookbook" data-es="Recetario" data-pt="Livro de receitas" data-de="Kochbuch" data-el="Βιβλίο μαγειρικής">Ricettario</h3>
+      <p class="season-desc" data-it="Sfoglia tutte le ricette" data-en="Browse all recipes" data-es="Explora todas las recetas" data-pt="Explora todas as receitas" data-de="Alle Rezepte durchsuchen" data-el="Περιήγηση σε όλες τις συνταγές">Sfoglia tutte le ricette</p>
     </div>
   </a>
 </div>
