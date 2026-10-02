@@ -84,7 +84,8 @@
   .winter .season-icon { background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); }
   .extra .season-icon { background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%); }
   .preferiti .season-icon { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); }
-        .ricettario .season-icon { background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%); }
+  .ricettario .season-icon { background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%); }
+  .chatbot .season-icon { background: linear-gradient(135deg, #2d5016 0%, #4a8c2a 100%); }
 
   /* (right-sidebar rimosso) */
 
@@ -307,7 +308,7 @@
   /* Mobile base (< 600px) */
   @media (max-width: 599px) {
     body { padding: 8px !important; }
-    .sidebar-seasons { display: none !important; } /* NASCONDI sidebar laterale su mobile */
+    /* sidebar-seasons gestita da responsive.css */
     .top-bar { padding: 16px 12px !important; }
     .top-bar h1 { font-size: 1.6em !important; }
     .top-bar p { font-size: 0.85em !important; }
@@ -346,7 +347,7 @@
   /* Small tablet (600-899px) */
   @media (min-width: 600px) and (max-width: 899px) {
     body { padding: 12px !important; }
-    .sidebar-seasons { display: none !important; } /* NASCONDI sidebar laterale su tablet piccolo */
+    /* sidebar-seasons gestita da responsive.css */
     .chat-wrap { margin: 20px 12px !important; padding: 0 !important; }
     .right-sidebar { width: 100%; right: -105%; top: 0; bottom: 0; z-index: 10000; }
     .right-sidebar.open { right: 0; }
@@ -363,7 +364,7 @@
 
   /* Tablet / Laptop (900-1199px) */
   @media (min-width: 900px) and (max-width: 1199px) {
-    .sidebar-seasons { display: none !important; } /* NASCONDI sidebar laterale su tablet grande */
+    /* sidebar-seasons gestita da responsive.css */
     .chat-wrap { margin: 20px 30px !important; padding: 0 !important; }
     .right-sidebar {
       position: fixed; right: -540px; top: 0; bottom: 0;
@@ -2188,5 +2189,6 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
   </div>
 </div>
 
+<script src="view-counter.js"></script>
 </body>
 </html>

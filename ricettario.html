@@ -84,6 +84,8 @@
   .winter .season-icon { background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); }
   .extra .season-icon { background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%); }
   .preferiti .season-icon { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); }
+  .ricettario .season-icon { background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%); }
+  .chatbot .season-icon { background: linear-gradient(135deg, #2d5016 0%, #4a8c2a 100%); }
 
   /* RICETTARIO CENTRALE */
   .recipe-container {
@@ -394,6 +396,7 @@
     .recipe-toggle { display: inline-flex !important; padding: 6px 12px !important; font-size: 0.85em !important; margin-left: 8px !important; }
 
     .chat-wrap { margin: 15px 8px !important; padding: 0 !important; }
+    .recipe-container { margin: 0 auto !important; padding: 10px !important; }
     .chat-card { border-radius: 12px !important; }
     .value-stat { font-size: 1.1em !important; }
     .value-note { font-size: 0.85em !important; }
@@ -489,8 +492,8 @@
     .close-drawer { display: none !important; }
   }
 
-  /* Override per legumai.html — sidebar sempre sotto l'header, mai sopra */
-  body.page-legumai .sidebar-seasons {
+  /* Override per ricettario.html — sidebar sempre sotto l'header, mai sopra */
+  body.page-ricettario .sidebar-seasons {
     top: auto !important;
     bottom: 30px !important;
     transform: none !important;
@@ -805,7 +808,7 @@
 </style>
 <link rel="stylesheet" href="responsive.css">
 </head>
-<body class="page-legumai">
+<body class="page-ricettario">
 
 <!-- HAMBURGER MENU (mobile solo) -->
 <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">☰</button>
@@ -2503,5 +2506,6 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
     updateSeasonColors();
 }
 </script>
+<script src="view-counter.js"></script>
 </body>
 </html>

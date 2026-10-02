@@ -70,6 +70,76 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 
 .search-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
 .search-card { display: block; padding: 15px; background: #fff; border: 2px solid #e0d5c5; border-radius: 10px; text-decoration: none; color: #5a4a3a; text-align: center; transition: all 0.3s; }
 .search-card:hover { border-color: #8B4513; background: #faf8f5; }
+
+/* SIDEBAR ORIZZONTALE FISSA A SX */
+.sidebar-seasons {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9998;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0;
+}
+.sidebar-seasons .season-card {
+    width: 330px;
+    height: 120px;
+    border-radius: 0 18px 18px 0;
+    overflow: hidden;
+    box-shadow: 4px 4px 16px rgba(0,0,0,0.22);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: row;
+    background: white;
+    align-items: stretch;
+}
+.sidebar-seasons .season-card:hover {
+    transform: translateX(8px);
+    box-shadow: 6px 6px 24px rgba(0,0,0,0.32);
+}
+.sidebar-seasons .season-icon {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.6em;
+    flex-shrink: 0;
+}
+.sidebar-seasons .season-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 18px;
+    text-align: left;
+}
+.sidebar-seasons .season-title {
+    font-size: 1.45em;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+.sidebar-seasons .season-desc {
+    font-size: 1.05em;
+    color: #666;
+    font-style: italic;
+    line-height: 1.3;
+}
+.spring .season-icon { background: linear-gradient(135deg, #88d498 0%, #4a9c5c 100%); }
+.summer .season-icon { background: linear-gradient(135deg, #f7b731 0%, #e58e26 100%); }
+.autumn .season-icon { background: linear-gradient(135deg, #e17055 0%, #d63031 100%); }
+.winter .season-icon { background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); }
+.extra .season-icon { background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%); }
+.preferiti .season-icon { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); }
+.ricettario .season-icon { background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%); }
+.chatbot .season-icon { background: linear-gradient(135deg, #2d5016 0%, #4a8c2a 100%); }
 </style>
 
 <meta property="og:title" content="Ricette Extra | Leguminando">
@@ -123,6 +193,59 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 
     </a>
 </div>
 
+
+<!-- SIDEBAR STAGIONI -->
+<div class="sidebar-seasons">
+    <a href="../primavera/index.html" class="season-card spring" data-season="spring">
+        <div class="season-icon">🌸</div>
+        <div class="season-content">
+            <h3 class="season-title">Primavera</h3>
+            <p class="season-desc">Fave, asparagi, piselli freschi</p>
+        </div>
+    </a>
+    <a href="../estate/index.html" class="season-card summer" data-season="summer">
+        <div class="season-icon">☀️</div>
+        <div class="season-content">
+            <h3 class="season-title">Estate</h3>
+            <p class="season-desc">Insalate fresche, hummus freddi</p>
+        </div>
+    </a>
+    <a href="../autunno/index.html" class="season-card autumn" data-season="autumn">
+        <div class="season-icon">🍂</div>
+        <div class="season-content">
+            <h3 class="season-title">Autunno</h3>
+            <p class="season-desc">Zucche, funghi, zuppe calde</p>
+        </div>
+    </a>
+    <a href="../inverno/index.html" class="season-card winter" data-season="winter">
+        <div class="season-icon">❄️</div>
+        <div class="season-content">
+            <h3 class="season-title">Inverno</h3>
+            <p class="season-desc">Zuppe nutrienti, stufati ricchi</p>
+        </div>
+    </a>
+    <a href="../preferiti.html" class="season-card preferiti" data-season="preferiti">
+        <div class="season-icon">❤️</div>
+        <div class="season-content">
+            <h3 class="season-title">Preferiti</h3>
+            <p class="season-desc">Le tue ricette preferite</p>
+        </div>
+    </a>
+    <a href="../legumai.html" class="season-card chatbot" data-season="chatbot">
+        <div class="season-icon">🧠</div>
+        <div class="season-content">
+            <h3 class="season-title">LegumAI</h3>
+            <p class="season-desc">Chiedi a LegumAI</p>
+        </div>
+    </a>
+    <a href="../ricettario.html" class="season-card ricettario" data-season="ricettario">
+        <div class="season-icon">📖</div>
+        <div class="season-content">
+            <h3 class="season-title">Ricettario</h3>
+            <p class="season-desc">Sfoglia il ricettario</p>
+        </div>
+    </a>
+</div>
 
 <div class="header">
 <h1>🫘 Ricette Extra</h1>
@@ -253,13 +376,6 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 
         <span class="ts-emoji">❤️</span>
         <span>Preferiti</span>
     </a>
-    <a href="../ricettario.html" class="season-card ricettario" data-season="ricettario">
-        <div class="season-icon">📖</div>
-        <div class="season-content">
-            <h3 class="season-title">Ricettario</h3>
-            <p class="season-desc">Sfoglia il ricettario</p>
-        </div>
-    </a>
     <a href="../legumai.html" class="ts-card" style="background: linear-gradient(135deg, #2d5016 0%, #4a8c2a 100%); color: #222 !important;">
         <span class="ts-emoji">🧠</span>
         <span>LegumAI</span>
@@ -367,5 +483,6 @@ if (hamburgerClose) hamburgerClose.addEventListener('click', closeHamburger);
 if (hamburgerOverlay) hamburgerOverlay.addEventListener('click', closeHamburger);
 </script>
 
+<script src="../view-counter.js"></script>
 </body>
 </html>

@@ -1,16 +1,25 @@
 /* ============================================================
-   RESPONSIVE LEGUMINANDO — Mobile First
+   RESPONSIVE LEGUMINANDO — Sidebar sempre visibile
    ============================================================ */
 
 /* ----------------------------------------------------------------
-   MOBILE BASE (< 600px) — Layout a colonna singola
+   MOBILE BASE (< 600px) — Sidebar orizzontale in alto
    ---------------------------------------------------------------- */
-
-/* Nascondi sidebar fisse su mobile */
 @media (max-width: 599px) {
-    .sidebar-seasons,
+    /* Sidebar stagioni: nascosta su mobile, usiamo top-bar-seasons */
+    .sidebar-seasons {
+        display: none !important;
+    }
+
+    /* Sidebar preferiti: nascosta su mobile */
     .sidebar-fav {
         display: none !important;
+    }
+
+    /* Main content full width */
+    .main-content {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 
     /* Top bar molto compatta */
@@ -74,12 +83,6 @@
     }
     .lang-content p {
         font-size: 1em !important;
-    }
-
-    /* Main content full width */
-    .main-content {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
     }
 
     /* Tabella ricette → Card verticali */
@@ -177,16 +180,41 @@
 }
 
 /* ----------------------------------------------------------------
-   SMALL TABLET (600px - 899px) — Sidebar trasformate
+   SMALL TABLET (600px - 899px) — Sidebar compatta verticale a sx
    ---------------------------------------------------------------- */
 @media (min-width: 600px) and (max-width: 899px) {
-    .sidebar-seasons,
+    /* Sidebar sinistra: compatta con solo emoji */
+    .sidebar-seasons {
+        position: fixed !important;
+        left: 0 !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        gap: 10px !important;
+        flex-direction: column !important;
+        width: auto !important;
+        padding: 0 !important;
+    }
+    .sidebar-seasons .season-card {
+        width: 60px !important;
+        height: 60px !important;
+        border-radius: 0 12px 12px 0 !important;
+    }
+    .sidebar-seasons .season-icon {
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 1.8em !important;
+    }
+    .sidebar-seasons .season-content {
+        display: none !important;
+    }
+
+    /* Sidebar preferiti: nascosta */
     .sidebar-fav {
         display: none !important;
     }
 
     .main-content {
-        margin-left: 0 !important;
+        margin-left: 70px !important;
         margin-right: 0 !important;
     }
 
@@ -217,28 +245,44 @@
 }
 
 /* ----------------------------------------------------------------
-   TABLET / LAPTOP (900px - 1199px) — Sidebar compatta o drawer
+   TABLET / LAPTOP (900px - 1199px) — Sidebar compatta con nome
    ---------------------------------------------------------------- */
 @media (min-width: 900px) and (max-width: 1199px) {
-    /* Sidebar sinistra: compatta, senza descrizioni */
+    /* Sidebar sinistra: compatta con emoji + nome */
     .sidebar-seasons {
+        position: fixed !important;
         left: 0 !important;
         top: 50% !important;
         transform: translateY(-50%) !important;
-        gap: 12px !important;
+        gap: 10px !important;
+        flex-direction: column !important;
+        width: auto !important;
+        padding: 0 !important;
     }
     .sidebar-seasons .season-card {
-        width: 80px !important;
-        height: 80px !important;
+        width: 110px !important;
+        height: 50px !important;
         border-radius: 0 12px 12px 0 !important;
     }
     .sidebar-seasons .season-icon {
-        width: 80px !important;
-        height: 80px !important;
-        font-size: 2em !important;
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 1.6em !important;
     }
     .sidebar-seasons .season-content {
-        display: none !important; /* nascondi testo, lascia solo emoji */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        padding: 0 8px !important;
+        text-align: left !important;
+    }
+    .sidebar-seasons .season-title {
+        font-size: 0.75em !important;
+        margin: 0 !important;
+        line-height: 1.2 !important;
+    }
+    .sidebar-seasons .season-desc {
+        display: none !important;
     }
 
     /* Sidebar preferiti: nascosta */
@@ -247,7 +291,7 @@
     }
 
     .main-content {
-        margin-left: 90px !important;
+        margin-left: 120px !important;
         margin-right: 0 !important;
     }
 
@@ -341,7 +385,7 @@
 }
 
 /* Solo su schermi piccoli */
-@media (max-width: 899px) {
+@media (max-width: 599px) {
     .top-bar-seasons {
         display: flex !important;
         overflow-x: auto !important;
@@ -597,6 +641,9 @@
     font-weight: 600;
     text-align: center;
 }
+
+/* Nascondi proposte sezione su desktop */
+.proposte-sezione { display: none; }
 
 /* Mostra su tablet */
 @media (min-width: 600px) and (max-width: 899px) {

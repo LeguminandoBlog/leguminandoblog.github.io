@@ -186,42 +186,6 @@
         /* Vecchio grid nascosto in beta1 */
         .seasons-grid { display: none; }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .sidebar-seasons {
-                position: static;
-                transform: none;
-                width: 100%;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 10px;
-                padding: 0 10px;
-                margin-bottom: 20px;
-            }
-            .sidebar-seasons .season-card {
-                width: calc(50% - 8px);
-                height: auto;
-                min-height: 100px;
-                border-radius: 14px;
-            }
-            .sidebar-seasons .season-icon {
-                width: 80px;
-                height: auto;
-                min-height: 80px;
-            }
-            .sidebar-seasons .season-content {
-                padding: 10px;
-            }
-            .sidebar-seasons .season-title {
-                font-size: 1.2em;
-            }
-            .sidebar-seasons .season-desc {
-                font-size: 0.9em;
-            }
-            .main-content { margin-left: 0; }
-        }
-
         .spring .season-icon { background: linear-gradient(135deg, #88d498 0%, #4a9c5c 100%); }
         .summer .season-icon { background: linear-gradient(135deg, #f7b731 0%, #e58e26 100%); }
         .autumn .season-icon { background: linear-gradient(135deg, #e17055 0%, #d63031 100%); }
@@ -517,11 +481,6 @@
 }
 .sidebar-fav .fav-card .fav-season {
     display: none;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .sidebar-fav { display: none; }
 }
 
 /* Nascondi sidebar preferiti se nascosta */
@@ -1025,19 +984,6 @@
             if (el) el.textContent = 'Alba 🌄 ' + dawnStr + ' | Tramonto 🌃 ' + duskStr;
         }
 
-        // ===== CONTATORE VISUALIZZAZIONI GLOBALE =====
-        // Servizio: abacus.jasoncameron.dev — contatore condiviso, incrementa ad ogni visita (non per IP/device)
-        async function initViewCounter() {
-            try {
-                const resp = await fetch('https://abacus.jasoncameron.dev/hit/leguminando/home');
-                const data = await resp.json();
-                const el = document.getElementById('view-counter');
-                if (el) el.textContent = data.value.toLocaleString('it-IT');
-            } catch (e) {
-                console.log('Contatore non disponibile');
-            }
-        }
-
         // ===== IMMAGINI FISSE PER STAGIONE (selezionate da Mike) =====
         const SEASONAL_IMAGES = {
             primavera: [
@@ -1324,7 +1270,60 @@ document.addEventListener('DOMContentLoaded', applyLWLang);
 /* SIDEBAR PREFERITI */
 /* SIDEBAR PREFERITI — max 4 ricette, niente duplicati.
    Priorita': preferiti della stagione attuale; se < 4, completa con random dalla stagione attuale. */
+let sidebarFavData = []; // Cache condivisa tra sidebar e proposte
 let sidebarFavRendering = false;
+
+async function loadSidebarFavData() {
+    const seasonName = getCurrentSeason();
+    const raw = localStorage.getItem('leguminando_favs');
+    const favs = raw ? JSON.parse(raw) : {};
+    const favPaths = Object.keys(favs);
+    const favsOfSeason = favPaths.filter(p => p.startsWith(seasonName + '/'));
+
+    const result = [];
+
+    // 1. Preferiti della stagione
+    if (favsOfSeason.length > 0) {
+        favsOfSeason.slice(0, 4).forEach(path => {
+            const season = path.split('/')[0];
+            const num = path.match(/(\d+)/)?.[0] || '001';
+            result.push({
+                path: path,
+                img: `${season}/${num}.jpg`,
+                title: favs[path]
+            });
+        });
+    }
+
+    // 2. Se < 4, completa con ricette più recenti della stagione
+    const needMore = 4 - result.length;
+    if (needMore > 0) {
+        try {
+            const resp = await fetch('search-index.json');
+            const data = await resp.json();
+            const seasonRecipes = data.filter(r => r.season === seasonName);
+            // Ordina per data decrescente (più recenti prima)
+            seasonRecipes.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+            // Esclude quelle già nei preferiti
+            const existingPaths = result.map(r => r.path);
+            const candidates = seasonRecipes.filter(r => !existingPaths.includes(r.path));
+            const selected = candidates.slice(0, needMore);
+            selected.forEach(recipe => {
+                result.push({
+                    path: recipe.path,
+                    img: recipe.path.replace(/\.html$/, '.jpg'),
+                    title: recipe.title
+                });
+            });
+        } catch (e) {
+            console.error('Errore caricamento ricette recenti:', e);
+        }
+    }
+
+    sidebarFavData = result;
+    return result;
+}
+
 async function renderSidebarFav() {
     if (sidebarFavRendering) return;
     sidebarFavRendering = true;
@@ -1333,36 +1332,24 @@ async function renderSidebarFav() {
         if (!container) return;
         container.innerHTML = '';
 
-        const seasonName = getCurrentSeason(); // 'primavera' | 'estate' | 'autunno' | 'inverno'
+        const items = await loadSidebarFavData();
 
-        // 1. Cerca preferiti della stagione attuale
-        const raw = localStorage.getItem('leguminando_favs');
-        const favs = raw ? JSON.parse(raw) : {};
-        const favPaths = Object.keys(favs);
-        const favsOfSeason = favPaths.filter(p => p.startsWith(seasonName + '/'));
-
-        // 2. Se ce ne sono, prendi max 4 (senza duplicati — le chiavi di localStorage sono gia uniche)
-        if (favsOfSeason.length > 0) {
-            container.classList.remove('hidden');
-            const selected = favsOfSeason.slice(0, 4);
-            selected.forEach(path => {
-                const title = favs[path];
-                const imgPath = path.replace(/\.html$/, '.jpg');
-                const card = document.createElement('a');
-                card.href = path;
-                card.className = 'fav-card';
-                card.innerHTML = `
-                    <img src="${imgPath}" alt="${title}" onerror="this.style.display='none'">
-                    <div class="fav-info">${title}</div>
-                `;
-                container.appendChild(card);
-            });
+        if (items.length === 0) {
+            container.classList.add('hidden');
             return;
         }
 
-        // 3. Nessun preferito della stagione: carica 4 random dalla stagione attuale
         container.classList.remove('hidden');
-        await loadRandomSeasonRecipes(container, 4);
+        items.forEach(item => {
+            const card = document.createElement('a');
+            card.href = item.path;
+            card.className = 'fav-card';
+            card.innerHTML = `
+                <img src="${item.img}" alt="${item.title}" onerror="this.style.display='none'">
+                <div class="fav-info">${item.title}</div>
+            `;
+            container.appendChild(card);
+        });
     } catch (e) {
         console.error('Sidebar fav error:', e);
     } finally {
@@ -1370,51 +1357,14 @@ async function renderSidebarFav() {
     }
 }
 
-function seededRandom(seed) {
-    const x = Math.sin(seed) * 10000;
-    return x - Math.floor(x);
+// Manteniamo per compatibilita' ma ora e' vuoto (caricamento centralizzato in loadSidebarFavData)
+async function loadRandomSeasonRecipes(container, count) {
+    // Deprecated: logica spostata in loadSidebarFavData + renderSidebarFav
+    console.warn('loadRandomSeasonRecipes e deprecato, usa loadSidebarFavData');
 }
 
-function shuffleWithSeed(array, seed) {
-    const arr = array.slice();
-    for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(seededRandom(seed + i) * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
-    return arr;
-}
-
-async function loadRandomSeasonRecipes(container, count = 4) {
-    try {
-        const seasonName = getCurrentSeason();
-        const resp = await fetch('search-index.json');
-        const data = await resp.json();
-        const recipes = data.filter(r => r.season === seasonName);
-        if (recipes.length === 0) {
-            container.classList.add('hidden');
-            return;
-        }
-        // Seed basato sull'anno-mese-giorno: stesse ricette per tutto il giorno
-        const now = new Date();
-        const seed = now.getFullYear() * 10000 + (now.getMonth() + 1) * 100 + now.getDate();
-        const shuffled = shuffleWithSeed(recipes, seed);
-        const selected = shuffled.slice(0, count);
-        selected.forEach(recipe => {
-            const imgPath = recipe.path.replace(/\.html$/, '.jpg');
-            const card = document.createElement('a');
-            card.href = recipe.path;
-            card.className = 'fav-card';
-            card.innerHTML = `
-                <img src="${imgPath}" alt="${recipe.title}" onerror="this.style.display='none'">
-                <div class="fav-info">${recipe.title}</div>
-            `;
-            container.appendChild(card);
-        });
-    } catch (e) {
-        console.error('Random recipes error:', e);
-        container.classList.add('hidden');
-    }
-}
+function seededRandom(seed) { return 0; } // Deprecated
+function shuffleWithSeed(array, seed) { return array; } // Deprecated
 
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(renderSidebarFav, 50);
@@ -1550,51 +1500,38 @@ proposteBtn.addEventListener('click', openProposte);
 document.getElementById('proposteClose').addEventListener('click', closeProposte);
 proposteOverlay.addEventListener('click', closeProposte);
 
-// Riempi Proposte del Mese (usa gli stessi dati della sidebar preferiti se presenti, altrimenti ricette di default)
-function riempiProposte() {
-    const favs = JSON.parse(localStorage.getItem('leguminando_favs') || '{}');
-    const paths = Object.keys(favs);
-    
-    // Ricette di default se non ci sono preferiti
-    const defaultProposte = [
-        { path: 'estate/001.html', img: 'estate/001.jpg', title: 'Hummus di ceci' },
-        { path: 'autunno/001.html', img: 'autunno/001.jpg', title: 'Zuppa di lenticchie' },
-        { path: 'primavera/001.html', img: 'primavera/001.jpg', title: 'Pasta e fave' },
-        { path: 'inverno/001.html', img: 'inverno/001.jpg', title: 'Zuppa di ceci' },
-        { path: 'estate/002.html', img: 'estate/002.jpg', title: 'Insalata di ceci' },
-        { path: 'autunno/002.html', img: 'autunno/002.jpg', title: 'Curry di lenticchie' }
-    ];
-    
-    let proposte = [];
-    if (paths.length > 0) {
-        paths.slice(0, 6).forEach(path => {
-            const season = path.split('/')[0];
-            const num = path.match(/(\d+)/)?.[0] || '001';
-            proposte.push({
-                path: path,
-                img: `${season}/${num}.jpg`,
-                title: favs[path] || 'Ricetta'
-            });
-        });
-    } else {
-        proposte = defaultProposte;
+// Riempi Proposte del Mese (usa gli stessi dati della sidebar)
+async function riempiProposte() {
+    let items = sidebarFavData;
+    if (items.length === 0) {
+        items = await loadSidebarFavData();
     }
-    
+
+    // Fallback se ancora vuoto
+    if (items.length === 0) {
+        items = [
+            { path: 'estate/001.html', img: 'estate/001.jpg', title: 'Hummus di ceci' },
+            { path: 'autunno/001.html', img: 'autunno/001.jpg', title: 'Zuppa di lenticchie' },
+            { path: 'primavera/001.html', img: 'primavera/001.jpg', title: 'Pasta e fave' },
+            { path: 'inverno/001.html', img: 'inverno/001.jpg', title: 'Zuppa di ceci' }
+        ];
+    }
+
     // Riempi sezione tablet
     const psScroll = document.getElementById('proposteScroll');
     if (psScroll) {
-        psScroll.innerHTML = proposte.map(p => `
+        psScroll.innerHTML = items.slice(0, 4).map(p => `
             <a href="${p.path}" class="ps-card">
                 <img src="${p.img}" alt="${p.title}" onerror="this.style.display='none'">
                 <div class="ps-title">${p.title}</div>
             </a>
         `).join('');
     }
-    
+
     // Riempi drawer mobile
     const pdGrid = document.getElementById('proposteGrid');
     if (pdGrid) {
-        pdGrid.innerHTML = proposte.map(p => `
+        pdGrid.innerHTML = items.slice(0, 4).map(p => `
             <a href="${p.path}" class="pd-card">
                 <img src="${p.img}" alt="${p.title}" onerror="this.style.display='none'">
                 <div class="pd-title">${p.title}</div>
@@ -1611,5 +1548,6 @@ if (document.readyState === 'loading') {
 }
 </script>
 
+<script src="view-counter.js"></script>
 </body>
 </html>
